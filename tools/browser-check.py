@@ -8,7 +8,7 @@ from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
 from functools import partial
 from threading import Thread
 from urllib.parse import urlsplit
-import argparse, json, shutil, subprocess, time, traceback
+import argparse, json, os, shutil, subprocess, time, traceback
 from playwright.sync_api import sync_playwright
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -280,4 +280,8 @@ finally:
     server.shutdown();server.server_close()
     (out/'result.json').write_text(json.dumps(result,indent=2,ensure_ascii=False)+'\n')
     print(json.dumps(result,ensure_ascii=False),flush=True)
+    if os.environ.get('GITHUB_ACTIONS')=='true':
+        diagnostic={key:result.get(key)for key in ['commit','sourceDirty','passed','failed','errors','consoleErrors','httpErrors','failureUI','liveMissionSeconds']}
+        message=json.dumps(diagnostic,ensure_ascii=False).replace('%','%25').replace('\r','%0D').replace('\n','%0A')
+        print(f'::{"error" if result["failed"] else "notice"} title=Ranger browser result::{message}',flush=True)
 if result['failed']:raise SystemExit(1)
