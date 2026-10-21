@@ -36,7 +36,7 @@ assert.equal(book.progress(q),1);assert.equal(new QuestBook(simulations,evolutio
 assert.equal(Object.keys(journal.entries).length,0,'Pair sighting does not auto-identify species in the journal');
 const plantScenario=scenarios.start('herbivory',book),pq=plantScenario.quests[0],pg=scenarios.groups.get(pq.id)[0];book.select(pq.id);
 assert.equal(book.observe({type:'animal',item:pg.actors[0]},.1,journal,p=>p===pg.actors[0]),null);
-assert.equal(book.observe({type:'plant',item:{id:pq.species[1],habitat:pq.habitat}},.1,journal,p=>p.focusType==='plant'),null);
+assert.equal(book.observe({type:'plant',item:(pg.plan?.patch||pg.patch).instance},.1,journal,p=>p.focusType==='plant'),null);
 assert.equal(book.observe(null,.01,journal,p=>p===pg.actors[0]||p.focusType==='plant'&&p.habitat===pq.habitat).quest.id,pq.id,'Plant partner uses the magnifier and a shared frame');
 book.cancel();book.scenario=null;scenarios.start(null,book);assert.equal(book.available().length,16);
 for(const [h,original]of identities)for(const a of original){assert.ok(simulations.get(h).agents.includes(a));assert.ok(!a.scenarioSuppressed);}

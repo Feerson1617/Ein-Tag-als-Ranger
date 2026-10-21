@@ -33,15 +33,19 @@ const resourceQuest={id:'food-niches',category:'interaction',kind:'resourceUse',
 QUESTS.push(resourceQuest);Object.assign(SPECIES_FOCUS,assignFocus([resourceQuest]));
 for(const q of QUESTS)if(q.category==='interaction'){Object.assign(q,INTERACTION_TERMS[q.kind]);q.source=q.source||communitySource;}
 
+const neutralTitles={predation:'Eine Begegnung im Jagdgebiet',competition:'Zwei Nutzer an einer Futterstelle',mutualism:'Von Blüte zu Blüte',herbivory:'Ein Tier an einer Pflanze',dispersal:'Ein Samen unterwegs',deposit:'Leben in abgestorbenem Material',filtering:'Eine Muschel im Wasser',resourceUse:'Nahrung und Suchweise vergleichen'};
+for(const q of QUESTS)if(q.category==='interaction')q.title=neutralTitles[q.kind];
+
 export class QuestBook {
- constructor(simulations,evolution,storage=null){this.simulations=simulations;this.evolution=evolution;this.storage=storage;this.active=null;this.completed={};try{this.completed=JSON.parse(storage?.getItem('feldbuch-quests-v1')||'{}').completed||{};}catch{}}
- save(){try{this.storage?.setItem('feldbuch-quests-v1',JSON.stringify({completed:this.completed}));}catch{}}
+ constructor(simulations,evolution,storage=null){this.simulations=simulations;this.evolution=evolution;this.storage=storage;this.active=null;this.completed={};this.storageError=storage?null:'Kein Gerätespeicher verfügbar. Bitte exportieren.';try{const completed=JSON.parse(storage?.getItem('feldbuch-quests-v1')||'{}').completed||{};if(typeof completed!=='object'||Array.isArray(completed)||Object.values(completed).some(r=>!r||typeof r!=='object'||Array.isArray(r)||r.encounters&&(typeof r.encounters!=='object'||Array.isArray(r.encounters))))throw Error('Ungültige Auftragsdaten');this.completed=completed;}catch{this.storageReadBlocked=true;this.storageError='Gespeicherte Aufträge konnten nicht gelesen werden und werden nicht überschrieben. Bitte einen Export sichern oder bewusst importieren.';}}
+
+ save(){try{if(this.storageReadBlocked)throw Error('Vorhandene Speicherung muss bewusst ersetzt werden');if(!this.storage)throw Error('Kein Gerätespeicher');this.storage.setItem('feldbuch-quests-v1',JSON.stringify({completed:this.completed}));this.storageError=null;this.onStorageError?.(null);return true;}catch{this.storageError='Auftragsfortschritt nicht gespeichert. Bitte das Feldbuch exportieren.';this.onStorageError?.(this.storageError);return false;}}
  available(){return this.scenario?.current?.quests||QUESTS;}
- select(id){const q=this.available().find(q=>q.id===id);if(!q)throw Error('Unknown quest');this.cancel();if(q.category==='evolution')this.evolution.start(q.kind);
+ select(id,{repeat=false}={}){const q=this.available().find(q=>q.id===id);if(!q)throw Error('Unknown quest');this.cancel();if(q.category==='evolution')this.evolution.start(q.kind);
   const contexts=q.scenario?this.scenario.contexts(q):q.encounters.map(e=>{const sim=this.simulations.get(e.habitat),model=q.category==='evolution'?this.evolution.activeModels?.find(m=>m.sim.habitat===e.habitat&&m.species===e.species[0])||this.evolution:null;
    const context=model?{actors:model.adults().map(a=>a.id)}:sim.relations.arm(q.kind,e.species);return {...e,...(context||{actors:[]}),model,unavailable:!context,started:sim.time,seconds:0,done:false,evidence:null};});
-  const alreadyDone=q.scenario&&this.progress(q)>0;if(alreadyDone)contexts.forEach(c=>c.done=true);
-  this.active={quest:q,contexts,context:contexts.find(c=>!c.unavailable)||contexts[0],seconds:0,watched:0,done:!!alreadyDone,preferredHabitat:null};return this.active;
+  const replay=!!(repeat&&q.scenario&&this.investigationProgress(q)>0),alreadyDone=q.scenario&&!replay&&this.investigationProgress(q)>0;if(alreadyDone)contexts.forEach(c=>c.done=true);
+  this.active={quest:q,replay,contexts,context:contexts.find(c=>!c.unavailable)||contexts[0],seconds:0,watched:0,done:!!alreadyDone,preferredHabitat:null};return this.active;
  }
  cancel(){if(!this.scenario?.current)for(const sim of this.simulations.values())sim.relations.clearIntent();this.evolution.stop();this.active=null;}
  actor(c,observer){if(c.unavailable)return null;const sim=this.simulations.get(c.habitat),eligible=x=>c.species.includes(x.species)&&!x.dead&&!x.scenarioInactive&&!x.scenarioSuppressed&&(x.alive||x.surveySpecimen&&x.sampleSpot);return c.model?c.model.focusAgent(observer):sim.agents.find(x=>x.id===c.actor&&eligible(x))||sim.agents.find(x=>c.actors.includes(x.id)&&eligible(x));}
@@ -61,15 +65,21 @@ export class QuestBook {
   if(q.kind==='predation'){const prey=actor.target;if((actor.encounterPlan?actor.liveHunt&&actor.lastMoved>=this.simulations.get(actor.habitat).time-.4:actor.activity==='hunting'&&actor.speed>.01)&&prey?.alive&&ANIMALS[actor.species].prey.includes(prey.species)&&c.actors.includes(prey.id)&&Math.hypot(actor.x-prey.x,actor.z-prey.z)<28)return{kind:'pursuit',actor:actor.id,other:prey.species};}
   if(!e||e.time<c.started||age<0||age>14)return null;if(q.kind==='predation'&&['predation','huntAttempt','escape'].includes(e.kind)&&c.actors.includes(e.otherId))return e;
   if(q.kind==='resourceUse'&&actor.id===c.actor&&['feeding','herbivory','predation','deposit','filtering','flowerVisit'].includes(e.kind))return e;
+  if(q.kind==='competition'&&(!e.resourceId||!(e.resourceStock<1)||c.patch&&e.resourceId!==c.patch.uid))return null;
+  if(['herbivory','mutualism'].includes(q.kind)&&c.patch&&e.otherId!==c.patch.uid)return null;
+  if(q.kind==='mutualism'&&(!e.pollenFrom||e.pollenFrom.uid===e.otherId||e.pollenFrom.species!==e.other))return null;
+  if(q.kind==='parasitism'&&(!(e.parasiteIntake>0)||!(e.parasiteCost>0)))return null;
+  if(q.kind==='dispersal'&&!e.seedSource)return null;
   if(e.kind===q.kind&&(!['competition','parasitism'].includes(q.kind)||c.actors.includes(e.otherId))&&(!q.scenario||!PLANTS[q.species[1]]||e.other===q.species[1]))return e;return null;
  }
  observe(focus,dt,journal,visible=null){if(this.scenario?.current)return this.scenario.observe(focus,dt,journal,this,visible);const a=this.active;if(!a||a.done)return null;const actor=focus?.type==='animal'?focus.item:null,c=actor&&a.contexts.find(c=>!c.done&&c.habitat===actor.habitat&&(c.model?c.model.pool.includes(actor):c.actors.includes(actor.id)));
   if(!c||actor.trace||!actor.alive||!journal.entries[actor.species]){a.seconds=0;a.observationKey=null;for(const c of a.contexts)c.seconds=0;return null;}
   const key=`${c.id}:${actor.id}`;if(a.observationKey!==key){for(const candidate of a.contexts)candidate.seconds=0;a.observationKey=key;}a.context=c;a.watched+=dt;const evidence=c.model?(c.model.evidence(a.quest.kind)?c.model.report():null):this.validEncounter(actor,c);
   if(!evidence){c.seconds=0;a.seconds=0;return null;}c.seconds+=dt;a.seconds=c.seconds;c.evidence=evidence;if(c.seconds<6)return null;
-  c.done=true;const old=this.completed[a.quest.id]||{},records=old.encounters||{};records[c.id]={completedAt:Date.now(),habitat:c.habitat,evidence};this.completed[a.quest.id]={...old,completedAt:Date.now(),encounters:records};this.save();a.done=a.contexts.every(c=>c.done);return{kind:'quest',quest:a.quest,habitat:c.habitat,allDone:a.done};
+  c.done=true;const old=this.completed[a.quest.id]||{},records=old.encounters||{};records[c.id]={completedAt:Date.now(),habitat:c.habitat,evidence};this.completed[a.quest.id]={...old,completedAt:Date.now(),encounters:records};this.save();a.collectionDone=a.contexts.every(c=>c.done);a.done=true;return{kind:'quest',quest:a.quest,habitat:c.habitat,allDone:true,collectionDone:a.collectionDone};
  }
  progress(q){return Object.keys(this.completed[q.id]?.encounters||{}).length;}
+ investigationProgress(q){return Object.keys(this.completed[q.id]?.investigations||{}).length;}
  export(){return{scenario:this.scenario?.current?.id||null,completed:this.completed,active:this.active?{id:this.active.quest.id,done:this.active.done}:null};}
 }
 export function questSpecies(q){return q.species.map(id=>ANIMALS[id]?.common||PLANTS[id]?.common||id);}

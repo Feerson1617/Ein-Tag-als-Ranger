@@ -1,0 +1,20 @@
+{
+  "release": "1.0.0-rc.1",
+  "date": "2026-10-21",
+  "scope": "Technical release candidate; not published or classroom/device approved",
+  "nodeSuites": 26,
+  "pythonPackagingTests": 5,
+  "browser": "Chromium 154 / SwiftShader",
+  "liveMissions": "All three completed together in fresh local and GitHub CI browser profiles; earlier separate runs retained",
+  "uiFixtures": "Synthetic fixtures explicitly labelled, separate from live observations",
+  "physicalIPadSafari": "NOT TESTED",
+  "classroomPilot": "NOT TESTED",
+  "minimumDevicePerformance": "NOT APPROVED; cloud software rendering is slow",
+  "biology": "Structural consistency checked, individual reference validation incomplete",
+  "githubActions": "Fresh runner passed full pipeline: run 39597573474, head 5a1a11a; see github-ci.json",
+  "publication": "STOP; explicit approval of tested commit required",
+  "testedRuntimeCommit": "a4e4db7b6301fcbe547632d3c5a13ac985d10f50",
+  "standalone": "Real Chromium startup and deferred image decoding passed: 18 initially decoded assets, 33 after references; 48,152,856 bytes navigation transfer",
+  "standaloneBuildDeterminism": "Identical HTML bytes with Python hash seeds 1 and 2; added after the runtime freeze",
+  "testStability": "Earlier run 39595902666 failed in the browser step; cause unconfirmed because original log/screenshot downloads are blocked. No game implementation change between runs."
+}

@@ -1,0 +1,2519 @@
+[
+  {
+    "focus": null,
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0,
+    "watchKey": null,
+    "journal": 0,
+    "time": 0.13,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 0.5070985043923382,
+      "pitch": 0,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 0.01
+  },
+  {
+    "focus": null,
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0,
+    "watchKey": null,
+    "journal": 0,
+    "time": 0.13,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 0.5070985043923382,
+      "pitch": 0,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 1.02
+  },
+  {
+    "focus": null,
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0,
+    "watchKey": null,
+    "journal": 0,
+    "time": 0.13,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 0.5070985043923382,
+      "pitch": 0,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 2.05
+  },
+  {
+    "focus": null,
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0,
+    "watchKey": null,
+    "journal": 0,
+    "time": 0.13,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 0.5070985043923382,
+      "pitch": 0,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 3.08
+  },
+  {
+    "focus": null,
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0,
+    "watchKey": null,
+    "journal": 0,
+    "time": 0.13,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 0.5070985043923382,
+      "pitch": 0,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 4.1
+  },
+  {
+    "focus": null,
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0,
+    "watchKey": null,
+    "journal": 0,
+    "time": 0.13,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 0.5070985043923382,
+      "pitch": 0,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 5.11
+  },
+  {
+    "focus": {
+      "id": "festuca_rubra",
+      "individualId": "plant:forest:festuca_rubra:-16.040755686946213:14.309058756278828:0.09565553799134069",
+      "aimY": 0.38336502436364395
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.065,
+    "watchKey": "plant:forest:festuca_rubra:-16.040755686946213:14.309058756278828:0.09565553799134069",
+    "journal": 0.065,
+    "time": 0.195,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 1.3876327168654228,
+      "pitch": -0.11194102854936407,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 17.02
+  },
+  {
+    "focus": {
+      "id": "festuca_rubra",
+      "individualId": "plant:forest:festuca_rubra:-7.285267756292597:22.85682996775955:0.2708948266219621",
+      "aimY": 0.47613309493752143
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.065,
+    "watchKey": "plant:forest:festuca_rubra:-7.285267756292597:22.85682996775955:0.2708948266219621",
+    "journal": 0.065,
+    "time": 0.325,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.129064537123072,
+      "pitch": -0.20619817311364236,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 36.05
+  },
+  {
+    "focus": {
+      "id": "festuca_rubra",
+      "individualId": "plant:forest:festuca_rubra:-4.557473489362747:21.408991376301273:0.22979936807102222",
+      "aimY": 0.5096787237782281
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.065,
+    "watchKey": "plant:forest:festuca_rubra:-4.557473489362747:21.408991376301273:0.22979936807102222",
+    "journal": 0.065,
+    "time": 0.39,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.2716042047036726,
+      "pitch": -0.22431903289629915,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 37.62
+  },
+  {
+    "focus": {
+      "id": "festuca_rubra",
+      "individualId": "plant:forest:festuca_rubra:-4.557473489362747:21.408991376301273:0.22979936807102222",
+      "aimY": 0.5096787237782281
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.065,
+    "watchKey": "plant:forest:festuca_rubra:-4.557473489362747:21.408991376301273:0.22979936807102222",
+    "journal": 0.065,
+    "time": 0.39,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.2716042047036726,
+      "pitch": -0.22431903289629915,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 38.75
+  },
+  {
+    "focus": {
+      "id": "festuca_rubra",
+      "individualId": "plant:forest:festuca_rubra:-4.557473489362747:21.408991376301273:0.22979936807102222",
+      "aimY": 0.5096787237782281
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.065,
+    "watchKey": "plant:forest:festuca_rubra:-4.557473489362747:21.408991376301273:0.22979936807102222",
+    "journal": 0.065,
+    "time": 0.39,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.2716042047036726,
+      "pitch": -0.22431903289629915,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 44.72
+  },
+  {
+    "focus": {
+      "id": "festuca_rubra",
+      "individualId": "plant:forest:festuca_rubra:-4.557473489362747:21.408991376301273:0.22979936807102222",
+      "aimY": 0.5096787237782281
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.065,
+    "watchKey": "plant:forest:festuca_rubra:-4.557473489362747:21.408991376301273:0.22979936807102222",
+    "journal": 0.065,
+    "time": 0.39,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.2716042047036726,
+      "pitch": -0.22431903289629915,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 46.51
+  },
+  {
+    "focus": {
+      "id": "festuca_rubra",
+      "individualId": "plant:forest:festuca_rubra:-4.557473489362747:21.408991376301273:0.22979936807102222",
+      "aimY": 0.5096787237782281
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.065,
+    "watchKey": "plant:forest:festuca_rubra:-4.557473489362747:21.408991376301273:0.22979936807102222",
+    "journal": 0.065,
+    "time": 0.39,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.2716042047036726,
+      "pitch": -0.22431903289629915,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 49.22
+  },
+  {
+    "focus": {
+      "id": "festuca_rubra",
+      "individualId": "plant:forest:festuca_rubra:-4.557473489362747:21.408991376301273:0.22979936807102222",
+      "aimY": 0.5096787237782281
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.065,
+    "watchKey": "plant:forest:festuca_rubra:-4.557473489362747:21.408991376301273:0.22979936807102222",
+    "journal": 0.065,
+    "time": 0.39,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.2716042047036726,
+      "pitch": -0.22431903289629915,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 50.55
+  },
+  {
+    "focus": {
+      "id": "festuca_rubra",
+      "individualId": "plant:forest:festuca_rubra:-4.557473489362747:21.408991376301273:0.22979936807102222",
+      "aimY": 0.5096787237782281
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.065,
+    "watchKey": "plant:forest:festuca_rubra:-4.557473489362747:21.408991376301273:0.22979936807102222",
+    "journal": 0.065,
+    "time": 0.39,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.2716042047036726,
+      "pitch": -0.22431903289629915,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 51.57
+  },
+  {
+    "focus": {
+      "id": "festuca_rubra",
+      "individualId": "plant:forest:festuca_rubra:-4.557473489362747:21.408991376301273:0.22979936807102222",
+      "aimY": 0.5096787237782281
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.065,
+    "watchKey": "plant:forest:festuca_rubra:-4.557473489362747:21.408991376301273:0.22979936807102222",
+    "journal": 0.065,
+    "time": 0.39,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.2716042047036726,
+      "pitch": -0.22431903289629915,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 52.6
+  },
+  {
+    "focus": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.065,
+    "watchKey": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+    "journal": 0.065,
+    "time": 0.455,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.3492883235351,
+      "pitch": -0.2341949014778471,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 58.11
+  },
+  {
+    "focus": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.13,
+    "watchKey": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+    "journal": 0.13,
+    "time": 0.52,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.391626168298228,
+      "pitch": -0.23957724985479073,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 59.19
+  },
+  {
+    "focus": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.13,
+    "watchKey": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+    "journal": 0.13,
+    "time": 0.52,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.391626168298228,
+      "pitch": -0.23957724985479073,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 60.21
+  },
+  {
+    "focus": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.13,
+    "watchKey": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+    "journal": 0.13,
+    "time": 0.52,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.391626168298228,
+      "pitch": -0.23957724985479073,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 61.23
+  },
+  {
+    "focus": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.13,
+    "watchKey": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+    "journal": 0.13,
+    "time": 0.52,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.391626168298228,
+      "pitch": -0.23957724985479073,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 62.25
+  },
+  {
+    "focus": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.13,
+    "watchKey": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+    "journal": 0.13,
+    "time": 0.52,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.391626168298228,
+      "pitch": -0.23957724985479073,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 63.26
+  },
+  {
+    "focus": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.195,
+    "watchKey": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+    "journal": 0.195,
+    "time": 0.585,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.414700293694133,
+      "pitch": -0.24251062972022502,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 64.28
+  },
+  {
+    "focus": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.195,
+    "watchKey": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+    "journal": 0.195,
+    "time": 0.585,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.414700293694133,
+      "pitch": -0.24251062972022502,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 65.29
+  },
+  {
+    "focus": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.195,
+    "watchKey": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+    "journal": 0.195,
+    "time": 0.585,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.414700293694133,
+      "pitch": -0.24251062972022502,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 66.32
+  },
+  {
+    "focus": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.195,
+    "watchKey": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+    "journal": 0.195,
+    "time": 0.585,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.414700293694133,
+      "pitch": -0.24251062972022502,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 67.34
+  },
+  {
+    "focus": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.195,
+    "watchKey": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+    "journal": 0.195,
+    "time": 0.585,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.414700293694133,
+      "pitch": -0.24251062972022502,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 68.35
+  },
+  {
+    "focus": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.26,
+    "watchKey": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+    "journal": 0.26,
+    "time": 0.6499999999999999,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.427275692034901,
+      "pitch": -0.2441093217468867,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 69.36
+  },
+  {
+    "focus": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.26,
+    "watchKey": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+    "journal": 0.26,
+    "time": 0.6499999999999999,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.427275692034901,
+      "pitch": -0.2441093217468867,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 70.38
+  },
+  {
+    "focus": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.26,
+    "watchKey": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+    "journal": 0.26,
+    "time": 0.6499999999999999,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.427275692034901,
+      "pitch": -0.2441093217468867,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 71.4
+  },
+  {
+    "focus": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.26,
+    "watchKey": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+    "journal": 0.26,
+    "time": 0.6499999999999999,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.427275692034901,
+      "pitch": -0.2441093217468867,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 72.41
+  },
+  {
+    "focus": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.26,
+    "watchKey": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+    "journal": 0.26,
+    "time": 0.6499999999999999,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.427275692034901,
+      "pitch": -0.2441093217468867,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 73.42
+  },
+  {
+    "focus": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.325,
+    "watchKey": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+    "journal": 0.325,
+    "time": 0.7149999999999999,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.4341292841306195,
+      "pitch": -0.24498060890141732,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 74.43
+  },
+  {
+    "focus": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.325,
+    "watchKey": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+    "journal": 0.325,
+    "time": 0.7149999999999999,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.4341292841306195,
+      "pitch": -0.24498060890141732,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 75.45
+  },
+  {
+    "focus": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.325,
+    "watchKey": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+    "journal": 0.325,
+    "time": 0.7149999999999999,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.4341292841306195,
+      "pitch": -0.24498060890141732,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 76.47
+  },
+  {
+    "focus": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.325,
+    "watchKey": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+    "journal": 0.325,
+    "time": 0.7149999999999999,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.4341292841306195,
+      "pitch": -0.24498060890141732,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 77.49
+  },
+  {
+    "focus": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.325,
+    "watchKey": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+    "journal": 0.325,
+    "time": 0.7149999999999999,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.4341292841306195,
+      "pitch": -0.24498060890141732,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 78.51
+  },
+  {
+    "focus": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.39,
+    "watchKey": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+    "journal": 0.39,
+    "time": 0.7799999999999998,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.437864491822786,
+      "pitch": -0.2454554604006365,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 79.52
+  },
+  {
+    "focus": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.39,
+    "watchKey": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+    "journal": 0.39,
+    "time": 0.7799999999999998,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.437864491822786,
+      "pitch": -0.2454554604006365,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 80.56
+  },
+  {
+    "focus": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.39,
+    "watchKey": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+    "journal": 0.39,
+    "time": 0.7799999999999998,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.437864491822786,
+      "pitch": -0.2454554604006365,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 81.58
+  },
+  {
+    "focus": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.39,
+    "watchKey": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+    "journal": 0.39,
+    "time": 0.7799999999999998,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.437864491822786,
+      "pitch": -0.2454554604006365,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 82.6
+  },
+  {
+    "focus": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.39,
+    "watchKey": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+    "journal": 0.39,
+    "time": 0.7799999999999998,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.437864491822786,
+      "pitch": -0.2454554604006365,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 83.61
+  },
+  {
+    "focus": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.47160000000000585,
+    "watchKey": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+    "journal": 0.47160000000000585,
+    "time": 0.8616000000000056,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.4401835164930956,
+      "pitch": -0.24575027462040056,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 84.63
+  },
+  {
+    "focus": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.47160000000000585,
+    "watchKey": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+    "journal": 0.47160000000000585,
+    "time": 0.8616000000000056,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.4401835164930956,
+      "pitch": -0.24575027462040056,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 85.66
+  },
+  {
+    "focus": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.47160000000000585,
+    "watchKey": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+    "journal": 0.47160000000000585,
+    "time": 0.8616000000000056,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.4401835164930956,
+      "pitch": -0.24575027462040056,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 86.68
+  },
+  {
+    "focus": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.47160000000000585,
+    "watchKey": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+    "journal": 0.47160000000000585,
+    "time": 0.8616000000000056,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.4401835164930956,
+      "pitch": -0.24575027462040056,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 87.69
+  },
+  {
+    "focus": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.47160000000000585,
+    "watchKey": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+    "journal": 0.47160000000000585,
+    "time": 0.8616000000000056,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.4401835164930956,
+      "pitch": -0.24575027462040056,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 88.7
+  },
+  {
+    "focus": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.5366000000000059,
+    "watchKey": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+    "journal": 0.5366000000000059,
+    "time": 0.9266000000000056,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.4411640484603354,
+      "pitch": -0.24587492821748236,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 89.72
+  },
+  {
+    "focus": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.5366000000000059,
+    "watchKey": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+    "journal": 0.5366000000000059,
+    "time": 0.9266000000000056,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.4411640484603354,
+      "pitch": -0.24587492821748236,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 90.76
+  },
+  {
+    "focus": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.5366000000000059,
+    "watchKey": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+    "journal": 0.5366000000000059,
+    "time": 0.9266000000000056,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.4411640484603354,
+      "pitch": -0.24587492821748236,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 91.77
+  },
+  {
+    "focus": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.5366000000000059,
+    "watchKey": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+    "journal": 0.5366000000000059,
+    "time": 0.9266000000000056,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.4411640484603354,
+      "pitch": -0.24587492821748236,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 92.79
+  },
+  {
+    "focus": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.6016000000000059,
+    "watchKey": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+    "journal": 0.6016000000000059,
+    "time": 0.9916000000000056,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.441698438382481,
+      "pitch": -0.24594286442789196,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 93.83
+  },
+  {
+    "focus": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.6016000000000059,
+    "watchKey": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+    "journal": 0.6016000000000059,
+    "time": 0.9916000000000056,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.441698438382481,
+      "pitch": -0.24594286442789196,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 94.86
+  },
+  {
+    "focus": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.6016000000000059,
+    "watchKey": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+    "journal": 0.6016000000000059,
+    "time": 0.9916000000000056,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.441698438382481,
+      "pitch": -0.24594286442789196,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 95.9
+  },
+  {
+    "focus": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.6666000000000059,
+    "watchKey": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+    "journal": 0.6666000000000059,
+    "time": 1.0566000000000055,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.4419896808900505,
+      "pitch": -0.24597988966256518,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 96.92
+  },
+  {
+    "focus": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.6666000000000059,
+    "watchKey": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+    "journal": 0.6666000000000059,
+    "time": 1.0566000000000055,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.4419896808900505,
+      "pitch": -0.24597988966256518,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 97.96
+  },
+  {
+    "focus": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.6666000000000059,
+    "watchKey": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+    "journal": 0.6666000000000059,
+    "time": 1.0566000000000055,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.4419896808900505,
+      "pitch": -0.24597988966256518,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 98.98
+  },
+  {
+    "focus": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.6666000000000059,
+    "watchKey": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+    "journal": 0.6666000000000059,
+    "time": 1.0566000000000055,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.4419896808900505,
+      "pitch": -0.24597988966256518,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 100.01
+  },
+  {
+    "focus": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.7316000000000058,
+    "watchKey": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+    "journal": 0.7316000000000058,
+    "time": 1.1216000000000055,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.442148408056676,
+      "pitch": -0.2460000684154621,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 101.02
+  },
+  {
+    "focus": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.7316000000000058,
+    "watchKey": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+    "journal": 0.7316000000000058,
+    "time": 1.1216000000000055,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.442148408056676,
+      "pitch": -0.2460000684154621,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 102.05
+  },
+  {
+    "focus": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.7316000000000058,
+    "watchKey": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+    "journal": 0.7316000000000058,
+    "time": 1.1216000000000055,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.442148408056676,
+      "pitch": -0.2460000684154621,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 103.07
+  },
+  {
+    "focus": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.7966000000000057,
+    "watchKey": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+    "journal": 0.7966000000000057,
+    "time": 1.1866000000000054,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.442234914362487,
+      "pitch": -0.2460110658357909,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 104.1
+  },
+  {
+    "focus": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.7966000000000057,
+    "watchKey": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+    "journal": 0.7966000000000057,
+    "time": 1.1866000000000054,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.442234914362487,
+      "pitch": -0.2460110658357909,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 105.11
+  },
+  {
+    "focus": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.7966000000000057,
+    "watchKey": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+    "journal": 0.7966000000000057,
+    "time": 1.1866000000000054,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.442234914362487,
+      "pitch": -0.2460110658357909,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 106.15
+  },
+  {
+    "focus": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.7966000000000057,
+    "watchKey": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+    "journal": 0.7966000000000057,
+    "time": 1.1866000000000054,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.442234914362487,
+      "pitch": -0.2460110658357909,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 107.17
+  },
+  {
+    "focus": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.8616000000000057,
+    "watchKey": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+    "journal": 0.8616000000000057,
+    "time": 1.2516000000000054,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.4422820602991537,
+      "pitch": -0.24601705942987012,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 108.18
+  },
+  {
+    "focus": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.8616000000000057,
+    "watchKey": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+    "journal": 0.8616000000000057,
+    "time": 1.2516000000000054,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.4422820602991537,
+      "pitch": -0.24601705942987012,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 109.2
+  },
+  {
+    "focus": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.8616000000000057,
+    "watchKey": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+    "journal": 0.8616000000000057,
+    "time": 1.2516000000000054,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.4422820602991537,
+      "pitch": -0.24601705942987012,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 110.22
+  },
+  {
+    "focus": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.9266000000000056,
+    "watchKey": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+    "journal": 0.9266000000000056,
+    "time": 1.3166000000000053,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.4423077548346375,
+      "pitch": -0.2460203259386433,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 111.25
+  },
+  {
+    "focus": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.9266000000000056,
+    "watchKey": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+    "journal": 0.9266000000000056,
+    "time": 1.3166000000000053,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.4423077548346375,
+      "pitch": -0.2460203259386433,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 112.26
+  },
+  {
+    "focus": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.9266000000000056,
+    "watchKey": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+    "journal": 0.9266000000000056,
+    "time": 1.3166000000000053,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.4423077548346375,
+      "pitch": -0.2460203259386433,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 113.28
+  },
+  {
+    "focus": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.9916000000000056,
+    "watchKey": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+    "journal": 0.9916000000000056,
+    "time": 1.3816000000000053,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.442321758356476,
+      "pitch": -0.24602210618592465,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 114.3
+  },
+  {
+    "focus": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.9916000000000056,
+    "watchKey": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+    "journal": 0.9916000000000056,
+    "time": 1.3816000000000053,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.442321758356476,
+      "pitch": -0.24602210618592465,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 115.31
+  },
+  {
+    "focus": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.9916000000000056,
+    "watchKey": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+    "journal": 0.9916000000000056,
+    "time": 1.3816000000000053,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.442321758356476,
+      "pitch": -0.24602210618592465,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 116.32
+  },
+  {
+    "focus": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 0.9916000000000056,
+    "watchKey": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+    "journal": 0.9916000000000056,
+    "time": 1.3816000000000053,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.442321758356476,
+      "pitch": -0.24602210618592465,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 117.35
+  },
+  {
+    "focus": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 1.0566000000000055,
+    "watchKey": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+    "journal": 1.0566000000000055,
+    "time": 1.4466000000000052,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.442329390275878,
+      "pitch": -0.24602307642069302,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 118.37
+  },
+  {
+    "focus": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "tracked": {
+      "id": "galium_odoratum",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "aimY": 0.3551320347334972
+    },
+    "watch": 1.0566000000000055,
+    "watchKey": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+    "journal": 1.0566000000000055,
+    "time": 1.4466000000000052,
+    "lockMode": "manual",
+    "observer": {
+      "x": 0,
+      "z": 17.36,
+      "yaw": 2.442329390275878,
+      "pitch": -0.24602307642069302,
+      "speed": 0
+    },
+    "camera": [
+      0,
+      2.080537705165961,
+      17.36
+    ],
+    "hidden": false,
+    "panel": false,
+    "taxon": "galium_odoratum",
+    "wall": 119.41
+  }
+]

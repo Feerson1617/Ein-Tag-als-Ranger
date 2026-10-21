@@ -1,3 +1,83 @@
+# Zusatzkorrektur – echte Filtration im Probenmodell
+
+Die lebenden Probenmuscheln reagieren in echten Simulationsschritten auf die
+Wasserbedeckung. Ruhezustand bei Niedrigwasser und Filtration bei Hochwasser sind
+nun in Node- und Live-Browserläufen geprüft. Hintergrundfraß an den festen
+Untersuchungsorganismen ist eine ausdrücklich dokumentierte Kontrollbedingung;
+gezielte Modellaufträge bleiben möglich. M3 verlangt lebende Individuen und die
+passenden Zustände. Importierte Abschlussflags werden aus Belegen neu berechnet.
+
+# Aktiver Stand – Ranger 1.0.0-rc.1
+
+Branch `codex/ranger-v1`, Ausgangsbasis `227e61e`. Aktuelle Regeln stehen hier und
+in `docs/REVIEW-STATUS.md`; folgende Versionsabschnitte sind historische Nachweise.
+Kein Deployment, kein Merge und keine Freigabe zur Veröffentlichung.
+
+Drei Missionen und 15 Fokustaxa im bestehenden FieldJournal. Die drei Kernmissionen
+wurden in echten UI-Läufen abgeschlossen; M1/M2 und M3 in getrennten protokollierten
+Läufen. Synthetische Import-/Formularfixtures sind getrennt bezeichnet. 26/26
+Node-Reihen, 5/5 Paketprüfungen und der M3-/Formular-/Werkzeug-Browserlauf bestehen.
+Die zusätzliche Unterpfad-/Grafikverlust-/Ladefehler-Abnahme ist bestanden.
+Auch die Einzel-HTML startet und zeigt zurückgestellt dekodierte Referenzfotos.
+Ihre Assetausgabe ist sortiert; Vergleich mit zwei Python-Hashseeds verlangt
+identische Bytes. Browserberichte erfassen künftig den Dirty-Status.
+Nachweise und genaue Laufgrenzen: `verification/rc1/README.md`.
+Feldbuch und Antworten werden gespeichert, kein vollständiger Weltzustand.
+
+Speicher: vorhandene Schlüssel bleiben. Neue Feldbuchhülle schemaVersion 3 mit
+learning.version 1; unversionierte alte Exporte migrieren ohne Fortschrittsverlust.
+Beschädigte Gerätespeicher werden bis zur ausdrücklichen Import-/Sitzungsentscheidung
+nicht überschrieben. JSON-Import wird vollständig geprüft und vor Übernahme bestätigt;
+Schreibfehler verändern den laufenden Stand nicht. Offene Antworten bleiben Text.
+Druckbericht trennt Herkunft, Sachverhalt und Erklärung; Punkte/Tempo sind keine Note.
+
+`pairSighting` ist nur Entdeckung. `investigations` enthalten zeitnah beobachtete
+Modellereignisse mit konkreten IDs, nie automatisch eine eigene Erklärung. Später
+übernommene Ereignisse heißen Modellprotokoll. Beobachtungsdauern werden mit der
+Simulationsuhr gespeichert; Fernglasfaktor 0,5 bleibt. Wiederholungen sind markiert
+und löschen frühere Belege nicht. Ein lokaler Abschluss genügt, weitere Fundorte
+bleiben optional. Hummeln sind anhand der groben Fokussicht nur auf Gruppenebene
+bestimmbar. Eigenständige Artbestimmung nicht aus Programmeintrag ableiten.
+
+Publikationsartefakt ist nur outputs/GitHub-Pages; dist enthält Quellcode. Gemeinsamer
+Modulgraph unterstützt literale dynamische Imports/Worker/URL-Medien und lehnt
+fehlende Dateien, Ausbrüche, nichtliterale Imports und Zyklen ab. Einzel-HTML und
+Projektarchiv separat erzeugen, keine .game-dev-/Schüler-/lokalen Arbeitsdaten deployen.
+
+Offen: Primärartikelzugang (Proxy-403), fachliche Einzelvalidierung der Referenzen,
+Codelizenzentscheidung, physische Geräte und Unterrichtspilot. Pythonwerkzeuge
+wurden auch in frischer venv installiert; Cloud-Skript und Startanweisungen sind als
+Entwurf gespeichert. Alle drei Missionen bestehen jetzt auch zusammen in frischen
+lokalen und GitHub-Browserprofilen (elf Blöcke); siehe `verification/rc1/github-ci.json`.
+Ein früherer CI-Browserfehllauf bleibt ungeklärt, weil die Originalprotokolle per
+Netzpolitik gesperrt sind. Kein Spielcode wurde für den erfolgreichen Folgelauf
+geändert. Vor stabiler Veröffentlichung Diagnose nachholen; keine Fehlerbehebung
+behaupten, die nicht nachgewiesen ist. Der zwischenzeitliche GitHub-API-403 war kein Beleg für ein fehlendes Token;
+Git-Schreibzugriff und PR-Erstellung funktionieren inzwischen. Entwurfs-PR:
+https://github.com/Feerson1617/Ein-Tag-als-Ranger/pull/1 .
+Keine Tokens im Chat oder Repository anfordern.
+Die Cloud-Umgebung zu veröffentlichen erteilt keine Pages-Freigabe.
+
+# Phase 1 – Belegverträge
+
+Paarfund (`encounters`, `pairSighting`) und beobachteter Vorgang
+(`investigations`, `own-observation`) sind separat. Vor Fokusbeginn protokollierte
+Ereignisse zählen nicht als selbst beobachtet. `interpretation:null` bedeutet
+keine Einordnung durch Lernende. Pflanzen-ID verwendet registrierte
+Weltkoordinaten/Habitat/Taxon, nie LOD-Slots. `plant-resources.js` trennt Pollen
+und Nektar; unmodelliert bedeutet nicht biologisch abwesend. Die historische
+Sperre aller Fachhilfen bis zur Gesamtsammlung ist ausdrücklich aufgehoben.
+Nächster Schritt: Kernmissionen im bestehenden FieldJournal.
+
+# Arbeitsstand Ranger 1.0 – Phase 0
+
+Branch `codex/ranger-v1`, Ausgangscommit `227e61e`. Baseline 22/22, Build und
+Paketverifikation am 21.10.2026 neu bestanden. Chromium 154 zeigt die echte
+3D-Szene ohne JavaScriptfehler; Software-Rendering ist keine Gerätefreigabe.
+Die bisherigen Abschnitte sind historisch. Aktuelle Regeln und Befunde:
+`docs/RELEASE-PLAN.md`, `docs/REVIEW-STATUS.md`, `docs/DEVELOPMENT.md`.
+Keine Veröffentlichung freigegeben. Nächster Schritt: Phase-1-Regressionen.
+
 # Feldbuch – aktive Übergabe 0.20
 Stand: 9. Oktober 2026. Einstieg: `dist/index.html → expedition.js`.
 

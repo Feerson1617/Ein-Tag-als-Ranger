@@ -1,0 +1,9 @@
+# dist/ contains maintained source. Never ignore it wholesale.
+/outputs/
+/dist/Feldbuch.html
+/work/
+/.venv/
+/node_modules/
+__pycache__/
+*.pyc
+.DS_Store

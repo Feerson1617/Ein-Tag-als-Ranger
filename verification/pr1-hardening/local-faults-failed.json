@@ -1,0 +1,46 @@
+{
+  "commit": "34c30066eb552a276b7529b434fdd9511f8f6543",
+  "sourceDirty": true,
+  "startedAt": "2026-10-21T14:43:07Z",
+  "site": "outputs/GitHub-Pages",
+  "entry": "index.html",
+  "prefix": "/Ein-Tag-als-Ranger/",
+  "viewport": [
+    800,
+    500
+  ],
+  "browser": "chromium",
+  "passed": [
+    "boot, two main entries, three mission choices, real WebGL startup",
+    "free exploration: real tools, keyboard, map with eight regions, tablet viewport (emulation only)",
+    "fault injection: real WebGL context loss/restoration preserves fieldbook"
+  ],
+  "failed": [
+    "Page.wait_for_function: Timeout 180000ms exceeded."
+  ],
+  "errors": [],
+  "consoleErrors": [],
+  "httpErrors": [],
+  "notTested": [
+    "physical iPad/Safari",
+    "classroom timing/learning effect",
+    "20-minute minimum-device performance"
+  ],
+  "browserVersion": "154.0.8037.57",
+  "readySeconds": 13.1,
+  "resourceTransferBytes": 26671067,
+  "navigationTransferBytes": 8666,
+  "initialTransferBytes": 26679733,
+  "failureUI": {
+    "toast": "Die Aussicht ist wieder da. Du kannst deinen Rundgang fortsetzen.",
+    "focus": "Suche eine Art im Sichtfeld",
+    "progress": "Untersuchung läuft · Belege im Feldbuch",
+    "tool": "none",
+    "observation": {
+      "observationSeconds": "0",
+      "targetFps": "60",
+      "frameP95Ms": "14416.0",
+      "fps": "0"
+    }
+  }
+}

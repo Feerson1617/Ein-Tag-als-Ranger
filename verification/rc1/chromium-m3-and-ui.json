@@ -1,0 +1,47 @@
+{
+  "commit": "f05109f57d996429842a4877e560c66fef05c365",
+  "startedAt": "2026-10-21T10:44:54Z",
+  "site": "dist",
+  "prefix": "/",
+  "viewport": [
+    800,
+    500
+  ],
+  "browser": "chromium",
+  "passed": [
+    "boot, two main entries, three mission choices, real WebGL startup",
+    "LIVE M3: actual existing probe, two water levels, same individual/depth, timed records and interpretation",
+    "versioned import requires explicit replacement, individual IDs retained",
+    "references available before determination; opening does not discover taxa",
+    "UI fixture M1: wrong/incomplete/correct/justified uncertain decisions, no complete collection",
+    "UI fixture M2: missing hypothesis and false provenance rejected; supported combinations accepted",
+    "UI fixture M3: absence overclaim rejected, controlled comparison accepted",
+    "JSON/report downloads, session cancellation preserves work, open responses remain text",
+    "free exploration: real tools, keyboard, map with eight regions, tablet viewport (emulation only)"
+  ],
+  "failed": [],
+  "errors": [],
+  "httpErrors": [],
+  "notTested": [
+    "physical iPad/Safari",
+    "classroom timing/learning effect",
+    "20-minute minimum-device performance"
+  ],
+  "browserVersion": "154.0.8037.57",
+  "readySeconds": 7.42,
+  "resourceTransferBytes": 27375985,
+  "liveMissionSeconds": {
+    "m3": 257.7
+  },
+  "automatedLiveMissionSeconds": 257.7,
+  "renderDiagnostics": {
+    "cpuSimulationMs": "3.2",
+    "cpuRenderMs": "18.0",
+    "targetFps": "60",
+    "pixelRatio": "1.00",
+    "gpuMs": "12231.5",
+    "fps": "0",
+    "drawCalls": "343",
+    "triangles": "1282600"
+  }
+}

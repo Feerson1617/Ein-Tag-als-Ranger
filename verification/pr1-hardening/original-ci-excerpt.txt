@@ -1,0 +1,27 @@
+2026-10-21T12:01:24.1446121Z PASS boot, two main entries, three mission choices, real WebGL startup
+2026-10-21T12:03:46.6757788Z LIVE RECORD galium_odoratum
+2026-10-21T12:05:50.0817337Z LIVE RECORD urtica_dioica
+2026-10-21T12:08:25.7058325Z Traceback (most recent call last):
+2026-10-21T12:08:25.7059269Z   File "/home/runner/work/Ein-Tag-als-Ranger/Ein-Tag-als-Ranger/tools/browser-check.py", line 151, in <module>
+2026-10-21T12:08:25.7060343Z     {'m1':live_m1,'m2':live_m2,'m3':live_m3}[mission]()
+2026-10-21T12:08:25.7061304Z   File "/home/runner/work/Ein-Tag-als-Ranger/Ein-Tag-als-Ranger/tools/browser-check.py", line 105, in live_m1
+2026-10-21T12:08:25.7062055Z     page.wait_for_function("!document.getElementById('field-note').disabled",timeout=120000)
+2026-10-21T12:08:25.7063291Z   File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/playwright/sync_api/_generated.py", line 12761, in wait_for_function
+2026-10-21T12:08:25.7063982Z     self._sync(
+2026-10-21T12:08:25.7064605Z   File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/playwright/_impl/_sync_base.py", line 115, in _sync
+2026-10-21T12:08:25.7065189Z     return task.result()
+2026-10-21T12:08:25.7065413Z            ^^^^^^^^^^^^^
+2026-10-21T12:08:25.7066049Z   File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/playwright/_impl/_page.py", line 1151, in wait_for_function
+2026-10-21T12:08:25.7066811Z     return await self._main_frame.wait_for_function(**locals_to_params(locals()))
+2026-10-21T12:08:25.7067297Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-21T12:08:25.7068012Z   File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/playwright/_impl/_frame.py", line 940, in wait_for_function
+2026-10-21T12:08:25.7068741Z     await self._channel.send("waitForFunction", self._timeout, params)
+2026-10-21T12:08:25.7069480Z   File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/playwright/_impl/_connection.py", line 76, in send
+2026-10-21T12:08:25.7070109Z     return await self._connection.wrap_api_call(
+2026-10-21T12:08:25.7070439Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-21T12:08:25.7071150Z   File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/playwright/_impl/_connection.py", line 632, in wrap_api_call
+2026-10-21T12:08:25.7071941Z     raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+2026-10-21T12:08:25.7072849Z playwright._impl._errors.TimeoutError: Page.wait_for_function: Timeout 120000ms exceeded.
+2026-10-21T12:08:25.7073220Z 
+2026-10-21T12:08:25.9007717Z {"commit": "9a6c58da3b81039896e9b0822f0ca17c51a331c6", "sourceDirty": false, "startedAt": "2026-10-21T12:00:19Z", "site": "outputs/GitHub-Pages", "entry": "index.html", "prefix": "/Ein-Tag-als-Ranger/", "viewport": [800, 500], "browser": "chromium", "passed": ["boot, two main entries, three mission choices, real WebGL startup"], "failed": ["Page.wait_for_function: Timeout 120000ms exceeded."], "errors": [], "consoleErrors": [], "httpErrors": [], "notTested": ["physical iPad/Safari", "classroom timing/learning effect", "20-minute minimum-device performance"], "browserVersion": "155.0.8059.0", "readySeconds": 8.16, "resourceTransferBytes": 26665470, "navigationTransferBytes": 8666, "initialTransferBytes": 26674136, "failureUI": {"toast": "Ruhig beobachten. Der Arteintrag entsteht erst durch deine Beobachtung.", "focus": "Unbekannte Pflanze / Pilz", "progress": "Untersuchung läuft · Belege im Feldbuch", "tool": "magnifier"}}
+2026-10-21T12:08:25.9251452Z ##[error]Process completed with exit code 1.

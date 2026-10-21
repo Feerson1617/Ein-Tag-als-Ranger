@@ -18,7 +18,7 @@ const hiveBoard=world.boards.find(b=>b.id==='city-hive');assert.ok(hiveBoard&&Ma
 assert.ok(world.boards.length<44);for(const h of HABITATS)assert.ok(world.boards.some(b=>b.habitat===h.id&&b.station));
 for(const b of world.boards){assert.ok(b.body?.length>0);if(b.id==='forest-deadwood')assert.ok(Math.hypot(b.x-b.featurePosition.x,b.z-b.featurePosition.z)<5);if(b.diagram&&b.diagram!=='habitat')assert.ok(boardIllustration(b).includes('role="img"'));}
 for(const s of [...Object.values(ANIMALS),...Object.values(PLANTS)])assert.ok(s.description.length>30&&s.recognition.length>15&&s.concept.length>10,s.id+' lacks a descriptive species profile');
-assert.deepEqual(START_GUIDE.steps.map(x=>x[0]),['Fernglas','Lupe','Questbuch','Karte']);
+assert.deepEqual(START_GUIDE.steps.map(x=>x[0]),['Fernglas','Lupe','Lernmissionen','Questbuch','Karte']);
 assert.ok(focusCandidateScore(.09,.1,false)>focusCandidateScore(.01,.1,false));assert.ok(focusCandidateScore(.09,.1,false)<focusCandidateScore(.01,.1,true,true),'Unknown species wins over a centred, known automatic lock');assert.ok(focusCandidateScore(.02,.1,false,true)<focusCandidateScore(.03,.1,false),'Keep the same unknown individual during identification');
 for(const zoom of [1,3,8]){const aperture=binocularAperture(zoom,.2,20);assert.ok(aperture<Math.sin(62/zoom*.5*Math.PI/180));assert.ok(aperture>2*(.05/zoom+.055/20));}
 const city=simulations.get('city');city.activateSpecies(['apis_mellifera']);const bees=city.agents.filter(a=>a.hiveWorker),ids=bees.map(a=>a.id);assert.equal(bees.length,8);let visits=0,transfers=0,returns=0;

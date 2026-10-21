@@ -1,0 +1,105 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {FieldJournal} from '../dist/field-ecology.js';
+import {QuestBook} from '../dist/quests.js';
+import {FOCUS_TAXA,freshLearning,evaluateDetermination,evaluateMission} from '../dist/learning-missions.js';
+import {parseFieldbook,applyFieldbook,exportFieldbook,fieldReport} from '../dist/fieldbook-transfer.js';
+const memory=new Map(),storage={getItem:k=>memory.get(k)??null,setItem:(k,v)=>memory.set(k,v),removeItem:k=>memory.delete(k)};
+const j=new FieldJournal(storage),book=new QuestBook(new Map(),{stop(){}},storage);
+const state=()=>({version:1,hypothesis:'Ich vermute einen Zusammenhang.',reflection:'<script>alert("kein HTML")</script>',answers:{},determinations:[],helpLevel:0,complete:false});
+const record=(id,missionId,taxon,extras={})=>({id,missionId,missionVersion:1,taxon,source:'own-observation',partnerIds:[`forest:${id}`],simulationTime:30,duration:4,observedFact:'Synthetischer Beleg ausschließlich für die UI-Prüfung',scene:{habitat:'forest',seed:719,scenario:null},siteId:'forest-entry-30m',...extras});
+const taxa=FOCUS_TAXA.filter(t=>['parus_major','cyanistes_caeruleus','galium_odoratum'].includes(t.id));
+assert.equal(FOCUS_TAXA.length,15);
+const m1=state(),records=taxa.map((t,i)=>record('test-m1-'+i,'m1',t.id));
+for(const [i,t] of taxa.entries()){
+ const answer={taxon:t.id,features:t.features.map(f=>f.id),certainty:'certain',group:'',reason:''};
+ assert.equal(evaluateDetermination({...answer,features:[]},records[i]).ok,false);
+ assert.equal(evaluateDetermination({...answer,features:['program-name']},records[i]).ok,false);
+ assert.equal(evaluateDetermination({...answer,taxon:'hare'},records[i]).ok,false);
+ assert.equal(evaluateDetermination({...answer,certainty:''},records[i]).ok,false);
+ assert.equal(evaluateDetermination(answer,{...records[i],siteId:'another-area'}).ok,false);
+ m1.determinations.push({recordId:records[i].id,answer});
+}
+assert.equal(evaluateMission('m1',m1,records.slice(0,2)).complete,false);
+assert.equal(evaluateMission('m1',m1,records).complete,true);
+const uncertain={taxon:'',features:[],certainty:'uncertain',group:taxa[0].group,reason:'model-limited'};
+assert.equal(evaluateDetermination(uncertain,records[0]).ok,true);
+assert.equal(evaluateDetermination({...uncertain,group:'Enten'},records[0]).ok,false);
+const bumble=FOCUS_TAXA.find(t=>t.id==='bombus_lapidarius'),bumbleRecord=record('test-bumble','m1','bombus_lapidarius');
+assert.equal(evaluateDetermination({taxon:bumble.id,features:bumble.features.map(f=>f.id),certainty:'certain'},bumbleRecord).ok,false);
+assert.equal(evaluateDetermination({features:[],certainty:'uncertain',group:'Hummeln',reason:'lookalikes'},bumbleRecord).ok,true);
+const m2=state(),event=record('test-m2','m2','hare',{source:'model-protocol',taxa:['hare','oryctolagus_cuniculus'],partnerIds:['meadow:1','meadow:2'],scene:{habitat:'meadow',seed:819,scenario:'competition'},evidence:{kind:'competition',resourceId:'food-1',resourceStock:.4},duration:0});
+m2.answers={recordId:event.id,provenance:'model-protocol',counterexample:'insufficient',relation:'inter',claims:['same-resource','finite','effect']};
+assert.equal(evaluateMission('m2',m2,[event]).complete,true);
+assert.equal(evaluateMission('m2',{...m2,answers:{...m2.answers,relation:'intra'}},[{...event,taxa:['hare','hare']}]).complete,true);
+assert.equal(evaluateMission('m2',m2,[{...event,taxa:['hare','hare']}]).complete,false);
+for(const claims of [['same-resource','finite','reduced-access'],['same-resource','finite','effect','reduced-access']])assert.equal(evaluateMission('m2',{...m2,answers:{...m2.answers,claims}},[event]).complete,true);
+assert.equal(evaluateMission('m2',m2,[{...event,evidence:{kind:'pairSighting'}}]).complete,false);
+assert.equal(evaluateMission('m2',{...m2,answers:{...m2.answers,provenance:'own-observation'}},[event]).complete,false);
+assert.equal(evaluateMission('m2',{...m2,answers:{...m2.answers,counterexample:'competition'}},[event]).complete,false);
+assert.equal(evaluateMission('m2',{...m2,hypothesis:''},[event]).complete,false);
+const m3=state(),low=record('test-low','m3','cerastoderma_edule',{source:'model-protocol',partnerIds:['wadden:101'],scene:{habitat:'wadden',seed:1219,runId:'synthetic-run-1',scenario:null},siteId:'probe-2',tidePhase:0,waterLevel:-.9,sampleDepth:3,duration:7,present:true,evidence:{kind:'station',activity:'resting'}}),high={...low,id:'test-high',tidePhase:.5,waterLevel:.4,simulationTime:45,evidence:{kind:'station',activity:'filtering'}};
+m3.answers={lowId:low.id,highId:high.id,filtration:'covered',access:'exposed',absence:'not-detected',depth:'different-space'};
+assert.equal(evaluateMission('m3',m3,[low,high]).complete,true);
+for(const patch of [{siteId:'probe-1'},{sampleDepth:35},{duration:1},{present:false},{tidePhase:.6}])assert.equal(evaluateMission('m3',m3,[low,{...high,...patch}]).complete,false);
+assert.equal(evaluateMission('m3',{...m3,answers:{...m3.answers,absence:'absent'}},[low,high]).complete,false);
+// Individuum, immutable world context and non-overlapping model-time windows.
+const badComparisons=[
+ {partnerIds:['wadden:102']},{partnerIds:[]},{partnerIds:['wadden:101','wadden:102']},
+ {partnerIds:['forest:101']},{scene:{...high.scene,habitat:'forest'}},
+ {scene:{...high.scene,seed:1220}},{scene:{...high.scene,runId:'another-run'}},
+ {scene:{...high.scene,runId:undefined}},{scene:{...high.scene,scenario:'predation'}},
+ {simulationTime:30},{simulationTime:35},{simulationTime:2},
+ {duration:NaN},{simulationTime:Infinity},{waterLevel:-.9}
+];
+for(const patch of badComparisons)assert.equal(evaluateMission('m3',m3,[low,{...high,...patch}]).complete,false,JSON.stringify(patch));
+assert.equal(evaluateMission('m3',m3,[{...low,simulationTime:60},high]).complete,true,'Either order is valid when the two observation windows are separate');
+
+j.learning={version:1,activeMission:'m1',missions:{m1:state(),m2:state(),m3:state()},observations:[...records,event,low,high]};
+j.entries.parus_major={found:1,habitat:'forest',behaviors:[]};book.completed.example={encounters:{one:{evidence:{kind:'pairSighting'},plantId:'stable-plant-id'}}};
+const forged={...exportFieldbook(j,book),learning:{...j.learning,missions:{m1:{...state(),complete:true}}}};
+assert.equal(parseFieldbook(JSON.stringify(forged)).learning.missions.m1.complete,false,'Cached completion cannot override missing evidence');
+assert.equal(evaluateMission('m3',m3,[low,{...high,evidence:{kind:'station',activity:'resting'}}]).complete,false,'Water level alone cannot prove actual filtration');
+const encoded=JSON.stringify(exportFieldbook(j,book)),data=parseFieldbook(encoded);
+const importPair=(first,second)=>JSON.stringify({...exportFieldbook(j,book),learning:{...j.learning,missions:{m3:{...m3,complete:true}},observations:[first,second]}});
+assert.equal(parseFieldbook(importPair(low,{...high,partnerIds:['wadden:102']})).learning.missions.m3.complete,false,'Different individuals cannot inherit a cached completion');
+assert.equal(parseFieldbook(importPair(low,{...high,scene:{...high.scene,runId:'another-run'}})).learning.missions.m3.complete,false,'A new world reuses numeric individual IDs; it is not the same individual');
+const legacyPair=[low,high].map(r=>({...r,scene:{habitat:'wadden',seed:r.tidePhase===0?123:456,scenario:null}}));
+const legacy=parseFieldbook(importPair(...legacyPair));assert.equal(legacy.learning.observations.length,2);assert.equal(legacy.learning.missions.m3.complete,false,'Legacy RNG states retain evidence, without claiming continuity');
+for(const patch of [{duration:1},{evidence:{kind:'station',activity:'resting'}}]){
+ const retained=parseFieldbook(importPair(low,{...high,...patch}));
+ assert.equal(retained.learning.observations.length,2,'Incomplete/non-filtering observations remain readable');
+ assert.equal(retained.learning.missions.m3.complete,false,'Preserved observations cannot inherit a forged completion');
+}
+const oldResting=parseFieldbook(importPair(legacyPair[0],{...legacyPair[1],evidence:{kind:'station',activity:'resting'}}));
+assert.equal(oldResting.learning.observations.length,2,'A historical non-filtering state must not block loading the whole fieldbook');
+assert.equal(oldResting.learning.missions.m3.complete,false);
+
+for(const patch of [{partnerIds:[]},{partnerIds:['wadden:101','wadden:102']},{simulationTime:35},{simulationTime:30},{simulationTime:2},{waterLevel:-.9},{scene:{...high.scene,seed:1220}},{scene:{...high.scene,habitat:'forest'}},{scene:{...high.scene,scenario:'predation'}}]){
+ const before=JSON.stringify([...memory]);
+ assert.throws(()=>parseFieldbook(importPair(low,{...high,...patch})),/Stationsprotokoll|Szenenkontext/);
+ assert.equal(JSON.stringify([...memory]),before,'Rejected import cannot mutate storage');
+}
+
+assert.deepEqual(data.learning,j.learning);assert.equal(data.quests.completed.example.encounters.one.plantId,'stable-plant-id');
+applyFieldbook(data,j,book);assert.deepEqual(new FieldJournal(storage).learning,j.learning);
+const old=parseFieldbook(JSON.stringify({entries:j.entries,interactions:[],quests:book.export()}));
+assert.deepEqual(old.learning,freshLearning());assert.deepEqual(old.entries,j.entries);
+for(const invalid of [encoded.replace('"schemaVersion":3','"schemaVersion":999'),'{"__proto__":{},"entries":{},"interactions":[]}',JSON.stringify({...data,learning:{...data.learning,observations:[...data.learning.observations,data.learning.observations[0]]}}),JSON.stringify({...data,learning:{...data.learning,missions:{m1:{...state(),determinations:[null]}}}})])assert.throws(()=>parseFieldbook(invalid));
+assert.throws(()=>parseFieldbook(JSON.stringify({...data,quests:{completed:{broken:{encounters:{},investigations:'invalid'}}}})),/Fundort/);
+const originalEntries=j.entries,originalStorage=new Map(memory);let failOnce=true;
+storage.setItem=(k,v)=>{if(k==='feldbuch-quests-v1'&&failOnce){failOnce=false;throw Error('QuotaExceeded');}memory.set(k,v);};
+assert.throws(()=>applyFieldbook(old,j,book),/nicht ersetzt/);assert.equal(j.entries,originalEntries);assert.deepEqual(memory,originalStorage);
+storage.setItem=()=>{throw Error('quota');};assert.equal(j.save(),false);assert.ok(j.storageError);assert.equal(j.entries,originalEntries);
+const damagedMemory=new Map([['evolutionswald-fieldjournal-v2','not-json'],['feldbuch-quests-v1','{broken']]),damagedStorage={getItem:k=>damagedMemory.get(k)??null,setItem:(k,v)=>damagedMemory.set(k,v),removeItem:k=>damagedMemory.delete(k)};
+const damagedJournal=new FieldJournal(damagedStorage),damagedBook=new QuestBook(new Map(),{stop(){}},damagedStorage);
+assert.ok(damagedJournal.storageError&&damagedBook.storageError);assert.equal(damagedJournal.save(),false);assert.equal(damagedBook.save(),false);
+assert.equal(damagedMemory.get('evolutionswald-fieldjournal-v2'),'not-json');assert.equal(damagedMemory.get('feldbuch-quests-v1'),'{broken');
+applyFieldbook(old,damagedJournal,damagedBook);assert.equal(damagedJournal.save(),true);assert.equal(damagedBook.save(),true);
+j.learning.missions.m1=m1;const report=fieldReport(j);assert.ok(report.includes('&lt;script&gt;'));assert.ok(!report.includes('<script>alert'));assert.ok(report.includes('Synthetischer Beleg'));assert.ok(report.includes('keine Note'));
+// UI fixtures are labelled synthetic; they demonstrate form validation/import,
+// not observations made by a learner or in this browser.
+j.learning.missions={m1:state(),m2:state(),m3:state()};
+fs.mkdirSync(new URL('../work/',import.meta.url),{recursive:true});
+fs.writeFileSync(new URL('../work/ui-fieldbook-fixture.json',import.meta.url),JSON.stringify(exportFieldbook(j,book),null,2));
+console.log(JSON.stringify({missions:'right/wrong/incomplete/uncertain; multiple evidence combinations',persistence:'legacy migration, IDs, roundtrip, atomic rollback, quota',import:'version, duplicate, malformed, prototype rejection',report:'escaped text, provenance, rubric; no automatic open-text grading',fixtures:'explicitly synthetic UI-only'}));

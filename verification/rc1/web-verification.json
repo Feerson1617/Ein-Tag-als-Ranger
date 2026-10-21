@@ -1,0 +1,16 @@
+{
+  "version": "1.0.0-rc.1",
+  "sourceCommit": "a4e4db7b6301fcbe547632d3c5a13ac985d10f50",
+  "sourceDirty": true,
+  "totalBytes": 36704551,
+  "initialUpperBoundBytes": 26650436,
+  "deferredPhotographs": 168,
+  "deferredBirdRecordings": 3,
+  "largestFileBytes": 2661512,
+  "modules": 58,
+  "assets": 189,
+  "exactSourceAndAssets": true,
+  "zipVerified": true,
+  "identicalTexturePixels": true,
+  "referenceClosure": true
+}

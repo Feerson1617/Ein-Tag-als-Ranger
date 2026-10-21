@@ -1,0 +1,10 @@
+test_current_package_and_tampered_output (test_packaging.PackagingTests.test_current_package_and_tampered_output) ... ok
+test_dynamic_worker_side_effect_and_url_closure (test_packaging.PackagingTests.test_dynamic_worker_side_effect_and_url_closure) ... ok
+test_no_development_or_student_files (test_packaging.PackagingTests.test_no_development_or_student_files) ... ok
+test_nonliteral_and_escape_fail (test_packaging.PackagingTests.test_nonliteral_and_escape_fail) ... ok
+test_standalone_roundtrip_and_bootstrap_syntax (test_packaging.PackagingTests.test_standalone_roundtrip_and_bootstrap_syntax) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 4.852s
+
+OK

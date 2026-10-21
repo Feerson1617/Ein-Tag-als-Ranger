@@ -1,4 +1,6 @@
-export function questFinished(book,q){return book.progress(q)>=q.encounters.length;}
+// A local learning step and the optional collection of all sites are distinct.
+export function questFinished(book,q){return book.progress(q)>=1;}
+export function questCollectionFinished(book,q){return book.progress(q)>=q.encounters.length;}
 export function questInstructions(q){
  if(q.scenario)return 'Finde beide Partner am Lichtstrahl. Fokussiere Tiere mit dem Fernglas, Pflanzen mit der Lupe. Nimm danach beide gemeinsam in den Bildausschnitt.';
  if(q.category==='evolution')return 'Starte den Modellversuch und folge dem Lichtstrahl zu den Versuchstieren. Lass den Versuch laufen und beobachte die markierten Tiere sechs Sekunden ruhig mit dem Fernglas.';

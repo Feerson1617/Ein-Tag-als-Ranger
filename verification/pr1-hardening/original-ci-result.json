@@ -1,0 +1,38 @@
+{
+  "commit": "9a6c58da3b81039896e9b0822f0ca17c51a331c6",
+  "sourceDirty": false,
+  "startedAt": "2026-10-21T12:00:19Z",
+  "site": "outputs/GitHub-Pages",
+  "entry": "index.html",
+  "prefix": "/Ein-Tag-als-Ranger/",
+  "viewport": [
+    800,
+    500
+  ],
+  "browser": "chromium",
+  "passed": [
+    "boot, two main entries, three mission choices, real WebGL startup"
+  ],
+  "failed": [
+    "Page.wait_for_function: Timeout 120000ms exceeded."
+  ],
+  "errors": [],
+  "consoleErrors": [],
+  "httpErrors": [],
+  "notTested": [
+    "physical iPad/Safari",
+    "classroom timing/learning effect",
+    "20-minute minimum-device performance"
+  ],
+  "browserVersion": "155.0.8059.0",
+  "readySeconds": 8.16,
+  "resourceTransferBytes": 26665470,
+  "navigationTransferBytes": 8666,
+  "initialTransferBytes": 26674136,
+  "failureUI": {
+    "toast": "Ruhig beobachten. Der Arteintrag entsteht erst durch deine Beobachtung.",
+    "focus": "Unbekannte Pflanze / Pilz",
+    "progress": "Untersuchung läuft · Belege im Feldbuch",
+    "tool": "magnifier"
+  }
+}

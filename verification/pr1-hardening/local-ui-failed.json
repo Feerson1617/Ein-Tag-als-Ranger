@@ -1,0 +1,47 @@
+{
+  "commit": "34c30066eb552a276b7529b434fdd9511f8f6543",
+  "sourceDirty": true,
+  "startedAt": "2026-10-21T14:33:06Z",
+  "site": "outputs/GitHub-Pages",
+  "entry": "index.html",
+  "prefix": "/Ein-Tag-als-Ranger/",
+  "viewport": [
+    800,
+    500
+  ],
+  "browser": "chromium",
+  "passed": [
+    "boot, two main entries, three mission choices, real WebGL startup",
+    "contradictory station import is rejected before replacement; current fieldbook preserved",
+    "versioned import requires explicit replacement, individual IDs retained",
+    "references available before determination; opening does not discover taxa"
+  ],
+  "failed": [
+    "Locator.check: Timeout 45000ms exceeded.\nCall log:\n  - waiting for locator(\"[name=\\\"det-feature\\\"][value=\\\"galium_odoratum:0\\\"]\")\n    - locator resolved to <input type=\"checkbox\" name=\"det-feature\" value=\"galium_odoratum:0\"/>\n  - attempting click action\n    - waiting for element to be visible, enabled and stable\n"
+  ],
+  "errors": [],
+  "consoleErrors": [],
+  "httpErrors": [],
+  "notTested": [
+    "physical iPad/Safari",
+    "classroom timing/learning effect",
+    "20-minute minimum-device performance"
+  ],
+  "browserVersion": "154.0.8037.57",
+  "readySeconds": 18.59,
+  "resourceTransferBytes": 26671067,
+  "navigationTransferBytes": 8666,
+  "initialTransferBytes": 26679733,
+  "failureUI": {
+    "toast": "Feldbuch mit Belegen und individuellen IDs wiederaufgenommen.",
+    "focus": "Suche eine Art im Sichtfeld",
+    "progress": "Untersuchung läuft · Belege im Feldbuch",
+    "tool": null,
+    "observation": {
+      "observationSeconds": "0",
+      "targetFps": "60",
+      "frameP95Ms": "0",
+      "fps": "0"
+    }
+  }
+}

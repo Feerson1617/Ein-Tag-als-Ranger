@@ -1,3 +1,30 @@
+# Ein Tag als Ranger / Feldbuch – 1.0.0-rc.1
+
+Releasekandidat für die technische Prüfung und einen begrenzten Unterrichtspilot.
+Die bisherigen Versionsabschnitte unten sind historische Nachweise aus 0.20 und
+älteren Ständen; sie sind keine aktuelle Tablet- oder Unterrichtsabnahme.
+
+Zwei Einstiege: **Freie Erkundung** und **Lernmissionen**. Die drei Missionen
+bearbeiten Artenliste/Bestimmung, gemeinsame Ressourcennutzung und Gezeiten.
+Paarfund, merkmalsbezogene Bestimmung, dokumentierter Vorgang und fachliche
+Einordnung sind getrennt. Die freie Erkundung, alle 168 Taxoneinträge und die
+vorhandenen Begegnungs-/Evolutionsangebote bleiben erhalten. 15 Fokustaxa bieten
+zugängliche Referenzen; Unsicherheit und passende Gruppenbestimmung sind erlaubt.
+
+Das bestehende Feldbuch besitzt versionierten JSON-Import/Export, einen lesbaren
+Druckbericht, sichtbare Speicherfehler und einen bewussten Sitzungswechsel. Alte
+Exporte und Gerätespeicherstände werden übernommen; beschädigte gespeicherte
+Daten werden nicht ungefragt überschrieben. Kein Konto, Spielserver, Datenbank
+oder KI-Bewertung erforderlich. Keine Käufe/Providerjobs und keine neue Engine.
+
+Entwicklung: [docs/DEVELOPMENT.md](docs/DEVELOPMENT.md).
+Aktuelle Nachweise und offene Punkte: [docs/REVIEW-STATUS.md](docs/REVIEW-STATUS.md).
+Unterrichtsvorschläge: [docs/LEHRKRAEFTE.md](docs/LEHRKRAEFTE.md).
+Veröffentlichung ausschließlich nach ausdrücklicher Freigabe:
+[docs/CI-UND-RELEASE.md](docs/CI-UND-RELEASE.md).
+
+## Historischer Stand vor dieser Weiterentwicklung
+
 # Feldbuch – eine ökologische Expedition
 Stand: 9. Oktober 2026, Version 0.20.
 

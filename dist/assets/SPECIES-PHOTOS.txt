@@ -46,7 +46,7 @@ Great_spotted_woodpecker_(Dendrocopos_major)_male_Drenthe.jpg
 
 Eichelhäher · Garrulus glandarius
 Luc Viatour
-CC BY-SA 3.0 · http://creativecommons.org/licenses/by-sa/3.0/
+CC BY-SA 3.0 · https://creativecommons.org/licenses/by-sa/3.0/
 https://commons.wikimedia.org/wiki/File:Garrulus_glandarius_1_Luc_Viatour.jpg
 Garrulus_glandarius_1_Luc_Viatour.jpg
 
@@ -70,7 +70,7 @@ Common_Buzzard_by_caroline_legg_(cropped).jpg
 
 Waldkauz · Strix aluco
 Martin Mecnarowski (http://www.photomecan.eu/)
-CC BY-SA 3.0 · http://creativecommons.org/licenses/by-sa/3.0/
+CC BY-SA 3.0 · https://creativecommons.org/licenses/by-sa/3.0/
 https://commons.wikimedia.org/wiki/File:Strix_aluco_3_(Martin_Mecnarowski).jpg
 Strix_aluco_3_(Martin_Mecnarowski).jpg
 
@@ -250,7 +250,7 @@ Erinaceus_europaeus_LC0119.jpg
 
 Feldmaus · Microtus arvalis
 Dieter TD, first upload in de wikipedia on 13:31, 28. Apr 2005 by Dieter TD
-CC BY-SA 3.0 · http://creativecommons.org/licenses/by-sa/3.0/
+CC BY-SA 3.0 · https://creativecommons.org/licenses/by-sa/3.0/
 https://commons.wikimedia.org/wiki/File:Feldmaus_Microtus_arvalis.jpg
 Feldmaus_Microtus_arvalis.jpg
 
@@ -275,7 +275,7 @@ Focas_grises_(Halichoerus_grypus),_playa_de_Horsey,_Norfolk,_Inglaterra,_2022-11
 Rotauge · Rutilus rutilus
 Scardinius_erythropthalmus1_resize.jpg: Original uploader was Algirdas at lt.wikipedia
 derivative work: George Chernilevsky talk
-CC BY-SA 3.0 · http://creativecommons.org/licenses/by-sa/3.0/
+CC BY-SA 3.0 · https://creativecommons.org/licenses/by-sa/3.0/
 https://commons.wikimedia.org/wiki/File:Rutilus_rutilus_by_Algirdas_cropped.jpg
 Rutilus_rutilus_by_Algirdas_cropped.jpg
 
@@ -341,7 +341,7 @@ https://commons.wikimedia.org/wiki/File:7-Spotted-Ladybug-Coccinella-septempunct
 
 Tauwurm · Lumbricus terrestris
 Michael Linnenbach
-CC BY-SA 3.0 · http://creativecommons.org/licenses/by-sa/3.0/
+CC BY-SA 3.0 · https://creativecommons.org/licenses/by-sa/3.0/
 https://commons.wikimedia.org/wiki/File:Regenwurm1.jpg
 Regenwurm1.jpg
 
@@ -365,7 +365,7 @@ Coque_blanche_(Cerastoderma_edule).jpg
 
 Gemeine Miesmuschel · Mytilus edulis
 Rainer Zenz
-CC BY-SA 3.0 · http://creativecommons.org/licenses/by-sa/3.0/
+CC BY-SA 3.0 · https://creativecommons.org/licenses/by-sa/3.0/
 https://commons.wikimedia.org/wiki/File:Miesmuscheln-2.jpg
 Miesmuscheln-2.jpg
 
@@ -587,7 +587,7 @@ Macoma_balthica_(habitus).jpg
 
 Sandklaffmuschel · Mya arenaria
 Kirsten Poulsen
-CC BY-SA 3.0 · http://creativecommons.org/licenses/by-sa/3.0/
+CC BY-SA 3.0 · https://creativecommons.org/licenses/by-sa/3.0/
 https://commons.wikimedia.org/wiki/File:Mya_arenaria.jpg
 Mya_arenaria.jpg
 
@@ -611,7 +611,7 @@ Opalwurm (Nephtys hombergii) im Watt vor Norderney.jpg
 
 Gemeine Strandschnecke · Littorina littorea
 Photographed by Guttorm Flatabø (user:dittaeva).
-CC BY-SA 3.0 · http://creativecommons.org/licenses/by-sa/3.0/
+CC BY-SA 3.0 · https://creativecommons.org/licenses/by-sa/3.0/
 https://commons.wikimedia.org/wiki/File:Sea_snail,_underneath,_full_view.jpg
 Sea_snail,_underneath,_full_view.jpg
 
@@ -665,7 +665,7 @@ Water_Vole_on_Boot_Hill_(5592665124).jpg
 
 Zwergmaus · Micromys minutus
 Hecke
-CC BY-SA 3.0 · http://creativecommons.org/licenses/by-sa/3.0/
+CC BY-SA 3.0 · https://creativecommons.org/licenses/by-sa/3.0/
 https://commons.wikimedia.org/wiki/File:Micromysminutus1.jpg
 Micromysminutus1.jpg
 
@@ -695,7 +695,7 @@ Oryctolagus_cuniculus_-_euqirneto_-_419737670_(cropped).jpeg
 
 Dunkle Erdhummel · Bombus terrestris
 Marco Almbauer
-CC0 · http://creativecommons.org/publicdomain/zero/1.0/deed.en
+CC0 · https://creativecommons.org/publicdomain/zero/1.0/deed.en
 https://commons.wikimedia.org/wiki/File:Bombus_terrestris.jpg
 Bombus_terrestris.jpg
 
@@ -725,7 +725,7 @@ Fagus-sylvatica-cansiglio-forest-italy.jpg
 
 Stieleiche · Quercus robur
 MPF
-CC BY-SA 3.0 · http://creativecommons.org/licenses/by-sa/3.0/
+CC BY-SA 3.0 · https://creativecommons.org/licenses/by-sa/3.0/
 https://commons.wikimedia.org/wiki/File:Quercus_robur.jpg
 Quercus_robur.jpg
 
@@ -749,7 +749,7 @@ Skuleskogen_pine.jpg
 
 Schwarzerle · Alnus glutinosa
 AnRo0002
-CC0 · http://creativecommons.org/publicdomain/zero/1.0/deed.en
+CC0 · https://creativecommons.org/publicdomain/zero/1.0/deed.en
 https://commons.wikimedia.org/wiki/File:20120904Alnus_glutinosa01.jpg
 20120904Alnus_glutinosa01.jpg
 
@@ -761,7 +761,7 @@ Fraxinus_excelsior.jpg
 
 Gemeine Hasel · Corylus avellana
 MPF
-CC BY-SA 3.0 · http://creativecommons.org/licenses/by-sa/3.0/
+CC BY-SA 3.0 · https://creativecommons.org/licenses/by-sa/3.0/
 https://commons.wikimedia.org/wiki/File:Corylus_avellana.jpg
 Corylus_avellana.jpg
 
@@ -779,7 +779,7 @@ Sambucus_nigra_004.jpg
 
 Schlehe · Prunus spinosa
 Martin Olsson
-CC BY-SA 3.0 · http://creativecommons.org/licenses/by-sa/3.0/
+CC BY-SA 3.0 · https://creativecommons.org/licenses/by-sa/3.0/
 https://commons.wikimedia.org/wiki/File:Closeup_of_blackthorn_aka_sloe_aka_prunus_spinosa_sweden_20050924.jpg
 Closeup_of_blackthorn_aka_sloe_aka_prunus_spinosa_sweden_20050924.jpg
 
@@ -791,13 +791,13 @@ Divlja_ruza_cvijet_270508.jpg
 
 Buschwindröschen · Anemone nemorosa
 Lilly M
-CC BY-SA 3.0 · http://creativecommons.org/licenses/by-sa/3.0/
+CC BY-SA 3.0 · https://creativecommons.org/licenses/by-sa/3.0/
 https://commons.wikimedia.org/wiki/File:Anemone_nemorosa_001.JPG
 Anemone_nemorosa_001.JPG
 
 Waldmeister · Galium odoratum
 Hajotthu 13:34, 11. Mai 2009 (CEST)
-CC BY-SA 3.0 · http://creativecommons.org/licenses/by-sa/3.0/
+CC BY-SA 3.0 · https://creativecommons.org/licenses/by-sa/3.0/
 https://commons.wikimedia.org/wiki/File:Waldmeister(Mai).JPG
 Waldmeister(Mai).JPG
 
@@ -815,13 +815,13 @@ Fen_nettle_(Urtica_dioica_ssp._galeopsifolia)_-_geograph.org.uk_-_5423125.jpg
 
 Wiesen-Rispengras · Poa pratensis
 Rasbak
-CC BY-SA 3.0 · http://creativecommons.org/licenses/by-sa/3.0/
+CC BY-SA 3.0 · https://creativecommons.org/licenses/by-sa/3.0/
 https://commons.wikimedia.org/wiki/File:Veldbeemdgras_Poa_pratensis.jpg
 Veldbeemdgras_Poa_pratensis.jpg
 
 Rotschwingel · Festuca rubra
 Kristian Peters -- Fabelfroh 12:31, 9 September 2006 (UTC)
-CC BY-SA 3.0 · http://creativecommons.org/licenses/by-sa/3.0/
+CC BY-SA 3.0 · https://creativecommons.org/licenses/by-sa/3.0/
 https://commons.wikimedia.org/wiki/File:Festuca_rubra_detail.jpeg
 Festuca_rubra_detail.jpeg
 
@@ -839,7 +839,7 @@ Trifolium_pratense_-_Keila2.jpg
 
 Frühe Margerite · Leucanthemum vulgare
 Photo by and (c)2008 Derek Ramsey (Ram-Man).  Co-attribution must be given to the Chanticleer Garden.
-CC BY-SA 3.0 · http://creativecommons.org/licenses/by-sa/3.0/
+CC BY-SA 3.0 · https://creativecommons.org/licenses/by-sa/3.0/
 https://commons.wikimedia.org/wiki/File:Leucanthemum_vulgare_%27Filigran%27_Flower_2200px.jpg
 Leucanthemum_vulgare_'Filigran'_Flower_2200px.jpg
 
@@ -851,13 +851,13 @@ Achillea_millefolium_(bright).jpg
 
 Spitzwegerich · Plantago lanceolata
 sannse
-CC BY-SA 3.0 · http://creativecommons.org/licenses/by-sa/3.0/
+CC BY-SA 3.0 · https://creativecommons.org/licenses/by-sa/3.0/
 https://commons.wikimedia.org/wiki/File:Ribwort_600.jpg
 Ribwort_600.jpg
 
 Gewöhnliches Schilf · Phragmites australis
 W.carter
-CC0 · http://creativecommons.org/publicdomain/zero/1.0/deed.en
+CC0 · https://creativecommons.org/publicdomain/zero/1.0/deed.en
 https://commons.wikimedia.org/wiki/File:Reed_panicle_at_Brodalen_1.jpg
 Reed_panicle_at_Brodalen_1.jpg
 
@@ -881,13 +881,13 @@ Ceratophyllum demersum s. str. sl1.jpg
 
 Gewöhnlicher Strandhafer · Ammophila arenaria
 Malene Thyssen (User Malene)
-CC BY-SA 3.0 · http://creativecommons.org/licenses/by-sa/3.0/
+CC BY-SA 3.0 · https://creativecommons.org/licenses/by-sa/3.0/
 https://commons.wikimedia.org/wiki/File:Hvid_klit.jpg
 Hvid_klit.jpg
 
 Sanddorn · Hippophae rhamnoides
 No machine-readable author provided. Svdmolen assumed (based on copyright claims).
-CC BY-SA 3.0 · http://creativecommons.org/licenses/by-sa/3.0/
+CC BY-SA 3.0 · https://creativecommons.org/licenses/by-sa/3.0/
 https://commons.wikimedia.org/wiki/File:Hippophae_rhamnoides-01_(xndr).JPG
 Hippophae_rhamnoides-01_(xndr).JPG
 
@@ -905,7 +905,7 @@ Tripleurospermum_maritimum_Borth.jpg
 
 Gewöhnlicher Queller · Salicornia europaea agg.
 Kristian Peters -- Fabelfroh 15:07, 10 August 2007 (UTC)
-CC BY-SA 3.0 · http://creativecommons.org/licenses/by-sa/3.0/
+CC BY-SA 3.0 · https://creativecommons.org/licenses/by-sa/3.0/
 https://commons.wikimedia.org/wiki/File:Salicornia_europaea.jpeg
 Salicornia europaea.jpeg
 
@@ -917,7 +917,7 @@ Limonium_vulgare_001.JPG
 
 Gewöhnliches Seegras · Zostera marina
 Daderot
-CC0 · http://creativecommons.org/publicdomain/zero/1.0/deed.en
+CC0 · https://creativecommons.org/publicdomain/zero/1.0/deed.en
 https://commons.wikimedia.org/wiki/File:Zostera_marina_-_National_Museum_of_Nature_and_Science,_Tokyo_-_DSC07663.JPG
 Zostera_marina_-_National_Museum_of_Nature_and_Science,_Tokyo_-_DSC07663.JPG
 
@@ -953,7 +953,7 @@ Blé_tendre_(GRAPELLI)_AO-5-cliche_Jean_Weber_(5)_(23975019962).jpg
 
 Goldenes Frauenhaarmoos · Polytrichum commune
 Kristian Peters -- Fabelfroh 14:35, 21 October 2007 (UTC)
-CC BY-SA 3.0 · http://creativecommons.org/licenses/by-sa/3.0/
+CC BY-SA 3.0 · https://creativecommons.org/licenses/by-sa/3.0/
 https://commons.wikimedia.org/wiki/File:Polytrichum_commune.jpeg
 Polytrichum_commune.jpeg
 
@@ -965,7 +965,7 @@ Fomes_fomentarius_2010_G2.jpg
 
 Andel · Puccinellia maritima
 Kristian Peters -- Fabelfroh 15:37, 27 November 2006 (UTC)
-CC BY-SA 3.0 · http://creativecommons.org/licenses/by-sa/3.0/
+CC BY-SA 3.0 · https://creativecommons.org/licenses/by-sa/3.0/
 https://commons.wikimedia.org/wiki/File:Puccinellia_maritima.jpeg
 Puccinellia_maritima.jpeg
 
@@ -989,19 +989,19 @@ Plantago_maritima.jpg
 
 Salz-Binse · Juncus gerardii
 Kristian Peters -- Fabelfroh 07:02, 9 July 2006 (UTC)
-CC BY-SA 3.0 · http://creativecommons.org/licenses/by-sa/3.0/
+CC BY-SA 3.0 · https://creativecommons.org/licenses/by-sa/3.0/
 https://commons.wikimedia.org/wiki/File:Juncus_gerardii.jpeg
 Juncus_gerardii.jpeg
 
 Strand-Grasnelke · Armeria maritima
 Wilson44691
-CC0 · http://creativecommons.org/publicdomain/zero/1.0/deed.en
+CC0 · https://creativecommons.org/publicdomain/zero/1.0/deed.en
 https://commons.wikimedia.org/wiki/File:Armeria_maritima_Dunnet_Head.jpg
 Armeria_maritima_Dunnet_Head.jpg
 
 Strand-Wermut · Artemisia maritima
 Sten Porse
-CC BY-SA 3.0 · http://creativecommons.org/licenses/by-sa/3.0/
+CC BY-SA 3.0 · https://creativecommons.org/licenses/by-sa/3.0/
 https://commons.wikimedia.org/wiki/File:Artemisia-maritima.JPG
 Artemisia-maritima.JPG
 

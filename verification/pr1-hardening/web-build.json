@@ -1,0 +1,9 @@
+{
+  "version": "1.0.0-rc.1",
+  "sourceCommit": "7fbdac807c03dc017f00cd590ff7f9c377fe37e6",
+  "sourceDirty": false,
+  "totalBytes": 36710148,
+  "initialUpperBoundBytes": 26656033,
+  "deferredPhotographs": 168,
+  "largestFileBytes": 2661512
+}

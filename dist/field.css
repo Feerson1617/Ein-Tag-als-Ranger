@@ -160,3 +160,23 @@ body:not(.in-service) #hud,body:not(.in-service) #field-dock,body:not(.in-servic
 #graphics-test{position:fixed;left:12px;bottom:12px;z-index:220;display:flex;gap:8px;background:#faf9ed;padding:8px;border-radius:6px}#graphics-test button{font:13px system-ui;min-height:44px;padding:8px}
 #render-mode{display:block;width:100%;min-height:46px;padding:8px 10px;background:#faf9ef;border:1px solid #a5b39a;border-radius:5px;font-size:15px;color:#223e32;margin-bottom:12px}
 .graphics-options{display:grid;gap:12px;margin:18px 0}.graphics-options label{display:flex;gap:14px;align-items:center;min-height:76px;padding:14px;border:1px solid #c3cfb8;background:#faf9ef;border-radius:7px;cursor:pointer}.graphics-options input{width:23px;height:23px;flex-shrink:0;accent-color:#345e42}.graphics-options label:has(input:checked){border-color:#345e42;box-shadow:inset 0 0 0 1px #345e42}.graphics-options strong{display:block;font-size:16px;margin-bottom:5px}.graphics-options small{display:block;font-size:12px;line-height:1.6;color:#5b6f5d}
+
+/* Missions live inside the existing fieldbook; the landscape stays unobstructed. */
+.mission-label{display:grid;gap:.4rem;margin:1rem 0;font-weight:600}
+.mission-label textarea{width:100%;min-height:6rem;resize:vertical;font:inherit;padding:.7rem;border:1px solid #768274;border-radius:.5rem;background:#fffdf5;color:#203629}
+fieldset{border:1px solid #9ca68f;padding:.8rem;margin:1rem 0;display:grid;gap:.65rem}fieldset label{display:flex;align-items:center;gap:.5rem;min-height:44px}input[type=checkbox]{width:20px;height:20px;flex-shrink:0}
+.mission-records{font-size:.9rem;overflow-wrap:anywhere}.mission-records p{border-left:3px solid #6e8661;padding-left:.7rem}
+#field-note{position:fixed;bottom:145px;left:50%;transform:translateX(-50%);z-index:12;min-height:44px}#field-note:disabled{opacity:.55}
+#storage-status{position:fixed;top:80px;left:16px;right:270px;z-index:50;padding:12px;background:#fff3cb;color:#412b16;border:2px solid #9b6426;border-radius:8px}
+#scenario-options{margin:.5rem 0}#scenario-options>button{margin:.7rem 0;min-height:44px}
+:focus-visible{outline:3px solid #b26325;outline-offset:3px}
+@media(max-width:700px){#storage-status{top:60px;right:12px;left:12px}#field-note{bottom:120px;max-width:60vw}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+
+#secondary-tools{grid-column:1/-1;width:100%}#secondary-tools>summary{padding:12px;background:#213b32e8;color:#f5f0df;border-radius:7px;cursor:pointer;min-height:44px}.secondary-grid{display:grid;grid-template-columns:1fr 1fr;gap:5px;padding-top:5px}
+#observation-tools .primary-tool{min-height:68px;padding:9px}#observation-tools .primary-tool>span{font-size:27px}#task strong{font-size:1rem;line-height:1.3;white-space:normal}#task>span:last-child{white-space:normal}
+#focus-panel #field-note{position:static;transform:none;width:100%;margin:9px 0 0;min-height:44px;font-size:.9rem}
+#focus-panel{max-height:45vh;overflow:auto}#field-utilities>.tool{min-height:44px}
+@media(max-height:550px){#observation-tools .primary-tool{min-height:52px;padding:5px}#task{padding:9px}#field-utilities>.tool{min-height:40px}}
+#focus-panel #field-note{pointer-events:auto}
+body:not(.in-service) #graphics-test{display:none}

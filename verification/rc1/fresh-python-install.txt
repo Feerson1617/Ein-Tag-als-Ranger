@@ -1,0 +1,20 @@
+Collecting Pillow==12.3.0 (from -r tools/requirements-dev.txt (line 1))
+  Downloading pillow-12.3.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.1 kB)
+Collecting playwright==1.62.0 (from -r tools/requirements-dev.txt (line 2))
+  Downloading playwright-1.62.0-py3-none-manylinux1_x86_64.whl.metadata (3.3 kB)
+Collecting pyee==13.0.1 (from -r tools/requirements-dev.txt (line 3))
+  Downloading pyee-13.0.1-py3-none-any.whl.metadata (3.0 kB)
+Collecting greenlet==3.5.5 (from -r tools/requirements-dev.txt (line 4))
+  Downloading greenlet-3.5.5-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (3.8 kB)
+Collecting typing_extensions==4.16.0 (from -r tools/requirements-dev.txt (line 5))
+  Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+Downloading pillow-12.3.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (6.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.9/6.9 MB 25.1 MB/s eta 0:00:00
+Downloading playwright-1.62.0-py3-none-manylinux1_x86_64.whl (47.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 47.7/47.7 MB 31.4 MB/s eta 0:00:00
+Downloading pyee-13.0.1-py3-none-any.whl (15 kB)
+Downloading greenlet-3.5.5-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (621 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 621.4/621.4 kB 39.1 MB/s eta 0:00:00
+Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+Installing collected packages: typing_extensions, Pillow, greenlet, pyee, playwright
+Successfully installed Pillow-12.3.0 greenlet-3.5.5 playwright-1.62.0 pyee-13.0.1 typing_extensions-4.16.0

@@ -1,0 +1,8 @@
+{
+  "ready": true,
+  "startupSeconds": 7.245942249000109,
+  "loading": "Bereit · Dein Feldbuch wird auf diesem Gerät gespeichert.",
+  "errors": [],
+  "consoleErrors": [],
+  "storageWarning": "Feldbuch nicht auf dem Gerät gespeichert. Der laufende Stand bleibt erhalten; bitte JSON exportieren."
+}
