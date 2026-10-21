@@ -59,7 +59,7 @@ export class InteractionScenarios {
   for(const quest of scenario.quests){const sim=this.simulations.get(quest.habitat),groups=this.groups.get(quest.id);for(const group of groups){
    for(const a of group.actors){a.scenarioInactive=false;a.scenarioSuppressed=false;sim.activate(a);a.educationHunt=quest.kind==='predation';}
    const context=sim.relations.arm(quest.kind,quest.species,group.actors,group.patch);if(!context)throw Error(`Encounter unavailable: ${quest.id}`);
-   Object.assign(group,{...context,actorIds:context.actors,actors:group.actors,started:sim.time,seconds:0,evidence:null,focusedPartners:new Set()});sim.encounters.arm(group);
+   Object.assign(group,{...context,actorIds:context.actors,actors:group.actors,started:sim.time,seconds:0,evidence:null,observationKey:null,investigationSeconds:0,focusedPartners:new Set()});sim.encounters.arm(group);
   }}
   for(const sim of this.simulations.values())sim.settleBirdStarts();
   return scenario;
@@ -87,7 +87,7 @@ export class InteractionScenarios {
   }}return result;
  }
  observeRelationship(q,g,focus,dt,book,visible){
-  if(book.active?.quest.id!==q.id||!book.progress(q)||book.investigationProgress(q))return null;
+  if(book.active?.quest.id!==q.id||!book.progress(q)||book.active.done||book.investigationProgress(q)&&!book.active.replay)return null;
   const actor=focus?.type==='animal'&&g.actors.includes(focus.item)?focus.item:null;
   if(!actor?.alive||actor.trace||!visible(actor)||!g.together){g.observationKey=null;g.investigationSeconds=0;return null;}
   const sim=this.simulations.get(q.habitat);
@@ -98,7 +98,8 @@ export class InteractionScenarios {
   g.investigationSeconds=(g.investigationSeconds||0)+dt;book.active.seconds=g.investigationSeconds;
   if(g.investigationSeconds<6)return null;
   const patch=g.plan?.patch||g.patch;
-  book.completed[q.id].investigations={...book.completed[q.id].investigations,[q.encounters[0].id]:{completedAt:Date.now(),habitat:q.habitat,actors:[...g.actorIds],plantId:patch?plantIdentity(patch):null,evidence:{...evidence},source:'own-observation',interpretation:null}};
+  const recordKey=book.active.replay?`${q.encounters[0].id}:replay:${Date.now()}`:q.encounters[0].id;
+  book.completed[q.id].investigations={...book.completed[q.id].investigations,[recordKey]:{replay:!!book.active.replay,duration:Math.max(0,sim.time-g.observationStarted),completedAt:Date.now(),habitat:q.habitat,actors:[...g.actorIds],plantId:patch?plantIdentity(patch):null,evidence:{...evidence},source:'own-observation',interpretation:null}};
   book.active.done=true;book.save();
   return {kind:'quest',quest:q,habitat:q.habitat,allDone:true,stage:'documented'};
  }

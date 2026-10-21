@@ -12,6 +12,7 @@
 <header id="hud">
  <div class="brand"><span class="brand-symbol">❋</span><div><strong>FELDBUCH</strong><small>Eine ökologische Expedition</small></div></div>
  <div class="place"><span id="place-name">Norddeutscher Wald</span><small id="environment">Vormittag · Lernlandschaft</small></div>
+ <button class="icon-btn" id="pause" aria-label="Spiel pausieren" title="Pause">Ⅱ</button>
  <button class="icon-btn" id="sound" aria-label="Vogelstimmen einschalten" title="Echte Vogelstimmen">♫</button>
  <button class="icon-btn" id="graphics" aria-label="Darstellung einstellen" title="Darstellung">⚙</button>
  <button class="icon-btn" id="fullscreen" aria-label="Vollbild öffnen" title="Vollbild">⛶</button>
@@ -24,21 +25,16 @@
  <button id="magnifier" class="tool primary-tool" aria-label="Lupe öffnen"><span>⌕</span><small>Lupe</small></button>
  </div>
  <div id="field-utilities">
- <button id="quests" class="tool" aria-label="Questbuch öffnen"><span>✧</span><small>Questbuch</small></button>
- <button id="journal" class="tool" aria-label="Feldbuch öffnen"><span>▤</span><small>Feldbuch</small><i id="journal-dot" hidden></i></button>
- <button id="perspective" class="tool" aria-label="Zur freien Übersicht wechseln"><span>↗</span><small>Übersicht</small></button>
- <button id="tide" class="tool" aria-label="Gezeiten einstellen"><span>≈</span><small>Gezeiten</small></button>
- <button id="field-photo" class="tool" aria-label="Feldfoto aufnehmen"><span>▣</span><small>Feldfoto</small></button>
- <button id="map" class="tool" aria-label="Karte öffnen"><span>⌖</span><small>Karte</small></button>
- <button id="daytime" class="tool" aria-label="Zur Abendstimmung wechseln"><span>☼</span><small>Tageszeit</small></button>
+<button id="missions" class="tool" aria-label="Lernmissionen im Feldbuch öffnen"><span>▧</span><small>Lernmissionen</small></button><button id="journal" class="tool" aria-label="Feldbuch öffnen"><span>▤</span><small>Feldbuch</small><i id="journal-dot" hidden></i></button><button id="quests" class="tool" aria-label="Questbuch öffnen"><span>✧</span><small>Questbuch</small></button><button id="map" class="tool" aria-label="Karte öffnen"><span>⌖</span><small>Karte</small></button><details id="secondary-tools"><summary>Weitere Werkzeuge</summary><div class="secondary-grid"><button id="perspective" class="tool" aria-label="Zur freien Übersicht wechseln"><span>↗</span><small>Übersicht</small></button><button id="tide" class="tool" aria-label="Gezeiten einstellen"><span>≈</span><small>Gezeiten</small></button><button id="field-photo" class="tool" aria-label="Feldfoto aufnehmen"><span>▣</span><small>Feldfoto</small></button><button id="daytime" class="tool" aria-label="Zur Abendstimmung wechseln"><span>☼</span><small>Tageszeit</small></button></div></details>
  </div>
+
 </nav>
 </div>
 <div id="crosshair" aria-hidden="true"></div>
 <div id="residents" aria-label="Dorfbewohner"></div>
 <div id="known-labels" aria-hidden="true"></div>
 <div id="focus-target" hidden aria-hidden="true"><i></i><i></i><i></i><i></i><span id="focus-target-label"></span></div>
-<div id="lenses" hidden><div class="lens-edge"></div><div id="focus-panel"><span class="eyebrow" id="focus-category">BEOBACHTUNG</span><strong id="focus-name">Suche eine Art im Sichtfeld</strong><span id="focus-action">Ruhig im Blick halten.</span><button id="focus-entry" hidden>Feldbucheintrag ansehen ↗</button><div class="progress-track"><i id="focus-progress"></i></div></div><div id="zoom-control"><label for="zoom">Vergrößerung</label><input id="zoom" type="range" min="1" max="8" value="3" step=".25"><output id="zoom-label">3×</output><small id="observation-speed" hidden>Tiere · ½ Tempo</small></div></div>
+<div id="lenses" hidden><div class="lens-edge"></div><div id="focus-panel"><span class="eyebrow" id="focus-category">BEOBACHTUNG</span><strong id="focus-name">Suche eine Art im Sichtfeld</strong><span id="focus-action">Ruhig im Blick halten.</span><button id="focus-entry" hidden>Feldbucheintrag ansehen ↗</button><div class="progress-track"><i id="focus-progress"></i></div><button id="field-note" class="action" hidden disabled>Beobachtung sichern</button></div><div id="zoom-control"><label for="zoom">Vergrößerung</label><input id="zoom" type="range" min="1" max="8" value="3" step=".25"><output id="zoom-label">3×</output><small id="observation-speed" hidden>Tiere · ½ Tempo</small></div></div>
 <div id="near-board" hidden><button id="read-board">Tafel lesen <span>↗</span></button><small id="board-label"></small></div>
 <div id="detail-loupe" hidden><span>DETAILANSICHT</span><canvas id="specimen" aria-label="Vergrößerte Ansicht der beobachteten kleinen Art"></canvas><small id="detail-scale"></small></div>
 <button id="hold-focus" hidden>Fokus halten ◎</button>
@@ -46,14 +42,15 @@
 <div id="dig-hint" hidden><button id="dig" aria-label="Bodenprobe untersuchen"><span id="dig-arrow" aria-hidden="true">↑</span> <span id="dig-text">Bodenprobe untersuchen</span></button><small id="dig-status"></small></div>
 <div id="controls"><div id="joystick" aria-label="Bewegungssteuerung: ziehen zum Gehen"><div class="joystick-ring"></div><span>↑</span><span>←</span><span>→</span><span>↓</span><i id="thumb"></i></div><span id="look-hint">Rechts ziehen · Blick bewegen</span></div>
 <div id="toast" role="status"></div>
+<aside id="storage-status" role="alert" hidden></aside>
 <aside id="graphics-recovery" hidden role="status"><p id="graphics-recovery-text"></p><button id="graphics-retry" class="action" hidden>Spiel erneut laden</button></aside>
 <aside id="discovery-card" hidden role="status"><span class="eyebrow">NEUER FELDBUCHEINTRAG</span><strong id="discovery-name"></strong><button id="view-entry">Eintrag ansehen ↗</button><button id="dismiss-discovery" aria-label="Fundmeldung schließen">×</button></aside>
 <aside id="quest-guide" hidden aria-live="polite"><span class="eyebrow">AKTIVER AUFTRAG</span><strong id="quest-name"></strong><div class="quest-bearing"><span id="quest-arrow" aria-hidden="true">↑</span><span id="quest-distance"></span></div><small id="quest-status"></small><div class="progress-track"><i id="quest-progress"></i></div><button id="quest-focus">Ziel im Fernglas suchen</button></aside>
 <dialog id="panel"><div class="panel-head"><span class="eyebrow" id="panel-eyebrow">FELDBUCH</span><button id="close-panel" aria-label="Fenster schließen">✕</button></div><div id="panel-content"></div></dialog>
 <div id="welcome"><div class="welcome-card"><span class="eyebrow">DIENSTANTRITT · NORDDEUTSCHE KÜSTE</span><h1>Dein erster Tag <br>als Nationalparkranger.</h1><p>Dein neuer Job beginnt. Lerne dein Revier kennen und halte Arten und ihre Beziehungen im Feldbuch fest.</p>
 <div class="welcome-equipment"><span>◉ ◉ <b>Fernglas</b> · Tiere beobachten</span><span>⌕ <b>Lupe</b> · Pflanzen bestimmen</span><span>✧ <b>Questbuch</b> · Artenpaare suchen</span><span>⌖ <b>Karte</b> · Lebensräume finden</span></div>
-<div class="mode-tabs" aria-label="Expeditionsmodus"><button id="mode-free" class="selected" aria-pressed="true">Freie Erkundung</button><button id="mode-interactions" aria-expanded="false" aria-controls="scenario-choice">Interaktionen und Wechselwirkungen <span aria-hidden="true">⌄</span></button></div>
-<div id="scenario-choice" hidden><label for="scenario-select">Szenario auswählen</label><select id="scenario-select"></select></div><div id="mode-description" aria-live="polite">Erkunde dein Revier und sammle Arten und Beobachtungen im Feldbuch.</div>
-<button id="start" disabled>Freie Erkundung starten <span>→</span></button><details class="welcome-controls"><summary>Darstellung und Steuerung</summary><label class="graphics-label" for="render-mode">Darstellung</label><select id="render-mode"><option value="auto">Automatisch · 30 FPS</option><option value="sharp">Hohe Schärfe · 30 FPS</option><option value="smooth">Flüssigere Bewegung · bis 60 FPS</option></select><small>Tablet: links bewegen; weiter auslenken → schneller. Rechts umsehen.<br>Computer: WASD / Pfeiltasten · Umschalt zum Sprinten · Maus ziehen · B Fernglas · L Lupe · E Tafel<br>Mit ⚙ kannst du die Darstellung jederzeit anpassen. ⛶ öffnet das Vollbild.</small></details><span id="loading">Die Landschaft wächst …</span></div></div>
+<div class="mode-tabs" aria-label="Expeditionsmodus"><button id="mode-free" class="selected" aria-pressed="true">Freie Erkundung</button><button id="mode-missions" aria-pressed="false">Lernmissionen</button></div><details id="scenario-options"><summary>Vorhandene Begegnungsszenarien</summary><button id="mode-interactions" aria-expanded="false" aria-controls="scenario-choice">Interaktionen und Wechselwirkungen <span aria-hidden="true">⌄</span></button>
+<div id="scenario-choice" hidden><label for="scenario-select">Szenario auswählen</label><select id="scenario-select"></select></div></details><div id="mode-description" aria-live="polite">Erkunde dein Revier und sammle Arten und Beobachtungen im Feldbuch.</div>
+<button id="start" disabled>Freie Erkundung starten <span>→</span></button><details class="welcome-controls"><summary>Darstellung und Steuerung</summary><label class="graphics-label" for="render-mode">Darstellung</label><select id="render-mode"><option value="auto">Automatisch · 30 FPS</option><option value="sharp">Hohe Schärfe · 30 FPS</option><option value="smooth">Flüssigere Bewegung · bis 60 FPS</option></select><small>Tablet: links bewegen; weiter auslenken → schneller. Rechts umsehen.<br>Computer: WASD / Pfeiltasten · Umschalt zum Sprinten · Maus ziehen · B Fernglas · L Lupe · E Tafel<br>Mit ⚙ kannst du die Darstellung jederzeit anpassen. ⛶ öffnet das Vollbild.</small></details><small id="build-version">1.0.0-rc.1 · Releasekandidat</small><span id="loading">Die Landschaft wächst …</span></div></div>
 <script type="module" src="expedition.js?revision=120"></script>
 </body></html>

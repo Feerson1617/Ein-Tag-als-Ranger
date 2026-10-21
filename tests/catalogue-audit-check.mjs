@@ -1,7 +1,9 @@
+import {VERSION} from '../dist/release-info.js';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {ANIMALS,PLANTS,HABITATS} from '../dist/biodiversity.js';
 import {SPECIES_PHOTOS} from '../dist/species-photos.js';
+assert.equal(VERSION,JSON.parse(fs.readFileSync(new URL('../package.json',import.meta.url),'utf8')).version);
 const taxa={...ANIMALS,...PLANTS},ids=Object.keys(taxa),habitats=new Map(HABITATS.map(h=>[h.id,h]));
 assert.equal(ids.length,Object.keys(ANIMALS).length+Object.keys(PLANTS).length,'No overlapping IDs');
 assert.equal(new Set(ids).size,ids.length);

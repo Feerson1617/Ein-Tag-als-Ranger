@@ -47,6 +47,12 @@ const record=Object.values(f.book.completed[f.q.id].investigations)[0];
 assert.equal(record.source,'own-observation');assert.equal(record.interpretation,null,'A model event is not the learner’s explanation');
 assert.equal(new QuestBook(f.scenario.simulations,{stop(){}},storage).investigationProgress(f.q),1);
 
+const originalInvestigations=f.book.investigationProgress(f.q);f.book.select(f.q.id,{repeat:true});
+assert.equal(f.book.active.done,false);assert.equal(f.book.active.replay,true);
+f.group.observationKey=null;f.sim.time=30;a.age=30;a.lastEvent={kind:'competition',time:30,age:30,otherId:b.id,resourceId:'shared-food',resourceStock:.5};
+assert.equal(f.book.observe({type:'animal',item:a},6.1,j,visible).stage,'documented');
+assert.equal(f.book.investigationProgress(f.q),originalInvestigations+1);assert.equal(Object.values(f.book.completed[f.q.id].investigations).at(-1).replay,true);
+
 const h=fixture('herbivory','forest'),animal=h.actors[0];
 const plantVisible=p=>p===animal||p.focusType==='plant';
 h.book.observe({type:'animal',item:animal},.1,j,plantVisible);
@@ -56,6 +62,13 @@ assert.equal(h.book.observe({type:'plant',item:h.instance},.1,j,p=>p===animal),n
 assert.equal(h.book.observe(null,0,j,plantVisible),null);
 assert.equal(h.book.observe({type:'plant',item:h.instance},.1,j,plantVisible).stage,'discovered');
 assert.equal(h.book.investigationProgress(h.q),0);
+
+// A local free assignment ends after one witnessed context; collection remains separate.
+const freeActor={id:800,species:'mytilus_edulis',habitat:'wadden',alive:true,age:10,lastEvent:{kind:'filtering',time:10,age:10}},freeContext={id:'local',habitat:'wadden',actors:[800],started:0,seconds:0,done:false},freeQuest={id:'local-filter',kind:'filtering'};
+const freeBook=new QuestBook(new Map([['wadden',{time:10}]]),{stop(){}});
+freeBook.active={quest:freeQuest,contexts:[freeContext,{...freeContext,id:'optional',actors:[801]}],seconds:0,watched:0};
+j.entries.mytilus_edulis={behaviors:[]};const freeResult=freeBook.observe({type:'animal',item:freeActor},6.1,j);
+assert.equal(freeResult.allDone,true);assert.equal(freeResult.collectionDone,false);assert.equal(freeBook.active.done,true);assert.equal(freeBook.progress(freeQuest),1);
 
 assert.ok(questFinished({progress:()=>1},{encounters:Array(196)}));
 assert.equal(questCollectionFinished({progress:()=>1},{encounters:Array(196)}),false);
