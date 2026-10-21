@@ -166,3 +166,11 @@ Gespeichert werden Feldbuchbelege und Antworten, nicht der vollständige laufend
 Welt-/Kamera-/Gezeitenzustand. Nach Wiederaufnahme sind Vergleichsbedingungen bei
 Bedarf erneut einzustellen. Live-Belege und importierte Aufzeichnungen bleiben
 als solche gekennzeichnet.
+
+
+GitHub-Verbindungsstatus zum Abschluss: Der zuvor gesperrte API-Zugriff funktioniert
+wieder. Branch `codex/ranger-v1` ist gepusht, Entwurfs-PR #1 ist angelegt:
+https://github.com/Feerson1617/Ein-Tag-als-Ranger/pull/1 .
+Der frühere 403 ist ein historischer Befund, kein fortbestehender Tokenbedarf.
+Es gab keinen Merge und keine Veröffentlichung. Status der entfernten CI-Läufe
+wird getrennt von den lokal bestandenen Tests behandelt.
