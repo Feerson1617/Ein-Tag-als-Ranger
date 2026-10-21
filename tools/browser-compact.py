@@ -6,6 +6,8 @@ from functools import partial
 from threading import Thread
 from http.server import SimpleHTTPRequestHandler,ThreadingHTTPServer
 from playwright.sync_api import sync_playwright
+from module_graph import ModuleGraph
+import subprocess
 import argparse,base64,hashlib,json,shutil,time,traceback
 p=argparse.ArgumentParser();p.add_argument('--site',default='outputs/Ranger-Kompakt');p.add_argument('--entry',default='index.html');p.add_argument('--smoke',action='store_true');p.add_argument('--visual-only',action='store_true');p.add_argument('--width',type=int,default=800);p.add_argument('--height',type=int,default=500);args=p.parse_args()
 root=Path(__file__).resolve().parents[1];out=root/'work/compact-browser';out.mkdir(exist_ok=True,parents=True);site=(root/args.site).resolve();result={'checks':[],'errors':[],'captures':[],'startedAt':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime()),'site':args.site,'entry':args.entry,'viewport':{'width':args.width,'height':args.height},'hardwareScope':'Cloud Chromium; no actual iPad/Safari or minimum-device certification'}
@@ -18,6 +20,7 @@ class PrefixHandler(Handler):
   if self.path.startswith('/Ein-Tag-als-Ranger/'):self.path=self.path[len('/Ein-Tag-als-Ranger'):]
   return super().do_GET()
 server.shutdown();server.server_close();server=ThreadingHTTPServer(('127.0.0.1',0),partial(PrefixHandler,directory=str(site)));Thread(target=server.serve_forever,daemon=True).start();url=f'http://127.0.0.1:{server.server_port}/Ein-Tag-als-Ranger/{args.entry}'
+g=ModuleGraph(root/'dist','compact/main.js');result['sourceCommit']=subprocess.check_output(['git','rev-parse','HEAD'],cwd=root,text=True).strip();result['runtimeSourceHashes']={name:hashlib.sha256((root/'dist'/name).read_bytes()).hexdigest()for name in sorted(set(g.modules)|g.assets|{'compact/style.css','kompakt.html','icon.svg'})};result['videos']=[]
 def save(): (out/('standalone-result.json'if args.smoke else'result.json')).write_text(json.dumps(result,indent=2,ensure_ascii=False))
 def ok(name,**details):
  assert not result['errors'],result['errors']
@@ -36,7 +39,7 @@ def begin_video(page):
  page.evaluate('''()=>{const stream=document.querySelector('#world').captureStream(12);window.__referenceVideo={stream,chunks:[]};const rec=new MediaRecorder(stream,{mimeType:'video/webm;codecs=vp8',videoBitsPerSecond:500000});window.__referenceVideo.rec=rec;rec.ondataavailable=e=>{if(e.data.size)window.__referenceVideo.chunks.push(e.data);};rec.start(1000);}''')
 def end_video(page,name):
  data=page.evaluate('''()=>new Promise(resolve=>{const v=window.__referenceVideo;v.rec.onstop=async()=>{const b=new Uint8Array(await new Blob(v.chunks,{type:'video/webm'}).arrayBuffer());let text='';for(let i=0;i<b.length;i+=32768)text+=String.fromCharCode(...b.subarray(i,i+32768));v.stream.getTracks().forEach(t=>t.stop());window.__referenceVideo=null;resolve(btoa(text));};v.rec.stop();})''')
- video=base64.b64decode(data);assert len(video)>3000 and video.startswith(bytes.fromhex('1a45dfa3'));(out/(name+'.webm')).write_bytes(video)
+ video=base64.b64decode(data);assert len(video)>3000 and video.startswith(bytes.fromhex('1a45dfa3'));(out/(name+'.webm')).write_bytes(video);result['videos'].append({'file':name+'.webm','bytes':len(video),'sha256':hashlib.sha256(video).hexdigest()});save()
 with sync_playwright()as pw:
  launch={'headless':True}
  if shutil.which('chromium'):launch.update(executable_path=shutil.which('chromium'),args=['--no-sandbox','--use-angle=swiftshader','--enable-unsafe-swiftshader'])
