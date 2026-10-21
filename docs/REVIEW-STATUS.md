@@ -7,7 +7,26 @@ C01: Der Original-Log ist jetzt zugänglich; ein durch den begrenzten Physikschr
 verursachter Beobachtungs-Timeout wurde lokal mit stabiler Fokus-ID reproduziert
 und gezielt korrigiert. Mission 3 prüft Individuum, Modelldurchlauf und getrennte
 Zeitfenster ausdrücklich, einschließlich Feldbuchimport. Vollständige erneute
-Qualitätssicherung: 26 Node-Reihen, fünf Python-Methoden, alle Pakete und die unabhängige CI mit 13 Browserblöcken bestanden. Lokal bestehen M1/M2; M3 überschritt bei 800×500 wegen langsamer Modellzeit das 180-s-Testlimit (4,1/6 Modellsekunden). Dieser Fehllauf ist dokumentiert; ein ergänzender 600×350-Lauf läuft. Die CI wird um die vorhandenen Fehlerfälle, Projektarchiv- und Einzel-HTML-Prüfung ergänzt. Der PR bleibt Draft, ohne Merge oder Veröffentlichung.
+Qualitätssicherung: 26 Node-Reihen, fünf Python-Methoden, Pakete und die erste
+unabhängige CI mit 13 Browserblöcken bestanden. Die vollständige Pipeline prüft
+zusätzlich die vorhandenen Grafik-/Download-/Speicherfehlerfälle, das
+Projektarchiv und die Einzel-HTML (16+3 Browserblöcke). Maßgeblicher aktueller
+Status: [Checks des PR-Heads](https://github.com/Feerson1617/Ein-Tag-als-Ranger/pull/1/checks).
+Die PR-Beschreibung benennt den zuletzt vollständig verifizierten Lauf.
+
+Die lokalen M3-Zeitüberschreitungen (800×500: 4,1/6 Modellsekunden; 600×350:
+4,6/6), ein Checkbox-Timeout und zwei abgebrochene Fehlerläufe sind mit Logs,
+Metadaten und Screenshots dokumentiert. Der erste erweiterte CI-Lauf überschritt
+30 Minuten und ist ausdrücklich kein bestandener Lauf. Der Prüftreiber trennt
+jetzt WebGL-Fehlerfälle in unabhängige Browser und stellt nach der Tabletprobe
+die angeforderte Ansicht wieder her. Keine Einzelzeitlimits oder Assertions
+wurden gelockert.
+
+Kurze oder nicht filtrierende Stationsbelege bleiben lesbar; sie tragen keinen
+M3-Abschluss. Negative Importfälle für verschiedene Individuen, andere
+Szenenkontexte, unmögliche/überlappende Zeitfenster und gefälschte Abschlussflags
+sind ergänzt. Historische Daten ohne Durchlaufkennung bleiben erhalten.
+Der PR bleibt Draft, ohne Merge oder Veröffentlichung.
 Die folgenden Abschnitte dokumentieren frühere, davon getrennte Prüfstände.
 
 ## Baseline vom 21.10.2026
@@ -210,7 +229,7 @@ elf Browserblöcke einschließlich der drei Live-Missionen. Actions testet den
 prospektiven Mergecommit `aa2a9c2` des PR-Heads `5a1a11a` gegen main. Nachweise
 unter `verification/rc1/github-ci.json` und `all-missions-browser.*`.
 
-Offener Teststabilitätsbefund C01 (P1): Run 39595902666 war im Browserteil
+Historischer Teststabilitätsbefund C01 vor der gezielten Nachprüfung (P1): Run 39595902666 war im Browserteil
 fehlgeschlagen; seine konkrete Ursache ist wegen blockierter Original-Log-/
 Screenshotdownloads nicht festgestellt. Der erfolgreiche Folgelauf ändert nur
 die Diagnoseausgabe im Prüfer, keine Spielimplementierung und keine abgeschwächte

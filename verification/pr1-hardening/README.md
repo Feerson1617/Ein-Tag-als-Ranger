@@ -2,7 +2,7 @@
 
 Auftrag: C01/Mission 1 untersuchen, die Vergleichsbedingungen von Mission 3 absichern,
 bestehende Missionen, freie Erkundung und Feldbuchfunktionen erneut prüfen.
-Keine zusätzlichen Features, kein Merge, Deployment oder Veröffentlichen.
+Der PR bleibt Draft; kein Merge, Deployment oder Veröffentlichen.
 
 ## Mission 1: nachgewiesene Ursache
 
@@ -74,11 +74,11 @@ Die unabhängige [CI 39610400022](https://github.com/Feerson1617/Ein-Tag-als-Ran
 
 CI-Log-/Artefaktdownloads des neuen Laufs sind am Proxy für den dynamischen Blobhost gesperrt; die oben genannten API-Nachweise sind erfolgreich gesichert. Eine zwischenzeitlich verschärfte Ausführungssandbox blockierte auch den Start des lokalen HTTP-Servers (`PermissionError` beim Socketaufbau). Die erlaubte lokale Prüfung wurde anschließend mit freigegebenem Socketzugriff gestartet; Proxy und Netzpolitik wurden nicht umgangen.
 
-Die verbliebenen Änderungen nach dem Spielcodecommit `7fbdac8` betreffen nur Nachweise und das Mitschreiben bereits erzeugter Live-Protokolle im Testtreiber. Die Spieldateien in `dist/` bleiben identisch. Zusätzliche lokale Browser-/Fehler-/Standalone-Ergebnisse werden nach Abschluss ergänzt.
+Beobachtungssteuerung und Spielwelt bleiben seit `7fbdac8` unverändert. Eine abschließende Importkorrektur erhält auch kurze oder noch nicht filtrierende Stationsbefunde als lesbare Daten. Sie erfüllen weiterhin keinen M3-Abschluss: sechs Modellsekunden und die passenden Zustände bleiben dort Pflicht. Negative Tests prüfen den Erhalt solcher aktuellen und historischen Belege sowie die Neuberechnung eines gefälschten `complete:true`. Weitere Änderungen betreffen Prüftreiber, CI und Nachweise.
 Entwicklungsläufe mit verändertem Quellbaum bleiben als solche erkennbar.
 Historische Nachweise in `verification/rc1/` werden nicht überschrieben.
 
-Die CI führt künftig zusätzlich die bereits vorhandenen Fehlerprüfungen
+Die CI führt zusätzlich die bereits vorhandenen Fehlerprüfungen
 (`--resilience`), den Projektarchivbau und den Standalone-Smoke-Test aus. Alle
 Zeitlimits und Belegprüfungen bleiben erhalten. Die erweiterte Pipeline wird
 getrennt vom oben bestandenen 13-Block-Lauf ausgewiesen.
@@ -117,3 +117,48 @@ bestanden, der kombinierte Browserstep wurde abgebrochen und der Einzel-HTML-
 Smoke-Test übersprungen. Kein bestandener Gesamtlauf. Job/Annotationen sind
 als `github-extended-cancelled-*` archiviert. Der nachfolgende Lauf prüft die
 isolierten Fehlerfälle mit unveränderten Einzelzeitlimits.
+
+## Maßgeblicher vollständiger Check
+
+Der [Check des aktuellen PR-Heads](https://github.com/Feerson1617/Ein-Tag-als-Ranger/pull/1/checks)
+ist der abschließende maschinelle Prüfstatus. Er führt 26 Node-Reihen, fünf
+Python-Prüfmethoden, Web-/Standalone-/Projektpaketbau, die 16 Browserblöcke mit
+allen drei Live-Missionen, Neuladen, Import/Export und Fehlerfällen sowie drei
+separate Einzel-HTML-Smoke-Blöcke aus. Die PR-Beschreibung nennt den zuletzt
+verifizierten Lauf und dessen Ergebnis; die oben archivierten älteren Läufe
+behalten ihren jeweiligen Status.
+
+Die drei Fehlerfälle verwenden unabhängige Browserinstanzen. Nach der separat
+bestandenen Tablet-Layoutprobe wird die angeforderte Ansicht für die Fehlerfälle
+wiederhergestellt. Der M1-Timeout bleibt 120 s, die M3-Beobachtungsfenster bleiben
+mindestens sechs Modellsekunden, alle Einzelzeitlimits und Assertions bleiben
+erhalten. Der Treiber sichert zusätzlich `live-earned-fieldbook.json` vor dem
+synthetischen Import und die beiden echten Stationsbelege als `liveStationRecords`
+in Ergebnis/CI-Annotation. Damit sind Individuum, Durchlauf, Bedingungen und
+Zeitintervalle direkt nachprüfbar. Die Artefakte enthalten ausschließlich
+Testdaten, keine Schülerdaten.
+
+Unvollständige Belege und Nicht-Filtrationsbefunde sind keine beschädigten Dateien:
+Sie bleiben importierbar, erfüllen aber keinen Abschluss. Unmögliche Zeitfenster,
+überlappende Stationsprotokolle desselben Individuums und widersprüchliche
+Szenenkennungen werden weiterhin vor Übernahme abgelehnt. Legacy-Belege ohne
+Durchlaufkennung bleiben erhalten; ihr Abschluss wird als offen bewertet.
+
+Reproduktion (Python/Playwright gemäß `tools/requirements-dev.txt`):
+
+```sh
+python tools/run-checks.py
+python tools/build-web.py
+python tools/verify-web.py
+python tools/build-standalone.py
+python -m unittest discover -s tests -p 'test_*.py' -v
+python tools/package-project.py
+python tools/browser-check.py --live --resilience --width 800 --height 500 --site outputs/GitHub-Pages --prefix /Ein-Tag-als-Ranger/
+python tools/browser-check.py --smoke --width 800 --height 500 --site outputs --entry Feldbuch.html
+```
+
+Die dokumentierten lokalen Abbrüche bleiben Fehlläufe. Sie werden durch spätere
+Erfolge nicht überschrieben. Mehrsekündige Bildabstände der lokalen Chromium-154-
+Softwaregrafik erfüllen das bisherige Leistungsziel weiterhin nicht. Physische
+Geräte und Unterrichtswirkung sind durch diese technischen Prüfungen nicht
+abgenommen. Kein Merge, Deployment oder Release erfolgt durch die Testpipeline.

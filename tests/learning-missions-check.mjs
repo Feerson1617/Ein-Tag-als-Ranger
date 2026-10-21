@@ -66,7 +66,16 @@ assert.equal(parseFieldbook(importPair(low,{...high,partnerIds:['wadden:102']}))
 assert.equal(parseFieldbook(importPair(low,{...high,scene:{...high.scene,runId:'another-run'}})).learning.missions.m3.complete,false,'A new world reuses numeric individual IDs; it is not the same individual');
 const legacyPair=[low,high].map(r=>({...r,scene:{habitat:'wadden',seed:r.tidePhase===0?123:456,scenario:null}}));
 const legacy=parseFieldbook(importPair(...legacyPair));assert.equal(legacy.learning.observations.length,2);assert.equal(legacy.learning.missions.m3.complete,false,'Legacy RNG states retain evidence, without claiming continuity');
-for(const patch of [{partnerIds:[]},{partnerIds:['wadden:101','wadden:102']},{simulationTime:35},{simulationTime:30},{simulationTime:2},{waterLevel:-.9},{evidence:{kind:'station',activity:'resting'}},{scene:{...high.scene,seed:1220}},{scene:{...high.scene,habitat:'forest'}},{scene:{...high.scene,scenario:'predation'}}]){
+for(const patch of [{duration:1},{evidence:{kind:'station',activity:'resting'}}]){
+ const retained=parseFieldbook(importPair(low,{...high,...patch}));
+ assert.equal(retained.learning.observations.length,2,'Incomplete/non-filtering observations remain readable');
+ assert.equal(retained.learning.missions.m3.complete,false,'Preserved observations cannot inherit a forged completion');
+}
+const oldResting=parseFieldbook(importPair(legacyPair[0],{...legacyPair[1],evidence:{kind:'station',activity:'resting'}}));
+assert.equal(oldResting.learning.observations.length,2,'A historical non-filtering state must not block loading the whole fieldbook');
+assert.equal(oldResting.learning.missions.m3.complete,false);
+
+for(const patch of [{partnerIds:[]},{partnerIds:['wadden:101','wadden:102']},{simulationTime:35},{simulationTime:30},{simulationTime:2},{waterLevel:-.9},{scene:{...high.scene,seed:1220}},{scene:{...high.scene,habitat:'forest'}},{scene:{...high.scene,scenario:'predation'}}]){
  const before=JSON.stringify([...memory]);
  assert.throws(()=>parseFieldbook(importPair(low,{...high,...patch})),/Stationsprotokoll|Szenenkontext/);
  assert.equal(JSON.stringify([...memory]),before,'Rejected import cannot mutate storage');

@@ -59,9 +59,8 @@ export function stationRecordIssue(r){
  if(r.missionId!=='m3'||r.source!=='model-protocol'||r.evidence?.kind!=='station'||r.taxon!=='cerastoderma_edule'||r.siteId!=='probe-2'||r.partnerIds?.length!==1||!/^wadden:[1-9]\d*$/.test(r.partnerIds[0]))return 'Stationsprotokoll ohne eindeutige Herzmuschel an Probenstelle 3.';
  const scene=r.scene;
  if(scene?.habitat!=='wadden'||scene.scenario!==null||!Number.isSafeInteger(scene.seed)||scene.seed<0||(scene.runId!==undefined&&(typeof scene.runId!=='string'||!scene.runId.trim())))return 'Ungültiger Szenenkontext im Stationsprotokoll.';
- if(!Number.isFinite(r.simulationTime)||!Number.isFinite(r.duration)||r.duration<6||r.simulationTime-r.duration < -TIME_EPSILON)return 'Ungültiges Zeitfenster im Stationsprotokoll.';
+ if(!Number.isFinite(r.simulationTime)||!Number.isFinite(r.duration)||r.duration<0||r.simulationTime-r.duration < -TIME_EPSILON)return 'Ungültiges Zeitfenster im Stationsprotokoll.';
  if(!Number.isFinite(r.sampleDepth)||r.sampleDepth< -1||r.sampleDepth>35||typeof r.present!=='boolean'||typeof r.evidence.activity!=='string'||!Number.isFinite(r.tidePhase)||r.tidePhase<0||r.tidePhase>1||!Number.isFinite(r.waterLevel)||Math.abs(r.waterLevel-(-.25-.65*Math.cos(r.tidePhase*2*Math.PI)))>1e-8)return 'Widersprüchliche Probenbedingungen im Stationsprotokoll.';
- if(r.present&&((r.tidePhase===0&&r.evidence.activity!=='resting')||(r.tidePhase===.5&&r.evidence.activity!=='filtering')))return 'Widersprüchlicher Muschelzustand im Stationsprotokoll.';
  return null;
 }
 export function stationProtocolsIssue(records){
