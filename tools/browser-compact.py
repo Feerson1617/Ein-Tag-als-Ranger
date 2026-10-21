@@ -1,0 +1,97 @@
+"""Actual UI/scene checks for phase 2, plus screenshots from the tested build.
+No state mutation/unlock hooks; screenshots use the normal preview-view buttons.
+"""
+from pathlib import Path
+from functools import partial
+from threading import Thread
+from http.server import SimpleHTTPRequestHandler,ThreadingHTTPServer
+from playwright.sync_api import sync_playwright
+import argparse,json,shutil,time,traceback
+p=argparse.ArgumentParser();p.add_argument('--site',default='outputs/Ranger-Kompakt');p.add_argument('--entry',default='index.html');p.add_argument('--smoke',action='store_true');p.add_argument('--visual-only',action='store_true');p.add_argument('--width',type=int,default=800);p.add_argument('--height',type=int,default=500);args=p.parse_args()
+root=Path(__file__).resolve().parents[1];out=root/'work/compact-browser';out.mkdir(exist_ok=True,parents=True);site=(root/args.site).resolve();result={'checks':[],'errors':[],'startedAt':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime()),'site':args.site,'entry':args.entry,'viewport':{'width':args.width,'height':args.height},'hardwareScope':'Cloud Chromium; no actual iPad/Safari or minimum-device certification'}
+class Handler(SimpleHTTPRequestHandler):
+ def log_message(self,*a):pass
+server=ThreadingHTTPServer(('127.0.0.1',0),partial(Handler,directory=str(site)));Thread(target=server.serve_forever,daemon=True).start();url=f'http://127.0.0.1:{server.server_port}/Ein-Tag-als-Ranger/{args.entry}'
+# Serve the project path, not just the origin root.
+class PrefixHandler(Handler):
+ def do_GET(self):
+  if self.path.startswith('/Ein-Tag-als-Ranger/'):self.path=self.path[len('/Ein-Tag-als-Ranger'):]
+  return super().do_GET()
+server.shutdown();server.server_close();server=ThreadingHTTPServer(('127.0.0.1',0),partial(PrefixHandler,directory=str(site)));Thread(target=server.serve_forever,daemon=True).start();url=f'http://127.0.0.1:{server.server_port}/Ein-Tag-als-Ranger/{args.entry}'
+def save(): (out/('standalone-result.json'if args.smoke else'result.json')).write_text(json.dumps(result,indent=2,ensure_ascii=False))
+def ok(name,**details):result['checks'].append({'name':name,'passed':True,**details});save();print('PASS',name,flush=True)
+def dataset(page):return page.locator('#world').evaluate('(e)=>({...e.dataset})')
+def select_view(page,name):
+ page.locator('#menu-button').click();page.locator('summary').filter(has_text='Referenzabschnitt prüfen').click();page.locator(f'[data-view="{name}"]').click()
+def ready(page):page.goto(url);page.wait_for_selector('#world[data-ready=true]',timeout=120000);page.locator('#start').click()
+def shot(page,name):page.screenshot(path=str(out/(name+'.png')))
+with sync_playwright()as pw:
+ launch={'headless':True}
+ if shutil.which('chromium'):launch.update(executable_path=shutil.which('chromium'),args=['--no-sandbox','--use-angle=swiftshader','--enable-unsafe-swiftshader'])
+ browser=pw.chromium.launch(**launch);video_options={'record_video_dir':str(out/'video'),'record_video_size':result['viewport']}if list((Path.home()/'.cache/ms-playwright').glob('ffmpeg-*/ffmpeg-linux'))else{};result['videoAvailable']=bool(video_options);context=browser.new_context(viewport=result['viewport'],**video_options);page=context.new_page();requests=[];page.on('pageerror',lambda e:result['errors'].append(str(e)));page.on('request',lambda r:requests.append(r.url));page.set_default_timeout(45000)
+ try:
+  result['browserVersion']=browser.version;ready(page);m=json.loads(dataset(page)['manifest']);assert m['biologicalZones']==['forest','saltmarsh','wadden'];assert len(m['activeTaxa'])==9;assert m['simulationInstances']==['compact-reference-fauna'];assert not any(x in r for r in requests for x in ['wildlife-phoca','wildlife-halichoerus','habitat-world','biodiversity','expedition-state']);shot(page,'01-waldstart');ok('boot: explicit small content/request graph',manifest=m)
+  page.locator('#read-sign').click();assert page.locator('#panel').is_visible();assert '1,6 m/s' in page.locator('#panel-body').inner_text();page.locator('#close').click();ok('spawn board and shared guide reachable')
+  if args.smoke:
+   page.locator('#binocular').click();assert page.locator('#binocular').get_attribute('aria-pressed')=='true';page.locator('#magnifier').click();assert page.locator('#magnifier').get_attribute('aria-pressed')=='true';assert not result['errors'];ok('standalone tools and scene; no external dependencies');result['requests']=requests;save()
+  else:
+   if not args.visual_only:
+    before=dataset(page);pos=json.loads(before['observer']);t=float(before['simulationTime']);page.keyboard.down('w');page.wait_for_function('(t)=>Number(document.querySelector("#world").dataset.simulationTime)>t+.5',arg=t,timeout=120000);page.keyboard.up('w');after=dataset(page);end=json.loads(after['observer']);elapsed=float(after['simulationTime'])-t;distance=((end['x']-pos['x'])**2+(end['z']-pos['z'])**2)**.5;assert .8<distance/elapsed<1.9;ok('actual keyboard movement',distanceMeters=distance,simulationSeconds=elapsed,wallClockMethod='wait for >0.5 model seconds; physics capped, no speed inference from slow GPU wall time')
+    select_view(page,'woodruff');page.locator('#magnifier').click();page.wait_for_function('document.querySelector("#world").dataset.focusTaxon==="galium_odoratum" && !document.querySelector("#record").disabled',timeout=120000);evidence=dataset(page);individual=evidence['focusIndividual'];assert float(evidence['observationSeconds'])>=2.5
+    page.locator('#record').click();page.locator('#note').fill('Eigene Sichtung: Blattquirle; keine Blüte. <b>kein HTML</b>');page.once('dialog',lambda d:d.dismiss());page.locator('#close').click();assert page.locator('#note').input_value().startswith('Eigene Sichtung');page.locator('#save-note').click();page.locator('#journal-button').click();assert 'Blattquirle' in page.locator('#panel-body').inner_text();assert page.locator('#panel-body b').count()==0
+    with page.expect_download()as d:page.locator('#export').click()
+    path=out/'earned-fieldbook.json';d.value.save_as(path);earned=json.loads(path.read_text());assert earned['records'][0]['individualId']==individual;assert earned['records'][0]['observationSeconds']>=2.5;ok('own live plant evidence, explicit note, real JSON download',individualId=individual)
+    run=dataset(page)['runId'];page.reload();page.wait_for_selector('#world[data-ready=true]',timeout=120000);page.locator('#start').click();assert dataset(page)['runId']!=run;page.locator('#journal-button').click();assert 'Blattquirle' in page.locator('#panel-body').inner_text();assert page.locator('#count').inner_text()=='1';ok('actual reload retains evidence and creates a fresh run ID')
+    bad=json.loads(path.read_text());bad['records'][0]['runId']='';page.locator('#import').set_input_files({'name':'bad.json','mimeType':'application/json','buffer':json.dumps(bad).encode()});page.wait_for_function('document.querySelector("#import-preview").textContent.includes("Ungültiger")');assert page.locator('#count').inner_text()=='1';ok('invalid import rejected without replacing saved evidence')
+    old={'schemaVersion':3,'entries':{'phoca_vitulina':{'found':1,'behaviors':[]},'fox':{'found':2,'behaviors':['hunting']}},'interactions':[]};page.locator('#import').set_input_files({'name':'old.json','mimeType':'application/json','buffer':json.dumps(old).encode()});page.locator('#apply-import').click();assert 'Altfeldbuch 1' in page.locator('#panel-body').inner_text();assert page.locator('#count').inner_text()=='1';ok('out-of-core legacy records imported through actual file UI as archive only');page.locator('#close').click()
+   # Every image is a real render. No injected organism placement, renderer or evidence.
+   for i,name in enumerate(['deer-side','deer-front','deer-back','bird','woodruff','nettle','salt-shrub','salt-segments','salt-grass','ramp','coast'],2):
+    select_view(page,name)
+    if name.startswith('deer')or name=='bird':page.locator('#binocular').click()
+    if name in ['woodruff','nettle','salt-shrub','salt-segments','salt-grass']:page.locator('#magnifier').click()
+    shot(page,f'{i:02}-{name}')
+   ok('reference images: deer three views, supported bird, five plants, ramp and curve')
+   # Inspect the unlabelled animal's actual rendered motion, not an artificial clock jump.
+   select_view(page,'bird');page.locator('#binocular').click();phase=dataset(page)['birdActivity'];page.keyboard.down('w');page.wait_for_function('Number(document.querySelector("#world").dataset.movementSpeed)>.1');page.wait_for_timeout(1500);page.keyboard.up('w');page.wait_for_function('document.querySelector("#world").dataset.birdActivity==="flying"',timeout=180000);shot(page,'13-bird-flight');page.wait_for_function('document.querySelector("#world").dataset.birdSupport!=="" && document.querySelector("#world").dataset.birdActivity!=="flying"',timeout=180000);shot(page,'14-bird-landed');ok('actual bird departure, flight and supported landing')
+   select_view(page,'deer-side');page.locator('#binocular').click();page.locator('#binocular').click();page.keyboard.down('w');page.wait_for_function('["walking","retreating"].includes(JSON.parse(document.querySelector("#world").dataset.deer).activity)',timeout=120000);page.keyboard.up('w');shot(page,'15-deer-moving');d=json.loads(dataset(page)['deer']);assert all(f['swing']or abs(f['y']-f['surface'])<1e-5 for f in d['feet']);ok('actual deer motion with stance feet at local terrain')
+   # Tablet viewport/profile check preserves all actual biological instances.
+   plants=dataset(page)['plantCount'];page.set_viewport_size({'width':1024,'height':768});page.locator('#menu-button').click();page.locator('#quality').select_option('tablet');page.locator('#resume').click();shot(page,'16-tablet');assert dataset(page)['plantCount']==plants;assert page.locator('#world').evaluate('(e)=>e.width')==1024;ok('tablet viewport/profile preserves plants; emulation only')
+   page.set_viewport_size(result['viewport']);page.locator('#menu-button').click();page.locator('#quality').select_option('desktop');page.locator('#resume').click()
+   page.evaluate('window.__testContextExtension=document.querySelector("#world").getContext("webgl2").getExtension("WEBGL_lose_context");window.__testContextExtension.loseContext()');page.locator('#graphics-error').wait_for(state='visible');page.evaluate('window.__testContextExtension.restoreContext()');page.locator('#graphics-error').wait_for(state='hidden',timeout=45000);assert page.locator('#count').inner_text()==('0'if args.visual_only else'1');ok('actual WebGL context loss and restoration without fieldbook loss')
+   assert not result['errors'],result['errors'];result['requests']=requests;result['lastDataset']=dataset(page);save()
+ except Exception as e:
+  result['failure']={'type':type(e).__name__,'message':str(e),'traceback':traceback.format_exc()};save()
+  try:shot(page,'FAILED');result['failure']['dataset']=dataset(page);save()
+  except Exception:pass
+  raise
+ finally:
+  context.close();browser.close()
+
+ # Independent browsers avoid retaining two live WebGL worlds after context-loss.
+ if not args.smoke and not args.visual_only:
+  for case in ['asset-failure','corrupt-storage','touch']:
+   fault_browser=pw.chromium.launch(**launch)
+   options={'viewport':result['viewport']}
+   if case=='touch':options.update(has_touch=True,is_mobile=True)
+   ctx=fault_browser.new_context(**options);pg=ctx.new_page();pg.set_default_timeout(45000)
+   try:
+    pg.add_init_script("localStorage.setItem('evolutionswald-fieldjournal-v2','legacy-sentinel');localStorage.setItem('feldbuch-quests-v1','quest-sentinel');")
+    if case=='asset-failure':
+     pg.route('**/*compact-roe-deer*.glb',lambda route:route.abort())
+     pg.goto(url);pg.wait_for_function('document.querySelector("#loading").textContent.includes("konnte nicht gestartet")',timeout=120000)
+     assert pg.evaluate("localStorage.getItem('evolutionswald-fieldjournal-v2')")=='legacy-sentinel';ok('asset failure shows recovery message and preserves large-world storage')
+    elif case=='corrupt-storage':
+     pg.add_init_script("localStorage.setItem('ranger-compact-fieldbook-v1','{broken');")
+     ready(pg);assert pg.locator('#storage-status').is_visible();assert 'bleibt unverändert' in pg.locator('#storage-status').inner_text()
+     assert pg.evaluate("localStorage.getItem('ranger-compact-fieldbook-v1')")=='{broken';ok('corrupt saved data visible and preserved at actual boot')
+    else:
+     ready(pg);before=dataset(pg);pos=json.loads(before['observer']);t=float(before['simulationTime']);rect=pg.locator('#joystick').bounding_box();assert rect
+     cdp=ctx.new_cdp_session(pg);cdp.send('Input.dispatchTouchEvent',{'type':'touchStart','touchPoints':[{'x':rect['x']+rect['width']/2,'y':rect['y']+8,'id':1}]})
+     pg.wait_for_function('(t)=>Number(document.querySelector("#world").dataset.simulationTime)>t+.4',arg=t,timeout=120000)
+     speed=float(dataset(pg)['movementSpeed']);assert abs(speed-1.6)<.001;cdp.send('Input.dispatchTouchEvent',{'type':'touchEnd','touchPoints':[]});ok('actual emulated touch gesture uses the same 1.6 m/s action',speed=speed,scope='Chromium touch emulation only')
+   except Exception as e:
+    result['failure']={'case':case,'type':type(e).__name__,'message':str(e)};save();pg.screenshot(path=str(out/('FAILED-'+case+'.png')));raise
+   finally:ctx.close();fault_browser.close()
+ save()
+
+server.shutdown();server.server_close()

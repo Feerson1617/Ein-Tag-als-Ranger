@@ -178,3 +178,8 @@ Artabhängige Flügel-, Brust-, Kopf- und Schnabelfarben ersetzen eine missverst
 Durchgehende Fundamente reichen bis unter das sichtbare Dorfgelände. Häuser und Grundstücke behalten ihre Maße. Eine zusammenhängende Holzunterlage schließt Lücken zwischen Bohlen an Kurven und Ausbuchtungen. Sprinttempo: 7,5 statt 5 m/s (+50 %). Der Tablet-Steuerkreis steigert das Tempo proportional zum Ausschlag; diagonales Gehen überschreitet das Maximum nicht. Die Startanleitung ist angepasst. Alle 17 Prüfreihen bestehen; Messungen und Grenzen stehen in `PRUEFUNG.md`.
 
 ## Frühere Änderungen – historischer Stand
+
+
+## Ranger Kompakt: eigener Referenzabschnitt
+
+Die große Fassung bleibt erhalten. `dist/kompakt.html` ist der separate Einstieg der Phasen 0–2 auf `feature/ranger-kompakt`. `python tools/build-compact.py` erzeugt eine lokale Vorschau unter `outputs/Ranger-Kompakt/`, `Ranger-Kompakt.html` und ein Vorschau-ZIP. Kein Deployment. [Stand und Freigabegatter](docs/kompakt/STATUS.md), [Plan](docs/kompakt/PLAN.md), [Prüfungen](docs/kompakt/TESTS.md). Restlicher Artenbestand und K1–K5 folgen erst nach visueller Freigabe.

@@ -13,3 +13,6 @@ export const START_GUIDE={
  concept:'Entdecken → an Merkmalen bestimmen → Beobachtung dokumentieren → fachlich einordnen',
  question:'Was entdeckst du zuerst in deinem neuen Revier?'
 };
+
+// Separate preview controls; the large world's instructions remain unchanged.
+export const COMPACT_GUIDE='WASD oder linker Steuerkreis: normal 1,6 m/s. Umschalt oder „Zügig gehen“: 2,8 m/s, auf Tastatur und Touch gleich. Auf der Landschaft ziehen: umsehen. F: Fernglas für Tiere; L: Lupe für Pflanzen. Halte dasselbe sichtbare Individuum ruhig im Blick und sichere nach 2,5 Sekunden einen Beleg. Blickwechsel, Pause, Werkzeugwechsel und ein ausgeblendeter Tab unterbrechen die Beobachtung. Der Programmname ist noch keine eigene Bestimmung. P oder Ⅱ: Pause, Prüfansichten und Darstellung. Das Feldbuch wird getrennt von der großen Fassung lokal gespeichert; exportiere wichtige Belege. Altfeldbücher lassen sich als Archiv erhalten, ohne neue Missionserfolge zu erzeugen. Die Tafel am Waldstart zeigt dieselbe Kurzanleitung.';
