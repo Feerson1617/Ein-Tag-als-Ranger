@@ -1,3 +1,54 @@
+# Zusatzkorrektur – echte Filtration im Probenmodell
+
+Die lebenden Probenmuscheln reagieren in echten Simulationsschritten auf die
+Wasserbedeckung. Ruhezustand bei Niedrigwasser und Filtration bei Hochwasser sind
+nun in Node- und Live-Browserläufen geprüft. Hintergrundfraß an den festen
+Untersuchungsorganismen ist eine ausdrücklich dokumentierte Kontrollbedingung;
+gezielte Modellaufträge bleiben möglich. M3 verlangt lebende Individuen und die
+passenden Zustände. Importierte Abschlussflags werden aus Belegen neu berechnet.
+
+# Aktiver Stand – Ranger 1.0.0-rc.1
+
+Branch `codex/ranger-v1`, Ausgangsbasis `227e61e`. Aktuelle Regeln stehen hier und
+in `docs/REVIEW-STATUS.md`; folgende Versionsabschnitte sind historische Nachweise.
+Kein Deployment, kein Merge und keine Freigabe zur Veröffentlichung.
+
+Drei Missionen und 15 Fokustaxa im bestehenden FieldJournal. Die drei Kernmissionen
+wurden in echten UI-Läufen abgeschlossen; M1/M2 und M3 in getrennten protokollierten
+Läufen. Synthetische Import-/Formularfixtures sind getrennt bezeichnet. 26/26
+Node-Reihen, 5/5 Paketprüfungen und der M3-/Formular-/Werkzeug-Browserlauf bestehen.
+Die zusätzliche Unterpfad-/Grafikverlust-/Ladefehler-Abnahme ist bestanden.
+Auch die Einzel-HTML startet und zeigt zurückgestellt dekodierte Referenzfotos.
+Nachweise und genaue Laufgrenzen: `verification/rc1/README.md`.
+Feldbuch und Antworten werden gespeichert, kein vollständiger Weltzustand.
+
+Speicher: vorhandene Schlüssel bleiben. Neue Feldbuchhülle schemaVersion 3 mit
+learning.version 1; unversionierte alte Exporte migrieren ohne Fortschrittsverlust.
+Beschädigte Gerätespeicher werden bis zur ausdrücklichen Import-/Sitzungsentscheidung
+nicht überschrieben. JSON-Import wird vollständig geprüft und vor Übernahme bestätigt;
+Schreibfehler verändern den laufenden Stand nicht. Offene Antworten bleiben Text.
+Druckbericht trennt Herkunft, Sachverhalt und Erklärung; Punkte/Tempo sind keine Note.
+
+`pairSighting` ist nur Entdeckung. `investigations` enthalten zeitnah beobachtete
+Modellereignisse mit konkreten IDs, nie automatisch eine eigene Erklärung. Später
+übernommene Ereignisse heißen Modellprotokoll. Beobachtungsdauern werden mit der
+Simulationsuhr gespeichert; Fernglasfaktor 0,5 bleibt. Wiederholungen sind markiert
+und löschen frühere Belege nicht. Ein lokaler Abschluss genügt, weitere Fundorte
+bleiben optional. Hummeln sind anhand der groben Fokussicht nur auf Gruppenebene
+bestimmbar. Eigenständige Artbestimmung nicht aus Programmeintrag ableiten.
+
+Publikationsartefakt ist nur outputs/GitHub-Pages; dist enthält Quellcode. Gemeinsamer
+Modulgraph unterstützt literale dynamische Imports/Worker/URL-Medien und lehnt
+fehlende Dateien, Ausbrüche, nichtliterale Imports und Zyklen ab. Einzel-HTML und
+Projektarchiv separat erzeugen, keine .game-dev-/Schüler-/lokalen Arbeitsdaten deployen.
+
+Offen: Primärartikelzugang (Proxy-403), fachliche Einzelvalidierung der Referenzen,
+Codelizenzentscheidung, physische Geräte und Unterrichtspilot. Pythonwerkzeuge
+wurden auch in frischer venv installiert; Cloud-Skript und Startanweisungen sind als
+Entwurf gespeichert. GitHub-API-403 nicht mit fehlendem Git-Token verwechseln;
+Git-Lesezugriff funktioniert. Keine Tokens im Chat oder Repository anfordern.
+Die Cloud-Umgebung zu veröffentlichen erteilt keine Pages-Freigabe.
+
 # Phase 1 – Belegverträge
 
 Paarfund (`encounters`, `pairSighting`) und beobachteter Vorgang

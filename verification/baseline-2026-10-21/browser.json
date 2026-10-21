@@ -4,5 +4,6 @@
   "errors": [],
   "browser": "154.0.8037.57",
   "canvas": "0",
-  "title": "Feldbuch \u00b7 Eine \u00f6kologische Expedition"
+  "title": "Feldbuch \u00b7 Eine \u00f6kologische Expedition",
+  "timingScope": "startupSeconds includes screenshot and interaction steps; not a pure readiness measurement"
 }

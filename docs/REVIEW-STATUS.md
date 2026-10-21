@@ -16,14 +16,14 @@ Software-Rendering, keine belastbare physische Leistungsprüfung. Historische Na
 
 | ID | Priorität | Nachweis / Dateien | Entscheidung | Abnahmetest | Status |
 |---|---|---|---|---|---|
-| F01 | P0 | `interaction-scenarios.js`: `pairSighting` als Abschluss | Entdeckung erhalten, Untersuchung separat belegen | Paarfund ohne Ereignis; gültiges Ereignis; Replay | offen |
-| F02 | P0 | `field-ecology.js`, Szenarien: Taxon statt Pflanze | stabile Pflanzen-/Patch-Identität und Fokusreset | falsche Pflanze/Habitat/Gruppe, Pause, Wiederaufnahme | offen |
-| F03 | P1 | `quest-learning.js`, `quest-interface.js`: alle Fundorte | lokaler Lernabschluss, Fachhilfe jederzeit, keine Scheinautorschaft | 1 von 196; Hilfe vor Abschluss | offen |
-| F04 | P1 | `plant-forms.js`, `expedition-state.js`: Form als Nektartrait | artspezifische Ressourcen | Mohn/Holunder ohne floralen Nektar | offen |
-| F05 | P1 | 168 Taxoneinträge/Katalog/Fotos | Strukturprüfung separat von Fachvalidierung | IDs, Einheiten, Habitate, Medien, Quellen; Fokustaxa | offen |
-| M1–3 | P1 | noch keine vollständigen Kernmissionen | im bestehenden Feldbuch ergänzen | richtige/falsche/unvollständige/unsichere Antworten in UI | offen |
-| S01 | P0 | Speicherfehler werden verschluckt | sichtbarer Fehler, versionierter Import, Migration | Quota, beschädigte Datei, Altstand, kein Teilimport | offen |
-| B01 | P1 | Build verfolgt statische `from`-Imports | vollständige Referenz-/Hashprüfung | fehlende Datei und manipuliertes Paket müssen scheitern | offen |
+| F01 | P0 | `interaction-scenarios.js`: `pairSighting` als Abschluss | Entdeckung erhalten, Untersuchung separat belegen | Paarfund ohne Ereignis; gültiges Ereignis; Replay | umgesetzt, Regressionen bestanden |
+| F02 | P0 | `field-ecology.js`, Szenarien: Taxon statt Pflanze | stabile Pflanzen-/Patch-Identität und Fokusreset | falsche Pflanze/Habitat/Gruppe, Pause, Wiederaufnahme | umgesetzt; 30.549 eindeutige IDs geprüft |
+| F03 | P1 | `quest-learning.js`, `quest-interface.js`: alle Fundorte | lokaler Lernabschluss, Fachhilfe jederzeit, keine Scheinautorschaft | 1 von 196; Hilfe vor Abschluss | umgesetzt, lokaler Lauf endet nach erstem Beleg |
+| F04 | P1 | `plant-forms.js`, `expedition-state.js`: Form als Nektartrait | artspezifische Ressourcen | Mohn/Holunder ohne modellierten Nektar | umgesetzt; Primärtext-Nachprüfung extern offen |
+| F05 | P1 | 168 Taxoneinträge/Katalog/Fotos | Strukturprüfung separat von Fachvalidierung | IDs, Einheiten, Habitate, Medien, Quellen; Fokustaxa | Struktur bestanden; keine umfassende biologische Validierung |
+| M1–3 | P1 | noch keine vollständigen Kernmissionen | im bestehenden Feldbuch ergänzen | richtige/falsche/unvollständige/unsichere Antworten in UI | umgesetzt, getrennte Live-/UI-Läufe bestanden |
+| S01 | P0 | Speicherfehler werden verschluckt | sichtbarer Fehler, versionierter Import, Migration | Quota, beschädigte Datei, Altstand, kein Teilimport | Modul- und UI-Tests bestanden |
+| B01 | P1 | Build verfolgt statische `from`-Imports | vollständige Referenz-/Hashprüfung | fehlende Datei und manipuliertes Paket müssen scheitern | umgesetzt, positive und negative Paketprüfungen bestanden |
 | D01 | P1 | physische Geräte fehlen | Desktopprüfung klar begrenzen | iPad/Safari und Mindestgerät durch Eigentümer | NICHT GEPRÜFT |
 | U01 | P1 | kein Unterrichtspilot durchgeführt | 20–35 Minuten nur Planungsziel | reale Zeiten, anonyme Produkte | NICHT GEPRÜFT |
 | L01 | P1 | keine globale Codelizenz | keine ungefragte Lizenzwahl | Eigentümerentscheidung; Medienrechte separat | offen |
@@ -46,3 +46,123 @@ Mohn/Holunder stützen sich auf das bereitgestellte Review mit genannten Quellen
 kein erneutes Lesen der Primärartikel behauptet. Domainergänzungen werden im
 Umgebungsentwurf gespeichert; dies allein ändert die laufende Netzpolitik nicht.
 Fachliche Einzelvalidierung und Geräteabnahme bleiben offen.
+
+## Phase 2–5 – aktueller Arbeitsstand
+
+26/26 Node-Prüfreihen bestanden. Zusätzlich fünf Python-Paketprüfungen:
+fehlender Worker, nichtliteraler Import, Pfadausbruch, manipulierte/fehlende
+Paketdatei, bereinigter Export, exakte Standalone-Modul-/Medienwiederherstellung
+und gültige Bootstrap-Syntax. Diese Fälle sind automatisierte technische
+Nachweise, keine biologischen oder schulischen Validierungen.
+
+Die natürliche UI-Abnahme in Chromium hat M1 mit Waldmeister, Brennnessel und
+Rotbuche bestanden (bei Rotbuche begründet unsichere Gruppenbestimmung). M2 ist
+mit einem tatsächlich während des Laufs erzeugten Konkurrenzereignis an einer
+endlichen Ressource und ausdrücklich als gelesen bezeichnetem Modellprotokoll
+abgeschlossen. M3: Ort, Tiefe, konstante IDs und tatsächliche Wasserbedeckung sowie
+Ruhe/Filtration sind in der echten Modellwelt geprüft; abschließender UI-Lauf bestanden.
+Der Testablauf wurde nach einer versehentlichen Aktion hinter einem offenen
+Dialog korrigiert; kein erzwungenes Durchklicken und kein Appfehler daraus behauptet.
+
+In der Browserprüfung wurden zwei echte Bedienbefunde korrigiert: M1 erhält drei
+ortsbeständige Fokustaxa im Gebiet, und der Beobachtungsbutton empfängt trotz der
+umgebenden transparenten Optikebene Pointerereignisse. Keine Organismen entfernt.
+Aufgezeichnete Dauern verwenden die Simulationsuhr; der Fernglasfaktor bleibt 0,5.
+
+Evolution: Vorhersage, Datenvergleich und Modellkritik als offene Arbeitsnotizen,
+keine automatische Benotung. Quantitatives Areal ausdrücklich P2 außerhalb des
+Kernrelease; zusätzliche methodische Validierung wäre ein eigener Arbeitsumfang.
+
+Python-Abhängigkeiten sind mit exakten Versionen auch in einer frischen venv ohne
+system-site-packages aus den normalen Paketquellen installiert worden; TLS blieb
+aktiv. Setupskript und Startanweisungen sind im Cloud-Entwurf gespeichert, aber
+nicht dadurch veröffentlicht oder als neuer Task unabhängig geprüft.
+
+CI/Pages-Workflows sind vorbereitet und YAML-/SHA-strukturell geprüft. Noch kein
+GitHub-Actions-Lauf und kein Deployment ausgeführt. Die GitHub-API liefert aktuell
+Forbidden; die bestehende Git-Authentifizierung funktioniert zum Lesen. Kein neuer
+Token angefordert. Zusätzlicher Host api.github.com im Entwurf, nicht als wirksam
+behauptet. Primärquellen-/Rechte-Einzelprüfung, physische Geräte, Mindestgerät und
+Unterrichtspilot bleiben offen. 30-FPS-/50-ms-/20-Minuten-Ziele sind nicht abgenommen.
+
+
+### Abnahme der Kernmissionen
+
+Alle drei Kernmissionen sind im echten Chromium mit sichtbarer 3D-Welt
+abgeschlossen worden: M1/M2 im ersten Live-Lauf; M3 nach Korrektur des
+Dialogschritts im Testtreiber in einem eigenen frischen Profil. Anschließend
+bestehen die neun Browserprüfblöcke einschließlich aller drei Formularpfade,
+Import-/Download-/Sitzungswechsel, Fernglas/Lupe, Pause, Karte mit acht Regionen
+und 1024×768-Layout. Keine JavaScriptfehler oder HTTP-Fehler in diesem Lauf.
+M1 enthält eine begründete unsichere Rotbuchen-Zuordnung, nicht drei behauptete
+sichere Artbestimmungen. Import-Formulartests verwenden ausdrücklich synthetische
+Belege und sind getrennt von den Live-Belegen markiert.
+
+M3 automatisiert: 257,7 Sekunden einschließlich Bedienhandlungen und der beiden
+Beobachtungsfenster im Software-Renderer; kein Schüler-/Unterrichtszeitnachweis.
+Startmessung dieses Laufs: 7,42 s bis Startfreigabe, 27.375.985 Bytes summierte
+Resource-Timing-Transfers im kalten rohen Entwicklungsstand. Diese Messung ist
+weder das gehashte Endpaket noch die statische Startobergrenze.
+
+Im 1024×768-Software-Rendering treten mehrsekündige Bildabstände auf. Dieses
+System erfüllt das vorgeschlagene 30-FPS-Geräteziel nicht. Keine Verbesserung
+oder allgemeine Hardwaretauglichkeit daraus abgeleitet. Unterstütztes Mindestgerät
+und reale iPad-Prüfung bleiben offen; keine 20-Minuten-Leistungsabnahme behauptet.
+
+Aktuelle Regression: lokaler Abschluss wird nach einem gültigen Fundort erreicht;
+unerreichbare/tote Partner werden weiterhin nicht als Beleg gezählt und die
+optionale Gesamtsammlung bleibt unvollständig. Alle 26 Reihen nach Anpassung der
+veralteten Gesamtsammel-Erwartung erneut bestanden. Die neue Hummelreferenz erlaubt
+mit den groben sichtbaren Merkmalen ausdrücklich nur die Gruppenzuordnung.
+
+
+### Abschließende Zusatzprüfungen
+
+Der gehashte Export unter `/Ein-Tag-als-Ranger/` besteht die neun UI-Prüfblöcke
+inklusive des erneuten Live-M3-Laufs. Dieser prüft jetzt ausdrücklich den tatsächlichen
+Ruhezustand bei Niedrigwasser und Filtration bei Hochwasser in der laufenden
+Simulation. Der zuvor pauschale Ruhezustand der Probenmuscheln wurde korrigiert;
+ein direkter Aufruf der Aktionswahl allein war dafür kein ausreichender Test.
+Die Regression verwendet vollständige Simulationsschritte und kontrollierten
+Hintergrundfraß. Die festen Probenorganismen sind dafür als Kontrollareal vor
+zufälligem Hintergrundfraß geschützt; gezielte Modellaufträge bleiben separat.
+
+Zusätzlicher Fehlerlauf des gehashten Exports: fünf Prüfblöcke bestanden, darunter
+reale WebGL-Wiederherstellung mit unverändertem Feldbuch, absichtlich unterbrochener
+Fuchsmodelldownload mit gesperrtem Start und erfolgreicher Wiederholung sowie
+sichtbarer Quota-Fehler. Der Quota-Fall läuft in einem separaten frischen Browser,
+nachdem die kombinierte Instanz nach den Grafikfehlern beim Start hängen blieb.
+Isoliert startet er in 7,25 s; die Meldung bietet einen JSON-Export an. Keine
+Abschaltung von Assertions oder erzwungenen Klicks. Keine JavaScript-/Konsolen-/
+HTTP-Fehler im anschließenden erfolgreichen Fehlerlauf; zwei beabsichtigte
+Fehler-Injektionen sind separat bezeichnet.
+
+Aktualisierte Messung des gehashten M3-/UI-Laufs: 7,43 s bis Startfreigabe,
+26.673.085 Bytes gemessener Ersttransfer einschließlich Navigation. Automatisierter
+M3-Durchlauf 262,43 s; keine gemessene Schülerzeit. Renderer: Chromium 154,
+SwiftShader, 800×500; spätere Tablet-Layoutprobe 1024×768, keine Hardwareprüfung.
+Auch dieser Software-Renderer erfüllt das FPS-Ziel nicht. Berichte unter
+`verification/rc1/` unterscheiden die getrennten Läufe und ihre Aussagegrenzen.
+
+Importe berechnen den lokalen Missionsabschluss aus den tatsächlichen Belegen und
+Antworten neu; ein gespeichertes `complete:true` ohne passende Belege genügt nicht.
+Bei M3 reichen Wasserstände allein nicht, wenn das Protokoll keine aktive Filtration
+zeigt. Ungültige Untersuchungsbelege werden vor der Übernahme abgelehnt.
+
+
+Abschließender Quellcode-Prüfpunkt: `a4e4db7b6301fcbe547632d3c5a13ac985d10f50`.
+26/26 Node-Reihen und 5/5 Python-Prüfmethoden erneut bestanden. Danach werden nur
+Berichte und Übergabetexte ergänzt; finale Pakete werden aus dem sauberen Commit
+mit neuer Commitbindung erzeugt.
+
+Die eigenständige `Feldbuch.html` startet ebenfalls im echten Chromium ohne
+JavaScript-, Konsolen- oder HTTP-Fehler. Ein vor Entdeckung geöffnetes Referenzfoto
+(Kohlmeise) besitzt dekodierte Bildpixel; 18 Assets sind zunächst, 33 nach Öffnen
+der Referenzen dekodiert. Der Rest bleibt zurückgestellt. Startfreigabe nach
+8,32 s, 48.152.856 Bytes Navigationsübertragung der vollständigen Einzeldatei;
+kein externer Assettransfer. Das ist keine kleinere Netzwerkfassung als Pages.
+
+Gespeichert werden Feldbuchbelege und Antworten, nicht der vollständige laufende
+Welt-/Kamera-/Gezeitenzustand. Nach Wiederaufnahme sind Vergleichsbedingungen bei
+Bedarf erneut einzustellen. Live-Belege und importierte Aufzeichnungen bleiben
+als solche gekennzeichnet.

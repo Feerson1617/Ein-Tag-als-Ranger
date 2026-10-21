@@ -1,0 +1,51 @@
+{
+  "commit": "c71277e3a21418eb983012dbdc40600ea47515cb",
+  "startedAt": "2026-10-21T11:25:16Z",
+  "site": "outputs/GitHub-Pages",
+  "entry": "index.html",
+  "prefix": "/Ein-Tag-als-Ranger/",
+  "viewport": [
+    800,
+    500
+  ],
+  "browser": "chromium",
+  "passed": [
+    "boot, two main entries, three mission choices, real WebGL startup",
+    "LIVE M3: actual existing probe, two water levels, same individual/depth, timed records and interpretation",
+    "versioned import requires explicit replacement, individual IDs retained",
+    "references available before determination; opening does not discover taxa",
+    "UI fixture M1: wrong/incomplete/correct/justified uncertain decisions, no complete collection",
+    "UI fixture M2: missing hypothesis and false provenance rejected; supported combinations accepted",
+    "UI fixture M3: absence overclaim rejected, controlled comparison accepted",
+    "JSON/report downloads, session cancellation preserves work, open responses remain text",
+    "free exploration: real tools, keyboard, map with eight regions, tablet viewport (emulation only)"
+  ],
+  "failed": [],
+  "errors": [],
+  "consoleErrors": [],
+  "httpErrors": [],
+  "notTested": [
+    "physical iPad/Safari",
+    "classroom timing/learning effect",
+    "20-minute minimum-device performance"
+  ],
+  "browserVersion": "154.0.8037.57",
+  "readySeconds": 7.43,
+  "resourceTransferBytes": 26664419,
+  "navigationTransferBytes": 8666,
+  "initialTransferBytes": 26673085,
+  "liveMissionSeconds": {
+    "m3": 262.43
+  },
+  "automatedLiveMissionSeconds": 262.43,
+  "renderDiagnostics": {
+    "cpuSimulationMs": "0.7",
+    "cpuRenderMs": "5.8",
+    "targetFps": "60",
+    "pixelRatio": "1.00",
+    "gpuMs": "5463.3",
+    "fps": "0",
+    "drawCalls": "343",
+    "triangles": "1282600"
+  }
+}

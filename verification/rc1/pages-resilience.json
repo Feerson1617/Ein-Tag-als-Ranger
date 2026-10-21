@@ -1,0 +1,47 @@
+{
+  "commit": "c71277e3a21418eb983012dbdc40600ea47515cb",
+  "startedAt": "2026-10-21T11:16:30Z",
+  "site": "outputs/GitHub-Pages",
+  "entry": "index.html",
+  "prefix": "/Ein-Tag-als-Ranger/",
+  "viewport": [
+    800,
+    500
+  ],
+  "browser": "chromium",
+  "passed": [
+    "boot, two main entries, three mission choices, real WebGL startup",
+    "free exploration: real tools, keyboard, map with eight regions, tablet viewport (emulation only)",
+    "fault injection: real WebGL context loss/restoration preserves fieldbook",
+    "fault injection: required model failure blocks startup; reload recovers",
+    "fault injection: quota failure is visible instead of a persistence promise"
+  ],
+  "failed": [],
+  "errors": [],
+  "consoleErrors": [],
+  "httpErrors": [],
+  "notTested": [
+    "physical iPad/Safari",
+    "classroom timing/learning effect",
+    "20-minute minimum-device performance"
+  ],
+  "browserVersion": "154.0.8037.57",
+  "readySeconds": 7.31,
+  "resourceTransferBytes": 26664003,
+  "navigationTransferBytes": 8666,
+  "initialTransferBytes": 26672669,
+  "renderDiagnostics": {
+    "cpuSimulationMs": "5.0",
+    "cpuRenderMs": "12.6",
+    "targetFps": "60",
+    "pixelRatio": "1.00",
+    "gpuMs": "4725.6",
+    "fps": "0",
+    "drawCalls": "257",
+    "triangles": "594280"
+  },
+  "expectedFailures": [
+    "Aborted fox model request",
+    "Synthetic quota failure"
+  ]
+}
