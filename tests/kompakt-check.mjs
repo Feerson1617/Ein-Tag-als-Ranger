@@ -1,5 +1,7 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
+import * as THREE from '../dist/vendor/three.module.js?revision=120';
+import { createFaunaView } from '../dist/compact/fauna-view.js';
 import { TAXA } from '../dist/compact/taxa.js';
 import { MANIFEST,WORLD_VERSION,STORAGE_KEY } from '../dist/compact/manifest.js';
 import { ROUTE,SHORTCUT,routeMetrics,canWalk,walkingHeight,terrainHeight,WALK_PROFILE } from '../dist/compact/layout.js';
@@ -33,4 +35,6 @@ check('archived M3 uses the same strict comparison; contradictions reject atomic
  const bad=structuredClone(archive);bad.learning.observations[1].scene.seed=1220;assert.throws(()=>parseArchive(JSON.stringify(bad)),/Szenenkontext/);
  const overlap=structuredClone(archive);overlap.learning.observations[1].simulationTime=14;assert.throws(()=>parseArchive(JSON.stringify(overlap)),/Überlappende/);
 });
+const realFetch=globalThis.fetch;globalThis.fetch=async()=>new Response(fs.readFileSync(new URL('../dist/assets/compact-roe-deer.glb',import.meta.url)));const poseState=createReferenceState(),poseView=await createFaunaView(new THREE.Scene(),poseState);globalThis.fetch=realFetch;
+check('actual animated mesh: four stance contacts, flight bill points forward and landing returns feet to bark',()=>{let flew=false,walked=false;for(let i=0;i<510;i++){stepReference(poseState,.065,{x:0,z:0});poseView.update();poseView.bird.updateWorldMatrix(true,true);for(const f of poseState.deer.feet)if(!f.swing)assert.ok(Math.abs(f.geometryGap)<.008,'actual hoof vertices must contact terrain');if(poseState.deer.activity==='walking')walked=true;if(poseState.bird.activity==='flying'){flew=true;const bodyDirection=new THREE.Vector3(0,1,0).applyQuaternion(poseView.bird.quaternion),billDirection=new THREE.Vector3(-1,0,0).applyQuaternion(poseView.headMesh.getWorldQuaternion(new THREE.Quaternion()));assert.ok(bodyDirection.dot(billDirection)>.99);}else assert.equal(poseView.feetMesh.position.x,0);}assert.ok(flew&&walked);});
 console.log(JSON.stringify({passed,metrics:routeMetrics()}));

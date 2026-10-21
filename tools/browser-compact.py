@@ -6,9 +6,9 @@ from functools import partial
 from threading import Thread
 from http.server import SimpleHTTPRequestHandler,ThreadingHTTPServer
 from playwright.sync_api import sync_playwright
-import argparse,base64,json,shutil,time,traceback
+import argparse,base64,hashlib,json,shutil,time,traceback
 p=argparse.ArgumentParser();p.add_argument('--site',default='outputs/Ranger-Kompakt');p.add_argument('--entry',default='index.html');p.add_argument('--smoke',action='store_true');p.add_argument('--visual-only',action='store_true');p.add_argument('--width',type=int,default=800);p.add_argument('--height',type=int,default=500);args=p.parse_args()
-root=Path(__file__).resolve().parents[1];out=root/'work/compact-browser';out.mkdir(exist_ok=True,parents=True);site=(root/args.site).resolve();result={'checks':[],'errors':[],'startedAt':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime()),'site':args.site,'entry':args.entry,'viewport':{'width':args.width,'height':args.height},'hardwareScope':'Cloud Chromium; no actual iPad/Safari or minimum-device certification'}
+root=Path(__file__).resolve().parents[1];out=root/'work/compact-browser';out.mkdir(exist_ok=True,parents=True);site=(root/args.site).resolve();result={'checks':[],'errors':[],'captures':[],'startedAt':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime()),'site':args.site,'entry':args.entry,'viewport':{'width':args.width,'height':args.height},'hardwareScope':'Cloud Chromium; no actual iPad/Safari or minimum-device certification'}
 class Handler(SimpleHTTPRequestHandler):
  def log_message(self,*a):pass
 server=ThreadingHTTPServer(('127.0.0.1',0),partial(Handler,directory=str(site)));Thread(target=server.serve_forever,daemon=True).start();url=f'http://127.0.0.1:{server.server_port}/Ein-Tag-als-Ranger/{args.entry}'
@@ -29,7 +29,7 @@ def ready(page):page.goto(url);page.wait_for_selector('#world[data-ready=true]',
 def shot(page,name):
  page.wait_for_function('window.__qaErrors?.length || document.querySelector("#world").dataset.renderRevision===document.querySelector("#world").dataset.sceneRevision',timeout=45000)
  assert not result['errors'],result['errors']
- page.screenshot(path=str(out/(name+'.png')))
+ filename=('standalone-'if args.smoke else'')+name+'.png';path=out/filename;page.screenshot(path=str(path));d=dataset(page);result['captures'].append({'file':filename,'sha256':hashlib.sha256(path.read_bytes()).hexdigest(),'bytes':path.stat().st_size,'renderFov':d.get('renderFov'),'renderTool':d.get('renderTool'),'renderRevision':d.get('renderRevision'),'observer':d.get('observer'),'simulationTime':d.get('simulationTime'),'runId':d.get('runId')});save()
  assert not result['errors'],result['errors']
 def begin_video(page):
  page.wait_for_function('document.querySelector("#world").dataset.renderRevision===document.querySelector("#world").dataset.sceneRevision',timeout=45000)
@@ -42,7 +42,7 @@ with sync_playwright()as pw:
  if shutil.which('chromium'):launch.update(executable_path=shutil.which('chromium'),args=['--no-sandbox','--use-angle=swiftshader','--enable-unsafe-swiftshader'])
  browser=pw.chromium.launch(**launch);video_options={'record_video_dir':str(out/'video'),'record_video_size':result['viewport']}if list((Path.home()/'.cache/ms-playwright').glob('ffmpeg-*/ffmpeg-linux'))else{};result['videoAvailable']=bool(video_options);context=browser.new_context(viewport=result['viewport'],**video_options);page=context.new_page();requests=[];page.add_init_script("window.__qaErrors=[];addEventListener('error',e=>{if(e.message&&!window.__qaErrors.includes(e.message))window.__qaErrors.push(e.message);});");page.on('pageerror',lambda e:result['errors'].append(str(e))if str(e)not in result['errors']else None);page.on('request',lambda r:requests.append(r.url));page.set_default_timeout(45000)
  try:
-  result['browserVersion']=browser.version;ready(page);m=json.loads(dataset(page)['manifest']);assert m['biologicalZones']==['forest','saltmarsh','wadden'];assert len(m['activeTaxa'])==9;assert m['simulationInstances']==['compact-reference-fauna'];assert not any(x in r for r in requests for x in ['wildlife-phoca','wildlife-halichoerus','habitat-world','biodiversity','expedition-state']);shot(page,'01-waldstart');ok('boot: explicit small content/request graph',manifest=m)
+  result['browserVersion']=browser.version;ready(page);result['buildStamp']=page.locator('meta[name=compact-build]').get_attribute('content');m=json.loads(dataset(page)['manifest']);assert m['biologicalZones']==['forest','saltmarsh','wadden'];assert len(m['activeTaxa'])==9;assert m['simulationInstances']==['compact-reference-fauna'];assert not any(x in r for r in requests for x in ['wildlife-phoca','wildlife-halichoerus','habitat-world','biodiversity','expedition-state']);shot(page,'01-waldstart');ok('boot: explicit small content/request graph',manifest=m)
   page.locator('#read-sign').click();assert page.locator('#panel').is_visible();assert '1,6 m/s' in page.locator('#panel-body').inner_text();page.locator('#close').click();ok('spawn board and shared guide reachable')
   page.locator('#binocular').click();shot(page,'01a-binocular-runtime');page.locator('#magnifier').click();shot(page,'01b-magnifier-runtime');page.locator('#magnifier').click();ok('both live tool paths render without runtime errors')
   if args.smoke:
@@ -82,7 +82,7 @@ with sync_playwright()as pw:
 
  # Independent browsers avoid retaining two live WebGL worlds after context-loss.
  if not args.smoke and not args.visual_only:
-  for case in ['asset-failure','corrupt-storage','touch']:
+  for case in ['asset-failure','corrupt-storage','quota','touch']:
    fault_browser=pw.chromium.launch(**launch)
    options={'viewport':result['viewport']}
    if case=='touch':options.update(has_touch=True,is_mobile=True)
@@ -93,6 +93,9 @@ with sync_playwright()as pw:
      pg.route('**/*compact-roe-deer*.glb',lambda route:route.abort())
      pg.goto(url);pg.wait_for_function('document.querySelector("#loading").textContent.includes("konnte nicht gestartet")',timeout=120000)
      assert pg.evaluate("localStorage.getItem('evolutionswald-fieldjournal-v2')")=='legacy-sentinel';ok('asset failure shows recovery message and preserves large-world storage')
+    elif case=='quota':
+     seed=json.loads((out/'earned-fieldbook.json').read_text());original=json.dumps(seed);pg.add_init_script("localStorage.setItem('ranger-compact-fieldbook-v1',"+json.dumps(original)+");const originalSet=Storage.prototype.setItem;Storage.prototype.setItem=function(k,v){if(k==='ranger-compact-fieldbook-v1')throw new DOMException('quota test','QuotaExceededError');return originalSet.call(this,k,v);};")
+     ready(pg);select_view(pg,'woodruff');pg.locator('#magnifier').click();pg.wait_for_function('!document.querySelector("#record").disabled',timeout=120000);pg.locator('#record').click();pg.locator('#note').fill('Quota-Prüfung: neuer Beleg.');pg.locator('#save-note').click();assert 'Speichern nicht möglich' in pg.locator('#save-status').inner_text();assert pg.locator('#count').inner_text()=='1';assert pg.evaluate("localStorage.getItem('ranger-compact-fieldbook-v1')")==original;pg.once('dialog',lambda d:d.accept());pg.locator('#close').click();ok('quota error visible inside note dialog; old evidence unchanged')
     elif case=='corrupt-storage':
      pg.add_init_script("localStorage.setItem('ranger-compact-fieldbook-v1','{broken');")
      ready(pg);assert pg.locator('#storage-status').is_visible();assert 'bleibt unverändert' in pg.locator('#storage-status').inner_text()
