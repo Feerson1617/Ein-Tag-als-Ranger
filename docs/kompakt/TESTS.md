@@ -1,8 +1,27 @@
 # Prüfprotokoll Kompakt
 
+## Abschließender technischer Stand
+
+Getestete Runtime: `2326283ab01fbb25644f82e3cada26d9a2b509ea`. Lokaler Chromium 154.0.8037.57, Node 24.19.0, Python 3.12.14. Nachfolgende Nachweisdokumentation ändert keine Runtimequellen; das Abnahmepaket vergleicht jeden Quellhash.
+
+| Prüfung | Ergebnis |
+|---|---|
+| Bisherige Node-Reihen | 26/26 erfolgreich |
+| Neue Kompakt-Fallgruppen | 14/14 erfolgreich |
+| Python-Pakettests (bisherige + neue) | 9/9 erfolgreich |
+| Kompakt-Chromium über Projektpfad | 18 Blöcke erfolgreich, keine JavaScriptfehler |
+| Einzel-HTML | 5 Blöcke erfolgreich, darunter neun unbeschriftete WebGL-Direktaufnahmen |
+| Große Fassung: Chromium-Smoke | 2 Blöcke erfolgreich, Viewport [600, 375] |
+
+Die vollständigen alten Live-Missionsabschlüsse wurden in diesem Kompakt-Schritt nicht neu im Browser erworben; ihre Logik-/Import-/Speicherprüfungen sind in den 26 Reihen enthalten. Die früheren vollständigen CI-Ergebnisse sind historische Nachweise. Neue GitHub-Actions-Läufe sind mangels freigegebenem Remote-Push ausstehend.
+
+Bild- und Videoquellen: `verification/kompakt/`, `SUMMARY.json` und `final-result.json`. Die Direktaufnahmen sind unveränderte WebGL-PNGs ohne DOM-Beschriftung; Canvas-Videos zeigen echte Modellbewegung. FFmpeg/FFprobe werden nur zur Formatprüfung bzw. zeitgleichen H.264-Kompatibilitätskopie verwendet. Keine generierten Zielbilder als Implementierungsbelege.
+
+Offen bleiben visuelle/fachliche Eigentümerfreigabe, differenzierte Baum-Nahbestimmung, Quellenlücken, reales Mindestgerät/Safari/iPad/Mac, 20-Minuten-Hardwarelauf und Unterrichtspilot. Laufzeit langer Cloudprüfungen ist kein Nachweis dafür.
+
 ## Baseline
 
-Unveränderter main a6c5c8e in isoliertem Git-Test-Worktree: 26/26 Node-Prüfreihen; Webbuild/-Integrität, Einzel-HTML und 5/5 Python-Pakettests neu ausgeführt, erfolgreich. Historische frühere PR-Ergebnisse werden nicht als eigene neue Läufe gezählt. Logs: work/compact-baseline/.
+Unveränderter main a6c5c8e in isoliertem Git-Test-Worktree: 26/26 Node-Prüfreihen; Webbuild/-Integrität, Einzel-HTML und 5/5 Python-Pakettests neu ausgeführt, erfolgreich. Historische frühere PR-Ergebnisse werden nicht als eigene neue Läufe gezählt. Gesicherte Logs: verification/kompakt/baseline/.
 
 Erster früher Paketlauf gegen den Arbeitsbaum: 2/5 fehlgeschlagen, weil neue Clock-/Parsermodule bereits im Quellgraphen lagen, die Paketdateien aber noch vom alten Graphen stammten. Kein bestandenes Ergebnis daraus abgeleitet. Neue Builds müssen vor Pakettests laufen.
 
@@ -13,14 +32,18 @@ python tools/run-checks.py
 python tools/build-web.py
 python tools/verify-web.py
 python tools/build-standalone.py
-python -m unittest discover -s tests -p 'test_*.py' -v
 node tests/kompakt-check.mjs
 python tools/build-compact.py
+python tools/verify-compact.py
+python -m unittest discover -s tests -p 'test_*.py' -v
 python tools/browser-compact.py
+python tools/browser-compact.py --site outputs --entry Ranger-Kompakt.html --smoke
+python tools/browser-check.py --smoke --width 600 --height 375 --site outputs/GitHub-Pages --prefix /Ein-Tag-als-Ranger/
 python tools/package-project.py
+python tools/package-compact-review.py
 ```
 
-Node26/Python5 betreffen die große Fassung und gemeinsame APIs, neue Kompaktprüfungen den separaten Einstieg. Browserergebnisse und tatsächliche Screenshots werden nach dem Lauf ergänzt. Keine Laufzeit-Assertions/Timeouts der alten Missionsprüfungen gelockert.
+Die 26 bisherigen Node-Reihen und fünf der neun Python-Methoden betreffen die große Fassung und gemeinsame APIs; die neuen Kompaktprüfungen betreffen den separaten Einstieg. Die Browserwerkzeuge benötigen Playwright und Chromium, die Python-Pakettests Pillow. Lokale Ergebnisse und tatsächliche Screenshots stehen oben und in verification/kompakt/. Keine Laufzeit-Assertions/Timeouts der alten Missionsprüfungen gelockert.
 
 ## Offen / keine Zertifizierung
 
@@ -45,3 +68,5 @@ Späte gezielte Absicherung: Die frühere pauschale Ausnahme für die letzten 40
 Die Sichtprüfung berücksichtigt zusätzlich die tatsächlichen undurchsichtigen Szenenmeshes (Äste, Tafeln, Totholz, Häuser und Bohlenflächen), damit eine analytische Stammprüfung keine Sicht durch andere massive Gegenstände zulässt. Prüfansichten wählen eine tatsächlich freie Kamera-/Laufposition. Schilder und Totholz erhalten Spielerkollision. Der Browserprüfer verlangt vor dem Start einen mit aktuellen Modulen, Medien, CSS und HTML übereinstimmenden Build; bei der Einzeldatei werden die eingebetteten Quellen zusätzlich vor dem Browserstart abgeglichen.
 
 Nach dem Umgebungsneustart wurde ein Testtreiberfehler sichtbar: Die Bewegungsmessung las nach dem Wechsel der Prüfansicht noch einen Diagnosestand des vorherigen Renderframes. Der Spieler bewegte sich tatsächlich, aber der Distanzvergleich enthielt den Ansichtswechsel. select_view wartet jetzt auf die bereits vorhandene gerenderte Revisionskennung, bevor eine Messung beginnt. Die Geschwindigkeitsassertion wurde unverändert beibehalten. Vorher-Datensatz: attempts/stale-movement-baseline.json. Ein durch den Cloud-Neustart beendeter Lauf ist separat als unterbrochen dokumentiert.
+
+Ein weiterer Umgebungsneustart beendete den abschließenden Legacy-Smoke nach dem Startblock. Der unterbrochene Lauf ist in attempts/legacy-smoke-environment-interrupted.log erhalten. Der erneute Lauf mit 600 × 375 Pixeln bestand beide unveränderten Smoke-Blöcke; fachliche Assertions und Timeouts wurden nicht geändert.

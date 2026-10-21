@@ -11,3 +11,5 @@ Ausgang: a6c5c8e (origin/main), neuer Branch feature/ranger-kompakt. Der bestehe
 Aktuelle Tests, Fehler und Bildnachweise: TESTS.md. Start: `python tools/build-compact.py`; anschließend outputs/Ranger-Kompakt lokal per HTTP öffnen oder outputs/Ranger-Kompakt.html direkt öffnen. Der Build veröffentlicht nichts. Die große Fassung bleibt unter dist/index.html und ihren bisherigen Paketnamen.
 
 Remote-Aktion ausstehend: Der automatische Freigabeprüfer hat den Push von feature/ranger-kompakt wegen der Veröffentlichungssperre abgelehnt. Kein Remote-Branch/Draft-PR und keine neue GitHub-Actions-Prüfung wurden durch diese Arbeit angelegt. Lokale Commits und Prüfpakete bleiben zur ausdrücklichen Freigabe bereit.
+
+Abschließende lokale QA: 26 alte Node-Reihen, 14 Kompakt-Fallgruppen, 9 Python-Methoden, 18 Kompakt-Browserblöcke, 5 Standaloneblöcke und 2 Legacy-Smoke-Blöcke erfolgreich. Details: TESTS.md und verification/kompakt/SUMMARY.json. Die visuelle/fachliche Freigabe ist hiervon getrennt.

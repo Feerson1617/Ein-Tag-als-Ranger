@@ -13,3 +13,5 @@ Kompaktfeldbücher speichern Belege/Notizen und historische Archive, keinen voll
 Mindestgerät, reales iPad/Safari und Mac, 20-Minuten-Stabilität auf diesen Geräten, visuelle Einzelabnahme und Unterrichtswirkung sind offen. Cloud-Softwaregrafik ist kein Mindestgerätebenchmark. Die Tabellen im Curriculum sind Planungszuordnungen aus Reviewzusammenfassungen, keine Zertifizierung von Gerätekompetenz, Exkursion oder Lernwirkung.
 
 Stämme werden in der Sichtprüfung als dieselben geneigten, verjüngten Zylinder wie im Rendering behandelt; massive Hauswände sperren die Sicht ebenfalls. Einzelne Blätter/Kronen sind in dieser Prüfung porös. Buche/Eiche sind in Phase 2 Waldstrukturen; differenzierte Blatt-/Frucht-Nahbestimmung ist noch nicht freigegeben.
+
+Reh und Specht sind stilisierte eigene Referenzentwürfe. Kopf-/Ohrproportionen, Gefieder-/Fußdetails, natürliche Bewegungswirkung und der ästhetische Gesamteindruck benötigen die ausdrücklich verlangte visuelle Eigentümerfreigabe. Bäume und Dorf sind im aktuellen Gatter Strukturprototypen; aus technischen Tests folgt keine bestandene biologische oder visuelle Endabnahme.
