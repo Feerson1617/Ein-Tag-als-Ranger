@@ -1,0 +1,174 @@
+{
+  "checks": [
+    {
+      "name": "boot: explicit small content/request graph",
+      "passed": true,
+      "manifest": {
+        "id": "compact",
+        "stage": 2,
+        "initialSeed": 20260825,
+        "biologicalZones": [
+          "forest",
+          "saltmarsh",
+          "wadden"
+        ],
+        "transitionZones": [
+          "village",
+          "dike"
+        ],
+        "activeTaxa": [
+          "fagus_sylvatica",
+          "quercus_robur",
+          "galium_odoratum",
+          "urtica_dioica",
+          "capreolus_capreolus",
+          "dendrocopos_major",
+          "halimione_portulacoides",
+          "salicornia_europaea",
+          "sporobolus_anglicus"
+        ],
+        "simulationInstances": [
+          "compact-reference-fauna"
+        ],
+        "metrics": {
+          "width": 160,
+          "depth": 100,
+          "areaHa": 1.6,
+          "mainMeters": 362.2102529662271,
+          "shortcutMeters": 29.145962247263665,
+          "walkSeconds": 226.3814081038919,
+          "shortcutSeconds": 18.21622640453979,
+          "maxSlope": 0.2553429469466351
+        }
+      }
+    },
+    {
+      "name": "spawn board and shared guide reachable",
+      "passed": true
+    },
+    {
+      "name": "both live tool paths render without runtime errors",
+      "passed": true
+    },
+    {
+      "name": "same real bird blocked behind solid bark and observable from its clear side",
+      "passed": true
+    },
+    {
+      "name": "actual keyboard movement",
+      "passed": true,
+      "distanceMeters": 0.8612800000000252,
+      "simulationSeconds": 0.5380000000000003,
+      "wallClockMethod": "wait for >0.5 model seconds; physics capped, no speed inference from slow GPU wall time"
+    },
+    {
+      "name": "own live plant evidence, explicit note, real JSON download",
+      "passed": true,
+      "individualId": "ranger-compact-reference-v1:galium_odoratum:15"
+    },
+    {
+      "name": "actual reload retains evidence and creates a fresh run ID",
+      "passed": true
+    },
+    {
+      "name": "invalid import rejected without replacing saved evidence",
+      "passed": true
+    },
+    {
+      "name": "out-of-core legacy records imported through actual file UI as archive only",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "captures": [
+    {
+      "file": "01-waldstart.png",
+      "sha256": "304c655838f572fbcbb9abddcd594bd530e729b4f915215be4a5f53119882646",
+      "bytes": 484072,
+      "renderFov": "62",
+      "renderTool": "none",
+      "renderRevision": "1",
+      "observer": "{\"x\":-52,\"z\":8,\"yaw\":1.5707963267948966,\"pitch\":-0.06}",
+      "simulationTime": "0.327",
+      "runId": "2995641e-2b50-48d9-adf3-c41ee17bb174"
+    },
+    {
+      "file": "01a-binocular-runtime.png",
+      "sha256": "618af9153c879702f1af21ae9591b1558df3f957c4a3b968271b9a05dfae63d4",
+      "bytes": 274357,
+      "renderFov": "18",
+      "renderTool": "binocular",
+      "renderRevision": "2",
+      "observer": "{\"x\":-52,\"z\":8,\"yaw\":1.5707963267948966,\"pitch\":-0.06}",
+      "simulationTime": "0.783",
+      "runId": "2995641e-2b50-48d9-adf3-c41ee17bb174"
+    },
+    {
+      "file": "01b-magnifier-runtime.png",
+      "sha256": "3e0752f3cca110c50a6393625e6df7da67c825b19f731e30c16816165e9f31a4",
+      "bytes": 367276,
+      "renderFov": "28",
+      "renderTool": "magnifier",
+      "renderRevision": "3",
+      "observer": "{\"x\":-52,\"z\":8,\"yaw\":1.5707963267948966,\"pitch\":-0.06}",
+      "simulationTime": "1.272",
+      "runId": "2995641e-2b50-48d9-adf3-c41ee17bb174"
+    },
+    {
+      "file": "02-deer-side.png",
+      "sha256": "a6ebf06b9951564d20695564d0861167d3c136214bc5230bc1dc39b517815875",
+      "bytes": 397158,
+      "renderFov": "18",
+      "renderTool": "binocular",
+      "renderRevision": "3",
+      "observer": "{\"x\":-59,\"z\":-2.5,\"yaw\":-3.141592653589793,\"pitch\":-0.19303367272745017}",
+      "simulationTime": "0.703",
+      "runId": "956e2c5f-d17e-47a5-a27c-56a831d0d62c"
+    }
+  ],
+  "startedAt": "2026-10-21T20:20:48Z",
+  "site": "outputs/Ranger-Kompakt",
+  "entry": "index.html",
+  "viewport": {
+    "width": 800,
+    "height": 500
+  },
+  "hardwareScope": "Cloud Chromium; no actual iPad/Safari or minimum-device certification",
+  "sourceCommit": "2913c1886f5597c335ae1b9b08aa23f4c508f030",
+  "runtimeSourceHashes": {
+    "assets/boardwalk-wood.webp": "4d06022133e3772534374671fb73a4509ed109e1db6ca06a2d62a8c99c47ac6d",
+    "assets/compact-roe-deer.glb": "a89400df66033eb5eaa7f9bf13ccefaacfb866ab24e4576574d11965354ee619",
+    "assets/sky-panorama.webp": "46c360b491b11269d280e73ec0e71869afdfd62fb543b4250713234374a2f71d",
+    "assets/terrain-atlas.webp": "d637324d3ace6ef8e2c549e7f0a513efd1a4c06aab927f0ed1565bf77b2ced02",
+    "compact/fauna-view.js": "e15c702b5863a3fd70b61c69870ef35353c4bdcb24b448bf19497df44390f6cf",
+    "compact/geometry.js": "addb04d9851aaafa4735147b30b466cad1846eca35505e451693af2deb88623a",
+    "compact/journal.js": "35d34f975e759c3fed865294800e4188cad86266f253f08dbb5272902e971a80",
+    "compact/layout.js": "87d3ca2dd64fe13f1299d4cf876aadc8f8ca1ecb50aba66612e290d9f0496729",
+    "compact/main.js": "d11bb5ccdde86afa0ccca9253ed508cccc8acc6ac12a8811be29a1209250d90a",
+    "compact/manifest.js": "3079e2caf9bb9f0caa61de029381666a720aae7a83a5b83727bb5edeef514f99",
+    "compact/path-mesh.js": "7a41ebc390aeca96cffd1e4fcee19f3b76310413fcee3489d1533ebd599a4c82",
+    "compact/style.css": "e90fbcb9ef3fdb85fd1f64de2bf216fbc8747efbc312e69a3c46147dbceb231a",
+    "compact/taxa.js": "3e666a2ba16ccd9fa0c3b2353337e18bd75ca3b8a812b7c72d306f231845a2e0",
+    "compact/visibility.js": "50d59d44257e9d18547bfaec9277366d3339177c6ebce37d948b48c9940a86f1",
+    "compact/world-state.js": "2d3e6f01290bf2e0462350b88383488f441d43d573b036bcfc793f5b5cb126c0",
+    "compact/world-view.js": "50dd2e537fcc9b00630f9bf4f38f027ecca173782296db77a51cea909aa4429d",
+    "field-guide.js": "8ec2a5734f400da9226ea82afdf2276678214521da162e50ea6f785eaa12fd03",
+    "icon.svg": "cb8cda889f99e56d13d18e09929837b7c3630d3f9ff3219316d12d3077fc0869",
+    "kompakt.html": "a2c26a5ac69a94dbd5fd026cfe41051edf366d9719130760be9063151e941d56",
+    "observation-clock.js": "2304e6c425192967f87841caa5072873cb5dd5c7f69c38fb45b237fd22f98b03",
+    "ranger-controls.js": "081497a5f6754ecd441e61ee55805da99b5121e96215cfa900209e00e41e5eda",
+    "station-protocol.js": "2590df7d9de4c8f4afda8fcafd619d565440c2dc7e1bb6ef4574aeadf803ae57",
+    "vendor/three.core.js": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20",
+    "vendor/three.module.js": "2884e2e6f26feaec0b454fcdc1e98c27d6433ba15253e5a3e22e111df81686fa",
+    "wildlife-glb.js": "32f8f947dd002ba7b571ee627e6291fa40a951fccdd9dee644661f19de487c35"
+  },
+  "videos": [],
+  "videoAvailable": false,
+  "browserVersion": "154.0.8037.57",
+  "buildStamp": "2913c1886f5597c335ae1b9b08aa23f4c508f030; dirty=false",
+  "interrupted": true,
+  "failure": {
+    "type": "EnvironmentRestart",
+    "message": "Cloud environment restarted; browser and execution session terminated after nine completed blocks. Not a complete successful run."
+  }
+}
