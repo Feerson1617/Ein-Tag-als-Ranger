@@ -25,7 +25,9 @@ jobs:
       - run: python tools/build-web.py && python tools/verify-web.py
       - run: python tools/build-standalone.py
       - run: python -m unittest discover -s tests -p 'test_*.py' -v
-      - run: python tools/browser-check.py --live --width 800 --height 500 --site outputs/GitHub-Pages --prefix /Ein-Tag-als-Ranger/
+      - run: python tools/package-project.py
+      - run: python tools/browser-check.py --live --resilience --width 800 --height 500 --site outputs/GitHub-Pages --prefix /Ein-Tag-als-Ranger/
+      - run: python tools/browser-check.py --smoke --width 800 --height 500 --site outputs --entry Feldbuch.html
       - name: Preserve check evidence (fresh CI fixtures only)
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4

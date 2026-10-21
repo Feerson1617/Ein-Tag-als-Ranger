@@ -142,6 +142,7 @@ try:
                 station_records.append(r)
             assert station_records[0]['partnerIds']==station_records[1]['partnerIds']
             assert station_records[0]['scene']==station_records[1]['scene'] and station_records[0]['scene']['runId']
+            result['liveStationRecords']=station_records
             assert station_records[0]['simulationTime']<=station_records[1]['simulationTime']-station_records[1]['duration']+1e-8
             page.locator('#m3-low').select_option(station_records[0]['id']);page.locator('#m3-high').select_option(station_records[1]['id'])
             for field,value in [('filtration','covered'),('access','exposed'),('absence','not-detected'),('depth','different-space')]:page.locator('#m3-'+field).select_option(value)
@@ -157,6 +158,7 @@ try:
             result['automatedLiveMissionSeconds']=round(time.monotonic()-live_start,2)
             page.locator('#mission-free').click()
             snapshot=stored()
+            (out/'live-earned-fieldbook.json').write_text(json.dumps(snapshot,ensure_ascii=False,indent=2)+'\n')
             page.reload(timeout=120000)
             page.wait_for_function("!document.getElementById('start').disabled",timeout=180000)
             assert stored()==snapshot
@@ -301,7 +303,7 @@ finally:
     (out/'result.json').write_text(json.dumps(result,indent=2,ensure_ascii=False)+'\n')
     print(json.dumps(result,ensure_ascii=False),flush=True)
     if os.environ.get('GITHUB_ACTIONS')=='true':
-        diagnostic={key:result.get(key)for key in ['commit','sourceDirty','browserVersion','viewport','readySeconds','initialTransferBytes','passed','failed','errors','consoleErrors','httpErrors','failureUI','liveMissionSeconds']}
+        diagnostic={key:result.get(key)for key in ['commit','sourceDirty','browserVersion','viewport','readySeconds','initialTransferBytes','passed','failed','errors','consoleErrors','httpErrors','failureUI','liveMissionSeconds','liveStationRecords']}
         message=json.dumps(diagnostic,ensure_ascii=False).replace('%','%25').replace('\r','%0D').replace('\n','%0A')
         print(f'::{"error" if result["failed"] else "notice"} title=Ranger browser result::{message}',flush=True)
 if result['failed']:raise SystemExit(1)

@@ -7,7 +7,7 @@ C01: Der Original-Log ist jetzt zugänglich; ein durch den begrenzten Physikschr
 verursachter Beobachtungs-Timeout wurde lokal mit stabiler Fokus-ID reproduziert
 und gezielt korrigiert. Mission 3 prüft Individuum, Modelldurchlauf und getrennte
 Zeitfenster ausdrücklich, einschließlich Feldbuchimport. Vollständige erneute
-Qualitätssicherung läuft; der PR bleibt Draft, ohne Merge oder Veröffentlichung.
+Qualitätssicherung: 26 Node-Reihen, fünf Python-Methoden, alle Pakete und die unabhängige CI mit 13 Browserblöcken bestanden. Lokal bestehen M1/M2; M3 überschritt bei 800×500 wegen langsamer Modellzeit das 180-s-Testlimit (4,1/6 Modellsekunden). Dieser Fehllauf ist dokumentiert; ein ergänzender 600×350-Lauf läuft. Die CI wird um die vorhandenen Fehlerfälle, Projektarchiv- und Einzel-HTML-Prüfung ergänzt. Der PR bleibt Draft, ohne Merge oder Veröffentlichung.
 Die folgenden Abschnitte dokumentieren frühere, davon getrennte Prüfstände.
 
 ## Baseline vom 21.10.2026

@@ -16,8 +16,9 @@ Rekonstruktion jedes damaligen Fokuswechsels ist damit nicht möglich.
 Die lokale Reproduktion `m1-before.json` beobachtet den tatsächlichen Laufzustand
 über einen ausschließlich lesenden Diagnosegetter im ausgelieferten Entwicklungsmodul.
 Keine Freischaltung, Teleportation oder Änderung der Simulation. Bei langsamem
-Chromium-/SwiftShader-Rendering bleibt das Individuum stabil im Blick, während
-nach 119,41 realen Sekunden nur 1,0566 Beobachtungssekunden aufgelaufen sind.
+Chromium-/SwiftShader-Rendering ist ab t=58,11 bis t=119,41 s dasselbe Individuum
+stabil im Blick. Nach diesen rund 61 realen Sekunden stabilen Fokus sind nur
+1,0566 Beobachtungssekunden aufgelaufen.
 Die Simulation steht bei 1,4466 s. Sichtbarkeit aktiv, Panel geschlossen, Lupe an,
 manueller Fokus auf dasselbe registrierte Individuum. Der Mechanismus reproduziert
 den Timeout schon beim Waldmeister; der historische CI-Lauf scheiterte bei der Buche.
@@ -66,7 +67,18 @@ Die echten Stationsbelege aus der Modellwelt bestehen die strengere Prüfung.
 
 ## Prüfstatus
 
-26/26 Node-Prüfreihen, gezielte Regressionen und fünf Python-Paketprüfmethoden bestanden.
-Vollständige Node-/Paket-/Chromium-Prüfung und CI werden nach Abschluss hier ergänzt.
+Auf sauberem Commit `7fbdac807c03dc017f00cd590ff7f9c377fe37e6`: 26/26 Node-Prüfreihen, gezielte Regressionen und fünf Python-Paketprüfmethoden bestanden. Webpaket, Einzel-HTML und Projektarchiv neu erzeugt und geprüft (jeweilige JSON-/Textnachweise hier).
+Die unabhängige [CI 39610400022](https://github.com/Feerson1617/Ein-Tag-als-Ranger/actions/runs/39610400022) besteht vollständig: 26 Node-Reihen, fünf Python-Methoden, Web-/Standalone-Bau und 13 Chromium-/WebGL-Blöcke. Getesteter Mergecommit `8bdb4c9aa9e428d91d4b688a72c38f44744e2a59`, PR-Codehead `7fbdac8`, Chromium 155.0.8059.0, 800×500. `github-ci-job.json` und `github-ci-browser.json` stammen aus der GitHub-API. Alle drei Missionen, freies Spiel, echter Seitenneustart mit erhaltenen Belegen/Antworten/Abschlüssen, widersprüchlicher Import, Export/Report und Sitzungsabbruch bestanden. Keine JS-/Konsolen-/HTTP-Fehler. Automatisierte Missionszeiten: 124,61 / 172,22 / 196,88 s; keine Schülerzeiten.
+
+**Fehlgeschlagen:** Lokaler 800×500-Gesamtlauf in Chromium 154/SwiftShader (`local-800x500-failed.json/.txt/.png`). M1 und M2 vollständig bestanden; in M3 nach 180 realen Sekunden erst 4,1 von 6 geforderten Modellsekunden (Screenshot nach weiteren Bildern: 4,2). p95-Bildabstand 4616,4 ms, keine JS-/Konsolen-/HTTP-Fehler. Die Schaltfläche wird unter dieser Last zu Recht nicht vor sechs Modellsekunden freigegeben. Dieser Lauf ist kein bestandener Gesamttest. Die CI bei gleicher CSS-Auflösung besteht alle Missionen; ein ergänzender lokaler Lauf bei 600×350 läuft noch. Kein Timeout erhöht, keine Mindestdauer oder Belegprüfung abgeschwächt.
+
+CI-Log-/Artefaktdownloads des neuen Laufs sind am Proxy für den dynamischen Blobhost gesperrt; die oben genannten API-Nachweise sind erfolgreich gesichert. Eine zwischenzeitlich verschärfte Ausführungssandbox blockierte auch den Start des lokalen HTTP-Servers (`PermissionError` beim Socketaufbau). Die erlaubte lokale Prüfung wurde anschließend mit freigegebenem Socketzugriff gestartet; Proxy und Netzpolitik wurden nicht umgangen.
+
+Die verbliebenen Änderungen nach dem Spielcodecommit `7fbdac8` betreffen nur Nachweise und das Mitschreiben bereits erzeugter Live-Protokolle im Testtreiber. Die Spieldateien in `dist/` bleiben identisch. Zusätzliche lokale Browser-/Fehler-/Standalone-Ergebnisse werden nach Abschluss ergänzt.
 Entwicklungsläufe mit verändertem Quellbaum bleiben als solche erkennbar.
 Historische Nachweise in `verification/rc1/` werden nicht überschrieben.
+
+Die CI führt künftig zusätzlich die bereits vorhandenen Fehlerprüfungen
+(`--resilience`), den Projektarchivbau und den Standalone-Smoke-Test aus. Alle
+Zeitlimits und Belegprüfungen bleiben erhalten. Die erweiterte Pipeline wird
+getrennt vom oben bestandenen 13-Block-Lauf ausgewiesen.
