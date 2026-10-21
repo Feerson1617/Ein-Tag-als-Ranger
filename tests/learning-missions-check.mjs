@@ -38,17 +38,40 @@ assert.equal(evaluateMission('m2',m2,[{...event,evidence:{kind:'pairSighting'}}]
 assert.equal(evaluateMission('m2',{...m2,answers:{...m2.answers,provenance:'own-observation'}},[event]).complete,false);
 assert.equal(evaluateMission('m2',{...m2,answers:{...m2.answers,counterexample:'competition'}},[event]).complete,false);
 assert.equal(evaluateMission('m2',{...m2,hypothesis:''},[event]).complete,false);
-const m3=state(),low=record('test-low','m3','cerastoderma_edule',{source:'model-protocol',scene:{habitat:'wadden',seed:1219,scenario:null},siteId:'probe-2',tidePhase:0,waterLevel:-.9,sampleDepth:3,duration:7,present:true,evidence:{kind:'station',activity:'resting'}}),high={...low,id:'test-high',tidePhase:.5,waterLevel:.4,simulationTime:45,evidence:{kind:'station',activity:'filtering'}};
+const m3=state(),low=record('test-low','m3','cerastoderma_edule',{source:'model-protocol',partnerIds:['wadden:101'],scene:{habitat:'wadden',seed:1219,runId:'synthetic-run-1',scenario:null},siteId:'probe-2',tidePhase:0,waterLevel:-.9,sampleDepth:3,duration:7,present:true,evidence:{kind:'station',activity:'resting'}}),high={...low,id:'test-high',tidePhase:.5,waterLevel:.4,simulationTime:45,evidence:{kind:'station',activity:'filtering'}};
 m3.answers={lowId:low.id,highId:high.id,filtration:'covered',access:'exposed',absence:'not-detected',depth:'different-space'};
 assert.equal(evaluateMission('m3',m3,[low,high]).complete,true);
 for(const patch of [{siteId:'probe-1'},{sampleDepth:35},{duration:1},{present:false},{tidePhase:.6}])assert.equal(evaluateMission('m3',m3,[low,{...high,...patch}]).complete,false);
 assert.equal(evaluateMission('m3',{...m3,answers:{...m3.answers,absence:'absent'}},[low,high]).complete,false);
+// Individuum, immutable world context and non-overlapping model-time windows.
+const badComparisons=[
+ {partnerIds:['wadden:102']},{partnerIds:[]},{partnerIds:['wadden:101','wadden:102']},
+ {partnerIds:['forest:101']},{scene:{...high.scene,habitat:'forest'}},
+ {scene:{...high.scene,seed:1220}},{scene:{...high.scene,runId:'another-run'}},
+ {scene:{...high.scene,runId:undefined}},{scene:{...high.scene,scenario:'predation'}},
+ {simulationTime:30},{simulationTime:35},{simulationTime:2},
+ {duration:NaN},{simulationTime:Infinity},{waterLevel:-.9}
+];
+for(const patch of badComparisons)assert.equal(evaluateMission('m3',m3,[low,{...high,...patch}]).complete,false,JSON.stringify(patch));
+assert.equal(evaluateMission('m3',m3,[{...low,simulationTime:60},high]).complete,true,'Either order is valid when the two observation windows are separate');
+
 j.learning={version:1,activeMission:'m1',missions:{m1:state(),m2:state(),m3:state()},observations:[...records,event,low,high]};
 j.entries.parus_major={found:1,habitat:'forest',behaviors:[]};book.completed.example={encounters:{one:{evidence:{kind:'pairSighting'},plantId:'stable-plant-id'}}};
 const forged={...exportFieldbook(j,book),learning:{...j.learning,missions:{m1:{...state(),complete:true}}}};
 assert.equal(parseFieldbook(JSON.stringify(forged)).learning.missions.m1.complete,false,'Cached completion cannot override missing evidence');
 assert.equal(evaluateMission('m3',m3,[low,{...high,evidence:{kind:'station',activity:'resting'}}]).complete,false,'Water level alone cannot prove actual filtration');
 const encoded=JSON.stringify(exportFieldbook(j,book)),data=parseFieldbook(encoded);
+const importPair=(first,second)=>JSON.stringify({...exportFieldbook(j,book),learning:{...j.learning,missions:{m3:{...m3,complete:true}},observations:[first,second]}});
+assert.equal(parseFieldbook(importPair(low,{...high,partnerIds:['wadden:102']})).learning.missions.m3.complete,false,'Different individuals cannot inherit a cached completion');
+assert.equal(parseFieldbook(importPair(low,{...high,scene:{...high.scene,runId:'another-run'}})).learning.missions.m3.complete,false,'A new world reuses numeric individual IDs; it is not the same individual');
+const legacyPair=[low,high].map(r=>({...r,scene:{habitat:'wadden',seed:r.tidePhase===0?123:456,scenario:null}}));
+const legacy=parseFieldbook(importPair(...legacyPair));assert.equal(legacy.learning.observations.length,2);assert.equal(legacy.learning.missions.m3.complete,false,'Legacy RNG states retain evidence, without claiming continuity');
+for(const patch of [{partnerIds:[]},{partnerIds:['wadden:101','wadden:102']},{simulationTime:35},{simulationTime:30},{simulationTime:2},{waterLevel:-.9},{evidence:{kind:'station',activity:'resting'}},{scene:{...high.scene,seed:1220}},{scene:{...high.scene,habitat:'forest'}},{scene:{...high.scene,scenario:'predation'}}]){
+ const before=JSON.stringify([...memory]);
+ assert.throws(()=>parseFieldbook(importPair(low,{...high,...patch})),/Stationsprotokoll|Szenenkontext/);
+ assert.equal(JSON.stringify([...memory]),before,'Rejected import cannot mutate storage');
+}
+
 assert.deepEqual(data.learning,j.learning);assert.equal(data.quests.completed.example.encounters.one.plantId,'stable-plant-id');
 applyFieldbook(data,j,book);assert.deepEqual(new FieldJournal(storage).learning,j.learning);
 const old=parseFieldbook(JSON.stringify({entries:j.entries,interactions:[],quests:book.export()}));

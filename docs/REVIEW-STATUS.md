@@ -1,5 +1,15 @@
 # Prüfstatus
 
+## Gezielte Nachprüfung von PR #1 (21.10.2026)
+
+Aktuelle Diagnose, Änderungen und erneute Prüfungen: [Nachweise](../verification/pr1-hardening/README.md).
+C01: Der Original-Log ist jetzt zugänglich; ein durch den begrenzten Physikschritt
+verursachter Beobachtungs-Timeout wurde lokal mit stabiler Fokus-ID reproduziert
+und gezielt korrigiert. Mission 3 prüft Individuum, Modelldurchlauf und getrennte
+Zeitfenster ausdrücklich, einschließlich Feldbuchimport. Vollständige erneute
+Qualitätssicherung läuft; der PR bleibt Draft, ohne Merge oder Veröffentlichung.
+Die folgenden Abschnitte dokumentieren frühere, davon getrennte Prüfstände.
+
 ## Baseline vom 21.10.2026
 
 HEAD `227e61e1aef850609732255859ee954f328430a9` stimmt mit dem im Review

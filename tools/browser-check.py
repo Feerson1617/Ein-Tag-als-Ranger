@@ -102,11 +102,13 @@ try:
                 page.locator('#missions').click()
                 page.locator('summary').filter(has_text='Fokustaxa im Gebiet aufsuchen').click()
                 page.locator(f'[data-focus-taxon="{taxon}"]').click()
-                page.wait_for_function("!document.getElementById('field-note').disabled",timeout=120000)
+                page.wait_for_function("taxon=>document.getElementById('world').dataset.focusTaxon===taxon && !!document.getElementById('world').dataset.focusIndividual && !document.getElementById('field-note').disabled",arg=taxon,timeout=120000)
                 page.screenshot(path=str(out/f'live-{taxon}.png'),timeout=90000)
                 page.locator('#field-note').click()
                 current=stored()['learning']['observations'][-1]
                 assert current['source']=='own-observation' and current['taxon']==taxon
+                assert current['observationSeconds']>=2 and len(current['partnerIds'])==1
+                assert current['partnerIds'][0]==page.locator('#world').get_attribute('data-focus-individual')
                 real_records.append(current);print('LIVE RECORD '+taxon,flush=True)
             page.locator('#missions').click()
             for r in real_records:determination(r['id'],r['taxon'],uncertain=r['taxon']=='fagus_sylvatica')
@@ -139,6 +141,8 @@ try:
                 assert r['evidence']['activity']==('resting' if tide=='low' else 'filtering')
                 station_records.append(r)
             assert station_records[0]['partnerIds']==station_records[1]['partnerIds']
+            assert station_records[0]['scene']==station_records[1]['scene'] and station_records[0]['scene']['runId']
+            assert station_records[0]['simulationTime']<=station_records[1]['simulationTime']-station_records[1]['duration']+1e-8
             page.locator('#m3-low').select_option(station_records[0]['id']);page.locator('#m3-high').select_option(station_records[1]['id'])
             for field,value in [('filtration','covered'),('access','exposed'),('absence','not-detected'),('depth','different-space')]:page.locator('#m3-'+field).select_option(value)
             check_mission('m3',True);passed('LIVE M3: actual existing probe, two water levels, same individual/depth, timed records and interpretation')
@@ -152,11 +156,26 @@ try:
                 result.setdefault('liveMissionSeconds',{})[mission]=round(time.monotonic()-start,2)
             result['automatedLiveMissionSeconds']=round(time.monotonic()-live_start,2)
             page.locator('#mission-free').click()
+            snapshot=stored()
+            page.reload(timeout=120000)
+            page.wait_for_function("!document.getElementById('start').disabled",timeout=180000)
+            assert stored()==snapshot
+            for mission in selected:assert stored()['learning']['missions'][mission]['complete']
+            page.locator('#mode-free').click();page.locator('#start').click()
+            if page.locator('#panel').evaluate('(e)=>e.open'):page.locator('#close-panel').click()
+            passed('LIVE save/load: earned mission records, answers and completion survive a real page reload; free play resumes')
 
         if not args.smoke:
             if page.locator('#panel').evaluate('(e)=>e.open'):page.locator('#close-panel').click()
             page.locator('#journal').click();page.locator('summary').filter(has_text='Feldbuch sichern und wiederaufnehmen').click()
             before=stored()
+            contradictory=json.loads((ROOT/'work/ui-fieldbook-fixture.json').read_text())
+            station=[r for r in contradictory['learning']['observations'] if r.get('evidence',{}).get('kind')=='station']
+            station[1]['simulationTime']=station[0]['simulationTime']+1
+            page.locator('#field-import').set_input_files({'name':'contradictory.json','mimeType':'application/json','buffer':json.dumps(contradictory).encode()})
+            page.wait_for_function("document.getElementById('toast').textContent.includes('Import abgelehnt')")
+            assert stored()==before and page.locator('#import-confirm').count()==0
+            passed('contradictory station import is rejected before replacement; current fieldbook preserved')
             page.locator('#field-import').set_input_files(str(ROOT/'work/ui-fieldbook-fixture.json'))
             page.locator('#import-confirm').wait_for();assert stored()==before
             page.locator('#import-confirm').click();passed('versioned import requires explicit replacement, individual IDs retained')
@@ -266,7 +285,7 @@ try:
         if browser.is_connected():browser.close()
     except Exception:
         try:
-            result['failureUI']={'toast':page.locator('#toast').inner_text(),'focus':page.locator('#focus-name').inner_text(),'progress':page.locator('#progress').inner_text(),'tool':page.locator('#world').get_attribute('data-tool')}
+            result['failureUI']={'toast':page.locator('#toast').inner_text(),'focus':page.locator('#focus-name').inner_text(),'progress':page.locator('#progress').inner_text(),'tool':page.locator('#world').get_attribute('data-tool'),'observation':page.locator('#world').evaluate('(e)=>Object.fromEntries(Object.entries(e.dataset).filter(([k])=>/focus|observation|simulationTime|fps|frameP95/i.test(k)))')}
             page.screenshot(path=str(out/'failure.png'),timeout=30000)
         except Exception:pass
         raise
@@ -274,7 +293,7 @@ try:
 except Exception as error:
     result['failed'].append(str(error));print(traceback.format_exc(),flush=True)
     try:
-        result['failureUI']={'toast':page.locator('#toast').inner_text(),'focus':page.locator('#focus-name').inner_text(),'tool':page.locator('#world').get_attribute('data-tool')}
+        result['failureUI']={'toast':page.locator('#toast').inner_text(),'focus':page.locator('#focus-name').inner_text(),'tool':page.locator('#world').get_attribute('data-tool'),'observation':page.locator('#world').evaluate('(e)=>Object.fromEntries(Object.entries(e.dataset).filter(([k])=>/focus|observation|simulationTime|fps|frameP95/i.test(k)))')}
         page.screenshot(path=str(out/'failure.png'),timeout=30000)
     except Exception:pass
 finally:

@@ -1,5 +1,5 @@
 import { ANIMALS, PLANTS } from './biodiversity.js';
-import { MISSIONS, FOCUS_TAXA, evaluateMission, freshLearning } from './learning-missions.js';
+import { MISSIONS, FOCUS_TAXA, evaluateMission, freshLearning, stationProtocolsIssue } from './learning-missions.js';
 export const FIELD_SCHEMA=3;
 const isObject=x=>!!x&&typeof x==='object'&&!Array.isArray(x);
 function inspect(value,depth=0){
@@ -32,6 +32,7 @@ export function parseFieldbook(text){
   if(!isObject(r)||typeof r.id!=='string'||recordIds.has(r.id)||!validId(r.missionId)||r.missionVersion!==1||!(ANIMALS[r.taxon]||PLANTS[r.taxon])||!Array.isArray(r.partnerIds)||r.partnerIds.some(p=>typeof p!=='string')||!isObject(r.scene)||typeof r.scene.habitat!=='string'||typeof r.observedFact!=='string'||!['own-observation','model-protocol','provided-knowledge','hypothesis'].includes(r.source)||!Number.isFinite(r.simulationTime)||!Number.isFinite(r.duration)||r.duration<0)throw Error('Ungültiger Missionsbeleg.');recordIds.add(r.id);
  }
  const completed=d.quests?.completed||{};
+ const stationIssue=stationProtocolsIssue(learning.observations);if(stationIssue)throw Error(stationIssue);
  if(!isObject(completed))throw Error('Ungültige Auftragsdaten.');
  for(const r of Object.values(completed)){
   if(!isObject(r)||!isObject(r.encounters||{})||!isObject(r.investigations||{}))throw Error('Ungültige Fundortdaten.');
@@ -63,7 +64,7 @@ export function fieldReport(journal,book=null){
  const taxa={...ANIMALS,...PLANTS};
  const rows=journal.learning.observations.map(r=>{
   const event=r.evidence||{},resource=event.resourceId?`Gemeinsame Ressource: ${event.resourceId}; relativer Modellvorrat: ${event.resourceStock}.`:'';
-  return `<tr><td>${esc(r.missionId)} · ${esc(sourceNames[r.source])}<br>Beleg ${esc(r.id)}</td><td>${esc(taxa[r.taxon].common)}<br>Konkrete Partner: ${esc(r.partnerIds.join(', '))}</td><td>${esc(r.observedFact)}<br>t=${esc(r.simulationTime)} Modellsekunden · Dauer ${esc(r.duration)} s<br>${r.siteId?'Stelle: '+esc(r.siteId):''}${r.sampleDepth!==undefined?' · Tiefe: '+esc(r.sampleDepth)+' cm':''}</td><td>${esc(resource)}<br>Szene: ${esc(r.scene.habitat)} · Seed: ${esc(r.scene.seed)} · Hilfegrad: ${esc(r.helpLevel||0)}<br>Dies ist ein Modellbeleg, keine automatisch verfasste Erklärung.</td></tr>`;
+  return `<tr><td>${esc(r.missionId)} · ${esc(sourceNames[r.source])}<br>Beleg ${esc(r.id)}</td><td>${esc(taxa[r.taxon].common)}<br>Konkrete Partner: ${esc(r.partnerIds.join(', '))}</td><td>${esc(r.observedFact)}<br>t=${esc(r.simulationTime)} Modellsekunden · Dauer ${esc(r.duration)} s<br>${r.siteId?'Stelle: '+esc(r.siteId):''}${r.sampleDepth!==undefined?' · Tiefe: '+esc(r.sampleDepth)+' cm':''}</td><td>${esc(resource)}<br>Szene: ${esc(r.scene.habitat)} · Seed: ${esc(r.scene.seed)}${r.evidence?.kind==='station'?' · Durchlauf: '+esc(r.scene.runId||'nicht dokumentiert'):''} · Hilfegrad: ${esc(r.helpLevel||0)}<br>Dies ist ein Modellbeleg, keine automatisch verfasste Erklärung.</td></tr>`;
  }).join('');
  const missions=MISSIONS.map(m=>{
   const s=journal.learning.missions[m.id],answers=Object.entries(s?.answers||{}).map(([key,value])=>`<dt>${esc(labels[key]||key)}</dt><dd>${esc(describe(value))}</dd>`).join('');
