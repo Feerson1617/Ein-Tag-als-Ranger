@@ -1,0 +1,88 @@
+{
+  "checks": [
+    {
+      "name": "boot: explicit small content/request graph",
+      "passed": true,
+      "manifest": {
+        "id": "compact",
+        "stage": 2,
+        "initialSeed": 20260825,
+        "biologicalZones": [
+          "forest",
+          "saltmarsh",
+          "wadden"
+        ],
+        "transitionZones": [
+          "village",
+          "dike"
+        ],
+        "activeTaxa": [
+          "fagus_sylvatica",
+          "quercus_robur",
+          "galium_odoratum",
+          "urtica_dioica",
+          "capreolus_capreolus",
+          "dendrocopos_major",
+          "halimione_portulacoides",
+          "salicornia_europaea",
+          "sporobolus_anglicus"
+        ],
+        "simulationInstances": [
+          "compact-reference-fauna"
+        ],
+        "metrics": {
+          "width": 160,
+          "depth": 100,
+          "areaHa": 1.6,
+          "mainMeters": 362.2102529662271,
+          "shortcutMeters": 29.145962247263665,
+          "walkSeconds": 226.3814081038919,
+          "shortcutSeconds": 18.21622640453979,
+          "maxSlope": 0.2553429469466351
+        }
+      }
+    },
+    {
+      "name": "spawn board and shared guide reachable",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "startedAt": "2026-10-21T18:58:17Z",
+  "site": "outputs/Ranger-Kompakt",
+  "entry": "index.html",
+  "viewport": {
+    "width": 800,
+    "height": 500
+  },
+  "hardwareScope": "Cloud Chromium; no actual iPad/Safari or minimum-device certification",
+  "videoAvailable": false,
+  "browserVersion": "154.0.8037.57",
+  "failure": {
+    "type": "AssertionError",
+    "message": "",
+    "traceback": "Traceback (most recent call last):\n  File \"/workspace/Ein-Tag-als-Ranger/tools/browser-compact.py\", line 39, in <module>\n    before=dataset(page);pos=json.loads(before['observer']);t=float(before['simulationTime']);page.keyboard.down('w');page.wait_for_function('(t)=>Number(document.querySelector(\"#world\").dataset.simulationTime)>t+.5',arg=t,timeout=120000);page.keyboard.up('w');after=dataset(page);end=json.loads(after['observer']);elapsed=float(after['simulationTime'])-t;distance=((end['x']-pos['x'])**2+(end['z']-pos['z'])**2)**.5;assert .8<distance/elapsed<1.9;ok('actual keyboard movement',distanceMeters=distance,simulationSeconds=elapsed,wallClockMethod='wait for >0.5 model seconds; physics capped, no speed inference from slow GPU wall time')\n                                                                                                                                                                                                                                                                                                                                                                                                                                        ^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+    "dataset": {
+      "engine": "three.js r180",
+      "graphicsProfile": "desktop",
+      "ready": "true",
+      "manifest": "{\"id\":\"compact\",\"stage\":2,\"initialSeed\":20260825,\"biologicalZones\":[\"forest\",\"saltmarsh\",\"wadden\"],\"transitionZones\":[\"village\",\"dike\"],\"activeTaxa\":[\"fagus_sylvatica\",\"quercus_robur\",\"galium_odoratum\",\"urtica_dioica\",\"capreolus_capreolus\",\"dendrocopos_major\",\"halimione_portulacoides\",\"salicornia_europaea\",\"sporobolus_anglicus\"],\"simulationInstances\":[\"compact-reference-fauna\"],\"metrics\":{\"width\":160,\"depth\":100,\"areaHa\":1.6,\"mainMeters\":362.2102529662271,\"shortcutMeters\":29.145962247263665,\"walkSeconds\":226.3814081038919,\"shortcutSeconds\":18.21622640453979,\"maxSlope\":0.2553429469466351}}",
+      "worldVersion": "ranger-compact-reference-v1",
+      "runId": "ac7894d4-2ba4-42aa-80d4-b01b97d5ff8f",
+      "focusIndividual": "",
+      "focusTaxon": "",
+      "observationSeconds": "0.000",
+      "simulationTime": "1.205",
+      "observer": "{\"x\":-52,\"z\":8,\"yaw\":1.5707963267948966,\"pitch\":-0.06}",
+      "birdSupport": "support-beech-a:trunk",
+      "birdActivity": "searching",
+      "bird": "{\"id\":\"compact-woodpecker-1\",\"taxon\":\"dendrocopos_major\",\"x\":-57.75066666666667,\"y\":1.89346274546396,\"z\":12,\"supportId\":\"support-beech-a:trunk\",\"activity\":\"searching\",\"phase\":1.2049000000000065,\"targetIndex\":0}",
+      "deer": "{\"id\":\"compact-deer-1\",\"taxon\":\"capreolus_capreolus\",\"x\":-59,\"z\":3,\"heading\":0,\"activity\":\"browsing\",\"phase\":1.2049000000000065,\"feet\":[{\"part\":1,\"x\":-58.813532229026336,\"z\":2.894007793341285,\"y\":0.3542613142850195,\"surface\":0.3542613142850195,\"swing\":false},{\"part\":2,\"x\":-58.813532229026336,\"z\":3.105992206658715,\"y\":0.3535468549106584,\"surface\":0.3535468549106584,\"swing\":false},{\"part\":3,\"x\":-59.314050982692486,\"z\":2.894007793341285,\"y\":0.3530838959452408,\"surface\":0.3530838959452408,\"swing\":false},{\"part\":4,\"x\":-59.314050982692486,\"z\":3.105992206658715,\"y\":0.352384939652246,\"surface\":0.352384939652246,\"swing\":false}],\"supportId\":null}",
+      "plantCount": "443",
+      "frameMs": "1900.0",
+      "triangles": "1387312",
+      "drawCalls": "12",
+      "movementSpeed": "0"
+    }
+  }
+}
