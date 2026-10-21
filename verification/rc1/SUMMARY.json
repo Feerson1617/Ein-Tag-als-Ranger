@@ -14,5 +14,6 @@
   "githubActions": "Prepared, not run remotely",
   "publication": "STOP; explicit approval of tested commit required",
   "testedRuntimeCommit": "a4e4db7b6301fcbe547632d3c5a13ac985d10f50",
-  "standalone": "Real Chromium startup and deferred image decoding passed: 18 initially decoded assets, 33 after references; 48,152,856 bytes navigation transfer"
+  "standalone": "Real Chromium startup and deferred image decoding passed: 18 initially decoded assets, 33 after references; 48,152,856 bytes navigation transfer",
+  "standaloneBuildDeterminism": "Identical HTML bytes with Python hash seeds 1 and 2; added after the runtime freeze"
 }

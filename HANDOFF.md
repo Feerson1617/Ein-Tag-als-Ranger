@@ -19,6 +19,8 @@ Läufen. Synthetische Import-/Formularfixtures sind getrennt bezeichnet. 26/26
 Node-Reihen, 5/5 Paketprüfungen und der M3-/Formular-/Werkzeug-Browserlauf bestehen.
 Die zusätzliche Unterpfad-/Grafikverlust-/Ladefehler-Abnahme ist bestanden.
 Auch die Einzel-HTML startet und zeigt zurückgestellt dekodierte Referenzfotos.
+Ihre Assetausgabe ist sortiert; Vergleich mit zwei Python-Hashseeds verlangt
+identische Bytes. Browserberichte erfassen künftig den Dirty-Status.
 Nachweise und genaue Laufgrenzen: `verification/rc1/README.md`.
 Feldbuch und Antworten werden gespeichert, kein vollständiger Weltzustand.
 

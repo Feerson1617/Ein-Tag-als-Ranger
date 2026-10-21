@@ -5,6 +5,6 @@ test_nonliteral_and_escape_fail (test_packaging.PackagingTests.test_nonliteral_a
 test_standalone_roundtrip_and_bootstrap_syntax (test_packaging.PackagingTests.test_standalone_roundtrip_and_bootstrap_syntax) ... ok
 
 ----------------------------------------------------------------------
-Ran 5 tests in 2.977s
+Ran 5 tests in 4.852s
 
 OK

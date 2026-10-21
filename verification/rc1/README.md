@@ -6,6 +6,8 @@ Keine Hardware-/Unterrichtsfreigabe und keine biologische Gesamtvalidierung.
 
 - `node-checks.json`: abschließende 26 Prüfreihen, Codecommit `a4e4db7`, alle bestanden.
 - `packaging-checks.txt`: fünf Python-Prüfmethoden, alle bestanden.
+  Der abschließende Werkzeugtest vergleicht zusätzlich zwei Hashseeds für
+  identische Einzel-HTML-Bytes; der Spielcode ist dabei unverändert.
 - `web-verification.json`: gehashtes Kandidatenpaket; Identität einschließlich
   damaliger uncommitteter Änderungen ausgewiesen. Das finale saubere Paket erhält
   nach dem Berichtscommit seine eigene Bindung in `build-manifest.json`.

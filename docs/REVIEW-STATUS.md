@@ -150,10 +150,11 @@ Bei M3 reichen Wasserstände allein nicht, wenn das Protokoll keine aktive Filtr
 zeigt. Ungültige Untersuchungsbelege werden vor der Übernahme abgelehnt.
 
 
-Abschließender Quellcode-Prüfpunkt: `a4e4db7b6301fcbe547632d3c5a13ac985d10f50`.
-26/26 Node-Reihen und 5/5 Python-Prüfmethoden erneut bestanden. Danach werden nur
-Berichte und Übergabetexte ergänzt; finale Pakete werden aus dem sauberen Commit
-mit neuer Commitbindung erzeugt.
+Abschließender Spielcode-Prüfpunkt: `a4e4db7b6301fcbe547632d3c5a13ac985d10f50`.
+26/26 Node-Reihen und 5/5 Python-Prüfmethoden erneut bestanden. Der Spielcode bleibt
+danach unverändert; Paketwerkzeuge und Berichte erhalten die unten dokumentierte
+Ergänzung. Finale Pakete werden aus dem sauberen Commit mit neuer Commitbindung
+erzeugt.
 
 Die eigenständige `Feldbuch.html` startet ebenfalls im echten Chromium ohne
 JavaScript-, Konsolen- oder HTTP-Fehler. Ein vor Entdeckung geöffnetes Referenzfoto
@@ -174,3 +175,11 @@ https://github.com/Feerson1617/Ein-Tag-als-Ranger/pull/1 .
 Der frühere 403 ist ein historischer Befund, kein fortbestehender Tokenbedarf.
 Es gab keinen Merge und keine Veröffentlichung. Status der entfernten CI-Läufe
 wird getrennt von den lokal bestandenen Tests behandelt.
+
+
+Beim wiederholten Paketbau fiel eine wechselnde SHA256-Prüfsumme der Einzel-HTML
+auf: Die Menge der eingebetteten Assets hatte eine von Pythons Hashrandomisierung
+abhängige Reihenfolge. Die Ausgabe ist jetzt sortiert. Ein zusätzlicher Vergleich
+innerhalb der bestehenden Paketprüfung baut mit `PYTHONHASHSEED=1` und `2` und
+verlangt identische HTML-Bytes. Alle fünf Python-Prüfmethoden bestehen damit.
+Browserberichte erfassen künftig auch den Dirty-Status des Quellbaums.

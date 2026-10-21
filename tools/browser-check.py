@@ -40,6 +40,7 @@ server=ThreadingHTTPServer(('127.0.0.1',0),partial(Handler,directory=str(site)))
 thread=Thread(target=server.serve_forever,daemon=True);thread.start()
 url=f'http://127.0.0.1:{server.server_port}'+prefix+args.entry
 result={'commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),
+        'sourceDirty':bool(subprocess.check_output(['git','status','--porcelain','--untracked-files=normal'],cwd=ROOT,text=True).strip()),
         'startedAt':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime()),'site':args.site,'entry':args.entry,'prefix':prefix,'viewport':[args.width,args.height],
         'browser':args.browser,'passed':[],'failed':[],'errors':[],'consoleErrors':[],'httpErrors':[],
         'notTested':['physical iPad/Safari','classroom timing/learning effect','20-minute minimum-device performance']}

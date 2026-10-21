@@ -4,7 +4,7 @@ import base64,json,mimetypes,re
 from module_graph import ModuleGraph
 root=Path(__file__).resolve().parents[1];dist=root/'dist';graph=ModuleGraph(dist)
 sources={};assets={}
-for name in graph.assets:
+for name in sorted(graph.assets):
     mime='model/gltf-binary' if name.endswith('.glb')else mimetypes.guess_type(name)[0]
     assets[name]={'mime':mime or 'application/octet-stream','data':base64.b64encode((dist/name).read_bytes()).decode()}
 for name in graph.modules:

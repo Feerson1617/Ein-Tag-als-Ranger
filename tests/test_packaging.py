@@ -1,6 +1,6 @@
 """Negative packaging checks must fail on missing references and tampered output."""
 from pathlib import Path
-import base64,contextlib,importlib.util,json,re,shutil,subprocess,sys,tempfile,unittest
+import base64,contextlib,hashlib,importlib.util,json,os,re,shutil,subprocess,sys,tempfile,unittest
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'tools'))
 from module_graph import ModuleGraph
@@ -47,5 +47,10 @@ class PackagingTests(unittest.TestCase):
   for name,data in assets.items():self.assertEqual(base64.b64decode(data['data']),(ROOT/'dist'/name).read_bytes())
   check=subprocess.run(['node','--input-type=module','--check'],input=code,text=True,capture_output=True)
   self.assertEqual(check.returncode,0,check.stderr)
+  digests=[]
+  for seed in ['1','2']:
+   subprocess.run([sys.executable,str(ROOT/'tools/build-standalone.py')],cwd=ROOT,env={**os.environ,'PYTHONHASHSEED':seed},check=True,stdout=subprocess.PIPE)
+   digests.append(hashlib.sha256((ROOT/'outputs/Feldbuch.html').read_bytes()).hexdigest())
+  self.assertEqual(digests[0],digests[1],'Standalone bytes must not depend on Python hash randomization')
 
 if __name__=='__main__':unittest.main()
