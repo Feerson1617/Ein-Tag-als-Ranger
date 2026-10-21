@@ -1,7 +1,7 @@
 import * as THREE from '../vendor/three.module.js?revision=120';
 import { GeometryBatch,stick,leafGeometry,plantGeometry } from './geometry.js';
 import { BOUNDS,BUILDINGS,SIGNS,terrainHeight,nearestPath } from './layout.js';
-import { pathPanels } from './path-mesh.js';
+import { pathPanels,deckGeometry } from './path-mesh.js';
 import { MANIFEST } from './manifest.js';
 import { randomGenerator } from './world-state.js';
 export async function createWorldView(scene,state){
@@ -13,8 +13,7 @@ export async function createWorldView(scene,state){
  ground.setAttribute('color',new THREE.Float32BufferAttribute(colors,3));ground.computeVertexNormals();const groundMaterial=new THREE.MeshStandardMaterial({vertexColors:true,roughness:1});groundMaterial.onBeforeCompile=shader=>{shader.uniforms.terrainAtlas={value:terrainTexture};shader.vertexShader='varying vec3 terrainPoint;\n'+shader.vertexShader.replace('#include <begin_vertex>','#include <begin_vertex>\nterrainPoint = position;');shader.fragmentShader='uniform sampler2D terrainAtlas;varying vec3 terrainPoint;\n'+shader.fragmentShader.replace('#include <color_fragment>','#include <color_fragment>\nvec2 tile=terrainPoint.x < -24.0 ? vec2(0.0,0.5) : terrainPoint.x > 52.0 ? vec2(0.0,0.0) : vec2(0.5,0.0);vec2 atlasUV=(fract(terrainPoint.xz*.3)*.97+.015)*.5+tile;vec3 tex=texture2D(terrainAtlas,atlasUV).rgb;tex=mix(tex/12.92,pow((tex+.055)/1.055,vec3(2.4)),step(vec3(.04045),tex));diffuseColor.rgb *= mix(vec3(1.0),tex,.87);');};const mesh=new THREE.Mesh(ground,groundMaterial);mesh.receiveShadow=true;scene.add(mesh);
  const water=new THREE.Mesh(new THREE.PlaneGeometry(160,190),new THREE.MeshStandardMaterial({color:'#688d94',roughness:.28,metalness:.16}));water.rotation.x=-Math.PI/2;water.position.set(120,-.73,0);scene.add(water);
  const leaves=[];
- const scenery=[];for(let i=0;i<38;i++){const side=i%3,x=side===0?-91-random()*15:-105+random()*78,z=side===0?-65+random()*130:side===1?-58-random()*13:58+random()*13;scenery.push({x,z,r:.25+random()*.13,h:11+random()*6,type:'beech'});}
- for(const t of [...state.trees,...scenery]){const y=terrainHeight(t.x,t.z);stick(bark,[t.x,y,t.z],[t.x+.12,y+t.h*.72,t.z],t.r,t.type==='beech'?'#898579':'#66634e',t.r*.45);
+ for(const t of state.trees){const y=terrainHeight(t.x,t.z);stick(bark,[t.x,y,t.z],[t.x+.12,y+t.h*.72,t.z],t.r,t.type==='beech'?'#898579':'#66634e',t.r*.45);
   for(let k=0;k<7;k++){const a=k*2.399,h=t.h*(.42+(k%3)*.12),len=1.7+(k%4)*.48,end=[t.x+Math.cos(a)*len,y+h+1.5,t.z+Math.sin(a)*len];stick(bark,[t.x,y+h,t.z],end,t.r*.31,'#777768',.025);
    for(let j=0;j<100;j++){const theta=random()*6.283,r=Math.sqrt(random())*1.9;leaves.push({x:end[0]+Math.cos(theta)*r,y:end[1]+(random()-.4)*1.6,z:end[2]+Math.sin(theta)*r,a:random()*6.283,s:.14+random()*.12,oak:t.type==='oak'});}
   }
@@ -22,6 +21,13 @@ export async function createWorldView(scene,state){
   for(let i=0;i<4;i++){const a=i*1.57;stick(bark,[t.x,y+.24,t.z],[t.x+Math.cos(a)*.6,y+.01,t.z+Math.sin(a)*.6],t.r*.37,'#777568',.015);}
  }
  scene.add(bark.mesh());
+ // Distant woodland is an opaque scenic stand, never a counted population.
+ // Coarse crowns here avoid rendering thousands of diagnostic leaves off-world.
+ const background=new GeometryBatch(),crown=new THREE.IcosahedronGeometry(1,1);
+ const backdrop=[];for(let row=0;row<3;row++)for(let i=0;i<31;i++)backdrop.push({x:-83-row*7-random()*2,z:-53+i*3.6+(random()-.5)*2});
+ for(const side of [-1,1])for(let i=0;i<20;i++)backdrop.push({x:-106+i*4.1,z:side*(53+random()*7)});
+ for(const t of backdrop){const y=terrainHeight(t.x,t.z),h=7+random()*8;stick(background,[t.x,y,t.z],[t.x,y+h*.7,t.z],.19,'#777568',.08);for(let k=0;k<4;k++)background.add(crown,k%2?'#526347':'#65734f',[t.x+(random()-.5)*2,y+h-1.5+random()*2,t.z+(random()-.5)*2],[1.6+random(),2+random()*1.8,1.5+random()]);}
+ const scenic=background.mesh();scenic.castShadow=false;scene.add(scenic);
  // Broad crown masses use small opaque leaf clusters, detail leaves retain shape.
  const foliage=new THREE.InstancedMesh(leafGeometry(1,.5,false,false,3),new THREE.MeshStandardMaterial({color:'#7e9358',side:THREE.DoubleSide,roughness:.9}),leaves.length),dummy=new THREE.Object3D();
  for(let i=0;i<leaves.length;i++){const l=leaves[i];dummy.position.set(l.x,l.y,l.z);dummy.scale.setScalar(l.s*3);dummy.rotation.set((random()-.5)*2,l.a,random()*.6);dummy.updateMatrix();foliage.setMatrixAt(i,dummy.matrix);foliage.setColorAt(i,new THREE.Color().setHSL(.20+random()*.035,.23+random()*.15,.22+random()*.13));}foliage.castShadow=true;foliage.receiveShadow=true;scene.add(foliage);
@@ -29,8 +35,7 @@ export async function createWorldView(scene,state){
  const plantMeshes=[];for(const taxon of new Set(state.plants.map(p=>p.taxon))){const rows=state.plants.filter(p=>p.taxon===taxon),m=new THREE.InstancedMesh(plantGeometry(taxon),new THREE.MeshStandardMaterial({vertexColors:true,side:THREE.DoubleSide,roughness:.9}),rows.length);for(let i=0;i<rows.length;i++){const p=rows[i];dummy.position.set(p.x,p.y,p.z);dummy.rotation.set(0,p.angle,0);dummy.scale.setScalar(p.size);dummy.updateMatrix();m.setMatrixAt(i,dummy.matrix);}m.castShadow=true;m.receiveShadow=true;plantMeshes.push(m);scene.add(m);}
  const litter=[];for(let i=0;i<5000;i++){const x=-79+random()*54,z=-48+random()*96;if(nearestPath(x,z).distance<1.1)continue;litter.push({x,z,a:random()*6.28,s:.045+random()*.08});}
  const floor=new THREE.InstancedMesh(leafGeometry(1,.65,false,false,3),new THREE.MeshStandardMaterial({color:'#8a7049',side:THREE.DoubleSide,roughness:1}),litter.length);for(let i=0;i<litter.length;i++){const l=litter[i];dummy.position.set(l.x,terrainHeight(l.x,l.z)+.012,l.z);dummy.rotation.set(.08,l.a,0);dummy.scale.setScalar(l.s);dummy.updateMatrix();floor.setMatrixAt(i,dummy.matrix);floor.setColorAt(i,new THREE.Color().setHSL(.09+random()*.035,.24,.19+random()*.15));}floor.receiveShadow=true;scene.add(floor);
- const deckPanels=pathPanels(),pos=[],cols=[],uvs=[];for(const panel of deckPanels){const polygon=panel.polygon,col=new THREE.Color(panel.material==='stone'?'#b7af94':['#9c8968','#a68f6b','#ae9776','#968566'][Math.floor(panel.distance*5)%4]);for(let i=1;i<polygon.length-1;i++)for(const v of [polygon[0],polygon[i+1],polygon[i]]){pos.push(...v);uvs.push(v[0]*.28+v[2]*.12,v[2]*.28-v[0]*.12);cols.push(col.r,col.g,col.b);}}
- const deck=new THREE.BufferGeometry();deck.setAttribute('position',new THREE.Float32BufferAttribute(pos,3));deck.setAttribute('uv',new THREE.Float32BufferAttribute(uvs,2));deck.setAttribute('color',new THREE.Float32BufferAttribute(cols,3));deck.computeVertexNormals();const path=new THREE.Mesh(deck,new THREE.MeshStandardMaterial({vertexColors:true,map:woodTexture,roughness:.98,side:THREE.DoubleSide}));path.receiveShadow=true;scene.add(path);
+ const deckPanels=pathPanels(),deck=deckGeometry(deckPanels);const path=new THREE.Mesh(deck,new THREE.MeshStandardMaterial({vertexColors:true,map:woodTexture,roughness:.98,side:THREE.DoubleSide}));path.receiveShadow=true;scene.add(path);
  // Posts stand beside the walking surface, never across it.
  for(let i=0;i<deckPanels.length;i+=10){const panel=deckPanels[i];for(const v of panel.polygon.slice(0,2)){stick(architecture,[v[0],terrainHeight(v[0],v[2]),v[2]],[v[0],v[1]-.03,v[2]],.055,'#75694d',.055);}}
  for(const b of BUILDINGS){const y=terrainHeight(b.x,b.z);architecture.add(box,'#d1c9a9',[b.x,y+b.h/2,b.z],[b.w,b.h,b.d]);

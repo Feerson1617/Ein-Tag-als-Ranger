@@ -6,7 +6,7 @@ from functools import partial
 from threading import Thread
 from http.server import SimpleHTTPRequestHandler,ThreadingHTTPServer
 from playwright.sync_api import sync_playwright
-import argparse,json,shutil,time,traceback
+import argparse,base64,json,shutil,time,traceback
 p=argparse.ArgumentParser();p.add_argument('--site',default='outputs/Ranger-Kompakt');p.add_argument('--entry',default='index.html');p.add_argument('--smoke',action='store_true');p.add_argument('--visual-only',action='store_true');p.add_argument('--width',type=int,default=800);p.add_argument('--height',type=int,default=500);args=p.parse_args()
 root=Path(__file__).resolve().parents[1];out=root/'work/compact-browser';out.mkdir(exist_ok=True,parents=True);site=(root/args.site).resolve();result={'checks':[],'errors':[],'startedAt':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime()),'site':args.site,'entry':args.entry,'viewport':{'width':args.width,'height':args.height},'hardwareScope':'Cloud Chromium; no actual iPad/Safari or minimum-device certification'}
 class Handler(SimpleHTTPRequestHandler):
@@ -24,7 +24,15 @@ def dataset(page):return page.locator('#world').evaluate('(e)=>({...e.dataset})'
 def select_view(page,name):
  page.locator('#menu-button').click();page.locator('summary').filter(has_text='Referenzabschnitt prüfen').click();page.locator(f'[data-view="{name}"]').click()
 def ready(page):page.goto(url);page.wait_for_selector('#world[data-ready=true]',timeout=120000);page.locator('#start').click()
-def shot(page,name):page.screenshot(path=str(out/(name+'.png')))
+def shot(page,name):
+ page.wait_for_function('document.querySelector("#world").dataset.renderRevision===document.querySelector("#world").dataset.sceneRevision',timeout=45000)
+ page.screenshot(path=str(out/(name+'.png')))
+def begin_video(page):
+ page.wait_for_function('document.querySelector("#world").dataset.renderRevision===document.querySelector("#world").dataset.sceneRevision',timeout=45000)
+ page.evaluate('''()=>{const stream=document.querySelector('#world').captureStream(12);window.__referenceVideo={stream,chunks:[]};const rec=new MediaRecorder(stream,{mimeType:'video/webm;codecs=vp8',videoBitsPerSecond:500000});window.__referenceVideo.rec=rec;rec.ondataavailable=e=>{if(e.data.size)window.__referenceVideo.chunks.push(e.data);};rec.start(1000);}''')
+def end_video(page,name):
+ data=page.evaluate('''()=>new Promise(resolve=>{const v=window.__referenceVideo;v.rec.onstop=async()=>{const b=new Uint8Array(await new Blob(v.chunks,{type:'video/webm'}).arrayBuffer());let text='';for(let i=0;i<b.length;i+=32768)text+=String.fromCharCode(...b.subarray(i,i+32768));v.stream.getTracks().forEach(t=>t.stop());window.__referenceVideo=null;resolve(btoa(text));};v.rec.stop();})''')
+ video=base64.b64decode(data);assert len(video)>3000 and video.startswith(bytes.fromhex('1a45dfa3'));(out/(name+'.webm')).write_bytes(video)
 with sync_playwright()as pw:
  launch={'headless':True}
  if shutil.which('chromium'):launch.update(executable_path=shutil.which('chromium'),args=['--no-sandbox','--use-angle=swiftshader','--enable-unsafe-swiftshader'])
@@ -52,8 +60,8 @@ with sync_playwright()as pw:
     shot(page,f'{i:02}-{name}')
    ok('reference images: deer three views, supported bird, five plants, ramp and curve')
    # Inspect the unlabelled animal's actual rendered motion, not an artificial clock jump.
-   select_view(page,'bird');page.locator('#binocular').click();phase=dataset(page)['birdActivity'];page.keyboard.down('w');page.wait_for_function('Number(document.querySelector("#world").dataset.movementSpeed)>.1');page.wait_for_timeout(1500);page.keyboard.up('w');page.wait_for_function('document.querySelector("#world").dataset.birdActivity==="flying"',timeout=180000);shot(page,'13-bird-flight');page.wait_for_function('document.querySelector("#world").dataset.birdSupport!=="" && document.querySelector("#world").dataset.birdActivity!=="flying"',timeout=180000);shot(page,'14-bird-landed');ok('actual bird departure, flight and supported landing')
-   select_view(page,'deer-side');page.locator('#binocular').click();page.locator('#binocular').click();page.keyboard.down('w');page.wait_for_function('["walking","retreating"].includes(JSON.parse(document.querySelector("#world").dataset.deer).activity)',timeout=120000);page.keyboard.up('w');shot(page,'15-deer-moving');d=json.loads(dataset(page)['deer']);assert all(f['swing']or abs(f['y']-f['surface'])<1e-5 for f in d['feet']);ok('actual deer motion with stance feet at local terrain')
+   select_view(page,'bird');page.locator('#binocular').click();page.keyboard.down('w');page.wait_for_function('document.querySelector("#world").dataset.birdActivity==="flying"',timeout=180000);page.keyboard.up('w');select_view(page,'bird-flight');begin_video(page);shot(page,'13-bird-flight');page.wait_for_function('document.querySelector("#world").dataset.birdSupport!=="" && document.querySelector("#world").dataset.birdActivity!=="flying"',timeout=180000);end_video(page,'bird-flight');select_view(page,'bird');page.locator('#binocular').click();shot(page,'14-bird-landed');ok('actual bird departure, flight and supported landing')
+   select_view(page,'deer-side');page.locator('#binocular').click();page.locator('#binocular').click();begin_video(page);page.keyboard.down('w');page.wait_for_function('["walking","retreating"].includes(JSON.parse(document.querySelector("#world").dataset.deer).activity)',timeout=120000);motion_t=float(dataset(page)['simulationTime']);page.wait_for_function('(t)=>Number(document.querySelector("#world").dataset.simulationTime)>t+.6',arg=motion_t,timeout=120000);page.keyboard.up('w');shot(page,'15-deer-moving');end_video(page,'deer-motion');d=json.loads(dataset(page)['deer']);assert all(f['swing']or (abs(f['y']-f['surface'])<1e-5 and abs(f['geometryGap'])<.008) for f in d['feet']);ok('actual deer motion with stance feet at local terrain')
    # Tablet viewport/profile check preserves all actual biological instances.
    plants=dataset(page)['plantCount'];page.set_viewport_size({'width':1024,'height':768});page.locator('#menu-button').click();page.locator('#quality').select_option('tablet');page.locator('#resume').click();shot(page,'16-tablet');assert dataset(page)['plantCount']==plants;assert page.locator('#world').evaluate('(e)=>e.width')==1024;ok('tablet viewport/profile preserves plants; emulation only')
    page.set_viewport_size(result['viewport']);page.locator('#menu-button').click();page.locator('#quality').select_option('desktop');page.locator('#resume').click()

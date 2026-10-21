@@ -9,7 +9,7 @@ Ausgangsstand: frisch abgefragter origin/main a6c5c8e50c273895e5ca7667542f63d4e0
 - Bestehendes Three.js, ES-Module und DOM; keine Engine-/Framework-Migration.
 - Separater Einstieg dist/kompakt.html → compact/main.js, explizites Inhaltsmanifest, eigener Build. Die drei Biologiezonen sind Wald, Salzwiese und Watt. Dorf und Deich sind Übergänge, keine weiteren simulierten Gemeinschaften.
 - Reine Zustands-/Layoutmodule besitzen IDs, Stützen, feste Pflanzen, Geschwindigkeiten und Gehfläche. Darstellung ändert keine Zählregeln. Renderprofile ändern nur Pixelzahl.
-- Gemeinsam weiterverwendet: Three.js, unveränderte Beobachtungsuhr, Action-Mapping mit optionalem Profil, vorhandener GLB-Validierungsvertrag. Die bisherigen APIs/Standardwerte bleiben erhalten. Clock und GLB-Parser werden aus ihren bisherigen Katalog-/Preloadmodulen isoliert, damit die Kompaktfassung keine 168-Taxa-/Sechs-GLB-Abhängigkeit erhält.
+- Gemeinsam weiterverwendet: Three.js, unveränderte Beobachtungsuhr, Action-Mapping mit optionalem Profil, vorhandener GLB-Validierungsvertrag. Die bisherigen APIs/Standardwerte bleiben erhalten. Clock, GLB-Parser und die katalogunabhängige M3-Protokollprüfung werden aus ihren bisherigen Katalog-/Preloadmodulen isoliert, damit die Kompaktfassung keine 168-Taxa-/Sechs-GLB-Abhängigkeit erhält.
 - Metereinheiten, +Y oben, Reh +X vorwärts. Specht im Ruhezustand nur an einer tatsächlich gerenderten, identifizierten Stammstütze. Spielerkollision und Tierzustände getrennt.
 - Eigenes worldVersion und Speicherkey. Neue Rundgang-ID pro Start; Zahlengleichheit erzeugt keine Individuenkontinuität. Historische Feldbücher werden als unveränderte Datenarchive erhalten, einschließlich nichtaktiver Taxa und Antworten; keine neuen Missionserfolge daraus.
 
