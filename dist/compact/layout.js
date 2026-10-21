@@ -41,7 +41,7 @@ export function canWalk(x,z,blockers=[]){
  if(nearestPath(x,z).distance<.86)return true;
  if(terrainHeight(x,z)<-.5)return false;
  if(BUILDINGS.some(b=>Math.abs(x-b.x)<b.w/2+.3&&Math.abs(z-b.z)<b.d/2+.3))return false;
- return !blockers.some(b=>Math.hypot(x-b.x,z-b.z)<b.r+.25);
+ return !blockers.some(b=>b.halfX!==undefined?Math.abs(x-b.x)<b.halfX+.25&&Math.abs(z-b.z)<b.halfZ+.25:Math.hypot(x-b.x,z-b.z)<b.r+.25);
 }
 // Each plank follows the local tangent and width. No separate, intersecting underdeck.
 export function plankCorners(p,length=.19){const nx=-p.tz*p.width/2,nz=p.tx*p.width/2,dx=p.tx*length/2,dz=p.tz*length/2;return [[p.x-dx+nx,p.y,p.z-dz+nz],[p.x+dx+nx,p.y,p.z+dz+nz],[p.x+dx-nx,p.y,p.z+dz-nz],[p.x-dx-nx,p.y,p.z-dz-nz]];}

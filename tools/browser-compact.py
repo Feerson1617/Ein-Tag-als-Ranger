@@ -7,7 +7,7 @@ from threading import Thread
 from http.server import SimpleHTTPRequestHandler,ThreadingHTTPServer
 from playwright.sync_api import sync_playwright
 from module_graph import ModuleGraph
-import subprocess
+import subprocess,sys
 import argparse,base64,hashlib,json,shutil,time,traceback
 p=argparse.ArgumentParser();p.add_argument('--site',default='outputs/Ranger-Kompakt');p.add_argument('--entry',default='index.html');p.add_argument('--smoke',action='store_true');p.add_argument('--visual-only',action='store_true');p.add_argument('--width',type=int,default=800);p.add_argument('--height',type=int,default=500);args=p.parse_args()
 root=Path(__file__).resolve().parents[1];out=root/'work/compact-browser';out.mkdir(exist_ok=True,parents=True);site=(root/args.site).resolve();result={'checks':[],'errors':[],'captures':[],'startedAt':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime()),'site':args.site,'entry':args.entry,'viewport':{'width':args.width,'height':args.height},'hardwareScope':'Cloud Chromium; no actual iPad/Safari or minimum-device certification'}
@@ -20,7 +20,14 @@ class PrefixHandler(Handler):
   if self.path.startswith('/Ein-Tag-als-Ranger/'):self.path=self.path[len('/Ein-Tag-als-Ranger'):]
   return super().do_GET()
 server.shutdown();server.server_close();server=ThreadingHTTPServer(('127.0.0.1',0),partial(PrefixHandler,directory=str(site)));Thread(target=server.serve_forever,daemon=True).start();url=f'http://127.0.0.1:{server.server_port}/Ein-Tag-als-Ranger/{args.entry}'
+subprocess.run([sys.executable,str(root/'tools/verify-compact.py')],cwd=root,check=True,stdout=subprocess.PIPE)
 g=ModuleGraph(root/'dist','compact/main.js');result['sourceCommit']=subprocess.check_output(['git','rev-parse','HEAD'],cwd=root,text=True).strip();result['runtimeSourceHashes']={name:hashlib.sha256((root/'dist'/name).read_bytes()).hexdigest()for name in sorted(set(g.modules)|g.assets|{'compact/style.css','kompakt.html','icon.svg'})};result['videos']=[]
+if args.smoke:
+ import re
+ text=(site/args.entry).read_text();decoder=json.JSONDecoder();code=re.search(r'<script type="module">([\s\S]*)</script>',text)[1];sources,_=decoder.raw_decode(code.split('const sources=',1)[1]);assets,_=decoder.raw_decode(code.split(',assets=',1)[1]);assert set(sources)==set(g.modules) and set(assets)==g.assets
+ for name in g.modules:assert sources[name]==g.rewrite(name,lambda r:('module://'if r.target in g.modules else'asset://')+r.target),'Stale standalone module: '+name
+ for name,data in assets.items():assert base64.b64decode(data['data'])==(root/'dist'/name).read_bytes(),'Stale standalone asset: '+name
+ assert re.search(r'<style>([\s\S]*?)</style>',text)[1]==(root/'dist/compact/style.css').read_text(),'Stale standalone style'
 def save(): (out/('standalone-result.json'if args.smoke else'result.json')).write_text(json.dumps(result,indent=2,ensure_ascii=False))
 def ok(name,**details):
  assert not result['errors'],result['errors']

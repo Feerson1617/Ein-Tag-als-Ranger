@@ -20,7 +20,7 @@ export async function createWorldView(scene,state){
   // Root flare visibly joins the forest floor; collision uses the independent trunk radius.
   for(let i=0;i<4;i++){const a=i*1.57;stick(bark,[t.x,y+.24,t.z],[t.x+Math.cos(a)*.6,y+.01,t.z+Math.sin(a)*.6],t.r*.37,'#777568',.015);}
  }
- scene.add(bark.mesh());
+ const barkMesh=bark.mesh();scene.add(barkMesh);
  // Distant woodland is an opaque scenic stand, never a counted population.
  // Coarse crowns here avoid rendering thousands of diagnostic leaves off-world.
  const background=new GeometryBatch(),crown=new THREE.IcosahedronGeometry(1,1);
@@ -45,8 +45,8 @@ export async function createWorldView(scene,state){
  }
  // Fallen beech/log, with intact substrate; not a mycorrhiza demonstration.
  stick(architecture,[-61,.5,-2],[-65,.52,-3],.27,'#77715d',.23);
- scene.add(architecture.mesh());
- for(const sign of SIGNS){const y=terrainHeight(sign.x,sign.z),batch=new GeometryBatch();stick(batch,[sign.x,y,sign.z],[sign.x,y+1.7,sign.z],.065,'#796548',.065);scene.add(batch.mesh());const canvas=document.createElement('canvas');canvas.width=512;canvas.height=160;const c=canvas.getContext('2d');c.fillStyle='#715f43';c.fillRect(0,0,512,160);c.strokeStyle='#ae9870';c.lineWidth=10;c.strokeRect(8,8,496,144);c.fillStyle='#fff2d2';c.textAlign='center';c.font='38px Georgia';c.fillText(sign.name,256,93);const texture=new THREE.CanvasTexture(canvas);texture.colorSpace=THREE.SRGBColorSpace;const board=new THREE.Mesh(new THREE.BoxGeometry(1.8,.56,.08),new THREE.MeshStandardMaterial({map:texture,roughness:1}));board.position.set(sign.x,y+1.6,sign.z);scene.add(board);}
+ const architectureMesh=architecture.mesh();scene.add(architectureMesh);const signMeshes=[];
+ for(const sign of SIGNS){const y=terrainHeight(sign.x,sign.z),batch=new GeometryBatch();stick(batch,[sign.x,y,sign.z],[sign.x,y+1.7,sign.z],.065,'#796548',.065);scene.add(batch.mesh());const canvas=document.createElement('canvas');canvas.width=512;canvas.height=160;const c=canvas.getContext('2d');c.fillStyle='#715f43';c.fillRect(0,0,512,160);c.strokeStyle='#ae9870';c.lineWidth=10;c.strokeRect(8,8,496,144);c.fillStyle='#fff2d2';c.textAlign='center';c.font='38px Georgia';c.fillText(sign.name,256,93);const texture=new THREE.CanvasTexture(canvas);texture.colorSpace=THREE.SRGBColorSpace;const board=new THREE.Mesh(new THREE.BoxGeometry(1.8,.56,.08),new THREE.MeshStandardMaterial({map:texture,roughness:1}));board.position.set(sign.x,y+1.6,sign.z);scene.add(board);signMeshes.push(board);}
  // Horizon and background forest are scenery only; no extra simulation instances.
- return {deck,plantMeshes,blocks:state.trees.map(t=>({x:t.x,z:t.z,r:t.r})),dispose(){}};
+ return {deck,plantMeshes,occlusionMeshes:[barkMesh,architectureMesh,path,...signMeshes],blocks:[...state.trees.map(t=>({x:t.x,z:t.z,r:t.r})),...SIGNS.map(s=>({x:s.x,z:s.z,halfX:.9,halfZ:.04})),...Array.from({length:5},(_,i)=>({x:-61-i,z:-2-i*.25,r:.27}))],dispose(){}};
 }
