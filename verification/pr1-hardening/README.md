@@ -70,7 +70,7 @@ Die echten Stationsbelege aus der Modellwelt bestehen die strengere Prüfung.
 Auf sauberem Commit `7fbdac807c03dc017f00cd590ff7f9c377fe37e6`: 26/26 Node-Prüfreihen, gezielte Regressionen und fünf Python-Paketprüfmethoden bestanden. Webpaket, Einzel-HTML und Projektarchiv neu erzeugt und geprüft (jeweilige JSON-/Textnachweise hier).
 Die unabhängige [CI 39610400022](https://github.com/Feerson1617/Ein-Tag-als-Ranger/actions/runs/39610400022) besteht vollständig: 26 Node-Reihen, fünf Python-Methoden, Web-/Standalone-Bau und 13 Chromium-/WebGL-Blöcke. Getesteter Mergecommit `8bdb4c9aa9e428d91d4b688a72c38f44744e2a59`, PR-Codehead `7fbdac8`, Chromium 155.0.8059.0, 800×500. `github-ci-job.json` und `github-ci-browser.json` stammen aus der GitHub-API. Alle drei Missionen, freies Spiel, echter Seitenneustart mit erhaltenen Belegen/Antworten/Abschlüssen, widersprüchlicher Import, Export/Report und Sitzungsabbruch bestanden. Keine JS-/Konsolen-/HTTP-Fehler. Automatisierte Missionszeiten: 124,61 / 172,22 / 196,88 s; keine Schülerzeiten.
 
-**Fehlgeschlagen:** Lokaler 800×500-Gesamtlauf in Chromium 154/SwiftShader (`local-800x500-failed.json/.txt/.png`). M1 und M2 vollständig bestanden; in M3 nach 180 realen Sekunden erst 4,1 von 6 geforderten Modellsekunden (Screenshot nach weiteren Bildern: 4,2). p95-Bildabstand 4616,4 ms, keine JS-/Konsolen-/HTTP-Fehler. Die Schaltfläche wird unter dieser Last zu Recht nicht vor sechs Modellsekunden freigegeben. Dieser Lauf ist kein bestandener Gesamttest. Die CI bei gleicher CSS-Auflösung besteht alle Missionen; ein ergänzender lokaler Lauf bei 600×350 läuft noch. Kein Timeout erhöht, keine Mindestdauer oder Belegprüfung abgeschwächt.
+**Fehlgeschlagen:** Lokaler 800×500-Gesamtlauf in Chromium 154/SwiftShader (`local-800x500-failed.json/.txt/.png`). M1 und M2 vollständig bestanden; in M3 nach 180 realen Sekunden erst 4,1 von 6 geforderten Modellsekunden (Screenshot nach weiteren Bildern: 4,2). p95-Bildabstand 4616,4 ms, keine JS-/Konsolen-/HTTP-Fehler. Die Schaltfläche wird unter dieser Last zu Recht nicht vor sechs Modellsekunden freigegeben. Dieser Lauf ist kein bestandener Gesamttest. Die CI bei gleicher CSS-Auflösung besteht alle Missionen; auch der ergänzende lokale Lauf bei 600×350 scheitert in M3 bei 4,6/6 Modellsekunden nach 180 s (p95 3749,9 ms; `local-600x350-failed.*`). M1/M2 bestehen dort ebenfalls. Der kleinere Lauf stammt aus einem geänderten Quellbaum: Änderungen nur an Nachweisen/Testausgabe, keine Spielcodeänderung gegenüber `7fbdac8`. Die restlichen lokalen UI-/Fehlerfälle laufen separat ohne Live-Missionsfenster; deren Fixture-Ergebnisse sind keine erspielten Live-Abschlüsse. Kein Timeout erhöht, keine Mindestdauer oder Belegprüfung abgeschwächt.
 
 CI-Log-/Artefaktdownloads des neuen Laufs sind am Proxy für den dynamischen Blobhost gesperrt; die oben genannten API-Nachweise sind erfolgreich gesichert. Eine zwischenzeitlich verschärfte Ausführungssandbox blockierte auch den Start des lokalen HTTP-Servers (`PermissionError` beim Socketaufbau). Die erlaubte lokale Prüfung wurde anschließend mit freigegebenem Socketzugriff gestartet; Proxy und Netzpolitik wurden nicht umgangen.
 
@@ -82,3 +82,23 @@ Die CI führt künftig zusätzlich die bereits vorhandenen Fehlerprüfungen
 (`--resilience`), den Projektarchivbau und den Standalone-Smoke-Test aus. Alle
 Zeitlimits und Belegprüfungen bleiben erhalten. Die erweiterte Pipeline wird
 getrennt vom oben bestandenen 13-Block-Lauf ausgewiesen.
+
+Weiterer lokaler Fehllauf (`local-ui-failed.*`): Nach Start, abgelehntem
+widersprüchlichem Import, bestätigtem gültigem Import und Referenzöffnung scheitert
+`Locator.check` für das erste Waldmeistermerkmal am 45-s-Limit
+(„visible, enabled and stable“). Keine JS-/Konsolen-/HTTP-Fehler. Dieser Lauf ist
+kein bestandener Formulargesamttest; dieselben Formularfälle bestanden in der
+unabhängigen CI. Die restlichen lokalen Fehlerfälle werden mit dem vorhandenen
+`--smoke --resilience` separat geprüft. Keine erzwungenen Klicks oder gelockerten
+Assertions.
+
+Lokaler Fehlerlauf mit Grafiktests (`local-faults-failed.*`): Start, freie
+Bedienung und echte WebGL-Wiederherstellung mit unverändertem Feldbuch bestanden.
+Danach überschritt die Wiederholung des Modelldownloads das 180-s-Startlimit.
+Der Treiber hielt dabei die wiederhergestellte 1024×768-Szene offen und startete
+eine zweite WebGL-Szene im selben Browser; p95 der ersten Szene 14416,0 ms.
+Die Fälle werden jetzt nacheinander in frischen Browserinstanzen ausgeführt,
+entsprechend der bereits isolierten Quota-Prüfung. Alle bestehenden Assertions
+und einzelnen Zeitlimits bleiben erhalten. Auch die Fehlerdiagnose zeigt nun
+die tatsächlich geprüfte Seite. Dies ist eine Testtreiberänderung; Spielcode
+bleibt unverändert. Der neue Fehlerlauf wird getrennt ausgewiesen.

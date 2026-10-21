@@ -256,7 +256,13 @@ try:
             assert page.evaluate("localStorage.getItem('evolutionswald-fieldjournal-v2')")==persisted
             page.screenshot(path=str(out/'context-restored.png'),timeout=90000)
             passed('fault injection: real WebGL context loss/restoration preserves fieldbook')
-            broken=context.new_page();broken.set_default_timeout(45000)
+            # Finish the recovered WebGL scene before starting another one.
+            # Concurrent renderers after context loss starve software GPUs.
+            result['renderDiagnostics']=page.locator('#world').evaluate('(e)=>Object.fromEntries(Object.entries(e.dataset).filter(([k])=>/fps|gpu|cpu|triangles|drawCalls|pixelRatio/i.test(k)))')
+            browser.close()
+            model_browser=engine.launch(headless=True,**launch)
+            model_context=model_browser.new_context(viewport={'width':args.width,'height':args.height})
+            broken=model_context.new_page();page=broken;broken.set_default_timeout(45000)
             broken.route('**/wildlife-fox*.glb*',lambda route:route.abort())
             broken.goto(url,timeout=120000)
             broken.wait_for_function("document.getElementById('loading').textContent.includes('Tiermodelle konnten nicht geladen')",timeout=60000)
@@ -264,9 +270,7 @@ try:
             broken.screenshot(path=str(out/'asset-failure.png'),timeout=90000)
             broken.unroute('**/wildlife-fox*.glb*');broken.reload(timeout=120000)
             broken.wait_for_function("!document.getElementById('start').disabled",timeout=180000)
-            broken.close();passed('fault injection: required model failure blocks startup; reload recovers')
-            if 'renderDiagnostics' not in result:result['renderDiagnostics']=page.locator('#world').evaluate('(e)=>Object.fromEntries(Object.entries(e.dataset).filter(([k])=>/fps|gpu|cpu|triangles|drawCalls|pixelRatio/i.test(k)))')
-            browser.close()
+            model_context.close();model_browser.close();passed('fault injection: required model failure blocks startup; reload recovers')
             quota_browser=engine.launch(headless=True,**launch)
             quota=quota_browser.new_context(viewport={'width':800,'height':500})
             quota.add_init_script("Storage.prototype.setItem=function(){throw new DOMException('Synthetic quota failure','QuotaExceededError')}")

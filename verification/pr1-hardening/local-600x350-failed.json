@@ -1,0 +1,54 @@
+{
+  "commit": "7fbdac807c03dc017f00cd590ff7f9c377fe37e6",
+  "sourceDirty": true,
+  "startedAt": "2026-10-21T14:12:01Z",
+  "site": "outputs/GitHub-Pages",
+  "entry": "index.html",
+  "prefix": "/Ein-Tag-als-Ranger/",
+  "viewport": [
+    600,
+    350
+  ],
+  "browser": "chromium",
+  "passed": [
+    "boot, two main entries, three mission choices, real WebGL startup",
+    "LIVE M1: three concrete focal taxa, observation button, feature comparisons and justified uncertainty",
+    "LIVE M2: real simulation event, finite shared resource, explicitly read protocol, interpretation"
+  ],
+  "failed": [
+    "Page.wait_for_function: Timeout 180000ms exceeded."
+  ],
+  "errors": [],
+  "consoleErrors": [],
+  "httpErrors": [],
+  "notTested": [
+    "physical iPad/Safari",
+    "classroom timing/learning effect",
+    "20-minute minimum-device performance"
+  ],
+  "browserVersion": "154.0.8037.57",
+  "readySeconds": 19.36,
+  "resourceTransferBytes": 26671067,
+  "navigationTransferBytes": 8666,
+  "initialTransferBytes": 26679733,
+  "liveMissionSeconds": {
+    "m1": 288.6,
+    "m2": 520.06
+  },
+  "failureUI": {
+    "toast": "Beobachtungsfenster läuft. Nach mindestens 6 Modellsekunden Feldbuch öffnen und Stationsprotokoll sichern.",
+    "focus": "Rotbuche",
+    "progress": "Beobachtungsfenster: 4.6 / 6 Modellsekunden",
+    "tool": "none",
+    "observation": {
+      "observationSeconds": "0",
+      "targetFps": "60",
+      "frameP95Ms": "3749.9",
+      "fps": "0",
+      "focusTaxon": "fagus_sylvatica",
+      "focusIndividual": "plant:forest:fagus_sylvatica:-8.603866083323956:9.19744166530203:0.006750873364684044",
+      "observationDeltaSeconds": "4.949799999999988",
+      "simulationTime": "2.014999999999999"
+    }
+  }
+}
