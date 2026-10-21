@@ -195,7 +195,19 @@ try:
             passed('JSON/report downloads, session cancellation preserves work, open responses remain text')
             page.locator('#close-panel').click()
         else:
-            page.locator('#close-panel').click()
+            if args.entry=='Feldbuch.html':
+                initial=int(page.locator('#world').get_attribute('data-decoded-assets')or 0)
+                click_mission('m1')
+                page.locator('summary').filter(has_text='Bestimmungsreferenzen').click()
+                page.locator('summary').filter(has_text='Kohlmeise / Meisen').click()
+                photo=page.locator('img[alt^="Echte Aufnahme: Kohlmeise"]')
+                photo.wait_for(state='visible');page.wait_for_function("document.querySelector('img[alt^=\"Echte Aufnahme: Kohlmeise\"]').naturalWidth>0")
+                after=int(page.locator('#world').get_attribute('data-decoded-assets')or 0)
+                assert 0<initial<after<100
+                result['standaloneDecodedAssets']={'initial':initial,'afterReferences':after}
+                page.locator('#mission-free').click()
+                passed('standalone deferred photograph decodes and renders; most media remain deferred')
+            else:page.locator('#close-panel').click()
         page.locator('#pause').click();assert page.locator('#resume-game').is_visible();page.locator('#resume-game').click()
         page.keyboard.press('b');assert page.locator('#world').get_attribute('data-tool')=='binocular'
         page.keyboard.press('l');assert page.locator('#world').get_attribute('data-tool')=='magnifier'

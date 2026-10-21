@@ -46,6 +46,7 @@ for(const scenario of SCENARIOS){
  for(const [index,person]of RESIDENTS.entries()){const destination=residentDestination({...person,index},book);if(destination.view==='quest')assert.ok(book.available().some(q=>q.id===destination.id));routes++;}
  assert.equal(ui.details('absent-quest'),false,'An unavailable dialog quest should be handled without an exception');
 }
+scenarios.start('competition',book);book.learningMission='m2';ui.showScenario();assert.ok(rendered.includes('<h2>Zusammen gesehen – also Konkurrenz?</h2>'));assert.ok(!rendered.includes(`<h2>${scenarios.current.title}</h2>`),'M2 title must remain an open question');book.learningMission=null;
 scenarios.start(null,book);for(const [index,person]of RESIDENTS.entries()){const d=residentDestination({...person,index},book);if(d.view==='quest')assert.ok(book.available().some(q=>q.id===d.id));routes++;}
 assert.equal(residentDestination({index:1},book).habitat,'city');
 assert.equal(questFinished({progress:()=>1},{encounters:[{},{}]}),true,'Ein lokaler Abschluss genügt');
