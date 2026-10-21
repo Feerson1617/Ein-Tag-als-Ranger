@@ -78,9 +78,10 @@ system-site-packages aus den normalen Paketquellen installiert worden; TLS blieb
 aktiv. Setupskript und Startanweisungen sind im Cloud-Entwurf gespeichert, aber
 nicht dadurch veröffentlicht oder als neuer Task unabhängig geprüft.
 
-CI/Pages-Workflows sind vorbereitet und YAML-/SHA-strukturell geprüft. Noch kein
-GitHub-Actions-Lauf und kein Deployment ausgeführt. Die GitHub-API liefert aktuell
-Forbidden; die bestehende Git-Authentifizierung funktioniert zum Lesen. Kein neuer
+Vor PR-Anlage waren CI/Pages-Workflows YAML-/SHA-strukturell geprüft; ein
+entfernter Lauf war zu diesem Zeitpunkt noch nicht ausgeführt. Der spätere
+CI-Nachweis steht unten. Kein Deployment ausgeführt. Die GitHub-API lieferte
+zwischenzeitlich Forbidden; die bestehende Git-Authentifizierung funktionierte zum Lesen. Kein neuer
 Token angefordert. Zusätzlicher Host api.github.com im Entwurf, nicht als wirksam
 behauptet. Primärquellen-/Rechte-Einzelprüfung, physische Geräte, Mindestgerät und
 Unterrichtspilot bleiben offen. 30-FPS-/50-ms-/20-Minuten-Ziele sind nicht abgenommen.
@@ -183,3 +184,35 @@ abhängige Reihenfolge. Die Ausgabe ist jetzt sortiert. Ein zusätzlicher Vergle
 innerhalb der bestehenden Paketprüfung baut mit `PYTHONHASHSEED=1` und `2` und
 verlangt identische HTML-Bytes. Alle fünf Python-Prüfmethoden bestehen damit.
 Browserberichte erfassen künftig auch den Dirty-Status des Quellbaums.
+
+
+## Vollständige Abläufe und CI zum Abschluss
+
+Auf dem sauberen PR-Head `5a1a11a` sind alle drei Missionen in einem einzigen
+frischen lokalen Browserprofil abgeschlossen; anschließend bestehen alle
+Formular-/Import-/Bedienpfade (elf Blöcke). M1/M2/M3: 399,62 / 238,01 / 264,80
+automatisierte Sekunden. 7,66 s Startfreigabe, 26.674.136 Bytes Ersttransfer.
+Keine JavaScript-/Konsolen-/HTTP-Fehler. Keine Schülerzeit- oder Hardwareaussage.
+
+Auch GitHub-Run 39597573474 besteht auf einem frischen Runner: Installation,
+26 Node-Reihen, Webbuild/-verifikation, Einzel-HTML, fünf Python-Prüfmethoden und
+elf Browserblöcke einschließlich der drei Live-Missionen. Actions testet den
+prospektiven Mergecommit `aa2a9c2` des PR-Heads `5a1a11a` gegen main. Nachweise
+unter `verification/rc1/github-ci.json` und `all-missions-browser.*`.
+
+Offener Teststabilitätsbefund C01 (P1): Run 39595902666 war im Browserteil
+fehlgeschlagen; seine konkrete Ursache ist wegen blockierter Original-Log-/
+Screenshotdownloads nicht festgestellt. Der erfolgreiche Folgelauf ändert nur
+die Diagnoseausgabe im Prüfer, keine Spielimplementierung und keine abgeschwächte
+Assertion. Der alte Fehllauf bleibt verlinkt. Vor stabiler Veröffentlichung
+Originalprotokolle prüfen; keinen diagnostizierten oder behobenen Produktfehler
+behaupten. Die beiden zwischenzeitlich überholten frühen Läufe wurden nach
+Quellstandsaktualisierung abgebrochen, nicht als erfolgreiche Abnahmen gezählt.
+
+GitHub-Logserver `results-receiver.actions.githubusercontent.com` und der konkret
+beobachtete Artefakthost `productionresultssa18.blob.core.windows.net` sind dem
+Cloud-Entwurf hinzugefügt, aber dadurch nicht in der laufenden Netzpolitik
+freigeschaltet. Kompakte CI-Fehler/Ergebnisse sind nun auch per Check-Annotation
+über die erreichbare GitHub-API verfügbar. Der Prüfer behandelt HTTP-Fehler
+ausdrücklich als Fehler. Alle archivierten erfolgreichen Läufe besitzen bereits
+leere HTTP-Fehlerlisten. Keine Veröffentlichung und keine stabile Gerätefreigabe.

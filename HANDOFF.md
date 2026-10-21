@@ -47,7 +47,12 @@ Projektarchiv separat erzeugen, keine .game-dev-/Schüler-/lokalen Arbeitsdaten 
 Offen: Primärartikelzugang (Proxy-403), fachliche Einzelvalidierung der Referenzen,
 Codelizenzentscheidung, physische Geräte und Unterrichtspilot. Pythonwerkzeuge
 wurden auch in frischer venv installiert; Cloud-Skript und Startanweisungen sind als
-Entwurf gespeichert. Der zwischenzeitliche GitHub-API-403 war kein Beleg für ein fehlendes Token;
+Entwurf gespeichert. Alle drei Missionen bestehen jetzt auch zusammen in frischen
+lokalen und GitHub-Browserprofilen (elf Blöcke); siehe `verification/rc1/github-ci.json`.
+Ein früherer CI-Browserfehllauf bleibt ungeklärt, weil die Originalprotokolle per
+Netzpolitik gesperrt sind. Kein Spielcode wurde für den erfolgreichen Folgelauf
+geändert. Vor stabiler Veröffentlichung Diagnose nachholen; keine Fehlerbehebung
+behaupten, die nicht nachgewiesen ist. Der zwischenzeitliche GitHub-API-403 war kein Beleg für ein fehlendes Token;
 Git-Schreibzugriff und PR-Erstellung funktionieren inzwischen. Entwurfs-PR:
 https://github.com/Feerson1617/Ein-Tag-als-Ranger/pull/1 .
 Keine Tokens im Chat oder Repository anfordern.

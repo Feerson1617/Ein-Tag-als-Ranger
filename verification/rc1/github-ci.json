@@ -1,0 +1,39 @@
+{
+  "run": "https://github.com/Feerson1617/Ein-Tag-als-Ranger/actions/runs/39597573474",
+  "pullRequest": "https://github.com/Feerson1617/Ein-Tag-als-Ranger/pull/1",
+  "headCommit": "5a1a11a2f35106b21fa19fc1248758d777a184e3",
+  "testedMergeCommit": "aa2a9c255e33647bcfc0e1f8929d255878a28219",
+  "conclusion": "success",
+  "browser": {
+    "commit": "aa2a9c255e33647bcfc0e1f8929d255878a28219",
+    "sourceDirty": false,
+    "passed": [
+      "boot, two main entries, three mission choices, real WebGL startup",
+      "LIVE M1: three concrete focal taxa, observation button, feature comparisons and justified uncertainty",
+      "LIVE M2: real simulation event, finite shared resource, explicitly read protocol, interpretation",
+      "LIVE M3: actual existing probe, two water levels, same individual/depth, timed records and interpretation",
+      "versioned import requires explicit replacement, individual IDs retained",
+      "references available before determination; opening does not discover taxa",
+      "UI fixture M1: wrong/incomplete/correct/justified uncertain decisions, no complete collection",
+      "UI fixture M2: missing hypothesis and false provenance rejected; supported combinations accepted",
+      "UI fixture M3: absence overclaim rejected, controlled comparison accepted",
+      "JSON/report downloads, session cancellation preserves work, open responses remain text",
+      "free exploration: real tools, keyboard, map with eight regions, tablet viewport (emulation only)"
+    ],
+    "failed": [],
+    "errors": [],
+    "consoleErrors": [],
+    "httpErrors": [],
+    "failureUI": null,
+    "liveMissionSeconds": {
+      "m1": 294.71,
+      "m2": 164.89,
+      "m3": 180.02
+    }
+  },
+  "earlierFailedRun": {
+    "run": "https://github.com/Feerson1617/Ein-Tag-als-Ranger/actions/runs/39595902666",
+    "conclusion": "failure",
+    "cause": "Unconfirmed; original log and screenshot downloads blocked by egress policy. No game implementation changes between the failed and passing runs."
+  }
+}

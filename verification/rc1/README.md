@@ -57,5 +57,35 @@ Ergebnisse unter `work/` sind laufbezogen.
 Mindestgerät/30 FPS/p95/20-Minuten-Test, physisches iPad/Safari, Unterrichtspilot
 und vollständige Primärquellen-/Rechteprüfung bleiben offen. Mehrsekündige
 Bildabstände im Cloud-Software-Renderer erfüllen das FPS-Ziel nicht.
-GitHub-Actions wurden vorbereitet, aber nicht auf GitHub ausgeführt.
+GitHub-Actions wurden inzwischen auf einem frischen Runner bestanden; der
+frühere Fehllauf bleibt ausdrücklich dokumentiert.
 Kein Merge, kein Deployment und keine Live-Veröffentlichung.
+
+
+## Zusätzliche vollständige Abläufe
+
+`all-missions-browser.json` / `.txt` und `all-missions-*.png`: alle drei Missionen
+in einem frischen lokalen Browserprofil auf dem sauberen Commit `5a1a11a`,
+anschließend alle Formular-/Import-/Bedienpfade. Elf Blöcke bestanden, keine
+JavaScript-, Konsolen- oder HTTP-Fehler. M1/M2/M3: 399,62 / 238,01 / 264,80
+automatisierte Sekunden, keine Schülerzeiten. 7,66 s bis Startfreigabe,
+26.674.136 Bytes Ersttransfer einschließlich Navigation. Chromium 154/SwiftShader,
+800×500; nachfolgende Layoutprobe 1024×768. Softwareleistung erfüllt das FPS-Ziel
+weiterhin nicht.
+
+`github-ci.json`: unabhängiger frischer GitHub-Runner; vollständige Pipeline und
+elf Browserblöcke bestanden. Getesteter PR-Head `5a1a11a`, von Actions erzeugter
+Mergecommit `aa2a9c2`. M1/M2/M3: 294,71 / 164,89 / 180,02 automatisierte Sekunden.
+Die kompakte Check-Annotation ist über die GitHub-API abgerufen worden; vollständige
+Log-/Artefaktdownloads sind aus dieser Cloud per Egress-403 gesperrt.
+
+Der frühere Run 39595902666 ist im Browserteil fehlgeschlagen. Seine konkrete
+Ursache ist ohne die Originalprotokolle nicht gesichert. Zwischen dem fehlgeschlagenen
+und dem bestandenen CI-Lauf wurde nur die Ausgabe von Diagnoseannotationen
+ergänzt, kein Spielcode und keine abgeschwächte Assertion. Der Fehllauf wird
+weder als erfolgreich noch als behobener Produktfehler ausgegeben. Vor einer
+stabilen Veröffentlichung verbleibt seine Diagnose als offener Prüfpunkt.
+
+Der Browserprüfer prüft HTTP-Fehler künftig ausdrücklich als Fehler und veröffentlicht
+Versions-/Transfer-/Fehlerdetails im GitHub-Check. Die erfolgreichen archivierten
+Läufe besitzen bereits leere HTTP-Fehlerlisten.

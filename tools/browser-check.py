@@ -261,6 +261,7 @@ try:
             result['expectedFailures']=['Aborted fox model request','Synthetic quota failure']
         assert not result['errors'],result['errors']
         assert not result['consoleErrors'],result['consoleErrors']
+        assert not result['httpErrors'],result['httpErrors']
         if 'renderDiagnostics' not in result:result['renderDiagnostics']=page.locator('#world').evaluate('(e)=>Object.fromEntries(Object.entries(e.dataset).filter(([k])=>/fps|gpu|cpu|triangles|drawCalls|pixelRatio/i.test(k)))')
         if browser.is_connected():browser.close()
     except Exception:
@@ -281,7 +282,7 @@ finally:
     (out/'result.json').write_text(json.dumps(result,indent=2,ensure_ascii=False)+'\n')
     print(json.dumps(result,ensure_ascii=False),flush=True)
     if os.environ.get('GITHUB_ACTIONS')=='true':
-        diagnostic={key:result.get(key)for key in ['commit','sourceDirty','passed','failed','errors','consoleErrors','httpErrors','failureUI','liveMissionSeconds']}
+        diagnostic={key:result.get(key)for key in ['commit','sourceDirty','browserVersion','viewport','readySeconds','initialTransferBytes','passed','failed','errors','consoleErrors','httpErrors','failureUI','liveMissionSeconds']}
         message=json.dumps(diagnostic,ensure_ascii=False).replace('%','%25').replace('\r','%0D').replace('\n','%0A')
         print(f'::{"error" if result["failed"] else "notice"} title=Ranger browser result::{message}',flush=True)
 if result['failed']:raise SystemExit(1)
