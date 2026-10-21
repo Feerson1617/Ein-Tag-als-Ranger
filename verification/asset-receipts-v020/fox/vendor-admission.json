@@ -1,0 +1,21 @@
+{
+  "schema": "game_dev.result.v1",
+  "operation": "vendor.admit",
+  "ok": true,
+  "data": {
+    "reused": false,
+    "packageId": "pkg_282a4f451f47140f0d4c4b61",
+    "projectRoot": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/evolutionswald",
+    "destination": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/evolutionswald/assets/vendor/wildlife-fox",
+    "lockPath": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/evolutionswald/.game-dev/vendor-lock.json",
+    "blockers": [],
+    "evidence": {
+      "packageHashesVerified": true,
+      "copiedPackageHashesVerified": true,
+      "projectImportTestPerformed": false,
+      "gpuRenderTestPerformed": false
+    },
+    "dryRun": false,
+    "receiptPath": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/evolutionswald/.game-dev/vendor-receipts/2026-10-09T16-13-32-328Z-feldbuch_wildlife_fox-e6877a92-a4cd-41e7-9b0c-b6403d0cb199.json"
+  }
+}

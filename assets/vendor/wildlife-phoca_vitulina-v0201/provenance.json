@@ -1,0 +1,13 @@
+{
+  "authoringScriptSha256": "[redacted]",
+  "costEUR": 0,
+  "origin": "local procedural anatomy",
+  "schema": "game_dev.asset_provenance.v1",
+  "source": {
+    "bytes": 315192,
+    "fileName": "phoca_vitulina.glb",
+    "sha256": "d4148a4eed057726e2c60ff4753b82d4c2a5344d0a63f84168d709e2e6e4f7e5"
+  },
+  "sourceSha256": "d4148a4eed057726e2c60ff4753b82d4c2a5344d0a63f84168d709e2e6e4f7e5",
+  "tool": "Blender 4.5.14 LTS"
+}

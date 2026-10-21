@@ -1,0 +1,23 @@
+{
+  "completedAt": "2026-10-09T16:21:04.684Z",
+  "destination": {
+    "assetId": "feldbuch_wildlife_phoca_vitulina",
+    "version": "0.20.1"
+  },
+  "evidence": {
+    "blenderNormalizationPerformed": false,
+    "gpuImportTestPerformed": false,
+    "humanVisualReviewPerformed": false,
+    "modelBytesCopiedAndHashed": true,
+    "policyValidationCompleted": true,
+    "staticInspectionCompleted": true
+  },
+  "manifestSha256": "1f50539821601200b6636630d08692594ad3750e52ad1e13b505ca8fcdeb4935",
+  "packageId": "pkg_80f36d38ca00c12623915668",
+  "schema": "game_dev.package_receipt.v1",
+  "source": {
+    "bytes": 315192,
+    "fileName": "phoca_vitulina.glb",
+    "sha256": "d4148a4eed057726e2c60ff4753b82d4c2a5344d0a63f84168d709e2e6e4f7e5"
+  }
+}

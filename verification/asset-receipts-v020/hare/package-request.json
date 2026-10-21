@@ -1,0 +1,21 @@
+{
+  "description": "Lokales Blender-Artenmodell f\u00fcr Feldbuch; GPU-Instanzen, Laufanimation mit Fu\u00dfkontakten und Atmung. Keine externen Jobs.",
+  "category": "creature",
+  "provenance": {
+    "sourceSha256": "e92d42f5354a8da52afb019e15b38fcd8396afa6fbe5eae0feae0a807c3e3c17",
+    "authoringScriptSha256": "9a3da3f045ff2e470ccd962de046678ee53d8127bc6e072ba385efe3f649c69f",
+    "tool": "Blender 4.5.14 LTS",
+    "origin": "local procedural anatomy",
+    "costEUR": 0
+  },
+  "policy": {
+    "requireUVs": true,
+    "requireNormals": true,
+    "requireTangentsWithNormalMap": true,
+    "requireBaseColorTexture": false,
+    "maxTriangles": 10000,
+    "maxMaterials": 1,
+    "maxDimensionMeters": 3,
+    "minDimensionMeters": 0.01
+  }
+}

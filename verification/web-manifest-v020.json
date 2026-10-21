@@ -1,0 +1,1266 @@
+{
+  "version": "0.20",
+  "modules": {
+    "vendor/three.core.js": "web/vendor-three.core-eb077d2417f6.js",
+    "vendor/three.module.js": "web/vendor-three.module-c4af49689bc3.js",
+    "asset-url.js": "web/asset-url-e70df3ebf5aa.js",
+    "authored-wildlife.js": "web/authored-wildlife-5bd7bb5dbaef.js",
+    "render-budget.js": "web/render-budget-616ed93cc91c.js",
+    "quest-learning.js": "web/quest-learning-43eb3f9b36e9.js",
+    "ranger-controls.js": "web/ranger-controls-1a965f6915b5.js",
+    "species-photos.js": "web/species-photos-79affe641b05.js",
+    "species-photo-view.js": "web/species-photo-view-d8e04709f8b6.js",
+    "mesh-geometry.js": "web/mesh-geometry-2d1e261d52c3.js",
+    "village-people.js": "web/village-people-74cd59c9cedf.js",
+    "field-soundscape.js": "web/field-soundscape-74a89a60297d.js",
+    "world-layout.js": "web/world-layout-606061600486.js",
+    "catalogue-extension.js": "web/catalogue-extension-5aafb85a6b85.js",
+    "biodiversity.js": "web/biodiversity-a4ca567f8c1b.js",
+    "trail.js": "web/trail-fb68a881a6d5.js",
+    "observation-tools.js": "web/observation-tools-40cadea05ba3.js",
+    "render-visibility.js": "web/render-visibility-4e69cd70cb90.js",
+    "habitat-fences.js": "web/habitat-fences-220e3de1e40d.js",
+    "terrain-contact.js": "web/terrain-contact-a90ee2236c53.js",
+    "curved-leaves.js": "web/curved-leaves-c2068ac69af4.js",
+    "plant-forms.js": "web/plant-forms-7ce9dcf0710a.js",
+    "boardwalk-layout.js": "web/boardwalk-layout-2bc26572b1b5.js",
+    "field-boards.js": "web/field-boards-07dde92a175d.js",
+    "village.js": "web/village-cd78c9162edc.js",
+    "living-habitats.js": "web/living-habitats-c600d215f312.js",
+    "field-guide.js": "web/field-guide-ef0f33ed07ba.js",
+    "habitat-world.js": "web/habitat-world-de476ba02491.js",
+    "flight-feathers.js": "web/flight-feathers-6d03f4875b8a.js",
+    "bird-wings.js": "web/bird-wings-4c43b244f6a6.js",
+    "bird-plumage.js": "web/bird-plumage-8f87a0ec17a0.js",
+    "avian-anatomy.js": "web/avian-anatomy-9ffc49d60cb7.js",
+    "encounter-behavior.js": "web/encounter-behavior-01ed0785ef54.js",
+    "wildlife-motion.js": "web/wildlife-motion-ab5c9395d91f.js",
+    "animals.js": "web/animals-ca7703d10df4.js",
+    "wildlife.js": "web/wildlife-3b1802a9f4a3.js",
+    "blocker-grid.js": "web/blocker-grid-8587a62ddef9.js",
+    "ecological-relations.js": "web/ecological-relations-ddff2ac5204f.js",
+    "field-ecology.js": "web/field-ecology-58dcba436646.js",
+    "field-evolution.js": "web/field-evolution-9c964290c47b.js",
+    "quest-cases.js": "web/quest-cases-20d945fb79fa.js",
+    "quests.js": "web/quests-fa8975191585.js",
+    "interaction-scenarios.js": "web/interaction-scenarios-7b9664b353db.js",
+    "quest-interface.js": "web/quest-interface-ba82bbada337.js",
+    "focus-marker.js": "web/focus-marker-0bee8a44d9a5.js",
+    "tidal-system.js": "web/tidal-system-9a39b9f39b32.js",
+    "sediment-excavation.js": "web/sediment-excavation-e445141f532b.js",
+    "field-sampling.js": "web/field-sampling-ea66424efab4.js",
+    "plant-impostors.js": "web/plant-impostors-c317f69a2456.js",
+    "garden-bees.js": "web/garden-bees-e7880178b95e.js",
+    "expedition-state.js": "web/expedition-state-0f29e72a8c82.js",
+    "expedition.js": "web/expedition-2a27a5f2a2da.js"
+  },
+  "assets": {
+    "bark-atlas.webp": "./assets/bark-atlas-4d59ad54ba91.webp",
+    "bark-diffuse.jpg": "./assets/bark-diffuse-4213441aebcb.jpg",
+    "bark-normal.jpg": "./assets/bark-normal-9d1537b34295.jpg",
+    "bird-blackbird.mp3": "./assets/bird-blackbird-053419bb9971.mp3",
+    "bird-great-tit.mp3": "./assets/bird-great-tit-7cb0443e36c5.mp3",
+    "bird-herring-gull.mp3": "./assets/bird-herring-gull-ae6efd68b136.mp3",
+    "boardwalk-wood.webp": "./assets/boardwalk-wood-4d06022133e3.webp",
+    "botanical-atlas.webp": "./assets/botanical-atlas-71d73ef00371.webp",
+    "foliage-atlas.webp": "./assets/foliage-atlas-db9a9c6f7c9d.webp",
+    "ground-diffuse.jpg": "./assets/ground-diffuse-cfa40bc9d941.jpg",
+    "ground-normal.jpg": "./assets/ground-normal-832328216adc.jpg",
+    "habitat-surfaces.webp": "./assets/habitat-surfaces-a1078323034c.webp",
+    "sky-panorama.webp": "./assets/sky-panorama-46c360b491b1.webp",
+    "species-photo-accipiter_nisus.jpg": "./assets/species-photo-accipiter_nisus-1438d5928f03.jpg",
+    "species-photo-achillea_millefolium.jpg": "./assets/species-photo-achillea_millefolium-bc2ccfea2474.jpg",
+    "species-photo-aeshna_cyanea.jpg": "./assets/species-photo-aeshna_cyanea-cd56b1dff714.jpg",
+    "species-photo-aglais_io.jpg": "./assets/species-photo-aglais_io-ebfa52d55a5f.jpg",
+    "species-photo-alauda_arvensis.jpg": "./assets/species-photo-alauda_arvensis-f8ce8a23c252.jpg",
+    "species-photo-alcedo_atthis.jpg": "./assets/species-photo-alcedo_atthis-bf52ad0996e5.jpg",
+    "species-photo-alnus_glutinosa.jpg": "./assets/species-photo-alnus_glutinosa-3d255ce25782.jpg",
+    "species-photo-ammophila_arenaria.jpg": "./assets/species-photo-ammophila_arenaria-ccc25453c84c.jpg",
+    "species-photo-anas_acuta.jpg": "./assets/species-photo-anas_acuta-d3c6b6e2ce07.jpg",
+    "species-photo-anas_crecca.jpg": "./assets/species-photo-anas_crecca-57f7a6f22583.jpg",
+    "species-photo-anas_platyrhynchos.jpg": "./assets/species-photo-anas_platyrhynchos-c9816241ec5d.jpg",
+    "species-photo-anemone_nemorosa.jpg": "./assets/species-photo-anemone_nemorosa-c31923d95268.jpg",
+    "species-photo-anodonta_anatina.jpg": "./assets/species-photo-anodonta_anatina-9cc2344f83bc.jpg",
+    "species-photo-anser_anser.jpg": "./assets/species-photo-anser_anser-66646dd74490.jpg",
+    "species-photo-anthus_pratensis.jpg": "./assets/species-photo-anthus_pratensis-4344c197fb0c.jpg",
+    "species-photo-apis_mellifera.jpg": "./assets/species-photo-apis_mellifera-b1eea66ed8b1.jpg",
+    "species-photo-apodemus_flavicollis.jpg": "./assets/species-photo-apodemus_flavicollis-187dd0a45055.jpg",
+    "species-photo-apodemus_sylvaticus.jpg": "./assets/species-photo-apodemus_sylvaticus-022f6804907c.jpg",
+    "species-photo-apus_apus.jpg": "./assets/species-photo-apus_apus-f3bfdf5fd664.jpg",
+    "species-photo-ardea_cinerea.jpg": "./assets/species-photo-ardea_cinerea-b1406143389f.jpg",
+    "species-photo-arenaria_interpres.jpg": "./assets/species-photo-arenaria_interpres-26d55a2973ae.jpg",
+    "species-photo-arenicola_marina.jpg": "./assets/species-photo-arenicola_marina-f844cc6db1a1.jpg",
+    "species-photo-argulus_foliaceus.jpg": "./assets/species-photo-argulus_foliaceus-d82a9b33f217.jpg",
+    "species-photo-armeria_maritima.jpg": "./assets/species-photo-armeria_maritima-64932a9147da.jpg",
+    "species-photo-artemisia_maritima.jpg": "./assets/species-photo-artemisia_maritima-35fcf284ef50.jpg",
+    "species-photo-arvicola_amphibius.jpg": "./assets/species-photo-arvicola_amphibius-1435bcc49db5.jpg",
+    "species-photo-asellus_aquaticus.jpg": "./assets/species-photo-asellus_aquaticus-54d1289e32b0.jpg",
+    "species-photo-atriplex_portulacoides.jpg": "./assets/species-photo-atriplex_portulacoides-278412544736.jpg",
+    "species-photo-betula_pendula.jpg": "./assets/species-photo-betula_pendula-f5795b7048aa.jpg",
+    "species-photo-bombus_lapidarius.jpg": "./assets/species-photo-bombus_lapidarius-4cd5bba6ec83.jpg",
+    "species-photo-bombus_terrestris.jpg": "./assets/species-photo-bombus_terrestris-165035a71ba9.jpg",
+    "species-photo-branta_bernicla.jpg": "./assets/species-photo-branta_bernicla-f8c7cee483b2.jpg",
+    "species-photo-branta_leucopsis.jpg": "./assets/species-photo-branta_leucopsis-316d27a14e70.jpg",
+    "species-photo-buteo_buteo.jpg": "./assets/species-photo-buteo_buteo-9d0911b535db.jpg",
+    "species-photo-cakile_maritima.jpg": "./assets/species-photo-cakile_maritima-30f4d756386e.jpg",
+    "species-photo-calidris_alba.jpg": "./assets/species-photo-calidris_alba-66e0d2352cbd.jpg",
+    "species-photo-calidris_alpina.jpg": "./assets/species-photo-calidris_alpina-b7fea4358339.jpg",
+    "species-photo-calidris_canutus.jpg": "./assets/species-photo-calidris_canutus-aa69f420bedf.jpg",
+    "species-photo-calidris_ferruginea.jpg": "./assets/species-photo-calidris_ferruginea-bf270f6a399f.jpg",
+    "species-photo-capreolus_capreolus.jpg": "./assets/species-photo-capreolus_capreolus-f58d338aee84.jpg",
+    "species-photo-carcinus_maenas.jpg": "./assets/species-photo-carcinus_maenas-a37280e732c1.jpg",
+    "species-photo-centaurea_cyanus.jpg": "./assets/species-photo-centaurea_cyanus-2ce072b75953.jpg",
+    "species-photo-cerastoderma_edule.jpg": "./assets/species-photo-cerastoderma_edule-3c20ee89fedb.jpg",
+    "species-photo-ceratophyllum_demersum.jpg": "./assets/species-photo-ceratophyllum_demersum-2d536bcc08e8.jpg",
+    "species-photo-charadrius_alexandrinus.jpg": "./assets/species-photo-charadrius_alexandrinus-7aa0abee5ff7.jpg",
+    "species-photo-charadrius_hiaticula.jpg": "./assets/species-photo-charadrius_hiaticula-3a8b5affc85b.jpg",
+    "species-photo-chroicocephalus_ridibundus.jpg": "./assets/species-photo-chroicocephalus_ridibundus-c5dbae5aa744.jpg",
+    "species-photo-ciconia_ciconia.jpg": "./assets/species-photo-ciconia_ciconia-cae236451a57.jpg",
+    "species-photo-clupea_harengus.jpg": "./assets/species-photo-clupea_harengus-79d061fdbf0e.jpg",
+    "species-photo-coccinella_septempunctata.jpg": "./assets/species-photo-coccinella_septempunctata-af2151ef0400.jpg",
+    "species-photo-columba_palumbus.jpg": "./assets/species-photo-columba_palumbus-a3d914a3da33.jpg",
+    "species-photo-corylus_avellana.jpg": "./assets/species-photo-corylus_avellana-cbbb0c29115a.jpg",
+    "species-photo-crangon_crangon.jpg": "./assets/species-photo-crangon_crangon-dbc82c5232ba.jpg",
+    "species-photo-crataegus_monogyna.jpg": "./assets/species-photo-crataegus_monogyna-2979f0d9277d.jpg",
+    "species-photo-crocidura_russula.jpg": "./assets/species-photo-crocidura_russula-5c575c9982b0.jpg",
+    "species-photo-cyanistes_caeruleus.jpg": "./assets/species-photo-cyanistes_caeruleus-7b0cbf074922.jpg",
+    "species-photo-cygnus_olor.jpg": "./assets/species-photo-cygnus_olor-a88b41f7cdd3.jpg",
+    "species-photo-dactylis_glomerata.jpg": "./assets/species-photo-dactylis_glomerata-d29022b52895.jpg",
+    "species-photo-dendrocopos_major.jpg": "./assets/species-photo-dendrocopos_major-1a55ccb1e545.jpg",
+    "species-photo-dryopteris_filix_mas.jpg": "./assets/species-photo-dryopteris_filix_mas-608f425c76ee.jpg",
+    "species-photo-elymus_athericus.jpg": "./assets/species-photo-elymus_athericus-2037522c9183.jpg",
+    "species-photo-erinaceus_europaeus.jpg": "./assets/species-photo-erinaceus_europaeus-562d70c16b02.jpg",
+    "species-photo-erithacus_rubecula.jpg": "./assets/species-photo-erithacus_rubecula-460c5a716961.jpg",
+    "species-photo-esox_lucius.jpg": "./assets/species-photo-esox_lucius-820416f49f27.jpg",
+    "species-photo-fagus_sylvatica.jpg": "./assets/species-photo-fagus_sylvatica-2a345237a8e8.jpg",
+    "species-photo-falco_tinnunculus.jpg": "./assets/species-photo-falco_tinnunculus-4567dd74a6a9.jpg",
+    "species-photo-festuca_rubra.jpg": "./assets/species-photo-festuca_rubra-4e56f756ddf8.jpg",
+    "species-photo-fomes_fomentarius.jpg": "./assets/species-photo-fomes_fomentarius-39885a0b664c.jpg",
+    "species-photo-fox.jpg": "./assets/species-photo-fox-d8d182fba99b.jpg",
+    "species-photo-fraxinus_excelsior.jpg": "./assets/species-photo-fraxinus_excelsior-ad0daf33432f.jpg",
+    "species-photo-fringilla_coelebs.jpg": "./assets/species-photo-fringilla_coelebs-a822d2fe6e99.jpg",
+    "species-photo-fulica_atra.jpg": "./assets/species-photo-fulica_atra-a2d76ca105ad.jpg",
+    "species-photo-galium_odoratum.jpg": "./assets/species-photo-galium_odoratum-e6fc4065efa4.jpg",
+    "species-photo-garrulus_glandarius.jpg": "./assets/species-photo-garrulus_glandarius-5433fbf6b9ab.jpg",
+    "species-photo-gasterosteus_aculeatus.jpg": "./assets/species-photo-gasterosteus_aculeatus-d5f8f8edcd97.jpg",
+    "species-photo-haematopus_ostralegus.jpg": "./assets/species-photo-haematopus_ostralegus-776a9823eded.jpg",
+    "species-photo-halichoerus_grypus.jpg": "./assets/species-photo-halichoerus_grypus-fb9af76569b5.jpg",
+    "species-photo-hare.jpg": "./assets/species-photo-hare-f694e4993bdb.jpg",
+    "species-photo-hediste_diversicolor.jpg": "./assets/species-photo-hediste_diversicolor-8577345649d3.jpg",
+    "species-photo-hippophae_rhamnoides.jpg": "./assets/species-photo-hippophae_rhamnoides-08a702f62d9a.jpg",
+    "species-photo-hirundo_rustica.jpg": "./assets/species-photo-hirundo_rustica-e1fba40fa12a.jpg",
+    "species-photo-ixodes_ricinus.jpg": "./assets/species-photo-ixodes_ricinus-31053b624f48.jpg",
+    "species-photo-juncus_gerardii.jpg": "./assets/species-photo-juncus_gerardii-aefd8d436d7f.jpg",
+    "species-photo-larus_argentatus.jpg": "./assets/species-photo-larus_argentatus-11c55e764de4.jpg",
+    "species-photo-larus_canus.jpg": "./assets/species-photo-larus_canus-68990677c718.jpg",
+    "species-photo-larus_fuscus.jpg": "./assets/species-photo-larus_fuscus-7e892e4b2d22.jpg",
+    "species-photo-lepeophtheirus_pectoralis.jpg": "./assets/species-photo-lepeophtheirus_pectoralis-c48e7b772f9b.jpg",
+    "species-photo-leucanthemum_vulgare.jpg": "./assets/species-photo-leucanthemum_vulgare-a829fba071d9.jpg",
+    "species-photo-limecola_balthica.jpg": "./assets/species-photo-limecola_balthica-88cd2cebc2d8.jpg",
+    "species-photo-limonium_vulgare.jpg": "./assets/species-photo-limonium_vulgare-c8042b5e251f.jpg",
+    "species-photo-limosa_lapponica.jpg": "./assets/species-photo-limosa_lapponica-6e2d80914ecf.jpg",
+    "species-photo-limosa_limosa.jpg": "./assets/species-photo-limosa_limosa-46167cf3c39e.jpg",
+    "species-photo-lissotriton_vulgaris.jpg": "./assets/species-photo-lissotriton_vulgaris-419ea2e7b1ac.jpg",
+    "species-photo-littorina_littorea.jpg": "./assets/species-photo-littorina_littorea-e1a5a0db6124.jpg",
+    "species-photo-lumbricus_terrestris.jpg": "./assets/species-photo-lumbricus_terrestris-b0ac28ce2412.jpg",
+    "species-photo-lythrum_salicaria.jpg": "./assets/species-photo-lythrum_salicaria-b0c74334c56c.jpg",
+    "species-photo-mareca_penelope.jpg": "./assets/species-photo-mareca_penelope-a926e535e912.jpg",
+    "species-photo-micromys_minutus.jpg": "./assets/species-photo-micromys_minutus-0037d8f62db0.jpg",
+    "species-photo-microtus_agrestis.jpg": "./assets/species-photo-microtus_agrestis-0f4fcc326154.jpg",
+    "species-photo-microtus_arvalis.jpg": "./assets/species-photo-microtus_arvalis-3366e21e71a7.jpg",
+    "species-photo-motacilla_flava.jpg": "./assets/species-photo-motacilla_flava-31929f555e65.jpg",
+    "species-photo-mus_musculus.jpg": "./assets/species-photo-mus_musculus-fb8ff23b4ae6.jpg",
+    "species-photo-mya_arenaria.jpg": "./assets/species-photo-mya_arenaria-24bea12d687d.jpg",
+    "species-photo-myodes_glareolus.jpg": "./assets/species-photo-myodes_glareolus-c9258d59fbb1.jpg",
+    "species-photo-mytilus_edulis.jpg": "./assets/species-photo-mytilus_edulis-952a2311adbc.jpg",
+    "species-photo-nephtys_hombergii.jpg": "./assets/species-photo-nephtys_hombergii-d32cd2184c73.jpg",
+    "species-photo-numenius_arquata.jpg": "./assets/species-photo-numenius_arquata-efc55e6d709e.jpg",
+    "species-photo-numenius_phaeopus.jpg": "./assets/species-photo-numenius_phaeopus-24e2a844d9ef.jpg",
+    "species-photo-nymphaea_alba.jpg": "./assets/species-photo-nymphaea_alba-b944a179105e.jpg",
+    "species-photo-orchestia_gammarellus.jpg": "./assets/species-photo-orchestia_gammarellus-7f9e8e5b9f59.jpg",
+    "species-photo-oryctolagus_cuniculus.jpg": "./assets/species-photo-oryctolagus_cuniculus-ba2785949fcd.jpg",
+    "species-photo-papaver_rhoeas.jpg": "./assets/species-photo-papaver_rhoeas-8a9063130e53.jpg",
+    "species-photo-parus_major.jpg": "./assets/species-photo-parus_major-e0a8ad3df6fc.jpg",
+    "species-photo-passer_domesticus.jpg": "./assets/species-photo-passer_domesticus-11b68f316295.jpg",
+    "species-photo-perca_fluviatilis.jpg": "./assets/species-photo-perca_fluviatilis-3e95e866f958.jpg",
+    "species-photo-peringia_ulvae.jpg": "./assets/species-photo-peringia_ulvae-5bd253be19ac.jpg",
+    "species-photo-phalacrocorax_carbo.jpg": "./assets/species-photo-phalacrocorax_carbo-244fb514beb1.jpg",
+    "species-photo-phoca_vitulina.jpg": "./assets/species-photo-phoca_vitulina-9de58994cf38.jpg",
+    "species-photo-phragmites_australis.jpg": "./assets/species-photo-phragmites_australis-a6672f784769.jpg",
+    "species-photo-pica_pica.jpg": "./assets/species-photo-pica_pica-6a1cb8457d54.jpg",
+    "species-photo-pinus_sylvestris.jpg": "./assets/species-photo-pinus_sylvestris-c9f02ac7f111.jpg",
+    "species-photo-plantago_lanceolata.jpg": "./assets/species-photo-plantago_lanceolata-46b177688d0e.jpg",
+    "species-photo-plantago_maritima.jpg": "./assets/species-photo-plantago_maritima-f36b9507d3a4.jpg",
+    "species-photo-platalea_leucorodia.jpg": "./assets/species-photo-platalea_leucorodia-c269ce0ff8d4.jpg",
+    "species-photo-pleuronectes_platessa.jpg": "./assets/species-photo-pleuronectes_platessa-6ddebd6f4044.jpg",
+    "species-photo-pluvialis_apricaria.jpg": "./assets/species-photo-pluvialis_apricaria-818ed9eb5dfb.jpg",
+    "species-photo-pluvialis_squatarola.jpg": "./assets/species-photo-pluvialis_squatarola-0638bcf5e8c6.jpg",
+    "species-photo-poa_pratensis.jpg": "./assets/species-photo-poa_pratensis-704526531185.jpg",
+    "species-photo-polytrichum_commune.jpg": "./assets/species-photo-polytrichum_commune-73a2d7732377.jpg",
+    "species-photo-prunus_spinosa.jpg": "./assets/species-photo-prunus_spinosa-764c79b80298.jpg",
+    "species-photo-puccinellia_maritima.jpg": "./assets/species-photo-puccinellia_maritima-eb2f50965244.jpg",
+    "species-photo-quercus_petraea.jpg": "./assets/species-photo-quercus_petraea-f9df552954a6.jpg",
+    "species-photo-quercus_robur.jpg": "./assets/species-photo-quercus_robur-1526b6dc2f9a.jpg",
+    "species-photo-rana_temporaria.jpg": "./assets/species-photo-rana_temporaria-c3ee55da431b.jpg",
+    "species-photo-recurvirostra_avosetta.jpg": "./assets/species-photo-recurvirostra_avosetta-6914ad548a6b.jpg",
+    "species-photo-retusa_obtusa.jpg": "./assets/species-photo-retusa_obtusa-89bf3d1b6cd7.jpg",
+    "species-photo-rosa_canina.jpg": "./assets/species-photo-rosa_canina-c710b785768f.jpg",
+    "species-photo-rutilus_rutilus.jpg": "./assets/species-photo-rutilus_rutilus-53d1dcb4fb11.jpg",
+    "species-photo-salicornia_europaea.jpg": "./assets/species-photo-salicornia_europaea-5a67b8eb9d7b.jpg",
+    "species-photo-sambucus_nigra.jpg": "./assets/species-photo-sambucus_nigra-c5741bf8b545.jpg",
+    "species-photo-scardinius_erythrophthalmus.jpg": "./assets/species-photo-scardinius_erythrophthalmus-72bf6221e29c.jpg",
+    "species-photo-sciurus_vulgaris.jpg": "./assets/species-photo-sciurus_vulgaris-4dc3b6e278b1.jpg",
+    "species-photo-scrobicularia_plana.jpg": "./assets/species-photo-scrobicularia_plana-4539d14549b2.jpg",
+    "species-photo-sitta_europaea.jpg": "./assets/species-photo-sitta_europaea-f007a4d8c13a.jpg",
+    "species-photo-somateria_mollissima.jpg": "./assets/species-photo-somateria_mollissima-3302d0e478ec.jpg",
+    "species-photo-sorex_araneus.jpg": "./assets/species-photo-sorex_araneus-7a17e6b332c2.jpg",
+    "species-photo-spatula_clypeata.jpg": "./assets/species-photo-spatula_clypeata-8ab3383ad1fe.jpg",
+    "species-photo-sterna_hirundo.jpg": "./assets/species-photo-sterna_hirundo-cdac031850cc.jpg",
+    "species-photo-sternula_albifrons.jpg": "./assets/species-photo-sternula_albifrons-d415489018dd.jpg",
+    "species-photo-strix_aluco.jpg": "./assets/species-photo-strix_aluco-1bfe89120e26.jpg",
+    "species-photo-tadorna_tadorna.jpg": "./assets/species-photo-tadorna_tadorna-7558460dec6e.jpg",
+    "species-photo-talitrus_saltator.jpg": "./assets/species-photo-talitrus_saltator-a0a67644ac8e.jpg",
+    "species-photo-thalasseus_sandvicensis.jpg": "./assets/species-photo-thalasseus_sandvicensis-51127ff9cc19.jpg",
+    "species-photo-tinca_tinca.jpg": "./assets/species-photo-tinca_tinca-e517ae5bc335.jpg",
+    "species-photo-trifolium_pratense.jpg": "./assets/species-photo-trifolium_pratense-20ccd2518054.jpg",
+    "species-photo-tringa_erythropus.jpg": "./assets/species-photo-tringa_erythropus-f09747671b50.jpg",
+    "species-photo-tringa_nebularia.jpg": "./assets/species-photo-tringa_nebularia-156101aff223.jpg",
+    "species-photo-tringa_totanus.jpg": "./assets/species-photo-tringa_totanus-14921d027608.jpg",
+    "species-photo-tripleurospermum_maritimum.jpg": "./assets/species-photo-tripleurospermum_maritimum-6a09f9dd0e4b.jpg",
+    "species-photo-tripolium_pannonicum.jpg": "./assets/species-photo-tripolium_pannonicum-c1b029994bdb.jpg",
+    "species-photo-triticum_aestivum.jpg": "./assets/species-photo-triticum_aestivum-67ebb13adaac.jpg",
+    "species-photo-troglodytes_troglodytes.jpg": "./assets/species-photo-troglodytes_troglodytes-1748ee88afd5.jpg",
+    "species-photo-turdus_merula.jpg": "./assets/species-photo-turdus_merula-72dee908b76d.jpg",
+    "species-photo-typha_latifolia.jpg": "./assets/species-photo-typha_latifolia-d446ea4c992d.jpg",
+    "species-photo-urtica_dioica.jpg": "./assets/species-photo-urtica_dioica-330ce9698984.jpg",
+    "species-photo-vanellus_vanellus.jpg": "./assets/species-photo-vanellus_vanellus-bc9814d7a8d6.jpg",
+    "species-photo-zostera_marina.jpg": "./assets/species-photo-zostera_marina-be4ba7d6f7f8.jpg",
+    "species-photo-zostera_noltei.jpg": "./assets/species-photo-zostera_noltei-62c26f2d67ca.jpg",
+    "terrain-atlas.webp": "./assets/terrain-atlas-d637324d3ace.webp",
+    "wildlife-capreolus_capreolus.glb": "./assets/wildlife-capreolus_capreolus-0ba5af2375dd.glb",
+    "wildlife-fox.glb": "./assets/wildlife-fox-61a4d1b845aa.glb",
+    "wildlife-halichoerus_grypus.glb": "./assets/wildlife-halichoerus_grypus-76c7ab0d30f0.glb",
+    "wildlife-hare.glb": "./assets/wildlife-hare-e92d42f5354a.glb",
+    "wildlife-phoca_vitulina.glb": "./assets/wildlife-phoca_vitulina-3ae9d705d6fd.glb",
+    "wildlife-sciurus_vulgaris.glb": "./assets/wildlife-sciurus_vulgaris-cb7d2e813c22.glb",
+    "wildlife-surfaces.webp": "./assets/wildlife-surfaces-74ed976ed7c9.webp"
+  },
+  "files": {
+    "assets/bark-atlas-4d59ad54ba91.webp": {
+      "bytes": 2553864,
+      "sha256": "4d59ad54ba915782251a2d91b6f9479e72c04db1930be10231c527f5e7ebefde"
+    },
+    "assets/bark-diffuse-4213441aebcb.jpg": {
+      "bytes": 729893,
+      "sha256": "4213441aebcb72b9911f5a860e9ce74a61a8f6ce3b9c23d1f204173e7e7f6066"
+    },
+    "assets/bark-normal-9d1537b34295.jpg": {
+      "bytes": 1226534,
+      "sha256": "9d1537b3429579436a62890bb7c5050a0172a15ce768787eacde81c5ccefc9cc"
+    },
+    "assets/bird-blackbird-053419bb9971.mp3": {
+      "bytes": 594151,
+      "sha256": "053419bb9971ed654119c213164c55418aeade5d32536273c35652634bd9db9a"
+    },
+    "assets/bird-great-tit-7cb0443e36c5.mp3": {
+      "bytes": 74048,
+      "sha256": "7cb0443e36c5f9511110e6c9f3368f99b7a2fccbc426aa13f12f7f17d210f204"
+    },
+    "assets/bird-herring-gull-ae6efd68b136.mp3": {
+      "bytes": 595428,
+      "sha256": "ae6efd68b13693c81b875720af6783eea5281a6606d27c67673d420424d59fea"
+    },
+    "assets/boardwalk-wood-4d06022133e3.webp": {
+      "bytes": 2344144,
+      "sha256": "4d06022133e3772534374671fb73a4509ed109e1db6ca06a2d62a8c99c47ac6d"
+    },
+    "assets/botanical-atlas-71d73ef00371.webp": {
+      "bytes": 1400278,
+      "sha256": "71d73ef003717aa470f1c309d0e32195e159661066e1a6fa7fb7aac23ac121e2"
+    },
+    "assets/foliage-atlas-db9a9c6f7c9d.webp": {
+      "bytes": 1937648,
+      "sha256": "db9a9c6f7c9d03aed2f18453c544e072ff12f92a416075fae37e3161f3a2196b"
+    },
+    "assets/ground-diffuse-cfa40bc9d941.jpg": {
+      "bytes": 1195394,
+      "sha256": "cfa40bc9d9417d1852db8753a8d5917f110c40101179f63543c382e39bc05e4a"
+    },
+    "assets/ground-normal-832328216adc.jpg": {
+      "bytes": 1466049,
+      "sha256": "832328216adc0a7e1f70a31d5ee48c9ab7f2152d83816122736cf42ac4b2ebd6"
+    },
+    "assets/habitat-surfaces-a1078323034c.webp": {
+      "bytes": 2661512,
+      "sha256": "a1078323034c7257f2a26fbcd62e8ba2259866440a8b9c13d6d3a0046eec447e"
+    },
+    "assets/sky-panorama-46c360b491b1.webp": {
+      "bytes": 1089962,
+      "sha256": "46c360b491b11269d280e73ec0e71869afdfd62fb543b4250713234374a2f71d"
+    },
+    "assets/species-photo-accipiter_nisus-1438d5928f03.jpg": {
+      "bytes": 28566,
+      "sha256": "1438d5928f03c757e0158c63c4ffabb4eb94fc1b01feafe2c45582add3c93c41"
+    },
+    "assets/species-photo-achillea_millefolium-bc2ccfea2474.jpg": {
+      "bytes": 31205,
+      "sha256": "bc2ccfea2474f7b3974598a5b30baff3028fc43188dc80421df8985528506fae"
+    },
+    "assets/species-photo-aeshna_cyanea-cd56b1dff714.jpg": {
+      "bytes": 29795,
+      "sha256": "cd56b1dff714726c1df9b84ecaad5ea882e070d2dc2189a8602eabcefe5619d2"
+    },
+    "assets/species-photo-aglais_io-ebfa52d55a5f.jpg": {
+      "bytes": 36217,
+      "sha256": "ebfa52d55a5fdfc450d03650612e1381b85224f7f71b76db0ac2fb44e00c1f70"
+    },
+    "assets/species-photo-alauda_arvensis-f8ce8a23c252.jpg": {
+      "bytes": 57041,
+      "sha256": "f8ce8a23c2522e5dbab9fb48f1ddfe4a48e8f9adb7bf0017acc5aeca5b489fd6"
+    },
+    "assets/species-photo-alcedo_atthis-bf52ad0996e5.jpg": {
+      "bytes": 49139,
+      "sha256": "bf52ad0996e504f296370c857cf27418ee507e7f3076e905b5886b4e130c1799"
+    },
+    "assets/species-photo-alnus_glutinosa-3d255ce25782.jpg": {
+      "bytes": 57376,
+      "sha256": "3d255ce25782ab8c78e733d6b41a5314d79c17c2b621d0d7065e284bfb555b4a"
+    },
+    "assets/species-photo-ammophila_arenaria-ccc25453c84c.jpg": {
+      "bytes": 79293,
+      "sha256": "ccc25453c84ce883243624ee54584338f45d584f2a11cb27932e9c45736562f6"
+    },
+    "assets/species-photo-anas_acuta-d3c6b6e2ce07.jpg": {
+      "bytes": 54799,
+      "sha256": "d3c6b6e2ce076d5dbd8ac3901c1d434a0bed021b0f04f6c8a2323ad21842e1e4"
+    },
+    "assets/species-photo-anas_crecca-57f7a6f22583.jpg": {
+      "bytes": 56388,
+      "sha256": "57f7a6f2258339fd940d6080e7929ecea8fe1a4abbb82c2570aa502637da7d87"
+    },
+    "assets/species-photo-anas_platyrhynchos-c9816241ec5d.jpg": {
+      "bytes": 84591,
+      "sha256": "c9816241ec5dcf92f941b7ef362be632ed4082a20ca9746d6f0a9dd516a4f200"
+    },
+    "assets/species-photo-anemone_nemorosa-c31923d95268.jpg": {
+      "bytes": 56751,
+      "sha256": "c31923d95268aceaa5d13f8ff5089e17052236cb7c90a674dc66f7ea46a4f7a1"
+    },
+    "assets/species-photo-anodonta_anatina-9cc2344f83bc.jpg": {
+      "bytes": 48458,
+      "sha256": "9cc2344f83bc71c999365d60f01153ddaaea84ff2bd2b38c6c6f509579261c67"
+    },
+    "assets/species-photo-anser_anser-66646dd74490.jpg": {
+      "bytes": 64151,
+      "sha256": "66646dd7449066edf90cac6c416721e7c42a66fc241cab413b9022e9b7becfcf"
+    },
+    "assets/species-photo-anthus_pratensis-4344c197fb0c.jpg": {
+      "bytes": 35917,
+      "sha256": "4344c197fb0cc6f854f1f692c472734779aead0571502e9c2970cb8fd34f4d21"
+    },
+    "assets/species-photo-apis_mellifera-b1eea66ed8b1.jpg": {
+      "bytes": 45945,
+      "sha256": "b1eea66ed8b160de102f96d1f20e974350214eabb70d96137309a37ce042af72"
+    },
+    "assets/species-photo-apodemus_flavicollis-187dd0a45055.jpg": {
+      "bytes": 85095,
+      "sha256": "187dd0a450559646e7960767c124869897e7146fb2386293e0cef83760a6cc5f"
+    },
+    "assets/species-photo-apodemus_sylvaticus-022f6804907c.jpg": {
+      "bytes": 49755,
+      "sha256": "022f6804907cae25fd2b0ef9c2806127b82f9e93089cbd7d157357feeda57ebe"
+    },
+    "assets/species-photo-apus_apus-f3bfdf5fd664.jpg": {
+      "bytes": 23701,
+      "sha256": "f3bfdf5fd664218ac686fc12ecc64b7e9d9c92b55636d0b07b9cc74bc45056c8"
+    },
+    "assets/species-photo-ardea_cinerea-b1406143389f.jpg": {
+      "bytes": 93083,
+      "sha256": "b1406143389f9abb7795fcc05ab9917383df5133c5da1b53c146e3c4ffd08a62"
+    },
+    "assets/species-photo-arenaria_interpres-26d55a2973ae.jpg": {
+      "bytes": 37547,
+      "sha256": "26d55a2973ae5a33f1723587f8cce90f64e98332da5d502da431bbb46f92d3e8"
+    },
+    "assets/species-photo-arenicola_marina-f844cc6db1a1.jpg": {
+      "bytes": 28245,
+      "sha256": "f844cc6db1a1f4110dc22aebb9a7f618db9c987318919a991e52d8c28f5716e6"
+    },
+    "assets/species-photo-argulus_foliaceus-d82a9b33f217.jpg": {
+      "bytes": 16300,
+      "sha256": "d82a9b33f2172b607e1ed7e0d236e359ea48a611a255c9e40092572a2347bd7e"
+    },
+    "assets/species-photo-armeria_maritima-64932a9147da.jpg": {
+      "bytes": 45815,
+      "sha256": "64932a9147da75450a723d5fc1ac437848350c64e663d1019828ab71449a1701"
+    },
+    "assets/species-photo-artemisia_maritima-35fcf284ef50.jpg": {
+      "bytes": 83821,
+      "sha256": "35fcf284ef50660186f892f5380a45404db76e80d8ee549d3c76205ea967b2a5"
+    },
+    "assets/species-photo-arvicola_amphibius-1435bcc49db5.jpg": {
+      "bytes": 65134,
+      "sha256": "1435bcc49db5f37f2cc21b6c05d6479e8ef02579981cec3d54d58c0280b74602"
+    },
+    "assets/species-photo-asellus_aquaticus-54d1289e32b0.jpg": {
+      "bytes": 47907,
+      "sha256": "54d1289e32b0558196962961b593d90968159f6c399c05eb5a2959cc1eb9556d"
+    },
+    "assets/species-photo-atriplex_portulacoides-278412544736.jpg": {
+      "bytes": 88452,
+      "sha256": "278412544736b2389cb498f33c611ea7a6072740fc1644d5cc30970594de0e38"
+    },
+    "assets/species-photo-betula_pendula-f5795b7048aa.jpg": {
+      "bytes": 109322,
+      "sha256": "f5795b7048aa18b91d565c4a572f6e385984319f934bc8b226c38f2471e0e88e"
+    },
+    "assets/species-photo-bombus_lapidarius-4cd5bba6ec83.jpg": {
+      "bytes": 36188,
+      "sha256": "4cd5bba6ec83c37039597c6c1375de4fa295dffc906efbd14dae4d925be0b434"
+    },
+    "assets/species-photo-bombus_terrestris-165035a71ba9.jpg": {
+      "bytes": 34539,
+      "sha256": "165035a71ba9b0aecd12ebc48fe82805a34b3da5e1f534c7867c15070403fd4b"
+    },
+    "assets/species-photo-branta_bernicla-f8c7cee483b2.jpg": {
+      "bytes": 32849,
+      "sha256": "f8c7cee483b2843d5b7465f806cb2c9ab50a051d3ca22f60c10676db93c94c88"
+    },
+    "assets/species-photo-branta_leucopsis-316d27a14e70.jpg": {
+      "bytes": 41321,
+      "sha256": "316d27a14e705a7afae066c047b888e9ca972fee0a0532115f24bbe6a0d3667d"
+    },
+    "assets/species-photo-buteo_buteo-9d0911b535db.jpg": {
+      "bytes": 37043,
+      "sha256": "9d0911b535dbf18f6662397e7b94b96630aaa0bf97b077c190410507d8822169"
+    },
+    "assets/species-photo-cakile_maritima-30f4d756386e.jpg": {
+      "bytes": 94857,
+      "sha256": "30f4d756386e55ea17a2e7b392aaa47103a64ecb6db27b478faf4df8a3297224"
+    },
+    "assets/species-photo-calidris_alba-66e0d2352cbd.jpg": {
+      "bytes": 28405,
+      "sha256": "66e0d2352cbd09b546f3b6027bea44fd0f51e6dc0fd235c0feb4440988f5c9d0"
+    },
+    "assets/species-photo-calidris_alpina-b7fea4358339.jpg": {
+      "bytes": 25510,
+      "sha256": "b7fea4358339ec135753a9916d69bfcf1e5769b76b909c9c79268538e3ebd07e"
+    },
+    "assets/species-photo-calidris_canutus-aa69f420bedf.jpg": {
+      "bytes": 40120,
+      "sha256": "aa69f420bedf27bd98b8a348089494e70caac7a6441f2ac22995b27a08f05bdb"
+    },
+    "assets/species-photo-calidris_ferruginea-bf270f6a399f.jpg": {
+      "bytes": 50373,
+      "sha256": "bf270f6a399ffe07c550bc41f74407dfb9e82c90d09d53c0747266da4127c4d9"
+    },
+    "assets/species-photo-capreolus_capreolus-f58d338aee84.jpg": {
+      "bytes": 99435,
+      "sha256": "f58d338aee84cd5ac69bacab4221d645d0313623644f92c30534dd7bd4a703a4"
+    },
+    "assets/species-photo-carcinus_maenas-a37280e732c1.jpg": {
+      "bytes": 29546,
+      "sha256": "a37280e732c168f7f0c8e3c2d2c4ab63afbf03ea4022dba5031275ebbcae5690"
+    },
+    "assets/species-photo-centaurea_cyanus-2ce072b75953.jpg": {
+      "bytes": 37583,
+      "sha256": "2ce072b759534e04b02d0513b3389a5fde1273e35509fb0e642b464762b69e0f"
+    },
+    "assets/species-photo-cerastoderma_edule-3c20ee89fedb.jpg": {
+      "bytes": 33572,
+      "sha256": "3c20ee89fedbe4c86383cdd7b0fbddd75347f5a4e98d196c716a1a6ddb066206"
+    },
+    "assets/species-photo-ceratophyllum_demersum-2d536bcc08e8.jpg": {
+      "bytes": 40665,
+      "sha256": "2d536bcc08e8f32506894d4ef5b2c605455c51ddd62f3bcfa19326f73d1ebb13"
+    },
+    "assets/species-photo-charadrius_alexandrinus-7aa0abee5ff7.jpg": {
+      "bytes": 31779,
+      "sha256": "7aa0abee5ff7ddd8e562745e551979ad1383a52ad893b06c6272c04fd2e559eb"
+    },
+    "assets/species-photo-charadrius_hiaticula-3a8b5affc85b.jpg": {
+      "bytes": 46523,
+      "sha256": "3a8b5affc85ba7cdf134614fbfef04d8c4c3bc91d3909f110c5c74702d465cb8"
+    },
+    "assets/species-photo-chroicocephalus_ridibundus-c5dbae5aa744.jpg": {
+      "bytes": 32181,
+      "sha256": "c5dbae5aa74429ae2ad53e26b4ca2d4d1ef17d63bfd9f5ea2fc789bd6b08531f"
+    },
+    "assets/species-photo-ciconia_ciconia-cae236451a57.jpg": {
+      "bytes": 68642,
+      "sha256": "cae236451a5724d30b426c6e48142db204f5fb8ae8194c24f61051d327004602"
+    },
+    "assets/species-photo-clupea_harengus-79d061fdbf0e.jpg": {
+      "bytes": 55287,
+      "sha256": "79d061fdbf0eede15199cd3b9659115cbb182d88a93da1e55332e4a21ed011a7"
+    },
+    "assets/species-photo-coccinella_septempunctata-af2151ef0400.jpg": {
+      "bytes": 39152,
+      "sha256": "af2151ef040037ac12690ddf5e76e1e5de01e2daec067bbf682dfe011058b5d5"
+    },
+    "assets/species-photo-columba_palumbus-a3d914a3da33.jpg": {
+      "bytes": 67237,
+      "sha256": "a3d914a3da335d263f1ebb47271a9d624976f7166a708c6c159d415f76e85f13"
+    },
+    "assets/species-photo-corylus_avellana-cbbb0c29115a.jpg": {
+      "bytes": 40346,
+      "sha256": "cbbb0c29115ad21935c168fd9796b41ce94c4ad3cb81f2ce016ae8494b20a02f"
+    },
+    "assets/species-photo-crangon_crangon-dbc82c5232ba.jpg": {
+      "bytes": 78911,
+      "sha256": "dbc82c5232ba1bb2950e176cf456c1fb1accc366ba2204315926553ff75f97af"
+    },
+    "assets/species-photo-crataegus_monogyna-2979f0d9277d.jpg": {
+      "bytes": 65201,
+      "sha256": "2979f0d9277d17b6fea0f2a8718bddf66ad764cb9334cb3d7480bcece9329d05"
+    },
+    "assets/species-photo-crocidura_russula-5c575c9982b0.jpg": {
+      "bytes": 52623,
+      "sha256": "5c575c9982b0c4f43eb57d50e4f7d91cbcd6a2057c7a8dc83e5052b09b716ade"
+    },
+    "assets/species-photo-cyanistes_caeruleus-7b0cbf074922.jpg": {
+      "bytes": 29122,
+      "sha256": "7b0cbf074922f80459cc68c5c0075fc0ab38784aa9d11636ee6954d60474155f"
+    },
+    "assets/species-photo-cygnus_olor-a88b41f7cdd3.jpg": {
+      "bytes": 39763,
+      "sha256": "a88b41f7cdd362885dcc4d001f9025d519acb37b4615cfe61bce0dc1219bdd48"
+    },
+    "assets/species-photo-dactylis_glomerata-d29022b52895.jpg": {
+      "bytes": 104571,
+      "sha256": "d29022b528956df7d37bd4dd08585bd82cdbe1c9bf9c5b4002c0380f25f1487f"
+    },
+    "assets/species-photo-dendrocopos_major-1a55ccb1e545.jpg": {
+      "bytes": 36297,
+      "sha256": "1a55ccb1e5458301e177847a2a6a494e5ed3a3771eec1e0f961af5d582ac0a49"
+    },
+    "assets/species-photo-dryopteris_filix_mas-608f425c76ee.jpg": {
+      "bytes": 55282,
+      "sha256": "608f425c76ee9879ce276de3e4fd1edddb7c3e18d36cb79b6e36347194d66333"
+    },
+    "assets/species-photo-elymus_athericus-2037522c9183.jpg": {
+      "bytes": 23705,
+      "sha256": "2037522c918343da9d06622fb6025f68151beff96e1de26ae99bf3df48b0dd2a"
+    },
+    "assets/species-photo-erinaceus_europaeus-562d70c16b02.jpg": {
+      "bytes": 87346,
+      "sha256": "562d70c16b028fe4fb7a9ee4f1d02ecc1b5734d117268b2c9e7a5cef60d757d3"
+    },
+    "assets/species-photo-erithacus_rubecula-460c5a716961.jpg": {
+      "bytes": 33175,
+      "sha256": "460c5a716961b5d24f467291d8c3b6390fa95430cbbcf9e790e6a00ab2ba2734"
+    },
+    "assets/species-photo-esox_lucius-820416f49f27.jpg": {
+      "bytes": 64991,
+      "sha256": "820416f49f273c2fa2d45901a886edd2454e6e5f227eb3384ef1295a9e5bbf52"
+    },
+    "assets/species-photo-fagus_sylvatica-2a345237a8e8.jpg": {
+      "bytes": 100105,
+      "sha256": "2a345237a8e81cbd708d5c6e74ddc9192105b20c55c0cac4e7126c2e2418373e"
+    },
+    "assets/species-photo-falco_tinnunculus-4567dd74a6a9.jpg": {
+      "bytes": 20663,
+      "sha256": "4567dd74a6a974e0c171a479f5d761d4b279695dcf6e042c0c20251f97a2aeea"
+    },
+    "assets/species-photo-festuca_rubra-4e56f756ddf8.jpg": {
+      "bytes": 31382,
+      "sha256": "4e56f756ddf8662bd448f40cda2c2ab6a888afd8744df8a8f7380e09768e2ad7"
+    },
+    "assets/species-photo-fomes_fomentarius-39885a0b664c.jpg": {
+      "bytes": 82798,
+      "sha256": "39885a0b664c9c10fa5a3b5830143fa376d1dddc6eaba8b56597c25472235f37"
+    },
+    "assets/species-photo-fox-d8d182fba99b.jpg": {
+      "bytes": 41412,
+      "sha256": "d8d182fba99b18488cd3db3e47a094aef6bbb6085354163d32cdcb9f33c3d1ad"
+    },
+    "assets/species-photo-fraxinus_excelsior-ad0daf33432f.jpg": {
+      "bytes": 71329,
+      "sha256": "ad0daf33432f1f4c4f8ec566230d68348cd94b035e0dc45b67e89c6938bdcd1f"
+    },
+    "assets/species-photo-fringilla_coelebs-a822d2fe6e99.jpg": {
+      "bytes": 40195,
+      "sha256": "a822d2fe6e995765fcc74a109ca92a7c34d6b5e8f461236be5acf697e97186d0"
+    },
+    "assets/species-photo-fulica_atra-a2d76ca105ad.jpg": {
+      "bytes": 28229,
+      "sha256": "a2d76ca105ad704f3840b68cf6de106b83d82d536e6a10c1ac29d677c0b8f9ef"
+    },
+    "assets/species-photo-galium_odoratum-e6fc4065efa4.jpg": {
+      "bytes": 76809,
+      "sha256": "e6fc4065efa478986efcfd19ff9a95f87c6cc6585f71cf959a00c9df63b8052e"
+    },
+    "assets/species-photo-garrulus_glandarius-5433fbf6b9ab.jpg": {
+      "bytes": 25798,
+      "sha256": "5433fbf6b9abe65199e88575e0400426d141ae574251e7397c294d813aefc670"
+    },
+    "assets/species-photo-gasterosteus_aculeatus-d5f8f8edcd97.jpg": {
+      "bytes": 45322,
+      "sha256": "d5f8f8edcd97c0b43a3cc2c56cde8295b42d9a494241b87538c1e7680783f39d"
+    },
+    "assets/species-photo-haematopus_ostralegus-776a9823eded.jpg": {
+      "bytes": 30825,
+      "sha256": "776a9823eded5c9c6150197649577a6affc76d73afbd3fa9a3128427b5de9b6c"
+    },
+    "assets/species-photo-halichoerus_grypus-fb9af76569b5.jpg": {
+      "bytes": 38640,
+      "sha256": "fb9af76569b5fcf69dcc6b1408c0fc09ccfed287758fa6be52574fb60e6cee26"
+    },
+    "assets/species-photo-hare-f694e4993bdb.jpg": {
+      "bytes": 69154,
+      "sha256": "f694e4993bdb3f564b34af7fc01fc8c7f15532347cacbcc80fb05f8f32724bb7"
+    },
+    "assets/species-photo-hediste_diversicolor-8577345649d3.jpg": {
+      "bytes": 88364,
+      "sha256": "8577345649d3f613f02343b28c4bf98bc7d7135f1b59bd6593225dc2ab25477c"
+    },
+    "assets/species-photo-hippophae_rhamnoides-08a702f62d9a.jpg": {
+      "bytes": 83862,
+      "sha256": "08a702f62d9a2e34a09bf73caadde32bb7673d479254210745f0abc2fcb739f6"
+    },
+    "assets/species-photo-hirundo_rustica-e1fba40fa12a.jpg": {
+      "bytes": 40289,
+      "sha256": "e1fba40fa12af766b67f93e3e935d9c824049c21c9f165ba5476563d927a8f9e"
+    },
+    "assets/species-photo-ixodes_ricinus-31053b624f48.jpg": {
+      "bytes": 53687,
+      "sha256": "31053b624f481f7a8cf74daa5dfb74e1fb7291cd57d682b6488ae83a4be9cec0"
+    },
+    "assets/species-photo-juncus_gerardii-aefd8d436d7f.jpg": {
+      "bytes": 23979,
+      "sha256": "aefd8d436d7f723b8217d9821e527735b10a7eab6b37d14b69a7808739cf071c"
+    },
+    "assets/species-photo-larus_argentatus-11c55e764de4.jpg": {
+      "bytes": 31930,
+      "sha256": "11c55e764de43d754dede0ed06e45485e5197a91493ef5cc5e43590de8caeaf8"
+    },
+    "assets/species-photo-larus_canus-68990677c718.jpg": {
+      "bytes": 23009,
+      "sha256": "68990677c7187334b6c894a782d9f7bb9c098c07026e44992c9833ee9c6e8077"
+    },
+    "assets/species-photo-larus_fuscus-7e892e4b2d22.jpg": {
+      "bytes": 62685,
+      "sha256": "7e892e4b2d2258c557c6a71e7bad4391742a9d67100ccad32558e02ddc0a814e"
+    },
+    "assets/species-photo-lepeophtheirus_pectoralis-c48e7b772f9b.jpg": {
+      "bytes": 13609,
+      "sha256": "c48e7b772f9b79c8c6e48c9f99d81723c7272b14b5aa259c4d46f7503d09418b"
+    },
+    "assets/species-photo-leucanthemum_vulgare-a829fba071d9.jpg": {
+      "bytes": 42773,
+      "sha256": "a829fba071d9439e95f725175f76faf628df476a8f23073d87a28882963fcc1e"
+    },
+    "assets/species-photo-limecola_balthica-88cd2cebc2d8.jpg": {
+      "bytes": 13938,
+      "sha256": "88cd2cebc2d8d0eacb38ef46cc454c93e0b19d962d877ef72035b198e6e8ae07"
+    },
+    "assets/species-photo-limonium_vulgare-c8042b5e251f.jpg": {
+      "bytes": 79977,
+      "sha256": "c8042b5e251fc4bfa59f879db689fe34dc4793523dcbc8d60f78fe54cc3528ee"
+    },
+    "assets/species-photo-limosa_lapponica-6e2d80914ecf.jpg": {
+      "bytes": 43764,
+      "sha256": "6e2d80914ecf1b0bda9eb98a0fd4dbf7c110b9ea97d135954c1233c5573e421b"
+    },
+    "assets/species-photo-limosa_limosa-46167cf3c39e.jpg": {
+      "bytes": 30601,
+      "sha256": "46167cf3c39e62dff5245b26b51aa6bb1aba27ad68388de888383c8a121d22f7"
+    },
+    "assets/species-photo-lissotriton_vulgaris-419ea2e7b1ac.jpg": {
+      "bytes": 68274,
+      "sha256": "419ea2e7b1acc133c6d7b05ae5f963aae1dad93c8fa041003fb3a6d88a1fe3cb"
+    },
+    "assets/species-photo-littorina_littorea-e1a5a0db6124.jpg": {
+      "bytes": 75671,
+      "sha256": "e1a5a0db61244c3e970e0c9afe02845d51e9c4f954a69e095ef5e1a6862ce31f"
+    },
+    "assets/species-photo-lumbricus_terrestris-b0ac28ce2412.jpg": {
+      "bytes": 96565,
+      "sha256": "b0ac28ce2412cbf8599b8f41963acf3b1986aa4995b7191bfb8f9932dc27dd13"
+    },
+    "assets/species-photo-lythrum_salicaria-b0c74334c56c.jpg": {
+      "bytes": 25335,
+      "sha256": "b0c74334c56c4dd020c32d3f1366b291dc2cc617697cb045657278f5ef14e5be"
+    },
+    "assets/species-photo-mareca_penelope-a926e535e912.jpg": {
+      "bytes": 39467,
+      "sha256": "a926e535e9123f27367bd811a6590bd64c9bd9a910689830f6d241858412b15c"
+    },
+    "assets/species-photo-micromys_minutus-0037d8f62db0.jpg": {
+      "bytes": 37684,
+      "sha256": "0037d8f62db054c4786fe02d7d5a46d1a4d6ebd67efa8f4033bfb4b918d0a1c4"
+    },
+    "assets/species-photo-microtus_agrestis-0f4fcc326154.jpg": {
+      "bytes": 43275,
+      "sha256": "0f4fcc3261548fd378bb2ba9fa72ea185eb42858569fa72c5904305bb7b40000"
+    },
+    "assets/species-photo-microtus_arvalis-3366e21e71a7.jpg": {
+      "bytes": 86875,
+      "sha256": "3366e21e71a73eaeb01a77fe1a80e74aa7a9145e4ae22287df7ec3a79925a9e6"
+    },
+    "assets/species-photo-motacilla_flava-31929f555e65.jpg": {
+      "bytes": 23424,
+      "sha256": "31929f555e65f9eddcf3ca66521a1e52f1fdfe78996d6dace669037cd1b8f823"
+    },
+    "assets/species-photo-mus_musculus-fb8ff23b4ae6.jpg": {
+      "bytes": 9500,
+      "sha256": "fb8ff23b4ae6ee7fa5232cddffa66743c962ce268ef3c973c250dc5f7f84dea3"
+    },
+    "assets/species-photo-mya_arenaria-24bea12d687d.jpg": {
+      "bytes": 12953,
+      "sha256": "24bea12d687dc72f83693ce5ac7a831be736bf93259faa1e3ccbc531cba161a5"
+    },
+    "assets/species-photo-myodes_glareolus-c9258d59fbb1.jpg": {
+      "bytes": 61216,
+      "sha256": "c9258d59fbb1dd313f40d2338aea618d676e2e983108a71932076234b05a24dc"
+    },
+    "assets/species-photo-mytilus_edulis-952a2311adbc.jpg": {
+      "bytes": 30087,
+      "sha256": "952a2311adbcd0416ebc4a89a4ad7c4903ba948ee73e08ac5c98f6a091c12ae3"
+    },
+    "assets/species-photo-nephtys_hombergii-d32cd2184c73.jpg": {
+      "bytes": 107102,
+      "sha256": "d32cd2184c73444ac179a9f7cff1204863444acc1995bf51ef88e171ceeeec0f"
+    },
+    "assets/species-photo-numenius_arquata-efc55e6d709e.jpg": {
+      "bytes": 86418,
+      "sha256": "efc55e6d709e572bc9c9920525039ee2cda6ab6f966f73cef5de7dd30e089aa1"
+    },
+    "assets/species-photo-numenius_phaeopus-24e2a844d9ef.jpg": {
+      "bytes": 45500,
+      "sha256": "24e2a844d9ef236d2546cebd31e6931b249d51d243ef0586e59129560c84da45"
+    },
+    "assets/species-photo-nymphaea_alba-b944a179105e.jpg": {
+      "bytes": 58445,
+      "sha256": "b944a179105e5ea0c71227f42024fcd6084b62be56e7e8e5d10a830930bd4810"
+    },
+    "assets/species-photo-orchestia_gammarellus-7f9e8e5b9f59.jpg": {
+      "bytes": 99403,
+      "sha256": "7f9e8e5b9f59c2cad9867b56e65e65cc22b87462f4b9b8149a495dfa325a36d7"
+    },
+    "assets/species-photo-oryctolagus_cuniculus-ba2785949fcd.jpg": {
+      "bytes": 70357,
+      "sha256": "ba2785949fcdc4559f61fdaba35c1c705dcb0993c4515e75785f35f2e490d560"
+    },
+    "assets/species-photo-papaver_rhoeas-8a9063130e53.jpg": {
+      "bytes": 75262,
+      "sha256": "8a9063130e5399692cd26568d1f249941be8f1f67ac86c92775ad2c04238a206"
+    },
+    "assets/species-photo-parus_major-e0a8ad3df6fc.jpg": {
+      "bytes": 30617,
+      "sha256": "e0a8ad3df6fcffd2dfd0fb711f6bd4386ed200892585479a11df23c631f1ee17"
+    },
+    "assets/species-photo-passer_domesticus-11b68f316295.jpg": {
+      "bytes": 29775,
+      "sha256": "11b68f3162952891fca443b413aa96e9e5513b105ceb8d1fcd74339bc62e10a9"
+    },
+    "assets/species-photo-perca_fluviatilis-3e95e866f958.jpg": {
+      "bytes": 58920,
+      "sha256": "3e95e866f95861bc9a30f95a6e4090b989020e2676b1a7fd5eecd1f01f0325fb"
+    },
+    "assets/species-photo-peringia_ulvae-5bd253be19ac.jpg": {
+      "bytes": 36973,
+      "sha256": "5bd253be19ac2b67debff23f1b815f3852ff1d787580026bfb0d37436a71fa0e"
+    },
+    "assets/species-photo-phalacrocorax_carbo-244fb514beb1.jpg": {
+      "bytes": 53217,
+      "sha256": "244fb514beb1598b3c2e7be14f81d9e36e0ff80111e2037c9e6b750cd9856abf"
+    },
+    "assets/species-photo-phoca_vitulina-9de58994cf38.jpg": {
+      "bytes": 46719,
+      "sha256": "9de58994cf389b48ec8d9b6856457b1528be12b70b0b0bc908c6980217406f48"
+    },
+    "assets/species-photo-phragmites_australis-a6672f784769.jpg": {
+      "bytes": 79461,
+      "sha256": "a6672f784769bfa9a2ce28f45106632ca4b4bc5543cdbe5168c985ff4051c037"
+    },
+    "assets/species-photo-pica_pica-6a1cb8457d54.jpg": {
+      "bytes": 33876,
+      "sha256": "6a1cb8457d541aed018eb0d19a92b98954bb9b3eb6792075f7a193d46d57ef66"
+    },
+    "assets/species-photo-pinus_sylvestris-c9f02ac7f111.jpg": {
+      "bytes": 62080,
+      "sha256": "c9f02ac7f11100af8144b84edd9766bdc824c3b82bf64ee737bd109c9dc1d78d"
+    },
+    "assets/species-photo-plantago_lanceolata-46b177688d0e.jpg": {
+      "bytes": 77561,
+      "sha256": "46b177688d0e411fa3c73b65208311bc40fed1d94cc443d5bfd30ce6d25983fd"
+    },
+    "assets/species-photo-plantago_maritima-f36b9507d3a4.jpg": {
+      "bytes": 105680,
+      "sha256": "f36b9507d3a431ce28312a79a7b5d710405d672c7aa5765d51739ac20b9bbe93"
+    },
+    "assets/species-photo-platalea_leucorodia-c269ce0ff8d4.jpg": {
+      "bytes": 34712,
+      "sha256": "c269ce0ff8d4250767a3c9e218ddeb4da1b733d942dfbede32a10e8ef1eb82f3"
+    },
+    "assets/species-photo-pleuronectes_platessa-6ddebd6f4044.jpg": {
+      "bytes": 27152,
+      "sha256": "6ddebd6f40442177871ffc31f6c5b973bd5cb29017dd1da0a4fff72233ca9492"
+    },
+    "assets/species-photo-pluvialis_apricaria-818ed9eb5dfb.jpg": {
+      "bytes": 56770,
+      "sha256": "818ed9eb5dfb946a4cf24b7b3d6af58aa6768ef7b484892a58c2734d30d482d4"
+    },
+    "assets/species-photo-pluvialis_squatarola-0638bcf5e8c6.jpg": {
+      "bytes": 27321,
+      "sha256": "0638bcf5e8c6f9f0d4fa1c0bc380149dd441e8fa11afda843f382e977676e79f"
+    },
+    "assets/species-photo-poa_pratensis-704526531185.jpg": {
+      "bytes": 57963,
+      "sha256": "7045265311853bdccd5b8f841fba9201290dd3a9d88f917a44ce582353ee8b77"
+    },
+    "assets/species-photo-polytrichum_commune-73a2d7732377.jpg": {
+      "bytes": 77858,
+      "sha256": "73a2d7732377d08317c7cd79550a4e9e3dc285d47eced2c50627c68cabfc1ce6"
+    },
+    "assets/species-photo-prunus_spinosa-764c79b80298.jpg": {
+      "bytes": 62326,
+      "sha256": "764c79b802984eda85754327926fde7ad28c941a3db57ac8f89920baebad5f5f"
+    },
+    "assets/species-photo-puccinellia_maritima-eb2f50965244.jpg": {
+      "bytes": 49512,
+      "sha256": "eb2f509652448f58fe7e150949032095c60feded8e1350ac259361c8c4e521fb"
+    },
+    "assets/species-photo-quercus_petraea-f9df552954a6.jpg": {
+      "bytes": 91497,
+      "sha256": "f9df552954a600d304be31ecd373f14fc1a9440b5c9cc6de5ee47b34b5528622"
+    },
+    "assets/species-photo-quercus_robur-1526b6dc2f9a.jpg": {
+      "bytes": 35918,
+      "sha256": "1526b6dc2f9a6a89aaa27613cc0a2bcd319e527083ff8c7b613bf9b3cdb92951"
+    },
+    "assets/species-photo-rana_temporaria-c3ee55da431b.jpg": {
+      "bytes": 54996,
+      "sha256": "c3ee55da431b2884877e633558036f3282e1ca2b9c818a8760aba16bbbb8ba94"
+    },
+    "assets/species-photo-recurvirostra_avosetta-6914ad548a6b.jpg": {
+      "bytes": 41324,
+      "sha256": "6914ad548a6bbeeb97c83418c2da028ddf1a19ffd0d266f96754a616be5cbb26"
+    },
+    "assets/species-photo-retusa_obtusa-89bf3d1b6cd7.jpg": {
+      "bytes": 29749,
+      "sha256": "89bf3d1b6cd7a1b7cea8a2f588ee38523d73aa70a2d520d8ffa4ba589e97ac47"
+    },
+    "assets/species-photo-rosa_canina-c710b785768f.jpg": {
+      "bytes": 41384,
+      "sha256": "c710b785768f34889516e13708877a7a46be47c862656378ffaa89200203e873"
+    },
+    "assets/species-photo-rutilus_rutilus-53d1dcb4fb11.jpg": {
+      "bytes": 63086,
+      "sha256": "53d1dcb4fb118d21700a31988ae2ca0596fca28e38e1515b6ad2649da5522aa0"
+    },
+    "assets/species-photo-salicornia_europaea-5a67b8eb9d7b.jpg": {
+      "bytes": 50014,
+      "sha256": "5a67b8eb9d7b5fef5c8899f9409f01f08be86eaca16f4df16db60af3afdc2b10"
+    },
+    "assets/species-photo-sambucus_nigra-c5741bf8b545.jpg": {
+      "bytes": 89266,
+      "sha256": "c5741bf8b54566e0a6124dac96a2ed740f290471f51f9ff956da418c9cf1f93d"
+    },
+    "assets/species-photo-scardinius_erythrophthalmus-72bf6221e29c.jpg": {
+      "bytes": 26258,
+      "sha256": "72bf6221e29c03e2fa4eb49afabe06453cd14b8e425a95bafcfc233aa9ab99ec"
+    },
+    "assets/species-photo-sciurus_vulgaris-4dc3b6e278b1.jpg": {
+      "bytes": 54111,
+      "sha256": "4dc3b6e278b1e1a2d0542f300cb32b2b078cedb067162d631f2dbfc482823d76"
+    },
+    "assets/species-photo-scrobicularia_plana-4539d14549b2.jpg": {
+      "bytes": 40552,
+      "sha256": "4539d14549b2c4f78b6194f9b84bbf7d71221e04bed36373f3dfef03337677ea"
+    },
+    "assets/species-photo-sitta_europaea-f007a4d8c13a.jpg": {
+      "bytes": 25529,
+      "sha256": "f007a4d8c13ad34f8a2f16321a615bbf5e63f449022f532d26417fb0e03aa205"
+    },
+    "assets/species-photo-somateria_mollissima-3302d0e478ec.jpg": {
+      "bytes": 26732,
+      "sha256": "3302d0e478ec5c0191b8cfb55109096fbfd1616df708ed8a16ee42969604ad62"
+    },
+    "assets/species-photo-sorex_araneus-7a17e6b332c2.jpg": {
+      "bytes": 85822,
+      "sha256": "7a17e6b332c24fd67a126534d5b1d3d7de7951831b4134b7d1f95af21c2c1fce"
+    },
+    "assets/species-photo-spatula_clypeata-8ab3383ad1fe.jpg": {
+      "bytes": 43252,
+      "sha256": "8ab3383ad1fe9d7af3ded22b71b4bfc111f3e677307962449c34a74b0301d2cc"
+    },
+    "assets/species-photo-sterna_hirundo-cdac031850cc.jpg": {
+      "bytes": 48725,
+      "sha256": "cdac031850cc5d54c32fa0831cc0c0b3925dec1562df78cae56eee5486a17484"
+    },
+    "assets/species-photo-sternula_albifrons-d415489018dd.jpg": {
+      "bytes": 39530,
+      "sha256": "d415489018dd1e1ddbce05508f76767798fc07d1cbf3680cd0a4c635dbfcfc6b"
+    },
+    "assets/species-photo-strix_aluco-1bfe89120e26.jpg": {
+      "bytes": 30497,
+      "sha256": "1bfe89120e26a76cf984b6ff7ae922f753be22b6b756ecd932ca31f101c29031"
+    },
+    "assets/species-photo-tadorna_tadorna-7558460dec6e.jpg": {
+      "bytes": 44767,
+      "sha256": "7558460dec6ef0ffba2576db05eeb91b303519933b35a25a77bc0733af3875a0"
+    },
+    "assets/species-photo-talitrus_saltator-a0a67644ac8e.jpg": {
+      "bytes": 60366,
+      "sha256": "a0a67644ac8ee224cca748e71ec2494114d4a4c9b62c9f32da8dbcf7029bbe9b"
+    },
+    "assets/species-photo-thalasseus_sandvicensis-51127ff9cc19.jpg": {
+      "bytes": 44219,
+      "sha256": "51127ff9cc197f8b6c514347cd7980269f2357cffe2419089bc4741ea66a78b8"
+    },
+    "assets/species-photo-tinca_tinca-e517ae5bc335.jpg": {
+      "bytes": 40909,
+      "sha256": "e517ae5bc335a485ee765678fc24179d2204b84c7b5ca91bdf40d11d79815a6e"
+    },
+    "assets/species-photo-trifolium_pratense-20ccd2518054.jpg": {
+      "bytes": 23245,
+      "sha256": "20ccd2518054138d995e694de60357924a5f637619ba858bf5963acbc7789d09"
+    },
+    "assets/species-photo-tringa_erythropus-f09747671b50.jpg": {
+      "bytes": 46556,
+      "sha256": "f09747671b505b5d0e1c1fc3a3e06c3730dda492ebfe7b9ab477b9a25f32d966"
+    },
+    "assets/species-photo-tringa_nebularia-156101aff223.jpg": {
+      "bytes": 54615,
+      "sha256": "156101aff223c50e870a25e750af124809530bdb9fb742f43c315a02e33d8589"
+    },
+    "assets/species-photo-tringa_totanus-14921d027608.jpg": {
+      "bytes": 64046,
+      "sha256": "14921d027608c6702b6fcebc09405067d146f021a93acc2ad9c898a97f69641b"
+    },
+    "assets/species-photo-tripleurospermum_maritimum-6a09f9dd0e4b.jpg": {
+      "bytes": 91031,
+      "sha256": "6a09f9dd0e4be4b5927ae8ea561b41426515ae7696056ae09ec2323a38bcc3f7"
+    },
+    "assets/species-photo-tripolium_pannonicum-c1b029994bdb.jpg": {
+      "bytes": 67181,
+      "sha256": "c1b029994bdbf018fe5c9d6c84127f61ed41437784ed4079bb5b0494c681c64b"
+    },
+    "assets/species-photo-triticum_aestivum-67ebb13adaac.jpg": {
+      "bytes": 55198,
+      "sha256": "67ebb13adaaca61ef92403cea0e88fecb94234facf1780bdfc5aeea910362bc7"
+    },
+    "assets/species-photo-troglodytes_troglodytes-1748ee88afd5.jpg": {
+      "bytes": 33144,
+      "sha256": "1748ee88afd51767ee82cc4bf0e6c8376db905eb20ff2a7a32953534ed2ad232"
+    },
+    "assets/species-photo-turdus_merula-72dee908b76d.jpg": {
+      "bytes": 40606,
+      "sha256": "72dee908b76dfd7246f5822bff9823214056ce00765a11aba3c21734c0fc9d72"
+    },
+    "assets/species-photo-typha_latifolia-d446ea4c992d.jpg": {
+      "bytes": 70960,
+      "sha256": "d446ea4c992dbb173c99af0a5eba3b0ba97231883ce0329e838a7a7463f12a25"
+    },
+    "assets/species-photo-urtica_dioica-330ce9698984.jpg": {
+      "bytes": 74523,
+      "sha256": "330ce96989846fba7ef71194afcc75c97c8f7a96e34d0191e1e4378a0fc13eab"
+    },
+    "assets/species-photo-vanellus_vanellus-bc9814d7a8d6.jpg": {
+      "bytes": 41910,
+      "sha256": "bc9814d7a8d61e747b1923578d01339b465b94e0ac0960c68f08f3562cc2e0f2"
+    },
+    "assets/species-photo-zostera_marina-be4ba7d6f7f8.jpg": {
+      "bytes": 27419,
+      "sha256": "be4ba7d6f7f81ccee7457ad3db1064bbda4b4598acc5d8bd1de5b84b745b779f"
+    },
+    "assets/species-photo-zostera_noltei-62c26f2d67ca.jpg": {
+      "bytes": 125925,
+      "sha256": "62c26f2d67caf6cc95f918ad9e716712e2dfa659070b5dc962818446aa0c5320"
+    },
+    "assets/terrain-atlas-d637324d3ace.webp": {
+      "bytes": 2626900,
+      "sha256": "d637324d3ace6ef8e2c549e7f0a513efd1a4c06aab927f0ed1565bf77b2ced02"
+    },
+    "assets/wildlife-capreolus_capreolus-0ba5af2375dd.glb": {
+      "bytes": 500212,
+      "sha256": "0ba5af2375ddf8cd3ccf1d51d4c7c18689cf16500491d5afc16cf4810e1c6f02"
+    },
+    "assets/wildlife-fox-61a4d1b845aa.glb": {
+      "bytes": 443236,
+      "sha256": "61a4d1b845aa406928a327648417ae1c3982510b9c4e8ce33b7c494fbc98a22f"
+    },
+    "assets/wildlife-halichoerus_grypus-76c7ab0d30f0.glb": {
+      "bytes": 316448,
+      "sha256": "76c7ab0d30f024df59d3096dd65336920a045a77c4ed671ebe33b29bd01545f9"
+    },
+    "assets/wildlife-hare-e92d42f5354a.glb": {
+      "bytes": 452864,
+      "sha256": "e92d42f5354a8da52afb019e15b38fcd8396afa6fbe5eae0feae0a807c3e3c17"
+    },
+    "assets/wildlife-phoca_vitulina-3ae9d705d6fd.glb": {
+      "bytes": 315192,
+      "sha256": "3ae9d705d6fdab9d4bd5b73e29db11ba99653744ae5ee2ddd176e3e7fd675888"
+    },
+    "assets/wildlife-sciurus_vulgaris-cb7d2e813c22.glb": {
+      "bytes": 335640,
+      "sha256": "cb7d2e813c2276460c9ab0e4598c303f6e981d28718f114f82335ca258bd816e"
+    },
+    "assets/wildlife-surfaces-74ed976ed7c9.webp": {
+      "bytes": 2253184,
+      "sha256": "74ed976ed7c9651bad804a6f0368291f3be78ec6d0331585ceda500592448309"
+    },
+    "web/vendor-three.core-eb077d2417f6.js": {
+      "bytes": 1403455,
+      "sha256": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20"
+    },
+    "web/vendor-three.module-c4af49689bc3.js": {
+      "bytes": 603239,
+      "sha256": "c4af49689bc354ba306725d8ee36940e35c538f1dcf810ac4141f599b6f76247"
+    },
+    "web/asset-url-e70df3ebf5aa.js": {
+      "bytes": 237,
+      "sha256": "e70df3ebf5aab059082212c25a44badd4ae4ebd5ec1fd845ecf19ea227486a18"
+    },
+    "web/authored-wildlife-5bd7bb5dbaef.js": {
+      "bytes": 4895,
+      "sha256": "5bd7bb5dbaef5f9acc2ab72b3fbb56b788d40ebdfeeee2cfa59db52f1038e477"
+    },
+    "web/render-budget-616ed93cc91c.js": {
+      "bytes": 4203,
+      "sha256": "616ed93cc91c00d5678d080fcd5db8d5d49ae348dd9ac403b43a27289b772ce1"
+    },
+    "web/quest-learning-43eb3f9b36e9.js": {
+      "bytes": 1743,
+      "sha256": "43eb3f9b36e92bf8fd3dfee1784a074eab4dc73bdbca108a66998528532c2beb"
+    },
+    "web/ranger-controls-1a965f6915b5.js": {
+      "bytes": 1660,
+      "sha256": "1a965f6915b5e019629c1636a22c999bf7d02bb8d85765019f7ff0bd9b344c2c"
+    },
+    "web/species-photos-79affe641b05.js": {
+      "bytes": 95490,
+      "sha256": "79affe641b05f4e3369f79a0c96c37f51700517d11b6544fd3244ecd683fe9d5"
+    },
+    "web/species-photo-view-d8e04709f8b6.js": {
+      "bytes": 1041,
+      "sha256": "d8e04709f8b68d77275b0812c3753dc8bf04a5a3b05cf18489f65a304ed7f228"
+    },
+    "web/mesh-geometry-2d1e261d52c3.js": {
+      "bytes": 1092,
+      "sha256": "2d1e261d52c3308568c3c3b6710405c060088cb0af6a857e39e98fc68df708e3"
+    },
+    "web/village-people-74cd59c9cedf.js": {
+      "bytes": 10709,
+      "sha256": "74cd59c9cedfeca85f95f0baf01813147dfc8cb15b0edf695cf2686beaa1869f"
+    },
+    "web/field-soundscape-74a89a60297d.js": {
+      "bytes": 4612,
+      "sha256": "74a89a60297dcb217543db4d351b7cc97499594c9112581e3fafeaee2e4e4413"
+    },
+    "web/world-layout-606061600486.js": {
+      "bytes": 2464,
+      "sha256": "6060616004860862a4d9c404949e219a6686b1a8fef769046f1781981f6e8d11"
+    },
+    "web/catalogue-extension-5aafb85a6b85.js": {
+      "bytes": 29160,
+      "sha256": "5aafb85a6b8547c103e10fdf171fd0bf8e84798b58627c720cf3f57d229db452"
+    },
+    "web/biodiversity-a4ca567f8c1b.js": {
+      "bytes": 105031,
+      "sha256": "a4ca567f8c1b007bf9a1a1a6c43589c025da26555b820932fb796d8854655cc5"
+    },
+    "web/trail-fb68a881a6d5.js": {
+      "bytes": 4350,
+      "sha256": "fb68a881a6d549766f3d70f14ebaebf437bdb715a26d5c150029e08cc0a41a29"
+    },
+    "web/observation-tools-40cadea05ba3.js": {
+      "bytes": 2418,
+      "sha256": "40cadea05ba343f03f75c3a277c35cd3757f343d6ca3456963d8ff0ae94e9f11"
+    },
+    "web/render-visibility-4e69cd70cb90.js": {
+      "bytes": 5989,
+      "sha256": "4e69cd70cb902703c2d5d95597a930976629529d2836ffd4a41f123b76243033"
+    },
+    "web/habitat-fences-220e3de1e40d.js": {
+      "bytes": 3955,
+      "sha256": "220e3de1e40d2fb16768240a28d6e982351d8df0e17d6c1fce625e1c4ffa20da"
+    },
+    "web/terrain-contact-a90ee2236c53.js": {
+      "bytes": 1232,
+      "sha256": "a90ee2236c53750953b7117160326de940479deb768e93905373ca490f3235e8"
+    },
+    "web/curved-leaves-c2068ac69af4.js": {
+      "bytes": 1435,
+      "sha256": "c2068ac69af4d0d78d5876d30540d676a44227f6f7a88261a505124cf5a535df"
+    },
+    "web/plant-forms-7ce9dcf0710a.js": {
+      "bytes": 7890,
+      "sha256": "7ce9dcf0710ac084011d6bf30a004c9124f2986236bf8f5cb660fa737a1ae169"
+    },
+    "web/boardwalk-layout-2bc26572b1b5.js": {
+      "bytes": 2171,
+      "sha256": "2bc26572b1b5310649dc815b024a2fd84ebf63031d2c8e8ee1fa181b0dc4ff49"
+    },
+    "web/field-boards-07dde92a175d.js": {
+      "bytes": 9857,
+      "sha256": "07dde92a175debac1ee1bae1076d445f0760dbaba94e842f89b71642530ed584"
+    },
+    "web/village-cd78c9162edc.js": {
+      "bytes": 14346,
+      "sha256": "cd78c9162edca761799617d4bb1e790f453edf54ce15b55b7ddf78ad624ab5c6"
+    },
+    "web/living-habitats-c600d215f312.js": {
+      "bytes": 9903,
+      "sha256": "c600d215f3124e74fbc0610809a8ae103b861bcbc34af43ad5e00d9272b9073a"
+    },
+    "web/field-guide-ef0f33ed07ba.js": {
+      "bytes": 2085,
+      "sha256": "ef0f33ed07ba3919591a14cc9eb106c1c5b664d7a603ece838d54d3ef823679b"
+    },
+    "web/habitat-world-de476ba02491.js": {
+      "bytes": 46966,
+      "sha256": "de476ba0249109601df876d99642199fd8687d7b2648b3471a4d5de0204a2454"
+    },
+    "web/flight-feathers-6d03f4875b8a.js": {
+      "bytes": 1097,
+      "sha256": "6d03f4875b8a94510b8a493d5fecb56e1a84562c3050d9bc2ffa6e6ef70a449e"
+    },
+    "web/bird-wings-4c43b244f6a6.js": {
+      "bytes": 2495,
+      "sha256": "4c43b244f6a6a84eeec46372ded94fd9de386794bed7c382e4b7ac00cf738e1c"
+    },
+    "web/bird-plumage-8f87a0ec17a0.js": {
+      "bytes": 3219,
+      "sha256": "8f87a0ec17a008d7d3ef6d0a59507049bbe10dcd991dff45f5a57c57b7e40058"
+    },
+    "web/avian-anatomy-9ffc49d60cb7.js": {
+      "bytes": 2609,
+      "sha256": "9ffc49d60cb74d4f1dbe6b76ceb1807d8794c22d02db0d172d3d54b5ce5915bb"
+    },
+    "web/encounter-behavior-01ed0785ef54.js": {
+      "bytes": 21896,
+      "sha256": "01ed0785ef54e77c7790ab64b157f2d9e7f84bc182b752ff119ead3ea73e725a"
+    },
+    "web/wildlife-motion-ab5c9395d91f.js": {
+      "bytes": 16340,
+      "sha256": "ab5c9395d91fc440e3b049e4fbd595a375d92427309877d0b0529bf653db90f2"
+    },
+    "web/animals-ca7703d10df4.js": {
+      "bytes": 16136,
+      "sha256": "ca7703d10df4568ff0541b7551df5a64944b39e2c99ce389b6bea51443a3782e"
+    },
+    "web/wildlife-3b1802a9f4a3.js": {
+      "bytes": 41779,
+      "sha256": "3b1802a9f4a37abaab8be121aef6a977b940a63ac460757aab20d8f38118d018"
+    },
+    "web/blocker-grid-8587a62ddef9.js": {
+      "bytes": 1162,
+      "sha256": "8587a62ddef9bc735f4caa4e99f5082d4919ce892f41085f154eda27a49de909"
+    },
+    "web/ecological-relations-ddff2ac5204f.js": {
+      "bytes": 11601,
+      "sha256": "ddff2ac5204fc638bf28838d1efa0c6ce405a442dd40c27dd9991db51804748e"
+    },
+    "web/field-ecology-58dcba436646.js": {
+      "bytes": 33726,
+      "sha256": "58dcba43664665b60ed857509c5efd302811519f05634928b623253aaa90981b"
+    },
+    "web/field-evolution-9c964290c47b.js": {
+      "bytes": 17469,
+      "sha256": "9c964290c47b1dc3acf8e4c45325f5a11a3e3714dffdb70c5bf57b9f4dd2d497"
+    },
+    "web/quest-cases-20d945fb79fa.js": {
+      "bytes": 2311,
+      "sha256": "20d945fb79fab4ae70393e3a2ef3f82cc536040cb1c24b41319140cdd0ac495b"
+    },
+    "web/quests-fa8975191585.js": {
+      "bytes": 16733,
+      "sha256": "fa8975191585484cf817e6057bbb356bf8fc3b40b6e53ec9fa40199866d35613"
+    },
+    "web/interaction-scenarios-7b9664b353db.js": {
+      "bytes": 10418,
+      "sha256": "7b9664b353db8d6dd8f40c8841ed5daeb3100f162d5437b2194626e4b2e388c0"
+    },
+    "web/quest-interface-ba82bbada337.js": {
+      "bytes": 19302,
+      "sha256": "ba82bbada337079435b994a6cde1bf94d1d0fe660a024982e2216c14966b067a"
+    },
+    "web/focus-marker-0bee8a44d9a5.js": {
+      "bytes": 2884,
+      "sha256": "0bee8a44d9a5dd6d52797642924ab26f191ec8bb8313c14076dd61808268b190"
+    },
+    "web/tidal-system-9a39b9f39b32.js": {
+      "bytes": 771,
+      "sha256": "9a39b9f39b32a4a16e6c54cb130dacd12642cf99d44ad6c550f68f691710d047"
+    },
+    "web/sediment-excavation-e445141f532b.js": {
+      "bytes": 4427,
+      "sha256": "e445141f532b18af4ddd20059f03510f07b62ca795d87683bdd2cc59e0b3264c"
+    },
+    "web/field-sampling-ea66424efab4.js": {
+      "bytes": 3658,
+      "sha256": "ea66424efab45285debeb8b090de49b026a45ce3b66e7dbc75d7c26acc20d03b"
+    },
+    "web/plant-impostors-c317f69a2456.js": {
+      "bytes": 3998,
+      "sha256": "c317f69a24561acdeb1f49590741a17a9c2e56759a90f52041bd6fd8968fdd1b"
+    },
+    "web/garden-bees-e7880178b95e.js": {
+      "bytes": 3215,
+      "sha256": "e7880178b95eb3b93a3243b1844be92c227e3db1e6c2cb88b16ba70e5a901028"
+    },
+    "web/expedition-state-0f29e72a8c82.js": {
+      "bytes": 3475,
+      "sha256": "0f29e72a8c828f1fc9b8c6d93e14ea5f11ae7534d1c686ea98f6773027743af8"
+    },
+    "web/expedition-2a27a5f2a2da.js": {
+      "bytes": 68063,
+      "sha256": "2a27a5f2a2da6d883e9ba6ac4fd2af4404e769d8548dff643b128e34bf449774"
+    },
+    "web/field-6c813d793a2d.css": {
+      "bytes": 37617,
+      "sha256": "6c813d793a2d22c29f75dfd6416515827e5ba0d49927968de6ead046fd971fb7"
+    },
+    "index.html": {
+      "bytes": 7678,
+      "sha256": "d2bbbb57d9af82b2b5d665d610a9db344906aa047271f8e04587c1e67e9e8bf0"
+    },
+    "Feldbuch.html": {
+      "bytes": 7678,
+      "sha256": "d2bbbb57d9af82b2b5d665d610a9db344906aa047271f8e04587c1e67e9e8bf0"
+    },
+    "icon.svg": {
+      "bytes": 264,
+      "sha256": "cb8cda889f99e56d13d18e09929837b7c3630d3f9ff3219316d12d3077fc0869"
+    },
+    ".nojekyll": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "assets/SPECIES-PHOTOS.txt": {
+      "bytes": 40731,
+      "sha256": "0a268dc824140195113cef26d7c925909df82de10e2d692026542856e8343934"
+    },
+    "assets/BIRD-RECORDINGS.txt": {
+      "bytes": 1446,
+      "sha256": "7c621c19b82b814c82597d1f8272e1ea09aec369fff479092d4cd7124807f01b"
+    },
+    "assets/attribution.json": {
+      "bytes": 2508,
+      "sha256": "bef40b65a1e9d3e056c1b5bad0dc0d7f79409255622cb1dbf9c17e1a661fcaaf"
+    },
+    "assets/WILDLIFE-MODELS.txt": {
+      "bytes": 797,
+      "sha256": "9f02d658e560fbe3e618739226691ce94c97d7c2c11593c1e25d12965f440d5d"
+    },
+    "web/THREE-LICENSE.txt": {
+      "bytes": 1081,
+      "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601"
+    },
+    "README.md": {
+      "bytes": 9391,
+      "sha256": "bcb20cd822fc839cf4540df6e8a6434cbdf825cf78c428f49cf5d34783eb9173"
+    }
+  },
+  "totalBytes": 36637429,
+  "initialUpperBoundBytes": 26584925,
+  "deferredPhotographs": 168,
+  "deferredBirdRecordings": 3,
+  "largestFileBytes": 2661512,
+  "networkOrigins": [
+    "same-origin; references open only on explicit click"
+  ]
+}

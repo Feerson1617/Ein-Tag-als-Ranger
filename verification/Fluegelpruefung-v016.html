@@ -1,0 +1,13 @@
+<!doctype html><html lang="de"><meta charset="utf-8"><base href="../dist/"><title>Flügelprüfung · Feldbuch 0.16</title><style>body{margin:0;background:#dbe2dd;font:16px system-ui;color:#20382b}canvas{display:block;width:100vw;height:100vh}nav{position:absolute;top:16px;left:16px;right:16px;background:#f3f3e9e8;padding:12px;border-radius:10px;box-shadow:0 4px 22px #14332322}select,button{font:inherit;padding:8px;min-height:44px}p{margin:7px 0 0;font-size:13px}</style><nav><b>Flügelprüfung · Feldbuch 0.16</b> <select aria-label="Vogelart" id="species"></select> <button id="pause">Flug anhalten</button><p>Gleiches Artmodell wie im Spiel · gespiegelte Anatomie und Gefieder · angezogene Laufbeine</p></nav><canvas></canvas><script type="module">
+import * as T from './vendor/three.module.js';
+import {WildlifeRenderer} from './wildlife.js';
+import {ANIMALS} from './biodiversity.js';
+const scene=new T.Scene();scene.background=new T.Color('#dbe2dd');scene.add(new T.HemisphereLight('#ffffff','#5d6359',2.2));
+const sun=new T.DirectionalLight('#ffffff',1);sun.position.set(4,8,0);scene.add(sun);
+const renderer=new T.WebGLRenderer({canvas:document.querySelector('canvas'),antialias:true});renderer.setSize(innerWidth,innerHeight);renderer.setPixelRatio(1);renderer.outputColorSpace=T.SRGBColorSpace;renderer.toneMapping=T.ACESFilmicToneMapping;
+const camera=new T.PerspectiveCamera(36,innerWidth/innerHeight,.001,100),selection=document.querySelector('select');
+for(const s of Object.values(ANIMALS).filter(s=>s.type==='bird'))selection.add(new Option(s.common,s.id));selection.value='falco_tinnunculus';
+let actor,wildlife,paused=false,last=performance.now();function choose(){wildlife?.dispose();actor={species:selection.value,id:1,alive:true,x:0,z:0,heading:0,phase:0,trait:1,age:0,flight:1.5,activity:'flying'};wildlife=new WildlifeRenderer(scene,[actor]);}
+selection.onchange=choose;document.querySelector('button').onclick=()=>{paused=!paused;document.querySelector('button').textContent=paused?'Flug fortsetzen':'Flug anhalten';};choose();
+function frame(now){requestAnimationFrame(frame);const dt=Math.min(.04,(now-last)/1000);last=now;if(!paused){actor.age+=dt;actor.x+=dt*1.8;}wildlife.update(()=>0,()=>-1,null);const L=ANIMALS[actor.species].size;camera.position.set(actor.x+L*2.4,actor.y+L*1.5,actor.z+L*.08);camera.lookAt(actor.x,actor.y+L*.22,actor.z);renderer.render(scene,camera);}requestAnimationFrame(frame);
+</script></html>

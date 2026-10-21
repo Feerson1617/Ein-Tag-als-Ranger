@@ -1,0 +1,13 @@
+{
+  "authoringScriptSha256": "[redacted]",
+  "costEUR": 0,
+  "origin": "local procedural anatomy",
+  "schema": "game_dev.asset_provenance.v1",
+  "source": {
+    "bytes": 316452,
+    "fileName": "halichoerus_grypus.glb",
+    "sha256": "8a92912a1f6861da778713753a24fa1120b451d52049b2f91dea5245de52307f"
+  },
+  "sourceSha256": "8a92912a1f6861da778713753a24fa1120b451d52049b2f91dea5245de52307f",
+  "tool": "Blender 4.5.14 LTS"
+}

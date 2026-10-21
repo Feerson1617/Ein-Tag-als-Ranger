@@ -1,0 +1,75 @@
+{
+  "assets": [
+    {
+      "files": [
+        "ground-diffuse.jpg",
+        "ground-normal.jpg"
+      ],
+      "title": "Leafy Grass",
+      "author": "Charlotte Baglioni",
+      "source": "https://polyhaven.com/a/leafy_grass",
+      "license": "CC0 1.0 Universal",
+      "license_url": "https://polyhaven.com/license"
+    },
+    {
+      "files": [
+        "bark-diffuse.jpg",
+        "bark-normal.jpg"
+      ],
+      "title": "Bark Brown 01",
+      "source": "https://polyhaven.com/a/bark_brown_01",
+      "license": "CC0 1.0 Universal",
+      "license_url": "https://polyhaven.com/license",
+      "author": "Rob Tuytel"
+    },
+    {
+      "files": [
+        "foliage-atlas.png",
+        "terrain-atlas.png",
+        "bark-atlas.png",
+        "habitat-surfaces.png",
+        "botanical-atlas.png",
+        "sky-panorama.png",
+        "boardwalk-wood.png",
+        "wildlife-surfaces.png",
+        "village-residents.png"
+      ],
+      "title": "Original generated material atlases and sky panorama",
+      "origin": "Generated for this project using OpenAI image generation",
+      "source": "IMAGE-PROMPTS.md",
+      "license_note": "AI-generated project assets; not downloaded third-party nature photography or certified botanical scans."
+    },
+    {
+      "files": [
+        "bird-great-tit.mp3"
+      ],
+      "title": "Kohlmeise · Gesang",
+      "author": "Oona Räisänen (Mysid)",
+      "source": "https://commons.wikimedia.org/wiki/File:Parus_major.ogg",
+      "license": "Public Domain",
+      "details": "BIRD-RECORDINGS.txt"
+    },
+    {
+      "files": [
+        "bird-blackbird.mp3"
+      ],
+      "title": "Amsel · Gesang",
+      "author": "Oona Räisänen (Mysid)",
+      "source": "https://commons.wikimedia.org/wiki/File:Turdus_merula_2.ogg",
+      "license": "Public Domain",
+      "details": "BIRD-RECORDINGS.txt"
+    },
+    {
+      "files": [
+        "bird-herring-gull.mp3"
+      ],
+      "title": "Silbermöwe · Flugruf",
+      "author": "Sonothèque ADVL",
+      "source": "https://commons.wikimedia.org/wiki/File:XC707075_-_European_Herring_Gull_-_Larus_argentatus.mp3",
+      "license": "CC0 1.0",
+      "details": "BIRD-RECORDINGS.txt"
+    }
+  ],
+  "procedural_animals": "Original anatomical Three.js geometry, species markings and procedural coat materials; fox/hare geometry reused from the earlier project version. No downloaded animal models included.",
+  "village_residents": "Five AI-generated photographic cutouts in one instanced atlas; not fully rigged 3D humans."
+}

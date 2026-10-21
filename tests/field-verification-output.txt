@@ -1,0 +1,186 @@
+{
+  "animals": 119,
+  "birds": 64,
+  "plants": 49,
+  "report": [
+    {
+      "habitat": "forest",
+      "agents": 81,
+      "behaviors": [
+        "resting",
+        "foraging",
+        "flying",
+        "preening",
+        "hunting",
+        "waiting",
+        "feeding",
+        "perching",
+        "filtering",
+        "grazing",
+        "dispersal",
+        "collecting",
+        "pollinating",
+        "swimming",
+        "drumming",
+        "fleeing",
+        "walking"
+      ],
+      "hunts": 8
+    },
+    {
+      "habitat": "meadow",
+      "agents": 61,
+      "behaviors": [
+        "resting",
+        "walking",
+        "foraging",
+        "preening",
+        "feeding",
+        "flying",
+        "perching",
+        "grazing",
+        "probing",
+        "collecting",
+        "pollinating",
+        "hunting",
+        "fleeing"
+      ],
+      "hunts": 6
+    },
+    {
+      "habitat": "city",
+      "agents": 90,
+      "behaviors": [
+        "resting",
+        "foraging",
+        "feeding",
+        "flying",
+        "preening",
+        "perching",
+        "hunting",
+        "grazing",
+        "walking",
+        "pollinating",
+        "filtering",
+        "swimming",
+        "collecting",
+        "dispersal",
+        "drumming",
+        "fleeing"
+      ],
+      "hunts": 6
+    },
+    {
+      "habitat": "lake",
+      "agents": 56,
+      "behaviors": [
+        "resting",
+        "walking",
+        "flying",
+        "preening",
+        "foraging",
+        "hunting",
+        "perching",
+        "filtering",
+        "swimming",
+        "grazing",
+        "feeding",
+        "waiting",
+        "fleeing",
+        "pollinating"
+      ],
+      "hunts": 18
+    },
+    {
+      "habitat": "beach",
+      "agents": 128,
+      "behaviors": [
+        "resting",
+        "walking",
+        "probing",
+        "perching",
+        "preening",
+        "flying",
+        "foraging",
+        "hunting",
+        "swimming",
+        "fleeing",
+        "feeding",
+        "deposit",
+        "grazing",
+        "pollinating",
+        "filtering"
+      ],
+      "hunts": 14
+    },
+    {
+      "habitat": "wadden",
+      "agents": 129,
+      "behaviors": [
+        "walking",
+        "resting",
+        "probing",
+        "swimming",
+        "flying",
+        "foraging",
+        "preening",
+        "hunting",
+        "fleeing",
+        "perching",
+        "feeding",
+        "waiting",
+        "grazing",
+        "deposit",
+        "pollinating",
+        "filtering"
+      ],
+      "hunts": 20
+    },
+    {
+      "habitat": "farmland",
+      "agents": 57,
+      "behaviors": [
+        "resting",
+        "flying",
+        "feeding",
+        "perching",
+        "foraging",
+        "probing",
+        "hunting",
+        "fleeing",
+        "preening",
+        "grazing",
+        "pollinating",
+        "collecting",
+        "walking"
+      ],
+      "hunts": 6
+    },
+    {
+      "habitat": "saltmarsh",
+      "agents": 113,
+      "behaviors": [
+        "resting",
+        "walking",
+        "waiting",
+        "probing",
+        "flying",
+        "perching",
+        "preening",
+        "hunting",
+        "foraging",
+        "swimming",
+        "fleeing",
+        "feeding",
+        "deposit",
+        "pollinating",
+        "grazing",
+        "filtering"
+      ],
+      "hunts": 4
+    }
+  ],
+  "journal": "species → stable behavior → persistence verified"
+}
+Trace evidence and arrival at a flower patch verified.
+A hunting record requires an actual eligible prey target.

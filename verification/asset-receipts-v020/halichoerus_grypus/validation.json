@@ -1,0 +1,31 @@
+{
+  "schema": "game_dev.result.v1",
+  "operation": "asset.validate",
+  "ok": true,
+  "data": {
+    "schema": "org.gamedebug.asset_validation.v1",
+    "modelPath": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/work/authored-wildlife-v020/halichoerus_grypus.glb",
+    "passed": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "summary": {
+      "triangles": 5950,
+      "materials": 1,
+      "textures": 0,
+      "hasUVs": true,
+      "hasNormals": true,
+      "hasTangents": false,
+      "sizeMeters": [
+        2.200000047683716,
+        0.5759804844856262,
+        1.0259239673614502
+      ]
+    },
+    "failures": [],
+    "checksRun": 8,
+    "inspectorWarnings": [
+      "no base colour texture on any material: the asset is untextured and will read as flat colour"
+    ],
+    "nextStep": "Passes cleanly."
+  }
+}

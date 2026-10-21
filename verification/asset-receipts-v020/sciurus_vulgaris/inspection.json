@@ -1,0 +1,54 @@
+{
+  "schema": "game_dev.result.v1",
+  "operation": "asset.inspect",
+  "ok": true,
+  "data": {
+    "filePath": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/work/authored-wildlife-v020/sciurus_vulgaris.glb",
+    "fileBytes": 335640,
+    "generator": "glTF-Transform v4.5.1",
+    "meshCount": 1,
+    "primitiveCount": 1,
+    "vertexCount": 3213,
+    "triangleCount": 6278,
+    "undrawnMeshCount": 0,
+    "undrawnPrimitiveCount": 0,
+    "undrawnTriangleCount": 0,
+    "sceneGraphFallback": false,
+    "materialCount": 1,
+    "textureCount": 0,
+    "textureResolutions": [],
+    "boundingBox": {
+      "min": [
+        -0.24390891194343567,
+        0,
+        -0.07385994493961334
+      ],
+      "max": [
+        0.17609108984470367,
+        0.34890180826187134,
+        0.07385994493961334
+      ],
+      "sizeMeters": [
+        0.42000000178813934,
+        0.34890180826187134,
+        0.14771988987922668
+      ]
+    },
+    "boundingBoxEmpty": false,
+    "hasUVs": true,
+    "hasNormals": true,
+    "hasTangents": false,
+    "pbr": {
+      "hasBaseColorTexture": false,
+      "hasMetallicRoughnessTexture": false,
+      "hasNormalTexture": false,
+      "hasOcclusionTexture": false,
+      "hasEmissiveTexture": false
+    },
+    "animationCount": 0,
+    "hasSkin": false,
+    "warnings": [
+      "no base colour texture on any material: the asset is untextured and will read as flat colour"
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "authoringScriptSha256": "[redacted]",
+  "costEUR": 0,
+  "origin": "local procedural anatomy",
+  "schema": "game_dev.asset_provenance.v1",
+  "source": {
+    "bytes": 443236,
+    "fileName": "fox.glb",
+    "sha256": "61a4d1b845aa406928a327648417ae1c3982510b9c4e8ce33b7c494fbc98a22f"
+  },
+  "sourceSha256": "61a4d1b845aa406928a327648417ae1c3982510b9c4e8ce33b7c494fbc98a22f",
+  "tool": "Blender 4.5.14 LTS"
+}

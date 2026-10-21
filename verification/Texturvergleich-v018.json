@@ -1,0 +1,50 @@
+[
+  {
+    "name": "foliage-atlas",
+    "originalBytes": 2691108,
+    "webBytes": 1937648,
+    "identicalPixels": true
+  },
+  {
+    "name": "botanical-atlas",
+    "originalBytes": 1949152,
+    "webBytes": 1400278,
+    "identicalPixels": true
+  },
+  {
+    "name": "habitat-surfaces",
+    "originalBytes": 4148399,
+    "webBytes": 2661512,
+    "identicalPixels": true
+  },
+  {
+    "name": "bark-atlas",
+    "originalBytes": 4214871,
+    "webBytes": 2553864,
+    "identicalPixels": true
+  },
+  {
+    "name": "terrain-atlas",
+    "originalBytes": 4206345,
+    "webBytes": 2626900,
+    "identicalPixels": true
+  },
+  {
+    "name": "boardwalk-wood",
+    "originalBytes": 3859030,
+    "webBytes": 2344144,
+    "identicalPixels": true
+  },
+  {
+    "name": "sky-panorama",
+    "originalBytes": 1598577,
+    "webBytes": 1089962,
+    "identicalPixels": true
+  },
+  {
+    "name": "wildlife-surfaces",
+    "originalBytes": 4250618,
+    "webBytes": 2253184,
+    "identicalPixels": true
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "species": "phoca_vitulina",
+  "lengthMeters": 1.6,
+  "triangles": 5926,
+  "bytes": 315192,
+  "sha256": "3ae9d705d6fdab9d4bd5b73e29db11ba99653744ae5ee2ddd176e3e7fd675888",
+  "legFeet": {},
+  "source": "author-wildlife-v020.py",
+  "license": "CC0-1.0"
+}

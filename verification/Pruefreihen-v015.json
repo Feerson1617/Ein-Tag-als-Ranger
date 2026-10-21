@@ -1,0 +1,92 @@
+[
+  {
+    "check": "living-world",
+    "passed": true,
+    "seconds": 27.0,
+    "error": ""
+  },
+  {
+    "check": "ranger",
+    "passed": true,
+    "seconds": 21.9,
+    "error": ""
+  },
+  {
+    "check": "behavior",
+    "passed": true,
+    "seconds": 63.4,
+    "error": ""
+  },
+  {
+    "check": "scenario",
+    "passed": true,
+    "seconds": 31.4,
+    "error": ""
+  },
+  {
+    "check": "quest",
+    "passed": true,
+    "seconds": 5.8,
+    "error": ""
+  },
+  {
+    "check": "regional-evolution",
+    "passed": true,
+    "seconds": 102.1,
+    "error": ""
+  },
+  {
+    "check": "live-experiment",
+    "passed": true,
+    "seconds": 32.9,
+    "error": ""
+  },
+  {
+    "check": "observation",
+    "passed": true,
+    "seconds": 1.1,
+    "error": ""
+  },
+  {
+    "check": "world",
+    "passed": true,
+    "seconds": 31.0,
+    "error": ""
+  },
+  {
+    "check": "coast-performance",
+    "passed": true,
+    "seconds": 13.4,
+    "error": ""
+  },
+  {
+    "check": "locomotion",
+    "passed": true,
+    "seconds": 16.8,
+    "error": ""
+  },
+  {
+    "check": "village-barrier",
+    "passed": true,
+    "seconds": 10.7,
+    "error": ""
+  },
+  {
+    "check": "route-birds",
+    "passed": true,
+    "seconds": 28.1,
+    "error": ""
+  },
+  {
+    "check": "ranger-usability",
+    "passed": true,
+    "seconds": 9.8,
+    "error": ""
+  },
+  {
+    "check": "field",
+    "passed": true,
+    "seconds": 116.7,
+    "error": ""
+  }
+]

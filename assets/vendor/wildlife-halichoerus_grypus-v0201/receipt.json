@@ -1,0 +1,23 @@
+{
+  "completedAt": "2026-10-09T16:21:06.146Z",
+  "destination": {
+    "assetId": "feldbuch_wildlife_halichoerus_grypus",
+    "version": "0.20.1"
+  },
+  "evidence": {
+    "blenderNormalizationPerformed": false,
+    "gpuImportTestPerformed": false,
+    "humanVisualReviewPerformed": false,
+    "modelBytesCopiedAndHashed": true,
+    "policyValidationCompleted": true,
+    "staticInspectionCompleted": true
+  },
+  "manifestSha256": "da2b5bbdc97ce47df67a5f2486bbf00d1d1ee63176bdf605150d03c3f3de8045",
+  "packageId": "pkg_f6a468e8e6f6e0170af72160",
+  "schema": "game_dev.package_receipt.v1",
+  "source": {
+    "bytes": 316452,
+    "fileName": "halichoerus_grypus.glb",
+    "sha256": "da82e0b83a8d492a6cfeea0dd692301aed3ebba7d0bcea650b3ef93b69726d59"
+  }
+}

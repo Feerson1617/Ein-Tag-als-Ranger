@@ -1,0 +1,45 @@
+{
+  "schema": "game_dev.result.v1",
+  "operation": "package.build",
+  "ok": true,
+  "data": {
+    "schema": "game_dev.package_build_result.v1",
+    "packageId": "pkg_282a4f451f47140f0d4c4b61",
+    "packagePath": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/work/asset-workspace/.game-dev/packages/feldbuch_wildlife_fox/0.20.0",
+    "manifestPath": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/work/asset-workspace/.game-dev/packages/feldbuch_wildlife_fox/0.20.0/manifest.json",
+    "receiptPath": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/work/asset-workspace/.game-dev/packages/feldbuch_wildlife_fox/0.20.0/receipt.json",
+    "manifestSha256": "8d366b95e9e5bc2d6a41757e4a9819ff24d6d0fdbedbaef6b0b4a8bda7d6da21",
+    "reused": false,
+    "validation": {
+      "passed": true,
+      "errorCount": 0,
+      "warningCount": 0
+    },
+    "catalog": {
+      "packageId": "pkg_282a4f451f47140f0d4c4b61",
+      "assetId": "feldbuch_wildlife_fox",
+      "version": "0.20.0",
+      "displayName": "feldbuch-wildlife-fox",
+      "description": "Lokales Blender-Artenmodell f\u00fcr Feldbuch; GPU-Instanzen, Laufanimation mit Fu\u00dfkontakten und Atmung. Keine externen Jobs.",
+      "category": "creature",
+      "license": "CC0-1.0",
+      "packagePath": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/work/asset-workspace/.game-dev/packages/feldbuch_wildlife_fox/0.20.0",
+      "modelPath": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/work/asset-workspace/.game-dev/packages/feldbuch_wildlife_fox/0.20.0/model.glb",
+      "modelSha256": "61a4d1b845aa406928a327648417ae1c3982510b9c4e8ce33b7c494fbc98a22f",
+      "manifestSha256": "8d366b95e9e5bc2d6a41757e4a9819ff24d6d0fdbedbaef6b0b4a8bda7d6da21",
+      "validationPassed": true,
+      "validationErrors": 0,
+      "validationWarnings": 0,
+      "origin": "local procedural anatomy",
+      "indexedAt": "2026-10-09T16:10:00.500Z"
+    },
+    "evidence": {
+      "portableGlbCopiedAndHashed": true,
+      "staticInspectionCompleted": true,
+      "policyValidationCompleted": true,
+      "blenderNormalizationPerformed": false,
+      "gpuImportTestPerformed": false,
+      "humanVisualReviewPerformed": false
+    }
+  }
+}

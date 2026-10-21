@@ -1,0 +1,28 @@
+Echte Vogelaufnahmen · Feldbuch 0.13 · eingebettete lokale Assets
+
+Kohlmeise / Parus major · Gesang
+Datei: bird-great-tit.mp3
+Aufnahme: Oona Räisänen (Mysid), 2007, Finnland.
+Lizenz: Public Domain (Freigabe durch Urheberin auf der Quelldateiseite).
+Quelle: https://commons.wikimedia.org/wiki/File:Parus_major.ogg
+Verwendet wird die dort bereitgestellte MP3-Transkodierung; keine neu erzeugte Artstimme.
+
+Amsel / Turdus merula · Gesang
+Datei: bird-blackbird.mp3
+Aufnahme: Oona Räisänen (Mysid), 2007, Finnland.
+Lizenz: Public Domain (Freigabe durch Urheberin auf der Quelldateiseite).
+Quelle: https://commons.wikimedia.org/wiki/File:Turdus_merula_2.ogg
+Verwendet wird die dort bereitgestellte MP3-Transkodierung.
+
+Silbermöwe / Larus argentatus · Flugruf
+Datei: bird-herring-gull.mp3
+Aufnahme: Sonothèque ADVL, 26. März 2021, Normandie, XC707075.
+Lizenz: CC0 1.0 Universal.
+Quelle: https://commons.wikimedia.org/wiki/File:XC707075_-_European_Herring_Gull_-_Larus_argentatus.mp3
+Lizenztext: https://creativecommons.org/publicdomain/zero/1.0/
+
+Die Dateien bleiben unverändert. Das Spiel spielt begrenzte Ausschnitte mit
+Lautstärkeüberblendung, Distanzabschwächung und Stereo-Positionierung ab.
+Die Zuordnung ist artspezifisch; sie ist keine Simulation individueller Dialekte
+oder sämtlicher Ruf- und Gesangstypen. Es gibt keine Tonaufnahme für die übrigen
+Vogelarten. Alle drei Audiodateien sind auch in der Einzel-HTML enthalten.

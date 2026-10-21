@@ -1,0 +1,45 @@
+{
+  "schema": "game_dev.result.v1",
+  "operation": "package.build",
+  "ok": true,
+  "data": {
+    "schema": "game_dev.package_build_result.v1",
+    "packageId": "pkg_2b06779fe4d783239e2c4a7b",
+    "packagePath": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/work/asset-workspace/.game-dev/packages/feldbuch_wildlife_phoca_vitulina/0.20.2",
+    "manifestPath": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/work/asset-workspace/.game-dev/packages/feldbuch_wildlife_phoca_vitulina/0.20.2/manifest.json",
+    "receiptPath": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/work/asset-workspace/.game-dev/packages/feldbuch_wildlife_phoca_vitulina/0.20.2/receipt.json",
+    "manifestSha256": "42f2d80bcc7b15d88f024a2ebf1c7d3cf4946c2036b43824d8782048203f23d6",
+    "reused": false,
+    "validation": {
+      "passed": true,
+      "errorCount": 0,
+      "warningCount": 0
+    },
+    "catalog": {
+      "packageId": "pkg_2b06779fe4d783239e2c4a7b",
+      "assetId": "feldbuch_wildlife_phoca_vitulina",
+      "version": "0.20.2",
+      "displayName": "feldbuch-wildlife-phoca-vitulina",
+      "description": "Lokales Blender-Artenmodell f\u00fcr Feldbuch; GPU-Instanzen, Laufanimation mit Fu\u00dfkontakten und Atmung. Keine externen Jobs.",
+      "category": "creature",
+      "license": "CC0-1.0",
+      "packagePath": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/work/asset-workspace/.game-dev/packages/feldbuch_wildlife_phoca_vitulina/0.20.2",
+      "modelPath": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/work/asset-workspace/.game-dev/packages/feldbuch_wildlife_phoca_vitulina/0.20.2/model.glb",
+      "modelSha256": "3ae9d705d6fdab9d4bd5b73e29db11ba99653744ae5ee2ddd176e3e7fd675888",
+      "manifestSha256": "42f2d80bcc7b15d88f024a2ebf1c7d3cf4946c2036b43824d8782048203f23d6",
+      "validationPassed": true,
+      "validationErrors": 0,
+      "validationWarnings": 0,
+      "origin": "local procedural anatomy",
+      "indexedAt": "2026-10-09T16:26:37.780Z"
+    },
+    "evidence": {
+      "portableGlbCopiedAndHashed": true,
+      "staticInspectionCompleted": true,
+      "policyValidationCompleted": true,
+      "blenderNormalizationPerformed": false,
+      "gpuImportTestPerformed": false,
+      "humanVisualReviewPerformed": false
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "version": "0.15",
+  "terrainSamples": 720,
+  "maxFormulaMismatch": 0.7119988502211578,
+  "fox": "contact and stance feet use visible terrain triangles",
+  "habitatFences": {
+    "panels": 500,
+    "posts": 1000,
+    "branches": 6000,
+    "habitats": [
+      "forest",
+      "meadow",
+      "city",
+      "lake",
+      "beach",
+      "wadden",
+      "saltmarsh",
+      "farmland"
+    ]
+  },
+  "fenceSamples": 2500,
+  "collisionQueries": 1216,
+  "placementChecks": 160,
+  "localCandidates": 3295,
+  "totalCandidates": 454020,
+  "scenarioStarts": "six modes start without a quest or markers",
+  "learningReveals": 6,
+  "dialogRoutes": 35,
+  "learning": "instructions before acceptance; theory only after full completion"
+}

@@ -1,0 +1,21 @@
+{
+  "schema": "game_dev.result.v1",
+  "operation": "vendor.admit",
+  "ok": true,
+  "data": {
+    "reused": false,
+    "packageId": "pkg_2b06779fe4d783239e2c4a7b",
+    "projectRoot": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/evolutionswald",
+    "destination": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/evolutionswald/assets/vendor/wildlife-phoca_vitulina-v0202",
+    "lockPath": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/evolutionswald/.game-dev/vendor-lock.json",
+    "blockers": [],
+    "evidence": {
+      "packageHashesVerified": true,
+      "copiedPackageHashesVerified": true,
+      "projectImportTestPerformed": false,
+      "gpuRenderTestPerformed": false
+    },
+    "dryRun": false,
+    "receiptPath": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/evolutionswald/.game-dev/vendor-receipts/2026-10-09T16-26-38-357Z-feldbuch_wildlife_phoca_vitulina-bbf7091d-512f-4993-ab25-103815892858.json"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "assetId": "feldbuch_wildlife_phoca_vitulina",
+  "category": "creature",
+  "description": "Lokales Blender-Artenmodell für Feldbuch; GPU-Instanzen, Laufanimation mit Fußkontakten und Atmung. Keine externen Jobs.",
+  "displayName": "feldbuch-wildlife-phoca-vitulina",
+  "inspection": {
+    "animationCount": 0,
+    "boundingBox": {
+      "max": [
+        0.7262360453605652,
+        0.5038848519325256,
+        0.35879358649253845
+      ],
+      "min": [
+        -0.873763918876648,
+        0,
+        -0.35879358649253845
+      ],
+      "sizeMeters": [
+        1.5999999642372131,
+        0.5038848519325256,
+        0.7175871729850769
+      ]
+    },
+    "boundingBoxEmpty": false,
+    "fileBytes": 315192,
+    "filePath": "model.glb",
+    "generator": "glTF-Transform v4.5.1",
+    "hasNormals": true,
+    "hasSkin": false,
+    "hasTangents": false,
+    "hasUVs": true,
+    "materialCount": 1,
+    "meshCount": 1,
+    "pbr": {
+      "hasBaseColorTexture": false,
+      "hasEmissiveTexture": false,
+      "hasMetallicRoughnessTexture": false,
+      "hasNormalTexture": false,
+      "hasOcclusionTexture": false
+    },
+    "primitiveCount": 1,
+    "sceneGraphFallback": false,
+    "textureCount": 0,
+    "textureResolutions": [],
+    "triangleCount": 5926,
+    "undrawnMeshCount": 0,
+    "undrawnPrimitiveCount": 0,
+    "undrawnTriangleCount": 0,
+    "vertexCount": 3017,
+    "warnings": [
+      "no base colour texture on any material: the asset is untextured and will read as flat colour"
+    ]
+  },
+  "license": "CC0-1.0",
+  "schema": "game_dev.asset_metadata.v1"
+}

@@ -1,0 +1,101 @@
+{
+  "routeMeters": 735,
+  "questCount": 16,
+  "pollenTransfer": "verified",
+  "competition": "shared finite resource verified",
+  "evolution": [
+    {
+      "factor": "mutation",
+      "generation": 6,
+      "initial": 16,
+      "final": 3,
+      "kinds": [
+        "birth",
+        "mutation",
+        "generation",
+        "noOffspring"
+      ]
+    },
+    {
+      "factor": "recombination",
+      "generation": 6,
+      "initial": 16,
+      "final": 34,
+      "kinds": [
+        "birth",
+        "recombination",
+        "generation"
+      ]
+    },
+    {
+      "factor": "selection",
+      "generation": 6,
+      "initial": 16,
+      "final": 5,
+      "kinds": [
+        "birth",
+        "selection",
+        "generation"
+      ]
+    },
+    {
+      "factor": "drift",
+      "generation": 6,
+      "initial": 16,
+      "final": 12,
+      "kinds": [
+        "birth",
+        "generation",
+        "drift"
+      ]
+    },
+    {
+      "factor": "geneFlow",
+      "generation": 5,
+      "initial": 16,
+      "final": 2,
+      "kinds": [
+        "migration",
+        "birth",
+        "geneFlow",
+        "generation"
+      ]
+    },
+    {
+      "factor": "isolation",
+      "generation": 5,
+      "initial": 16,
+      "final": 16,
+      "kinds": [
+        "isolation",
+        "birth",
+        "generation"
+      ]
+    },
+    {
+      "factor": "bottleneck",
+      "generation": 6,
+      "initial": 6,
+      "final": 2,
+      "kinds": [
+        "bottleneck",
+        "birth",
+        "generation",
+        "noOffspring"
+      ]
+    },
+    {
+      "factor": "sexualSelection",
+      "generation": 6,
+      "initial": 16,
+      "final": 16,
+      "kinds": [
+        "birth",
+        "sexualSelection",
+        "generation"
+      ]
+    }
+  ],
+  "unknownSpecies": "not unlocked by quest selection",
+  "traces": "cannot finish living filtration"
+}

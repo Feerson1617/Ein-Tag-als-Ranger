@@ -1,0 +1,15 @@
+{
+  "version": "0.18",
+  "totalBytes": 34256511,
+  "initialUpperBoundBytes": 24204985,
+  "deferredPhotographs": 168,
+  "deferredBirdRecordings": 3,
+  "largestFileBytes": 2661512,
+  "modules": 49,
+  "assets": 183,
+  "exactSourceAndAssets": true,
+  "subdirectorySafe": true,
+  "sameOriginAssets": true,
+  "identicalTexturePixels": true,
+  "zipVerified": true
+}

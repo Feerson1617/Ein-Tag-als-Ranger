@@ -1,0 +1,23 @@
+{
+  "completedAt": "2026-10-09T16:09:59.814Z",
+  "destination": {
+    "assetId": "feldbuch_wildlife_capreolus_capreolus",
+    "version": "0.20.0"
+  },
+  "evidence": {
+    "blenderNormalizationPerformed": false,
+    "gpuImportTestPerformed": false,
+    "humanVisualReviewPerformed": false,
+    "modelBytesCopiedAndHashed": true,
+    "policyValidationCompleted": true,
+    "staticInspectionCompleted": true
+  },
+  "manifestSha256": "0c3825d3a79df276ddf12e3a70698d5adbc6bb1dacfe1ec7db1a49f09a51a0f7",
+  "packageId": "pkg_ee1fa9be800d7b5f2f7ec637",
+  "schema": "game_dev.package_receipt.v1",
+  "source": {
+    "bytes": 500212,
+    "fileName": "capreolus_capreolus.glb",
+    "sha256": "0ba5af2375ddf8cd3ccf1d51d4c7c18689cf16500491d5afc16cf4810e1c6f02"
+  }
+}

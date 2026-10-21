@@ -1,0 +1,266 @@
+[
+  {
+    "species": "capreolus_capreolus",
+    "triangles": 9464,
+    "package": {
+      "schema": "game_dev.package_build_result.v1",
+      "packageId": "pkg_ee1fa9be800d7b5f2f7ec637",
+      "packagePath": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/work/asset-workspace/.game-dev/packages/feldbuch_wildlife_capreolus_capreolus/0.20.0",
+      "manifestPath": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/work/asset-workspace/.game-dev/packages/feldbuch_wildlife_capreolus_capreolus/0.20.0/manifest.json",
+      "receiptPath": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/work/asset-workspace/.game-dev/packages/feldbuch_wildlife_capreolus_capreolus/0.20.0/receipt.json",
+      "manifestSha256": "0c3825d3a79df276ddf12e3a70698d5adbc6bb1dacfe1ec7db1a49f09a51a0f7",
+      "reused": false,
+      "validation": {
+        "passed": true,
+        "errorCount": 0,
+        "warningCount": 0
+      },
+      "catalog": {
+        "packageId": "pkg_ee1fa9be800d7b5f2f7ec637",
+        "assetId": "feldbuch_wildlife_capreolus_capreolus",
+        "version": "0.20.0",
+        "displayName": "feldbuch-wildlife-capreolus-capreolus",
+        "description": "Lokales Blender-Artenmodell f\u00fcr Feldbuch; GPU-Instanzen, Laufanimation mit Fu\u00dfkontakten und Atmung. Keine externen Jobs.",
+        "category": "creature",
+        "license": "CC0-1.0",
+        "packagePath": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/work/asset-workspace/.game-dev/packages/feldbuch_wildlife_capreolus_capreolus/0.20.0",
+        "modelPath": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/work/asset-workspace/.game-dev/packages/feldbuch_wildlife_capreolus_capreolus/0.20.0/model.glb",
+        "modelSha256": "0ba5af2375ddf8cd3ccf1d51d4c7c18689cf16500491d5afc16cf4810e1c6f02",
+        "manifestSha256": "0c3825d3a79df276ddf12e3a70698d5adbc6bb1dacfe1ec7db1a49f09a51a0f7",
+        "validationPassed": true,
+        "validationErrors": 0,
+        "validationWarnings": 0,
+        "origin": "local procedural anatomy",
+        "indexedAt": "2026-10-09T16:09:59.831Z"
+      },
+      "evidence": {
+        "portableGlbCopiedAndHashed": true,
+        "staticInspectionCompleted": true,
+        "policyValidationCompleted": true,
+        "blenderNormalizationPerformed": false,
+        "gpuImportTestPerformed": false,
+        "humanVisualReviewPerformed": false
+      }
+    }
+  },
+  {
+    "species": "fox",
+    "triangles": 8348,
+    "package": {
+      "schema": "game_dev.package_build_result.v1",
+      "packageId": "pkg_282a4f451f47140f0d4c4b61",
+      "packagePath": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/work/asset-workspace/.game-dev/packages/feldbuch_wildlife_fox/0.20.0",
+      "manifestPath": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/work/asset-workspace/.game-dev/packages/feldbuch_wildlife_fox/0.20.0/manifest.json",
+      "receiptPath": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/work/asset-workspace/.game-dev/packages/feldbuch_wildlife_fox/0.20.0/receipt.json",
+      "manifestSha256": "8d366b95e9e5bc2d6a41757e4a9819ff24d6d0fdbedbaef6b0b4a8bda7d6da21",
+      "reused": false,
+      "validation": {
+        "passed": true,
+        "errorCount": 0,
+        "warningCount": 0
+      },
+      "catalog": {
+        "packageId": "pkg_282a4f451f47140f0d4c4b61",
+        "assetId": "feldbuch_wildlife_fox",
+        "version": "0.20.0",
+        "displayName": "feldbuch-wildlife-fox",
+        "description": "Lokales Blender-Artenmodell f\u00fcr Feldbuch; GPU-Instanzen, Laufanimation mit Fu\u00dfkontakten und Atmung. Keine externen Jobs.",
+        "category": "creature",
+        "license": "CC0-1.0",
+        "packagePath": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/work/asset-workspace/.game-dev/packages/feldbuch_wildlife_fox/0.20.0",
+        "modelPath": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/work/asset-workspace/.game-dev/packages/feldbuch_wildlife_fox/0.20.0/model.glb",
+        "modelSha256": "61a4d1b845aa406928a327648417ae1c3982510b9c4e8ce33b7c494fbc98a22f",
+        "manifestSha256": "8d366b95e9e5bc2d6a41757e4a9819ff24d6d0fdbedbaef6b0b4a8bda7d6da21",
+        "validationPassed": true,
+        "validationErrors": 0,
+        "validationWarnings": 0,
+        "origin": "local procedural anatomy",
+        "indexedAt": "2026-10-09T16:10:00.500Z"
+      },
+      "evidence": {
+        "portableGlbCopiedAndHashed": true,
+        "staticInspectionCompleted": true,
+        "policyValidationCompleted": true,
+        "blenderNormalizationPerformed": false,
+        "gpuImportTestPerformed": false,
+        "humanVisualReviewPerformed": false
+      }
+    }
+  },
+  {
+    "species": "halichoerus_grypus",
+    "triangles": 5950,
+    "package": {
+      "schema": "game_dev.package_build_result.v1",
+      "packageId": "pkg_8eada10f18b8719e8ee48aed",
+      "packagePath": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/work/asset-workspace/.game-dev/packages/feldbuch_wildlife_halichoerus_grypus/0.20.2",
+      "manifestPath": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/work/asset-workspace/.game-dev/packages/feldbuch_wildlife_halichoerus_grypus/0.20.2/manifest.json",
+      "receiptPath": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/work/asset-workspace/.game-dev/packages/feldbuch_wildlife_halichoerus_grypus/0.20.2/receipt.json",
+      "manifestSha256": "3da9c8767aebb8f16b7d16e912bae653c0e92e3cb6365079e47d2ad766d08178",
+      "reused": false,
+      "validation": {
+        "passed": true,
+        "errorCount": 0,
+        "warningCount": 0
+      },
+      "catalog": {
+        "packageId": "pkg_8eada10f18b8719e8ee48aed",
+        "assetId": "feldbuch_wildlife_halichoerus_grypus",
+        "version": "0.20.2",
+        "displayName": "feldbuch-wildlife-halichoerus-grypus",
+        "description": "Lokales Blender-Artenmodell f\u00fcr Feldbuch; GPU-Instanzen, Laufanimation mit Fu\u00dfkontakten und Atmung. Keine externen Jobs.",
+        "category": "creature",
+        "license": "CC0-1.0",
+        "packagePath": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/work/asset-workspace/.game-dev/packages/feldbuch_wildlife_halichoerus_grypus/0.20.2",
+        "modelPath": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/work/asset-workspace/.game-dev/packages/feldbuch_wildlife_halichoerus_grypus/0.20.2/model.glb",
+        "modelSha256": "76c7ab0d30f024df59d3096dd65336920a045a77c4ed671ebe33b29bd01545f9",
+        "manifestSha256": "3da9c8767aebb8f16b7d16e912bae653c0e92e3cb6365079e47d2ad766d08178",
+        "validationPassed": true,
+        "validationErrors": 0,
+        "validationWarnings": 0,
+        "origin": "local procedural anatomy",
+        "indexedAt": "2026-10-09T16:26:39.062Z"
+      },
+      "evidence": {
+        "portableGlbCopiedAndHashed": true,
+        "staticInspectionCompleted": true,
+        "policyValidationCompleted": true,
+        "blenderNormalizationPerformed": false,
+        "gpuImportTestPerformed": false,
+        "humanVisualReviewPerformed": false
+      }
+    }
+  },
+  {
+    "species": "hare",
+    "triangles": 8526,
+    "package": {
+      "schema": "game_dev.package_build_result.v1",
+      "packageId": "pkg_7afb93e785e093d1c3d50559",
+      "packagePath": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/work/asset-workspace/.game-dev/packages/feldbuch_wildlife_hare/0.20.0",
+      "manifestPath": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/work/asset-workspace/.game-dev/packages/feldbuch_wildlife_hare/0.20.0/manifest.json",
+      "receiptPath": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/work/asset-workspace/.game-dev/packages/feldbuch_wildlife_hare/0.20.0/receipt.json",
+      "manifestSha256": "eeb92e2f9896a5a2d87a6a311995423fd27c6597a90a6b05891bea72513b9235",
+      "reused": false,
+      "validation": {
+        "passed": true,
+        "errorCount": 0,
+        "warningCount": 0
+      },
+      "catalog": {
+        "packageId": "pkg_7afb93e785e093d1c3d50559",
+        "assetId": "feldbuch_wildlife_hare",
+        "version": "0.20.0",
+        "displayName": "feldbuch-wildlife-hare",
+        "description": "Lokales Blender-Artenmodell f\u00fcr Feldbuch; GPU-Instanzen, Laufanimation mit Fu\u00dfkontakten und Atmung. Keine externen Jobs.",
+        "category": "creature",
+        "license": "CC0-1.0",
+        "packagePath": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/work/asset-workspace/.game-dev/packages/feldbuch_wildlife_hare/0.20.0",
+        "modelPath": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/work/asset-workspace/.game-dev/packages/feldbuch_wildlife_hare/0.20.0/model.glb",
+        "modelSha256": "e92d42f5354a8da52afb019e15b38fcd8396afa6fbe5eae0feae0a807c3e3c17",
+        "manifestSha256": "eeb92e2f9896a5a2d87a6a311995423fd27c6597a90a6b05891bea72513b9235",
+        "validationPassed": true,
+        "validationErrors": 0,
+        "validationWarnings": 0,
+        "origin": "local procedural anatomy",
+        "indexedAt": "2026-10-09T16:10:01.830Z"
+      },
+      "evidence": {
+        "portableGlbCopiedAndHashed": true,
+        "staticInspectionCompleted": true,
+        "policyValidationCompleted": true,
+        "blenderNormalizationPerformed": false,
+        "gpuImportTestPerformed": false,
+        "humanVisualReviewPerformed": false
+      }
+    }
+  },
+  {
+    "species": "phoca_vitulina",
+    "triangles": 5926,
+    "package": {
+      "schema": "game_dev.package_build_result.v1",
+      "packageId": "pkg_2b06779fe4d783239e2c4a7b",
+      "packagePath": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/work/asset-workspace/.game-dev/packages/feldbuch_wildlife_phoca_vitulina/0.20.2",
+      "manifestPath": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/work/asset-workspace/.game-dev/packages/feldbuch_wildlife_phoca_vitulina/0.20.2/manifest.json",
+      "receiptPath": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/work/asset-workspace/.game-dev/packages/feldbuch_wildlife_phoca_vitulina/0.20.2/receipt.json",
+      "manifestSha256": "42f2d80bcc7b15d88f024a2ebf1c7d3cf4946c2036b43824d8782048203f23d6",
+      "reused": false,
+      "validation": {
+        "passed": true,
+        "errorCount": 0,
+        "warningCount": 0
+      },
+      "catalog": {
+        "packageId": "pkg_2b06779fe4d783239e2c4a7b",
+        "assetId": "feldbuch_wildlife_phoca_vitulina",
+        "version": "0.20.2",
+        "displayName": "feldbuch-wildlife-phoca-vitulina",
+        "description": "Lokales Blender-Artenmodell f\u00fcr Feldbuch; GPU-Instanzen, Laufanimation mit Fu\u00dfkontakten und Atmung. Keine externen Jobs.",
+        "category": "creature",
+        "license": "CC0-1.0",
+        "packagePath": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/work/asset-workspace/.game-dev/packages/feldbuch_wildlife_phoca_vitulina/0.20.2",
+        "modelPath": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/work/asset-workspace/.game-dev/packages/feldbuch_wildlife_phoca_vitulina/0.20.2/model.glb",
+        "modelSha256": "3ae9d705d6fdab9d4bd5b73e29db11ba99653744ae5ee2ddd176e3e7fd675888",
+        "manifestSha256": "42f2d80bcc7b15d88f024a2ebf1c7d3cf4946c2036b43824d8782048203f23d6",
+        "validationPassed": true,
+        "validationErrors": 0,
+        "validationWarnings": 0,
+        "origin": "local procedural anatomy",
+        "indexedAt": "2026-10-09T16:26:37.780Z"
+      },
+      "evidence": {
+        "portableGlbCopiedAndHashed": true,
+        "staticInspectionCompleted": true,
+        "policyValidationCompleted": true,
+        "blenderNormalizationPerformed": false,
+        "gpuImportTestPerformed": false,
+        "humanVisualReviewPerformed": false
+      }
+    }
+  },
+  {
+    "species": "sciurus_vulgaris",
+    "triangles": 6278,
+    "package": {
+      "schema": "game_dev.package_build_result.v1",
+      "packageId": "pkg_14b8f4ecfdc054532894fc22",
+      "packagePath": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/work/asset-workspace/.game-dev/packages/feldbuch_wildlife_sciurus_vulgaris/0.20.0",
+      "manifestPath": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/work/asset-workspace/.game-dev/packages/feldbuch_wildlife_sciurus_vulgaris/0.20.0/manifest.json",
+      "receiptPath": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/work/asset-workspace/.game-dev/packages/feldbuch_wildlife_sciurus_vulgaris/0.20.0/receipt.json",
+      "manifestSha256": "b893bdabdcd7766ffcd0017e1bb25937276f75a310ec0400027c6022559d8a94",
+      "reused": false,
+      "validation": {
+        "passed": true,
+        "errorCount": 0,
+        "warningCount": 0
+      },
+      "catalog": {
+        "packageId": "pkg_14b8f4ecfdc054532894fc22",
+        "assetId": "feldbuch_wildlife_sciurus_vulgaris",
+        "version": "0.20.0",
+        "displayName": "feldbuch-wildlife-sciurus-vulgaris",
+        "description": "Lokales Blender-Artenmodell f\u00fcr Feldbuch; GPU-Instanzen, Laufanimation mit Fu\u00dfkontakten und Atmung. Keine externen Jobs.",
+        "category": "creature",
+        "license": "CC0-1.0",
+        "packagePath": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/work/asset-workspace/.game-dev/packages/feldbuch_wildlife_sciurus_vulgaris/0.20.0",
+        "modelPath": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/work/asset-workspace/.game-dev/packages/feldbuch_wildlife_sciurus_vulgaris/0.20.0/model.glb",
+        "modelSha256": "cb7d2e813c2276460c9ab0e4598c303f6e981d28718f114f82335ca258bd816e",
+        "manifestSha256": "b893bdabdcd7766ffcd0017e1bb25937276f75a310ec0400027c6022559d8a94",
+        "validationPassed": true,
+        "validationErrors": 0,
+        "validationWarnings": 0,
+        "origin": "local procedural anatomy",
+        "indexedAt": "2026-10-09T16:10:03.172Z"
+      },
+      "evidence": {
+        "portableGlbCopiedAndHashed": true,
+        "staticInspectionCompleted": true,
+        "policyValidationCompleted": true,
+        "blenderNormalizationPerformed": false,
+        "gpuImportTestPerformed": false,
+        "humanVisualReviewPerformed": false
+      }
+    }
+  }
+]

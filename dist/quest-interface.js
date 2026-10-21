@@ -1,0 +1,104 @@
+import { questFinished, questInstructions } from './quest-learning.js?revision=120';
+import * as THREE from './vendor/three.module.js?revision=120';
+import { ANIMALS, PLANTS, HABITATS } from './biodiversity.js?revision=120';
+import { QUESTS, questSpecies } from './quests.js?revision=120';
+import { TRAIL_LENGTH, nearestTrail, trailPoint } from './trail.js?revision=120';
+import { CENTERS, groundHeight } from './habitat-world.js?revision=120';
+const $=id=>document.getElementById(id);
+const pct=n=>n==null?'–':`${(n*100).toFixed(1)} %`;
+
+export class QuestInterface {
+ constructor({scene,book,journal,observer,openPanel,escape,toast,onChange,onFocus,onMode}) {
+  Object.assign(this,{book,journal,observer,openPanel,escape,toast,onChange,onFocus,onMode});this.filter='interaction';this.tick=0;this.lastStatus='';
+  this.beacons=[];this.guide=null;
+  for(let i=0;i<1;i++) {
+   const group=new THREE.Group(),m=new THREE.MeshBasicMaterial({color:'#a3d3e4',transparent:true,opacity:.35,blending:THREE.AdditiveBlending,depthWrite:false,fog:false});
+   const shaft=new THREE.Mesh(new THREE.CylinderGeometry(.035,.14,2.2,8,1,true),m);shaft.position.y=1.1;group.add(shaft);
+   const ring=new THREE.Mesh(new THREE.TorusGeometry(.55,.012,6,40),new THREE.MeshBasicMaterial({color:'#ffe4a6',transparent:true,opacity:.7,depthWrite:false}));ring.rotation.x=Math.PI/2;ring.position.y=.035;group.add(ring);
+   group.visible=false;scene.add(group);if(i){const dot=new THREE.Mesh(new THREE.SphereGeometry(.10,8,6),new THREE.MeshBasicMaterial({color:'#fff0bd',fog:false}));dot.position.y=1.3;group.add(dot);}this.beacons.push(group);
+  }
+  this.markerPose=new THREE.Object3D();this.markerColor=new THREE.Color();
+  this.scenarioShafts=new THREE.InstancedMesh(new THREE.CylinderGeometry(.035,.13,28,8,1,true),new THREE.MeshBasicMaterial({color:'#ffffff',transparent:true,opacity:.24,blending:THREE.AdditiveBlending,depthWrite:false,fog:false}),96);
+  this.scenarioRings=new THREE.InstancedMesh(new THREE.TorusGeometry(.48,.016,5,32).rotateX(Math.PI/2),new THREE.MeshBasicMaterial({color:'#ffffff',transparent:true,opacity:.65,depthWrite:false}),96);
+  for(const mesh of [this.scenarioShafts,this.scenarioRings]){for(let i=0;i<96;i++)mesh.setColorAt(i,new THREE.Color('#ffe2a0'));mesh.count=0;mesh.visible=false;mesh.frustumCulled=false;scene.add(mesh);}
+  $('quests').addEventListener('click',()=>this.show());$('quest-focus').addEventListener('click',()=>{const a=this.book.target(this.observer);if(a)this.onFocus(a);});
+ }
+ show() {
+  if(this.book.scenario?.current)return this.showScenario();
+  const e=this.escape,active=this.book.active;
+  this.openPanel('RANGERDIENST · DEIN QUESTBUCH',`<h2>Deine Dienstaufträge.</h2><p>Lerne dein Revier durch ökologische Untersuchungen kennen. Wähle eine Untersuchung. Lichtpunkte zeigen beteiligte Organismen, der Lichtstrahl führt zum Fundort. Bestimme die Arten und prüfe anschließend den angegebenen Nachweis. Für Beobachtungen darfst du den Bohlenweg verlassen.</p><p class="mini-note">Wähle selbst einen Auftrag. Nach seinem Abschluss findest du hier die fachliche Auswertung deiner Beobachtung.</p><div class="panel-row"><label for="quest-category" class="mini-note">Untersuchungsbereich</label><select id="quest-category"><option value="interaction">Interaktionen & Ressourcennutzung</option><option value="evolution">Evolutionsfaktoren (Modellversuche)</option></select><span class="badge">${Object.values(this.book.completed).reduce((n,r)=>n+Object.keys(r.encounters||{}).length,0)} Fundorte dokumentiert</span></div>${active?`<div class="concept"><b>${active.done?'Abgeschlossen':'Aktiv'}: ${e(active.quest.title)}</b><br>${e(active.quest.goal)}<div class="panel-row"><button class="action quiet" id="active-quest-details">Auftrag ansehen</button><button class="action quiet" id="cancel-quest">Auftrag beenden</button></div></div>`:''}<div id="quest-list" class="quest-list"></div><div class="panel-row"><button class="action quiet" id="change-mode">Expeditionsmodus wechseln</button></div>`);
+  $('change-mode').addEventListener('click',()=>this.onMode());
+  $('quest-category').value=this.filter;$('quest-category').addEventListener('change',ev=>{this.filter=ev.target.value;this.renderList();});
+  if(active){$('active-quest-details').addEventListener('click',()=>this.details(active.quest.id));$('cancel-quest').addEventListener('click',()=>{this.book.cancel();this.onChange();this.show();});}
+  this.renderList();
+ }
+ renderList() {
+  const e=this.escape,quests=this.book.available().filter(q=>q.category===this.filter);
+  $('quest-list').innerHTML=quests.map(q=>`<button class="quest-card" data-quest="${q.id}"><span class="eyebrow">${e(questFinished(this.book,q)?q.classification||'EVOLUTIONSFAKTOR · GENETISCHES MODELL':'BEOBACHTUNGSAUFTRAG')}</span><strong>${e(q.title)}</strong><span>${e(questFinished(this.book,q)?q.definition||q.goal:questInstructions(q))}</span>${questFinished(this.book,q)&&q.effect?`<span class="interaction-effect">${e(q.effect)}</span>`:''}<small>${this.book.progress(q)} / ${q.encounters.length} Fundorte · ${e(questSpecies(q).slice(0,4).join(' · ')+(q.species.length>4?` · + ${q.species.length-4} weitere`:''))}</small></button>`).join('');
+  $('quest-list').querySelectorAll('[data-quest]').forEach(b=>b.addEventListener('click',()=>this.details(b.dataset.quest)));
+ }
+ details(id,{habitat=null}={}) {
+  const q=this.book.available().find(q=>q.id===id),e=this.escape;
+  if(!q){this.toast('Dieser Auftrag gehört zu einem anderen Modus. Wähle einen Auftrag aus deinem aktuellen Questbuch.');return false;}
+  const active=this.book.active?.quest.id===id?this.book.active:null,complete=questFinished(this.book,q),model=q.category==='evolution';
+  const rows=q.species.map(id=>`<span class="badge">${e(ANIMALS[id]?.common||PLANTS[id]?.common||id)} · ${this.journal.entries[id]?'bestimmt':'noch zu entdecken'}</span>`).join(' ');
+  const findings=complete?`<section class="quest-findings"><span class="eyebrow">DURCH DEINE BEOBACHTUNG FREIGESCHALTET</span><h3>Deine fachliche Auswertung</h3>${q.definition?`<p>${e(q.definition)}</p><span class="interaction-effect">${e(q.effect)}</span>`:''}<h3>Beobachtung einordnen</h3><p>${e(q.proof||q.goal)}</p>${q.limit?`<p>${e(q.limit)}</p>`:''}<div class="concept">${e(q.concept)}</div>${model?`<p class="mini-note">Dieser Versuch zeigt eine endliche, diploide Modellpopulation mit zwei Genorten. Generationen sind stark verkürzt. Die Kopplung zwischen Aussehen und Genotyp ist eine didaktische Annahme; es handelt sich nicht um eine empirische Prognose für diese Tierart.</p>${active?this.modelReport():''}`:''}${q.source?`<a class="source" target="_blank" rel="noopener" href="${e(q.source)}">Fachquelle lesen ↗</a>`:''}</section>`:`<p class="mini-note">Die fachliche Auswertung wird nach Abschluss dieses Auftrags freigeschaltet.</p>`;
+  this.openPanel(complete?'ABGESCHLOSSENER AUFTRAG · DEINE ENTDECKUNG':'DEIN NÄCHSTER FELDAUFTRAG',`<h2>${e(q.title)}</h2><div class="panel-row">${rows}</div><h3>So führst du die Quest durch</h3><p>${e(questInstructions(q))}</p><div class="panel-row"><button type="button" class="action" id="start-quest">${active&&!active.done?'Zur Quest zurückkehren':complete?'Auftrag erneut ansehen':'Quest annehmen'}</button><button type="button" class="action quiet" id="back-quests">← Questbuch</button></div><h3>${q.scenario?'Fundort':'Fundort auswählen'}</h3><div class="encounter-list">${q.encounters.map(c=>`<button type="button" class="action quiet" data-region="${c.habitat}" data-context="${e(c.id)}">${this.book.completed[q.id]?.encounters?.[c.id]?'✓ ':''}${e(HABITATS.find(h=>h.id===c.habitat).name)} · ${e(c.species.map(id=>ANIMALS[id]?.common||PLANTS[id]?.common).join(' + '))}</button>`).join('')}</div>${q.scenario?`<div class="scenario-partners">${q.species.map((id,i)=>`<button type="button" class="action quiet" data-partner="${i}">${e(ANIMALS[id]?.common||PLANTS[id]?.common)} suchen</button>`).join('')}</div>`:''}${findings}`);
+  const select=()=>{if(this.book.active?.quest.id!==id||this.book.active.done)this.book.select(id);if(habitat&&this.book.active?.contexts.some(c=>c.habitat===habitat))this.book.active.preferredHabitat=habitat;this.onChange();this.updateSelectionPrompt();};
+  if(q.scenario)$('panel-content').querySelectorAll('[data-partner]').forEach(b=>b.addEventListener('click',()=>{select();const partner=this.book.partners().find(p=>p.species===q.species[Number(b.dataset.partner)]);if(partner){$('panel').close();this.onFocus(partner);}}));
+  $('panel-content').querySelectorAll('[data-region]').forEach(b=>b.addEventListener('click',()=>{select();if(this.book.active){this.book.active.preferredHabitat=b.dataset.region;this.book.active.preferredContext=b.dataset.context;$('panel').close();this.toast(questInstructions(q));}}));
+  $('back-quests').addEventListener('click',()=>this.show());$('start-quest').addEventListener('click',()=>{select();$('panel').close();this.toast(questInstructions(q));});
+  return true;
+ }
+ showScenario(){
+  const scenario=this.book.scenario.current,e=this.escape,p=this.book.scenario.progress(this.book);
+  this.openPanel('RANGERDIENST · INTERAKTIONEN UND WECHSELWIRKUNGEN',`<h2>${e(scenario.title)}</h2><p>Wähle ein Artenpaar und beobachte seine Partner. Die fachliche Auswertung erscheint nach Abschluss beim jeweiligen Auftrag.</p><p>Fokussiere beide Partner mit Fernglas beziehungsweise Lupe und sieh sie gemeinsam im Bildausschnitt. Dann ist der Paarauftrag erfüllt. Die Beziehung lernst du an ihrem Verhalten kennen. Wähle unten ein Artenpaar aus: Nur dessen Partner bekommen Lichtstrahlen. Andere passende Beobachtungen zählen ebenfalls für dein Feldbuch und die Aufträge.</p><p class="mini-note">Hohe goldene Strahlen zeigen Tiere; grüne Strahlen zeigen Pflanzen. Die Strahlen folgen den tatsächlichen Partnern. ${scenario.id==='parasitism'?'Winzige Parasiten lassen sich über „Partner suchen“ in der Auftragsansicht gezielt fokussieren und in der Detailansicht ansehen.':''}</p><div class="panel-row"><span class="badge">${p.done} / ${p.total} Artenpaare gefunden</span><button class="action quiet" id="change-mode">Expeditionsmodus wechseln</button></div><div id="scenario-quests"></div>`);
+  $('change-mode').addEventListener('click',()=>this.onMode());
+  const order=['forest','meadow','farmland','city','saltmarsh','wadden','beach','lake'];
+  $('scenario-quests').innerHTML=order.map(id=>{const quests=scenario.quests.filter(q=>q.habitat===id);if(!quests.length)return'';const h=HABITATS.find(h=>h.id===id);return`<section class="quest-ecosystem" data-ecosystem="${id}"><h3>${e(h.name)} <small>${quests.filter(q=>this.book.progress(q)).length} / ${quests.length}</small></h3>${quests.map(q=>`<button class="quest-card ${this.book.progress(q)?'completed':''}" data-quest="${q.id}"><strong>${e(q.title)}</strong><small>${this.book.active?.quest.id===q.id?'Aktives Weglicht · ':''}${q.species.map(id=>`${e((ANIMALS[id]||PLANTS[id]).common)}: ${this.journal.entries[id]?'bestimmt':'finden'}`).join(' · ')}</small><span>${this.book.progress(q)?'Artenpaar gefunden · Auswertung freigeschaltet':'Beide fokussieren → gemeinsam sehen'}</span></button>`).join('')}</section>`;}).join('');
+  $('scenario-quests').querySelectorAll('[data-quest]').forEach(b=>b.addEventListener('click',()=>this.details(b.dataset.quest)));
+ }
+ updateScenarioMarkers(){const markers=this.book.partners();let count=0;const pose=this.markerPose,shown=[];
+  for(const p of markers){const c=CENTERS[p.habitat],plant=p.focusType==='plant',x=plant?p.instance?.x??p.x+c.x:p.renderX??p.x+c.x,z=plant?p.instance?.z??p.z+c.z:p.renderZ??p.z+c.z;if(Math.hypot(x-this.observer.x,z-this.observer.z)>=160||count>=96)continue;const y=plant?p.instance?.y??groundHeight(x,z):p.y??groundHeight(x,z);this.markerColor.set(plant?'#b4e09b':'#ffe2a0');pose.position.set(x,y+14,z);pose.updateMatrix();this.scenarioShafts.setMatrixAt(count,pose.matrix);this.scenarioShafts.setColorAt(count,this.markerColor);pose.position.y=y+.045;pose.updateMatrix();this.scenarioRings.setMatrixAt(count,pose.matrix);this.scenarioRings.setColorAt(count++,this.markerColor);shown.push({id:p.id??null,species:p.species,habitat:p.habitat,type:plant?'plant':'animal',x,y,z,quest:this.book.active.quest.id});}
+  $('world').dataset.scenarioMarkers=String(this.book.scenario?.current?count:0);$('world').dataset.questMarkers=JSON.stringify(shown);
+  for(const mesh of [this.scenarioShafts,this.scenarioRings]){mesh.count=count;mesh.visible=count>0;mesh.instanceMatrix.needsUpdate=true;mesh.instanceColor.needsUpdate=true;}this.scenarioShafts.material.opacity=document.body.classList.contains('observing')?.065:.24;
+ }
+ modelReport() {
+  const m=this.book.evolution,s=m.snapshot(),e=this.escape;
+  const events=m.events.slice(-5),names={birth:'Nachkomme geboren',generation:'Nächste Generation',mutation:'Allel verändert',recombination:'Chromosomen neu kombiniert',geneFlow:'Allele an Nachkommen im anderen Teilraum weitergegeben',migration:'Durchlass überquert',isolation:'Überquerung an der Straße verhindert',bottleneck:'Zufällige Überlebendenstichprobe',drift:'Endliche Stichprobe der nächsten Generation',sexualSelection:'Paarung nach Modellpräferenz',selection:'Unterschiedlicher Fortpflanzungserfolg',selectivePredation:'Genotypabhängiger Fraßdruck',noOffspring:'Noch keine ausreichende Nachkommenschaft'};
+  const hist=m.history,scaleX=i=>34+i*440/Math.max(1,hist.length-1),scaleY=p=>125-p*100;
+  const paths=['west','east'].map((side,i)=>`<polyline points="${hist.filter(h=>h[side].pA!=null).map((h,n)=>`${scaleX(n)},${scaleY(h[side].pA)}`).join(' ')}" fill="none" stroke="${i?'#b7844d':'#607c60'}" stroke-width="3"/>`).join('');
+  return`<h3>Genpool im beobachtbaren Modell</h3><table class="model-table"><thead><tr><th>Teilpopulation</th><th>Lebende Individuen</th><th>Allel A</th><th>Allel B</th></tr></thead><tbody>${['west','east'].map(side=>`<tr><td>${side==='west'?'West':'Ost'}</td><td>${s[side].n}</td><td>${pct(s[side].pA)}</td><td>${pct(s[side].pB)}</td></tr>`).join('')}</tbody></table><p class="mini-note">Generation ${m.generation} · Allelhäufigkeit = Kopien des Allels / alle Kopien des Genorts. Jungen und noch lebende Eltern können sich während des Übergangs überlappen.</p><svg class="model-chart" viewBox="0 0 500 160" role="img" aria-label="Allelhäufigkeit A je Generation in West und Ost"><path d="M34 24V125H477" fill="none" stroke="#9aa891"/><text x="3" y="28">100 %</text><text x="12" y="129">0 %</text>${paths}<text x="34" y="149">Start</text><text x="400" y="149">Generation ${m.generation}</text></svg><p class="mini-note">Grün: West · Braun: Ost. Eine Veränderung allein erklärt ihre Ursache noch nicht.</p><h3>Letzte Modellereignisse</h3>${events.length?events.map(event=>`<p class="mini-note">G${event.generation} · ${e(names[event.kind]||event.kind)}${event.parents?` · Eltern ${event.parents.join(' + ')}`:''}</p>`).join(''):'<p class="mini-note">Der Versuch läuft. Suche die Modelltiere und beobachte die nächste Paarung.</p>'}`;
+ }
+ updateSelectionPrompt(){
+  const awaiting=!!this.book.scenario?.current&&!this.book.active,button=$('quests');
+  if(this.awaitingChoice!==awaiting){this.awaitingChoice=awaiting;button.classList.toggle('awaiting-choice',awaiting);button.setAttribute('aria-label',awaiting?'Questbuch öffnen – bitte eine Quest auswählen':'Questbuch öffnen');$('world').dataset.awaitingQuest=String(awaiting);}
+  const id=this.book.active?.quest.id||'';if($('world').dataset.activeQuest!==id)$('world').dataset.activeQuest=id;
+ }
+ update(dt,binocular,focused) {
+  this.updateSelectionPrompt();
+  this.scenarioShafts.visible=this.scenarioRings.visible=false;
+  const a=this.book.active,guide=$('quest-guide');guide.hidden=!a;
+  if(!a){this.beacons.forEach(b=>b.visible=false);this.updateScenarioMarkers();return;}
+  $('quest-name').textContent=a.quest.title;
+  const actor=this.book.target(this.observer);
+  if(actor&&a.quest.category==='interaction'){$('quest-name').textContent=a.context.species.map(id=>ANIMALS[id]?.common||PLANTS[id]?.common||id).join(' ↔ ');guide.querySelector('.eyebrow').textContent=a.quest.title;}else guide.querySelector('.eyebrow').textContent='AKTIVER AUFTRAG';
+  if(a.done||!actor){this.beacons.forEach(b=>b.visible=false);$('quest-distance').textContent=a.done?'✓ Aufgabe abgeschlossen':'Keine lebenden Partner verfügbar';$('quest-status').textContent=a.done?'Deinen Nachweis findest du im Questbuch.':'Wähle im Questbuch einen anderen Fundort. Durch Jagd verlorene Tiere werden nicht ersetzt.';$('quest-focus').hidden=true;this.updateScenarioMarkers();return;}
+  const c=CENTERS[actor.habitat],x=actor.renderX??actor.x+c.x,z=actor.renderZ??actor.z+c.z,distance=Math.hypot(x-this.observer.x,z-this.observer.z);
+  let nav={x,z},relay=false;
+  if(distance>85){const from=nearestTrail(this.observer.x,this.observer.z),to=nearestTrail(x,z),step=Math.sign(to.distance-from.distance)*Math.min(55,Math.abs(to.distance-from.distance));nav=from.offset>12?from:trailPoint(Math.max(0,Math.min(TRAIL_LENGTH,from.distance+step)));relay=true;}
+  this.guide=nav;
+  const bearing=Math.atan2(nav.x-this.observer.x,-(nav.z-this.observer.z))+this.observer.yaw;
+  $('quest-arrow').style.transform=`rotate(${bearing}rad)`;
+  $('quest-distance').textContent=relay?`${Math.round(Math.hypot(nav.x-this.observer.x,nav.z-this.observer.z))} m zum Weglicht · ${Math.round(distance)} m zum Fundort`:`${Math.round(distance)} m zum Fundort`;
+  const pair=a.quest.scenario?this.book.scenario.observationProgress(a.quest):null;
+  $('quest-progress').style.width=`${pair?pair.focused/pair.total*100:Math.min(100,a.seconds/6*100)}%`;
+  const model=a.quest.category==='evolution',known=this.journal.entries[actor.species];
+  const missing=a.quest.scenario?a.quest.species.filter(id=>!this.journal.entries[id]).map(id=>(ANIMALS[id]||PLANTS[id]).common):[];
+  const regional=a.quest.scenario?`${this.book.progress(a.quest)} / 1 Artenpaar · ${HABITATS.find(h=>h.id===actor.habitat).name}. `:`${a.contexts.filter(c=>c.done).length}/${a.contexts.length} Fundorte · ${HABITATS.find(h=>h.id===actor.habitat).name}. `;const message=pair?`${pair.focused} / ${pair.total} Partner fokussiert · ${pair.focused<pair.total?'Beide Partner einzeln ins Fernglas beziehungsweise in die Lupe nehmen.':'Beide gemeinsam ins Bild nehmen; bei Bedarf den Zoom verringern.'}`:regional+(missing.length?`Zuerst bestimmen: ${missing.join(' und ')}.`:model?`Generation ${this.book.evolution.generation} · ${this.book.evolution.evidence()?'Modellereignis erfolgt – Individuen sechs Sekunden beobachten.':'Eltern, Ortswechsel und nächste Generation beobachten.'}`:!known?'Tierart zuerst mit dem Fernglas bestimmen.':a.seconds>0?'Passende Beziehung im Blick halten.':'Auf eine passende Begegnung achten; Arteneinträge allein reichen nicht.');
+  if(message!==this.lastStatus){$('quest-status').textContent=message;this.lastStatus=message;}
+  $('quest-focus').hidden=distance>48||binocular&&focused?.item===actor;
+  this.beacons[0].visible=relay;this.beacons[0].children[0].material.opacity=document.body.classList.contains('observing')?.06:.35;this.beacons[0].position.set(nav.x,groundHeight(nav.x,nav.z)+.35,nav.z);
+  this.updateScenarioMarkers();
+ }
+}

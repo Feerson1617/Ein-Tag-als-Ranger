@@ -1,0 +1,45 @@
+{
+  "assetId": "feldbuch_wildlife_halichoerus_grypus",
+  "category": "creature",
+  "description": "Lokales Blender-Artenmodell für Feldbuch; GPU-Instanzen, Laufanimation mit Fußkontakten und Atmung. Keine externen Jobs.",
+  "displayName": "feldbuch-wildlife-halichoerus-grypus",
+  "files": [
+    {
+      "bytes": 316452,
+      "kind": "model",
+      "path": "model.glb",
+      "sha256": "da82e0b83a8d492a6cfeea0dd692301aed3ebba7d0bcea650b3ef93b69726d59"
+    },
+    {
+      "bytes": 1579,
+      "kind": "metadata",
+      "path": "metadata.json",
+      "sha256": "22c1c39be31bd262f599602b5dd1a09b7c8ab4648b86438e7dd8efa22cf362ae"
+    },
+    {
+      "bytes": 425,
+      "kind": "provenance",
+      "path": "provenance.json",
+      "sha256": "9b9689cc160820aace9d210cca663366b28bba5612e497873ebbc32d0b9c5690"
+    },
+    {
+      "bytes": 2856,
+      "kind": "validation",
+      "path": "validation.json",
+      "sha256": "9a8ca59f18129c754c56df7dcedfe0f3015df41383edc38a3cb21ff561b261b2"
+    }
+  ],
+  "license": "CC0-1.0",
+  "model": "model.glb",
+  "packageId": "pkg_f6a468e8e6f6e0170af72160",
+  "provenance": {
+    "origin": "local procedural anatomy"
+  },
+  "schema": "game_dev.asset_package.v1",
+  "validation": {
+    "errorCount": 0,
+    "passed": true,
+    "warningCount": 0
+  },
+  "version": "0.20.1"
+}

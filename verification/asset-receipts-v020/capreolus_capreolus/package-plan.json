@@ -1,0 +1,99 @@
+{
+  "schema": "game_dev.result.v1",
+  "operation": "package.build",
+  "ok": true,
+  "data": {
+    "schema": "game_dev.package_build_plan.v1",
+    "dryRun": true,
+    "sourcePath": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/work/authored-wildlife-v020/capreolus_capreolus.glb",
+    "sourceSha256": "0ba5af2375ddf8cd3ccf1d51d4c7c18689cf16500491d5afc16cf4810e1c6f02",
+    "sourceBytes": 500212,
+    "assetId": "feldbuch_wildlife_capreolus_capreolus",
+    "version": "0.20.0",
+    "license": "CC0-1.0",
+    "destination": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/work/asset-workspace/.game-dev/packages/feldbuch_wildlife_capreolus_capreolus/0.20.0",
+    "destinationExists": false,
+    "validation": {
+      "passed": true,
+      "errorCount": 0,
+      "warningCount": 0,
+      "checks": [
+        {
+          "id": "uvs_present",
+          "severity": "error",
+          "passed": true,
+          "actual": "every primitive has TEXCOORD_0",
+          "expected": "every primitive carries UV coordinates",
+          "consequence": "Without UVs the mesh cannot be textured at all \u2014 not by a generator, not by hand."
+        },
+        {
+          "id": "normals_present",
+          "severity": "error",
+          "passed": true,
+          "actual": "every primitive has NORMAL",
+          "expected": "every primitive carries normals",
+          "consequence": "Missing normals leave lighting to a renderer guess, usually reading as faceted or black."
+        },
+        {
+          "id": "triangle_budget",
+          "severity": "error",
+          "passed": true,
+          "actual": "9464 triangles",
+          "expected": "at most 10000",
+          "consequence": "Over budget costs frame time on every instance drawn."
+        },
+        {
+          "id": "material_count",
+          "severity": "warning",
+          "passed": true,
+          "actual": "1 materials",
+          "expected": "at most 1",
+          "consequence": "Each material is a separate draw call unless the pipeline batches them."
+        },
+        {
+          "id": "bounding_box_finite",
+          "severity": "error",
+          "passed": true,
+          "actual": "1.100 x 1.031 x 0.281 m",
+          "expected": "finite bounds",
+          "consequence": "Non-finite bounds produce a NaN view matrix in anything that frames the asset."
+        },
+        {
+          "id": "max_dimension",
+          "severity": "warning",
+          "passed": true,
+          "actual": "largest edge 1.100 m",
+          "expected": "at most 3 m",
+          "consequence": "An asset far larger than expected usually means the export used the wrong unit scale."
+        },
+        {
+          "id": "min_dimension",
+          "severity": "error",
+          "passed": true,
+          "actual": "smallest edge 0.280565 m",
+          "expected": "at least 0.01 m",
+          "consequence": "A collapsed axis means the mesh is flat or empty, whatever its triangle count says."
+        },
+        {
+          "id": "has_geometry",
+          "severity": "error",
+          "passed": true,
+          "actual": "9464 triangles",
+          "expected": "at least one triangle",
+          "consequence": "A file can parse cleanly and still contain nothing to draw."
+        }
+      ],
+      "inspectorWarnings": [
+        "no base colour texture on any material: the asset is untextured and will read as flat colour"
+      ]
+    },
+    "wouldWrite": true,
+    "evidence": {
+      "staticInspectionCompleted": true,
+      "policyValidationCompleted": true,
+      "packageIdComputed": false,
+      "nothingWritten": true
+    },
+    "evidenceCeiling": "A plan reports what the build would validate and where it would land. The packageId hashes the staged file set, so it cannot be computed without performing the write this plan exists to avoid. When the destination already holds a package, the build reuses it if identical and refuses if not."
+  }
+}

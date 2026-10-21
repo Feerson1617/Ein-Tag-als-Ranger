@@ -1,0 +1,23 @@
+{
+  "completedAt": "2026-10-09T16:10:01.817Z",
+  "destination": {
+    "assetId": "feldbuch_wildlife_hare",
+    "version": "0.20.0"
+  },
+  "evidence": {
+    "blenderNormalizationPerformed": false,
+    "gpuImportTestPerformed": false,
+    "humanVisualReviewPerformed": false,
+    "modelBytesCopiedAndHashed": true,
+    "policyValidationCompleted": true,
+    "staticInspectionCompleted": true
+  },
+  "manifestSha256": "eeb92e2f9896a5a2d87a6a311995423fd27c6597a90a6b05891bea72513b9235",
+  "packageId": "pkg_7afb93e785e093d1c3d50559",
+  "schema": "game_dev.package_receipt.v1",
+  "source": {
+    "bytes": 452864,
+    "fileName": "hare.glb",
+    "sha256": "e92d42f5354a8da52afb019e15b38fcd8396afa6fbe5eae0feae0a807c3e3c17"
+  }
+}

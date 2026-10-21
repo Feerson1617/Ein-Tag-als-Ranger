@@ -1,0 +1,10 @@
+{
+  "species": "halichoerus_grypus",
+  "lengthMeters": 2.2,
+  "triangles": 5950,
+  "bytes": 316448,
+  "sha256": "76c7ab0d30f024df59d3096dd65336920a045a77c4ed671ebe33b29bd01545f9",
+  "legFeet": {},
+  "source": "author-wildlife-v020.py",
+  "license": "CC0-1.0"
+}

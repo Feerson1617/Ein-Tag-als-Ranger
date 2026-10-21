@@ -1,0 +1,13 @@
+{
+  "authoringScriptSha256": "[redacted]",
+  "costEUR": 0,
+  "origin": "local procedural anatomy",
+  "schema": "game_dev.asset_provenance.v1",
+  "source": {
+    "bytes": 500212,
+    "fileName": "capreolus_capreolus.glb",
+    "sha256": "0ba5af2375ddf8cd3ccf1d51d4c7c18689cf16500491d5afc16cf4810e1c6f02"
+  },
+  "sourceSha256": "0ba5af2375ddf8cd3ccf1d51d4c7c18689cf16500491d5afc16cf4810e1c6f02",
+  "tool": "Blender 4.5.14 LTS"
+}

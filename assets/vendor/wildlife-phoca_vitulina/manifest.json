@@ -1,0 +1,45 @@
+{
+  "assetId": "feldbuch_wildlife_phoca_vitulina",
+  "category": "creature",
+  "description": "Lokales Blender-Artenmodell für Feldbuch; GPU-Instanzen, Laufanimation mit Fußkontakten und Atmung. Keine externen Jobs.",
+  "displayName": "feldbuch-wildlife-phoca-vitulina",
+  "files": [
+    {
+      "bytes": 315192,
+      "kind": "model",
+      "path": "model.glb",
+      "sha256": "65b2747cc2a3e309ad0cab62b3778e357560ee59cf5c3659f57e9a0435051eff"
+    },
+    {
+      "bytes": 1573,
+      "kind": "metadata",
+      "path": "metadata.json",
+      "sha256": "73687777f09179031bd407d4d289b70a3d08e60030882887d2e2f0c09e64fb12"
+    },
+    {
+      "bytes": 421,
+      "kind": "provenance",
+      "path": "provenance.json",
+      "sha256": "884084bb0f4b6699f286deffe400ec628abf53e4ff4a679c8f38f44aabb185a0"
+    },
+    {
+      "bytes": 2856,
+      "kind": "validation",
+      "path": "validation.json",
+      "sha256": "95877446ce735c77a4f838496acf807df410f91b2fec8bbe8bff419db8b9892d"
+    }
+  ],
+  "license": "CC0-1.0",
+  "model": "model.glb",
+  "packageId": "pkg_e4a9784b08bdfb949df2997b",
+  "provenance": {
+    "origin": "local procedural anatomy"
+  },
+  "schema": "game_dev.asset_package.v1",
+  "validation": {
+    "errorCount": 0,
+    "passed": true,
+    "warningCount": 0
+  },
+  "version": "0.20.0"
+}

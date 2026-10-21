@@ -1,0 +1,21 @@
+{
+  "schema": "game_dev.result.v1",
+  "operation": "vendor.admit",
+  "ok": true,
+  "data": {
+    "reused": false,
+    "packageId": "pkg_14b8f4ecfdc054532894fc22",
+    "projectRoot": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/evolutionswald",
+    "destination": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/evolutionswald/assets/vendor/wildlife-sciurus_vulgaris",
+    "lockPath": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/evolutionswald/.game-dev/vendor-lock.json",
+    "blockers": [],
+    "evidence": {
+      "packageHashesVerified": true,
+      "copiedPackageHashesVerified": true,
+      "projectImportTestPerformed": false,
+      "gpuRenderTestPerformed": false
+    },
+    "dryRun": false,
+    "receiptPath": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/evolutionswald/.game-dev/vendor-receipts/2026-10-09T16-13-33-953Z-feldbuch_wildlife_sciurus_vulgaris-046bc6d3-bcdb-47ec-88ee-6fa8d3724113.json"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "completedAt": "2026-10-09T16:10:00.489Z",
+  "destination": {
+    "assetId": "feldbuch_wildlife_fox",
+    "version": "0.20.0"
+  },
+  "evidence": {
+    "blenderNormalizationPerformed": false,
+    "gpuImportTestPerformed": false,
+    "humanVisualReviewPerformed": false,
+    "modelBytesCopiedAndHashed": true,
+    "policyValidationCompleted": true,
+    "staticInspectionCompleted": true
+  },
+  "manifestSha256": "8d366b95e9e5bc2d6a41757e4a9819ff24d6d0fdbedbaef6b0b4a8bda7d6da21",
+  "packageId": "pkg_282a4f451f47140f0d4c4b61",
+  "schema": "game_dev.package_receipt.v1",
+  "source": {
+    "bytes": 443236,
+    "fileName": "fox.glb",
+    "sha256": "61a4d1b845aa406928a327648417ae1c3982510b9c4e8ce33b7c494fbc98a22f"
+  }
+}

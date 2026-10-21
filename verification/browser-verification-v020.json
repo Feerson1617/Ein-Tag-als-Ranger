@@ -1,0 +1,46 @@
+{
+  "singleHtml": {
+    "metrics": {
+      "activeAnimals": "101",
+      "activeQuest": "",
+      "animalTimeScale": "1",
+      "awaitingQuest": "false",
+      "cpuRenderMs": "3.4",
+      "cpuSimulationMs": "1.1",
+      "decodedAssets": "18",
+      "dormantAnimals": "891",
+      "drawCalls": "278",
+      "drawnAnimals": "36",
+      "engine": "three.js r180",
+      "excavations": "[{\"id\":\"probe-0\",\"x\":-22.706368562589038,\"z\":-75.80148743351697,\"depthCm\":0,\"targetCm\":0},{\"id\":\"probe-1\",\"x\":-13.355828091685943,\"z\":-76.99474667028376,\"depthCm\":0,\"targetCm\":0},{\"id\":\"probe-2\",\"x\":1.1070611914448447,\"z\":-79.56754301785455,\"depthCm\":0,\"targetCm\":0},{\"id\":\"probe-3\",\"x\":13.677916084525748,\"z\":-79.0029725200749,\"depthCm\":0,\"targetCm\":0}]",
+      "fps": "30",
+      "frameP95Ms": "33.4",
+      "gpuMs": "6.2",
+      "graphicsMode": "auto",
+      "heaviest": "[{\"species\":\"phragmites_australis\",\"n\":122,\"t\":93452},{\"species\":\"structure\",\"n\":1900,\"t\":45600},{\"species\":\"trifolium_pratense\",\"n\":27,\"t\":37260},{\"species\":\"structure\",\"n\":1806,\"t\":36120}]",
+      "movementMaxSpeed": "7.5",
+      "movementSpeed": "0.00",
+      "pixelRatio": "2.00",
+      "plantImpostors": "3303",
+      "questMarkers": "[]",
+      "renderHeight": "952",
+      "renderWidth": "1694",
+      "revision": "0.20",
+      "scenario": "free",
+      "scenarioMarkers": "0",
+      "staticReusedFrames": "2423",
+      "staticUploads": "389",
+      "targetFps": "30",
+      "triangles": "673332"
+    },
+    "viewport": {
+      "height": 476,
+      "width": 847
+    }
+  },
+  "pagesStartVerified": true,
+  "scenarioSelectionAndRelevantMarkersVerified": true,
+  "binocularHalfTimeVerified": true,
+  "finalSealSurfaceVerified": true,
+  "paidAccountsCreated": false
+}

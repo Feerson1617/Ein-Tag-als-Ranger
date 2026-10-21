@@ -1,0 +1,31 @@
+{
+  "schema": "game_dev.result.v1",
+  "operation": "asset.validate",
+  "ok": true,
+  "data": {
+    "schema": "org.gamedebug.asset_validation.v1",
+    "modelPath": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/work/authored-wildlife-v020/capreolus_capreolus.glb",
+    "passed": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "summary": {
+      "triangles": 9464,
+      "materials": 1,
+      "textures": 0,
+      "hasUVs": true,
+      "hasNormals": true,
+      "hasTangents": false,
+      "sizeMeters": [
+        1.0999999940395355,
+        1.031095027923584,
+        0.28056500852108
+      ]
+    },
+    "failures": [],
+    "checksRun": 8,
+    "inspectorWarnings": [
+      "no base colour texture on any material: the asset is untextured and will read as flat colour"
+    ],
+    "nextStep": "Passes cleanly."
+  }
+}

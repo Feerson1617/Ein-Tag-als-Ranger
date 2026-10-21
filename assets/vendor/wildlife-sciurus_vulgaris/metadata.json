@@ -1,0 +1,57 @@
+{
+  "assetId": "feldbuch_wildlife_sciurus_vulgaris",
+  "category": "creature",
+  "description": "Lokales Blender-Artenmodell für Feldbuch; GPU-Instanzen, Laufanimation mit Fußkontakten und Atmung. Keine externen Jobs.",
+  "displayName": "feldbuch-wildlife-sciurus-vulgaris",
+  "inspection": {
+    "animationCount": 0,
+    "boundingBox": {
+      "max": [
+        0.17609108984470367,
+        0.34890180826187134,
+        0.07385994493961334
+      ],
+      "min": [
+        -0.24390891194343567,
+        0,
+        -0.07385994493961334
+      ],
+      "sizeMeters": [
+        0.42000000178813934,
+        0.34890180826187134,
+        0.14771988987922668
+      ]
+    },
+    "boundingBoxEmpty": false,
+    "fileBytes": 335640,
+    "filePath": "model.glb",
+    "generator": "glTF-Transform v4.5.1",
+    "hasNormals": true,
+    "hasSkin": false,
+    "hasTangents": false,
+    "hasUVs": true,
+    "materialCount": 1,
+    "meshCount": 1,
+    "pbr": {
+      "hasBaseColorTexture": false,
+      "hasEmissiveTexture": false,
+      "hasMetallicRoughnessTexture": false,
+      "hasNormalTexture": false,
+      "hasOcclusionTexture": false
+    },
+    "primitiveCount": 1,
+    "sceneGraphFallback": false,
+    "textureCount": 0,
+    "textureResolutions": [],
+    "triangleCount": 6278,
+    "undrawnMeshCount": 0,
+    "undrawnPrimitiveCount": 0,
+    "undrawnTriangleCount": 0,
+    "vertexCount": 3213,
+    "warnings": [
+      "no base colour texture on any material: the asset is untextured and will read as flat colour"
+    ]
+  },
+  "license": "CC0-1.0",
+  "schema": "game_dev.asset_metadata.v1"
+}

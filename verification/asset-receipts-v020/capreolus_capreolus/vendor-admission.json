@@ -1,0 +1,21 @@
+{
+  "schema": "game_dev.result.v1",
+  "operation": "vendor.admit",
+  "ok": true,
+  "data": {
+    "reused": false,
+    "packageId": "pkg_ee1fa9be800d7b5f2f7ec637",
+    "projectRoot": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/evolutionswald",
+    "destination": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/evolutionswald/assets/vendor/wildlife-capreolus_capreolus",
+    "lockPath": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/evolutionswald/.game-dev/vendor-lock.json",
+    "blockers": [],
+    "evidence": {
+      "packageHashesVerified": true,
+      "copiedPackageHashesVerified": true,
+      "projectImportTestPerformed": false,
+      "gpuRenderTestPerformed": false
+    },
+    "dryRun": false,
+    "receiptPath": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/evolutionswald/.game-dev/vendor-receipts/2026-10-09T16-13-31-907Z-feldbuch_wildlife_capreolus_capreolus-ea5152c8-237a-4982-a7ab-b123611395d6.json"
+  }
+}

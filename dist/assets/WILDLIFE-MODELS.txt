@@ -1,0 +1,13 @@
+Feldbuch: lokale Tiermodelle, Version 0.20, 9. Oktober 2026.
+
+Rotfuchs, Feldhase, Reh (weiblich), Eichhörnchen, Seehund und Kegelrobbe.
+Eigene prozedurale Anatomie, erstellt mit Blender 4.5.14 LTS.
+Lizenz dieser sechs Modelle: CC0-1.0. Keine externen Providerjobs, Kosten oder Konten.
+Keine Fotografien/Scans; Fellfarbe als lineare Vertexfarben. UVs, Normals,
+Kopfgewichte und Fußkontakte dienen dem eigenen instanzierten Laufshader.
+Im Laufspiel ergänzt eine gemeinsam genutzte lokale Felltextur die Modelle.
+GLB-Prüfung und kanonische Assetpakete: game-dev 1.5.0.
+Blender-Quelldateien, Erzeugungsskript und SHA-256-Nachweise im Projekt-ZIP.
+
+Die Lizenzen anderer Spielmedien sind davon unabhängig; siehe SPECIES-PHOTOS.txt,
+BIRD-RECORDINGS.txt und attribution.json sowie THREE-LICENSE.txt.

@@ -1,0 +1,45 @@
+{
+  "schema": "game_dev.result.v1",
+  "operation": "package.build",
+  "ok": true,
+  "data": {
+    "schema": "game_dev.package_build_result.v1",
+    "packageId": "pkg_ee1fa9be800d7b5f2f7ec637",
+    "packagePath": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/work/asset-workspace/.game-dev/packages/feldbuch_wildlife_capreolus_capreolus/0.20.0",
+    "manifestPath": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/work/asset-workspace/.game-dev/packages/feldbuch_wildlife_capreolus_capreolus/0.20.0/manifest.json",
+    "receiptPath": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/work/asset-workspace/.game-dev/packages/feldbuch_wildlife_capreolus_capreolus/0.20.0/receipt.json",
+    "manifestSha256": "0c3825d3a79df276ddf12e3a70698d5adbc6bb1dacfe1ec7db1a49f09a51a0f7",
+    "reused": false,
+    "validation": {
+      "passed": true,
+      "errorCount": 0,
+      "warningCount": 0
+    },
+    "catalog": {
+      "packageId": "pkg_ee1fa9be800d7b5f2f7ec637",
+      "assetId": "feldbuch_wildlife_capreolus_capreolus",
+      "version": "0.20.0",
+      "displayName": "feldbuch-wildlife-capreolus-capreolus",
+      "description": "Lokales Blender-Artenmodell f\u00fcr Feldbuch; GPU-Instanzen, Laufanimation mit Fu\u00dfkontakten und Atmung. Keine externen Jobs.",
+      "category": "creature",
+      "license": "CC0-1.0",
+      "packagePath": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/work/asset-workspace/.game-dev/packages/feldbuch_wildlife_capreolus_capreolus/0.20.0",
+      "modelPath": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/work/asset-workspace/.game-dev/packages/feldbuch_wildlife_capreolus_capreolus/0.20.0/model.glb",
+      "modelSha256": "0ba5af2375ddf8cd3ccf1d51d4c7c18689cf16500491d5afc16cf4810e1c6f02",
+      "manifestSha256": "0c3825d3a79df276ddf12e3a70698d5adbc6bb1dacfe1ec7db1a49f09a51a0f7",
+      "validationPassed": true,
+      "validationErrors": 0,
+      "validationWarnings": 0,
+      "origin": "local procedural anatomy",
+      "indexedAt": "2026-10-09T16:09:59.831Z"
+    },
+    "evidence": {
+      "portableGlbCopiedAndHashed": true,
+      "staticInspectionCompleted": true,
+      "policyValidationCompleted": true,
+      "blenderNormalizationPerformed": false,
+      "gpuImportTestPerformed": false,
+      "humanVisualReviewPerformed": false
+    }
+  }
+}

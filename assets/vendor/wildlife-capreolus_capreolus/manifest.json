@@ -1,0 +1,45 @@
+{
+  "assetId": "feldbuch_wildlife_capreolus_capreolus",
+  "category": "creature",
+  "description": "Lokales Blender-Artenmodell für Feldbuch; GPU-Instanzen, Laufanimation mit Fußkontakten und Atmung. Keine externen Jobs.",
+  "displayName": "feldbuch-wildlife-capreolus-capreolus",
+  "files": [
+    {
+      "bytes": 500212,
+      "kind": "model",
+      "path": "model.glb",
+      "sha256": "0ba5af2375ddf8cd3ccf1d51d4c7c18689cf16500491d5afc16cf4810e1c6f02"
+    },
+    {
+      "bytes": 1581,
+      "kind": "metadata",
+      "path": "metadata.json",
+      "sha256": "f292b8d06adfbe77eb9722d4388c3e893733b094c76688b594b8d7665909c46f"
+    },
+    {
+      "bytes": 426,
+      "kind": "provenance",
+      "path": "provenance.json",
+      "sha256": "14f743923e42b3ce4f22ea3b25d3bbffd4133c00f3154231397bce1d98e9e791"
+    },
+    {
+      "bytes": 2856,
+      "kind": "validation",
+      "path": "validation.json",
+      "sha256": "bab5d68445bb7627ff2da5063890eed071454ace788abfdb03c9ff18bafca333"
+    }
+  ],
+  "license": "CC0-1.0",
+  "model": "model.glb",
+  "packageId": "pkg_ee1fa9be800d7b5f2f7ec637",
+  "provenance": {
+    "origin": "local procedural anatomy"
+  },
+  "schema": "game_dev.asset_package.v1",
+  "validation": {
+    "errorCount": 0,
+    "passed": true,
+    "warningCount": 0
+  },
+  "version": "0.20.0"
+}

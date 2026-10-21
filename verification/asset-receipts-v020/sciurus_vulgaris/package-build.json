@@ -1,0 +1,45 @@
+{
+  "schema": "game_dev.result.v1",
+  "operation": "package.build",
+  "ok": true,
+  "data": {
+    "schema": "game_dev.package_build_result.v1",
+    "packageId": "pkg_14b8f4ecfdc054532894fc22",
+    "packagePath": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/work/asset-workspace/.game-dev/packages/feldbuch_wildlife_sciurus_vulgaris/0.20.0",
+    "manifestPath": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/work/asset-workspace/.game-dev/packages/feldbuch_wildlife_sciurus_vulgaris/0.20.0/manifest.json",
+    "receiptPath": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/work/asset-workspace/.game-dev/packages/feldbuch_wildlife_sciurus_vulgaris/0.20.0/receipt.json",
+    "manifestSha256": "b893bdabdcd7766ffcd0017e1bb25937276f75a310ec0400027c6022559d8a94",
+    "reused": false,
+    "validation": {
+      "passed": true,
+      "errorCount": 0,
+      "warningCount": 0
+    },
+    "catalog": {
+      "packageId": "pkg_14b8f4ecfdc054532894fc22",
+      "assetId": "feldbuch_wildlife_sciurus_vulgaris",
+      "version": "0.20.0",
+      "displayName": "feldbuch-wildlife-sciurus-vulgaris",
+      "description": "Lokales Blender-Artenmodell f\u00fcr Feldbuch; GPU-Instanzen, Laufanimation mit Fu\u00dfkontakten und Atmung. Keine externen Jobs.",
+      "category": "creature",
+      "license": "CC0-1.0",
+      "packagePath": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/work/asset-workspace/.game-dev/packages/feldbuch_wildlife_sciurus_vulgaris/0.20.0",
+      "modelPath": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/work/asset-workspace/.game-dev/packages/feldbuch_wildlife_sciurus_vulgaris/0.20.0/model.glb",
+      "modelSha256": "cb7d2e813c2276460c9ab0e4598c303f6e981d28718f114f82335ca258bd816e",
+      "manifestSha256": "b893bdabdcd7766ffcd0017e1bb25937276f75a310ec0400027c6022559d8a94",
+      "validationPassed": true,
+      "validationErrors": 0,
+      "validationWarnings": 0,
+      "origin": "local procedural anatomy",
+      "indexedAt": "2026-10-09T16:10:03.172Z"
+    },
+    "evidence": {
+      "portableGlbCopiedAndHashed": true,
+      "staticInspectionCompleted": true,
+      "policyValidationCompleted": true,
+      "blenderNormalizationPerformed": false,
+      "gpuImportTestPerformed": false,
+      "humanVisualReviewPerformed": false
+    }
+  }
+}

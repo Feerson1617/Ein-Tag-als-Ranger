@@ -1,0 +1,21 @@
+{
+  "schema": "game_dev.result.v1",
+  "operation": "vendor.admit",
+  "ok": true,
+  "data": {
+    "reused": false,
+    "packageId": "pkg_8eada10f18b8719e8ee48aed",
+    "projectRoot": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/evolutionswald",
+    "destination": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/evolutionswald/assets/vendor/wildlife-halichoerus_grypus-v0202",
+    "lockPath": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/evolutionswald/.game-dev/vendor-lock.json",
+    "blockers": [],
+    "evidence": {
+      "packageHashesVerified": true,
+      "copiedPackageHashesVerified": true,
+      "projectImportTestPerformed": false,
+      "gpuRenderTestPerformed": false
+    },
+    "dryRun": false,
+    "receiptPath": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/evolutionswald/.game-dev/vendor-receipts/2026-10-09T16-26-39-635Z-feldbuch_wildlife_halichoerus_grypus-9b8443c8-beb8-452f-b13c-3bd27d231df3.json"
+  }
+}

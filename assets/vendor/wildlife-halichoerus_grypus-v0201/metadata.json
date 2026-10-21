@@ -1,0 +1,57 @@
+{
+  "assetId": "feldbuch_wildlife_halichoerus_grypus",
+  "category": "creature",
+  "description": "Lokales Blender-Artenmodell für Feldbuch; GPU-Instanzen, Laufanimation mit Fußkontakten und Atmung. Keine externen Jobs.",
+  "displayName": "feldbuch-wildlife-halichoerus-grypus",
+  "inspection": {
+    "animationCount": 0,
+    "boundingBox": {
+      "max": [
+        1.0142606496810913,
+        0.5847786068916321,
+        0.5207974910736084
+      ],
+      "min": [
+        -1.1857393980026245,
+        0,
+        -0.5207974910736084
+      ],
+      "sizeMeters": [
+        2.200000047683716,
+        0.5847786068916321,
+        1.0415949821472168
+      ]
+    },
+    "boundingBoxEmpty": false,
+    "fileBytes": 316452,
+    "filePath": "model.glb",
+    "generator": "glTF-Transform v4.5.1",
+    "hasNormals": true,
+    "hasSkin": false,
+    "hasTangents": false,
+    "hasUVs": true,
+    "materialCount": 1,
+    "meshCount": 1,
+    "pbr": {
+      "hasBaseColorTexture": false,
+      "hasEmissiveTexture": false,
+      "hasMetallicRoughnessTexture": false,
+      "hasNormalTexture": false,
+      "hasOcclusionTexture": false
+    },
+    "primitiveCount": 1,
+    "sceneGraphFallback": false,
+    "textureCount": 0,
+    "textureResolutions": [],
+    "triangleCount": 5950,
+    "undrawnMeshCount": 0,
+    "undrawnPrimitiveCount": 0,
+    "undrawnTriangleCount": 0,
+    "vertexCount": 3029,
+    "warnings": [
+      "no base colour texture on any material: the asset is untextured and will read as flat colour"
+    ]
+  },
+  "license": "CC0-1.0",
+  "schema": "game_dev.asset_metadata.v1"
+}

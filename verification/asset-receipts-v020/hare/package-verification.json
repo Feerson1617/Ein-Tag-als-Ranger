@@ -1,0 +1,60 @@
+{
+  "schema": "game_dev.result.v1",
+  "operation": "package.verify",
+  "ok": true,
+  "data": {
+    "schema": "game_dev.package_verification.v1",
+    "packagePath": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/work/asset-workspace/.game-dev/packages/feldbuch_wildlife_hare/0.20.0",
+    "manifest": {
+      "assetId": "feldbuch_wildlife_hare",
+      "category": "creature",
+      "description": "Lokales Blender-Artenmodell f\u00fcr Feldbuch; GPU-Instanzen, Laufanimation mit Fu\u00dfkontakten und Atmung. Keine externen Jobs.",
+      "displayName": "feldbuch-wildlife-hare",
+      "files": [
+        {
+          "bytes": 452864,
+          "kind": "model",
+          "path": "model.glb",
+          "sha256": "e92d42f5354a8da52afb019e15b38fcd8396afa6fbe5eae0feae0a807c3e3c17"
+        },
+        {
+          "bytes": 1555,
+          "kind": "metadata",
+          "path": "metadata.json",
+          "sha256": "1a67bb8269eeb7565a9fe6d49ae0d59faac6fdc4587fe66a553513a1dbe6df81"
+        },
+        {
+          "bytes": 411,
+          "kind": "provenance",
+          "path": "provenance.json",
+          "sha256": "839337f55b3a34a1434c26c645eed3c67e412fb6f742c91d861115018ba13073"
+        },
+        {
+          "bytes": 2856,
+          "kind": "validation",
+          "path": "validation.json",
+          "sha256": "e0ba2496a0d4e277abd6b9fc60c85d0925348c940eae0db36e467109a11881ac"
+        }
+      ],
+      "license": "CC0-1.0",
+      "model": "model.glb",
+      "packageId": "pkg_7afb93e785e093d1c3d50559",
+      "provenance": {
+        "origin": "local procedural anatomy"
+      },
+      "schema": "game_dev.asset_package.v1",
+      "validation": {
+        "errorCount": 0,
+        "passed": true,
+        "warningCount": 0
+      },
+      "version": "0.20.0"
+    },
+    "hashesVerified": true,
+    "evidence": {
+      "packageBytesVerified": true,
+      "gpuImportTestPerformed": false,
+      "humanVisualReviewPerformed": false
+    }
+  }
+}

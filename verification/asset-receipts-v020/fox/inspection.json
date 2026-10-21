@@ -1,0 +1,54 @@
+{
+  "schema": "game_dev.result.v1",
+  "operation": "asset.inspect",
+  "ok": true,
+  "data": {
+    "filePath": "/Users/tobi/Documents/Codex/2026-10-07/du-x20/work/authored-wildlife-v020/fox.glb",
+    "fileBytes": 443236,
+    "generator": "glTF-Transform v4.5.1",
+    "meshCount": 1,
+    "primitiveCount": 1,
+    "vertexCount": 4248,
+    "triangleCount": 8348,
+    "undrawnMeshCount": 0,
+    "undrawnPrimitiveCount": 0,
+    "undrawnTriangleCount": 0,
+    "sceneGraphFallback": false,
+    "materialCount": 1,
+    "textureCount": 0,
+    "textureResolutions": [],
+    "boundingBox": {
+      "min": [
+        -0.668451726436615,
+        0,
+        -0.09976452589035034
+      ],
+      "max": [
+        0.4315482974052429,
+        0.5845849514007568,
+        0.09976452589035034
+      ],
+      "sizeMeters": [
+        1.100000023841858,
+        0.5845849514007568,
+        0.19952905178070068
+      ]
+    },
+    "boundingBoxEmpty": false,
+    "hasUVs": true,
+    "hasNormals": true,
+    "hasTangents": false,
+    "pbr": {
+      "hasBaseColorTexture": false,
+      "hasMetallicRoughnessTexture": false,
+      "hasNormalTexture": false,
+      "hasOcclusionTexture": false,
+      "hasEmissiveTexture": false
+    },
+    "animationCount": 0,
+    "hasSkin": false,
+    "warnings": [
+      "no base colour texture on any material: the asset is untextured and will read as flat colour"
+    ]
+  }
+}

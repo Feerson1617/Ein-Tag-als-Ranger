@@ -1,0 +1,14 @@
+{
+  "version": "0.19",
+  "javascriptFiles": 54,
+  "embeddedModules": 50,
+  "embeddedAssets": 183,
+  "embeddedBirdRecordings": 3,
+  "embeddedSpeciesPhotographs": 168,
+  "exactSourcesAndCss": true,
+  "htmlCopiesIdentical": true,
+  "successfulCheckReports": 21,
+  "optionalMediaLazy": true,
+  "bytes": 44923960,
+  "sha256": "8d6b7cc90ad7038d5f55bb0d8f7345ed731c2c0a33aa7222af473cf36e13058f"
+}

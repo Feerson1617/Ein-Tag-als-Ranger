@@ -1,0 +1,45 @@
+{
+  "assetId": "feldbuch_wildlife_fox",
+  "category": "creature",
+  "description": "Lokales Blender-Artenmodell für Feldbuch; GPU-Instanzen, Laufanimation mit Fußkontakten und Atmung. Keine externen Jobs.",
+  "displayName": "feldbuch-wildlife-fox",
+  "files": [
+    {
+      "bytes": 443236,
+      "kind": "model",
+      "path": "model.glb",
+      "sha256": "61a4d1b845aa406928a327648417ae1c3982510b9c4e8ce33b7c494fbc98a22f"
+    },
+    {
+      "bytes": 1551,
+      "kind": "metadata",
+      "path": "metadata.json",
+      "sha256": "a8b246e73403d6c4e9b2c994709e3dea8c48ab8d7f5f472241452d4075cf45ce"
+    },
+    {
+      "bytes": 410,
+      "kind": "provenance",
+      "path": "provenance.json",
+      "sha256": "a3712f534d69f0db510fc3f36f5d06535461100b20ba7db8abad0a8e76985261"
+    },
+    {
+      "bytes": 2856,
+      "kind": "validation",
+      "path": "validation.json",
+      "sha256": "74c61e3a8f244a8025de8cc9e245888a14fcafe5fe56cfb510c29ce4c59566c2"
+    }
+  ],
+  "license": "CC0-1.0",
+  "model": "model.glb",
+  "packageId": "pkg_282a4f451f47140f0d4c4b61",
+  "provenance": {
+    "origin": "local procedural anatomy"
+  },
+  "schema": "game_dev.asset_package.v1",
+  "validation": {
+    "errorCount": 0,
+    "passed": true,
+    "warningCount": 0
+  },
+  "version": "0.20.0"
+}

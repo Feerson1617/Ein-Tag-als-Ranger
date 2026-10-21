@@ -1,0 +1,98 @@
+[
+  {
+    "check": "living-world",
+    "passed": false,
+    "seconds": 2.0,
+    "error": "node:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert.ok(Math.abs(p.y-groundHeight(p.x,p.z))<.001)\n\n    at file:///Users/tobi/Documents/Codex/2026-10-07/du-x20/work/living-world-check.mjs:12:40\n    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)\n    at async node:internal/modules/esm/loader:647:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\n  generatedMessage: true,\n  code: 'ERR_ASSERTION',\n  actual: false,\n  expected: true,\n  operator: '==',\n  diff: 'simple'\n}\n\nNode.js v24.21.0\n"
+  },
+  {
+    "check": "ranger",
+    "passed": true,
+    "seconds": 3.1,
+    "error": ""
+  },
+  {
+    "check": "scenario",
+    "passed": true,
+    "seconds": 5.2,
+    "error": ""
+  },
+  {
+    "check": "behavior",
+    "passed": true,
+    "seconds": 11.9,
+    "error": ""
+  },
+  {
+    "check": "quest",
+    "passed": true,
+    "seconds": 1.2,
+    "error": ""
+  },
+  {
+    "check": "regional-evolution",
+    "passed": true,
+    "seconds": 15.3,
+    "error": ""
+  },
+  {
+    "check": "live-experiment",
+    "passed": true,
+    "seconds": 6.0,
+    "error": ""
+  },
+  {
+    "check": "observation",
+    "passed": true,
+    "seconds": 0.1,
+    "error": ""
+  },
+  {
+    "check": "world",
+    "passed": true,
+    "seconds": 4.6,
+    "error": ""
+  },
+  {
+    "check": "coast-performance",
+    "passed": true,
+    "seconds": 2.1,
+    "error": ""
+  },
+  {
+    "check": "locomotion",
+    "passed": true,
+    "seconds": 4.7,
+    "error": ""
+  },
+  {
+    "check": "village-barrier",
+    "passed": true,
+    "seconds": 2.1,
+    "error": ""
+  },
+  {
+    "check": "route-birds",
+    "passed": true,
+    "seconds": 6.9,
+    "error": ""
+  },
+  {
+    "check": "ranger-usability",
+    "passed": true,
+    "seconds": 2.8,
+    "error": ""
+  },
+  {
+    "check": "compact-world",
+    "passed": true,
+    "seconds": 3.1,
+    "error": ""
+  },
+  {
+    "check": "field",
+    "passed": true,
+    "seconds": 28.6,
+    "error": ""
+  }
+]

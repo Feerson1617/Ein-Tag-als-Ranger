@@ -1,0 +1,172 @@
+{
+  "actualRegionalModels": [
+    {
+      "factor": "mutation",
+      "habitat": "forest",
+      "species": "apodemus_flavicollis",
+      "generation": 6,
+      "births": 63,
+      "evidence": true
+    },
+    {
+      "factor": "mutation",
+      "habitat": "city",
+      "species": "apodemus_flavicollis",
+      "generation": 6,
+      "births": 97,
+      "evidence": true
+    },
+    {
+      "factor": "recombination",
+      "habitat": "forest",
+      "species": "microtus_agrestis",
+      "generation": 6,
+      "births": 73,
+      "evidence": true
+    },
+    {
+      "factor": "recombination",
+      "habitat": "meadow",
+      "species": "microtus_agrestis",
+      "generation": 6,
+      "births": 81,
+      "evidence": true
+    },
+    {
+      "factor": "recombination",
+      "habitat": "farmland",
+      "species": "microtus_agrestis",
+      "generation": 6,
+      "births": 67,
+      "evidence": true
+    },
+    {
+      "factor": "selection",
+      "habitat": "forest",
+      "species": "myodes_glareolus",
+      "generation": 4,
+      "births": 26,
+      "evidence": true
+    },
+    {
+      "factor": "selection",
+      "habitat": "farmland",
+      "species": "myodes_glareolus",
+      "generation": 6,
+      "births": 37,
+      "evidence": true
+    },
+    {
+      "factor": "drift",
+      "habitat": "meadow",
+      "species": "arvicola_amphibius",
+      "generation": 6,
+      "births": 62,
+      "evidence": true
+    },
+    {
+      "factor": "drift",
+      "habitat": "lake",
+      "species": "arvicola_amphibius",
+      "generation": 6,
+      "births": 79,
+      "evidence": true
+    },
+    {
+      "factor": "drift",
+      "habitat": "city",
+      "species": "arvicola_amphibius",
+      "generation": 6,
+      "births": 76,
+      "evidence": true
+    },
+    {
+      "factor": "geneFlow",
+      "habitat": "meadow",
+      "species": "micromys_minutus",
+      "generation": 5,
+      "births": 72,
+      "evidence": true
+    },
+    {
+      "factor": "geneFlow",
+      "habitat": "farmland",
+      "species": "micromys_minutus",
+      "generation": 5,
+      "births": 65,
+      "evidence": true
+    },
+    {
+      "factor": "geneFlow",
+      "habitat": "saltmarsh",
+      "species": "micromys_minutus",
+      "generation": 4,
+      "births": 42,
+      "evidence": true
+    },
+    {
+      "factor": "isolation",
+      "habitat": "forest",
+      "species": "sorex_araneus",
+      "generation": 3,
+      "births": 28,
+      "evidence": true
+    },
+    {
+      "factor": "isolation",
+      "habitat": "meadow",
+      "species": "sorex_araneus",
+      "generation": 5,
+      "births": 62,
+      "evidence": true
+    },
+    {
+      "factor": "isolation",
+      "habitat": "city",
+      "species": "sorex_araneus",
+      "generation": 3,
+      "births": 38,
+      "evidence": true
+    },
+    {
+      "factor": "isolation",
+      "habitat": "farmland",
+      "species": "sorex_araneus",
+      "generation": 5,
+      "births": 43,
+      "evidence": true
+    },
+    {
+      "factor": "bottleneck",
+      "habitat": "city",
+      "species": "crocidura_russula",
+      "generation": 1,
+      "births": 4,
+      "evidence": true
+    },
+    {
+      "factor": "bottleneck",
+      "habitat": "farmland",
+      "species": "crocidura_russula",
+      "generation": 5,
+      "births": 17,
+      "evidence": true
+    },
+    {
+      "factor": "sexualSelection",
+      "habitat": "city",
+      "species": "mus_musculus",
+      "generation": 6,
+      "births": 109,
+      "evidence": true
+    },
+    {
+      "factor": "sexualSelection",
+      "habitat": "farmland",
+      "species": "mus_musculus",
+      "generation": 2,
+      "births": 28,
+      "evidence": true
+    }
+  ]
+}

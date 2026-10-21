@@ -1,0 +1,23 @@
+{
+  "completedAt": "2026-10-09T16:10:03.160Z",
+  "destination": {
+    "assetId": "feldbuch_wildlife_sciurus_vulgaris",
+    "version": "0.20.0"
+  },
+  "evidence": {
+    "blenderNormalizationPerformed": false,
+    "gpuImportTestPerformed": false,
+    "humanVisualReviewPerformed": false,
+    "modelBytesCopiedAndHashed": true,
+    "policyValidationCompleted": true,
+    "staticInspectionCompleted": true
+  },
+  "manifestSha256": "b893bdabdcd7766ffcd0017e1bb25937276f75a310ec0400027c6022559d8a94",
+  "packageId": "pkg_14b8f4ecfdc054532894fc22",
+  "schema": "game_dev.package_receipt.v1",
+  "source": {
+    "bytes": 335640,
+    "fileName": "sciurus_vulgaris.glb",
+    "sha256": "cb7d2e813c2276460c9ab0e4598c303f6e981d28718f114f82335ca258bd816e"
+  }
+}
