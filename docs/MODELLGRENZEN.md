@@ -17,6 +17,9 @@
   Nahrung freigelegt, für ein Tier erreichbar und aktive Filtration unterscheiden.
   Probentiefe verändert den untersuchten Raum; feste Einsetztiefen sind keine
   gemessenen natürlichen Tiefenverteilungen. Nichtfund ist kein Abwesenheitsbeweis.
+- Die festen Probenorganismen sind ein Kontrollareal: zufälliger Hintergrundfraß
+  an ihnen ist ausgesetzt; gezielte Modellaufträge sind davon getrennt. Dies ist
+  keine Aussage zur natürlichen Mortalität.
 - Wattproben sind virtuelle Sondergenehmigungen. Keine Anleitung zur realen
   Entnahme oder zum Verlassen sicherer Wege: Schutzgebiete, Gezeiten, Wetter und
   örtliche Regeln beachten; reale Wattgänge nur fachkundig begleitet planen.

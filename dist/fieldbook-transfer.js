@@ -1,5 +1,5 @@
 import { ANIMALS, PLANTS } from './biodiversity.js';
-import { MISSIONS, FOCUS_TAXA, freshLearning } from './learning-missions.js';
+import { MISSIONS, FOCUS_TAXA, evaluateMission, freshLearning } from './learning-missions.js';
 export const FIELD_SCHEMA=3;
 const isObject=x=>!!x&&typeof x==='object'&&!Array.isArray(x);
 function inspect(value,depth=0){
@@ -33,7 +33,11 @@ export function parseFieldbook(text){
  }
  const completed=d.quests?.completed||{};
  if(!isObject(completed))throw Error('Ungültige Auftragsdaten.');
- for(const r of Object.values(completed))if(!isObject(r)||!isObject(r.encounters||{}))throw Error('Ungültige Fundortdaten.');
+ for(const r of Object.values(completed)){
+  if(!isObject(r)||!isObject(r.encounters||{})||!isObject(r.investigations||{}))throw Error('Ungültige Fundortdaten.');
+  for(const evidence of Object.values(r.investigations||{}))if(!isObject(evidence)||!isObject(evidence.evidence))throw Error('Ungültiger Untersuchungsbeleg.');
+ }
+ for(const [id,state]of Object.entries(learning.missions))state.complete=evaluateMission(id,state,learning.observations).complete;
  // Validate the entire file before any mutation. Old exports keep their entries.
  return {schemaVersion:FIELD_SCHEMA,entries:d.entries,interactions:d.interactions,learning,quests:{completed}};
 }

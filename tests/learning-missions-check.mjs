@@ -45,12 +45,16 @@ for(const patch of [{siteId:'probe-1'},{sampleDepth:35},{duration:1},{present:fa
 assert.equal(evaluateMission('m3',{...m3,answers:{...m3.answers,absence:'absent'}},[low,high]).complete,false);
 j.learning={version:1,activeMission:'m1',missions:{m1:state(),m2:state(),m3:state()},observations:[...records,event,low,high]};
 j.entries.parus_major={found:1,habitat:'forest',behaviors:[]};book.completed.example={encounters:{one:{evidence:{kind:'pairSighting'},plantId:'stable-plant-id'}}};
+const forged={...exportFieldbook(j,book),learning:{...j.learning,missions:{m1:{...state(),complete:true}}}};
+assert.equal(parseFieldbook(JSON.stringify(forged)).learning.missions.m1.complete,false,'Cached completion cannot override missing evidence');
+assert.equal(evaluateMission('m3',m3,[low,{...high,evidence:{kind:'station',activity:'resting'}}]).complete,false,'Water level alone cannot prove actual filtration');
 const encoded=JSON.stringify(exportFieldbook(j,book)),data=parseFieldbook(encoded);
 assert.deepEqual(data.learning,j.learning);assert.equal(data.quests.completed.example.encounters.one.plantId,'stable-plant-id');
 applyFieldbook(data,j,book);assert.deepEqual(new FieldJournal(storage).learning,j.learning);
 const old=parseFieldbook(JSON.stringify({entries:j.entries,interactions:[],quests:book.export()}));
 assert.deepEqual(old.learning,freshLearning());assert.deepEqual(old.entries,j.entries);
 for(const invalid of [encoded.replace('"schemaVersion":3','"schemaVersion":999'),'{"__proto__":{},"entries":{},"interactions":[]}',JSON.stringify({...data,learning:{...data.learning,observations:[...data.learning.observations,data.learning.observations[0]]}}),JSON.stringify({...data,learning:{...data.learning,missions:{m1:{...state(),determinations:[null]}}}})])assert.throws(()=>parseFieldbook(invalid));
+assert.throws(()=>parseFieldbook(JSON.stringify({...data,quests:{completed:{broken:{encounters:{},investigations:'invalid'}}}})),/Fundort/);
 const originalEntries=j.entries,originalStorage=new Map(memory);let failOnce=true;
 storage.setItem=(k,v)=>{if(k==='feldbuch-quests-v1'&&failOnce){failOnce=false;throw Error('QuotaExceeded');}memory.set(k,v);};
 assert.throws(()=>applyFieldbook(old,j,book),/nicht ersetzt/);assert.equal(j.entries,originalEntries);assert.deepEqual(memory,originalStorage);

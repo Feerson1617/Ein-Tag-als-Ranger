@@ -47,7 +47,7 @@ export const MISSIONS=[
   help:['Niedrigwasser legt Sediment frei; Filtration verlangt Wasserbedeckung.','Tiefer graben untersucht einen anderen Raum. Nicht gesehen bedeutet nicht abwesend.'],
   evidence:'Zwei zeitlich dokumentierte Protokolle derselben Probe/Herzmuschel/Tiefe, Phase 0 und 0,5, jeweils mindestens 6 Modellsekunden.',
   transfer:'Welche Schutz-, Sicherheits- und Genehmigungsfragen wären bei einer realen Exkursion zuerst zu klären?',
-  limit:'Virtuelle Sondergenehmigung, keine Anleitung zur realen Probeentnahme. Feste Einsetztiefen sind keine gemessenen natürlichen Tiefenbereiche.'}
+  limit:'Virtuelle Sondergenehmigung. Zufälliger Hintergrundfraß an den festen Probenorganismen ist im Kontrollareal ausgesetzt; gezielte Modellaufträge bleiben getrennt. Keine Anleitung zur realen Probeentnahme. Feste Einsetztiefen sind keine gemessenen natürlichen Tiefenbereiche.'}
 ];
 export const missionById=id=>MISSIONS.find(m=>m.id===id);
 export const freshLearning=()=>({version:1,activeMission:null,missions:{},observations:[]});
@@ -87,6 +87,7 @@ export function evaluateMission(id,state,observations){
   const low=records.find(r=>r.id===a.lowId),high=records.find(r=>r.id===a.highId);
   if(!low||!high||low.id===high.id||low.tidePhase!==0||high.tidePhase!==.5)return fail('Wähle zwei Protokolle bei definiertem Niedrig- und Hochwasser.');
   if(low.siteId!=='probe-2'||low.siteId!==high.siteId||low.taxon!=='cerastoderma_edule'||low.taxon!==high.taxon||low.sampleDepth!==high.sampleDepth||low.duration<6||high.duration<6||!low.present||!high.present||low.scene?.scenario||high.scene?.scenario)return fail('Vergleiche dieselbe freigelegte Herzmuschel, Stelle und Tiefe; beobachte jeweils mindestens 6 Modellsekunden.');
+  if(low.source!=='model-protocol'||high.source!=='model-protocol'||low.evidence?.kind!=='station'||high.evidence?.kind!=='station'||low.evidence?.activity!=='resting'||high.evidence?.activity!=='filtering')return fail('Die Stationsprotokolle müssen eine lebende Muschel im Ruhezustand bei Niedrigwasser und bei Filtration unter Wasser zeigen.');
   const ok=a.filtration==='covered'&&a.access==='exposed'&&a.absence==='not-detected'&&a.depth==='different-space';
   return ok?{complete:true,message:'Wasserbedeckung, Erreichbarkeit, Untersuchungsraum und Nichtnachweis getrennt erklärt.'}:fail('Trenne Wasserbedeckung/Filtration, Freilegung/Erreichbarkeit und Nichtnachweis/Abwesenheit.');
  }

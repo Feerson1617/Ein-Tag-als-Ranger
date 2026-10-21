@@ -25,12 +25,14 @@ assert.ok(sampling.specimens.some(a=>a.species==='cerastoderma_edule'&&a.sampleS
 const ground=world.terrainHeight(site.x,site.z),lowWater=waterHeight(site.x,site.z,'wadden',-.9),highWater=waterHeight(site.x,site.z,'wadden',.4);
 assert.ok(lowWater<ground&&highWater>ground,`Station must actually emerge/submerge: ${JSON.stringify({ground,lowWater,highWater})}`);
 const heart=sampling.specimens.find(a=>a.species==='cerastoderma_edule'&&a.sampleSpot===site);
-wadden.environment.tide=-.9;wadden.externalTide=-.9;wadden.chooseAction(heart,ANIMALS[heart.species]);assert.equal(heart.activity,'resting');
-wadden.environment.tide=.4;wadden.externalTide=.4;wadden.chooseAction(heart,ANIMALS[heart.species]);assert.equal(heart.activity,'filtering');
+wadden.externalTide=-.9;for(let i=0;i<60;i++)wadden.update(.1,null);assert.equal(heart.activity,'resting');assert.ok(heart.alive&&!heart.dead);
+wadden.externalTide=.4;for(let i=0;i<60;i++)wadden.update(.1,null);assert.equal(heart.activity,'filtering');assert.ok(heart.alive&&!heart.dead);
+const crab=wadden.agents.find(a=>a.species==='carcinus_maenas');assert.ok(ANIMALS[crab.species].prey.includes(heart.species));wadden.activate(crab);Object.assign(crab,{x:heart.x,z:heart.z,activity:'hunting',stateTime:100,questIntent:null});
+const originalRandom=wadden.random;wadden.random=()=>0;for(let i=0;i<100;i++)wadden.update(.1,null);wadden.random=originalRandom;assert.ok(heart.alive&&!heart.dead,'Background predation must not invalidate the controlled sample');
 const ids=sampling.specimens.map(a=>a.id),plantIds=world.plants.map(p=>p.individualId);
-ui.startStation();ui.recordStation();assert.equal(j.learning.observations.length,0,'No zero-duration station record');
+wadden.externalTide=-.9;wadden.update(.1,null);ui.startStation();ui.recordStation();assert.equal(j.learning.observations.length,0,'No zero-duration station record');
 wadden.time+=6.1;ui.recordStation();assert.equal(j.learning.observations.length,1);
-ui.tideClock={phase:.5,level:.4};ui.startStation();wadden.time+=6.1;ui.recordStation();assert.equal(j.learning.observations.length,2);
+ui.tideClock={phase:.5,level:.4};wadden.externalTide=.4;wadden.update(.1,null);ui.startStation();wadden.time+=6.1;ui.recordStation();assert.equal(j.learning.observations.length,2);
 assert.deepEqual(j.learning.observations.map(r=>[r.siteId,r.sampleDepth,r.tidePhase,r.present]),[['probe-2',5,0,true],['probe-2',5,.5,true]]);
 assert.equal(j.learning.observations[0].partnerIds[0],j.learning.observations[1].partnerIds[0]);
 ui.startStation();ui.tideClock.phase=.3;wadden.time+=7;ui.recordStation();assert.equal(j.learning.observations.length,2,'Changed conditions invalidate comparison');
