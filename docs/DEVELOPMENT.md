@@ -39,3 +39,23 @@ Assets: lokale 168 Taxonfotos, drei Vogelaufnahmen, Naturmaterialien und sechs
 eigene GLBs; Nachweise in `dist/assets/*LICENSE*`, `*PHOTOS*`, `*RECORDINGS*`,
 `WILDLIFE-MODELS.txt`, `attribution.json`, `assets/vendor/` und `verification/`.
 Assetrechte sind nicht mit Biologiereferenzen oder einer Codelizenz gleichzusetzen.
+
+
+Vollständige aktuelle Prüfkette zusätzlich zu den obigen Basisbefehlen:
+
+```sh
+python3 tools/build-standalone.py
+python3 -m unittest discover -s tests -p 'test_*.py' -v
+python3 tools/browser-check.py --live --width 800 --height 500
+python3 tools/browser-check.py --site outputs/GitHub-Pages --prefix /Ein-Tag-als-Ranger/
+python3 tools/package-project.py
+```
+
+Für eine gezielte neue Abnahme nach bereits bestandenem M1/M2:
+`--live --live-mission m3`. Standard `--live` prüft alle drei aus dem laufenden
+Spiel. Der nachfolgende Import-/Formulartest verwendet sichtbar als synthetisch
+bezeichnete UI-Fixtures. Diese sind getrennt von echten Live-Beobachtungen zu
+berichten. Browserausgaben liegen in `work/browser-*`, Node-Laufmetadaten in
+`work/check-run.json`. Gemeinsame Graphprüfung für Pages und Standalone in
+`tools/module_graph.py`: nichtliterale Imports und zyklische Graphen werden mit
+Fehler abgelehnt statt unvollständig veröffentlicht.
