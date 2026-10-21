@@ -4,7 +4,7 @@ import { walkingInput,stickInput } from '../ranger-controls.js';
 import { COMPACT_GUIDE } from '../field-guide.js';
 import { MANIFEST,WORLD_VERSION } from './manifest.js';
 import { TAXA } from './taxa.js';
-import { START,BOUNDS,WALK_PROFILE,zoneAt,walkingHeight,canWalk,routeMetrics } from './layout.js';
+import { START,BOUNDS,WALK_PROFILE,zoneAt,terrainHeight,walkingHeight,canWalk,routeMetrics } from './layout.js';
 import { createReferenceState,stepReference } from './world-state.js';
 import { createWorldView } from './world-view.js';
 import { createFaunaView } from './fauna-view.js';

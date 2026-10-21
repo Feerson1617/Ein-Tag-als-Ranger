@@ -19,14 +19,18 @@ class PrefixHandler(Handler):
   return super().do_GET()
 server.shutdown();server.server_close();server=ThreadingHTTPServer(('127.0.0.1',0),partial(PrefixHandler,directory=str(site)));Thread(target=server.serve_forever,daemon=True).start();url=f'http://127.0.0.1:{server.server_port}/Ein-Tag-als-Ranger/{args.entry}'
 def save(): (out/('standalone-result.json'if args.smoke else'result.json')).write_text(json.dumps(result,indent=2,ensure_ascii=False))
-def ok(name,**details):result['checks'].append({'name':name,'passed':True,**details});save();print('PASS',name,flush=True)
+def ok(name,**details):
+ assert not result['errors'],result['errors']
+ result['checks'].append({'name':name,'passed':True,**details});save();print('PASS',name,flush=True)
 def dataset(page):return page.locator('#world').evaluate('(e)=>({...e.dataset})')
 def select_view(page,name):
  page.locator('#menu-button').click();page.locator('summary').filter(has_text='Referenzabschnitt prüfen').click();page.locator(f'[data-view="{name}"]').click()
 def ready(page):page.goto(url);page.wait_for_selector('#world[data-ready=true]',timeout=120000);page.locator('#start').click()
 def shot(page,name):
- page.wait_for_function('document.querySelector("#world").dataset.renderRevision===document.querySelector("#world").dataset.sceneRevision',timeout=45000)
+ page.wait_for_function('window.__qaErrors?.length || document.querySelector("#world").dataset.renderRevision===document.querySelector("#world").dataset.sceneRevision',timeout=45000)
+ assert not result['errors'],result['errors']
  page.screenshot(path=str(out/(name+'.png')))
+ assert not result['errors'],result['errors']
 def begin_video(page):
  page.wait_for_function('document.querySelector("#world").dataset.renderRevision===document.querySelector("#world").dataset.sceneRevision',timeout=45000)
  page.evaluate('''()=>{const stream=document.querySelector('#world').captureStream(12);window.__referenceVideo={stream,chunks:[]};const rec=new MediaRecorder(stream,{mimeType:'video/webm;codecs=vp8',videoBitsPerSecond:500000});window.__referenceVideo.rec=rec;rec.ondataavailable=e=>{if(e.data.size)window.__referenceVideo.chunks.push(e.data);};rec.start(1000);}''')
@@ -36,10 +40,11 @@ def end_video(page,name):
 with sync_playwright()as pw:
  launch={'headless':True}
  if shutil.which('chromium'):launch.update(executable_path=shutil.which('chromium'),args=['--no-sandbox','--use-angle=swiftshader','--enable-unsafe-swiftshader'])
- browser=pw.chromium.launch(**launch);video_options={'record_video_dir':str(out/'video'),'record_video_size':result['viewport']}if list((Path.home()/'.cache/ms-playwright').glob('ffmpeg-*/ffmpeg-linux'))else{};result['videoAvailable']=bool(video_options);context=browser.new_context(viewport=result['viewport'],**video_options);page=context.new_page();requests=[];page.on('pageerror',lambda e:result['errors'].append(str(e)));page.on('request',lambda r:requests.append(r.url));page.set_default_timeout(45000)
+ browser=pw.chromium.launch(**launch);video_options={'record_video_dir':str(out/'video'),'record_video_size':result['viewport']}if list((Path.home()/'.cache/ms-playwright').glob('ffmpeg-*/ffmpeg-linux'))else{};result['videoAvailable']=bool(video_options);context=browser.new_context(viewport=result['viewport'],**video_options);page=context.new_page();requests=[];page.add_init_script("window.__qaErrors=[];addEventListener('error',e=>{if(e.message&&!window.__qaErrors.includes(e.message))window.__qaErrors.push(e.message);});");page.on('pageerror',lambda e:result['errors'].append(str(e))if str(e)not in result['errors']else None);page.on('request',lambda r:requests.append(r.url));page.set_default_timeout(45000)
  try:
   result['browserVersion']=browser.version;ready(page);m=json.loads(dataset(page)['manifest']);assert m['biologicalZones']==['forest','saltmarsh','wadden'];assert len(m['activeTaxa'])==9;assert m['simulationInstances']==['compact-reference-fauna'];assert not any(x in r for r in requests for x in ['wildlife-phoca','wildlife-halichoerus','habitat-world','biodiversity','expedition-state']);shot(page,'01-waldstart');ok('boot: explicit small content/request graph',manifest=m)
   page.locator('#read-sign').click();assert page.locator('#panel').is_visible();assert '1,6 m/s' in page.locator('#panel-body').inner_text();page.locator('#close').click();ok('spawn board and shared guide reachable')
+  page.locator('#binocular').click();shot(page,'01a-binocular-runtime');page.locator('#magnifier').click();shot(page,'01b-magnifier-runtime');page.locator('#magnifier').click();ok('both live tool paths render without runtime errors')
   if args.smoke:
    page.locator('#binocular').click();assert page.locator('#binocular').get_attribute('aria-pressed')=='true';page.locator('#magnifier').click();assert page.locator('#magnifier').get_attribute('aria-pressed')=='true';assert not result['errors'];ok('standalone tools and scene; no external dependencies');result['requests']=requests;save()
   else:
