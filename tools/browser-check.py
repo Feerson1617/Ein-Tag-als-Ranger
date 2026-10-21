@@ -241,6 +241,9 @@ try:
         passed('free exploration: real tools, keyboard, map with eight regions, tablet viewport (emulation only)')
         assert not result['errors'],result['errors'];assert not result['httpErrors'],result['httpErrors']
         if args.resilience:
+            # The preceding tablet layout probe must not leak into fault cases.
+            page.set_viewport_size({'width':args.width,'height':args.height})
+            result['faultViewport']=page.viewport_size
             if stored() is None:
                 page.locator('summary').filter(has_text='Feldbuch sichern und wiederaufnehmen').click()
                 page.locator('#field-import').set_input_files(str(ROOT/'work/ui-fieldbook-fixture.json'))

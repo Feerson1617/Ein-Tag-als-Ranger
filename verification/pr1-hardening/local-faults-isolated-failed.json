@@ -1,0 +1,45 @@
+{
+  "commit": "a2250a98acd0173a21a424ce9750aaff363c65d1",
+  "sourceDirty": false,
+  "startedAt": "2026-10-21T15:00:15Z",
+  "site": "outputs/GitHub-Pages",
+  "entry": "index.html",
+  "prefix": "/Ein-Tag-als-Ranger/",
+  "viewport": [
+    800,
+    500
+  ],
+  "browser": "chromium",
+  "passed": [
+    "boot, two main entries, three mission choices, real WebGL startup",
+    "free exploration: real tools, keyboard, map with eight regions, tablet viewport (emulation only)"
+  ],
+  "failed": [
+    "Locator.click: Timeout 45000ms exceeded.\nCall log:\n  - waiting for locator(\"#test-graphics-loss\")\n    - locator resolved to <button id=\"test-graphics-loss\">Grafikverlust testen</button>\n  - attempting click action\n    - waiting for element to be visible, enabled and stable\n    - element is visible, enabled and stable\n    - scrolling into view if needed\n    - done scrolling\n    - performing click action\n"
+  ],
+  "errors": [],
+  "consoleErrors": [],
+  "httpErrors": [],
+  "notTested": [
+    "physical iPad/Safari",
+    "classroom timing/learning effect",
+    "20-minute minimum-device performance"
+  ],
+  "browserVersion": "154.0.8037.57",
+  "readySeconds": 14.22,
+  "resourceTransferBytes": 26671067,
+  "navigationTransferBytes": 8666,
+  "initialTransferBytes": 26679733,
+  "failureUI": {
+    "toast": "Feldbuch mit Belegen und individuellen IDs wiederaufgenommen.",
+    "focus": "Suche eine Art im Sichtfeld",
+    "progress": "Untersuchung läuft · Belege im Feldbuch",
+    "tool": "none",
+    "observation": {
+      "observationSeconds": "0",
+      "targetFps": "60",
+      "frameP95Ms": "14749.4",
+      "fps": "0"
+    }
+  }
+}

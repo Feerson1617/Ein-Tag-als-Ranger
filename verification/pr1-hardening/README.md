@@ -102,3 +102,18 @@ entsprechend der bereits isolierten Quota-Prüfung. Alle bestehenden Assertions
 und einzelnen Zeitlimits bleiben erhalten. Auch die Fehlerdiagnose zeigt nun
 die tatsächlich geprüfte Seite. Dies ist eine Testtreiberänderung; Spielcode
 bleibt unverändert. Der neue Fehlerlauf wird getrennt ausgewiesen.
+
+Die isolierte lokale Wiederholung (`local-faults-isolated-failed.*`) kam nach
+Start/freier Bedienung beim Klick auf den Grafikverlust-Test ins 45-s-Limit,
+noch vor der Browsertrennung. Der Treiber hatte die vorherige Tabletansicht
+1024×768 für die Fehlerfälle beibehalten (p95 14749,4 ms). Er stellt jetzt vor
+diesen Fällen die angeforderte Ansicht wieder her; der Tablet-Layouttest und
+seine Assertions bleiben erhalten. Kein Einzelzeitlimit geändert.
+
+[CI 39617310697](https://github.com/Feerson1617/Ein-Tag-als-Ranger/actions/runs/39617310697)
+wurde nach dem 30-Minuten-Gesamtbudget abgebrochen; GitHub meldet ausdrücklich
+„The job has exceeded the maximum execution time of 30m0s“. Node/Python/Pakete
+bestanden, der kombinierte Browserstep wurde abgebrochen und der Einzel-HTML-
+Smoke-Test übersprungen. Kein bestandener Gesamtlauf. Job/Annotationen sind
+als `github-extended-cancelled-*` archiviert. Der nachfolgende Lauf prüft die
+isolierten Fehlerfälle mit unveränderten Einzelzeitlimits.
