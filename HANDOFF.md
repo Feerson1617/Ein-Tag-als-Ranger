@@ -1,3 +1,12 @@
+# Arbeitsstand Ranger 1.0 – Phase 0
+
+Branch `codex/ranger-v1`, Ausgangscommit `227e61e`. Baseline 22/22, Build und
+Paketverifikation am 21.10.2026 neu bestanden. Chromium 154 zeigt die echte
+3D-Szene ohne JavaScriptfehler; Software-Rendering ist keine Gerätefreigabe.
+Die bisherigen Abschnitte sind historisch. Aktuelle Regeln und Befunde:
+`docs/RELEASE-PLAN.md`, `docs/REVIEW-STATUS.md`, `docs/DEVELOPMENT.md`.
+Keine Veröffentlichung freigegeben. Nächster Schritt: Phase-1-Regressionen.
+
 # Feldbuch – aktive Übergabe 0.20
 Stand: 9. Oktober 2026. Einstieg: `dist/index.html → expedition.js`.
 

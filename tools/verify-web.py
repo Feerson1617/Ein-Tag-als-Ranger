@@ -17,7 +17,7 @@ assert m['deferredPhotographs']==168 and m['deferredBirdRecordings']==3
 html=(web/'index.html').read_text();assert html==(web/'Feldbuch.html').read_text();assert 'allowfullscreen' not in html
 assert 'src="./'+m['modules']['expedition.js']+'"' in html
 assert (web/'.nojekyll').is_file()
-for r in json.loads((root/'work/texture-compression-v018.json').read_text()):
+for r in json.loads((root/'tests/fixtures/texture-compression-v018.json').read_text()):
     with Image.open(dist/'assets'/(r['name']+'.png'))as before,Image.open(dist/'assets'/(r['name']+'.webp'))as after:
         assert before.size==after.size and all(c.getbbox()is None for c in ImageChops.difference(before.convert('RGBA'),after.convert('RGBA')).split()),r['name']
 with zipfile.ZipFile(root/'outputs/Feldbuch-GitHub-Pages.zip')as z:
