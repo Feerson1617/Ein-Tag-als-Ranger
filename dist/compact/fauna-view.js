@@ -20,7 +20,7 @@ export async function createFaunaView(scene,state){
  const bill=new THREE.ConeGeometry(.010,.060,7);head.add(bill,'#646967',[.025,.255,0],[1,1,1],[0,0,Math.PI/2]);
  const headMesh=head.mesh();headMesh.geometry.translate(-.065,-.245,0);headMesh.position.set(.065,.245,0);bird.add(body.mesh(),headMesh);
  const feet=new GeometryBatch();for(const side of [-1,1]){stick(feet,[.038,.08,side*.021],[.002,.075,side*.028],.004,'#7b7c72');for(const dir of [-1,1])for(const k of [-1,1])stick(feet,[.002,.075,side*.028],[-.012,.075+dir*.025,side*.028+k*.006],.002,'#8e8e80');}const feetMesh=feet.mesh();bird.add(feetMesh);
- const wings=[];for(const side of [-1,1]){const b=new GeometryBatch();b.add(sphere,black,[0,0,side*.08],[.085,.015,.13]);for(let k=0;k<5;k++)b.add(sphere,white,[-.04+k*.021,0,side*.15],[.007,.003,.025]);const mesh=b.mesh();mesh.position.set(.045,.14,side*.04);mesh.visible=false;bird.add(mesh);wings.push(mesh);}bird.traverse(o=>{if(o.isMesh)o.castShadow=false;});scene.add(bird);
+ const wings=[];for(const side of [-1,1]){const b=new GeometryBatch();b.add(sphere,black,[0,0,side*.08],[.085,.015,.13]);for(let k=0;k<5;k++)b.add(sphere,white,[-.04+k*.021,0,side*.15],[.007,.003,.025]);const mesh=b.mesh();mesh.position.set(.045,.14,side*.04);mesh.visible=false;bird.add(mesh);wings.push(mesh);}bird.scale.setScalar(MANIFEST.actorScale.woodpecker);bird.traverse(o=>{if(o.isMesh)o.castShadow=false;});scene.add(bird);
  // A moving, soft ground contact cue; no stale baked animal shadows.
  const pixels=new Uint8Array(32*32*4);for(let y=0;y<32;y++)for(let x=0;x<32;x++){const i=(y*32+x)*4,r=Math.hypot((x-15.5)/15.5,(y-15.5)/15.5);pixels.set([255,255,255,Math.round(Math.max(0,1-r)**2*95)],i);}
  const shadowTexture=new THREE.DataTexture(pixels,32,32);shadowTexture.needsUpdate=true;const shadowGeometry=new THREE.PlaneGeometry(1.3,.55,4,2);shadowGeometry.rotateX(-Math.PI/2);const shadowRest=shadowGeometry.attributes.position.array.slice();const shadow=new THREE.Mesh(shadowGeometry,new THREE.MeshBasicMaterial({map:shadowTexture,color:'#252b20',transparent:true,depthWrite:false}));shadow.renderOrder=1;scene.add(shadow);
@@ -41,5 +41,5 @@ export async function createFaunaView(scene,state){
   }for(const foot of d.feet)foot.geometryGap=gaps.get(foot.part);a.needsUpdate=true;n.needsUpdate=true;
   const b=state.bird;bird.position.set(b.x,b.y,b.z);const flying=b.activity==='flying';bird.rotation.set(0,flying?Math.atan2(-(state.supports[b.targetIndex].z-b.z),state.supports[b.targetIndex].x-b.x)+Math.PI:0,flying?Math.PI/2:0);wings.forEach((w,i)=>{w.visible=flying;w.rotation.y=(i?1:-1)*Math.sin(b.phase*24)*.8;});headMesh.rotation.z=flying?-Math.PI/2:b.activity==='searching'?.06*Math.sin(b.phase*2):0;feetMesh.position.x=flying?.04*Math.min(1,b.flightTime/.3,Math.max(0,(3.5-b.flightTime)/.7)):0;
  }
- update();return {deer,bird,headMesh,feetMesh,update};
+ update();return {deer,bird,headMesh,feetMesh,birdCenter:()=>{bird.updateMatrixWorld(true);return new THREE.Vector3(.055,.12,0).applyMatrix4(bird.matrixWorld);},update};
 }

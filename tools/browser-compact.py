@@ -34,6 +34,16 @@ def shot(page,name):
  assert not result['errors'],result['errors']
  filename=('standalone-'if args.smoke else'')+name+'.png';path=out/filename;page.screenshot(path=str(path));d=dataset(page);result['captures'].append({'file':filename,'sha256':hashlib.sha256(path.read_bytes()).hexdigest(),'bytes':path.stat().st_size,'renderFov':d.get('renderFov'),'renderTool':d.get('renderTool'),'renderRevision':d.get('renderRevision'),'observer':d.get('observer'),'simulationTime':d.get('simulationTime'),'runId':d.get('runId')});save()
  assert not result['errors'],result['errors']
+def canvas_shot(page,name):
+ page.wait_for_function('window.__qaErrors?.length || document.querySelector("#world").dataset.renderRevision===document.querySelector("#world").dataset.sceneRevision',timeout=45000)
+ assert not result['errors'],result['errors']
+ # Read the real WebGL buffer in the same animation frame, before compositing.
+ # DOM labels/HUD are never part of this buffer; no image editing or target image.
+ encoded=page.evaluate("()=>new Promise(resolve=>requestAnimationFrame(()=>resolve(document.querySelector('#world').toDataURL('image/png'))))")
+ data=base64.b64decode(encoded.split(',',1)[1]);filename='unlabelled-'+name+'.png';path=out/filename;path.write_bytes(data)
+ from PIL import Image
+ with Image.open(path)as image:assert len(image.convert('RGB').getcolors(image.width*image.height)or[])>30,'Empty WebGL capture'
+ d=dataset(page);result['captures'].append({'file':filename,'sha256':hashlib.sha256(data).hexdigest(),'bytes':len(data),'canvasOnly':True,'renderFov':d.get('renderFov'),'renderTool':d.get('renderTool'),'renderRevision':d.get('renderRevision'),'observer':d.get('observer'),'simulationTime':d.get('simulationTime'),'runId':d.get('runId')});save()
 def begin_video(page):
  page.wait_for_function('document.querySelector("#world").dataset.renderRevision===document.querySelector("#world").dataset.sceneRevision',timeout=45000)
  page.evaluate('''()=>{const stream=document.querySelector('#world').captureStream(12);window.__referenceVideo={stream,chunks:[]};const rec=new MediaRecorder(stream,{mimeType:'video/webm;codecs=vp8',videoBitsPerSecond:500000});window.__referenceVideo.rec=rec;rec.ondataavailable=e=>{if(e.data.size)window.__referenceVideo.chunks.push(e.data);};rec.start(1000);}''')
@@ -50,7 +60,12 @@ with sync_playwright()as pw:
   page.locator('#binocular').click();shot(page,'01a-binocular-runtime');page.locator('#magnifier').click();shot(page,'01b-magnifier-runtime');page.locator('#magnifier').click();ok('both live tool paths render without runtime errors')
   if args.smoke:
    page.locator('#binocular').click();assert page.locator('#binocular').get_attribute('aria-pressed')=='true';page.locator('#magnifier').click();assert page.locator('#magnifier').get_attribute('aria-pressed')=='true';assert not result['errors'];ok('standalone tools and scene; no external dependencies');result['requests']=requests;save()
+   for name in ['deer-side','deer-front','deer-back','bird','woodruff','nettle','salt-shrub','salt-segments','salt-grass']:
+    select_view(page,name);page.locator('#binocular'if name.startswith('deer')or name=='bird'else'#magnifier').click();canvas_shot(page,name)
+   ok('nine unlabelled views read directly from actual standalone WebGL frames')
   else:
+   if not args.visual_only:
+    select_view(page,'bird-occlusion');page.locator('#binocular').click();page.wait_for_function('document.querySelector("#world").dataset.renderRevision===document.querySelector("#world").dataset.sceneRevision');page.wait_for_timeout(3000);assert page.locator('#record').is_disabled();assert dataset(page)['focusTaxon']!='dendrocopos_major';select_view(page,'bird');page.locator('#binocular').click();page.wait_for_function('document.querySelector("#world").dataset.focusTaxon==="dendrocopos_major" && !document.querySelector("#record").disabled',timeout=120000);assert dataset(page)['focusIndividual']=='compact-woodpecker-1';ok('same real bird blocked behind solid bark and observable from its clear side');page.locator('#binocular').click();select_view(page,'start')
    if not args.visual_only:
     before=dataset(page);pos=json.loads(before['observer']);t=float(before['simulationTime']);page.keyboard.down('w');page.wait_for_function('(t)=>Number(document.querySelector("#world").dataset.simulationTime)>t+.5',arg=t,timeout=120000);page.keyboard.up('w');after=dataset(page);end=json.loads(after['observer']);elapsed=float(after['simulationTime'])-t;distance=((end['x']-pos['x'])**2+(end['z']-pos['z'])**2)**.5;assert .8<distance/elapsed<1.9;ok('actual keyboard movement',distanceMeters=distance,simulationSeconds=elapsed,wallClockMethod='wait for >0.5 model seconds; physics capped, no speed inference from slow GPU wall time')
     select_view(page,'woodruff');page.locator('#magnifier').click();page.wait_for_function('document.querySelector("#world").dataset.focusTaxon==="galium_odoratum" && !document.querySelector("#record").disabled',timeout=120000);evidence=dataset(page);individual=evidence['focusIndividual'];assert float(evidence['observationSeconds'])>=2.5
