@@ -12,7 +12,7 @@ parser.add_argument('--timeout',type=int,default=300)
 args=parser.parse_args()
 if args.workers<1 or args.timeout<1: parser.error('workers und timeout müssen positiv sein')
 started=time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime())
-names=['regional-evolution','behavior','living-world','ranger','scenario','field','quest','live-experiment','world','observation','coast-performance','locomotion','route-birds','village-barrier','ranger-usability','compact-world','fidelity','web-performance','render-retention','avian-anatomy','ranger-session','authored-wildlife']
+names=['regional-evolution','behavior','living-world','ranger','scenario','field','quest','live-experiment','world','observation','coast-performance','locomotion','route-birds','village-barrier','ranger-usability','compact-world','fidelity','web-performance','render-retention','avian-anatomy','ranger-session','authored-wildlife','evidence-regression','catalogue-audit']
 def run(name):
     start=time.monotonic()
     output=root/('work/final-check-output.txt' if name=='field' else f'work/{name}-check-output.txt')

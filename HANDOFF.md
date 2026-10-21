@@ -1,3 +1,14 @@
+# Phase 1 – Belegverträge
+
+Paarfund (`encounters`, `pairSighting`) und beobachteter Vorgang
+(`investigations`, `own-observation`) sind separat. Vor Fokusbeginn protokollierte
+Ereignisse zählen nicht als selbst beobachtet. `interpretation:null` bedeutet
+keine Einordnung durch Lernende. Pflanzen-ID verwendet registrierte
+Weltkoordinaten/Habitat/Taxon, nie LOD-Slots. `plant-resources.js` trennt Pollen
+und Nektar; unmodelliert bedeutet nicht biologisch abwesend. Die historische
+Sperre aller Fachhilfen bis zur Gesamtsammlung ist ausdrücklich aufgehoben.
+Nächster Schritt: Kernmissionen im bestehenden FieldJournal.
+
 # Arbeitsstand Ranger 1.0 – Phase 0
 
 Branch `codex/ranger-v1`, Ausgangscommit `227e61e`. Baseline 22/22, Build und

@@ -12,7 +12,16 @@ for name,path in m['modules'].items():
     for dep in re.findall(r"from\s*['\"](\./[^'\"]+)['\"]",text):assert (web/path).parent.joinpath(dep[2:]).is_file(),(name,dep)
     for asset in re.findall(r'\./assets/([a-zA-Z0-9_.-]+)',text):assert (web/'assets'/asset).is_file(),(name,asset)
 for name,url in m['assets'].items():assert (web/url[2:]).read_bytes()==(dist/'assets'/name).read_bytes(),name
-assert len(m['modules'])==52 and len(m['assets'])==189,(len(m['modules']),len(m['assets']))
+required=set()
+def source_visit(name):
+    if name in required:return
+    required.add(name)
+    for ref in re.findall(r"from\s*['\"](\./[^'\"]+)['\"]",(dist/name).read_text()):
+        source_visit((Path(name).parent/ref[2:].split('?')[0]).as_posix())
+source_visit('expedition.js')
+assert set(m['modules'])==required,'Module manifest differs from active source graph'
+required_assets=set(re.findall(r'\./assets/([a-zA-Z0-9_.-]+)','\n'.join((dist/name).read_text() for name in required)))
+assert set(m['assets'])==required_assets,'Asset manifest differs from source references'
 assert m['deferredPhotographs']==168 and m['deferredBirdRecordings']==3
 html=(web/'index.html').read_text();assert html==(web/'Feldbuch.html').read_text();assert 'allowfullscreen' not in html
 assert 'src="./'+m['modules']['expedition.js']+'"' in html

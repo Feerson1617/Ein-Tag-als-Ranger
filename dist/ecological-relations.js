@@ -1,3 +1,4 @@
+import { pollinatorCanFeed } from './plant-resources.js';
 import { ANIMALS } from './biodiversity.js?revision=120';
 const d=(a,b)=>Math.hypot(a.x-b.x,a.z-b.z);
 const feeding=new Set(['feeding','grazing','pollinating','collecting','deposit','filtering']);
@@ -8,7 +9,7 @@ export class EcologicalRelations {
  sync(){if(this.patchesRef===this.sim.patches)return;this.patchesRef=this.sim.patches;this.regrowing.clear();this.sim.patches.forEach((p,i)=>{p.uid||=`${p.species}:${i}`;p.stock??=1;p.pollenTransfers??=0;p.seedPotential??=0;if(p.stock<1)this.regrowing.add(p);});}
  resourcePatches(a,s,activity) {
   this.sync();return this.sim.patches.filter(p=>{
-   if(activity==='pollinating')return p.flower&&(!a.questPlant||p.species===a.questPlant)&&(!a.pollen||p.species===a.pollen.species);
+   if(activity==='pollinating')return p.flower&&pollinatorCanFeed(p,s)&&(!a.questPlant||p.species===a.questPlant)&&(!a.pollen||p.species===a.pollen.species);
    if(activity==='collecting')return ['quercus_robur','quercus_petraea','corylus_avellana','fagus_sylvatica'].includes(p.species)&&(!a.questPlant||p.species===a.questPlant);
    if(['perching','drumming'].includes(activity))return p.tree;
    if(activity==='deposit')return p.detritus;
@@ -69,7 +70,7 @@ export class EcologicalRelations {
      else this.sim.emit(a,'flowerVisit',{...p,id:p.uid});
      a.pollen={species:p.species,uid:p.uid};a.lastPatch=p;
     }else if(a.activity==='collecting'){
-     a.carriedSeed={species:p.species,x:p.x,z:p.z};this.sim.emit(a,'seedCollection',{...p,id:p.uid});a.stateTime=5;
+     a.carriedSeed={species:p.species,x:p.x,z:p.z,sourceId:p.uid};this.sim.emit(a,'seedCollection',{...p,id:p.uid});a.stateTime=5;
     }else this.sim.emit(a,a.activity==='grazing'?'herbivory':a.activity,{...p,id:p.uid});
    }
    if(['feeding','grazing','pollinating'].includes(a.activity)) {

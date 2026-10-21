@@ -3,6 +3,7 @@ import { INTERACTION_CASES } from './quest-cases.js?revision=120';
 import { INTERACTION_TERMS } from './quests.js?revision=120';
 import { CENTERS } from './habitat-world.js?revision=120';
 import { TRAIL_ENTRIES, trailPoint } from './trail.js?revision=120';
+import { plantIdentity, samePlant } from './plant-identity.js';
 
 const parasiteCases=[
  ...['forest','meadow','city','farmland'].map(habitat=>({habitat,species:['ixodes_ricinus','capreolus_capreolus']})),
@@ -68,20 +69,38 @@ export class InteractionScenarios {
  markers(questId=null){if(!this.current||!questId)return[];return this.current.quests.filter(q=>q.id===questId).flatMap(q=>this.groups.get(q.id).flatMap(g=>{const p=g.plan?.patch||g.patch;return[...g.actors.filter(a=>a.alive&&!a.dead&&!a.scenarioInactive&&!a.scenarioSuppressed&&q.species.includes(a.species)),...(p&&PLANTS[p.species]&&q.species.includes(p.species)?[{...p,habitat:q.habitat,focusType:'plant'}]:[])];}));}
  update(dt){if(this.current)this.clock+=dt;}
  partnersOf(g){const animals=g.actors.filter(a=>a.alive&&!a.dead);const plant=g.quest.species.find(id=>PLANTS[id]),patch=g.plan?.patch||g.patch;return plant&&patch?[...animals,{...patch,habitat:g.quest.habitat,focusType:'plant'}]:animals;}
- observationProgress(q){let best={focused:0,total:q.species.length,together:false};for(const g of this.groups.get(q.id)||[]){const count=g.actors.filter(a=>g.focusedPartners?.has(`animal:${a.id}`)).length+(q.species.some(id=>PLANTS[id]&&g.focusedPartners?.has(`plant:${id}`))?1:0);if(count>best.focused)best={focused:count,total:q.species.length,together:g.together};}return best;}
+ observationProgress(q){let best={focused:0,total:q.species.length,together:false};for(const g of this.groups.get(q.id)||[]){const patch=g.plan?.patch||g.patch;const count=g.actors.filter(a=>g.focusedPartners?.has(`animal:${a.id}`)).length+(patch&&q.species.includes(patch.species)&&g.focusedPartners?.has(plantIdentity(patch))?1:0);if(count>best.focused)best={focused:count,total:q.species.length,together:g.together};}return best;}
  observe(focus,dt,journal,book,visible=null){if(!this.current||dt<=0||!visible)return null;let result=null;
-  for(const q of this.current.quests){if(book.progress(q))continue;for(const g of this.groups.get(q.id)){
+  for(const q of this.current.quests){for(const g of this.groups.get(q.id)){
    g.focusedPartners||=new Set();
    if(focus?.type==='animal'&&!focus.item.trace&&g.actors.includes(focus.item)&&focus.item.alive&&visible(focus.item))g.focusedPartners.add(`animal:${focus.item.id}`);
-   if(focus?.type==='plant'&&focus.item.habitat===q.habitat&&q.species.includes(focus.item.id))g.focusedPartners.add(`plant:${focus.item.id}`);
+   const patch=g.plan?.patch||g.patch,plantPartner=this.partnersOf(g).find(p=>p.focusType==='plant');
+   if(focus?.type==='plant'&&focus.item.habitat===q.habitat&&q.species.includes(focus.item.id)&&samePlant(focus.item,patch)&&plantPartner&&visible(plantPartner))g.focusedPartners.add(plantIdentity(patch));
    const partners=this.partnersOf(g);g.together=partners.length===q.species.length&&partners.every(p=>visible(p));
-   const focusedAll=g.actors.every(a=>g.focusedPartners.has(`animal:${a.id}`))&&q.species.filter(id=>PLANTS[id]).every(id=>g.focusedPartners.has(`plant:${id}`));
-   if(!focusedAll||!g.together)continue;
-   const evidence={kind:'pairSighting',actors:[...g.actorIds],species:[...q.species],sameFrame:true,time:this.simulations.get(q.habitat).time,phase:g.plan?.phase};
-   book.completed[q.id]={completedAt:Date.now(),encounters:{[q.encounters[0].id]:{completedAt:Date.now(),habitat:q.habitat,evidence,focusedPartners:[...g.focusedPartners]}}};book.save();
-   if(book.active?.quest.id===q.id){book.active.done=true;book.active.contexts.forEach(c=>c.done=true);}
-   result={kind:'quest',quest:q,habitat:q.habitat,allDone:true};break;
+   const focusedAll=g.actors.every(a=>g.focusedPartners.has(`animal:${a.id}`))&&q.species.filter(id=>PLANTS[id]).every(()=>patch&&g.focusedPartners.has(plantIdentity(patch)));
+   if(!book.progress(q)&&focusedAll&&g.together){
+    const evidence={kind:'pairSighting',actors:[...g.actorIds],plantId:patch?plantIdentity(patch):null,species:[...q.species],sameFrame:true,time:this.simulations.get(q.habitat).time,phase:g.plan?.phase};
+    book.completed[q.id]={...book.completed[q.id],completedAt:Date.now(),encounters:{[q.encounters[0].id]:{completedAt:Date.now(),habitat:q.habitat,evidence,focusedPartners:[...g.focusedPartners]}}};book.save();
+    result={kind:'quest',quest:q,habitat:q.habitat,allDone:true,stage:'discovered'};
+   }
+   const investigation=this.observeRelationship(q,g,focus,dt,book,visible);if(investigation)result=investigation;
   }}return result;
+ }
+ observeRelationship(q,g,focus,dt,book,visible){
+  if(book.active?.quest.id!==q.id||!book.progress(q)||book.investigationProgress(q))return null;
+  const actor=focus?.type==='animal'&&g.actors.includes(focus.item)?focus.item:null;
+  if(!actor?.alive||actor.trace||!visible(actor)||!g.together){g.observationKey=null;g.investigationSeconds=0;return null;}
+  const sim=this.simulations.get(q.habitat);
+  if(g.observationKey!==actor.id){g.observationKey=actor.id;g.observationStarted=sim.time;g.investigationSeconds=0;}
+  const evidence=book.validEncounter(actor,{actors:g.actorIds,started:g.started,patch:g.plan?.patch||g.patch},q);
+  // A pre-existing report can be read as a protocol; it is not a witnessed event.
+  if(!evidence||evidence.kind!=='pursuit'&&evidence.time<g.observationStarted){g.investigationSeconds=0;return null;}
+  g.investigationSeconds=(g.investigationSeconds||0)+dt;book.active.seconds=g.investigationSeconds;
+  if(g.investigationSeconds<6)return null;
+  const patch=g.plan?.patch||g.patch;
+  book.completed[q.id].investigations={...book.completed[q.id].investigations,[q.encounters[0].id]:{completedAt:Date.now(),habitat:q.habitat,actors:[...g.actorIds],plantId:patch?plantIdentity(patch):null,evidence:{...evidence},source:'own-observation',interpretation:null}};
+  book.active.done=true;book.save();
+  return {kind:'quest',quest:q,habitat:q.habitat,allDone:true,stage:'documented'};
  }
  progress(book){return {done:this.current.quests.filter(q=>book.progress(q)>0).length,total:this.current.quests.length};}
 }

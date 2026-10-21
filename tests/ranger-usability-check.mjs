@@ -5,7 +5,7 @@ import {createExpeditionSimulations} from '../dist/expedition-state.js';
 import {QuestBook} from '../dist/quests.js';
 import {InteractionScenarios,SCENARIOS} from '../dist/interaction-scenarios.js';
 import {QuestInterface} from '../dist/quest-interface.js';
-import {questFinished,residentDestination} from '../dist/quest-learning.js';
+import {questFinished,questCollectionFinished,residentDestination} from '../dist/quest-learning.js';
 import {RESIDENTS} from '../dist/village-people.js';
 import {ANIMALS} from '../dist/biodiversity.js';
 import {WildlifeRenderer} from '../dist/wildlife.js';
@@ -41,12 +41,13 @@ const evolution={stop(){}},book=new QuestBook(simulations,evolution),scenarios=n
 const ui=new QuestInterface({scene:new T.Scene(),book,journal:{entries:{}},observer:{x:0,z:0},openPanel:(title,html)=>rendered=html,escape:s=>String(s),toast(){},onChange(){},onFocus(){},onMode(){}});
 for(const scenario of SCENARIOS){
  book.active={quest:{id:'previous'}};scenarios.start(scenario.id,book);assert.equal(book.active,null,'Entering a scenario inherits an active quest');assert.equal(scenarios.markers().length,0);ui.updateSelectionPrompt();assert.equal(get('world').dataset.awaitingQuest,'true');assert.equal(get('world').dataset.activeQuest,'');
- const q=scenario.quests[0];assert.equal(questFinished(book,q),false);assert.ok(ui.details(q.id));assert.ok(!rendered.includes(q.definition),'Undiscovered theory is exposed before finishing');assert.ok(rendered.includes('Quest annehmen'));get('start-quest').listeners.click();assert.equal(book.active.quest.id,q.id);assert.equal(get('world').dataset.awaitingQuest,'false');
- book.completed[q.id]={encounters:{[q.encounters[0].id]:{}}};assert.equal(questFinished(book,q),true);ui.details(q.id);assert.ok(rendered.includes(q.definition)&&rendered.includes('Deine fachliche Auswertung'));reveals++;
+ const q=scenario.quests[0];assert.equal(questFinished(book,q),false);assert.ok(ui.details(q.id));assert.ok(rendered.includes(q.definition)&&rendered.includes(q.limit),'Fachhilfe und Modellgrenzen müssen vor Abschluss zugänglich sein');assert.ok(rendered.includes('Quest annehmen'));get('start-quest').listeners.click();assert.equal(book.active.quest.id,q.id);assert.equal(get('world').dataset.awaitingQuest,'false');
+ book.completed[q.id]={encounters:{[q.encounters[0].id]:{}}};assert.equal(questFinished(book,q),true);ui.details(q.id);assert.ok(rendered.includes(q.definition)&&rendered.includes('Fachliche Erklärung')&&!rendered.includes('Deine fachliche Auswertung'));reveals++;
  for(const [index,person]of RESIDENTS.entries()){const destination=residentDestination({...person,index},book);if(destination.view==='quest')assert.ok(book.available().some(q=>q.id===destination.id));routes++;}
  assert.equal(ui.details('absent-quest'),false,'An unavailable dialog quest should be handled without an exception');
 }
 scenarios.start(null,book);for(const [index,person]of RESIDENTS.entries()){const d=residentDestination({...person,index},book);if(d.view==='quest')assert.ok(book.available().some(q=>q.id===d.id));routes++;}
 assert.equal(residentDestination({index:1},book).habitat,'city');
-assert.equal(questFinished({progress:()=>1},{encounters:[{},{}]}),false,'A partial free-exploration assignment must not unlock its full theory');
-console.log(JSON.stringify({version:'0.15',terrainSamples,maxFormulaMismatch,fox:'contact and stance feet use visible terrain triangles',habitatFences:world.habitatFenceStats,fenceSamples,collisionQueries,placementChecks,localCandidates,totalCandidates,scenarioStarts:'six modes start without a quest or markers',learningReveals:reveals,dialogRoutes:routes,learning:'instructions before acceptance; theory only after full completion'},null,2));
+assert.equal(questFinished({progress:()=>1},{encounters:[{},{}]}),true,'Ein lokaler Abschluss genügt');
+assert.equal(questCollectionFinished({progress:()=>1},{encounters:[{},{}]}),false,'Gesamtsammlung bleibt separat');
+console.log(JSON.stringify({version:'0.15',terrainSamples,maxFormulaMismatch,fox:'contact and stance feet use visible terrain triangles',habitatFences:world.habitatFenceStats,fenceSamples,collisionQueries,placementChecks,localCandidates,totalCandidates,scenarioStarts:'six modes start without a quest or markers',learningReveals:reveals,dialogRoutes:routes,learning:'instructions before acceptance; Fachhilfe jederzeit; lokaler Abschluss und Sammlung getrennt'},null,2));

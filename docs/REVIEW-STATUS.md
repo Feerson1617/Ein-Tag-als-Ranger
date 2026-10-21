@@ -29,3 +29,20 @@ Software-Rendering, keine belastbare physische Leistungsprüfung. Historische Na
 | L01 | P1 | keine globale Codelizenz | keine ungefragte Lizenzwahl | Eigentümerentscheidung; Medienrechte separat | offen |
 
 Kein Release-/Live-Abnahmestatus aus grünen Modultests ableiten.
+
+## Phase 1 – aktueller Nachweis
+
+23/23 Prüfreihen einschließlich neuer Belegregression bestanden; zusätzliche
+168er-Strukturprüfung bestanden. Webpaket und Einzel-HTML neu erzeugt,
+Paketverifikation bestanden (54 Module / 189 unveränderte Laufzeitassets).
+F01–F03 umgesetzt: Paarfund bleibt Entdeckung, zeitnah beobachteter Vorgang
+separat; keine automatische eigene Deutung; individuelle Pflanzen-IDs; Fachhilfe
+ohne Gesamtsammlung. F04: explizite Pollen-/Nektartraits, keine Formabkürzung;
+F05: alle Taxa strukturell geprüft, keine pauschale biologische Validierung.
+HTTP-Lizenzlinks auf Creative-Commons-HTTPS umgestellt, Lizenzversionen erhalten.
+
+Primärtexte PubMed/DOI sind aktuell durch Proxy-403 gesperrt. Die Aussagen zu
+Mohn/Holunder stützen sich auf das bereitgestellte Review mit genannten Quellen;
+kein erneutes Lesen der Primärartikel behauptet. Domainergänzungen werden im
+Umgebungsentwurf gespeichert; dies allein ändert die laufende Netzpolitik nicht.
+Fachliche Einzelvalidierung und Geräteabnahme bleiben offen.

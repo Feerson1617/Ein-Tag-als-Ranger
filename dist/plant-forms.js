@@ -1,9 +1,11 @@
 import { indexGeometry } from './mesh-geometry.js?revision=120';
 import { curvedLeaf } from './curved-leaves.js?revision=120';
 import * as THREE from './vendor/three.module.js?revision=120';
+import { plantResources } from './plant-resources.js';
 // Botanical silhouettes: whorls, basal rosettes, flower heads, reed panicles and segmented succulent shoots.
 export const WIND_FLOWERS=new Set(['urtica_dioica','plantago_lanceolata','plantago_maritima','artemisia_maritima']);
-export const hasNectarFlowers=s=>s.form==='flower'&&!WIND_FLOWERS.has(s.id);
+export const hasNectarFlowers=s=>plantResources(s).nectar;
+export const hasForageFlowers=s=>plantResources(s).pollen;
 export function botanicalGeometry(s){const pos=[],normal=[],color=[],flowerTargets=[],leaf=new THREE.Color(s.colors.leaf),flower=new THREE.Color(s.colors.flower),stem=new THREE.Color(s.colors.bark);function add(g,c,p=[0,0,0],scale=[1,1,1],rot=[0,0,0]){const t=g.toNonIndexed(),m=new THREE.Matrix4().compose(new THREE.Vector3(...p),new THREE.Quaternion().setFromEuler(new THREE.Euler(...rot)),new THREE.Vector3(...scale));t.applyMatrix4(m);for(let i=0;i<t.attributes.position.array.length;i+=3){pos.push(...t.attributes.position.array.slice(i,i+3));normal.push(...t.attributes.normal.array.slice(i,i+3));color.push(c.r,c.g,c.b);}t.dispose();}
  const sphere=new THREE.SphereGeometry(1,6,4),tube=new THREE.CylinderGeometry(1,1,1,4),blade=new THREE.PlaneGeometry(1,1,1,2);const id=s.id;
  function stalk(x,z,h=1,w=.012){add(tube,stem,[x,h*.5-.48,z],[w,h,w]);}

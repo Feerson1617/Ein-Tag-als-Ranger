@@ -152,7 +152,7 @@ export class EncounterBehavior {
    a.flight=h;this.rest(a,p.kind==='mutualism'?'pollinating':p.kind==='dispersal'?'collecting':'grazing',dt,p.patch);this.consume(a,p.patch,dt,p.kind==='herbivory'?.028:.008);p.visitTime+=dt;
    if(p.visitTime>2.7&&!p.visitEmitted){p.visitEmitted=true;
     if(p.kind==='mutualism'){if(a.pollen&&a.pollen.uid!==p.patch.uid&&a.pollen.species===p.patch.species){p.patch.pollenTransfers=(p.patch.pollenTransfers||0)+1;p.patch.seedPotential=(p.patch.seedPotential||0)+1;this.sim.emit(a,'mutualism',{...p.patch,id:p.patch.uid});}else this.sim.emit(a,'flowerVisit',{...p.patch,id:p.patch.uid});a.pollen={species:p.patch.species,uid:p.patch.uid};a.lastPatch=p.patch;}
-    else if(p.kind==='dispersal'){a.carriedSeed={species:p.patch.species,x:p.patch.x,z:p.patch.z};this.sim.emit(a,'seedCollection',{...p.patch,id:p.patch.uid});}
+    else if(p.kind==='dispersal'){a.carriedSeed={species:p.patch.species,x:p.patch.x,z:p.patch.z,sourceId:p.patch.uid};this.sim.emit(a,'seedCollection',{...p.patch,id:p.patch.uid});}
     else this.sim.emit(a,'herbivory',{...p.patch,id:p.patch.uid});
    }
    if(p.visitTime>(p.kind==='herbivory'?7:4)+(a.id%3)){
