@@ -21,7 +21,7 @@ with sync_playwright()as pw:
  if shutil.which('chromium'):opts.update(executable_path=shutil.which('chromium'),args=['--no-sandbox','--use-angle=swiftshader','--enable-unsafe-swiftshader'])
  browser=pw.chromium.launch(**opts);result['browserVersion']=browser.version;ctx=browser.new_context(viewport={'width':800,'height':600},has_touch=True,is_mobile=True);page=ctx.new_page();page.set_default_timeout(45000);page.on('pageerror',lambda e:result['errors'].append(str(e)))
  try:
-  page.goto(f'http://127.0.0.1:{server.server_port}/{a.entry}');page.wait_for_function('document.querySelector("#world").dataset.ready==="true"',timeout=120000);page.locator('#start').click();places=['woodruff','village','ramp','keilm','coast','outlook','oak','wood'];last_sim=-1;initial=None
+  page.goto(f'http://127.0.0.1:{server.server_port}/{a.entry}');page.wait_for_function('document.querySelector("#world").dataset.ready==="true"',timeout=120000);page.locator('#start').click();places=['woodruff','village','ramp','keilm','coast','outlook','oak','wood'];last_sim=-1;initial=None;reference_positions={}
   def pointer_click(button):
    # Actual native pointer input: do not wait on unrelated WebGL animation
    # frames for Playwright's two-frame stability gate. Never force a click.
@@ -29,10 +29,15 @@ with sync_playwright()as pw:
    hit=button.evaluate('''b=>{const r=b.getBoundingClientRect(),x=r.left+r.width/2,y=r.top+r.height/2,e=document.elementFromPoint(x,y);return {x,y,width:r.width,height:r.height,inViewport:x>=0&&y>=0&&x<innerWidth&&y<innerHeight,hit:b===e||b.contains(e),text:b.textContent,view:b.dataset.view||null,visibility:document.visibilityState};}''')
    result.setdefault('pointerChecks',[]).append(hit);save();assert hit['inViewport']and hit['hit']and hit['width']>0 and hit['height']>0,hit;page.mouse.click(hit['x'],hit['y'])
   def visit(place):
+   before_observer=json.loads(page.locator('#world').get_attribute('data-observer'))
    pointer_click(page.locator('#menu-button'));pointer_click(page.get_by_text('Referenzabschnitt prüfen',exact=True));pointer_click(page.locator('[data-view="'+place+'"]'));page.locator('[data-view="'+place+'"]').wait_for(state='hidden');page.wait_for_function('document.querySelector("#world").dataset.renderRevision===document.querySelector("#world").dataset.sceneRevision')
    # Ordinary active world time; no direct clock/state writes or renderer hooks.
    page.wait_for_timeout(15000)
-   d=page.locator('#world').evaluate('(c)=>Object.fromEntries(Object.entries(c.dataset).filter(([k])=>["plantCount","simulationTime","frameMs","geometries","textures","heapBytes","drawCalls","triangles","runId"].includes(k)))')
+   d=page.locator('#world').evaluate('(c)=>Object.fromEntries(Object.entries(c.dataset).filter(([k])=>["plantCount","simulationTime","frameMs","geometries","textures","heapBytes","drawCalls","triangles","runId","observer"].includes(k)))')
+   observer=json.loads(d['observer']);point=[observer['x'],observer['z']]
+   assert (point[0]-before_observer['x'])**2+(point[1]-before_observer['z'])**2>.0001,'Reference click did not actually move to its target'
+   if place in reference_positions:assert all(abs(x-y)<1e-5 for x,y in zip(point,reference_positions[place])),'Different reference position for '+place
+   else:reference_positions[place]=point;result['referencePositions']=reference_positions
    assert not result['errors'];assert page.locator('#graphics-error').is_hidden();assert page.locator('#loading').is_hidden();assert page.locator('#count').inner_text()=='0'
    return d
   # WebGL uploads geometry lazily on first visibility. Seal a warm baseline
