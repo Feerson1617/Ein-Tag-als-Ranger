@@ -37,10 +37,12 @@ for name,p in reports:
   q=p.parent/'final.png'
   if q.exists():copy(q,'stability/final.png')
 for source,folder in [(work/'qa-correction/final-imports','imports'),(work/'compact-regressions','compact-node')]:add_folder(source,folder)
-for filename in ['result.json','progress.log','runtime-freeze.json','environment.json','html-equivalence.json','scheduler-timing.json','flooding-all-taxa.csv','flooding-report.md','visual-review.json']:
+for filename in ['result.json','progress.log','runtime-freeze.json','environment.json','html-equivalence.json','scheduler-timing.json','flooding-all-taxa.csv','flooding-report.md','visual-review.json','pdf-audit.json']:
  copy(work/'final-qa'/filename,filename)
 if rerun_path.exists():copy(rerun_path,'reruns.json')
 for q in (work/'final-qa').glob('*.log'):copy(q,'logs/'+q.name)
+for name in ['Arbeitsblaetter.html','Lehrkraefte.html','Arbeitsblaetter.pdf','Lehrkraefte.pdf','build-info.json']:
+ copy(root/'outputs/Ranger-Kompakt-Lernpaket'/name,'materials/'+name)
 for filename in ['check-run.json','v020-check-summary.json']:
  copy(work/filename,'legacy-node/'+filename)
 for filename in ['final-python.log','final-build-compact.log','final-build-legacy.log','final-source-package.log','final-legacy-node.log','final-compact-node.log']:
@@ -50,8 +52,7 @@ for source,folder in [(work/'browser-chromium-subpath','legacy'),(work/'browser-
  for name in ['live-earned-fieldbook.json','failed-earned-fieldbook.json','failure.html']:
   p=source/name
   if p.exists():copy(p,folder+'/'+name)
- for name in r.get('screenshots',[]):
-  if isinstance(name,str)and(source/name).exists():copy(source/name,folder+'/'+name)
+ for picture in sorted(source.glob('*.png')):copy(picture,folder+'/'+picture.name)
 py=(work/'qa-correction/final-python.log').read_text();nodes=load(work/'compact-regressions/result.json');legacy=load(work/'check-run.json')
 summary={'runtimeFreeze':freeze,'collectedAtCommit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=root,text=True).strip(),'browserPlan':run,'browserReruns':reruns,'latestBrowserChecks':effective,'allLatestBrowserChecksPassed':all(r['passed']for r in effective.values()),'node':{'legacySuites':len(legacy['results']),'legacyPassed':sum(r['passed']for r in legacy['results']),'compactSuites':nodes['checks']},'pythonMethods':int(re.search(r'Ran (\d+) tests',py)[1]),'pythonPassed':py.rstrip().endswith('OK'),'reportCounts':{name:len(load(p).get('checks',[]))for name,p in reports},'scope':'Only the executed property is proved. No original independent QA archive or physical Apple/iPad/Safari test. No automatic grade of open arguments or classroom learning effect.','notChecked':['F12: no description provided','Physical iPad 9 / Safari / iPadOS 27','Independent biological/visual final review','Classroom pilot and teaching effect']}
 (target/'SUMMARY.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2)+'\n');(target/'SHA256.json').write_text(json.dumps({str(p.relative_to(target)):hashlib.sha256(p.read_bytes()).hexdigest()for p in sorted(target.rglob('*'))if p.is_file()and p.name!='SHA256.json'},indent=2)+'\n');print(json.dumps({'output':str(target),'files':len(list(target.rglob('*')))}))
