@@ -6,6 +6,7 @@ load=lambda p:json.loads(p.read_text())
 reference=load(work/'compact-browser/result.json');single=load(work/'compact-browser/standalone-result.json');learning=load(work/'compact-learning/result.json');stability=load(work/'compact-stability/result.json');run=load(work/'complete-compact/final-validation.json')
 assert all(step['status']=='passed'for step in run['steps'])and len(run['steps'])==18
 for r,minimum in [(reference,18),(single,5),(learning,17)]:assert not r.get('failure')and not r['errors']and len(r['checks'])>=minimum
+layout=load(work/'compact-learning/layout-result.json');assert layout['passed']and layout['cssSHA256']==learning['runtimeSourceHashes']['compact/style.css']
 assert learning.get('completedAt')and stability['passed']and stability['actualElapsedSeconds']>=1200
 assert reference['runtimeSourceHashes']==single['runtimeSourceHashes']==learning['runtimeSourceHashes']==stability['runtimeSourceHashes']
 for name,digest in reference['runtimeSourceHashes'].items():assert hashlib.sha256((root/'dist'/name).read_bytes()).hexdigest()==digest
@@ -16,7 +17,7 @@ for source,folder,r in [(work/'compact-browser','reference',reference),(work/'co
  for item in r['captures']+r.get('videos',[]):
   assert Path(item['file']).name==item['file'];p=source/item['file'];assert hashlib.sha256(p.read_bytes()).hexdigest()==item['sha256'];copy(p,folder+'/'+item['file'])
 for item in single['captures']:copy(work/'compact-browser'/item['file'],'reference/'+item['file'])
-for folder,names in [('compact-browser',['result.json','standalone-result.json','earned-fieldbook.json']),('compact-learning',['result.json','earned-all-families.json','downloaded-fieldbook.json','readable-report.txt','quota-recovered-draft.json']),('compact-stability',['result.json','final.png'])]:
+for folder,names in [('compact-browser',['result.json','standalone-result.json','earned-fieldbook.json']),('compact-learning',['result.json','layout-result.json','earned-all-families.json','downloaded-fieldbook.json','readable-report.txt','quota-recovered-draft.json']),('compact-stability',['result.json','final.png'])]:
  target={'compact-browser':'reference','compact-learning':'learning','compact-stability':'stability'}[folder]
  for name in names:copy(work/folder/name,target+'/'+name)
 for name in ['check-run.json','complete-compact/final-validation.json','complete-compact/runtime-freeze.json','complete-compact/source-access.json']:copy(work/name,Path(name).name)

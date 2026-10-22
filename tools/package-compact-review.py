@@ -3,6 +3,7 @@ from pathlib import Path
 import hashlib,html,json,shutil,subprocess,zipfile
 root=Path(__file__).resolve().parents[1];reference=root/'work/compact-browser';learning=root/'work/compact-learning';result=json.loads((reference/'result.json').read_text());standalone=json.loads((reference/'standalone-result.json').read_text());learn=json.loads((learning/'result.json').read_text());stability=json.loads((root/'work/compact-stability/result.json').read_text())
 for r,minimum in [(result,18),(standalone,5),(learn,17)]:assert not r.get('failure')and not r['errors']and len(r['checks'])>=minimum,'Successful full browser evidence required'
+layout=json.loads((learning/'layout-result.json').read_text());assert layout['passed']and layout['cssSHA256']==learn['runtimeSourceHashes']['compact/style.css'],'Current UI layout check required'
 assert learn.get('completedAt'),'Completed learning browser run required'
 assert stability['passed']and stability['actualElapsedSeconds']>=1200 and not stability['errors'],'20-minute cloud run required'
 assert standalone['runtimeSourceHashes']==result['runtimeSourceHashes']==learn['runtimeSourceHashes']==stability['runtimeSourceHashes'],'Tested runtime sources differ'
@@ -23,7 +24,7 @@ for source,folder,records in [(reference,'reference',result['captures']+standalo
     subprocess.run(['ffmpeg','-nostdin','-v','error','-i',str(target/name),'-c:v','libx264','-preset','fast','-crf','22','-fps_mode','vfr','-pix_fmt','yuv420p','-movflags','+faststart',str(target/portable)],check=True);items.append({'file':folder+'/'+portable,'sha256':sha((target/portable).read_bytes()),'source':relative,'operation':'H.264 compatibility copy; original variable timestamps, no speed change'});relative=folder+'/'+portable
    clips.append(f'<figure><video controls preload="metadata" src="{html.escape(relative)}"></video><figcaption>{html.escape(name)} · tatsächliche Canvas-Aufzeichnung</figcaption></figure>')
   else:cards.append(f'<figure><img loading="lazy" src="{html.escape(relative)}" alt="{html.escape(title)}"><figcaption>{html.escape(title)}</figcaption></figure>')
-for source,names,folder in [(reference,['result.json','standalone-result.json','earned-fieldbook.json'],'reference'),(learning,['result.json','earned-all-families.json','downloaded-fieldbook.json','readable-report.txt','quota-recovered-draft.json'],'learning')]:
+for source,names,folder in [(reference,['result.json','standalone-result.json','earned-fieldbook.json'],'reference'),(learning,['result.json','layout-result.json','earned-all-families.json','downloaded-fieldbook.json','readable-report.txt','quota-recovered-draft.json'],'learning')]:
  for name in names:shutil.copyfile(source/name,out/folder/name)
 shutil.copytree(root/'outputs/Ranger-Kompakt-Lernpaket',out/'Lernpaket')
 shutil.copyfile(root/'work/compact-stability/result.json',out/'cloud-stability.json');shutil.copyfile(root/'outputs/Ranger-Kompakt.html',out/'Ranger-Kompakt.html')
