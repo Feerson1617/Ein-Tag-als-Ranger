@@ -24,7 +24,8 @@ def ok(name,**extra):
  assert not result['errors'],result['errors'];result['checks'].append({'name':name,'passed':True,**extra});save();print('PASS',name,flush=True)
 def errors(page):page.on('pageerror',lambda error:result['errors'].append(str(error))if str(error)not in result['errors']else None)
 def ready(page):
- page.set_default_timeout(45000);errors(page);page.goto(url);page.wait_for_function("document.querySelector('#world').dataset.ready==='true'",timeout=120000);page.locator('#start').click()
+ page.set_default_timeout(45000);errors(page);page.goto(url);page.wait_for_function("document.querySelector('#world').dataset.ready==='true'",timeout=120000)
+ boot=page.evaluate("()=>({readyMilliseconds:performance.now(),transferBytes:[...performance.getEntriesByType('navigation'),...performance.getEntriesByType('resource')].reduce((sum,r)=>sum+(r.transferSize||0),0),encodedBodyBytes:[...performance.getEntriesByType('navigation'),...performance.getEntriesByType('resource')].reduce((sum,r)=>sum+(r.encodedBodySize||0),0),resourceCount:performance.getEntriesByType('resource').length})");result.setdefault('boots',[]).append(boot);assert boot['transferBytes']<=15*1024*1024,'Initial playable scene exceeds the proposed 15 MiB transfer ceiling';save();page.locator('#start').click()
 def close(page):
  if page.locator('#panel').evaluate('(p)=>p.open'):page.locator('#close').click()
 def view(page,id):
