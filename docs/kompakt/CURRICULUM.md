@@ -2,7 +2,7 @@
 
 # Ranger Kompakt – vollständige curriculare Zuordnung
 
-Stand: 21.10.2026. G = 3D-Beobachtung, Zusatzmodell und Begleitunterricht werden in jeder Zeile ausdrücklich getrennt. K1–K5 sind im Prüfbericht beschriebene Missionsfamilien. Alle Mechanismen sind Entwicklungsziele, soweit nicht separat als vorhanden ausgewiesen.
+Stand: 22.10.2026. G = 3D-Beobachtung, Zusatzmodell und Begleitunterricht werden in jeder Zeile ausdrücklich getrennt. K1–K5 sind im Prüfbericht beschriebene Missionsfamilien. Der aktuelle Umsetzungsnachweis steht in CURRICULUM-UMSETZUNG.md; die folgenden Vorgaben bleiben die verbindliche Zuordnung.
 
 | ID | Curriculare Vorgabe / Fundstelle | Niveau | Lernziel | Spiel-/Unterrichtsweg | Daten/Belege | Lernprodukt | Überprüfung | Modellgrenze |
 |---|---|---|---|---|---|---|---|---|

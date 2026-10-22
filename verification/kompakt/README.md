@@ -1,3 +1,5 @@
+> Historische Nachweise der Phasen 0–2 vom 21.10.2026. Aktuelle Ausbauprüfung: ../kompakt-v2/. Die nachfolgend beschriebene Freigabe-/Pushsperre wurde durch den späteren ausdrücklichen Auftrag aufgehoben.
+
 # Kompakt: Nachweise der Phasen 0–2
 
 Getestete Runtime: `2326283ab01fbb25644f82e3cada26d9a2b509ea`. Git-Ausgangspunkt: `a6c5c8e50c273895e5ca7667542f63d4e075c13b`. Die große Fassung bleibt erhalten.
