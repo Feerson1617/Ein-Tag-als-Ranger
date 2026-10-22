@@ -1,6 +1,6 @@
 import * as THREE from '../vendor/three.module.js?revision=120';
 import { readWildlifeGLB } from '../wildlife-glb.js';
-import { createOrganism } from './organism-models.js';
+import { createOrganism,poseCoastalBird,poseCrab } from './organism-models.js';
 import { MANIFEST } from './manifest.js';
 import { terrainHeight } from './layout.js';
 import { plantGeometry,leafGeometry } from './geometry.js';
@@ -9,7 +9,7 @@ import { CATALOG } from './catalog.js';
 function quadrupedPose(mesh,a,time){
  const g=mesh.geometry,rig=g.attributes.rigData,joints=g.attributes.rigJoint,p=g.attributes.position,n=g.attributes.normal;
  if(!mesh.poseCache){const legs=new Map();for(let part=1;part<=4;part++){let i=0;while(i<rig.count&&rig.getX(i)!==part)i++;const hip=[rig.getY(i),rig.getZ(i)],knee=[joints.getX(i),joints.getY(i)],foot=g.userData.legFeet[part];legs.set(part,{hip,knee,foot,upper:Math.hypot(knee[0]-hip[0],knee[1]-hip[1]),lower:Math.hypot(foot[0]-knee[0],foot[1]-knee[1])});}mesh.poseCache={legs,rest:p.array.slice(),normals:n.array.slice()};}
- const {legs,rest,normals}=mesh.poseCache,scale=mesh.scale.x,moving=['stalking','attempting'].includes(a.activity),poses=new Map(),base=terrainHeight(a.x,a.z)-.006;
+ const {legs,rest,normals}=mesh.poseCache,scale=mesh.scale.x,moving=['stalking','attempting','returning'].includes(a.activity),poses=new Map(),base=terrainHeight(a.x,a.z)-.006;
  mesh.position.set(a.x,base,a.z);mesh.rotation.y=-a.heading;a.feet=[];
  for(const [part,l]of legs){const phase=(time*.9+[0,.5,.75,.25][part-1])%1,swing=phase>.65?(phase-.65)/.35:0,lift=moving&&swing?.04*Math.sin(swing*Math.PI):0,offset=moving?(phase<.65?.08-.16*phase/.65:-.08+.16*swing):0,fx=l.foot[0]+offset/scale,wx=a.x+Math.cos(a.heading)*fx*scale-Math.sin(a.heading)*l.foot[2]*scale,wz=a.z+Math.sin(a.heading)*fx*scale+Math.cos(a.heading)*l.foot[2]*scale,fy=(terrainHeight(wx,wz)-base+lift)/scale+l.foot[1],dx=fx-l.hip[0],dy=fy-l.hip[1],dist=Math.min(l.upper+l.lower-.00001,Math.max(.001,Math.hypot(dx,dy))),theta=Math.atan2(dy,dx)+(part<3?-1:1)*Math.acos(Math.max(-1,Math.min(1,(l.upper*l.upper+dist*dist-l.lower*l.lower)/(2*l.upper*dist)))),kx=l.hip[0]+Math.cos(theta)*l.upper,ky=l.hip[1]+Math.sin(theta)*l.upper;
   poses.set(part,{upper:theta-Math.atan2(l.knee[1]-l.hip[1],l.knee[0]-l.hip[0]),lower:Math.atan2(fy-ky,fx-kx)-Math.atan2(l.foot[1]-l.knee[1],l.foot[0]-l.knee[0]),kx,ky,fx,fy});a.feet.push({part,swing:lift>0,geometryGap:Infinity});}
@@ -25,7 +25,7 @@ export function attachCarriedAcorn(jay){
 export async function createExpandedView(scene,state,world,reference){
  const models=new Map(),roots=[],treeSamples=[];
  const response=await fetch(MANIFEST.assets.fox);if(!response.ok)throw Error('Fuchsmodell konnte nicht geladen werden.');const foxGeometry=readWildlifeGLB(await response.arrayBuffer(),'fox'),fox=new THREE.Mesh(foxGeometry,new THREE.MeshStandardMaterial({vertexColors:true,roughness:.96}));fox.scale.setScalar(CATALOG.vulpes_vulpes.length/(foxGeometry.boundingBox.max.x-foxGeometry.boundingBox.min.x));fox.userData={taxon:'vulpes_vulpes',stage:'adult'};
- for(const a of state.ecology.actors){const model=a.taxon==='vulpes_vulpes'?fox:createOrganism(a.taxon,a.stage);scene.add(model);models.set(a.id,model);roots.push(model);}
+ for(const a of state.ecology.actors){const model=a.taxon==='vulpes_vulpes'?fox:createOrganism(a.taxon,a.stage);if(a.taxon!=='vulpes_vulpes')model.scale.multiplyScalar(a.size/(a.taxon==='aglais_io'&&a.stage==='caterpillar'?.035:CATALOG[a.taxon].length));scene.add(model);models.set(a.id,model);roots.push(model);}
  for(const type of ['beech','oak']){const t=state.trees.find(t=>t.type===type);if(!t)throw Error('Baumstruktur fehlt: '+type);const taxon=type==='beech'?'fagus_sylvatica':'quercus_robur',sample={id:t.id,individualId:t.id,taxon,x:t.x+t.r,z:t.z,y:terrainHeight(t.x,t.z)+1.1,size:.5,treeId:t.id,aimY:terrainHeight(t.x,t.z)+1.25};const model=createOrganism(taxon);model.position.set(sample.x,sample.y,sample.z);scene.add(model);models.set(t.id,model);treeSamples.push(sample);}
  state.treeSamples=treeSamples;
  const acorns=[],litter=[];
@@ -37,16 +37,19 @@ export async function createExpandedView(scene,state,world,reference){
  function update(observer={x:0,z:0}){
   const e=state.ecology;reference.deer.visible=e.window!=='dusk';reference.shadow.visible=e.window!=='dusk';foxShadow.visible=e.window==='dusk';const f=e.actors.find(a=>a.id==='compact-fox');foxShadow.position.set(f.x,terrainHeight(f.x,f.z)+.006,f.z);
   if(lastWindow!==e.window){for(const mesh of world.plantMeshes){mesh.geometry.dispose();mesh.geometry=plantGeometry(mesh.userData.taxon,1,e.window);}lastWindow=e.window;}
-  for(const a of e.actors){const m=models.get(a.id);m.visible=a.visible&&a.alive; // render culling never edits biological state
+  for(const a of e.actors){const m=models.get(a.id);m.visible=(a.visible&&a.alive)||a.emptyShell; // render culling never edits biological state
    if(a.size<.2&&Math.hypot(a.x-observer.x,a.z-observer.z)>18)m.visible=false;
    if(a.taxon==='vulpes_vulpes'){if(m.visible)quadrupedPose(m,a,state.time);continue;}
    m.position.set(a.x,a.y,a.z);m.rotation.set(0,-a.heading,0);
-   if(m.siphons)m.siphons.visible=a.activity==='filtering';
-   if(m.headPivot){const technique=a.activity;m.headPivot.rotation.z=technique==='sweeping'?-1.05:technique==='probing'?-.95+Math.sin(state.time*9)*.10:technique==='shell-opening'?-.9+Math.sin(state.time*3)*.12:0;m.headPivot.rotation.y=technique==='sweeping'?Math.sin(state.time*2)*.45:0;}
+   if(m.siphons)m.siphons.visible=a.alive&&a.activity==='filtering';for(const valve of m.shellValves||[])valve.rotation.x=valve.userData.side*(a.shellOpening||0);if(a.emptyShell&&m.tissue)m.tissue.visible=false;
+   if(m.crabLegs)poseCrab(m,a);
+   if(m.birdLegs)poseCoastalBird(m,a,state.time);
+   if(m.headPivot&&!m.birdLegs){const technique=a.activity;m.headPivot.rotation.z=technique==='sweeping'?-1.05:technique==='probing'?-.95+Math.sin(state.time*9)*.10:technique==='shell-opening'?-.9+Math.sin(state.time*3)*.12:0;m.headPivot.rotation.y=technique==='sweeping'?Math.sin(state.time*2)*.45:0;}
    if(a.taxon==='garrulus_glandarius'&&a.activity==='flying'){m.rotation.z=-.12;}
-   for(const [i,w]of (m.animation?.wings||[]).entries()){if(['garrulus_glandarius','parus_major'].includes(a.taxon))w.visible=a.activity==='flying';w.rotation.x=(i?1:-1)*Math.sin(state.time*(a.taxon==='bombus_lapidarius'?70:6))*(a.activity==='carrying-pollen'||a.activity==='flying'?.8:.18);}
+   for(const [i,w]of (m.animation?.wings||[]).entries()){if(m.birdLegs||['garrulus_glandarius','parus_major'].includes(a.taxon))w.visible=a.activity==='flying';w.rotation.x=(i?1:-1)*Math.sin(state.time*(a.taxon==='bombus_lapidarius'?70:6))*(['carrying-pollen','returning-to-flower','flying'].includes(a.activity)?.8:.18);}
    if(a.taxon==='lumbricidae'){m.position.x=a.homeX-Math.min(.12,(6-e.resources['leaf-litter'].amount)*.02);}
   }
+  for(const a of e.actors)if(a.carriedPreyId){const prey=e.actors.find(p=>p.id===a.carriedPreyId),preyModel=models.get(prey.id),predator=models.get(a.id),anchor=predator.beakContact||predator.clawContact;predator.updateMatrixWorld(true);const contact=anchor.getWorldPosition(new THREE.Vector3());if(prey.emptyShell&&preyModel.tissue){const tissue=preyModel.tissue;if(tissue.parent!==scene)scene.attach(tissue);tissue.visible=true;tissue.position.copy(contact);}else{preyModel.visible=true;preyModel.position.copy(contact);}}
   for(const [id,row]of affected){const r=e.resources[id],fraction=r.amount/r.initial,signature=fraction+'|'+e.window;if(signature!==row.last){row.mesh.geometry.dispose();row.mesh.geometry=plantGeometry(row.p.taxon,fraction,e.window);row.last=signature;}}
   for(let i=0;i<acorns.length;i++)acorns[i].visible=e.window==='autumn'&&i<e.resources.acorns.amount;
   carriedAcorn.visible=e.window==='autumn'&&e.actors.find(a=>a.id==='compact-jay').carryingAcorn;

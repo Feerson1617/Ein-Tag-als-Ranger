@@ -1,3 +1,4 @@
+import { stepCoastal } from './coastal-behaviour.js';
 import { CATALOG,WINDOWS } from './catalog.js';
 import { MANIFEST } from './manifest.js';
 import { terrainHeight,nearestPath } from './layout.js';
@@ -49,13 +50,16 @@ export function createEcology(state,window='summer'){
  add('platalea_leucorodia','spoonbill',70,1,{technique:'sweeping',preyClass:'shrimp-20-40mm',depth:[.05,.35]});
  add('tringa_totanus','redshank',59,5,{technique:'probing',preyClass:'small-worms',depth:[-.3,.08]});
  add('haematopus_ostralegus','oystercatcher',61,-14,{technique:'shell-opening',preyClass:'mussels-20-40mm',depth:[-.8,.04]});
- for(let i=0;i<18;i++)add('mytilus_edulis','mussel-'+i,60.5+(i%6)*.12,-14.25+Math.floor(i/6)*.16,{y:terrainHeight(61,-14)+.02,size:.02+(i%3)*.01,station:'compact-mussel-pool',attached:true});
+ for(let i=0;i<18;i++)add('mytilus_edulis','mussel-'+i,60.5+(i%6)*.12,-14.25+Math.floor(i/6)*.16,{y:terrainHeight(60.5+(i%6)*.12,-14.25+Math.floor(i/6)*.16)+.004,size:.02+(i%3)*.01,station:'compact-mussel-pool',attached:true});
  for(let i=0;i<10;i++){const x=63+(i%5)*.18,z=-12+Math.floor(i/5)*.3;add('cerastoderma_edule','cockle-'+i,x,z,{station:'compact-cockle-probe',burialDepth:1.5,sedimentSurface:terrainHeight(x,z),y:terrainHeight(x,z)-.015,sampleGroup:i<5?'Q1':'Q2',activity:'resting'});}
  add('arenicola_marina','lugworm',65,-9,{stage:'adult',burrow:true});add('hediste_diversicolor','ragworm',64,-6,{stage:'adult',burrow:true});
  for(let i=0;i<6;i++)add('hediste_diversicolor','juvenile-worm-'+i,(i<3?62:59)+i%3*.08,(i<3?-7:5)+i%3*.03,{stage:'juvenile',size:i<3?.006:.012,resourceClass:i<3?'small-juveniles':'small-worms'});
  for(let i=0;i<5;i++)add('crangon_crangon','shrimp-'+i,69+i*.14,1+i*.08,{y:terrainHeight(70,1)+.03,size:.025+i*.004,resourceClass:'shrimp-20-40mm'});
  add('carcinus_maenas','crab',61.7,-14.1,{resourceClass:'mussels-20-40mm'});
  for(let i=0;i<12;i++)add('peringia_ulvae','snail-'+i,64+i%4*.05,-12.7+Math.floor(i/4)*.05);
+ // Revision 2 moves the EXISTING bed and its two consumers away from the
+ // boardwalk footprint at initial world construction, never during play.
+ if(state.modelRevision>=2)for(const a of actors)if(['mytilus_edulis','carcinus_maenas','haematopus_ostralegus'].includes(a.taxon)){a.z-=1.3;a.y=terrainHeight(a.x,a.z)+(a.taxon==='mytilus_edulis'?.004:0);}
  const resources={
   'aphid-colony':{id:nettle.id,amount:9,initial:9,units:'model aphids',hostId:nettle.id},
   'shared-mussels':{id:'compact-mussel-pool',amount:18,initial:18,units:'20–40 mm model mussels',sizeRange:[.02,.04]},
@@ -82,17 +86,16 @@ function updateActors(state,dt){const e=state.ecology,t=state.time,byId=id=>e.ac
  for(const a of e.actors){a.visible=a.alive&&(!a.window||a.window===e.window);a.phase+=dt;if(a.taxon==='ixodes_ricinus'){a.x=host.x-.07;a.z=host.z+.16;a.y=terrainHeight(host.x,host.z)+.66;a.visible=a.visible&&e.window!=='dusk';}
   if(a.taxon==='cerastoderma_edule')a.activity=e.tide.waterLevel>a.sedimentSurface?'filtering':'resting';
   if(a.taxon==='coccinella_septempunctata'){const prey=e.actors.find(p=>p.taxon==='aphidoidea'&&p.alive);if(prey){const d=Math.hypot(prey.x-a.x,prey.z-a.z),move=Math.min(d,.01*dt);if(d){a.x+=(prey.x-a.x)/d*move;a.z+=(prey.z-a.z)/d*move;}a.activity=d<.007?'feeding':'searching';}else a.activity='resting';}
-  if(['recurvirostra_avosetta','platalea_leucorodia','tringa_totanus','haematopus_ostralegus'].includes(a.taxon)){const depth=e.tide.waterLevel-terrainHeight(a.homeX,a.homeZ),suitable=depth>=a.depth[0]-.03&&depth<=a.depth[1],disturbed=Math.hypot((e.observer?.x??0)-a.x,(e.observer?.z??0)-a.z)<1.5,tx=suitable&&!disturbed?a.homeX:30+a.size,tz=suitable&&!disturbed?a.homeZ:27+a.size*2,dist=Math.hypot(tx-a.x,tz-a.z),move=Math.min(dist,.8*dt);if(dist>0){a.x+=(tx-a.x)/dist*move;a.z+=(tz-a.z)/dist*move;a.heading=Math.atan2(tz-a.z,tx-a.x);}a.activity=dist>.1?'walking':suitable?a.technique:'resting';a.y=terrainHeight(a.x,a.z);}
-  if(a.taxon==='parus_major'){const support=state.trees.find(s=>s.id===a.supportId);if(!support){a.activity='flying';a.supportId=null;a.y=terrainHeight(a.x,a.z)+3;}else{a.x=support.x+1.7;a.z=support.z;a.y=terrainHeight(support.x,support.z)+support.h*.42+1.525;a.activity=e.window==='spring'&&t%18<2?'signalling':'searching';}}
+  if(a.taxon==='parus_major'){const support=state.trees.find(s=>s.id===a.supportId);if(!support){a.activity='flying';a.supportId=null;a.y+=Math.sign(terrainHeight(a.x,a.z)+3-a.y)*Math.min(Math.abs(terrainHeight(a.x,a.z)+3-a.y),2*dt);}else{a.x=support.x+1.7;a.z=support.z;a.y=terrainHeight(support.x,support.z)+support.h*.42+1.525;a.activity=e.window==='spring'&&t%18<2?'signalling':'searching';}}
  }
  const bee=byId('bee'),p=e.cloverIds.map(id=>state.plants.find(p=>p.id===id)),cycle=t%12;
- if(bee&&p.every(Boolean)){const transfer=cycle>=4&&cycle<8,from=p[0],to=p[1],f=transfer?(cycle-4)/4:cycle>=8?1:0;bee.x=mix(from.x,to.x,f);bee.z=mix(from.z,to.z,f);bee.y=mix(from.y+from.size,to.y+to.size,f)+(transfer?.15*Math.sin(f*Math.PI):0);bee.activity=transfer?'carrying-pollen':cycle<4?'anther-contact':'stigma-contact';bee.plantId=cycle<8?from.id:to.id;}
- const fox=byId('fox'),mouse=e.actors.find(a=>a.taxon==='apodemus_sylvaticus'&&a.alive);if(fox&&mouse){const phase=t%16;mouse.activity=phase>10?'escaping':'searching';mouse.x=-61+Math.sin(t*.4)*.18;fox.activity=phase<8?'stalking':phase<11?'attempting':'resting';fox.x=phase<8?-64+phase*.2:phase<11?mix(-62.4,mouse.x-.06,(phase-8)/3):mouse.x-.06;fox.heading=0;}
- const jay=byId('jay');if(jay){const support=state.trees.find(q=>q.id===jay.supportId),phase=t%20;jay.activity=phase<4?'picking':phase<9?'flying':phase<14?'caching':'resting';jay.carryingAcorn=phase>=4&&phase<14;
-  if(jay.activity==='flying'){jay.supportId=null;jay.x=-38+(phase-4)/5*3;jay.z=-9;jay.y=terrainHeight(jay.x,jay.z)+.1+Math.sin((phase-4)/5*Math.PI)*2;}else if(phase<4){jay.x=-38;jay.y=terrainHeight(-38,-9)+.16;jay.supportId='ground:oak-clearing';}else{jay.x=-35;jay.y=terrainHeight(-35,-9)+.16;jay.supportId='ground:cache';}
+ if(bee&&p.every(Boolean)){const transfer=cycle>=4&&cycle<8,returning=cycle>=10,from=p[0],to=p[1],f=transfer?(cycle-4)/4:returning?1-(cycle-10)/2:cycle>=8?1:0;bee.x=mix(from.x,to.x,f);bee.z=mix(from.z,to.z,f);bee.y=mix(from.y+from.size,to.y+to.size,f)+(transfer||returning?.15*Math.sin(f*Math.PI):0);bee.activity=returning?'returning-to-flower':transfer?'carrying-pollen':cycle<4?'anther-contact':'stigma-contact';bee.plantId=cycle<8?from.id:to.id;}
+ const fox=byId('fox'),mouse=e.actors.find(a=>a.taxon==='apodemus_sylvaticus'&&a.alive);if(fox&&mouse){const phase=t%16;mouse.activity=phase>10?'escaping':'searching';mouse.x=-61+Math.sin(t*.4)*.18;fox.activity=phase<8?'stalking':phase<11?'attempting':'resting';fox.x=phase<8?-64+phase*.2:phase<11?mix(-62.4,mouse.x-.06,(phase-8)/3):mix(-61+Math.sin((Math.floor(t/16)*16+11)*.4)*.18-.06,-64,(phase-11)/5);fox.activity=phase>=11?'returning':fox.activity;fox.heading=phase<11?0:Math.PI;}
+ const jay=byId('jay');if(jay){const support=state.trees.find(q=>q.id===jay.supportId),phase=t%20;jay.activity=phase<4?'picking':phase<9?'flying':phase<14?'caching':phase<16?'resting':'flying';jay.carryingAcorn=phase>=4&&phase<14;
+  if(jay.activity==='flying'){jay.supportId=null;const f=phase>=16?1-(phase-16)/4:(phase-4)/5;jay.x=-38+f*3;jay.z=-9;jay.y=terrainHeight(jay.x,jay.z)+.16+Math.sin(f*Math.PI)*2;jay.heading=phase>=16?Math.PI:0;}else if(phase<4){jay.x=-38;jay.y=terrainHeight(-38,-9)+.16;jay.supportId='ground:oak-clearing';}else{jay.x=-35;jay.y=terrainHeight(-35,-9)+.16;jay.supportId='ground:cache';}
   if(support&&jay.activity==='resting')jay.activity='resting';}
 }
-export function stepEcology(state,dt,observer={x:0,z:0}){const e=state.ecology;if(!e)return;e.observer=observer;e.tide=tideAt(state.time);updateActors(state,dt);
+export function stepEcology(state,dt,observer={x:0,z:0}){const e=state.ecology;if(!e)return;e.observer=observer;e.tide=tideAt(state.time);updateActors(state,dt);stepCoastal(state,dt,tideAt,emit);
  if(e.window==='summer'){const bee=e.actors.find(a=>a.taxon==='bombus_lapidarius'),phase=state.time%12,previous=e.previousBeePhase??phase;
   if(phase>=4&&previous<4)bee.pollen={plantId:e.cloverIds[0],loadedAt:state.time};
   if(phase>=8&&previous<8&&bee.pollen&&bee.pollen.plantId!==bee.plantId&&e.resources['clover-pollen'].amount>0){emit(state,'bee-clover',[bee.id,bee.pollen.plantId,bee.plantId],'clover-pollen',-1,'pollen-transferred',{startedAt:bee.pollen.loadedAt,sequence:['anther-contact','pollen-carried','stigma-contact'],seedSet:false,nectarRobbery:false});bee.pollen=null;}e.previousBeePhase=phase;
@@ -109,8 +112,6 @@ export function stepEcology(state,dt,observer={x:0,z:0}){const e=state.ecology;i
  if(sequence===2&&resource('nettle-leaf'))emit(state,'caterpillar-nettle',['compact-caterpillar',e.nettleId],'nettle-leaf',-1,'leaf-reduced');
  if(sequence===3&&resource('leaf-litter'))emit(state,'worm-litter',['compact-earthworm'],'leaf-litter',-1,'pulled-into-soil',{mineralized:false});
  if(state.deer.activity==='browsing'&&resource('browse-shoot')&&Math.hypot(state.deer.x-state.plants.find(p=>p.id===e.resources['browse-shoot'].id).x,state.deer.z-state.plants.find(p=>p.id===e.resources['browse-shoot'].id).z)<1.5)emit(state,'deer-browse',[state.deer.id,e.resources['browse-shoot'].id],'browse-shoot',-1,'shoot-reduced');
- const mussels=e.actors.filter(a=>a.taxon==='mytilus_edulis'&&a.alive),oyster=actor('haematopus_ostralegus'),crab=actor('carcinus_maenas');if(mussels.length&&e.tide.waterLevel<-.65){const consumer=e.cycle%2?oyster:crab,prey=mussels[0];if(consumer){consumer.x=prey.x-.12;consumer.z=prey.z+.06;consumer.activity=consumer===crab?'opening-shell':'shell-opening';emit(state,'shell-competition',[consumer.id,prey.id],'shared-mussels',-1,'prey-removed',{preyLength:prey.size,accessible:true});prey.alive=false;}}
- if(sequence===4)for(const [birdId,taxon,resourceId]of [['spoonbill','platalea_leucorodia','shrimp'],['avocet','recurvirostra_avosetta','small-juveniles'],['redshank','tringa_totanus','small-worms']]){const bird=actor(taxon),prey=e.actors.find(a=>a.alive&&(resourceId==='shrimp'?a.taxon==='crangon_crangon':a.resourceClass===resourceId));if(bird&&bird.activity===bird.technique&&prey&&Math.hypot(bird.x-prey.x,bird.z-prey.z)<1.4&&resource(resourceId)){emit(state,'shore-feeding',[bird.id,prey.id],resourceId,-1,'consumed',{technique:bird.technique,preyLength:prey.size,waterDepth:e.tide.waterLevel-terrainHeight(bird.x,bird.z)});prey.alive=false;}}
  if(sequence===0){const clam=e.actors.find(a=>a.taxon==='cerastoderma_edule'&&a.activity==='filtering');if(clam&&resource('phytoplankton'))emit(state,'cockle-filtration',[clam.id],'phytoplankton',-1,'particles-removed',{naturalRate:false});if(resource('benthic-diatoms'))emit(state,'snail-grazing',['compact-snail-0'],'benthic-diatoms',-1,'surface-grazed');}
  if(e.cycle%4===0)emit(state,'tick-deer',['compact-tick',state.deer.id],'deer-host',0,'attached-feeding',{cost:'qualitative; not a calibrated blood-loss rate'});
 }

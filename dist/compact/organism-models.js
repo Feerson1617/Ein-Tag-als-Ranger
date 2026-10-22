@@ -1,4 +1,5 @@
 import * as THREE from '../vendor/three.module.js?revision=120';
+import { coastalRig,CRAB_RIG } from './coastal-rig.js';
 import { CATALOG } from './catalog.js';
 import { GeometryBatch,stick,plantGeometry } from './geometry.js';
 
@@ -22,16 +23,16 @@ export function createOrganism(taxon,stage='adult',remaining=1){
   ball(bodyColor,0,bodyY,0,.62,.36,.29);ball(oyster?black:bodyColor,.28,bodyY+.08,0,.32,.33,.24);
   if(oyster)ball(black,.1,bodyY+.24,0,.55,.21,.27);
   const neckTop=wader&&!oyster?bodyY+.72:bodyY+.39;
-  const bodyBatch=b;b=new GeometryBatch();line([.3,bodyY+.05,0],[.38,neckTop,0],wader?.10:.14,spoon||avocet?cream:tit?black:bodyColor,.09);
+  const bodyBatch=b,neckBatch=wader?new GeometryBatch():null;b=new GeometryBatch();if(wader)stick(neckBatch,[.3,bodyY+.05,0],[.42,neckTop,0],.10,spoon||avocet?cream:bodyColor,.09);else line([.3,bodyY+.05,0],[.38,neckTop,0],.14,tit?black:bodyColor,.09);
   ball(spoon?cream:avocet||oyster||tit?black:bodyColor,.42,neckTop,0,.19,.19,.17);
   for(const side of [-1,1]){
    if(tit)ball(cream,.47,neckTop-.04,side*.145,.11,.085,.035);
    eye(.51,neckTop+.025,side*.166,.025);
   }
-  const headBatch=b;b=bodyBatch;let beakTip;
+  const headBatch=b,skinVertexCount=b.p.length/3;b=bodyBatch;let beakTip;
   for(const side of [-1,1]){
-   line([-.12,legHeight+.08,side*.16],[-.12,0,side*.19],.025,legColor,.022);
-   for(let k=-1;k<=1;k++)line([-.12,.02,side*.19],[.04,.005,side*.19+k*.06],.009,legColor,.004);
+   if(!wader)line([-.12,legHeight+.08,side*.16],[-.12,0,side*.19],.025,legColor,.022);
+   if(!wader)for(let k=-1;k<=1;k++)line([-.12,.02,side*.19],[.04,.005,side*.19+k*.06],.009,legColor,.004);
    ball(oyster||avocet?black:jay?'#82736a':tit?'#65704c':'#868777',-.17,bodyY+.12,side*.24,.43,.18,.06);
    if(jay){ball('#75a5bc',.03,bodyY+.11,side*.286,.17,.09,.014);for(let k=0;k<5;k++)ball(black,-.09+k*.045,bodyY+.11,side*.30,.012,.075,.005);ball(cream,-.5,bodyY+.12,side*.15,.13,.12,.07);}
    if(avocet)ball(black,-.29,bodyY+.28,side*.25,.22,.08,.03);
@@ -39,9 +40,13 @@ export function createOrganism(taxon,stage='adult',remaining=1){
   if(tit)ball(black,.15,bodyY-.23,0,.30,.035,.045);
   line([-.4,bodyY,0],[-.95,bodyY-.12,0],.12,black,.012);
   b=headBatch;
-  if(avocet){const curve=new THREE.CatmullRomCurve3([new THREE.Vector3(.57,neckTop,0),new THREE.Vector3(.86,neckTop-.025,0),new THREE.Vector3(1.14,neckTop+.15,0)]);b.add(new THREE.TubeGeometry(curve,16,.016,6,false),black);}
-  else {const length=spoon?.92:oyster?.6:taxon==='tringa_totanus'?.49:.22,color=oyster?'#d27842':taxon==='tringa_totanus'?'#b76c4c':black;line([.56,neckTop,0],[.56+length,neckTop-.025,0],spoon?.038:oyster?.045:.018,color,spoon?.045:.003);beakTip=new THREE.Vector3(.56+length,neckTop-.025,0);if(spoon)ball('#c1ae77',1.46,neckTop-.025,0,.12,.025,.085);}
-  const headPivot=new THREE.Group(),headMesh=b.mesh();headMesh.geometry.translate(-.3,-bodyY,0);headPivot.position.set(.3,bodyY,0);headPivot.add(headMesh);root.add(headPivot);root.headPivot=headPivot;if(jay){root.beakContact=new THREE.Object3D();root.beakContact.name='beak-contact';root.beakContact.position.copy(beakTip).sub(headPivot.position);headPivot.add(root.beakContact);}b=bodyBatch;
+  if(avocet){beakTip=new THREE.Vector3(1.14,neckTop+.15,0);const curve=new THREE.CatmullRomCurve3([new THREE.Vector3(.57,neckTop,0),new THREE.Vector3(.86,neckTop-.025,0),new THREE.Vector3(1.14,neckTop+.15,0)]);const tube=new THREE.TubeGeometry(curve,16,.016,6,false),vertices=tube.attributes.position;for(let j=0;j<=16;j++){const center=curve.getPointAt(j/16),taper=1-.875*j/16;for(let k=0;k<=6;k++){const i=j*7+k,v=new THREE.Vector3().fromBufferAttribute(vertices,i).sub(center).multiplyScalar(taper).add(center);vertices.setXYZ(i,v.x,v.y,v.z);}}tube.computeVertexNormals();b.add(tube,black);}
+  else {const length=spoon?.92:oyster?.6:taxon==='tringa_totanus'?.49:.22,color=oyster?'#d27842':taxon==='tringa_totanus'?'#b76c4c':black;line([.56,neckTop,0],[.56+length,neckTop-.025,0],spoon?.038:oyster?.045:.018,color,spoon?.045:.003);beakTip=new THREE.Vector3(spoon?1.58:.56+length,neckTop-.025,0);if(spoon)ball('#c1ae77',1.46,neckTop-.025,0,.12,.025,.085);}
+  const headPivot=new THREE.Group(),headMesh=b.mesh();headMesh.userData.skinVertexCount=skinVertexCount;root.headSkinMesh=headMesh;headPivot.position.set(.3,bodyY,0);
+  if(wader){const neck=neckBatch.mesh();neck.geometry.translate(-.3,-bodyY,0);headPivot.add(neck);const joint=new THREE.Group();joint.position.set(.42-.3,neckTop-bodyY,0);headMesh.geometry.translate(-.42,-neckTop,0);joint.add(headMesh);headPivot.add(joint);root.headJoint=joint;root.beakContact=new THREE.Object3D();root.beakContact.name='beak-contact';root.beakContact.position.copy(beakTip).sub(new THREE.Vector3(.42,neckTop,0));joint.add(root.beakContact);}
+  else{headMesh.geometry.translate(-.3,-bodyY,0);headPivot.add(headMesh);if(beakTip){root.beakContact=new THREE.Object3D();root.beakContact.name='beak-contact';root.beakContact.position.copy(beakTip).sub(headPivot.position);headPivot.add(root.beakContact);}}
+  root.add(headPivot);root.headPivot=headPivot;b=bodyBatch;
+  if(wader){root.birdLegs=[];for(const side of [-1,1]){const upper=new THREE.Mesh(new THREE.CylinderGeometry(.022,.026,1,7),new THREE.MeshStandardMaterial({color:legColor,roughness:1})),lower=upper.clone(),toes=new GeometryBatch();for(let k=-1;k<=1;k++)stick(toes,[0,.02,0],[.16,.005,k*.06],.009,legColor,.004);const foot=toes.mesh();root.add(upper,lower,foot);root.birdLegs.push({side,upper,lower,foot});}root.rig=coastalRig(taxon);}
   for(const side of [-1,1]){const wingBatch=new GeometryBatch();wingBatch.add(sphere,jay?'#7d9bad':oyster||avocet?black:bodyColor,[-.15,0,side*.65],[.38,.025,.65]);const wing=wingBatch.mesh();wing.position.set(0,bodyY+.12,side*.12);wing.visible=false;root.add(wing);wings.push(wing);}
   parts.legs=2;parts.technique=avocet||spoon?'sweeping':oyster?'shell-opening':wader?'probing':'searching';
  }else if(taxon==='apodemus_sylvaticus'){
@@ -62,16 +67,34 @@ export function createOrganism(taxon,stage='adult',remaining=1){
  }else if(['lumbricidae','arenicola_marina','hediste_diversicolor'].includes(taxon)){
   const rag=taxon==='hediste_diversicolor',earth=taxon==='lumbricidae',segments=earth?42:30;for(let i=0;i<segments;i++){const x=-1+i/segments*2,r=.065*Math.sin((i+1)/(segments+1)*Math.PI)**.3;ball(earth?'#9a7265':rag?'#8c7b62':'#9c8770',x,.07,Math.sin(i*.3)*.025,.034,r,r);if(earth&&i>10&&i<16)ball('#b5907e',x,.07,0,.035,r*1.25,r*1.25);if(rag)for(const side of [-1,1]){line([x,.07,side*r],[x+.012,.04,side*(r+.07)],.012,'#baaa8a');for(let k=0;k<3;k++)line([x,.05,side*(r+.04)],[x+k*.01,.025,side*(r+.1)],.002,cream);}}parts.segmentCount=segments;parts.parapodia=rag;
  }else if(c.kind==='bivalve'){
-  const cockle=taxon==='cerastoderma_edule',col=cockle?'#aaa18a':'#3d4b52';for(const side of [-1,1])ball(col,0,.18,side*.06,cockle?.6:.85,cockle?.46:.33,.18);
+  const cockle=taxon==='cerastoderma_edule',col=cockle?'#aaa18a':'#3d4b52';root.shellValves=[];for(const side of [-1,1]){if(cockle)ball(col,0,.18,side*.06,.6,.46,.18);else{const valve=new THREE.Group(),g=new THREE.SphereGeometry(1,12,8);g.scale(.85,.33,.18);g.translate(0,.13,side*.06);const part=new THREE.Mesh(g,new THREE.MeshStandardMaterial({color:col,roughness:.92}));valve.position.y=.05;valve.add(part);valve.userData.side=side;root.add(valve);root.shellValves.push(valve);}}if(!cockle){root.tissue=new THREE.Mesh(new THREE.SphereGeometry(1,12,8),new THREE.MeshStandardMaterial({color:'#c0ae79',roughness:.9}));root.tissue.scale.set(.48,.12,.10);root.tissue.position.y=.16;root.add(root.tissue);}
   if(cockle)for(let i=0;i<22;i++){const a=i/21*Math.PI;line([-.45,.02,0],[Math.cos(a)*.6,.18+Math.sin(a)*.45,.2],.012,'#c1b79c');}else for(let i=0;i<7;i++)line([-.6,.1,0],[-.9,.01,(i-3)*.04],.008,'#8a866c');parts.valves=2;parts.radialRibs=cockle?22:0;
   const siphonBatch=new GeometryBatch();for(const side of [-1,1])stick(siphonBatch,[.15,.45,side*.07],[.15,.8,side*.07],.025,'#b9ae99',.027);const siphons=siphonBatch.mesh();siphons.visible=false;root.add(siphons);root.siphons=siphons;
  }else if(taxon==='carcinus_maenas'){
-  ball('#69755c',0,.25,0,.53,.22,.7);for(let i=0;i<4;i++)for(const side of [-1,1]){const x=-.38+i*.22;line([x,.2,side*.45],[x+.1,.14,side*.9],.04,'#7c8265');line([x+.1,.14,side*.9],[x-.12,0,side*1.12],.025,'#9a9778');}for(const side of [-1,1]){line([.4,.23,side*.4],[.95,.28,side*.65],.08,'#878563');ball('#9b9877',1,.3,side*.65,.2,.11,.15);line([1.05,.3,side*.55],[1.28,.3,side*.6],.05,'#b7a687');line([1.05,.3,side*.75],[1.25,.3,side*.7],.04,'#b7a687');eye(.48,.43,side*.28,.045);}parts.walkingLegs=8;parts.claws=2;
+  ball('#69755c',0,.25,0,.53,.22,.7);root.crabLegs=[];root.claws=[];
+  for(let i=0;i<4;i++)for(const side of [-1,1]){const x=-.38+i*.22,saved=b;b=new GeometryBatch();line([x,.2,side*.45],[x+.1,.14,side*.9],.04,'#7c8265');line([x+.1,.14,side*.9],[x-.12,0,side*1.12],.025,'#9a9778');const leg=b.mesh();leg.geometry.translate(-x,-.2,-side*.45);leg.position.set(x,.2,side*.45);root.add(leg);root.crabLegs.push({mesh:leg,index:i,side});b=saved;}
+  for(const side of [-1,1]){const saved=b;b=new GeometryBatch();line([.4,.23,side*.4],[.95,.28,side*.65],.08,'#878563');ball('#9b9877',1,.3,side*.65,.2,.11,.15);line([1.05,.3,side*.55],[1.28,.3,side*.6],.05,'#b7a687');line([1.05,.3,side*.75],[1.25,.3,side*.7],.04,'#b7a687');const claw=new THREE.Group(),part=b.mesh();part.geometry.translate(-.4,-.23,-side*.4);claw.position.set(.4,.23,side*.4);claw.add(part);root.add(claw);root.claws.push(claw);if(side===1){root.clawContact=new THREE.Object3D();root.clawContact.position.set(.88,.07,.2);claw.add(root.clawContact);}b=saved;eye(.48,.43,side*.28,.045);}parts.walkingLegs=8;parts.claws=2;
  }else if(taxon==='crangon_crangon'){
   ball('#a8a088',.25,.2,0,.45,.19,.17);for(let i=0;i<6;i++)ball('#a59d85',-.1-i*.17,.15-i*.008,0,.12,.13-i*.012,.15-i*.011);for(const side of [-1,1]){for(let i=0;i<5;i++){line([.42-i*.14,.17,side*.1],[.25-i*.14,0,side*.25],.015,'#b5ab8d');line([-.17-i*.14,.08,side*.07],[-.19-i*.14,.015,side*.16],.008,'#c4b89a');}line([.62,.3,side*.08],[1.6,.18,side*.4],.009,'#c8bea0');ball('#171e19',.63,.33,side*.14,.045,.045,.03);ball('#c0b69c',-1.12,.08,side*.13,.19,.025,.15);}parts.walkingLegs=10;parts.swimmeretPairs=5;
  }else if(taxon==='peringia_ulvae'){
   ball('#959477',0,.05,0,.65,.06,.2);const points=[];for(let i=0;i<=100;i++){const t=i/100,a=t*Math.PI*8,r=.46*(1-t);points.push(new THREE.Vector3(Math.cos(a)*r,.13+t*.9,Math.sin(a)*r));}b.add(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(points),100,.10,8,false),'#8e836a');for(const side of [-1,1])line([.5,.08,side*.08],[.8,.18,side*.16],.02,'#acaa8a');parts.whorls=4;
  }else throw Error('Kein eigener Modellbauer für '+taxon);
- const mesh=b.mesh();mesh.name='diagnostic-body';root.add(mesh);root.updateMatrixWorld(true);const bounds=new THREE.Box3().setFromObject(root),extent=taxon==='aglais_io'&&stage!=='caterpillar'?bounds.max.z-bounds.min.z:bounds.max.x-bounds.min.x;
- const actualLength=taxon==='aglais_io'&&stage==='caterpillar'?.035:c.length;root.scale.setScalar(actualLength/extent);root.animation={wings};root.userData={taxon,stage,parts,diagnostics:c.diagnostics};return root;
+ const mesh=b.mesh();mesh.name='diagnostic-body';root.add(mesh);root.bodyMesh=mesh;if(root.birdLegs)poseCoastalBird(root,{pose:{pitch:0,yaw:0,crouch:0},activity:'resting'},0);root.updateMatrixWorld(true);const bounds=new THREE.Box3().setFromObject(root),extent=taxon==='aglais_io'&&stage!=='caterpillar'?bounds.max.z-bounds.min.z:bounds.max.x-bounds.min.x;
+ const actualLength=taxon==='aglais_io'&&stage==='caterpillar'?.035:c.length;root.scale.setScalar(root.rig?.scale||(taxon==='carcinus_maenas'?CRAB_RIG.scale:taxon==='mytilus_edulis'?actualLength/1.75:actualLength/extent));root.animation={wings};root.userData={taxon,stage,parts,diagnostics:c.diagnostics};return root;
+}
+
+const segment=(mesh,a,b)=>{const diff=b.clone().sub(a);mesh.position.copy(a).add(b).multiplyScalar(.5);mesh.quaternion.setFromUnitVectors(new THREE.Vector3(0,1,0),diff.clone().normalize());mesh.scale.set(1,diff.length(),1);};
+export function poseCoastalBird(model,actor,time){
+ if(!model.birdLegs)return;
+ const p=actor.pose||{pitch:0,yaw:0,crouch:0},crouch=p.crouch||0;model.headPivot.position.y=1.4-crouch;model.headPivot.rotation.set(0,p.yaw||0,p.pitch||0);if(model.headJoint)model.headJoint.rotation.z=(p.billPitch||0)-(p.pitch||0);model.bodyMesh.position.y=-crouch;
+ const moving=['walking','approaching','departing'].includes(actor.activity),phase=(actor.walkDistance||0)/(model.rig.scale*(.34/.62));
+ for(const leg of model.birdLegs){const cycle=(phase+(leg.side>0?.5:0))%1,swing=moving&&cycle>.62?(cycle-.62)/.38:0,lift=swing?.15*Math.sin(swing*Math.PI):0,offset=moving?(cycle<.62?.17-.34*cycle/.62:-.17+.34*(swing*swing*(3-2*swing))):0,hip=new THREE.Vector3(-.12,1.13-crouch,leg.side*.16),foot=new THREE.Vector3(-.12+offset,lift,leg.side*.19),knee=hip.clone().lerp(foot,.5);knee.x-=.17+crouch*.28;segment(leg.upper,hip,knee);segment(leg.lower,knee,foot);leg.foot.position.copy(foot);leg.foot.userData={stance:lift===0};}
+ for(const wing of model.animation?.wings||[])wing.position.y=1.52-crouch;
+ model.userData.contactScope='Actual bill endpoint and articulated support legs; numeric contact does not certify natural animation';
+}
+
+export function poseCrab(model,a){
+ for(const claw of model.claws||[])claw.rotation.z=a.pose?.clawPitch||0;
+ const moving=['approaching','departing'].includes(a.activity),phase=(a.walkDistance||0)/.035;
+ for(const {mesh,index,side}of model.crabLegs||[]){const swing=moving?Math.max(0,Math.sin(phase*6+index*Math.PI/2+side*Math.PI)):.0;mesh.rotation.y=moving?Math.sin(phase*6+index*Math.PI/2)*.16:0;mesh.position.y=.2+swing*.08;}
 }
