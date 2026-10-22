@@ -1,0 +1,61 @@
+{
+  "entry": "Ranger-Kompakt.html",
+  "scope": "Rendered DOM plus actual WebGL boot of standalone HTML; imports/storage corruption are explicitly labelled fixtures, not newly earned mission evidence",
+  "checks": [
+    {
+      "name": "valid older v2 imports through file input; K1-K5 actually render",
+      "passed": true
+    },
+    {
+      "name": "repro-invalid-top-level-features.json",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Ungültige Antwortauswahl: K1.features."
+    },
+    {
+      "name": "repro-impossible-coordinates.json",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Unbekannte Beobachtungsmethode."
+    },
+    {
+      "name": "K1-features",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Ungültige Antwortauswahl: K1.features."
+    },
+    {
+      "name": "K1-recordId",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Ungültige Aufgabenauswahl: K1.recordId."
+    },
+    {
+      "name": "K1-choice",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Ungültige Aufgabenauswahl: K1.choice."
+    },
+    {
+      "name": "K1-limit",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Ungültige Aufgabenauswahl: K1.limit."
+    },
+    {
+      "name": "K2-experimentTide",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Ungültige Aufgabenauswahl: K2.experimentTide."
+    },
+    {
+      "name": "explicit UI recovery and original download preserve all valid observations through reload",
+      "passed": true,
+      "originalBytes": 14910
+    }
+  ],
+  "errors": [],
+  "passed": true,
+  "htmlSHA256": "0b64ea7b1bf18637ce6dc7381c13b1682963ec33a3dd7ac14dfec59c1fa8f7dd",
+  "completedAt": "2026-10-22T12:31:21Z"
+}

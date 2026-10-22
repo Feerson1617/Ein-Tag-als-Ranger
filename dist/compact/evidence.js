@@ -1,10 +1,10 @@
 import { createReferenceState } from './world-state.js';
 import { createEcology } from './ecology.js';
 const inventories=new Map();
-export function identityInventory(seed){if(inventories.has(seed))return inventories.get(seed);const state=createReferenceState(seed);createEcology(state);const rows=[...state.plants,...state.trees.map(t=>({...t,taxon:t.type==='beech'?'fagus_sylvatica':'quercus_robur'})),state.deer,state.bird,...state.ecology.actors],result={individuals:new Map(rows.map(r=>[r.id,r])),resources:state.ecology.resources,cloverIds:state.ecology.cloverIds,nettleId:state.ecology.nettleId};if(inventories.size>=16)inventories.delete(inventories.keys().next().value);inventories.set(seed,result);return result;}
+export function identityInventory(seed,modelRevision=1){const cacheKey=seed+':'+modelRevision;if(inventories.has(cacheKey))return inventories.get(cacheKey);const state=createReferenceState(seed,modelRevision);createEcology(state);const rows=[...state.plants,...state.trees.map(t=>({...t,taxon:t.type==='beech'?'fagus_sylvatica':'quercus_robur'})),state.deer,state.bird,...state.ecology.actors],result={individuals:new Map(rows.map(r=>[r.id,r])),resources:state.ecology.resources,cloverIds:state.ecology.cloverIds,nettleId:state.ecology.nettleId};if(inventories.size>=16)inventories.delete(inventories.keys().next().value);inventories.set(cacheKey,result);return result;}
 export function eventIssue(record,event){
  if(!event||event.source!=='model-event'||event.window!==(record.window||'summer')||!Array.isArray(event.actors)||!event.actors.includes(record.individualId)||new Set(event.actors).size!==event.actors.length)return 'Ereignis und Beobachtungsindividuum passen nicht zusammen.';
- const inv=identityInventory(record.initialSeed),a=event.actors,r=inv.resources[event.resource];
+ const inv=identityInventory(record.initialSeed,record.modelRevision??1),a=event.actors,r=inv.resources[event.resource];
  if(event.interaction==='communication')return a.join('|')==='compact-tit-0|compact-tit-1'&&event.resourceId==='signal'&&event.window==='spring'?null:'Widersprüchlicher Kommunikationsfall.';
  if(!r||event.resourceId!==r.id||a.some(id=>!inv.individuals.has(id))||!Number.isFinite(event.before)||!Number.isFinite(event.after)||event.before>r.initial||event.before<0||event.after<0||event.after>event.before)return 'Ressource, Partner oder Mengenangabe widersprüchlich.';
  const taxon=id=>inv.individuals.get(id)?.taxon,same=(x,y)=>a.length===2&&taxon(a[0])===x&&taxon(a[1])===y,consumed=event.after===event.before-1;

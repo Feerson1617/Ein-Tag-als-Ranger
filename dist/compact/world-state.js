@@ -1,7 +1,7 @@
-import { MANIFEST } from './manifest.js';
+import { MANIFEST,MODEL_REVISION } from './manifest.js';
 import { nearestPath,terrainHeight } from './layout.js';
 export function randomGenerator(seed){let v=seed>>>0;return()=>((v=(Math.imul(v,1664525)+1013904223)>>>0)/4294967296);}
-export function createReferenceState(seed=MANIFEST.initialSeed){
+export function createReferenceState(seed=MANIFEST.initialSeed,modelRevision=MODEL_REVISION){
  const random=randomGenerator(seed),trees=[{id:'support-beech-a',x:-58,z:12,r:.24,h:10,type:'beech'},{id:'support-beech-b',x:-64,z:17,r:.27,h:11,type:'beech'},{id:'support-oak-c',x:-37,z:-9,r:.31,h:11,type:'oak'}];
  for(let i=0;i<120;i++){const x=-78+random()*50,z=-46+random()*92;if(nearestPath(x,z).distance<2.6||Math.hypot(x+58,z-3)<4||trees.some(t=>Math.hypot(t.x-x,t.z-z)<3.5))continue;trees.push({id:'tree-'+i,x,z,r:.18+random()*.16,h:8+random()*6,type:x>-37?'oak':'beech'});}
  const supports=trees.slice(0,2).map(t=>({id:t.id+':trunk',treeId:t.id,x:t.x+.12*(1.6/(t.h*.72))+t.r*(1-.55*(1.6/(t.h*.72)))+.012*MANIFEST.actorScale.woodpecker,z:t.z,y:terrainHeight(t.x,t.z)+1.6,normal:[1,0,0],valid:true}));
@@ -12,7 +12,7 @@ export function createReferenceState(seed=MANIFEST.initialSeed){
  patch('halimione_portulacoides',43,10,42,4,.65);patch('salicornia_europaea',49,-3,80,4,.3);patch('sporobolus_anglicus',46,-13,40,4,.95);
  const deer={id:'compact-deer-1',taxon:'capreolus_capreolus',x:-59,z:3,heading:0,activity:'resting',phase:0,feet:[],supportId:null};
  const bird={id:'compact-woodpecker-1',taxon:'dendrocopos_major',x:supports[0].x,y:supports[0].y,z:supports[0].z,supportId:supports[0].id,activity:'searching',phase:0,targetIndex:0};
- return {initialSeed:seed,worldVersion:MANIFEST.worldVersion,time:0,trees,supports,plants,deer,bird};
+ return {initialSeed:seed,modelRevision,worldVersion:MANIFEST.worldVersion,time:0,trees,supports,plants,deer,bird};
 }
 const mix=(a,b,t)=>a+(b-a)*t;
 export function stepReference(state,dt,observer){

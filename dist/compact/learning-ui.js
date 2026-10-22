@@ -9,7 +9,7 @@ const $=id=>document.getElementById(id),uid=()=>crypto.randomUUID();
 export function createLearningUI(api){
  const {journal,state,observer,panel,close,toast,escape:e,download}=api;
  const name=id=>CATALOG[id]?.name.split(' – ')[0]||id;
- const context=()=>({...api.context(),initialSeed:state.initialSeed,worldVersion:state.worldVersion,window:state.ecology.window});
+ const context=()=>({...api.context(),initialSeed:state.initialSeed,worldVersion:state.worldVersion,simulationTime:state.time,window:state.ecology.window});
  const status=message=>{if($('learning-status'))$('learning-status').textContent=message;toast(message);};
  const safe=fn=>{try{return fn();}catch(error){status(error.message);if(journal.error||journal.readBlocked)api.setDirty(true);return false;}};
  const option=(value,label,chosen)=>`<option value="${e(value)}"${chosen===value?' selected':''}>${e(label)}</option>`;
