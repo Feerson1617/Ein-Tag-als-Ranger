@@ -1,0 +1,23 @@
+# Korrekturauftrag: unabhängige Befunde
+
+Ausgang: `eece965c2afdd367ab9a610e0e05d09e9c706388`, lokal und remote identisch geprüft. Branch `feature/ranger-kompakt`, PR #3 bleibt Draft. Keine Änderung an main, kein Merge, Deployment oder Release. Der übergebene Korrekturauftrag ist die Arbeitsgrundlage. Das unabhängige ZIP überschreitet die 32-MiB-Transfergrenze; Bericht, Originalskripts und Originalbilder daraus sind nicht zugänglich. Die folgenden Reproduktionen sind eigene, aus den konkreten Angaben rekonstruierte Prüfungen. Sie werden nicht als gelesene Originalnachweise ausgegeben. Alle 37 Runtimequellen entsprechen vor Änderungen den alten Prüfnachweisen.
+
+Die bisherigen 26 Node-Reihen, 14 Kompaktgruppen und 34 Lerngruppen sind am Ausgangsstand tatsächlich erneut grün. Das ist keine fachliche Abnahme: Der bisherige Küstenvogeltest verlangt kein einziges Ereignis je Art. Das eigene Modell-Audit prüft vier Seeds, vier Zeitschritte und je 600 Modellsekunden. Quelle und konkrete Ausgangsdaten: tools/qa-corrections-baseline.mjs und verification/kompakt-korrektur/baseline.
+
+| ID / Priorität | Reproduktion und Ursache | Beabsichtigte Korrektur / negative und positive Prüfung | Zustand |
+|---|---|---|---|
+| F01 / P1 | Oberstes K1-features-Objekt wird angenommen; nur verschachtelte determinations werden typgeprüft. | Vollständige Formularschemas mit Referenzen; tatsächlicher HTML-Import, bytegleicher Altspeicher, sichere Reparatur bereits beschädigter Entwürfe. | FEHLGESCHLAGEN |
+| F02 / P1 | Säbelschnäbler/Rotschenkel ohne Nahrungserfolg; Rückweg von ferner Raststelle dauert länger als geeignete Tidefenster, Erfolg hängt an periodischem Scheduler. | Nahrungsausgerichtete Zustandsfolge, echter Schnabelkontakt und endliche Beute; Positiverfolg je Art, Seed und Zeitschritt verpflichtend. | FEHLGESCHLAGEN |
+| F03 / P1 | Direkte Koordinatenzuweisung bei Muschelaufnahme; Hummel springt am Zyklusende zur ersten Blüte. | Zeitbasierte begrenzte Annäherung/Kontakt/Handhabung/Abgang und kontinuierlicher Rückflug; tatsächliche Körper-/Kontaktgeometrie und vollständige Rendersequenzen. | FEHLGESCHLAGEN |
+| F04 / P2 | x=999999, z=-999999, invented-method werden angenommen. | Grenzen, Methoden, Fenster, Standort-/Individuenbezug und zeitlicher Kontext; gültige frühere Fassungen erhalten. | FEHLGESCHLAGEN |
+| F05 / P2 | Gestaltungsbefund; neue eigene Vorheransichten werden gesichert, Originalkameras sind nicht verfügbar. | Variierende Waldstruktur und Mikrohabitate, identische eigene Vorher-/Nachherkameras; biologische Zählflächen bleiben stabil. | NICHT GEPRÜFT |
+| F06 / P2 | NPCs nur Textkarten; Wegmetrik liefert etwa 25,5 % maximale Steigung. | Drei ansprechbare Figuren und lesbares Deichprofil mit sicherem Übergang; Begehbarkeit/Kollisionen und Renderansichten. | FEHLGESCHLAGEN |
+| F07 / P2 | Eigene Baseline bestätigt 31/35 Keilmelden unter normalem Hochwasser. | Höherer, entwässerter Schwerpunkt, Höhen-/Tidegradient und vollständige neue Statistik; belastbare Quellen und reale Ansichten. | FEHLGESCHLAGEN |
+| F08 / P2 | K1-Auswahl nennt vor der Entscheidung die Zielart. | Unbenannte Funde, plausible Alternativen und Transferfall; falsch/unsicher/richtig bleiben unterscheidbar. | FEHLGESCHLAGEN |
+| F09 / P2 | Fehlende lokal unmittelbar auswertbare Materialien sind schon im bisherigen Quellenregister dokumentiert. | Ausgearbeitete C04/C13/C15/C21/C23/C24 mit überprüfbaren Fundstellen, lokalen Informationen, Hilfen und Kriterien; keine erfundenen Naturdaten. | FEHLGESCHLAGEN |
+| F10 / P2 | Eigener Waldmeisterbeleg allein erfüllt die bisherige K5-Belegauswahl. | Sachlich passende Beleg-/Kriterienzuordnung mit explizitem Bedeutungsbezug, Gewichtung und menschlichem Argumentationsurteil. | FEHLGESCHLAGEN |
+| F11 / P2 | Fixierung läuft direkt von N₂ zu organischem N. | Fixierung zu Ammonium und Assimilation getrennt; Bilanz-, Sauerstoff- und Nullfallprüfungen. | FEHLGESCHLAGEN |
+| F12 | Im übergebenen Korrekturauftrag fehlt eine Beschreibung zu F12; das Originalarchiv ist nicht zugänglich. | Kein Fehler oder bestandenes Prüfergebnis wird erfunden. | NICHT GEPRÜFT |
+| F13 / P3 | Arbeitsblätter nutzen weitgehend gleichartige kurze Schreibfelder. | Mess-/Nischentabellen, Diagrammflächen, Verbindungsgefüge, Kriterienmatrix und differenzierte Lehrkräftehinweise. | FEHLGESCHLAGEN |
+
+BESTANDEN bezeichnet eine tatsächlich ausgeführte Prüfung der jeweils benannten Eigenschaft. FEHLGESCHLAGEN bezeichnet einen reproduzierten Mangel oder eine fehlgeschlagene Prüfung. NICHT GEPRÜFT bezeichnet fehlende Belege, fehlenden konkreten Auftrag oder nicht verfügbare reale Hardware. Fachliche Endabnahme und Unterrichtswirkung werden durch keinen dieser Softwaretests bestätigt.

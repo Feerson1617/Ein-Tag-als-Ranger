@@ -1,0 +1,12 @@
+CAPTURE start
+CAPTURE woodruff
+CAPTURE nettle
+CAPTURE wood
+CAPTURE village
+CAPTURE ramp
+CAPTURE salt-shrub
+CAPTURE salt-segments
+CAPTURE salt-grass
+CAPTURE coast
+REPRO repro-impossible-coordinates.json
+REPRO repro-invalid-top-level-features.json
