@@ -1,3 +1,4 @@
+import { applyForestStructure,applyMarshGradient } from './habitats.js';
 import { stepCoastal } from './coastal-behaviour.js';
 import { CATALOG,WINDOWS } from './catalog.js';
 import { MANIFEST } from './manifest.js';
@@ -25,41 +26,43 @@ const rng=seed=>{let n=seed>>>0;return()=>((n=(Math.imul(n,1664525)+1013904223)>
 const mix=(a,b,t)=>a+(b-a)*t;
 export function tideAt(time){const phase=((time%120)+120)%120/120;return {phase,waterLevel:-1.05+.8*(1-Math.cos(phase*Math.PI*2))/2,label:phase<.15||phase>.85?'Niedrigwasser':phase>.35&&phase<.65?'Hochwasser':'Übergang'};}
 export function createEcology(state,window='summer'){
+ const ground=(x,z)=>terrainHeight(x,z,state.modelRevision);
  if(!WINDOWS[window])throw Error('Unbekanntes Beobachtungsfenster.');
  const random=rng(state.initialSeed+871),actors=[];
- const add=(taxon,id,x,z,extras={})=>{const a={id:'compact-'+id,individualId:'compact-'+id,taxon,x,z,y:terrainHeight(x,z),size:CATALOG[taxon].length,heading:0,activity:'resting',phase:0,visible:true,alive:true,...extras};actors.push(a);return a;};
- const patch=(taxon,x,z,count,radius,size)=>{for(let i=0;i<count;i++){const a=random()*Math.PI*2,r=Math.sqrt(random())*radius,px=x+Math.cos(a)*r,pz=z+Math.sin(a)*r;if(nearestPath(px,pz).distance<1.25)continue;state.plants.push({id:`${state.worldVersion}:${taxon}:${state.plants.length}`,taxon,x:px,z:pz,y:terrainHeight(px,pz),size:size*(.85+random()*.3),angle:random()*6.28});}};
+ const add=(taxon,id,x,z,extras={})=>{const a={id:'compact-'+id,individualId:'compact-'+id,taxon,x,z,y:ground(x,z),size:CATALOG[taxon].length,heading:0,activity:'resting',phase:0,visible:true,alive:true,...extras};actors.push(a);return a;};
+ const patch=(taxon,x,z,count,radius,size)=>{for(let i=0;i<count;i++){const a=random()*Math.PI*2,r=Math.sqrt(random())*radius,px=x+Math.cos(a)*r,pz=z+Math.sin(a)*r;if(nearestPath(px,pz).distance<1.25)continue;state.plants.push({id:`${state.worldVersion}:${taxon}:${state.plants.length}`,taxon,x:px,z:pz,y:ground(px,pz),size:size*(.85+random()*.3),angle:random()*6.28});}};
  // These additions happen once, never on quest activation or graphics changes.
  if(!state.expandedPlants){patch('rubus_fruticosus',-43,1,9,2,1.15);patch('rubus_fruticosus',-59.8,3,3,.4,.8);patch('trifolium_pratense',-25,9,25,1.7,.3);patch('trifolium_pratense',-26,12,18,1,.28);patch('festuca_rubra',25,20,45,3,.55);patch('puccinellia_maritima',37,-17,55,3,.4);patch('limonium_vulgare',34,19,22,3,.45);state.expandedPlants=true;}
+ applyForestStructure(state,rng(state.initialSeed+2718));applyMarshGradient(state);
  const nettle=state.plants.filter(p=>p.taxon==='urtica_dioica').sort((a,b)=>Math.hypot(a.x+43,a.z-12)-Math.hypot(b.x+43,b.z-12))[0];
  const clover=state.plants.filter(p=>p.taxon==='trifolium_pratense').slice(0,2);
  const browse=state.plants.filter(p=>p.taxon==='rubus_fruticosus').sort((a,b)=>Math.hypot(a.x-state.deer.x,a.z-state.deer.z)-Math.hypot(b.x-state.deer.x,b.z-state.deer.z))[0];
- add('fomes_fomentarius','bracket',-62,-2.25,{y:terrainHeight(-62,-2.25)+.56,stage:'fruiting-body',supportId:'compact-dead-log'});
+ add('fomes_fomentarius','bracket',-62,-2.25,{y:ground(-62,-2.25)+.56,stage:'fruiting-body',supportId:'compact-dead-log'});
  add('vulpes_vulpes','fox',-64,-20,{window:'dusk',heading:0});
  for(let i=0;i<3;i++)add('apodemus_sylvaticus','mouse-'+i,-61+i*.6,-20+i*.4,{window:'dusk',stage:'adult'});
- add('garrulus_glandarius','jay',-38,-9,{window:'autumn',supportId:state.trees.find(t=>t.type==='oak')?.id||state.trees[0].id,y:terrainHeight(-38,-9)+1.3,stage:'adult'});
- for(let i=0;i<2;i++){const t=state.trees[i];add('parus_major','tit-'+i,t.x+1.7,t.z,{supportId:t.id,y:terrainHeight(t.x,t.z)+t.h*.42+1.525,stage:'adult'});}
+ add('garrulus_glandarius','jay',-38,-9,{window:'autumn',supportId:state.trees.find(t=>t.type==='oak')?.id||state.trees[0].id,y:ground(-38,-9)+1.3,stage:'adult'});
+ for(let i=0;i<2;i++){const t=state.trees[i];add('parus_major','tit-'+i,t.x+1.7,t.z,{supportId:t.id,y:ground(t.x,t.z)+t.h*.42+1.525,stage:'adult'});}
  add('bombus_lapidarius','bee',clover[0].x,clover[0].z,{y:clover[0].y+.3,stage:'worker',plantId:clover[0].id});
- add('aglais_io','butterfly',-26,11,{y:terrainHeight(-26,11)+.5,stage:'adult'});
+ add('aglais_io','butterfly',-26,11,{y:ground(-26,11)+.5,stage:'adult'});
  add('aglais_io','caterpillar',nettle.x,nettle.z,{y:nettle.y+nettle.size*.68,size:.035,stage:'caterpillar',plantId:nettle.id});
  for(let i=0;i<2;i++)add('coccinella_septempunctata','ladybird-'+i,nettle.x+.07+i*.03,nettle.z,{y:nettle.y+nettle.size*.68,plantId:nettle.id});
  for(let i=0;i<9;i++)add('aphidoidea','aphid-'+i,nettle.x+.03+i*.006,nettle.z+.01,{y:nettle.y+nettle.size*.68,plantId:nettle.id});
- add('lumbricidae','earthworm',-61,-2.7,{y:terrainHeight(-61,-2.7)+.015,stage:'adult'});
- add('ixodes_ricinus','tick',state.deer.x,state.deer.z,{hostId:state.deer.id,y:terrainHeight(state.deer.x,state.deer.z)+.6,stage:'adult-female'});
+ add('lumbricidae','earthworm',-61,-2.7,{y:ground(-61,-2.7)+.015,stage:'adult'});
+ add('ixodes_ricinus','tick',state.deer.x,state.deer.z,{hostId:state.deer.id,y:ground(state.deer.x,state.deer.z)+.6,stage:'adult-female'});
  add('recurvirostra_avosetta','avocet',62,-7,{technique:'sweeping',preyClass:'small-juveniles',depth:[0,.12]});
  add('platalea_leucorodia','spoonbill',70,1,{technique:'sweeping',preyClass:'shrimp-20-40mm',depth:[.05,.35]});
  add('tringa_totanus','redshank',59,5,{technique:'probing',preyClass:'small-worms',depth:[-.3,.08]});
  add('haematopus_ostralegus','oystercatcher',61,-14,{technique:'shell-opening',preyClass:'mussels-20-40mm',depth:[-.8,.04]});
- for(let i=0;i<18;i++)add('mytilus_edulis','mussel-'+i,60.5+(i%6)*.12,-14.25+Math.floor(i/6)*.16,{y:terrainHeight(60.5+(i%6)*.12,-14.25+Math.floor(i/6)*.16)+.004,size:.02+(i%3)*.01,station:'compact-mussel-pool',attached:true});
- for(let i=0;i<10;i++){const x=63+(i%5)*.18,z=-12+Math.floor(i/5)*.3;add('cerastoderma_edule','cockle-'+i,x,z,{station:'compact-cockle-probe',burialDepth:1.5,sedimentSurface:terrainHeight(x,z),y:terrainHeight(x,z)-.015,sampleGroup:i<5?'Q1':'Q2',activity:'resting'});}
+ for(let i=0;i<18;i++)add('mytilus_edulis','mussel-'+i,60.5+(i%6)*.12,-14.25+Math.floor(i/6)*.16,{y:ground(60.5+(i%6)*.12,-14.25+Math.floor(i/6)*.16)+.004,size:.02+(i%3)*.01,station:'compact-mussel-pool',attached:true});
+ for(let i=0;i<10;i++){const x=63+(i%5)*.18,z=-12+Math.floor(i/5)*.3;add('cerastoderma_edule','cockle-'+i,x,z,{station:'compact-cockle-probe',burialDepth:1.5,sedimentSurface:ground(x,z),y:ground(x,z)-.015,sampleGroup:i<5?'Q1':'Q2',activity:'resting'});}
  add('arenicola_marina','lugworm',65,-9,{stage:'adult',burrow:true});add('hediste_diversicolor','ragworm',64,-6,{stage:'adult',burrow:true});
  for(let i=0;i<6;i++)add('hediste_diversicolor','juvenile-worm-'+i,(i<3?62:59)+i%3*.08,(i<3?-7:5)+i%3*.03,{stage:'juvenile',size:i<3?.006:.012,resourceClass:i<3?'small-juveniles':'small-worms'});
- for(let i=0;i<5;i++)add('crangon_crangon','shrimp-'+i,69+i*.14,1+i*.08,{y:terrainHeight(70,1)+.03,size:.025+i*.004,resourceClass:'shrimp-20-40mm'});
+ for(let i=0;i<5;i++)add('crangon_crangon','shrimp-'+i,69+i*.14,1+i*.08,{y:ground(70,1)+.03,size:.025+i*.004,resourceClass:'shrimp-20-40mm'});
  add('carcinus_maenas','crab',61.7,-14.1,{resourceClass:'mussels-20-40mm'});
  for(let i=0;i<12;i++)add('peringia_ulvae','snail-'+i,64+i%4*.05,-12.7+Math.floor(i/4)*.05);
  // Revision 2 moves the EXISTING bed and its two consumers away from the
  // boardwalk footprint at initial world construction, never during play.
- if(state.modelRevision>=2)for(const a of actors)if(['mytilus_edulis','carcinus_maenas','haematopus_ostralegus'].includes(a.taxon)){a.z-=1.3;a.y=terrainHeight(a.x,a.z)+(a.taxon==='mytilus_edulis'?.004:0);}
+ if(state.modelRevision>=2)for(const a of actors)if(['mytilus_edulis','carcinus_maenas','haematopus_ostralegus'].includes(a.taxon)){a.z-=1.3;a.y=ground(a.x,a.z)+(a.taxon==='mytilus_edulis'?.004:0);}
  const resources={
   'aphid-colony':{id:nettle.id,amount:9,initial:9,units:'model aphids',hostId:nettle.id},
   'shared-mussels':{id:'compact-mussel-pool',amount:18,initial:18,units:'20–40 mm model mussels',sizeRange:[.02,.04]},

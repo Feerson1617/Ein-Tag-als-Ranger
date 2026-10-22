@@ -53,9 +53,10 @@ export const FUNCTIONAL_GROUPS=Object.freeze([
 export const KEY_OPTIONS={
  galium_odoratum:{correct:['leaf-whorls','narrow-leaves'],wrong:['opposite-leaves','pink-floret-head'],limits:['no-flowers','insufficient-detail'],groups:['galium-group']},
  urtica_dioica:{correct:['opposite-leaves','serrated-edge'],wrong:['leaf-whorls','succulent'],limits:['insufficient-detail'],groups:['urtica-group']},
- fagus_sylvatica:{correct:['smooth-bark','elliptic-leaf'],wrong:['lobed-leaf','spatulate-tip'],limits:['insufficient-detail'],groups:['broadleaf-tree']},
+ fagus_sylvatica:{correct:['smooth-bark','elliptic-leaf','smooth-edge'],wrong:['lobed-leaf','rough-bark'],limits:['insufficient-detail'],groups:['broadleaf-tree']},
  quercus_robur:{correct:['lobed-leaf','short-petiole'],wrong:['elliptic-leaf','leaf-whorls'],limits:['no-fruit','insufficient-detail'],groups:['oak-group']}
 };
 export const FEATURE_LABELS={
+ 'smooth-edge':'Glatter Blattrand','rough-bark':'Tiefrissige Borke','long-petiole':'Langer Blattstiel',
  'leaf-whorls':'Mehrere Blätter stehen im Quirl','narrow-leaves':'Schmale lanzettliche Blätter','opposite-leaves':'Blätter stehen paarweise gegenüber','serrated-edge':'Deutlich gesägter Blattrand','pink-floret-head':'Rosaroter Kopf aus Einzelblüten','succulent':'Fleischige gegliederte Sprosse','smooth-bark':'Glatte graue Rinde','elliptic-leaf':'Elliptisches, kaum gezähntes Blatt','lobed-leaf':'Mehrfach gelapptes Blatt','short-petiole':'Sehr kurzer Blattstiel','spatulate-tip':'Löffelförmiges Schnabelende','no-flowers':'Keine Blüten für die Feinbestimmung sichtbar','no-fruit':'Keine reifen Früchte für den Vergleich','insufficient-detail':'Feinmerkmale in dieser Ansicht nicht ausreichend aufgelöst'
 };

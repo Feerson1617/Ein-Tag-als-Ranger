@@ -1,3 +1,4 @@
+import { MODEL_REVISION } from './manifest.js';
 // Meter, +Y up. Terrain, path rendering and traversal share these exact samples.
 export const BOUNDS={west:-80,east:80,south:-50,north:50};
 export const WALK_PROFILE=Object.freeze({walk:1.6,brisk:2.8,observation:.8});
@@ -6,7 +7,7 @@ export const ROUTE_POINTS=[[-52,8],[-69,4],[-71,-16],[-58,-28],[-42,-26],[-33,-1
 const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
 const smooth=(a,b,v)=>{const t=clamp((v-a)/(b-a),0,1);return t*t*(3-2*t);};
 export function zoneAt(x){return x<-24?'forest':x<1?'village':x<18?'dike':x<52?'saltmarsh':'wadden';}
-export function terrainHeight(x,z){
+function previousTerrainHeight(x,z){
  const inland=.3+.06*Math.sin(x*.19)*Math.cos(z*.14);
  if(x<0)return inland;
  if(x<18)return .3+1.5*Math.sin(Math.PI*x/18)**2;
@@ -14,6 +15,19 @@ export function terrainHeight(x,z){
  const creek=.48*Math.exp(-(((z+2-6*Math.sin(x*.1))/3.6)**2));
  return -.52-.18*smooth(52,80,x)-creek+.025*Math.sin(z*.8+x*.4);
 }
+export function terrainHeight(x,z,modelRevision=MODEL_REVISION){
+ if(modelRevision<3)return previousTerrainHeight(x,z);
+ if(x>=54)return previousTerrainHeight(x,z);
+ const inland=.3+.06*Math.sin(x*.19)*Math.cos(z*.14);
+ let y=x<0?inland:x<18?.3:.3-.8*smooth(18,52,x)+.07*smooth(18,22,x)*Math.sin(z*.22)*Math.sin(x*.37);
+ // Broad landward bank, four-metre crown, broad seaward bank. Vertically
+ // compressed teaching profile, not a real protective design water level.
+ y+=1.3*smooth(-5,7,x)*(1-smooth(11,23,x));
+ if(x>=18&&x<52)y+=.14*Math.exp(-(((x-35)/4.5)**2+((z-10)/7)**2));
+ if(x>=50){const creek=.48*Math.exp(-(((z+2-6*Math.sin(x*.1))/3.6)**2)),bed=-.52-.18*smooth(52,80,x)-creek+.025*Math.sin(z*.8+x*.4);y=y*(1-smooth(50,54,x))+bed*smooth(50,54,x);}
+ return y;
+}
+
 function rounded(points){
  const out=[];
  for(let i=0;i<points.length-1;i++){

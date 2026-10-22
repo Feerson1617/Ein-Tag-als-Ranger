@@ -1,18 +1,30 @@
 {
+  "modelRevision": 3,
   "worldVersion": "ranger-compact-v2",
   "initialSeed": 20260825,
   "status": "didactic model parameters and geometry measurements; no empirical local calibration",
   "sourceHashes": {
-    "catalog.js": "8e373f46194c392f1ec9bf43c9c95e4312a64ea29a9ac90ddc5e87e8a7fda16c",
-    "ecology.js": "5287cfd0430e926f81bb2ad2b2903e62d302728c341e592d3cee91f37a52c0c7",
-    "organism-models.js": "2732feb856814a0f1f66a1d746dca54222d5b462985228d968e1aeeaa5965628",
-    "expanded-view.js": "3255846b28755b70da25763aaa839dbc18ab00bca7cd842c0df93e180d228f5d",
+    "coastal-rig.js": "92a0270abdbf3aee7467e466cf344b08b8ef8bf5af4d903d3c672f9bcd4e2513",
+    "coastal-behaviour.js": "39b1dcb8691cd48850321c4c734eabf0b2875b91a8cd09dcd7b571758b0f0927",
+    "habitats.js": "10aad218dd69d51e842b59ef0164d9de8c0deaf30bc52d5165fc9ce317cde6c7",
+    "vegetation-view.js": "7e6f703c9a930a86dd2c9b202a79bf7842f4d1f41bf9a2a27d3ef24b3b22e47a",
+    "world-view.js": "4302cfa6e1600a6f9f2d62835c38b0d3e90ea232d9904c0559ae6936860f112a",
+    "lesson-resources.js": "c650d8090445596c50be8cbd7a57d636d1f71c267fabd20fb5644f083923bbf8",
+    "lesson-layouts.js": "eec60d3c481ccfa0bf587f4213bdbe6847d75039934e4ecad149b1bd67adf3f2",
+    "task-schema.js": "4ce4ca8e8f6c27182b3abe36d90d956fcbc6526d240911dbc996c53b670fc418",
+    "observation-schema.js": "2f0467f9693eca83c3a5a678128d86a5956de2b74df79a342b4875454569e12c",
+    "determination.js": "25f8ce960dba09ebeeb4470530d38608809bf98aa91d3575716b6ff835145c6f",
+    "management.js": "e6d38fbfc2c7e131d60ca3e38a1c740ca9ba5c49628fd3ba51ca94242d2d75a3",
+    "catalog.js": "6b693d4c6a0f6b880b9ff99295826f3968e61ba96f52606997a1635ddf1fe39f",
+    "ecology.js": "e50f25a3146e79671472e7a5e6ed1d78f007564515bf9a78bb67fac9695ef8e0",
+    "organism-models.js": "7cf080fb497a17d58ce4d1672ffc5cef12b7f2c033a336384e4aead7dfc27cb6",
+    "expanded-view.js": "b6201ad45f5a675fdf0d1092811fd8621c644ed9732e46fef51eb48e22ddb963",
     "fauna-view.js": "985a83582ff0ffac0e8d6ef20e2edc80a09b66e88f3768dd404f746507820feb",
-    "world-state.js": "0ff225752d99f62a14207aa60baf5550b10517697e0e0af62bab55b0153a4cde",
-    "layout.js": "889a7ca15fd622d8d145f4fff86225c747bf9bee0433dce6ee8f810e714dd578",
-    "learning-models.js": "e58605a045c82f544703a130b87849c271a23e6ce5c45a48a1d7a83cd301e202",
-    "missions.js": "2463f2c1402cfd2f795c6b29c1fca8668194a7375517084646113aa4f7d39059",
-    "materials.js": "a28bb5a761656249272a1c42968f61779046c6c03389bd19a007f5da33a41910"
+    "world-state.js": "360197f8bd8ab54c595386b66f2e676499630bc6ca896856034fba4910d9fd7f",
+    "layout.js": "e02558557a9c99fa0549c94f8cbfc8873e18f3c90df845155d51ee4d404209a6",
+    "learning-models.js": "078199d66bff5bd360c3010646c690dff92a58a160127204ba9fe9243a9a6d2e",
+    "missions.js": "55677975084e5dd4cc674ce0890305d0c3909fd82dce2241ec2b9526bd3147ee",
+    "materials.js": "b96c109d4a29a43223aa1f3c708af65f5d8258b03d3e43d5fa6d89100a799610"
   },
   "routes": {
     "width": 160,
@@ -23,7 +35,7 @@
     "outlookMeters": 10.045360768162785,
     "walkSeconds": 226.3814081038919,
     "shortcutSeconds": 18.21622640453979,
-    "maxSlope": 0.2553429469466351
+    "maxSlope": 0.15203972178347044
   },
   "walking": {
     "walk": 1.6,
@@ -535,9 +547,9 @@
       "kind": "bird",
       "nominalDesignDimensionM": 0.43,
       "actualReferenceMeshBoundsXYZm": [
-        0.43,
-        0.473156,
-        0.581569
+        0.428651,
+        0.47463,
+        0.581524
       ],
       "status": "didactic design in metres; species size source not independently calibrated",
       "diagnostics": [
@@ -554,9 +566,9 @@
       "kind": "bird",
       "nominalDesignDimensionM": 0.85,
       "actualReferenceMeshBoundsXYZm": [
-        0.85,
-        0.775519,
-        0.953211
+        0.847488,
+        0.775696,
+        0.950394
       ],
       "status": "didactic design in metres; species size source not independently calibrated",
       "diagnostics": [
@@ -573,9 +585,9 @@
       "kind": "bird",
       "nominalDesignDimensionM": 0.28,
       "actualReferenceMeshBoundsXYZm": [
-        0.28,
-        0.323055,
-        0.397075
+        0.278975,
+        0.3229,
+        0.395622
       ],
       "status": "didactic design in metres; species size source not independently calibrated",
       "diagnostics": [
@@ -592,9 +604,9 @@
       "kind": "bird",
       "nominalDesignDimensionM": 0.43,
       "actualReferenceMeshBoundsXYZm": [
-        0.43,
-        0.403126,
-        0.578051
+        0.428502,
+        0.403219,
+        0.576038
       ],
       "status": "didactic design in metres; species size source not independently calibrated",
       "diagnostics": [
@@ -630,9 +642,9 @@
       "kind": "bivalve",
       "nominalDesignDimensionM": 0.045,
       "actualReferenceMeshBoundsXYZm": [
-        0.045,
-        0.024394,
-        0.012326
+        0.045063,
+        0.024429,
+        0.012343
       ],
       "status": "didactic design in metres; species size source not independently calibrated",
       "diagnostics": [
@@ -706,9 +718,9 @@
       "kind": "crustacean",
       "nominalDesignDimensionM": 0.055,
       "actualReferenceMeshBoundsXYZm": [
-        0.055,
-        0.014856,
-        0.068582
+        0.055221,
+        0.014916,
+        0.068858
       ],
       "status": "didactic design in metres; species size source not independently calibrated",
       "diagnostics": [
@@ -1228,15 +1240,31 @@
       "units": {
         "t": "model days",
         "pools": "relative N units; not mg/l",
-        "input": "relative N units per day"
+        "flows": "relative N units per model day"
       },
       "parameters": {
         "oxygen": true,
         "days": 20,
-        "input": 0
+        "input": 0,
+        "initialPools": {
+          "n2": 100,
+          "organic": 20,
+          "ammonium": 4,
+          "nitrite": 0,
+          "nitrate": 5
+        },
+        "rates": {
+          "fixation": 0.4,
+          "ammonification": 0.6,
+          "assimilationNH4": 0.15,
+          "assimilationNO3": 0.3,
+          "nitrification1": 0.5,
+          "nitrification2": 0.4,
+          "denitrification": 0.35
+        }
       },
       "source": "didactic-model",
-      "assumptions": "Explicit forms and atmospheric pool; no quantitative water-quality prediction or instantaneous visible die-off."
+      "assumptions": "Sequential one-day fluxes in the listed code order, bounded by the available source pool; rates are designed teaching values, not natural kinetic constants. Input enters NH₄⁺. Fixation represents protected microbial sites; ambient oxygen switch controls nitrification/denitrification, not all nitrogenase regulation. No quantitative water-quality forecast, energy budget or instantaneous visible die-off."
     }
   ]
 }

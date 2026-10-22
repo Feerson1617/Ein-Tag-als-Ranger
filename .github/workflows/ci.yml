@@ -53,6 +53,10 @@ jobs:
       - run: python -m playwright install --with-deps chromium
       - run: node tests/kompakt-check.mjs
       - run: node tests/compact-learning-check.mjs
+      - run: node tests/compact-qa-check.mjs
+      - run: node tests/compact-coastal-check.mjs work/qa-correction/coastal
+      - run: node tests/compact-habitat-check.mjs work/qa-correction/habitats
+      - run: node tests/compact-pedagogy-check.mjs work/qa-correction/pedagogy
       - run: python tools/build-compact.py && python tools/verify-compact.py
       - run: python tools/browser-compact.py
       - run: python tools/browser-compact.py --site outputs --entry Ranger-Kompakt.html --smoke
@@ -82,10 +86,18 @@ jobs:
       - run: node tests/compact-learning-check.mjs
       - run: python tools/build-compact.py && python tools/verify-compact.py
       - run: python tools/browser-compact-learning.py --gallery
+      - run: python tools/browser-compact-learning.py --site outputs --entry Ranger-Kompakt.html --output work/compact-learning-standalone
+      - run: python tools/browser-compact-imports.py
+      - run: python tools/browser-compact-feeding.py
+      - run: python tools/browser-compact-habitats.py
       - name: Preserve acquired learning evidence and actual active model renders
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: ranger-compact-learning-evidence
-          path: work/compact-learning/
+          path: |
+            work/compact-learning/
+            work/compact-learning-standalone/
+            work/qa-correction/
+            work/compact-import-checks/
           retention-days: 7

@@ -8,9 +8,10 @@ from http.server import SimpleHTTPRequestHandler,ThreadingHTTPServer
 from threading import Thread
 from playwright.sync_api import sync_playwright
 from module_graph import ModuleGraph
+from compact_runtime import audit_standalone
 import argparse,json,shutil,hashlib,subprocess,time,traceback,html
 p=argparse.ArgumentParser();p.add_argument('--entry',default='Ranger-Kompakt.html');p.add_argument('--site',default='outputs');p.add_argument('--output',default='work/qa-correction/feeding-browser');a=p.parse_args();root=Path(__file__).resolve().parents[1];out=root/a.output;out.mkdir(parents=True,exist_ok=True)
-g=ModuleGraph(root/'dist','compact/main.js');result={'sourceCommit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=root,text=True).strip(),'htmlSHA256':hashlib.sha256((root/a.site/a.entry).read_bytes()).hexdigest(),'runtimeSourceHashes':{n:hashlib.sha256((root/'dist'/n).read_bytes()).hexdigest()for n in sorted(set(g.modules)|g.assets|{'kompakt.html','compact/style.css','icon.svg'})},'scope':'Actual WebGL in shipped standalone HTML; normal UI model-time steps, following camera. No state/clock/evidence injection. Not natural animation certification or FPS benchmark.','browser':None,'sequences':[],'errors':[],'passed':False}
+audit_standalone(root,root/a.site/a.entry);g=ModuleGraph(root/'dist','compact/main.js');result={'sourceCommit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=root,text=True).strip(),'htmlSHA256':hashlib.sha256((root/a.site/a.entry).read_bytes()).hexdigest(),'runtimeSourceHashes':{n:hashlib.sha256((root/'dist'/n).read_bytes()).hexdigest()for n in sorted(set(g.modules)|g.assets|{'kompakt.html','compact/style.css','icon.svg'})},'scope':'Actual WebGL in shipped standalone HTML; normal UI model-time steps, following camera. No state/clock/evidence injection. Not natural animation certification or FPS benchmark.','browser':None,'sequences':[],'errors':[],'passed':False}
 class Handler(SimpleHTTPRequestHandler):
  def log_message(self,*args):pass
 server=ThreadingHTTPServer(('127.0.0.1',0),partial(Handler,directory=str(root/a.site)));Thread(target=server.serve_forever,daemon=True).start();url=f'http://127.0.0.1:{server.server_port}/{a.entry}'

@@ -4,23 +4,27 @@ import { BOUNDS,BUILDINGS,SIGNS,terrainHeight,nearestPath } from './layout.js';
 import { pathPanels,deckGeometry } from './path-mesh.js';
 import { MANIFEST } from './manifest.js';
 import { randomGenerator } from './world-state.js';
+import { createVegetationView } from './vegetation-view.js';
+import { createVillageView } from './village-view.js';
+import { forestHabitatAt } from './habitats.js';
 export async function createWorldView(scene,state){
  const loader=new THREE.TextureLoader();const [terrainTexture,skyTexture,woodTexture]=await Promise.all([MANIFEST.assets.terrain,MANIFEST.assets.sky,MANIFEST.assets.wood].map(url=>loader.loadAsync(url)));for(const t of [terrainTexture,skyTexture,woodTexture])t.colorSpace=THREE.SRGBColorSpace;terrainTexture.anisotropy=4;woodTexture.anisotropy=4;woodTexture.wrapS=woodTexture.wrapT=THREE.RepeatWrapping;skyTexture.mapping=THREE.EquirectangularReflectionMapping;scene.background=skyTexture;scene.backgroundIntensity=.8;
  const random=randomGenerator(state.initialSeed+10),sphere=new THREE.SphereGeometry(1,10,6),box=new THREE.BoxGeometry(1,1,1),bark=new GeometryBatch(),architecture=new GeometryBatch();
  // Opaque vertex-coloured terrain avoids transparent full-ground grass cards.
  const ground=new THREE.PlaneGeometry(220,150,220,150);ground.rotateX(-Math.PI/2);const p=ground.attributes.position,colors=[];
- for(let i=0;i<p.count;i++){const x=p.getX(i),z=p.getZ(i),y=terrainHeight(x,z),noise=.94+.06*Math.sin(x*1.1+Math.cos(z*.9));p.setY(i,y);const col=new THREE.Color(x<-24?'#c2b9a1':x<0?'#9a9270':x<18?'#6c7842':x<34?'#87925c':x<52?'#8b9165':'#8c8980');col.multiplyScalar(noise);colors.push(col.r,col.g,col.b);}
- ground.setAttribute('color',new THREE.Float32BufferAttribute(colors,3));ground.computeVertexNormals();const groundMaterial=new THREE.MeshStandardMaterial({vertexColors:true,roughness:1});groundMaterial.onBeforeCompile=shader=>{shader.uniforms.terrainAtlas={value:terrainTexture};shader.vertexShader='varying vec3 terrainPoint;\n'+shader.vertexShader.replace('#include <begin_vertex>','#include <begin_vertex>\nterrainPoint = position;');shader.fragmentShader='uniform sampler2D terrainAtlas;varying vec3 terrainPoint;\n'+shader.fragmentShader.replace('#include <color_fragment>','#include <color_fragment>\nvec2 tile=terrainPoint.x < -24.0 ? vec2(0.0,0.5) : terrainPoint.x > 52.0 ? vec2(0.0,0.0) : vec2(0.5,0.0);vec2 atlasUV=(fract(terrainPoint.xz*.3)*.97+.015)*.5+tile;vec3 tex=texture2D(terrainAtlas,atlasUV).rgb;tex=mix(tex/12.92,pow((tex+.055)/1.055,vec3(2.4)),step(vec3(.04045),tex));diffuseColor.rgb *= mix(vec3(1.0),tex,.87);');};const mesh=new THREE.Mesh(ground,groundMaterial);mesh.receiveShadow=true;scene.add(mesh);
- const water=new THREE.Mesh(new THREE.PlaneGeometry(160,190),new THREE.MeshStandardMaterial({color:'#688d94',roughness:.42,metalness:.08,transparent:true,opacity:.43,depthWrite:false}));water.rotation.x=-Math.PI/2;water.position.set(120,-.73,0);scene.add(water);
- const leaves=[];
+ for(let i=0;i<p.count;i++){const x=p.getX(i),z=p.getZ(i),y=terrainHeight(x,z),noise=.94+.06*Math.sin(x*1.1+Math.cos(z*.9));p.setY(i,y);const habitat=forestHabitatAt(x,z);const col=new THREE.Color(x<-24?(habitat.light<.3?'#777c59':'#969873'):x<0?'#6d8050':x<18?'#657d44':x<34?'#7b8d58':x<52?'#7e8d60':'#8c8980');col.multiplyScalar(noise);colors.push(col.r,col.g,col.b);}
+ ground.setAttribute('color',new THREE.Float32BufferAttribute(colors,3));ground.computeVertexNormals();const groundMaterial=new THREE.MeshStandardMaterial({vertexColors:true,roughness:1});groundMaterial.onBeforeCompile=shader=>{shader.uniforms.terrainAtlas={value:terrainTexture};shader.vertexShader='varying vec3 terrainPoint;\n'+shader.vertexShader.replace('#include <begin_vertex>','#include <begin_vertex>\nterrainPoint = position;');shader.fragmentShader='uniform sampler2D terrainAtlas;varying vec3 terrainPoint;\n'+shader.fragmentShader.replace('#include <color_fragment>','#include <color_fragment>\nvec2 tile=terrainPoint.x < -24.0 ? vec2(0.0,0.5) : terrainPoint.x > 52.0 ? vec2(0.0,0.0) : vec2(0.5,0.0);vec2 atlasUV=(fract(terrainPoint.xz*.3)*.97+.015)*.5+tile;vec3 tex=texture2D(terrainAtlas,atlasUV).rgb;float soilZone=step(52.0,terrainPoint.x)+(1.0-step(-24.0,terrainPoint.x));float soilAmount=mix(.24,.87,clamp(soilZone,0.0,1.0));diffuseColor.rgb *= mix(vec3(1.0),tex,soilAmount);');};const mesh=new THREE.Mesh(ground,groundMaterial);mesh.receiveShadow=true;scene.add(mesh);
+ const water=new THREE.Mesh(new THREE.PlaneGeometry(200,190),new THREE.MeshStandardMaterial({color:'#688d94',roughness:.42,metalness:.08,transparent:true,opacity:.43,depthWrite:false}));water.rotation.x=-Math.PI/2;water.position.set(118,-.73,0);scene.add(water);
+ const leaves=[],crowns=new GeometryBatch(),crownShape=new THREE.IcosahedronGeometry(1,1);
  for(const t of state.trees){const y=terrainHeight(t.x,t.z);stick(bark,[t.x,y,t.z],[t.x+.12,y+t.h*.72,t.z],t.r,t.type==='beech'?'#898579':'#66634e',t.r*.45);
-  for(let k=0;k<7;k++){const a=k*2.399,h=t.h*(.42+(k%3)*.12),len=1.7+(k%4)*.48,end=[t.x+Math.cos(a)*len,y+h+1.5,t.z+Math.sin(a)*len];stick(bark,[t.x,y+h,t.z],end,t.r*.31,'#777768',.025);
-   for(let j=0;j<100;j++){const theta=random()*6.283,r=Math.sqrt(random())*1.9;leaves.push({x:end[0]+Math.cos(theta)*r,y:end[1]+(random()-.4)*1.6,z:end[2]+Math.sin(theta)*r,a:random()*6.283,s:.14+random()*.12,oak:t.type==='oak'});}
+  for(let k=0;k<7;k++){const a=k*2.399,h=t.h*(.42+(k%3)*.12),len=t.crownRadius?t.crownRadius*(.55+(k%4)*.12):1.7+(k%4)*.48,end=[t.x+Math.cos(a)*len,y+h+1.5,t.z+Math.sin(a)*len];stick(bark,[t.x,y+h,t.z],end,t.r*.31,'#777768',.025);
+   for(let j=0;j<46;j++){const theta=random()*6.283,r=Math.sqrt(random())*(t.crownRadius? t.crownRadius*.52:1.9);leaves.push({x:end[0]+Math.cos(theta)*r,y:end[1]+(random()-.4)*1.6,z:end[2]+Math.sin(theta)*r,a:random()*6.283,s:.14+random()*.12,oak:t.type==='oak'});}
   }
+  const cr=t.crownRadius||3,aspect=t.crownAspect||[1,1,1];for(let j=0;j<3;j++)crowns.add(crownShape,t.type==='oak'?(j%2?'#5d7546':'#667d48'):(j%2?'#657d50':'#758952'),[t.x+Math.cos(j*2.4)*cr*.43,y+t.h*(t.type==='oak'?.69:.77)+(j%2)*.6,t.z+Math.sin(j*2.4)*cr*.4],[cr*.70*aspect[0],cr*.67*aspect[1],cr*.69*aspect[2]]);
   // Root flare visibly joins the forest floor; collision uses the independent trunk radius.
   for(let i=0;i<4;i++){const a=i*1.57;stick(bark,[t.x,y+.24,t.z],[t.x+Math.cos(a)*.6,y+.01,t.z+Math.sin(a)*.6],t.r*.37,'#777568',.015);}
  }
- const barkMesh=bark.mesh();scene.add(barkMesh);
+ const barkMesh=bark.mesh();scene.add(barkMesh);const crownMesh=crowns.mesh();crownMesh.castShadow=true;scene.add(crownMesh);
  // Distant woodland is an opaque scenic stand, never a counted population.
  // Coarse crowns here avoid rendering thousands of diagnostic leaves off-world.
  const background=new GeometryBatch(),crown=new THREE.IcosahedronGeometry(1,1);
@@ -29,11 +33,12 @@ export async function createWorldView(scene,state){
  for(const t of backdrop){const y=terrainHeight(t.x,t.z),h=7+random()*8;stick(background,[t.x,y,t.z],[t.x,y+h*.7,t.z],.19,'#777568',.08);for(let k=0;k<4;k++)background.add(crown,k%2?'#526347':'#65734f',[t.x+(random()-.5)*2,y+h-1.5+random()*2,t.z+(random()-.5)*2],[1.6+random(),2+random()*1.8,1.5+random()]);}
  const scenic=background.mesh();scenic.castShadow=false;scene.add(scenic);
  // Broad crown masses use small opaque leaf clusters, detail leaves retain shape.
- const foliage=new THREE.InstancedMesh(leafGeometry(1,.5,false,false,3),new THREE.MeshStandardMaterial({color:'#7e9358',side:THREE.DoubleSide,roughness:.9}),leaves.length),dummy=new THREE.Object3D();
- for(let i=0;i<leaves.length;i++){const l=leaves[i];dummy.position.set(l.x,l.y,l.z);dummy.scale.setScalar(l.s*3);dummy.rotation.set((random()-.5)*2,l.a,random()*.6);dummy.updateMatrix();foliage.setMatrixAt(i,dummy.matrix);foliage.setColorAt(i,new THREE.Color().setHSL(.20+random()*.035,.23+random()*.15,.22+random()*.13));}foliage.castShadow=true;foliage.receiveShadow=true;scene.add(foliage);
- // Fixed, authored plant instances; quality profiles do not edit state.plants.
- const plantMeshes=[];for(const taxon of new Set(state.plants.map(p=>p.taxon))){const rows=state.plants.filter(p=>p.taxon===taxon),m=new THREE.InstancedMesh(plantGeometry(taxon),new THREE.MeshStandardMaterial({vertexColors:true,side:THREE.DoubleSide,roughness:.9}),rows.length);m.userData={taxon,rows};for(let i=0;i<rows.length;i++){const p=rows[i];dummy.position.set(p.x,p.y,p.z);dummy.rotation.set(0,p.angle,0);dummy.scale.setScalar(p.size);dummy.updateMatrix();m.setMatrixAt(i,dummy.matrix);}m.castShadow=true;m.receiveShadow=true;plantMeshes.push(m);scene.add(m);}
- const litter=[];for(let i=0;i<5000;i++){const x=-79+random()*54,z=-48+random()*96;if(nearestPath(x,z).distance<1.1)continue;litter.push({x,z,a:random()*6.28,s:.045+random()*.08});}
+ const dummy=new THREE.Object3D();
+ for(const oak of [false,true]){const rows=leaves.filter(l=>l.oak===oak),foliage=new THREE.InstancedMesh(leafGeometry(1,oak?.65:.5,false,oak,oak?10:5),new THREE.MeshStandardMaterial({color:'#7e9358',side:THREE.DoubleSide,roughness:.9}),rows.length);
+  for(let i=0;i<rows.length;i++){const l=rows[i];dummy.position.set(l.x,l.y,l.z);dummy.scale.setScalar(l.s*3);dummy.rotation.set((random()-.5)*2,l.a,random()*.6);dummy.updateMatrix();foliage.setMatrixAt(i,dummy.matrix);foliage.setColorAt(i,new THREE.Color().setHSL(.20+random()*.035,.23+random()*.15,.22+random()*.13));}foliage.castShadow=false;foliage.receiveShadow=true;scene.add(foliage);
+ }
+ const vegetation=createVegetationView(scene,state.plants),plantMeshes=vegetation.meshes;
+ const litter=[];for(let i=0;i<12000;i++){const x=-79+random()*54,z=-48+random()*96;if(nearestPath(x,z).distance<1.1)continue;litter.push({x,z,a:random()*6.28,s:.045+random()*.08});}
  const floor=new THREE.InstancedMesh(leafGeometry(1,.65,false,false,3),new THREE.MeshStandardMaterial({color:'#8a7049',side:THREE.DoubleSide,roughness:1}),litter.length);for(let i=0;i<litter.length;i++){const l=litter[i];dummy.position.set(l.x,terrainHeight(l.x,l.z)+.012,l.z);dummy.rotation.set(.08,l.a,0);dummy.scale.setScalar(l.s);dummy.updateMatrix();floor.setMatrixAt(i,dummy.matrix);floor.setColorAt(i,new THREE.Color().setHSL(.09+random()*.035,.24,.19+random()*.15));}floor.receiveShadow=true;scene.add(floor);
  const deckPanels=pathPanels(),deck=deckGeometry(deckPanels);const path=new THREE.Mesh(deck,new THREE.MeshStandardMaterial({vertexColors:true,map:woodTexture,roughness:.98,side:THREE.DoubleSide}));path.receiveShadow=true;scene.add(path);
  // Posts stand beside the walking surface, never across it.
@@ -45,8 +50,9 @@ export async function createWorldView(scene,state){
  }
  // Fallen beech/log, with intact substrate; not a mycorrhiza demonstration.
  stick(architecture,[-61,.5,-2],[-65,.52,-3],.27,'#77715d',.23);
- const architectureMesh=architecture.mesh();scene.add(architectureMesh);const signMeshes=[];
+ for(const [a,b]of [[[-64,-4],[-67,-6]],[[-59,-1],[-61,0]],[[-65,-1],[-67,1]],[[-60,-5],[-58,-6]]])stick(architecture,[a[0],terrainHeight(...a)+.08,a[1]],[b[0],terrainHeight(...b)+.10,b[1]],.07,'#635d48',.025);
+ const architectureMesh=architecture.mesh();scene.add(architectureMesh);const village=createVillageView(scene);const signMeshes=[];
  for(const sign of SIGNS){const y=terrainHeight(sign.x,sign.z),batch=new GeometryBatch();stick(batch,[sign.x,y,sign.z],[sign.x,y+1.7,sign.z],.065,'#796548',.065);scene.add(batch.mesh());const canvas=document.createElement('canvas');canvas.width=512;canvas.height=160;const c=canvas.getContext('2d');c.fillStyle='#715f43';c.fillRect(0,0,512,160);c.strokeStyle='#ae9870';c.lineWidth=10;c.strokeRect(8,8,496,144);c.fillStyle='#fff2d2';c.textAlign='center';c.font='38px Georgia';c.fillText(sign.name,256,93);const texture=new THREE.CanvasTexture(canvas);texture.colorSpace=THREE.SRGBColorSpace;const board=new THREE.Mesh(new THREE.BoxGeometry(1.8,.56,.08),new THREE.MeshStandardMaterial({map:texture,roughness:1}));board.position.set(sign.x,y+1.6,sign.z);scene.add(board);signMeshes.push(board);}
  // Horizon and background forest are scenery only; no extra simulation instances.
- return {deck,plantMeshes,water,occlusionMeshes:[mesh,barkMesh,architectureMesh,path,...signMeshes],blocks:[...state.trees.map(t=>({x:t.x,z:t.z,r:t.r})),...SIGNS.map(s=>({x:s.x,z:s.z,halfX:.9,halfZ:.04})),...Array.from({length:5},(_,i)=>({x:-61-i,z:-2-i*.25,r:.27}))],dispose(){}};
+ return {deck,plantMeshes,updateVegetation:vegetation.update,water,occlusionMeshes:[mesh,barkMesh,crownMesh,architectureMesh,village.mesh,path,...signMeshes],blocks:[...village.blocks,...state.trees.map(t=>({x:t.x,z:t.z,r:t.r})),...SIGNS.map(s=>({x:s.x,z:s.z,halfX:.9,halfZ:.04})),...Array.from({length:5},(_,i)=>({x:-61-i,z:-2-i*.25,r:.27}))],dispose(){vegetation.dispose();}};
 }

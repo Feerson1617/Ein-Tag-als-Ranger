@@ -5,12 +5,13 @@ from http.server import SimpleHTTPRequestHandler,ThreadingHTTPServer
 from threading import Thread
 from playwright.sync_api import sync_playwright
 from module_graph import ModuleGraph
+from compact_runtime import audit_standalone
 import argparse,hashlib,json,shutil,statistics,subprocess,time,traceback
-p=argparse.ArgumentParser();p.add_argument('--seconds',type=int,default=1200);a=p.parse_args()
+p=argparse.ArgumentParser();p.add_argument('--site',default='outputs');p.add_argument('--entry',default='Ranger-Kompakt.html');p.add_argument('--seconds',type=int,default=1200);a=p.parse_args()
 if a.seconds<1200:p.error('The documented stability run requires at least 1200 seconds.')
-root=Path(__file__).resolve().parents[1];out=root/'work/compact-stability';out.mkdir(parents=True,exist_ok=True);site=root/'outputs/Ranger-Kompakt'
+root=Path(__file__).resolve().parents[1];out=root/'work/compact-stability';out.mkdir(parents=True,exist_ok=True);site=root/a.site;html_audit=audit_standalone(root,site/a.entry)
 subprocess.run(['python',str(root/'tools/verify-compact.py')],cwd=root,check=True,stdout=subprocess.PIPE)
-g=ModuleGraph(root/'dist','compact/main.js');result={'sourceCommit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=root,text=True).strip(),'runtimeSourceHashes':{name:hashlib.sha256((root/'dist'/name).read_bytes()).hexdigest()for name in sorted(set(g.modules)|g.assets|{'compact/style.css','kompakt.html','icon.svg'})},'scope':'Cloud Chromium software rendering, 800x600, tablet profile; no actual iPad/Safari/iPadOS 27 or classroom test','errors':[],'samples':[],'passed':False}
+g=ModuleGraph(root/'dist','compact/main.js');result={'htmlAudit':html_audit,'entry':a.entry,'sourceCommit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=root,text=True).strip(),'runtimeSourceHashes':{name:hashlib.sha256((root/'dist'/name).read_bytes()).hexdigest()for name in sorted(set(g.modules)|g.assets|{'compact/style.css','kompakt.html','icon.svg'})},'scope':'Cloud Chromium software rendering, 800x600, tablet profile; no actual iPad/Safari/iPadOS 27 or classroom test','errors':[],'samples':[],'passed':False}
 def save():(out/'result.json').write_text(json.dumps(result,indent=2,ensure_ascii=False)+'\n')
 class Handler(SimpleHTTPRequestHandler):
  def log_message(self,*a):pass
@@ -20,7 +21,7 @@ with sync_playwright()as pw:
  if shutil.which('chromium'):opts.update(executable_path=shutil.which('chromium'),args=['--no-sandbox','--use-angle=swiftshader','--enable-unsafe-swiftshader'])
  browser=pw.chromium.launch(**opts);result['browserVersion']=browser.version;ctx=browser.new_context(viewport={'width':800,'height':600},has_touch=True,is_mobile=True);page=ctx.new_page();page.set_default_timeout(45000);page.on('pageerror',lambda e:result['errors'].append(str(e)))
  try:
-  page.goto(f'http://127.0.0.1:{server.server_port}/');page.wait_for_function('document.querySelector("#world").dataset.ready==="true"',timeout=120000);page.locator('#start').click();places=['woodruff','nettle','wood','coast','outlook','oak'];last_sim=-1;initial=None
+  page.goto(f'http://127.0.0.1:{server.server_port}/{a.entry}');page.wait_for_function('document.querySelector("#world").dataset.ready==="true"',timeout=120000);page.locator('#start').click();places=['woodruff','village','ramp','keilm','coast','outlook','oak','wood'];last_sim=-1;initial=None
   def visit(place):
    page.locator('#menu-button').click();page.get_by_text('Referenzabschnitt prüfen',exact=True).click();page.locator('[data-view="'+place+'"]').click();page.wait_for_function('document.querySelector("#world").dataset.renderRevision===document.querySelector("#world").dataset.sceneRevision')
    # Ordinary active world time; no direct clock/state writes or renderer hooks.
@@ -42,6 +43,10 @@ with sync_playwright()as pw:
    place=places[len(result['samples'])%len(places)];d=visit(place);sample={**d,'elapsedSeconds':round(time.monotonic()-start,2),'place':place};result['lastAttempt']=sample;save();assert float(d['simulationTime'])>last_sim;last_sim=float(d['simulationTime'])
    assert d['plantCount']==initial['plantCount'];assert d['runId']==initial['runId'];assert int(d['geometries'])<=int(initial['geometries'])*1.2+10;assert int(d['textures'])<=int(initial['textures'])+2
    result['samples'].append(sample);save();print(json.dumps(sample),flush=True)
+  # Actual tab activation; report the visibility state Chromium exposes.
+  before_tab=float(page.locator('#world').get_attribute('data-simulation-time'));other=ctx.new_page();other.goto('about:blank');other.bring_to_front();hidden=page.evaluate('document.visibilityState');page.wait_for_timeout(1500);after_tab=float(page.locator('#world').get_attribute('data-simulation-time'));other.close();page.bring_to_front();page.wait_for_timeout(500);result['tabReturn']={'observedVisibility':hidden,'modelSecondsDuringTab':after_tab-before_tab,'returnedVisibility':page.evaluate('document.visibilityState'),'scope':'Native headless Chromium tab activation; no visibility-state injection'}
+  if hidden=='hidden':assert after_tab-before_tab<.001
+  d=page.locator('#world').evaluate('(c)=>({...c.dataset})');run=d['runId'];page.locator('#world').evaluate("c=>c.getContext('webgl2').getExtension('WEBGL_lose_context').loseContext()");page.wait_for_selector('#graphics-error:visible');page.locator('#retry-graphics').click();page.wait_for_selector('#graphics-error:hidden');page.wait_for_function('document.querySelector("#world").dataset.renderRevision===document.querySelector("#world").dataset.sceneRevision');assert page.locator('#world').get_attribute('data-run-id')==run;assert page.locator('#count').inner_text()=='0';assert not result['errors'];result['nativeContextRestore']=True
   result['actualElapsedSeconds']=round(time.monotonic()-start,2);intervals=[float(s['frameMs'])for s in result['samples']];result['cloudGraphicsBudget']={'targetFPS':30,'sampledIntervals':len(intervals),'medianSampledFrameMs':statistics.median(intervals),'maxSampledFrameMs':max(intervals),'allSampledIntervalsWithinBudget':all(ms<=1000/30 for ms in intervals),'scope':'Sparse main-loop interval samples in cloud software graphics, not an FPS distribution or real iPad performance certification'};heaps=[int(s['heapBytes'])for s in result['samples']if int(s['heapBytes'])>0];result['heapObservation']={'sampleCount':len(heaps),'minimumBytes':min(heaps)if heaps else None,'maximumBytes':max(heaps)if heaps else None,'firstFiveMedianBytes':statistics.median(heaps[:5])if heaps else None,'lastFiveMedianBytes':statistics.median(heaps[-5:])if heaps else None,'scope':'Browser-reported JS heap including GC cycles; retained renderer geometry/textures checked separately'};result['passed']=True;page.screenshot(path=str(out/'final.png'));result['memoryScope']='Renderer geometry/texture allocations bounded over repeated tours. Heap samples include garbage-collection cycles; no absolute hardware memory certification.';save()
  except Exception:
   result['failure']=traceback.format_exc();save();raise

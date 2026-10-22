@@ -1,6 +1,8 @@
+import { LESSON_RESOURCES,RESOURCE_SOURCES } from './lesson-resources.js';
 // Original teaching text. Source references are those supplied in the matrices;
 // the school PDFs were not available to this implementation.
 export const SOURCES={
+ ...RESOURCE_SOURCES,
  flora:{title:'FloraWeb: ökologische Zeigerwerte',url:'https://www.floraweb.de/biologie-oekologie/anwendung-der-oekologie.html'},
  galium:{title:'FloraWeb: Waldmeister',url:'https://www.floraweb.de/php/artenhome.php?name-use-id=2560'},
  urtica:{title:'FloraWeb: Große Brennnessel',url:'https://www.floraweb.de/php/artenhome.php?name-use-id=6145'},
@@ -42,6 +44,7 @@ export const MATERIALS=[
  card('C24','Ökologischer Fußabdruck und CO₂','eA','Anreise- und Nutzungskarte','Ökologischer Fußabdruck/Biokapazität: globale Hektar. CO₂-Bilanz: z. B. kg CO₂-Äquivalente. Die Indikatoren haben unterschiedliche Systemgrenzen.','Vergleiche zwei Anreiseoptionen mit selbst belegten Emissionsfaktoren. Welche Land-/Ressourcenaspekte fehlen in einer reinen CO₂-Zahl?',['Einheiten nicht vermischen','Systemgrenze und Quelle','Indikatorkritik statt Punktescore'],'Keine erfundenen standardisierten Ökobilanzwerte.',['footprint']),
  card('C25','Transfer in die reale Exkursion','schulinterner Bezug','Vor-/Nachbereitung außerhalb des Spiels','Virtuell: Regeln/Parameter lesbar; real: Messunsicherheit, Artenschutz, reale Geräteführung und örtliche Gezeitensicherheit.','Plane eine naturschutzgerechte reale Untersuchung, korrigiere ein Spielverfahren und dokumentiere reale Unsicherheit.',['Reale Durchführung getrennt','Keine Organismenentnahme ohne Regelprüfung','Transferfrage und methodische Korrektur'],'Keine reale Exkursion/Multimar-Teilnahme oder Gerätekompetenz durch Spielen erworben.')
 ];
+for(const c of MATERIALS)if(LESSON_RESOURCES[c.id])Object.assign(c,LESSON_RESOURCES[c.id]);
 export const MANAGEMENT_CARDS=[
  {id:'ranger',perspective:'Rangerdienst',fact:'Im Modell reagieren Tiere auf Annäherung; die konkrete Stördistanz ist gesetzt.',value:'Ruhe und störungsarme Beobachtung',interest:'Ruhefläche und übersichtliche Wege'},
  {id:'local',perspective:'Lokale Nutzung',fact:'Die direkte Dorfverbindung ist kürzer als der Beobachtungsweg.',value:'Zugänglichkeit und Teilhabe',interest:'Kurze, barrierearme Verbindung'},

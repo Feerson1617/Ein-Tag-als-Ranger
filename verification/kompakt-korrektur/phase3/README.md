@@ -1,0 +1,3 @@
+# Zwischenstand und gezielte Prüfungen
+
+Die JSON-Dateien mit einzelnen Modell-/Validierungsprüfungen nennen ihre tatsächliche Reichweite. `intermediate` enthält tatsächlich ausgeführte Browsernachweise des Zwischenbuilds (Modellstand 2). Die Quellenprüfsummen stehen im jeweiligen result.json. Danach wurde die endgültige Landschaft auf Modellstand 3 getrennt und die Darstellung nachgebessert; diese Bilder werden deshalb nicht als Abschlussbeleg für den neuen Head ausgegeben. Endgültige Nachweise folgen getrennt unter final. `attempts` bewahrt fehlgeschlagene eigene Kamera-/URL-Treiberversuche, keine gelesenen unabhängigen Originalberichte. Keine Assertions wurden dafür gelockert.

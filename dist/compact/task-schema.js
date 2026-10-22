@@ -1,9 +1,10 @@
+import { DETERMINATION_CHOICES,OBSERVABLE_FEATURES } from './determination.js';
 import { KEY_OPTIONS } from './catalog.js';
 import { FOOD_EDGES } from './learning-models.js';
 
 const object=v=>v!==null&&typeof v==='object'&&!Array.isArray(v);
-const features=[...new Set(Object.values(KEY_OPTIONS).flatMap(k=>[...k.correct,...k.wrong]))];
-const choices=[...Object.keys(KEY_OPTIONS),...Object.values(KEY_OPTIONS).flatMap(k=>k.groups),'uncertain'];
+const features=['spatulate-tip',...OBSERVABLE_FEATURES,...new Set(Object.values(KEY_OPTIONS).flatMap(k=>[...k.correct,...k.wrong]))];
+const choices=[...DETERMINATION_CHOICES.map(([id])=>id),...Object.keys(KEY_OPTIONS),...Object.values(KEY_OPTIONS).flatMap(k=>k.groups),'uncertain'];
 const limits=[...new Set(Object.values(KEY_OPTIONS).flatMap(k=>k.limits))];
 const criteria=['access','disturbance','cost','coastal-safety'];
 const enums={
@@ -36,6 +37,6 @@ export function validateTaskCollection(collection,learning,records){
   }
   if(a.edges!==undefined&&(!Array.isArray(a.edges)||a.edges.some(edge=>!Array.isArray(edge)||edge.length!==2||edge.some(x=>typeof x!=='string')||!FOOD_EDGES.some(([x,y])=>edge[0]===x&&edge[1]===y))))throw Error('Ungültige Stoffverbindung.');
   if(a.weights!==undefined&&(!object(a.weights)||Object.entries(a.weights).some(([k,v])=>!criteria.includes(k)||!Number.isFinite(v)||v<0||v>10)))throw Error('Ungültige Kriteriengewichtung.');
-  if(a.evidenceLinks!==undefined){if(!Array.isArray(a.evidenceLinks))throw Error('Ungültiger Belegbezug.');for(const link of a.evidenceLinks){if(!object(link)||!criteria.includes(link.criterion)||typeof link.meaning!=='string')throw Error('Ungültiger Belegbezug.');reference(link.recordId,records,'Belegbezug.recordId');}}
+  if(a.evidenceLinks!==undefined){if(!Array.isArray(a.evidenceLinks))throw Error('Ungültiger Belegbezug.');for(const link of a.evidenceLinks){if(!object(link)||typeof link.criterion!=='string'||link.criterion!==''&&!criteria.includes(link.criterion)||typeof link.meaning!=='string')throw Error('Ungültiger Belegbezug.');reference(link.recordId,records,'Belegbezug.recordId');}}
  }
 }

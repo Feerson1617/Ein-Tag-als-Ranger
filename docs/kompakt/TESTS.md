@@ -1,4 +1,8 @@
-# Abschließende Softwareprüfung vom 22.10.2026
+# Prüfstatus des Korrekturauftrags
+
+Die vollständige neue Abschlussprüfung ist noch in Arbeit. Aktueller Fehlerstatus: KORREKTUREN.md; neue Belege: verification/kompakt-korrektur. Die folgenden alten Zahlen betreffen ausschließlich den ausdrücklich genannten historischen Runtime-Prüfpunkt und werden nicht auf neue Quellen übertragen.
+
+# Historische Softwareprüfung vor dem unabhängigen Korrekturauftrag
 
 Runtime-Prüfpunkt: `5be5e9b8f7394613279f5a2834741a0abf33b570`. Alle Browser- und Stabilitätsnachweise vergleichen dieselben Module, Medien, HTML und CSS einzeln per SHA256. Spätere Nachweis-/Paketcommits ändern diese Runtimequellen nicht. Die tatsächlichen Commitkennungen und Zeiten stehen pro Lauf im JSON; sie werden nicht durch den Dokumentationsstand ersetzt.
 
