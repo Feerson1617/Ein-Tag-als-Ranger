@@ -9,6 +9,16 @@ assert h['passed']and not h['errors']
 assert f['runtimeSourceHashes']==h['runtimeSourceHashes']==info['runtimeSourceHashes']
 for name,digest in info['runtimeSourceHashes'].items():assert sha(root/'dist'/name)==digest,name
 proof=out/'Korrekturen';proof.mkdir();cards=[]
+# Bind this exact delivered file, retaining the original tested hashes. Only a
+# provenance stamp may differ after documentation/evidence-only commits.
+delivered_html=(root/'outputs/Ranger-Kompakt.html').read_text();matches=[]
+for dirty in ['false','true']:
+ stamp='<meta name="compact-build" content="'+f['sourceCommit']+'; dirty='+dirty+'">'
+ recreated=re.sub(r'<meta name="compact-build" content="[^"]+">',stamp,delivered_html)
+ if hashlib.sha256(recreated.encode()).hexdigest()==f['htmlSHA256']:matches.append(dirty)
+assert len(matches)==1,'Delivered HTML differs beyond its provenance stamp from the actual feeding-tested file'
+delivery_binding={'deliverySourceCommit':info['sourceCommit'],'deliveryHTMLSHA256':sha(root/'outputs/Ranger-Kompakt.html'),'testedFeedingHTMLSHA256':f['htmlSHA256'],'testedFeedingCommit':f['sourceCommit'],'testedFeedingDirtyStamp':matches[0],'identicalExceptProvenanceMetaTag':True,'runtimeSourceHashes':info['runtimeSourceHashes'],'scope':'Original feeding report unchanged; replacing only the delivery build provenance stamp exactly reconstructs the originally tested HTML. Final delivery has its own fresh browser smoke.'}
+(proof/'delivery-html-equivalence.json').write_text(json.dumps(delivery_binding,ensure_ascii=False,indent=2)+'\n')
 for source,folder,result in [(feeding,'Nahrungssuche',f),(habitat,'Landschaft',h)]:
  dest=proof/folder;dest.mkdir();shutil.copyfile(source/'result.json',dest/'result.json')
  captures=[c for s in result['sequences']for c in s['captures']]if folder=='Nahrungssuche'else result['captures']
@@ -60,12 +70,12 @@ def report_html(text):
  return ''.join(parts)
 report=(root/'docs/kompakt/KORREKTUREN.md').read_text()
 (proof/'Pruefbericht.html').write_text('<!doctype html><html lang="de"><meta charset="utf-8"><title>Korrekturprüfung</title><style>body{font:15px/1.6 system-ui;max-width:1400px;margin:30px auto;padding:20px}pre{white-space:pre-wrap;overflow-wrap:anywhere;font:inherit}table{border-collapse:collapse;width:100%;font-size:12px}td,th{border:1px solid #a4b0a8;padding:8px;text-align:left;vertical-align:top}.table-scroll{overflow:auto}</style><body><p>Jeder Status bezieht sich auf die im Bericht genannte ausgeführte Prüfung.</p>'+report_html(report)+'</body></html>')
-page=(out/'index.html').read_text();extra='<section><h2>Korrekturbericht und Grenzen</h2><p><a href="Korrekturen/Pruefbericht.html">Prüfbericht F01–F13</a> · <a href="Korrekturen/SUMMARY.json">Ausgeführte Prüfungen</a> · <a href="Korrekturen/html-equivalence.json">Bindung an die getestete HTML</a></p><p>Eigene Reproduktionen; das unabhängige QA-Archiv war nicht lesbar. Physisches iPad 9/Safari/iPadOS 27, unabhängige biologische/visuelle Endabnahme und Unterrichtswirkung bleiben ungeprüft.</p>'+''.join(cards)+'<h2>Eigene Vorher-/Nachherkameras</h2><p>XZ, Blickwinkel und Viewport sind gleich; die Augenhöhe folgt dem geänderten Boden. Die unbekannten Originalkameras des unabhängigen Berichts werden nicht behauptet.</p>'+''.join(pairs)+'</section>'
+page=(out/'index.html').read_text();extra='<section><h2>Korrekturbericht und Grenzen</h2><p><a href="Korrekturen/Pruefbericht.html">Prüfbericht F01–F13</a> · <a href="Korrekturen/SUMMARY.json">Ausgeführte Prüfungen</a> · <a href="Korrekturen/delivery-html-equivalence.json">Bindung der Auslieferungsdatei an die getestete HTML</a></p><p>Eigene Reproduktionen; das unabhängige QA-Archiv war nicht lesbar. Physisches iPad 9/Safari/iPadOS 27, unabhängige biologische/visuelle Endabnahme und Unterrichtswirkung bleiben ungeprüft.</p>'+''.join(cards)+'<h2>Eigene Vorher-/Nachherkameras</h2><p>XZ, Blickwinkel und Viewport sind gleich; die Augenhöhe folgt dem geänderten Boden. Die unbekannten Originalkameras des unabhängigen Berichts werden nicht behauptet.</p>'+''.join(pairs)+'</section>'
 page=page.replace('</style>','.pair{display:grid;grid-template-columns:1fr 1fr;gap:10px}.pair img{width:100%}</style>',1)
 page=page.replace('</body>',extra+'</body>')if'</body>'in page else page.replace('</html>',extra+'</html>')
 page=page.replace('vollständige Softwarevorschau','Korrekturfassung zur Prüfung')
 (out/'index.html').write_text(page)
-info['correctionProof']={'feedingSpecies':4,'feedingRawImages':28,'landscapeImages':len(h['captures']),'independentOriginalArchiveRead':False,'identicalRuntimeSources':True,'runtimeFreeze':load(proof/'runtime-freeze.json'),'htmlEquivalence':load(proof/'html-equivalence.json'),'limits':['No physical iPad/Safari test','No independent biological/visual final acceptance','No classroom learning-effect proof']}
+info['correctionProof']={'feedingSpecies':4,'feedingRawImages':28,'landscapeImages':len(h['captures']),'independentOriginalArchiveRead':False,'identicalRuntimeSources':True,'runtimeFreeze':load(proof/'runtime-freeze.json'),'htmlEquivalence':delivery_binding,'originalCleanFeedingProof':load(proof/'html-equivalence.json'),'limits':['No physical iPad/Safari test','No independent biological/visual final acceptance','No classroom learning-effect proof']}
 (out/'build-info.json').write_text(json.dumps(info,ensure_ascii=False,indent=2)+'\n')
 (out/'FILE-SHA256.json').write_text(json.dumps({str(p.relative_to(out)):sha(p)for p in sorted(out.rglob('*'))if p.is_file()and p.name!='FILE-SHA256.json'},indent=2)+'\n')
 with zipfile.ZipFile(root/'outputs/Ranger-Kompakt-Abnahme.zip','w',zipfile.ZIP_DEFLATED,compresslevel=7)as z:
