@@ -12,6 +12,8 @@ proof=out/'Korrekturen';proof.mkdir();cards=[]
 # Bind this exact delivered file, retaining the original tested hashes. Only a
 # provenance stamp may differ after documentation/evidence-only commits.
 delivered_html=(root/'outputs/Ranger-Kompakt.html').read_text();matches=[]
+delivery_stamp=re.search(r'<meta name="compact-build" content="([^"]+)">',delivered_html)[1]
+assert load(root/'work/compact-browser/standalone-result.json')['buildStamp']==delivery_stamp,'Fresh standalone smoke must match this delivered build stamp'
 for dirty in ['false','true']:
  stamp='<meta name="compact-build" content="'+f['sourceCommit']+'; dirty='+dirty+'">'
  recreated=re.sub(r'<meta name="compact-build" content="[^"]+">',stamp,delivered_html)
