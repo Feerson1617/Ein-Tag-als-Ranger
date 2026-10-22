@@ -39,9 +39,18 @@ def task(page,id):hub(page);page.locator(f'#panel [data-mission="{id}"]').click(
 def data(page):return page.evaluate("JSON.parse(localStorage.getItem('ranger-compact-fieldbook-v2'))")
 def screenshot(page,name):
  path=out/(name+'.png');page.screenshot(path=str(path));raw=path.read_bytes();result['captures'].append({'file':path.name,'sha256':hashlib.sha256(raw).hexdigest(),'bytes':len(raw),'source':'actual browser screenshot'});save()
+def click_inspection_button(page,button):
+ # Use the real pointer path and verify the hit target. No forced DOM click or
+ # bypass of an obscuring element. Two rAF-based locator stability samples can
+ # stall after repeated WebGL context creation in software Chromium.
+ page.bring_to_front();assert button.is_visible()and button.is_enabled()
+ button.evaluate("b=>b.scrollIntoView({block:'center',inline:'nearest',behavior:'instant'})")
+ hit=button.evaluate('''b=>{const r=b.getBoundingClientRect(),x=r.left+r.width/2,y=r.top+r.height/2,e=document.elementFromPoint(x,y);return {x,y,width:r.width,height:r.height,inViewport:x>=0&&y>=0&&x<innerWidth&&y<innerHeight,hit:b===e||b.contains(e),visibility:document.visibilityState,focused:document.hasFocus()};}''')
+ assert hit['inViewport']and hit['hit']and hit['width']>0 and hit['height']>0,('Inspection button not physically reachable',hit)
+ result.setdefault('inspectionPointerChecks',[]).append(hit);page.mouse.click(hit['x'],hit['y'])
 def inspect(page,taxon,record=True,stage=None,capture=False):
  close(page);page.locator('#study').click();selector=f'[data-inspect][data-taxon="{taxon}"]'+(f'[data-stage="{stage}"]'if stage else'');button=page.locator(selector).first;assert button.count(),taxon
- individual=button.get_attribute('data-inspect');actual_stage=button.get_attribute('data-stage');button.click();page.wait_for_function('document.querySelector("#specimen-canvas").dataset.ready==="true"')
+ individual=button.get_attribute('data-inspect');actual_stage=button.get_attribute('data-stage');click_inspection_button(page,button);page.wait_for_function('document.querySelector("#specimen-canvas").dataset.ready==="true"')
  if capture:
   encoded=page.evaluate('()=>new Promise(resolve=>requestAnimationFrame(()=>{resolve(document.querySelector("#specimen-canvas").toDataURL("image/png"));}))')
   raw=base64.b64decode(encoded.split(',',1)[1]);from PIL import Image
@@ -143,7 +152,10 @@ with sync_playwright()as pw:
    expected=set(manifest['activeTaxa']);actual={x[0]for x in seen};assert actual==expected,{'missing':sorted(expected-actual),'unexpected':sorted(actual-expected)};assert ('aglais_io','caterpillar')in seen;gallery.close();ok('all 36 active taxa plus caterpillar captured from actual magnified meshes through reachable study sites',taxa=sorted(actual))
   assert not result['errors'];result['completedAt']=time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime());save()
  except Exception as error:
-  result['failure']=str(error);result['traceback']=traceback.format_exc();save();
+  result['failure']=str(error);result['traceback']=traceback.format_exc();
+  try:result['failureBrowserState']=page.evaluate('()=>({visibility:document.visibilityState,focused:document.hasFocus(),heap:performance.memory?.usedJSHeapSize,world:{...document.querySelector("#world")?.dataset}})')
+  except Exception:pass
+  save();
   try:screenshot(page,'failure')
   except Exception:pass
   print(result['traceback'],flush=True);raise
