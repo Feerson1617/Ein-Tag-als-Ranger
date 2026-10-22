@@ -28,6 +28,9 @@ prefix='/'+args.prefix.strip('/')+'/' if args.prefix.strip('/') else '/'
 site=(ROOT/args.site).resolve()
 out=ROOT/'work'/('browser-'+args.browser+('-subpath' if prefix!='/' else ''))
 out.mkdir(parents=True,exist_ok=True)
+# A failed capture must never leave an older image posing as current evidence.
+previous=out/'failure.png'
+if previous.exists():previous.rename(out/('previous-failure-'+str(previous.stat().st_mtime_ns)+'.png'))
 class Handler(SimpleHTTPRequestHandler):
     def translate_path(self,path):
         path=urlsplit(path).path
@@ -294,9 +297,16 @@ try:
         if browser.is_connected():browser.close()
     except Exception:
         try:
+            result['failureDOM']=page.evaluate('''()=>{const rect=e=>{const r=e.getBoundingClientRect(),s=getComputedStyle(e);return {x:r.x,y:r.y,width:r.width,height:r.height,display:s.display,visibility:s.visibility,opacity:s.opacity,detailsOpen:e.closest('details')?.open,topElement:document.elementFromPoint(Math.max(0,Math.min(innerWidth-1,r.x+r.width/2)),Math.max(0,Math.min(innerHeight-1,r.y+r.height/2)))?.id};};return {viewport:[innerWidth,innerHeight],hidden:document.hidden,fonts:document.fonts.status,graphics:document.querySelector('#world').dataset.graphicsState,panelOpen:document.querySelector('#panel').open,controls:[...document.querySelectorAll('[data-focus-taxon]')].map(e=>({taxon:e.dataset.focusTaxon,...rect(e)})),animations:document.getAnimations().map(a=>({state:a.playState,time:a.currentTime})),panelRect:rect(document.querySelector('#panel')),panelScrollTop:document.querySelector('#panel-content').scrollTop};}''')
+            failed_book=stored()
+            if failed_book is not None:
+                (out/'failed-earned-fieldbook.json').write_text(json.dumps(failed_book,ensure_ascii=False,indent=2)+'\n')
+        except Exception as diagnostic_error:result['failureDiagnosticError']=str(diagnostic_error)
+        try:
             result['failureUI']={'toast':page.locator('#toast').inner_text(),'focus':page.locator('#focus-name').inner_text(),'progress':page.locator('#progress').inner_text(),'tool':page.locator('#world').get_attribute('data-tool'),'observation':page.locator('#world').evaluate('(e)=>Object.fromEntries(Object.entries(e.dataset).filter(([k])=>/focus|observation|simulationTime|fps|frameP95/i.test(k)))')}
             page.screenshot(path=str(out/'failure.png'),timeout=30000)
-        except Exception:pass
+            result['failureScreenshot']='failure.png'
+        except Exception as capture_error:result['failureScreenshotError']=str(capture_error)
         raise
 
 except Exception as error:
