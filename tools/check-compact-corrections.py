@@ -1,8 +1,12 @@
 """Complete local correction plan: original suites, builds, shipped HTML and real browsers. No deployment."""
 from pathlib import Path
-import subprocess,json,time,sys,hashlib,re
+import subprocess,json,time,sys,hashlib,re,platform,os
 root=Path(__file__).resolve().parents[1];sys.path.insert(0,str(root));from tools.module_graph import ModuleGraph
 out=root/'work/final-qa';out.mkdir(parents=True,exist_ok=True);(root/'work/qa-correction').mkdir(parents=True,exist_ok=True);python=sys.executable;commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=root,text=True).strip();assert not subprocess.check_output(['git','status','--porcelain'],cwd=root,text=True).strip()
+(out/'result.json').write_text(json.dumps({'sourceCommit':commit,'checks':[],'complete':False},indent=2)+'\n')
+(out/'reruns.json').write_text('{"checks":[]}\n')
+(out/'scheduler-timing.json').write_text(json.dumps({'scope':'Sequential fresh complete plan; scheduler duration is not a browser FPS measure.'},indent=2)+'\n')
+(out/'environment.json').write_text(json.dumps({'recordedAt':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime()),'os':platform.platform(),'architecture':platform.machine(),'python':platform.python_version(),'node':subprocess.check_output(['node','--version'],text=True).strip(),'logicalCoresVisible':os.cpu_count(),'graphicsFlags':['--use-angle=swiftshader','--enable-unsafe-swiftshader'],'graphicsScope':'Forced Chromium software rendering. No physical iPad/Apple GPU/Safari or classroom certification.'},indent=2)+'\n')
 g=ModuleGraph(root/'dist','compact/main.js');hashes={n:hashlib.sha256((root/'dist'/n).read_bytes()).hexdigest()for n in sorted(set(g.modules)|g.assets|{'kompakt.html','compact/style.css','icon.svg'})}
 freeze={'runtimeCommit':commit,'sourceHashes':hashes,'scope':'Following documentation/evidence/tool commits must leave these exact application files unchanged.'};(out/'runtime-freeze.json').write_text(json.dumps(freeze,indent=2)+'\n')
 # No heavy browser starts before the complete fresh model/build/package checks.
