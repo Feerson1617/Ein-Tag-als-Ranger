@@ -28,7 +28,7 @@ for name in ['start','woodruff','nettle','wood','village','ramp','salt-shrub','s
 shutil.copyfile(base/'browser-baseline.json',before/'browser-baseline.json')
 for source,name in [(root/'docs/kompakt/KORREKTUREN.md','KORREKTUREN.md'),(root/'docs/kompakt/TESTS.md','TESTS.md'),(root/'docs/kompakt/QUELLEN-KORREKTUR.json','QUELLEN-KORREKTUR.json'),(root/'work/final-qa/runtime-freeze.json','runtime-freeze.json'),(root/'work/final-qa/html-equivalence.json','html-equivalence.json'),(root/'work/final-qa/environment.json','environment.json')]:
  shutil.copyfile(source,proof/name)
-for name in ['flooding-all-taxa.csv','flooding-report.md']:
+for name in ['flooding-all-taxa.csv','flooding-report.md','visual-review.json']:
  shutil.copyfile(root/'work/final-qa'/name,proof/name)
 summary=root/'verification/kompakt-korrektur/final/SUMMARY.json'
 if summary.exists():shutil.copyfile(summary,proof/'SUMMARY.json')
