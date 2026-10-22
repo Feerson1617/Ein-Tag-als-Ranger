@@ -1,0 +1,92 @@
+{
+  "commit": "1eeafdb9a572cca5dd56cb829bb88218d86dd602",
+  "sourceDirty": false,
+  "startedAt": "2026-10-22T07:59:57Z",
+  "site": "outputs/GitHub-Pages",
+  "entry": "index.html",
+  "prefix": "/Ein-Tag-als-Ranger/",
+  "viewport": [
+    800,
+    500
+  ],
+  "browser": "chromium",
+  "passed": [
+    "boot, two main entries, three mission choices, real WebGL startup",
+    "LIVE M1: three concrete focal taxa, observation button, feature comparisons and justified uncertainty",
+    "LIVE M2: real simulation event, finite shared resource, explicitly read protocol, interpretation"
+  ],
+  "failed": [
+    "Page.wait_for_function: Timeout 180000ms exceeded."
+  ],
+  "errors": [],
+  "consoleErrors": [],
+  "httpErrors": [],
+  "notTested": [
+    "physical iPad/Safari",
+    "classroom timing/learning effect",
+    "20-minute minimum-device performance"
+  ],
+  "browserVersion": "154.0.8037.57",
+  "readySeconds": 20.24,
+  "resourceTransferBytes": 26674023,
+  "navigationTransferBytes": 8666,
+  "initialTransferBytes": 26682689,
+  "liveMissionSeconds": {
+    "m1": 270.21,
+    "m2": 405.89
+  },
+  "failureDOM": {
+    "viewport": [
+      800,
+      500
+    ],
+    "hidden": false,
+    "fonts": "loaded",
+    "graphics": null,
+    "panelOpen": false,
+    "controls": [
+      {
+        "taxon": "fagus_sylvatica",
+        "x": 0,
+        "y": 0,
+        "width": 800,
+        "height": 500,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1",
+        "detailsOpen": null,
+        "topElement": "world"
+      }
+    ],
+    "animations": [],
+    "panelRect": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0,
+      "display": "none",
+      "visibility": "visible",
+      "opacity": "1",
+      "detailsOpen": null,
+      "topElement": "world"
+    },
+    "panelScrollTop": 0
+  },
+  "failureUI": {
+    "toast": "Beobachtungsfenster läuft. Nach mindestens 6 Modellsekunden Feldbuch öffnen und Stationsprotokoll sichern.",
+    "focus": "Rotbuche",
+    "progress": "Beobachtungsfenster: 5.7 / 6 Modellsekunden",
+    "tool": "none",
+    "observation": {
+      "observationSeconds": "0",
+      "targetFps": "60",
+      "frameP95Ms": "3416.5",
+      "fps": "0",
+      "focusTaxon": "fagus_sylvatica",
+      "focusIndividual": "plant:forest:fagus_sylvatica:-8.603866083323956:9.19744166530203:0.006750873364684044",
+      "observationDeltaSeconds": "5.916399999999994",
+      "simulationTime": "1.984900000000022"
+    }
+  },
+  "failureScreenshot": "failure.png"
+}

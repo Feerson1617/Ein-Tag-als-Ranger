@@ -1,0 +1,12 @@
+{
+  "runtimeFreeze": "5be5e9b8f7394613279f5a2834741a0abf33b570",
+  "currentHead": "20bfc5c4631f82518ddfef11c9d9d2b6ee80f30c",
+  "verifiedFiles": 37,
+  "matchingReports": [
+    "work/compact-browser/result.json",
+    "work/compact-browser/standalone-result.json",
+    "work/compact-learning/result.json",
+    "work/compact-learning/jay-contact-result.json"
+  ],
+  "identical": true
+}

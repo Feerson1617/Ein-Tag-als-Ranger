@@ -1,0 +1,4 @@
+START cloud-stability
+{'name': 'cloud-stability', 'command': ['/workspace/.ranger-clean-venv/bin/python', 'tools/browser-compact-stability.py'], 'status': 'passed', 'startedAt': '2026-10-22T09:21:00Z', 'exitCode': 0, 'seconds': 1612.86}
+START review-package
+{'name': 'review-package', 'command': ['/workspace/.ranger-clean-venv/bin/python', 'tools/package-compact-review.py'], 'status': 'passed', 'startedAt': '2026-10-22T09:47:52Z', 'exitCode': 0, 'seconds': 4.02}

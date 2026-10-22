@@ -1,0 +1,519 @@
+{
+  "checks": [
+    {
+      "name": "boot: explicit small content/request graph",
+      "passed": true,
+      "manifest": {
+        "id": "compact",
+        "stage": 6,
+        "initialSeed": 20260825,
+        "biologicalZones": [
+          "forest",
+          "saltmarsh",
+          "wadden"
+        ],
+        "transitionZones": [
+          "village",
+          "dike"
+        ],
+        "activeTaxa": [
+          "fagus_sylvatica",
+          "quercus_robur",
+          "galium_odoratum",
+          "urtica_dioica",
+          "rubus_fruticosus",
+          "trifolium_pratense",
+          "fomes_fomentarius",
+          "capreolus_capreolus",
+          "vulpes_vulpes",
+          "apodemus_sylvaticus",
+          "dendrocopos_major",
+          "garrulus_glandarius",
+          "parus_major",
+          "bombus_lapidarius",
+          "aglais_io",
+          "coccinella_septempunctata",
+          "aphidoidea",
+          "lumbricidae",
+          "ixodes_ricinus",
+          "halimione_portulacoides",
+          "salicornia_europaea",
+          "festuca_rubra",
+          "sporobolus_anglicus",
+          "puccinellia_maritima",
+          "limonium_vulgare",
+          "recurvirostra_avosetta",
+          "platalea_leucorodia",
+          "tringa_totanus",
+          "haematopus_ostralegus",
+          "cerastoderma_edule",
+          "mytilus_edulis",
+          "arenicola_marina",
+          "hediste_diversicolor",
+          "crangon_crangon",
+          "carcinus_maenas",
+          "peringia_ulvae"
+        ],
+        "simulationInstances": [
+          "compact-fauna-and-resource-network"
+        ],
+        "metrics": {
+          "width": 160,
+          "depth": 100,
+          "areaHa": 1.6,
+          "mainMeters": 362.2102529662271,
+          "shortcutMeters": 29.145962247263665,
+          "outlookMeters": 10.045360768162785,
+          "walkSeconds": 226.3814081038919,
+          "shortcutSeconds": 18.21622640453979,
+          "maxSlope": 0.2553429469466351
+        }
+      }
+    },
+    {
+      "name": "spawn board and shared guide reachable",
+      "passed": true
+    },
+    {
+      "name": "both live tool paths render without runtime errors",
+      "passed": true
+    },
+    {
+      "name": "same real bird blocked behind solid bark and observable from its clear side",
+      "passed": true
+    },
+    {
+      "name": "actual keyboard movement",
+      "passed": true,
+      "distanceMeters": 0.8854400000000423,
+      "simulationSeconds": 0.5529999999999999,
+      "wallClockMethod": "wait for >0.5 model seconds; physics capped, no speed inference from slow GPU wall time"
+    },
+    {
+      "name": "own live plant evidence, explicit note, real JSON download",
+      "passed": true,
+      "individualId": "ranger-compact-v2:galium_odoratum:16"
+    },
+    {
+      "name": "actual reload retains evidence and creates a fresh run ID",
+      "passed": true
+    },
+    {
+      "name": "invalid import rejected without replacing saved evidence",
+      "passed": true
+    },
+    {
+      "name": "out-of-core legacy records imported through actual file UI as archive only",
+      "passed": true
+    },
+    {
+      "name": "reference images: deer three views, supported bird, five plants, ramp and curve",
+      "passed": true
+    },
+    {
+      "name": "actual bird departure, flight and supported landing",
+      "passed": true
+    },
+    {
+      "name": "actual deer motion with stance feet at local terrain",
+      "passed": true
+    },
+    {
+      "name": "tablet viewport/profile preserves plants; emulation only",
+      "passed": true
+    },
+    {
+      "name": "actual WebGL context loss and restoration without fieldbook loss",
+      "passed": true
+    },
+    {
+      "name": "asset failure shows recovery message and preserves large-world storage",
+      "passed": true
+    },
+    {
+      "name": "corrupt saved data visible and preserved at actual boot",
+      "passed": true
+    },
+    {
+      "name": "quota error visible inside note dialog; old evidence unchanged",
+      "passed": true
+    },
+    {
+      "name": "actual emulated touch gesture uses the same 1.6 m/s action",
+      "passed": true,
+      "speed": 1.6,
+      "scope": "Chromium touch emulation only"
+    }
+  ],
+  "errors": [],
+  "captures": [
+    {
+      "file": "01-waldstart.png",
+      "sha256": "5cb6e9158722fdc307a6f81fa2a1117999cd5f78a27b38505c1f6cfa35b215a9",
+      "bytes": 485617,
+      "renderFov": "62",
+      "renderTool": "none",
+      "renderRevision": "1",
+      "observer": "{\"x\":-52,\"z\":8,\"yaw\":1.5707963267948966,\"pitch\":-0.06}",
+      "simulationTime": "0.343",
+      "runId": "f1ea2f41-832a-4d7b-8f8c-c62017cb2858"
+    },
+    {
+      "file": "01a-binocular-runtime.png",
+      "sha256": "e07d5f70b377230dcfcc41d0f1aaf732025327b3d0d927a569a252dfa6779f3e",
+      "bytes": 282134,
+      "renderFov": "18",
+      "renderTool": "binocular",
+      "renderRevision": "2",
+      "observer": "{\"x\":-52,\"z\":8,\"yaw\":1.5707963267948966,\"pitch\":-0.06}",
+      "simulationTime": "0.865",
+      "runId": "f1ea2f41-832a-4d7b-8f8c-c62017cb2858"
+    },
+    {
+      "file": "01b-magnifier-runtime.png",
+      "sha256": "2ae4397d94a6b5a1d8a2c81ec3131c883477b391851ad4d9ae8d90df22aa4f14",
+      "bytes": 370131,
+      "renderFov": "28",
+      "renderTool": "magnifier",
+      "renderRevision": "3",
+      "observer": "{\"x\":-52,\"z\":8,\"yaw\":1.5707963267948966,\"pitch\":-0.06}",
+      "simulationTime": "1.224",
+      "runId": "f1ea2f41-832a-4d7b-8f8c-c62017cb2858"
+    },
+    {
+      "file": "02-deer-side.png",
+      "sha256": "c7790b406e313b7f98040e24d0c647ff491ee7c7394e9d72bea919522a91d940",
+      "bytes": 427216,
+      "renderFov": "18",
+      "renderTool": "binocular",
+      "renderRevision": "3",
+      "observer": "{\"x\":-59,\"z\":-2.5,\"yaw\":-3.141592653589793,\"pitch\":-0.19303367272745017}",
+      "simulationTime": "0.769",
+      "runId": "d14de453-c4de-41be-9395-c0097b48b587"
+    },
+    {
+      "file": "03-deer-front.png",
+      "sha256": "b5a6fdff9ddbe19ad3bd312d2706b6cc6128a66f3874af346636d8b2a07413bc",
+      "bytes": 385475,
+      "renderFov": "18",
+      "renderTool": "binocular",
+      "renderRevision": "6",
+      "observer": "{\"x\":-53.5,\"z\":3,\"yaw\":1.5707963267948966,\"pitch\":-0.18985814560202113}",
+      "simulationTime": "1.437",
+      "runId": "d14de453-c4de-41be-9395-c0097b48b587"
+    },
+    {
+      "file": "04-deer-back.png",
+      "sha256": "f1c04d56d0af76f70e19a9a2629fa213c79c0c130aebf1fc4f821ecab098681e",
+      "bytes": 416382,
+      "renderFov": "18",
+      "renderTool": "binocular",
+      "renderRevision": "9",
+      "observer": "{\"x\":-64.5,\"z\":3,\"yaw\":-1.5707963267948966,\"pitch\":-0.1950840473460088}",
+      "simulationTime": "2.057",
+      "runId": "d14de453-c4de-41be-9395-c0097b48b587"
+    },
+    {
+      "file": "05-bird.png",
+      "sha256": "d90ed299e76e67bc52d8f2095d0951bcd1dfc8c08a3a13a8fca357371e1418ee",
+      "bytes": 260402,
+      "renderFov": "18",
+      "renderTool": "binocular",
+      "renderRevision": "12",
+      "observer": "{\"x\":-56.65546666666667,\"z\":14.2,\"yaw\":0.45157576083555057,\"pitch\":0.007823297634087688}",
+      "simulationTime": "2.596",
+      "runId": "d14de453-c4de-41be-9395-c0097b48b587"
+    },
+    {
+      "file": "06-woodruff.png",
+      "sha256": "2d76b5dcc48ae37bfa74429be4451b3af7c12119f553b0c0fd782adb0503003f",
+      "bytes": 521248,
+      "renderFov": "28",
+      "renderTool": "magnifier",
+      "renderRevision": "15",
+      "observer": "{\"x\":-54.32327704373523,\"z\":8.043468266353608,\"yaw\":0.885066815888611,\"pitch\":-0.5203797766551117}",
+      "simulationTime": "3.247",
+      "runId": "d14de453-c4de-41be-9395-c0097b48b587"
+    },
+    {
+      "file": "07-nettle.png",
+      "sha256": "78813cfa02bd5a83c1dbd8459adcf915e8fd069cc9be642300b1ca13f22849d7",
+      "bytes": 356111,
+      "renderFov": "28",
+      "renderTool": "magnifier",
+      "renderRevision": "18",
+      "observer": "{\"x\":-40.47863381511998,\"z\":14.197259088003703,\"yaw\":0.8850668158886108,\"pitch\":-0.4174609346054198}",
+      "simulationTime": "3.947",
+      "runId": "d14de453-c4de-41be-9395-c0097b48b587"
+    },
+    {
+      "file": "08-salt-shrub.png",
+      "sha256": "b46a114c883e940e471f6e73f634dc19ade58faf68e65725c5818721fe65565a",
+      "bytes": 516106,
+      "renderFov": "28",
+      "renderTool": "magnifier",
+      "renderRevision": "21",
+      "observer": "{\"x\":44.291782814811064,\"z\":11.857750914279078,\"yaw\":0.8850668158886108,\"pitch\":-0.3944189439455479}",
+      "simulationTime": "4.519",
+      "runId": "d14de453-c4de-41be-9395-c0097b48b587"
+    },
+    {
+      "file": "09-salt-segments.png",
+      "sha256": "ba3ceedcea51040ef817327274b5633b8eebad8c1cb6ecb6736d5390a9143703",
+      "bytes": 568491,
+      "renderFov": "28",
+      "renderTool": "magnifier",
+      "renderRevision": "24",
+      "observer": "{\"x\":47.06361154650879,\"z\":-1.1226803810237544,\"yaw\":-0.8850668158886109,\"pitch\":-0.7030085891335317}",
+      "simulationTime": "5.105",
+      "runId": "d14de453-c4de-41be-9395-c0097b48b587"
+    },
+    {
+      "file": "10-salt-grass.png",
+      "sha256": "64748414fb4130355007c344dd563e9d9d05d7acf938f4d0abdf401da683b214",
+      "bytes": 485288,
+      "renderFov": "28",
+      "renderTool": "magnifier",
+      "renderRevision": "27",
+      "observer": "{\"x\":47.84118774223577,\"z\":-10.62627088719092,\"yaw\":0.8850668158886108,\"pitch\":-0.39489897841878646}",
+      "simulationTime": "5.612",
+      "runId": "d14de453-c4de-41be-9395-c0097b48b587"
+    },
+    {
+      "file": "11-ramp.png",
+      "sha256": "3624f436588d0a2d5e6c6593dd83edb17975734024ba62653a748f7819a1acaf",
+      "bytes": 374369,
+      "renderFov": "62",
+      "renderTool": "none",
+      "renderRevision": "29",
+      "observer": "{\"x\":3,\"z\":16,\"yaw\":-0.4124104415973873,\"pitch\":-0.030735012307624418}",
+      "simulationTime": "5.989",
+      "runId": "d14de453-c4de-41be-9395-c0097b48b587"
+    },
+    {
+      "file": "12-coast.png",
+      "sha256": "6b16449e8f096eb56db2a6e5e068165101d1edd0662f35a84b499b15a13f7e3c",
+      "bytes": 391855,
+      "renderFov": "62",
+      "renderTool": "none",
+      "renderRevision": "30",
+      "observer": "{\"x\":63,\"z\":-13,\"yaw\":-2.3036114285814033,\"pitch\":-0.12788807707486585}",
+      "simulationTime": "6.332",
+      "runId": "d14de453-c4de-41be-9395-c0097b48b587"
+    },
+    {
+      "file": "13-bird-flight.png",
+      "sha256": "40aa10d768244d7860266993973d80fcad8cb511be2db067ce4de4167d107648",
+      "bytes": 400307,
+      "renderFov": "62",
+      "renderTool": "none",
+      "renderRevision": "34",
+      "observer": "{\"x\":-54,\"z\":14,\"yaw\":1.5707963267948966,\"pitch\":0.07796742453278983}",
+      "simulationTime": "8.028",
+      "runId": "d14de453-c4de-41be-9395-c0097b48b587"
+    },
+    {
+      "file": "14-bird-landed.png",
+      "sha256": "c1d81edadcce4fd2e58eb512832f929119711313dad29a49b09295463f6e5e62",
+      "bytes": 224959,
+      "renderFov": "18",
+      "renderTool": "binocular",
+      "renderRevision": "36",
+      "observer": "{\"x\":-62.628557575757576,\"z\":19.2,\"yaw\":0.45157576083555057,\"pitch\":0.007442306078597167}",
+      "simulationTime": "11.768",
+      "runId": "d14de453-c4de-41be-9395-c0097b48b587"
+    },
+    {
+      "file": "15-deer-moving.png",
+      "sha256": "044cabd36fd8c9e5ffe18a52f901f151f11e0bd11a3b23323bcea3761803e47e",
+      "bytes": 527038,
+      "renderFov": "62",
+      "renderTool": "none",
+      "renderRevision": "40",
+      "observer": "{\"x\":-59,\"z\":1.2440000000000022,\"yaw\":-3.141592653589793,\"pitch\":-0.19303367272745017}",
+      "simulationTime": "14.777",
+      "runId": "d14de453-c4de-41be-9395-c0097b48b587"
+    },
+    {
+      "file": "16-tablet.png",
+      "sha256": "149ae2eacc7d95b6bd0e2ba2c4ffc15e2b1fafd42c477c54733a70b0324f0127",
+      "bytes": 924569,
+      "renderFov": "62",
+      "renderTool": "none",
+      "renderRevision": "42",
+      "observer": "{\"x\":-59,\"z\":1.2440000000000022,\"yaw\":-3.141592653589793,\"pitch\":-0.19303367272745017}",
+      "simulationTime": "15.118",
+      "runId": "d14de453-c4de-41be-9395-c0097b48b587"
+    }
+  ],
+  "startedAt": "2026-10-22T07:11:23Z",
+  "site": "outputs/Ranger-Kompakt",
+  "entry": "index.html",
+  "viewport": {
+    "width": 800,
+    "height": 500
+  },
+  "hardwareScope": "Cloud Chromium; no actual iPad/Safari or minimum-device certification",
+  "sourceCommit": "5be5e9b8f7394613279f5a2834741a0abf33b570",
+  "runtimeSourceHashes": {
+    "assets/boardwalk-wood.webp": "4d06022133e3772534374671fb73a4509ed109e1db6ca06a2d62a8c99c47ac6d",
+    "assets/compact-roe-deer.glb": "a89400df66033eb5eaa7f9bf13ccefaacfb866ab24e4576574d11965354ee619",
+    "assets/sky-panorama.webp": "46c360b491b11269d280e73ec0e71869afdfd62fb543b4250713234374a2f71d",
+    "assets/terrain-atlas.webp": "d637324d3ace6ef8e2c549e7f0a513efd1a4c06aab927f0ed1565bf77b2ced02",
+    "assets/wildlife-fox.glb": "61a4d1b845aa406928a327648417ae1c3982510b9c4e8ce33b7c494fbc98a22f",
+    "compact/catalog.js": "8e373f46194c392f1ec9bf43c9c95e4312a64ea29a9ac90ddc5e87e8a7fda16c",
+    "compact/ecology.js": "5287cfd0430e926f81bb2ad2b2903e62d302728c341e592d3cee91f37a52c0c7",
+    "compact/evidence.js": "971d70710721d81f48b428dfa849bcc2fbfa811ce6148c30ddc90104f35f3534",
+    "compact/expanded-view.js": "3255846b28755b70da25763aaa839dbc18ab00bca7cd842c0df93e180d228f5d",
+    "compact/fauna-view.js": "985a83582ff0ffac0e8d6ef20e2edc80a09b66e88f3768dd404f746507820feb",
+    "compact/geometry.js": "a6f52cd0fc8f75db3d102d7d6f6f7ec3acbeaf65123f95710f9aa502399c4e26",
+    "compact/inspection.js": "961c8c13e8e8e58595460fa40ed7bed0668367b120081dd95961a78ca87300ea",
+    "compact/journal.js": "73295b3347b8d1d8b9d0ea60e73cd4450c95fed063d46da4066f0d975d21a87b",
+    "compact/layout.js": "889a7ca15fd622d8d145f4fff86225c747bf9bee0433dce6ee8f810e714dd578",
+    "compact/learning-documents.js": "f02e0316bc3b8173bfd0380e3e7b803d13dd22a47fb946dc08e0ce9927f6be0c",
+    "compact/learning-models.js": "e58605a045c82f544703a130b87849c271a23e6ce5c45a48a1d7a83cd301e202",
+    "compact/learning-ui.js": "266de88fd07e6630d15c0ab3476ebd0db2149cd51f97cccd20659609d905e43b",
+    "compact/main.js": "1309f9d9bca17bcdf288702f619b368c85f4ee2ac70aa25a178313f43afc4d05",
+    "compact/manifest.js": "0a968302d33f9f65b04246391692510e9daff3f64d250c74794aa6cec6d9aaa0",
+    "compact/materials.js": "a28bb5a761656249272a1c42968f61779046c6c03389bd19a007f5da33a41910",
+    "compact/missions.js": "2463f2c1402cfd2f795c6b29c1fca8668194a7375517084646113aa4f7d39059",
+    "compact/organism-models.js": "2732feb856814a0f1f66a1d746dca54222d5b462985228d968e1aeeaa5965628",
+    "compact/path-mesh.js": "7a41ebc390aeca96cffd1e4fcee19f3b76310413fcee3489d1533ebd599a4c82",
+    "compact/style.css": "142e2c3ba78d6fce8e3a19ec7856310730807df34eaf428cbe9eef8c820ae8f9",
+    "compact/taxa.js": "97cd6f5bad16208408512be876ebf63d5f9ee400dd31f94a61c8ca08e4e24fd3",
+    "compact/visibility.js": "50d59d44257e9d18547bfaec9277366d3339177c6ebce37d948b48c9940a86f1",
+    "compact/world-state.js": "0ff225752d99f62a14207aa60baf5550b10517697e0e0af62bab55b0153a4cde",
+    "compact/world-view.js": "53a2d5e9f3ff3926e88c3acedc73f8a4b599fe9cc2059897f6afd62e4e71c7db",
+    "field-guide.js": "22fedb8d555efd8ed7efda64f0dee729d6a12f1d532f0d14c07117af930be69a",
+    "icon.svg": "cb8cda889f99e56d13d18e09929837b7c3630d3f9ff3219316d12d3077fc0869",
+    "kompakt.html": "a5fe7ded5db65e02f2e9714757704dfac6e544b9d8f05d0003804084035377c2",
+    "observation-clock.js": "2304e6c425192967f87841caa5072873cb5dd5c7f69c38fb45b237fd22f98b03",
+    "ranger-controls.js": "081497a5f6754ecd441e61ee55805da99b5121e96215cfa900209e00e41e5eda",
+    "station-protocol.js": "2590df7d9de4c8f4afda8fcafd619d565440c2dc7e1bb6ef4574aeadf803ae57",
+    "vendor/three.core.js": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20",
+    "vendor/three.module.js": "2884e2e6f26feaec0b454fcdc1e98c27d6433ba15253e5a3e22e111df81686fa",
+    "wildlife-glb.js": "32f8f947dd002ba7b571ee627e6291fa40a951fccdd9dee644661f19de487c35"
+  },
+  "videos": [
+    {
+      "file": "bird-flight.webm",
+      "bytes": 103109,
+      "sha256": "4a0b6bd05a79cb87530636a6114e103f7453a1979c606e773e601dde1accc56b"
+    },
+    {
+      "file": "deer-motion.webm",
+      "bytes": 85280,
+      "sha256": "e073d70b5a6fca7095f5ff19434f3ab30de29909e7864b39ffe792b745d22878"
+    }
+  ],
+  "videoAvailable": false,
+  "browserVersion": "154.0.8037.57",
+  "buildStamp": "5be5e9b8f7394613279f5a2834741a0abf33b570; dirty=false",
+  "requests": [
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/index.html",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/web/compact-142e2c3ba78d.css",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/web/compact-main-3d34593bc967.js",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/web/vendor-three.module-c4af49689bc3.js",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/web/observation-clock-2304e6c42519.js",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/web/ranger-controls-081497a5f675.js",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/web/field-guide-22fedb8d555e.js",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/web/compact-manifest-e194fd700bf1.js",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/web/compact-visibility-50d59d44257e.js",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/web/compact-taxa-97cd6f5bad16.js",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/web/compact-ecology-140e9dea87f1.js",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/web/compact-expanded-view-eba67e8f4dac.js",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/web/compact-learning-ui-f836d40526ed.js",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/web/compact-inspection-2ff7ea34220f.js",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/web/compact-catalog-90dfc5f7dacb.js",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/web/compact-missions-4098b494e37f.js",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/web/compact-layout-889a7ca15fd6.js",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/web/compact-world-state-633d5a29c556.js",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/web/compact-world-view-fdf0bbe0aac0.js",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/web/compact-fauna-view-3211ba88e2cb.js",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/web/compact-journal-4b398570333a.js",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/web/wildlife-glb-a902e52468e8.js",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/web/compact-organism-models-7eb304ab689e.js",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/web/compact-geometry-a8e7de6eb91d.js",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/web/compact-learning-documents-2c62c4291728.js",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/web/compact-learning-models-e58605a045c8.js",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/web/compact-materials-a28bb5a76165.js",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/web/compact-path-mesh-aa698a81ee27.js",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/web/vendor-three.core-eb077d2417f6.js",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/web/station-protocol-2590df7d9de4.js",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/web/compact-evidence-b5bd3e8d94b5.js",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/assets/terrain-atlas-d637324d3ace.webp",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/assets/sky-panorama-46c360b491b1.webp",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/assets/boardwalk-wood-4d06022133e3.webp",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/assets/compact-roe-deer-a89400df6603.glb",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/assets/wildlife-fox-61a4d1b845aa.glb",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/icon.svg",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/index.html",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/web/compact-142e2c3ba78d.css",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/web/compact-main-3d34593bc967.js",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/web/vendor-three.module-c4af49689bc3.js",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/web/observation-clock-2304e6c42519.js",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/web/ranger-controls-081497a5f675.js",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/web/field-guide-22fedb8d555e.js",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/web/compact-manifest-e194fd700bf1.js",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/web/compact-visibility-50d59d44257e.js",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/web/compact-taxa-97cd6f5bad16.js",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/web/compact-ecology-140e9dea87f1.js",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/web/compact-expanded-view-eba67e8f4dac.js",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/web/compact-learning-ui-f836d40526ed.js",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/web/compact-inspection-2ff7ea34220f.js",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/web/compact-catalog-90dfc5f7dacb.js",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/web/compact-missions-4098b494e37f.js",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/web/compact-layout-889a7ca15fd6.js",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/web/compact-world-state-633d5a29c556.js",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/web/compact-world-view-fdf0bbe0aac0.js",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/web/compact-fauna-view-3211ba88e2cb.js",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/web/compact-journal-4b398570333a.js",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/web/vendor-three.core-eb077d2417f6.js",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/web/compact-learning-documents-2c62c4291728.js",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/web/compact-learning-models-e58605a045c8.js",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/web/compact-materials-a28bb5a76165.js",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/web/wildlife-glb-a902e52468e8.js",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/web/compact-organism-models-7eb304ab689e.js",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/web/compact-geometry-a8e7de6eb91d.js",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/web/compact-evidence-b5bd3e8d94b5.js",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/web/compact-path-mesh-aa698a81ee27.js",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/web/station-protocol-2590df7d9de4.js",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/assets/terrain-atlas-d637324d3ace.webp",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/assets/sky-panorama-46c360b491b1.webp",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/assets/boardwalk-wood-4d06022133e3.webp",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/assets/compact-roe-deer-a89400df6603.glb",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/icon.svg",
+    "http://127.0.0.1:38941/Ein-Tag-als-Ranger/assets/wildlife-fox-61a4d1b845aa.glb"
+  ],
+  "lastDataset": {
+    "engine": "three.js r180",
+    "sceneRevision": "44",
+    "graphicsProfile": "desktop",
+    "ready": "true",
+    "manifest": "{\"id\":\"compact\",\"stage\":6,\"initialSeed\":20260825,\"biologicalZones\":[\"forest\",\"saltmarsh\",\"wadden\"],\"transitionZones\":[\"village\",\"dike\"],\"activeTaxa\":[\"fagus_sylvatica\",\"quercus_robur\",\"galium_odoratum\",\"urtica_dioica\",\"rubus_fruticosus\",\"trifolium_pratense\",\"fomes_fomentarius\",\"capreolus_capreolus\",\"vulpes_vulpes\",\"apodemus_sylvaticus\",\"dendrocopos_major\",\"garrulus_glandarius\",\"parus_major\",\"bombus_lapidarius\",\"aglais_io\",\"coccinella_septempunctata\",\"aphidoidea\",\"lumbricidae\",\"ixodes_ricinus\",\"halimione_portulacoides\",\"salicornia_europaea\",\"festuca_rubra\",\"sporobolus_anglicus\",\"puccinellia_maritima\",\"limonium_vulgare\",\"recurvirostra_avosetta\",\"platalea_leucorodia\",\"tringa_totanus\",\"haematopus_ostralegus\",\"cerastoderma_edule\",\"mytilus_edulis\",\"arenicola_marina\",\"hediste_diversicolor\",\"crangon_crangon\",\"carcinus_maenas\",\"peringia_ulvae\"],\"simulationInstances\":[\"compact-fauna-and-resource-network\"],\"metrics\":{\"width\":160,\"depth\":100,\"areaHa\":1.6,\"mainMeters\":362.2102529662271,\"shortcutMeters\":29.145962247263665,\"outlookMeters\":10.045360768162785,\"walkSeconds\":226.3814081038919,\"shortcutSeconds\":18.21622640453979,\"maxSlope\":0.2553429469466351}}",
+    "worldVersion": "ranger-compact-v2",
+    "runId": "d14de453-c4de-41be-9395-c0097b48b587",
+    "focusIndividual": "",
+    "focusTaxon": "",
+    "observationSeconds": "0.000",
+    "simulationTime": "15.412",
+    "observer": "{\"x\":-59,\"z\":1.2440000000000022,\"yaw\":-3.141592653589793,\"pitch\":-0.19303367272745017}",
+    "birdSupport": "support-beech-b:trunk",
+    "birdActivity": "searching",
+    "bird": "{\"id\":\"compact-woodpecker-1\",\"taxon\":\"dendrocopos_major\",\"x\":-63.72855757575758,\"y\":1.8828353349066753,\"z\":17,\"supportId\":\"support-beech-b:trunk\",\"activity\":\"searching\",\"phase\":4.2633000000000445,\"targetIndex\":1,\"flightStart\":{\"x\":-57.75546666666667,\"y\":1.89346274546396,\"z\":12},\"flightTime\":3.513199999999951}",
+    "deer": "{\"id\":\"compact-deer-1\",\"taxon\":\"capreolus_capreolus\",\"x\":-60.36850000000007,\"z\":2.871199999999998,\"heading\":3.141592653589793,\"activity\":\"retreating\",\"phase\":20.241800000000165,\"feet\":[{\"part\":1,\"x\":-60.56441995805481,\"z\":2.9771922066587133,\"y\":0.34783686372580247,\"surface\":0.34783686372580247,\"swing\":false,\"geometryGap\":-3.0156988017893127e-12},{\"part\":2,\"x\":-60.52888673376264,\"z\":2.765207793341283,\"y\":0.40653028454239065,\"surface\":0.34862682861642913,\"swing\":true,\"geometryGap\":0.05790345588715412},{\"part\":3,\"x\":-60.14390120438866,\"z\":2.9771922066587133,\"y\":0.3498282604065706,\"surface\":0.3498282604065706,\"swing\":false,\"geometryGap\":6.387951279052118e-11},{\"part\":4,\"x\":-59.98390120438866,\"z\":2.765207793341283,\"y\":0.3511443453330902,\"surface\":0.3511443453330902,\"swing\":false,\"geometryGap\":2.3997859255331377e-11}],\"supportId\":null}",
+    "plantCount": "618",
+    "ecology": "{\"window\":\"summer\",\"actors\":82,\"alive\":[\"compact-bracket\",\"compact-fox\",\"compact-mouse-0\",\"compact-mouse-1\",\"compact-mouse-2\",\"compact-jay\",\"compact-tit-0\",\"compact-tit-1\",\"compact-bee\",\"compact-butterfly\",\"compact-caterpillar\",\"compact-ladybird-0\",\"compact-ladybird-1\",\"compact-aphid-0\",\"compact-aphid-1\",\"compact-aphid-2\",\"compact-aphid-3\",\"compact-aphid-4\",\"compact-aphid-5\",\"compact-aphid-6\",\"compact-aphid-7\",\"compact-aphid-8\",\"compact-earthworm\",\"compact-tick\",\"compact-avocet\",\"compact-spoonbill\",\"compact-redshank\",\"compact-oystercatcher\",\"compact-mussel-4\",\"compact-mussel-5\",\"compact-mussel-6\",\"compact-mussel-7\",\"compact-mussel-8\",\"compact-mussel-9\",\"compact-mussel-10\",\"compact-mussel-11\",\"compact-mussel-12\",\"compact-mussel-13\",\"compact-mussel-14\",\"compact-mussel-15\",\"compact-mussel-16\",\"compact-mussel-17\",\"compact-cockle-0\",\"compact-cockle-1\",\"compact-cockle-2\",\"compact-cockle-3\",\"compact-cockle-4\",\"compact-cockle-5\",\"compact-cockle-6\",\"compact-cockle-7\",\"compact-cockle-8\",\"compact-cockle-9\",\"compact-lugworm\",\"compact-ragworm\",\"compact-juvenile-worm-0\",\"compact-juvenile-worm-1\",\"compact-juvenile-worm-2\",\"compact-juvenile-worm-3\",\"compact-juvenile-worm-4\",\"compact-juvenile-worm-5\",\"compact-shrimp-1\",\"compact-shrimp-2\",\"compact-shrimp-3\",\"compact-shrimp-4\",\"compact-crab\",\"compact-snail-0\",\"compact-snail-1\",\"compact-snail-2\",\"compact-snail-3\",\"compact-snail-4\",\"compact-snail-5\",\"compact-snail-6\",\"compact-snail-7\",\"compact-snail-8\",\"compact-snail-9\",\"compact-snail-10\",\"compact-snail-11\"],\"events\":11,\"tide\":{\"phase\":0.12843166666666642,\"waterLevel\":-0.9266788418883003,\"label\":\"Niedrigwasser\"},\"resources\":{\"aphid-colony\":9,\"shared-mussels\":14,\"clover-pollen\":5,\"browse-shoot\":3,\"nettle-leaf\":7,\"leaf-litter\":5,\"dead-wood\":100,\"acorns\":4,\"wood-mice\":3,\"wood-larvae\":8,\"small-juveniles\":3,\"small-worms\":3,\"shrimp\":4,\"deer-host\":1,\"phytoplankton\":100,\"benthic-diatoms\":30}}",
+    "missions": "[{\"id\":\"K1\",\"complete\":false},{\"id\":\"K2\",\"complete\":false},{\"id\":\"K3\",\"complete\":false},{\"id\":\"K4\",\"complete\":false},{\"id\":\"K5\",\"complete\":false}]",
+    "frameMs": "16.7",
+    "geometries": "46",
+    "textures": "7",
+    "heapBytes": "61749380",
+    "triangles": "1277381",
+    "drawCalls": "23",
+    "renderRevision": "44",
+    "renderFov": "62",
+    "renderTool": "none",
+    "movementSpeed": "0"
+  }
+}

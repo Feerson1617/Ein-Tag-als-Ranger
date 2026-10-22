@@ -1,0 +1,51 @@
+{
+  "scope": "DOM-only layout fixture using actual built HTML/CSS; runtime deliberately blocked, contextual controls shown as UI fixtures. No actual 3D screenshot or game-state/evidence injection.",
+  "cssSHA256": "142e2c3ba78d6fce8e3a19ec7856310730807df34eaf428cbe9eef8c820ae8f9",
+  "checks": [
+    {
+      "viewport": [
+        800,
+        500
+      ],
+      "warningTop": 196,
+      "controlBottom": 179,
+      "visibleWarningTop": 196,
+      "passed": true
+    },
+    {
+      "viewport": [
+        800,
+        600
+      ],
+      "warningTop": 196,
+      "controlBottom": 179,
+      "visibleWarningTop": 196,
+      "passed": true
+    },
+    {
+      "viewport": [
+        1080,
+        810
+      ],
+      "warningTop": 196,
+      "controlBottom": 179,
+      "visibleWarningTop": 196,
+      "passed": true
+    },
+    {
+      "viewport": [
+        810,
+        1080
+      ],
+      "warningTop": 196,
+      "controlBottom": 179,
+      "visibleWarningTop": 196,
+      "passed": true
+    }
+  ],
+  "negativeOriginalTop110": {
+    "warningTop": 121,
+    "controlBottom": 179
+  },
+  "passed": true
+}
