@@ -5,7 +5,7 @@ from http.server import SimpleHTTPRequestHandler,ThreadingHTTPServer
 from threading import Thread
 from playwright.sync_api import sync_playwright
 from module_graph import ModuleGraph
-import argparse,hashlib,json,shutil,subprocess,time,traceback
+import argparse,hashlib,json,shutil,statistics,subprocess,time,traceback
 p=argparse.ArgumentParser();p.add_argument('--seconds',type=int,default=1200);a=p.parse_args()
 if a.seconds<1200:p.error('The documented stability run requires at least 1200 seconds.')
 root=Path(__file__).resolve().parents[1];out=root/'work/compact-stability';out.mkdir(parents=True,exist_ok=True);site=root/'outputs/Ranger-Kompakt'
@@ -28,7 +28,7 @@ with sync_playwright()as pw:
    if initial is None:initial=d
    assert d['plantCount']==initial['plantCount'];assert d['runId']==initial['runId'];assert int(d['geometries'])<=int(initial['geometries'])*1.2+10;assert int(d['textures'])<=int(initial['textures'])+2
    result['samples'].append(sample);save();print(json.dumps(sample),flush=True)
-  result['actualElapsedSeconds']=round(time.monotonic()-start,2);result['passed']=True;page.screenshot(path=str(out/'final.png'));result['memoryScope']='Renderer geometry/texture allocations bounded over repeated tours. Heap samples include garbage-collection cycles; no absolute hardware memory certification.';save()
+  result['actualElapsedSeconds']=round(time.monotonic()-start,2);intervals=[float(s['frameMs'])for s in result['samples']];result['cloudGraphicsBudget']={'targetFPS':30,'sampledIntervals':len(intervals),'medianSampledFrameMs':statistics.median(intervals),'maxSampledFrameMs':max(intervals),'allSampledIntervalsWithinBudget':all(ms<=1000/30 for ms in intervals),'scope':'Sparse main-loop interval samples in cloud software graphics, not an FPS distribution or real iPad performance certification'};result['passed']=True;page.screenshot(path=str(out/'final.png'));result['memoryScope']='Renderer geometry/texture allocations bounded over repeated tours. Heap samples include garbage-collection cycles; no absolute hardware memory certification.';save()
  except Exception:
   result['failure']=traceback.format_exc();save();raise
  finally:browser.close();server.shutdown();server.server_close()

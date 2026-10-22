@@ -180,6 +180,10 @@ Durchgehende Fundamente reichen bis unter das sichtbare Dorfgelände. Häuser un
 ## Frühere Änderungen – historischer Stand
 
 
-## Ranger Kompakt: eigener Referenzabschnitt
+## Ranger Kompakt: eigene Softwarevorschau
 
-Die große Fassung bleibt erhalten. `dist/kompakt.html` ist der separate Einstieg der Phasen 0–2 auf `feature/ranger-kompakt`. `python tools/build-compact.py` erzeugt eine lokale Vorschau unter `outputs/Ranger-Kompakt/`, `Ranger-Kompakt.html` und ein Vorschau-ZIP. Kein Deployment. [Stand und Freigabegatter](docs/kompakt/STATUS.md), [Plan](docs/kompakt/PLAN.md), [Prüfungen](docs/kompakt/TESTS.md). Restlicher Artenbestand und K1–K5 folgen erst nach visueller Freigabe.
+Die große Fassung bleibt erhalten. `dist/kompakt.html` startet die separate kompakte Welt: drei Biologiezonen, 36 kuratierte Einträge, sechs Funktionsgruppen und fünf wählbare Lernfamilien. Der Einstieg ist freie Erkundung. Lernpaket und Datenmodelle sind über die Auftragsauswahl erreichbar; ein Gesamtsammelzwang besteht nicht.
+
+`python tools/build-compact.py` erzeugt `outputs/Ranger-Kompakt/`, die Einzeldatei `outputs/Ranger-Kompakt.html` und `outputs/Ranger-Kompakt-Vorschau.zip`. Zum lokalen Serverstart: `python -m http.server 4173 --directory outputs/Ranger-Kompakt`. `python tools/print-compact-materials.py` erzeugt zusätzlich Arbeitsblätter/Lehrkräfte-PDFs und das Lernpaket-ZIP. Die Paketwerkzeuge veröffentlichen nichts.
+
+[Stand](docs/kompakt/STATUS.md), [Prüfungen](docs/kompakt/TESTS.md), [Lehrkräftehandbuch](docs/kompakt/LEHRKRAEFTE.md), [25 Unterrichtsbausteine](docs/kompakt/CURRICULUM-UMSETZUNG.md), [Modellgrenzen](docs/kompakt/MODELLGRENZEN.md). Zielgerät laut Eigentümer: iPad 9 mit Safari unter iPadOS 27; die reale Geräte-/OS-Kombination und der Unterrichtspilot sind noch nicht verifiziert. Weiterarbeit und abschließender Push sind ausdrücklich beauftragt. Draft-PR, kein Merge/Deployment/Release.

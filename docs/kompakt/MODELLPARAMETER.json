@@ -11,7 +11,7 @@
     "world-state.js": "0ff225752d99f62a14207aa60baf5550b10517697e0e0af62bab55b0153a4cde",
     "layout.js": "889a7ca15fd622d8d145f4fff86225c747bf9bee0433dce6ee8f810e714dd578",
     "learning-models.js": "e58605a045c82f544703a130b87849c271a23e6ce5c45a48a1d7a83cd301e202",
-    "missions.js": "f20ea15e62035a9acf94a5de103a19d12e2a1278c724ccdca64f6e46c9b065b5",
+    "missions.js": "2463f2c1402cfd2f795c6b29c1fca8668194a7375517084646113aa4f7d39059",
     "materials.js": "a28bb5a761656249272a1c42968f61779046c6c03389bd19a007f5da33a41910"
   },
   "routes": {
@@ -1192,6 +1192,19 @@
       },
       "source": "theoretical-model",
       "assumptions": "Two closed populations; homogeneous encounters; unlimited prey food; no alternative prey, seasons or age structure. Not a fox forecast."
+    },
+    {
+      "kind": "tolerance",
+      "units": {
+        "flooding": "hours flooded per model day",
+        "physiological": "relative long-term growth",
+        "realized": "relative growth with designed competitor"
+      },
+      "parameters": {
+        "competitor": false
+      },
+      "source": "didactic-model",
+      "assumptions": "One-factor long-term model; salinity, substrate and drainage fixed; not calibrated to any marsh species. Transect zoning is not this experiment."
     },
     {
       "kind": "carbon",
