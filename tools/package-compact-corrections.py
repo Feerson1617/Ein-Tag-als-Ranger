@@ -34,7 +34,7 @@ summary=root/'verification/kompakt-korrektur/final/SUMMARY.json'
 assert summary.exists(),'Collect the complete executed final plan before packaging'
 shutil.copyfile(summary,proof/'SUMMARY.json')
 assert load(summary)['runtimeFreeze']['sourceHashes']==info['runtimeSourceHashes']
-for source,folder in [(summary.parent,'Prueflogs'),(root/'verification/kompakt-korrektur/phase5-attempt1','Fehlversuch-Abtastung'),(root/'verification/kompakt-korrektur/phase5-gallery-attempt','Fehlversuch-Galerie'),(root/'verification/kompakt-korrektur/phase5-window-gap','Fehlversuch-Fensterpruefung'),(root/'verification/kompakt-korrektur/phase5-stability-attempt','Fehlversuch-Dauerlauf')]:
+for source,folder in [(summary.parent,'Prueflogs'),(root/'verification/kompakt-korrektur/phase5-attempt1','Fehlversuch-Abtastung'),(root/'verification/kompakt-korrektur/phase5-gallery-attempt','Fehlversuch-Galerie'),(root/'verification/kompakt-korrektur/phase5-window-gap','Fehlversuch-Fensterpruefung'),(root/'verification/kompakt-korrektur/phase5-stability-attempt','Fehlversuch-Dauerlauf'),(root/'verification/kompakt-korrektur/phase5-legacy800-attempt','Fehlversuch-Legacy800')]:
  for file in sorted(source.rglob('*')):
   if file.is_file()and(file.suffix in ['.json','.log','.txt','.csv','.md']or folder!='Prueflogs'and file.suffix=='.png'):
    dest=proof/folder/file.relative_to(source);dest.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(file,dest)
