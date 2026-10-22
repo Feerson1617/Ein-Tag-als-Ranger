@@ -1,0 +1,5 @@
+PASS boot: explicit small content/request graph
+PASS spawn board and shared guide reachable
+PASS both live tool paths render without runtime errors
+PASS standalone tools and scene; no external dependencies
+PASS nine unlabelled organism views and village read directly from actual standalone WebGL frames

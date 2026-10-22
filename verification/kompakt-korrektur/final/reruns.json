@@ -1,0 +1,94 @@
+{
+  "checks": [
+    {
+      "name": "stability",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-stability.py"
+      ],
+      "exitCode": 1,
+      "passed": false,
+      "seconds": 1509.48,
+      "log": "stability-recheck.log",
+      "reason": "Old 517.51-s measurement failed at locator actionability; new complete native-pointer/hit-checked run, unchanged1200s minimum and all resource/identity assertions. Original failed run preserved."
+    },
+    {
+      "name": "legacy-m3-profile",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-check.py",
+        "--live",
+        "--live-mission",
+        "m3",
+        "--resilience",
+        "--width",
+        "600",
+        "--height",
+        "375",
+        "--site",
+        "outputs/GitHub-Pages",
+        "--prefix",
+        "/Ein-Tag-als-Ranger/"
+      ],
+      "exitCode": 1,
+      "passed": false,
+      "seconds": 513.78,
+      "log": "legacy-m3-recheck.log",
+      "scope": "Separate600x375 actual M3+UI/resilience, same6modelseconds/180s. Full800x500 failure retained, never overwritten by this smaller profile."
+    },
+    {
+      "name": "legacy-standalone",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-check.py",
+        "--smoke",
+        "--width",
+        "800",
+        "--height",
+        "500",
+        "--site",
+        "outputs",
+        "--entry",
+        "Feldbuch.html"
+      ],
+      "exitCode": 0,
+      "passed": true,
+      "seconds": 267.77,
+      "log": "legacy-single-recheck.log",
+      "reason": "Original profile800x500; only pointer path after deferred photograph corrected with explicit scrolling, physical hit test and closed-dialog assertion. All original assertions/time limits retained."
+    },
+    {
+      "name": "stability",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-stability.py"
+      ],
+      "exitCode": 0,
+      "passed": true,
+      "seconds": 1538.74,
+      "log": "stability-final-recheck.log",
+      "reason": "Previous run reached1208.95 measured seconds but post-check used an invalid CSS hidden selector. Replaced with regular locator.wait_for(state=hidden); full warmup plus1200-second minimum and every resource/identity/context assertion executed again. Failed attempts retained."
+    },
+    {
+      "name": "legacy-ui-resilience",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-check.py",
+        "--resilience",
+        "--width",
+        "800",
+        "--height",
+        "500",
+        "--site",
+        "outputs/GitHub-Pages",
+        "--prefix",
+        "/Ein-Tag-als-Ranger/"
+      ],
+      "exitCode": 0,
+      "passed": true,
+      "seconds": 894.14,
+      "log": "legacy-ui-recheck.log",
+      "scope": "Regular existing browser UI/import/export/storage/resilience checks with labelled mission fixtures. No actual live M3 completion inferred. Original live800x500 failure preserved."
+    }
+  ]
+}

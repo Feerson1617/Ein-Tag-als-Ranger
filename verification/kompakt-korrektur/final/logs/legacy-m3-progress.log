@@ -1,0 +1,3 @@
+Waiting for completed stability retry; no concurrent heavy browser.
+START selected actual M3 19:12:08
+{"name": "legacy-m3-profile", "command": ["/workspace/.ranger-clean-venv/bin/python", "tools/browser-check.py", "--live", "--live-mission", "m3", "--resilience", "--width", "600", "--height", "375", "--site", "outputs/GitHub-Pages", "--prefix", "/Ein-Tag-als-Ranger/"], "exitCode": 1, "passed": false, "seconds": 513.78, "log": "legacy-m3-recheck.log", "scope": "Separate600x375 actual M3+UI/resilience, same6modelseconds/180s. Full800x500 failure retained, never overwritten by this smaller profile."}

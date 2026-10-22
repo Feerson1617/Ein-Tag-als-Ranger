@@ -17,3 +17,7 @@ Ausgang: origin/main a6c5c8e50c273895e5ca7667542f63d4e075c13b. Darin ist der inz
 Bestehendes Three.js/DOM bleibt erhalten. Gemeinsame APIs, Beobachtungsuhr und GLB-Verträge bleiben kompatibel. Kompakt lädt genau zwei ausgewählte GLBs und drei WebPs. Physik, aktive Beobachtungszeit und Unterrichtszeit bleiben getrennt. IDs, Renderbestände und endliche Ressourcen werden beim Grafikwechsel nicht neu erzeugt.
 
 P0: falsche Gutschrift, Datenverlust, schwebende Pflichtmodelle, defekte Gehfläche, unvollständiger Build. P1: erkennbare Merkmale, Orientierung, Eingabegleichheit und transparente Grenzen. P2: weitere Features/Arten sind nicht Teil dieser Fertigstellung.
+
+## Korrekturauftrag vom 22.10.2026
+
+Die Phasen 0–6 sind mit gezielten Korrekturen und neu ausgeführten Prüfungen bearbeitet. Aktuelle F01–F13-Ergebnisse und offene Qualitätsziele stehen in [KORREKTUREN.md](KORREKTUREN.md) und [TESTS.md](TESTS.md), nicht in den historischen Zahlen der ursprünglichen Softwarevorschau. Letzte Appänderung 55c2ecd; spätere Werkzeug-/Nachweiscommits verändern die 50 gebundenen Runtimequellen nicht. Große M3-Liveprüfungen bleiben lokal fehlgeschlagen; UI-Fixtures werden nicht als erspielte M3-Leistung ausgegeben. Draft-PR #3, kein Merge/Deployment/Release; abschließender Branch-Push beauftragt.

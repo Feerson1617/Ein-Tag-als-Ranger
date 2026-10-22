@@ -1,69 +1,66 @@
-# Prüfstatus des Korrekturauftrags
+# Neue Abschlussprüfung des Korrekturauftrags
 
-Die vollständige neue Abschlussprüfung ist noch in Arbeit. Aktueller Fehlerstatus: KORREKTUREN.md; neue Belege: verification/kompakt-korrektur. Die folgenden alten Zahlen betreffen ausschließlich den ausdrücklich genannten historischen Runtime-Prüfpunkt und werden nicht auf neue Quellen übertragen.
+Ausgang: eece965c2afdd367ab9a610e0e05d09e9c706388. Letzter geänderter Appstand: 55c2ecd184ea79b8b829a2a6486114cc964d497a. Alle 50 Runtimequellen (42 Module, fünf Medien, HTML/CSS/Icon) sind einzeln per SHA256 gebunden. Spätere Werkzeug-/Berichtscommits ändern diese Quellen nicht. Originalzeiten, Fehler und Buildkennungen bleiben pro Lauf erhalten.
 
-# Historische Softwareprüfung vor dem unabhängigen Korrekturauftrag
-
-Runtime-Prüfpunkt: `5be5e9b8f7394613279f5a2834741a0abf33b570`. Alle Browser- und Stabilitätsnachweise vergleichen dieselben Module, Medien, HTML und CSS einzeln per SHA256. Spätere Nachweis-/Paketcommits ändern diese Runtimequellen nicht. Die tatsächlichen Commitkennungen und Zeiten stehen pro Lauf im JSON; sie werden nicht durch den Dokumentationsstand ersetzt.
-
-Node 24.19.0, Python 3.12.14, Chromium 154.0.8037.57 mit Cloud-Softwaregrafik; Python-Werkzeuge aus tools/requirements-dev.txt. Dies ist keine Safari-/Apple-Hardwareabnahme.
-
-| Prüfung | Ergebnis |
+| Tatsächlich ausgeführte Prüfung | Ergebnis / Aussage |
 |---|---|
-| Bisherige Node-Prüfreihen | 26/26 erfolgreich |
-| Kompakt-Referenzgruppen | 14/14 erfolgreich |
-| Neue Lern-/Import-/Modellgruppen | 34/34 erfolgreich |
-| Python-Paketmethoden | 9/9 erfolgreich |
-| Kompakt-Chromium über Projektpfad | 18/18 erfolgreich |
-| Kompakt-Einzeldatei | 5/5 erfolgreich |
-| K1–K5, Importe, Materialien, Touch und Modellgalerie | 17/17 erfolgreich |
-| Große Fassung: Live-Auswahl m3 + UI/Fehler, 600×375 | 14/14 erfolgreich |
-| Große Fassung: Einzeldatei-Smoke | 3/3 erfolgreich |
-| Web-, Einzeldatei-, Vorschau- und Quellpaket | erfolgreich gebaut und geprüft |
-| Zwei druckbare Dokumente mit je 25 Karten | erfolgreich, keine externen Medienrequests |
-| Erste spielbare Szene, kalter lokaler HTTP-Kontext | 8.86 MiB / 3.06 s bis Startfreigabe; 15-MiB-Obergrenze bestanden |
-| Kontinuierliche Cloudstabilität | 1215.43 s, ohne Laufzeitfehler; Geometrie-/Texturzahlen innerhalb der geprüften Grenzen |
-| Cloud-Grafikbudget 30 FPS | NICHT erreicht; Median der dünn abgetasteten Frameintervalle 1783.3 ms |
-| Reales iPad 9 / Safari / iPadOS 27 und Unterrichtspilot | nicht durchgeführt |
+| Bestehende Node-Suiten | 26/26 BESTANDEN |
+| Kompakt-Modell-/Import-/Pädagogikgruppen | 76/76 BESTANDEN: 14 Referenz, 34 Lernen, 9 QA, 5 Küsten-, 6 Habitat- und 8 Pädagogikgruppen |
+| Python-Paketmethoden | 9/9 BESTANDEN |
+| Quell-Einstieg dist/kompakt.html | BESTANDEN, 2 Blöcke |
+| Website-Build mit echtem WebGL | BESTANDEN, 18 Blöcke |
+| Saubere Kompakt-Einzeldatei | BESTANDEN, 5 Blöcke |
+| Web K1–K5 / Speichern / Import / Touch / Galerie | BESTANDEN, 18 Blöcke, 37 Taxa-/Stadienansichten |
+| K1–K5 in tatsächlicher Einzeldatei | BESTANDEN, 17 Blöcke |
+| Echte Dateiimporte einschließlich 250-ms-Dateilesefixture | BESTANDEN, 15 Fälle, Originalspeicher bytegleich nach Ablehnung |
+| Vier tatsächliche Nahrungserwerbsfolgen | BESTANDEN, 28 unveränderte Renderbilder; Mehrseed-/Schrittregression zusätzlich in Node |
+| Eigene Vergleichskameras, Gehen, NPCs, Gezeiten | BESTANDEN, 6 Blöcke / 26 Bilder |
+| Arbeitsblätter / Lehrkräfte | BESTANDEN, je 25 Karten, 41/54 PDF-Seiten, keine externen Medienrequests |
+| Kontinuierliche Standalone-Stabilität | BESTANDEN, 1207.89 s tatsächliche Messphase, 1223.5 s einschließlich Abschlussprüfungen, nach 271.12 s separatem Aufwärmen |
+| Native WebGL-Kontextwiederherstellung im Dauerlauf | BESTANDEN |
+| Große Fassung, Live M1–M3 + Resilienz, 800×500 | FEHLGESCHLAGEN, 3 abgeschlossene Blöcke |
+| Große Einzeldatei, 800×500 | BESTANDEN, 3 Blöcke |
+| 30 FPS im gemessenen Cloudprofil | FEHLGESCHLAGEN; Median dünner Frameintervallstichproben 1683.25 ms |
+| Physisches iPad 9 / Safari / iPadOS 27 | NICHT GEPRÜFT |
+| Unabhängige biologische/visuelle Abnahme, Unterrichtswirkung | NICHT GEPRÜFT; volle gestalterische Waldzielerreichung in eigener Sichtprüfung FEHLGESCHLAGEN |
 
-Der Ersttransfer summiert Resource-Timing-transferSize einschließlich Navigation in einem frischen Browserkontext; keine WAN-/iPad-Startzeit. Browserberichtete JS-Heap-Spanne im Stabilitätslauf: 58606638–60825793 Bytes, inklusive GC-Zyklen; keine absolute Hardware-Speicherzusage. Der große CI-Prüfjob besitzt nach der historischen 29:22-Minuten-Baseline ein Gesamtbudget von 40 Minuten. Die beiden Kompakt-CI-Jobs besitzen ein Gesamtbudget von 30 Minuten für die erweiterten Render-/Einzeldateiprüfungen; individuelle Assertions und Missionszeitlimits bleiben unverändert. Die Frameintervall-Stichproben sind keine vollständige FPS-Verteilung. Funktionale Stabilität bedeutet keine flüssige Darstellung oder Gerätefreigabe. Modellbewegung wird bei langsamer Darstellung gedeckelt; aktive Sichtungszeit bleibt getrennt. Der 20-Minuten-Lauf beginnt nach zwei protokollierten Aufwärmrunden aller Messansichten (371.51 s); die Aufwärmzeit zählt nicht zu den 1215.43 s. Er ist nicht die aufsummierte Dauer anderer Tests.
+Node 24.19.0, Python 3.12.14, Chromium 154.0.8037.57. Linux-Cloud/Xeon 8573C mit fünf sichtbaren logischen Kernen; Chromium erzwingt SwiftShader-Softwaregrafik. Das ist weder eine gemessene Apple-GPU noch ein garantiertes Gerätebudget. Die Touchläufe verwenden 1080×810 und 810×1080 CSS-Pixel/DPR2. Hardwarekompatibilität und reales Safari-Verhalten werden daraus nicht abgeleitet.
 
-## Regressionen und tatsächlich erworbene Belege
+Erste kalte Webnavigation der Lernprüfung: 9383646 Transferbytes bei 3817,1 ms bis zur Startfreigabe, lokaler HTTP-Kontext. Das ist keine WAN-/Safari-Startzeit. JS-Heap im Dauerlauf: 84404314–91407419 Bytes einschließlich GC; erste/letzte Fünfermediane 86758571/87569219 Bytes. Geometrie-/Texturgrenzen sind relative Laufprüfungen, keine absolute Gerätespeicherzusage. Sparse Frameintervalle sind keine vollständige FPS-Verteilung. Funktionale Stabilität bedeutet keine flüssige Darstellung.
 
-M1 und M2 wurden in den archivierten 800×500- und 600×375-Gesamtversuchen jeweils vor dem M3-Timeout tatsächlich abgeschlossen. Der nachfolgende frische Legacy-Lauf verwendet die Live-Auswahl m3 bei 600×375; die Missionen werden damit über getrennte tatsächliche Läufe nachgewiesen. Ein vollständiger lokaler Durchlauf aller drei zusammen blieb an der nachfolgend dokumentierten Cloud-Rendergrenze hängen. Der frische Lauf prüft freie Erkundung, Neuladen, JSON-Import/-Export, Speicherfehler und echte Grafik-Wiederherstellung. Der ursprüngliche M1-Timeout bleibt 120 Sekunden. Fokus-/Sicht-/Werkzeugwechsel und der ursprüngliche physikzeitbedingte Stillstand sind weiterhin durch mission-runtime-check.mjs abgesichert; frühere Ursachenanalyse: verification/pr1-hardening/README.md.
+Native Tabaktivierung im Dauerlauf: gemeldete Sichtbarkeit während des anderen Tabs = visible, nach Rückkehr = visible. Headless Chromium meldet gegebenenfalls weiterhin sichtbar; dann ist damit nur Aktivierung/Rückkehr, keine Hintergrundpausierung nachgewiesen. Es wird kein Sichtbarkeitszustand injiziert.
 
-M3 und K3 verlangen dasselbe konkrete Individuum, identischen Szenenkontext, Stelle/Tiefe, getrennte zeitlich geordnete vollständige Beobachtungsfenster und passende Modellzustände. Andere Individuen, Neustarts, Kontextwidersprüche, überlappende Fenster und manipulierte Zustandsangaben tragen keinen Abschluss. Gültige kurze/unvollständige Daten bleiben lesbar. Importierte Abschlussflags werden neu berechnet.
+## Lern-, Speicher- und Vergleichsregressionen
 
-K1–K5 wurden über echte UI-Aktionen erworben, einschließlich begründeter Unsicherheit, Konkurrenz-Kontrollläufen, negativem Vergleich verschiedener Muscheln, eA-Quadraten mit Nullprobe, falschem Energiekreislauf und mehreren begründbaren Managementoptionen. Eigene freie Texte bleiben unbenotet. Quota beim tatsächlichen Bearbeiten erhält den alten Stand und erlaubt die Sicherung des aktuellen Entwurfs als Datei. Der v1-Bootumzug erhält Originaldaten und große Speicherkeys ohne neue Gutschrift.
+K1–K5 wurden erneut über echte UI-Handlungen erworben. Die Feldbücher enthalten eigene Beobachtungen, Unsicherheit, falsche Antworten, K2-Kontrollläufe, K3-Einzeltiervergleich und Nullprobe, K4-Energiefehler und K5-relevante Küstenbelege. Reload, Download/Import/Wiederaufnahme, Quota-Sicherung und alte Archive wurden mitgeprüft. Offene Texte werden nicht fachlich per Stichwort benotet. Importierte Abschlussflags werden neu berechnet.
 
-Die Galerie enthält 36 aktive Taxa plus Raupe aus tatsächlich gerenderten vorhandenen Geometrien; keine generierten Zielbilder. Touchprüfung: 1080×810 und 810×1080 CSS-Pixel, DPR2, automatisches Tabletprofil, Bewegung, Drehung des Viewports, Dialoge und erworbener Beleg. Angefragtes Ziel: Apple iPad der 9. Generation, Safari, iPadOS 27; die konkrete OS-/Gerätekombination und reale Safari-Lauffähigkeit sind nicht bestätigt.
+M3/K3 verlangen dasselbe konkrete Individuum, Szenenkontext, Stelle/Tiefe und getrennte vollständige, zeitlich geordnete Beobachtungsfenster. Unterschiedliche Individuen, Seed/Rundgang/Modellstand, überlappende Fenster und widersprüchliche Zustände scheitern. K3 verlangt Niedrigwasser vor Hochwasser; M3 erlaubt auch die umgekehrte Erhebungsreihenfolge bei klar getrennten, datierten Fenstern. M1-Fokus-/Werkzeug-/Zeitregressionen bleiben in mission-runtime-check.mjs abgesichert. Die ursprünglichen 120/180-Sekunden-Limits und alle Beobachtungsbedingungen sind unverändert.
 
-## Fehlversuche und Korrekturen
+## Fehlversuche bleiben sichtbar
 
-Die lokale Legacyprüfung mit Live-Auswahl m3 verwendet nach den nachfolgend dokumentierten Cloudgrenzen 600×375. Die CI behält das Profil 800×500 bei. Das ist eine andere Darstellungsgröße, keine gelockerte Beleg-/Zeitbedingung.
+Die eigene unveränderte Baseline reproduzierte F01/F04, fehlende Nahrungserwerbe und Positionssprünge. Das unabhängige QA-Archiv war wegen der Transfergrenze nicht lesbar; seine Dateien, Originalkameras und behaupteten Ergebnisse wurden nicht als selbst gelesen ausgegeben.
 
-Die historischen Phasen-0–2-Nachweise bleiben in verification/kompakt. Im aktuellen Ausbau wurden folgende konkrete Befunde korrigiert: globaler Missionsselektor überschreibt den HUD-Auftragsknopf; verzögerte Kontextverlustmeldung in der Nahansicht; Konkurrenzimporte fehlen in der Rundgangskontrolle; falsch typisierte verschachtelte Antworten führen nach Import zum Anzeigeabbruch; Leistungswarnung verdeckt bei mittlerem Viewport die Untersuchungsbedienung. Die Regressionen prüfen die ursprünglichen Anforderungen weiter.
+Ein neuer Importtreiber las die Meldung vor Ende von File.text. Die frische DOM-Antwort wird jetzt abgewartet; eine ausdrücklich verzögerte Dateilesung prüft diesen Treiber. Die Anwendung lehnte bereits im Fehlerbild korrekt ab. Zwei Kameraversuche trafen automatisch nachgeführte Blickpunkte; die eigenen festen XZ/Winkel und echte Mauseingaben stellen die Vergleichbarkeit her.
 
-Zusätzlicher Layoutnachweis: learning/layout-four-viewports.json hält die vier geprüften DOM-Viewportfälle mit tatsächlichem HTML/CSS und einer negativen Reproduktion der alten Überlagerung fest. Die 3D-Runtime war für diese gesonderte UI-Fixture blockiert; sie ist kein Spiel-/Beobachtungsbeleg. Der vollständige Treiber prüft die berechneten Abstände zusätzlich in der laufenden Anwendung auch bei ausgeblendeter Warnung (learning/layout-result.json).
+Eine grobe 0,25-s-Fressbildabtastung traf die Suchschnabelspitze 1–2 mm im Sediment. Tatsächliche Geländestrahlen reproduzieren diese Sichtverdeckung, kein Stegtreffer. Die sichtbare 0,025-s-Feinschrittweite erfasst den vorhandenen Phasenübergang; Tierzustände, Beute, Ressourcen und Assertions wurden dafür nicht ersetzt.
 
-Ein Galerie-Lauf scheiterte nach 16 bestandenen Blöcken ausschließlich am fehlenden Rotschenkelbild. Die Simulation hatte den Vogel tidebedingt von seiner Futterstelle wegbewegt; der Treiber suchte zu spät an derselben Stelle. Der erneute Treiber betrachtet ihn zuerst am realen Beobachtungssteg. Kein Tier wird versetzt oder neu erzeugt, keine Artenassertion entfernt und kein Timeout angehoben. Der Fehllauf bleibt in attempts/gallery-redshank erhalten.
+Ein neuer Dauerlauf scheiterte nach 517,51 Messsekunden an Playwrights sicht-/aktiv-/stabil-Klickwartezeit für Totholz. Es gibt kein frisches Fehler-DOM/Bild aus diesem alten Pfad; der interne Teilgrund wird nicht als vollständig rekonstruiert ausgegeben. Native Mausereignisse mit expliziter Sicht-/Aktiv-/Trefferprüfung und anschließendem Schließen-/Rendernachweis ersetzen diesen Treiberpfad. Künftige Fehler sichern DOM und Bild. Ein weiterer erfolgreicher Lauf wurde mit neuem Aufwärmen und vollen 1200 Messsekunden ausgeführt; der alte Versuch bleibt FEHLGESCHLAGEN in phase5-stability-attempt.
 
-Die visuelle Galerie zeigte außerdem eine unter dem Schnabel schwebende Eichel. Ihr Ursprung lag am Vogelkörper statt am Kopf-/Schnabelkontakt. Die Eichel folgt jetzt einem tatsächlichen Schnabelanker; ein zusätzlicher Node-Vertrag prüft reale Eichel-/Schnabelvertices unter mehreren Körper-/Kopfstellungen und reproduziert die alte Lücke negativ. Zusätzlich zeigt learning/jay-carry-contact.png die reale Transportphase nach sechs über die Oberfläche gesteuerten Modellsekunden; Ablauf und Quellhashes stehen in jay-contact-result.json. Die abschließenden Softwareprüfungen wurden danach auf der neuen Runtime vollständig neu gestartet.
+Der erste neue vollständige Web-Lernlauf scheiterte nach 34 Galeriebildern an Playwrights Rahmenstabilitätswartezeit. Der Wiederholungslauf besteht mit nativen Mausereignissen, sichtbarem/aktivem Button, elementFromPoint-Trefferprüfung und anschließendem Abgleich des geöffneten Individuums. Kein Force-Klick, kein längeres Limit. Der browserinterne Grund des alten Stillstands ist nicht vollständig rekonstruiert. Der ursprüngliche Fehllauf bleibt unter phase5-gallery-attempt erhalten.
 
-Zwei lokale Legacy-800×500-Läufe sind fehlgeschlagen: zunächst die Locator-Anklickbarkeitsprüfung bei „Rotbuche suchen“ (45 s); ein altes Fehlerbild wurde ausdrücklich als veraltet erkannt und nicht diesem Lauf zugeordnet. Im unveränderten Wiederholungslauf gelangen M1 und M2, anschließend erreichte das M3-Fenster in 180 s nur 5,7 von 6 Modellsekunden (p95-Bildabstand 3416,5 ms, keine JS-/Konsolen-/HTTP-Fehler). Das Modellzeitminimum und alle Einzelzeitlimits blieben erhalten. Auch der vollständige 600×375-Lauf blieb bei 5,9/6 Modellsekunden stehen (p95 2283,2 ms). Ein nachfolgender frischer Lauf isoliert M3 über die bereits vorhandene CLI-Auswahl, weiterhin mit denselben sechs Modellsekunden und 180 s Limit. Der nachfolgende Funktionslauf nutzt den kleineren Viewport; CI prüft weiterhin 800×500. Die einmalige erste Klickstörung ist nicht ursächlich rekonstruiert und wird nicht als behobener Produktfehler ausgegeben. Aktuelle Fehlerdiagnosen sichern DOM, frische Bildzuordnung und erreichte eigene Feldbuchdaten.
+Im verworfenen früheren Plan enthielt die Scheduler-Zeit von 1505,83 s für reference eine bewusst angehaltene Elternsteuerung; sie ist kein Browserleistungswert. Der neue vollständige Plan ist separat und ohne diese Pause ausgeführt. Der 20-Minuten-Lauf summiert keine anderen Prüfzeiten.
 
-Ein erster Stabilitätsversuch verwendete irrtümlich die erste kalte Waldansicht als Speicherbaseline. Beim Standortwechsel wurden weitere bereits vorhandene Geometrien erstmals auf die GPU geladen (47 zunächst, 60 nach der dritten Ansicht); der frühe Grenztest scheiterte vor der eigentlichen Dauerprüfung. Der korrigierte Treiber protokolliert zwei Aufwärmrunden über dieselben Ansichten und beginnt danach die vollen 20 Minuten. Die relativen Geometrie-/Texturgrenzen bleiben unverändert; sämtliche Pflanzenzahlen und Rundgang-IDs werden auch während des Aufwärmens geprüft.
+Große Fassung, aktueller Gesamtversuch: ["Page.wait_for_function: Timeout 180000 ms exceeded."]. Tatsächlich abgeschlossene Blöcke: ["boot, two main entries, three mission choices, real WebGL startup", "LIVE M1: three concrete focal taxa, observation button, feature comparisons and justified uncertainty", "LIVE M2: real simulation event, finite shared resource, explicitly read protocol, interpretation"]. Fehlerdetails und frische Bilder bleiben erhalten; kein anderer Versuch überschreibt dessen Ergebnis.
 
-Weitere Entwicklungsfehler: Rundung an einem sechssekündigen Protokollende (1e-8 numerische Toleranz, keine Zeitverkürzung), fehlerhafter Testfixture ohne quadratId, einmalige Python-Einrückung im Fehlerbildpfad, administrativ gesperrte file://-Navigation (lokaler HTTP-Zugang verwendet) sowie Aufklappen einer geschlossenen Test-Detailsgruppe. Überholte Läufe wurden nach neuen Befunden ausdrücklich beendet und nicht als abgeschlossene Gesamtläufe gezählt. Ergebnis-/Fehlerprotokolle: verification/kompakt-v2/attempts; der letzte vollständige Lauf steht separat in final-validation.json. Keine Assertion oder bestehende Missionswartezeit wurde abgeschwächt/angehoben.
+## Belege und Reproduktion
 
-## Nachweise und Reproduktion
-
-verification/kompakt-v2/SUMMARY.json fasst die tatsächlichen Ergebnisse zusammen; SHA256.json bindet Dateien. reference/ enthält Bilder/Videos und Referenz-/Standaloneprüfungen, learning/ tatsächlich erworbene Lernprodukte/Downloads und Modellbilder, legacy/ den frischen M3-/UI-Lauf; tatsächliche M1-/M2-Abschlüsse stehen in den archivierten Gesamtversuchen unter attempts/, stability/ den kontinuierlichen Cloudlauf. Quellhashes sind in allen neuen Browserdaten identisch.
+Aktuelle Rohdaten: verification/kompakt-korrektur/final/SUMMARY.json und SHA256.json; fehlgeschlagene Versuche separat daneben. Die historischen unveränderten Nachweise unter verification/kompakt-v2 gehören zum früheren Runtimepunkt 5be5e9b und sind keine Nachweise der neuen Runtime. Befundtabelle und verbleibende Grenzen: KORREKTUREN.md. Bilder sind unveränderte WebGL-Aufnahmen; Vergleichskameras sind eigene Reproduktionen, keine unbekannten Originalkameras des unabhängigen Reviews.
 
 ```sh
+python tools/check-compact-corrections.py
+# Alternativ die einzelnen Schritte:
 python tools/run-checks.py
-node tests/kompakt-check.mjs
-node tests/compact-learning-check.mjs
+python tools/check-compact.py
 python tools/build-web.py
 python tools/verify-web.py
 python tools/build-standalone.py
@@ -71,15 +68,27 @@ python tools/build-compact.py
 python tools/verify-compact.py
 python -m unittest discover -s tests -p 'test_*.py' -v
 python tools/package-project.py
+python tools/browser-compact-source.py
 python tools/browser-compact.py
 python tools/browser-compact.py --site outputs --entry Ranger-Kompakt.html --smoke
 python tools/browser-compact-learning.py --gallery
-python tools/browser-check.py --live --live-mission m3 --resilience --width 600 --height 375 --site outputs/GitHub-Pages --prefix /Ein-Tag-als-Ranger/
-python tools/browser-check.py --smoke --width 800 --height 500 --site outputs --entry Feldbuch.html
+python tools/browser-compact-learning.py --site outputs --entry Ranger-Kompakt.html --output work/compact-learning-standalone
+python tools/browser-compact-imports.py --output work/qa-correction/final-imports
+python tools/browser-compact-feeding.py --output work/qa-correction/final-feeding
+python tools/browser-compact-habitats.py --output work/qa-correction/final-habitats
 python tools/print-compact-materials.py
 python tools/browser-compact-stability.py
-python tools/package-compact-review.py
-python tools/collect-compact-evidence.py
+python tools/browser-check.py --live --resilience --width 800 --height 500 --site outputs/GitHub-Pages --prefix /Ein-Tag-als-Ranger/
+python tools/browser-check.py --smoke --width 800 --height 500 --site outputs --entry Feldbuch.html
+python tools/package-compact-corrections.py
 ```
 
-Die Browserwerkzeuge benötigen lokale HTTP-Sockets sowie Playwright/Chromium; in einer Cloud-Sandbox kann hierfür deren übliche Ausführungsfreigabe nötig sein. Alle Builds bleiben lokal. CI wird durch den abschließenden Push im bestehenden Draft-PR #3 erneut ausgeführt; der jeweilige Remote-Status steht bei den PR-Checks. Frühere grüne Läufe sind historische Baselines und werden nicht als Prüfung des neuen Heads ausgegeben.
+Diese Browserwerkzeuge benötigen Playwright/Chromium und lokale HTTP-Sockets. Alle Builds bleiben lokal. Der abschließende beauftragte Branch-Push startet PR-CI; dessen tatsächlicher Status steht im Draft-PR #3. Ein früherer grüner CI-Lauf wird nicht als Prüfung des neuen Heads ausgegeben. Kein Merge, Deployment oder Release.
+
+## Separater M3-/UI-/Resilienzlauf mit kleinerem Viewport
+
+600×375, vorhandene CLI-Auswahl m3, gleiche sechs Modellsekunden/180 s: FEHLGESCHLAGEN; nur der Startblock bestand. Der erste tatsächliche Protokollbeleg (6,1432 Modellsekunden für wadden:138) steht in legacy-m3-profile/failed-earned-fieldbook.json; Profil/Fehler: legacy-m3-profile/result.json. Das zweite Fenster erreichte 5,8/6 Modellsekunden (p95 2933,2 ms). Der vollständige 800×500-Lauf bleibt FEHLGESCHLAGEN mit M1/M2 erfolgreich und M3 bei 4,5/6 Modellsekunden (p95 3499,9 ms; keine JS-/Konsolen-/HTTP-Fehler). Dies ist eine andere Darstellungsgröße, keine gelockerte Belegbedingung. M1/M2 sind in den neuen lokalen Läufen tatsächlich erfolgreich; M3 wurde lokal nicht vollständig erworben. Ein Fixture-Test ersetzt diesen Erwerb nicht. CI behält 800×500.
+
+## Separater regulärer Legacy-UI-/Speicher-/Resilienzlauf
+
+800×500 ohne Live-Erwerb: BESTANDEN, 12 Blöcke. Hier werden Missionsformulare mit ausdrücklich bezeichneten Fixtures sowie echte UI-Import-/Export-/Speicher-/Quota-/Grafik-Fehlerwege geprüft. Dies ersetzt keinen tatsächlich erspielten M3-Abschluss. Rohdaten: legacy-ui-resilience/result.json.
