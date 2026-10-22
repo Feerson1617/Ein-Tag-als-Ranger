@@ -58,6 +58,7 @@ jobs:
       - run: node tests/compact-habitat-check.mjs work/qa-correction/habitats
       - run: node tests/compact-pedagogy-check.mjs work/qa-correction/pedagogy
       - run: python tools/build-compact.py && python tools/verify-compact.py
+      - run: python tools/browser-compact-source.py
       - run: python tools/browser-compact.py
       - run: python tools/browser-compact.py --site outputs --entry Ranger-Kompakt.html --smoke
       - name: Preserve compact reference renders and checks
