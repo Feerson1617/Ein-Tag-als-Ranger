@@ -17,6 +17,11 @@ function quadrupedPose(mesh,a,time){
   p.setXYZ(i,x,y,z);n.setXYZ(i,nx,ny,nz);if(leg&&joints.getW(i)>1.5){const wx=a.x+Math.cos(a.heading)*x*scale-Math.sin(a.heading)*z*scale,wz=a.z+Math.sin(a.heading)*x*scale+Math.cos(a.heading)*z*scale;const f=a.feet.find(f=>f.part===part);f.geometryGap=Math.min(f.geometryGap,base+y*scale-terrainHeight(wx,wz));}}
  p.needsUpdate=true;n.needsUpdate=true;g.computeBoundingSphere();
 }
+// Attach the resource to the actual bill endpoint, including head motion.
+export function attachCarriedAcorn(jay){
+ if(!jay.beakContact)throw Error('Eicheltransport benötigt den tatsächlichen Schnabelkontakt.');
+ const acorn=new THREE.Mesh(new THREE.SphereGeometry(.08,8,5),new THREE.MeshStandardMaterial({color:'#967449',roughness:1}));acorn.name='carried-acorn';acorn.scale.set(1,1.4,1);acorn.position.y=-.08*acorn.scale.y;jay.beakContact.add(acorn);return acorn;
+}
 export async function createExpandedView(scene,state,world,reference){
  const models=new Map(),roots=[],treeSamples=[];
  const response=await fetch(MANIFEST.assets.fox);if(!response.ok)throw Error('Fuchsmodell konnte nicht geladen werden.');const foxGeometry=readWildlifeGLB(await response.arrayBuffer(),'fox'),fox=new THREE.Mesh(foxGeometry,new THREE.MeshStandardMaterial({vertexColors:true,roughness:.96}));fox.scale.setScalar(CATALOG.vulpes_vulpes.length/(foxGeometry.boundingBox.max.x-foxGeometry.boundingBox.min.x));fox.userData={taxon:'vulpes_vulpes',stage:'adult'};
@@ -26,7 +31,7 @@ export async function createExpandedView(scene,state,world,reference){
  const acorns=[],litter=[];
  for(let i=0;i<4;i++){const seed=new THREE.Mesh(new THREE.SphereGeometry(.009,8,5),new THREE.MeshStandardMaterial({color:'#9a774a',roughness:1}));seed.scale.set(1,1.5,1);seed.position.set(-38+i*.08,terrainHeight(-38,-9)+.012,-9);scene.add(seed);acorns.push(seed);}
  for(let i=0;i<6;i++){const leaf=new THREE.Mesh(leafGeometry(.12,.07),new THREE.MeshStandardMaterial({color:'#806047',side:THREE.DoubleSide,roughness:1}));leaf.position.set(-61+i*.035,terrainHeight(-61,-2.7)+.012,-2.7);scene.add(leaf);litter.push(leaf);}
- const carriedAcorn=new THREE.Mesh(new THREE.SphereGeometry(.08,8,5),new THREE.MeshStandardMaterial({color:'#967449',roughness:1}));carriedAcorn.scale.set(1,1.4,1);carriedAcorn.position.set(.82,.6,0);models.get('compact-jay').add(carriedAcorn);
+ const carriedAcorn=attachCarriedAcorn(models.get('compact-jay'));
  const affected=new Map();for(const resource of ['nettle-leaf','browse-shoot']){const r=state.ecology.resources[resource],p=state.plants.find(p=>p.id===r.id);const geometry=plantGeometry(p.taxon),mesh=new THREE.Mesh(geometry,new THREE.MeshStandardMaterial({vertexColors:true,side:THREE.DoubleSide,roughness:.9}));mesh.position.set(p.x,p.y,p.z);mesh.rotation.y=p.angle;mesh.scale.setScalar(p.size);scene.add(mesh);models.set(p.id,mesh);affected.set(resource,{p,mesh,last:1});const instanced=world.plantMeshes.find(m=>m.userData.taxon===p.taxon),index=instanced.userData.rows.findIndex(row=>row.id===p.id),matrix=new THREE.Matrix4().makeScale(0,0,0);instanced.setMatrixAt(index,matrix);instanced.instanceMatrix.needsUpdate=true;}
  const foxShadow=reference.shadow.clone();foxShadow.geometry=new THREE.PlaneGeometry(.95,.3);foxShadow.geometry.rotateX(-Math.PI/2);scene.add(foxShadow);let lastWindow=state.ecology.window;
  function update(observer={x:0,z:0}){

@@ -28,7 +28,7 @@ export function createOrganism(taxon,stage='adult',remaining=1){
    if(tit)ball(cream,.47,neckTop-.04,side*.145,.11,.085,.035);
    eye(.51,neckTop+.025,side*.166,.025);
   }
-  const headBatch=b;b=bodyBatch;
+  const headBatch=b;b=bodyBatch;let beakTip;
   for(const side of [-1,1]){
    line([-.12,legHeight+.08,side*.16],[-.12,0,side*.19],.025,legColor,.022);
    for(let k=-1;k<=1;k++)line([-.12,.02,side*.19],[.04,.005,side*.19+k*.06],.009,legColor,.004);
@@ -40,8 +40,8 @@ export function createOrganism(taxon,stage='adult',remaining=1){
   line([-.4,bodyY,0],[-.95,bodyY-.12,0],.12,black,.012);
   b=headBatch;
   if(avocet){const curve=new THREE.CatmullRomCurve3([new THREE.Vector3(.57,neckTop,0),new THREE.Vector3(.86,neckTop-.025,0),new THREE.Vector3(1.14,neckTop+.15,0)]);b.add(new THREE.TubeGeometry(curve,16,.016,6,false),black);}
-  else {const length=spoon?.92:oyster?.6:taxon==='tringa_totanus'?.49:.22,color=oyster?'#d27842':taxon==='tringa_totanus'?'#b76c4c':black;line([.56,neckTop,0],[.56+length,neckTop-.025,0],spoon?.038:oyster?.045:.018,color,spoon?.045:.003);if(spoon)ball('#c1ae77',1.46,neckTop-.025,0,.12,.025,.085);}
-  const headPivot=new THREE.Group(),headMesh=b.mesh();headMesh.geometry.translate(-.3,-bodyY,0);headPivot.position.set(.3,bodyY,0);headPivot.add(headMesh);root.add(headPivot);root.headPivot=headPivot;b=bodyBatch;
+  else {const length=spoon?.92:oyster?.6:taxon==='tringa_totanus'?.49:.22,color=oyster?'#d27842':taxon==='tringa_totanus'?'#b76c4c':black;line([.56,neckTop,0],[.56+length,neckTop-.025,0],spoon?.038:oyster?.045:.018,color,spoon?.045:.003);beakTip=new THREE.Vector3(.56+length,neckTop-.025,0);if(spoon)ball('#c1ae77',1.46,neckTop-.025,0,.12,.025,.085);}
+  const headPivot=new THREE.Group(),headMesh=b.mesh();headMesh.geometry.translate(-.3,-bodyY,0);headPivot.position.set(.3,bodyY,0);headPivot.add(headMesh);root.add(headPivot);root.headPivot=headPivot;if(jay){root.beakContact=new THREE.Object3D();root.beakContact.name='beak-contact';root.beakContact.position.copy(beakTip).sub(headPivot.position);headPivot.add(root.beakContact);}b=bodyBatch;
   for(const side of [-1,1]){const wingBatch=new GeometryBatch();wingBatch.add(sphere,jay?'#7d9bad':oyster||avocet?black:bodyColor,[-.15,0,side*.65],[.38,.025,.65]);const wing=wingBatch.mesh();wing.position.set(0,bodyY+.12,side*.12);wing.visible=false;root.add(wing);wings.push(wing);}
   parts.legs=2;parts.technique=avocet||spoon?'sweeping':oyster?'shell-opening':wader?'probing':'searching';
  }else if(taxon==='apodemus_sylvaticus'){
