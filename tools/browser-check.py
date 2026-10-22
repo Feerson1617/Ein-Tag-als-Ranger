@@ -230,7 +230,10 @@ try:
                 after=int(page.locator('#world').get_attribute('data-decoded-assets')or 0)
                 assert 0<initial<after<100
                 result['standaloneDecodedAssets']={'initial':initial,'afterReferences':after}
-                page.locator('#mission-free').click()
+                free=page.locator('#mission-free');page.bring_to_front();free.evaluate("b=>b.scrollIntoView({block:'center',inline:'nearest',behavior:'instant'})");assert free.is_visible()and free.is_enabled()
+                hit=free.evaluate('''b=>{const r=b.getBoundingClientRect(),x=r.left+r.width/2,y=r.top+r.height/2,e=document.elementFromPoint(x,y);return {x,y,width:r.width,height:r.height,inViewport:x>=0&&y>=0&&x<innerWidth&&y<innerHeight,hit:b===e||b.contains(e),visibility:document.visibilityState};}''')
+                result['freeResumePointer']=hit;assert hit['inViewport']and hit['hit']and hit['width']>0 and hit['height']>0,hit
+                page.mouse.click(hit['x'],hit['y']);page.locator('#panel').wait_for(state='hidden')
                 passed('standalone deferred photograph decodes and renders; most media remain deferred')
             else:page.locator('#close-panel').click()
         page.locator('#pause').click();assert page.locator('#resume-game').is_visible();page.locator('#resume-game').click()
