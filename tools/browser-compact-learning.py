@@ -43,7 +43,7 @@ def inspect(page,taxon,record=True,stage=None,capture=False):
   raw=base64.b64decode(encoded.split(',',1)[1]);from PIL import Image
   import io
   with Image.open(io.BytesIO(raw))as image:assert len(image.convert('RGB').getcolors(image.width*image.height)or[])>30,'Empty active specimen '+taxon
-  name='model-'+taxon+('-caterpillar'if actual_stage=='caterpillar'else'')+'.png';(out/name).write_bytes(raw);result['captures'].append({'file':name,'sha256':hashlib.sha256(raw).hexdigest(),'bytes':len(raw),'canvasOnly':True,'taxon':taxon,'stage':actual_stage,'individualId':individual,'source':'actual active mesh in the magnified WebGL view'});save()
+  name='model-'+taxon+('-caterpillar'if actual_stage=='caterpillar'else'')+'.png';(out/name).write_bytes(raw);result['captures'].append({'file':name,'sha256':hashlib.sha256(raw).hexdigest(),'bytes':len(raw),'canvasOnly':True,'taxon':taxon,'stage':actual_stage,'individualId':individual,'runId':page.locator('#world').get_attribute('data-run-id'),'simulationTime':page.locator('#world').get_attribute('data-simulation-time'),'source':'actual active mesh in the magnified WebGL view'});save()
  if record:
   page.wait_for_function('!document.querySelector("#inspection-record").disabled',timeout=45000);page.locator('#inspection-record').click();page.locator('#note').fill('Eigene Modellbeobachtung: erkennbare Merkmale notiert; natürliche Feinbestimmung bleibt begrenzt.');page.locator('#save-note').click();assert not page.locator('#panel').evaluate('(p)=>p.open');assert data(page)['records'][-1]['individualId']==individual
  else:close(page)
@@ -113,6 +113,9 @@ with sync_playwright()as pw:
   screenshot(page,'tablet-landscape');page.set_viewport_size({'width':810,'height':1080});page.wait_for_function('document.querySelector("#world").width===810');hub(page);assert page.locator('#panel [data-mission]').count()==5;assert page.locator('#close').is_visible();screenshot(page,'tablet-portrait');close(page);view(page,'woodruff');inspect(page,'galium_odoratum');assert len(data(page)['records'])==1;tablet.close();ok('requested iPad 9 viewport approximation: touch movement, automatic tablet pixel cap, portrait/landscape, dialogs and acquired evidence',scope='Chromium touch emulation, 1080x810 and 810x1080, DPR2; no actual Apple hardware, Safari or iPadOS 27 certification')
   if a.gallery:
    gallery=browser.new_context(viewport={'width':800,'height':600});page=gallery.new_page();ready(page);seen=set()
+   # At low water the redshank walks toward its roost; inspect it before
+   # the long vegetation tour. This uses real UI and does not move the bird.
+   view(page,'outlook');inspect(page,'tringa_totanus',record=False,capture=True);seen.add(('tringa_totanus',''))
    visits=[('summer','woodruff'),('summer','nettle'),('summer','flowers'),('summer','wood'),('summer','oak'),('summer','upper-marsh'),('summer','lower-marsh'),('summer','salt-shrub'),('summer','salt-segments'),('summer','salt-grass'),('summer','coast'),('summer','outlook'),('dusk','dusk'),('autumn','oak')]
    for window,location in visits:
     close(page);page.locator('#menu-button').click();page.locator('#season-window').select_option(window);page.locator('#close').click();view(page,location);page.locator('#study').click();buttons=page.locator('[data-inspect]').evaluate_all('(bs)=>bs.map(b=>({taxon:b.dataset.taxon,stage:b.dataset.stage}))');close(page)
