@@ -1,0 +1,36 @@
+{
+  "sourceCommit": "1b5e899",
+  "runtimeCommit": "f05ab562706975072f01998e4c252c03f25b9412",
+  "scope": "Own isolated real observation; removing other learning tables exposes fallback validation. No fabricated own-sighting credit.",
+  "cases": [
+    {
+      "window": 0,
+      "accepted": true
+    },
+    {
+      "window": false,
+      "accepted": true
+    },
+    {
+      "window": "",
+      "accepted": true
+    },
+    {
+      "window": null,
+      "accepted": true
+    },
+    {
+      "window": "toString",
+      "accepted": true
+    },
+    {
+      "window": "constructor",
+      "accepted": true
+    },
+    {
+      "window": "unknown",
+      "accepted": false,
+      "error": "Ungültiger Rundgang, Modellstand oder Beobachtungszeitpunkt."
+    }
+  ]
+}

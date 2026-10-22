@@ -31,6 +31,10 @@ with sync_playwright()as pw:
   for field,value in [('features',{}),('recordId',3),('choice',[]),('limit',False)]:
    d=json.loads(before);d['learning']['drafts']['K1']={field:value};cases.append(('K1-'+field,d))
   d=json.loads(before);d['learning']['drafts']['K2']={'experimentTide':{}};cases.append(('K2-experimentTide',d))
+  # Isolate the observation: unrelated strict K3 protocols must not mask a
+  # permissive observation-window fallback. These are labelled import fixtures.
+  for value in [0,False,'',None,'toString','constructor']:
+   d=json.loads(before);d['records']=[d['records'][0]];d['records'][0]['window']=value;d['learning']={'activeMission':None,'level':'gA','answers':{},'drafts':{},'protocols':[],'measurements':[],'samples':[],'experiments':[]};cases.append(('isolated-window-'+json.dumps(value),d))
   for name,d in cases:
    choose_import_file(page,{'name':name+'.json','mimeType':'application/json','buffer':json.dumps(d).encode()});page.wait_for_function('!document.querySelector("#apply-import")&&document.querySelector("#import-preview").textContent.length>0');assert storage(page)==before;assert not page.locator('#apply-import').count();r['checks'].append({'name':name,'passed':True,'oldStorageByteIdentical':True,'message':page.locator('#import-preview').inner_text()});save()
   page.screenshot(path=str(out/'invalid-import-rejected.png'));ctx.close()
