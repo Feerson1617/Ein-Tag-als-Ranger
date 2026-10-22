@@ -5,7 +5,7 @@ root=Path(__file__).resolve().parents[1];work=root/'work';out=root/'verification
 load=lambda p:json.loads(p.read_text())
 reference=load(work/'compact-browser/result.json');single=load(work/'compact-browser/standalone-result.json');learning=load(work/'compact-learning/result.json');stability=load(work/'compact-stability/result.json');run=load(work/'complete-compact/final-validation.json')
 assert all(step['status']=='passed'for step in run['steps'])and len(run['steps'])==18
-for r,minimum in [(reference,18),(single,5),(learning,16)]:assert not r.get('failure')and not r['errors']and len(r['checks'])>=minimum
+for r,minimum in [(reference,18),(single,5),(learning,17)]:assert not r.get('failure')and not r['errors']and len(r['checks'])>=minimum
 assert learning.get('completedAt')and stability['passed']and stability['actualElapsedSeconds']>=1200
 assert reference['runtimeSourceHashes']==single['runtimeSourceHashes']==learning['runtimeSourceHashes']==stability['runtimeSourceHashes']
 for name,digest in reference['runtimeSourceHashes'].items():assert hashlib.sha256((root/'dist'/name).read_bytes()).hexdigest()==digest

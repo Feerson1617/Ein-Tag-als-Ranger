@@ -2,7 +2,7 @@
 from pathlib import Path
 import hashlib,html,json,shutil,subprocess,zipfile
 root=Path(__file__).resolve().parents[1];reference=root/'work/compact-browser';learning=root/'work/compact-learning';result=json.loads((reference/'result.json').read_text());standalone=json.loads((reference/'standalone-result.json').read_text());learn=json.loads((learning/'result.json').read_text());stability=json.loads((root/'work/compact-stability/result.json').read_text())
-for r,minimum in [(result,18),(standalone,5),(learn,16)]:assert not r.get('failure')and not r['errors']and len(r['checks'])>=minimum,'Successful full browser evidence required'
+for r,minimum in [(result,18),(standalone,5),(learn,17)]:assert not r.get('failure')and not r['errors']and len(r['checks'])>=minimum,'Successful full browser evidence required'
 assert learn.get('completedAt'),'Completed learning browser run required'
 assert stability['passed']and stability['actualElapsedSeconds']>=1200 and not stability['errors'],'20-minute cloud run required'
 assert standalone['runtimeSourceHashes']==result['runtimeSourceHashes']==learn['runtimeSourceHashes']==stability['runtimeSourceHashes'],'Tested runtime sources differ'
