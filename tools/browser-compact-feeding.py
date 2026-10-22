@@ -11,6 +11,10 @@ from module_graph import ModuleGraph
 from compact_runtime import audit_standalone
 import argparse,json,shutil,hashlib,subprocess,time,traceback,html
 p=argparse.ArgumentParser();p.add_argument('--entry',default='Ranger-Kompakt.html');p.add_argument('--site',default='outputs');p.add_argument('--output',default='work/qa-correction/feeding-browser');a=p.parse_args();root=Path(__file__).resolve().parents[1];out=root/a.output;out.mkdir(parents=True,exist_ok=True)
+# Immutable authored prey positions select sampling cadence only. They never
+# place animals, advance a hidden clock, create a resource or grant evidence.
+inventory_code="import{identityInventory}from'./dist/compact/evidence.js';import{MANIFEST,MODEL_REVISION}from'./dist/compact/manifest.js';console.log(JSON.stringify([...identityInventory(MANIFEST.initialSeed,MODEL_REVISION).individuals.values()].map(p=>({id:p.id,x:p.x,z:p.z}))));"
+initial_positions={p['id']:p for p in json.loads(subprocess.check_output(['node','--input-type=module','-e',inventory_code],cwd=root,text=True))}
 audit_standalone(root,root/a.site/a.entry);g=ModuleGraph(root/'dist','compact/main.js');result={'sourceCommit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=root,text=True).strip(),'htmlSHA256':hashlib.sha256((root/a.site/a.entry).read_bytes()).hexdigest(),'runtimeSourceHashes':{n:hashlib.sha256((root/'dist'/n).read_bytes()).hexdigest()for n in sorted(set(g.modules)|g.assets|{'kompakt.html','compact/style.css','icon.svg'})},'scope':'Actual WebGL in shipped standalone HTML; normal UI model-time steps, following camera. No state/clock/evidence injection. Not natural animation certification or FPS benchmark.','browser':None,'sequences':[],'errors':[],'passed':False}
 class Handler(SimpleHTTPRequestHandler):
  def log_message(self,*args):pass
@@ -32,7 +36,8 @@ with sync_playwright()as pw:
     while sample(page,row['id'])['time']<target-6:tick(page,5)
     while sample(page,row['id'])['time']<target:tick(page,1)
    for i in range(480):
-    tick(page,.1 if 'departing'in seen else .25);s=sample(page,row['id']);row['lastSample']=s;phase=s['actor']['phase'];assert s['modelObservation']==row['id'];assert s['ownSeconds']==0,'Model stepping must not fabricate active sighting time'
+    target=initial_positions.get(s['actor'].get('targetId'));near_contact=target and s['actor']['phase']=='approaching' and ((target['x']-s['actor']['x'])**2+(target['z']-s['actor']['z'])**2)**.5<1.05
+    tick(page,.025 if near_contact else .1 if 'departing'in seen else .25);s=sample(page,row['id']);row['lastSample']=s;phase=s['actor']['phase'];assert s['modelObservation']==row['id'];assert s['ownSeconds']==0,'Model stepping must not fabricate active sighting time'
     if episode is None and phase=='approaching':episode=s['actor']['targetId'];row['preyId']=episode
     if episode is None:continue
     event=next((e for e in s['events']if e['actors']==[row['id'],episode]),None)
@@ -47,6 +52,11 @@ with sync_playwright()as pw:
   for row in result['sequences']:
    cards.append('<h2>'+html.escape(row['id'])+'</h2><div class="grid">'+''.join('<figure><img loading="lazy" src="'+html.escape(c['file'])+'"><figcaption>'+html.escape(c['phase'])+' · t='+str(c['sample']['time'])+' Modell-s</figcaption></figure>'for c in row['captures'])+'</div>')
   (out/'index.html').write_text('<!doctype html><html lang="de"><meta charset="utf-8"><title>Tatsächliche Nahrungssuche</title><style>body{font:16px system-ui;background:#eee8d6;color:#263c32;margin:25px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:15px}figure{margin:0}img{width:100%}</style><h1>Vier tatsächliche WebGL-Bildfolgen</h1><p>Beschriftete Modellzeitschritte durch die sichtbare Oberfläche; keine Tier-, Beute- oder Beleginjektion. Originalaufnahmen unverändert. Kamera folgt dem Vogel. Dies ist keine Echtzeit-FPS-Prüfung oder biologische Endabnahme.</p>'+''.join(cards))
- except Exception:result['failure']=traceback.format_exc();save();raise
+ except Exception:
+  result['failure']=traceback.format_exc()
+  try:
+   page.screenshot(path=str(out/'failure.png'));result['failureScreenshot']={'file':'failure.png','sha256':hashlib.sha256((out/'failure.png').read_bytes()).hexdigest(),'source':'Actual failed paused model frame; not a successful phase proof'}
+  except Exception:pass
+  save();raise
  finally:b.close();server.shutdown();server.server_close()
 print(json.dumps({'passed':result['passed'],'sequences':len(result['sequences'])}))
