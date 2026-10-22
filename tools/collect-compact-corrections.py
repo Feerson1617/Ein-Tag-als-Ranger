@@ -37,10 +37,11 @@ for name,p in reports:
   q=p.parent/'final.png'
   if q.exists():copy(q,'stability/final.png')
 for source,folder in [(work/'qa-correction/final-imports','imports'),(work/'compact-regressions','compact-node')]:add_folder(source,folder)
-for filename in ['result.json','progress.log','runtime-freeze.json','environment.json','html-equivalence.json','scheduler-timing.json','flooding-all-taxa.csv','flooding-report.md','visual-review.json','pdf-audit.json']:
+for filename in ['result.json','progress.log','runtime-freeze.json','environment.json','html-equivalence.json','scheduler-timing.json','flooding-all-taxa.csv','flooding-report.md','visual-review.json','pdf-audit.json','coastal-frequency.csv','coastal-frequency.md']:
  copy(work/'final-qa'/filename,filename)
 if rerun_path.exists():copy(rerun_path,'reruns.json')
 for q in (work/'final-qa').glob('*.log'):copy(q,'logs/'+q.name)
+add_folder(work/'qa-correction/coastal-tests','compact-node/coastal-tests')
 for name in ['Arbeitsblaetter.html','Lehrkraefte.html','Arbeitsblaetter.pdf','Lehrkraefte.pdf','build-info.json']:
  copy(root/'outputs/Ranger-Kompakt-Lernpaket'/name,'materials/'+name)
 for filename in ['check-run.json','v020-check-summary.json']:
