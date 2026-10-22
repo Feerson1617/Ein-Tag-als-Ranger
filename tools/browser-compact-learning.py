@@ -51,6 +51,12 @@ def click_inspection_button(page,button):
 def inspect(page,taxon,record=True,stage=None,capture=False):
  close(page);page.locator('#study').click();selector=f'[data-inspect][data-taxon="{taxon}"]'+(f'[data-stage="{stage}"]'if stage else'');button=page.locator(selector).first;assert button.count(),taxon
  individual=button.get_attribute('data-inspect');actual_stage=button.get_attribute('data-stage');click_inspection_button(page,button);page.wait_for_function('document.querySelector("#specimen-canvas").dataset.ready==="true"')
+ identity=individual
+ if taxon in ['galium_odoratum','urtica_dioica','fagus_sylvatica','quercus_robur']:
+  alias=2166136261
+  for c in individual:alias=((alias^ord(c))*16777619)&0xffffffff
+  identity='Unbekannter Fund '+format(alias,'08X')
+ assert identity in page.locator('#panel-body').text_content(),'Rendered inspection does not identify the clicked real specimen'
  if capture:
   encoded=page.evaluate('()=>new Promise(resolve=>requestAnimationFrame(()=>{resolve(document.querySelector("#specimen-canvas").toDataURL("image/png"));}))')
   raw=base64.b64decode(encoded.split(',',1)[1]);from PIL import Image
