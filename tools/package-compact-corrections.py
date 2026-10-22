@@ -31,7 +31,13 @@ for source,name in [(root/'docs/kompakt/KORREKTUREN.md','KORREKTUREN.md'),(root/
 for name in ['flooding-all-taxa.csv','flooding-report.md','visual-review.json','pdf-audit.json']:
  shutil.copyfile(root/'work/final-qa'/name,proof/name)
 summary=root/'verification/kompakt-korrektur/final/SUMMARY.json'
-if summary.exists():shutil.copyfile(summary,proof/'SUMMARY.json')
+assert summary.exists(),'Collect the complete executed final plan before packaging'
+shutil.copyfile(summary,proof/'SUMMARY.json')
+assert load(summary)['runtimeFreeze']['sourceHashes']==info['runtimeSourceHashes']
+for source,folder in [(summary.parent,'Prueflogs'),(root/'verification/kompakt-korrektur/phase5-attempt1','Fehlversuch-Abtastung'),(root/'verification/kompakt-korrektur/phase5-gallery-attempt','Fehlversuch-Galerie')]:
+ for file in sorted(source.rglob('*')):
+  if file.is_file()and(file.suffix in ['.json','.log','.txt','.csv','.md']or folder!='Prueflogs'and file.suffix=='.png'):
+   dest=proof/folder/file.relative_to(source);dest.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(file,dest)
 def report_html(text):
  parts=[];table=False;code=False
  for line in text.splitlines():
@@ -57,7 +63,7 @@ report=(root/'docs/kompakt/KORREKTUREN.md').read_text()
 page=(out/'index.html').read_text();extra='<section><h2>Korrekturbericht und Grenzen</h2><p><a href="Korrekturen/Pruefbericht.html">Prüfbericht F01–F13</a> · <a href="Korrekturen/SUMMARY.json">Ausgeführte Prüfungen</a> · <a href="Korrekturen/html-equivalence.json">Bindung an die getestete HTML</a></p><p>Eigene Reproduktionen; das unabhängige QA-Archiv war nicht lesbar. Physisches iPad 9/Safari/iPadOS 27, unabhängige biologische/visuelle Endabnahme und Unterrichtswirkung bleiben ungeprüft.</p>'+''.join(cards)+'<h2>Eigene Vorher-/Nachherkameras</h2><p>XZ, Blickwinkel und Viewport sind gleich; die Augenhöhe folgt dem geänderten Boden. Die unbekannten Originalkameras des unabhängigen Berichts werden nicht behauptet.</p>'+''.join(pairs)+'</section>'
 page=page.replace('</style>','.pair{display:grid;grid-template-columns:1fr 1fr;gap:10px}.pair img{width:100%}</style>',1)
 page=page.replace('</body>',extra+'</body>')if'</body>'in page else page.replace('</html>',extra+'</html>')
-page=page.replace('vollständige Softwarevorschau','Softwarevorschau mit Korrekturbelegen')
+page=page.replace('vollständige Softwarevorschau','Korrekturfassung zur Prüfung')
 (out/'index.html').write_text(page)
 info['correctionProof']={'feedingSpecies':4,'feedingRawImages':28,'landscapeImages':len(h['captures']),'independentOriginalArchiveRead':False,'identicalRuntimeSources':True,'runtimeFreeze':load(proof/'runtime-freeze.json'),'htmlEquivalence':load(proof/'html-equivalence.json'),'limits':['No physical iPad/Safari test','No independent biological/visual final acceptance','No classroom learning-effect proof']}
 (out/'build-info.json').write_text(json.dumps(info,ensure_ascii=False,indent=2)+'\n')
