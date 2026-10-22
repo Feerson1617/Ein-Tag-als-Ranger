@@ -22,8 +22,14 @@ with sync_playwright()as pw:
  browser=pw.chromium.launch(**opts);result['browserVersion']=browser.version;ctx=browser.new_context(viewport={'width':800,'height':600},has_touch=True,is_mobile=True);page=ctx.new_page();page.set_default_timeout(45000);page.on('pageerror',lambda e:result['errors'].append(str(e)))
  try:
   page.goto(f'http://127.0.0.1:{server.server_port}/{a.entry}');page.wait_for_function('document.querySelector("#world").dataset.ready==="true"',timeout=120000);page.locator('#start').click();places=['woodruff','village','ramp','keilm','coast','outlook','oak','wood'];last_sim=-1;initial=None
+  def pointer_click(button):
+   # Actual native pointer input: do not wait on unrelated WebGL animation
+   # frames for Playwright's two-frame stability gate. Never force a click.
+   page.bring_to_front();button.wait_for(state='visible');assert button.is_enabled();button.evaluate("b=>b.scrollIntoView({block:'center',inline:'nearest',behavior:'instant'})")
+   hit=button.evaluate('''b=>{const r=b.getBoundingClientRect(),x=r.left+r.width/2,y=r.top+r.height/2,e=document.elementFromPoint(x,y);return {x,y,width:r.width,height:r.height,inViewport:x>=0&&y>=0&&x<innerWidth&&y<innerHeight,hit:b===e||b.contains(e),text:b.textContent,view:b.dataset.view||null,visibility:document.visibilityState};}''')
+   result.setdefault('pointerChecks',[]).append(hit);save();assert hit['inViewport']and hit['hit']and hit['width']>0 and hit['height']>0,hit;page.mouse.click(hit['x'],hit['y'])
   def visit(place):
-   page.locator('#menu-button').click();page.get_by_text('Referenzabschnitt prüfen',exact=True).click();page.locator('[data-view="'+place+'"]').click();page.wait_for_function('document.querySelector("#world").dataset.renderRevision===document.querySelector("#world").dataset.sceneRevision')
+   pointer_click(page.locator('#menu-button'));pointer_click(page.get_by_text('Referenzabschnitt prüfen',exact=True));pointer_click(page.locator('[data-view="'+place+'"]'));page.locator('[data-view="'+place+'"]').wait_for(state='hidden');page.wait_for_function('document.querySelector("#world").dataset.renderRevision===document.querySelector("#world").dataset.sceneRevision')
    # Ordinary active world time; no direct clock/state writes or renderer hooks.
    page.wait_for_timeout(15000)
    d=page.locator('#world').evaluate('(c)=>Object.fromEntries(Object.entries(c.dataset).filter(([k])=>["plantCount","simulationTime","frameMs","geometries","textures","heapBytes","drawCalls","triangles","runId"].includes(k)))')
@@ -49,6 +55,10 @@ with sync_playwright()as pw:
   d=page.locator('#world').evaluate('(c)=>({...c.dataset})');run=d['runId'];page.locator('#world').evaluate("c=>c.getContext('webgl2').getExtension('WEBGL_lose_context').loseContext()");page.wait_for_selector('#graphics-error:visible');page.locator('#retry-graphics').click();page.wait_for_selector('#graphics-error:hidden');page.wait_for_function('document.querySelector("#world").dataset.renderRevision===document.querySelector("#world").dataset.sceneRevision');assert page.locator('#world').get_attribute('data-run-id')==run;assert page.locator('#count').inner_text()=='0';assert not result['errors'];result['nativeContextRestore']=True
   result['actualElapsedSeconds']=round(time.monotonic()-start,2);intervals=[float(s['frameMs'])for s in result['samples']];result['cloudGraphicsBudget']={'targetFPS':30,'sampledIntervals':len(intervals),'medianSampledFrameMs':statistics.median(intervals),'maxSampledFrameMs':max(intervals),'allSampledIntervalsWithinBudget':all(ms<=1000/30 for ms in intervals),'scope':'Sparse main-loop interval samples in cloud software graphics, not an FPS distribution or real iPad performance certification'};heaps=[int(s['heapBytes'])for s in result['samples']if int(s['heapBytes'])>0];result['heapObservation']={'sampleCount':len(heaps),'minimumBytes':min(heaps)if heaps else None,'maximumBytes':max(heaps)if heaps else None,'firstFiveMedianBytes':statistics.median(heaps[:5])if heaps else None,'lastFiveMedianBytes':statistics.median(heaps[-5:])if heaps else None,'scope':'Browser-reported JS heap including GC cycles; retained renderer geometry/textures checked separately'};result['passed']=True;page.screenshot(path=str(out/'final.png'));result['memoryScope']='Renderer geometry/texture allocations bounded over repeated tours. Heap samples include garbage-collection cycles; no absolute hardware memory certification.';save()
  except Exception:
-  result['failure']=traceback.format_exc();save();raise
+  result['failure']=traceback.format_exc();save()
+  try:
+   result['failureDOM']=page.locator('#world').evaluate('(c)=>({data:{...c.dataset},visibility:document.visibilityState,focus:document.hasFocus(),buttons:[...document.querySelectorAll("[data-view]")].map(b=>{const r=b.getBoundingClientRect();return {view:b.dataset.view,text:b.textContent,rect:{x:r.x,y:r.y,width:r.width,height:r.height},display:getComputedStyle(b).display};})})');save();page.screenshot(path=str(out/'failure.png'),timeout=30000)
+  except Exception as capture:result['failureCaptureError']=str(capture);save()
+  raise
  finally:browser.close();server.shutdown();server.server_close()
 print(json.dumps({'passed':result['passed'],'seconds':result['actualElapsedSeconds'],'samples':len(result['samples'])}))
