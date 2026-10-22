@@ -6,6 +6,8 @@ for r,minimum in [(result,18),(standalone,5),(learn,17)]:assert not r.get('failu
 layout=json.loads((learning/'layout-result.json').read_text());assert layout['passed']and layout['cssSHA256']==learn['runtimeSourceHashes']['compact/style.css'],'Current UI layout check required'
 assert learn.get('completedAt'),'Completed learning browser run required'
 assert stability['passed']and stability['actualElapsedSeconds']>=1200 and not stability['errors'],'20-minute cloud run required'
+assert stability['samples']and stability['samples'][-1]['elapsedSeconds']>=1200,'The measured usage itself must reach20minutes before post-checks'
+assert stability.get('nativeContextRestore'),'Native context restoration after duration required'
 assert standalone['runtimeSourceHashes']==result['runtimeSourceHashes']==learn['runtimeSourceHashes']==stability['runtimeSourceHashes'],'Tested runtime sources differ'
 assert result.get('captures')and len(result.get('videos',[]))==2,'Actual synchronized images and two videos required'
 assert len([r for r in learn['captures']if r.get('taxon')])==37,'36 taxa and caterpillar renders required'
