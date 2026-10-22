@@ -19,6 +19,7 @@ test('authored microhabitats and age structure preserve old identities and suppo
   for(const h of FOREST_HABITATS)assert(b.plants.some(p=>p.microhabitat===h.id)||h.id==='deadwood');
   assert(b.plants.filter(p=>p.taxon==='galium_odoratum').length>a.plants.filter(p=>p.taxon==='galium_odoratum').length+100);
   for(const p of b.plants.filter(p=>p.microhabitat))assert(nearestPath(p.x,p.z).distance>=1.5);
+  for(const t of b.trees)assert(nearestPath(t.x,t.z).distance>.9+t.r+.3,'Trunk/player clearance to real deck');
   assert(canWalk(START.x,START.z,b.trees));rows.push({seed,plantCount:b.plants.length,flooding:floodingStatistics(b)});
  }
 });
