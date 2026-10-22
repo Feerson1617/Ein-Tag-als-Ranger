@@ -36,6 +36,18 @@ with sync_playwright()as pw:
   for location in ['village','ramp','upper-marsh','lower-marsh','coast']:
    view(page,location);before=data(page);start=json.loads(before['observer']);t=float(before['simulationTime']);page.keyboard.down('w');page.wait_for_function('(t)=>Number(document.querySelector("#world").dataset.simulationTime)>t+.7',arg=t,timeout=120000);page.keyboard.up('w');after=data(page);end=json.loads(after['observer']);distance=((end['x']-start['x'])**2+(end['z']-start['z'])**2)**.5;elapsed=float(after['simulationTime'])-t;assert distance>.7 and .8<distance/elapsed<1.9,location;r['walks'].append({'location':location,'before':start,'after':end,'distanceMeters':distance,'modelSeconds':elapsed});shot(page,'walk-'+location)
   r['checks'].append('Additional normal keyboard segments in village, dike, upper/lower marsh and wadden; full route continuity checked separately in model tests');save()
+  # Additional habitat views use only existing visit buttons and real look/walk
+  # input. They are not passed off as missing independent-review cameras.
+  import math
+  for location,name,target,walk_seconds in [('oak','light-gap',(-37,-21),3),('flowers','nutrient-edge',(-29,5),0)]:
+   view(page,location);d=data(page);o=json.loads(d['observer']);wanted=math.atan2(-(target[0]-o['x']),-(target[1]-o['z']));delta=(o['yaw']-wanted+math.pi)%(2*math.pi)-math.pi
+   while abs(delta)>1e-6:
+    part=max(-.6,min(.6,delta));page.mouse.move(400,300);page.mouse.down();page.mouse.move(400+part/.003,300);page.mouse.up();delta-=part
+   if walk_seconds:
+    t=float(data(page)['simulationTime']);page.keyboard.down('w');page.wait_for_function('(a)=>Number(document.querySelector("#world").dataset.simulationTime)>a.t+a.seconds',arg={'t':t,'seconds':walk_seconds},timeout=120000);page.keyboard.up('w')
+   # A modest eye-level look, through ordinary mouse input, shows the stand.
+   o=json.loads(data(page)['observer']);page.mouse.move(400,300);page.mouse.down();page.mouse.move(400,300+(o['pitch']+.12)/.0025);page.mouse.up();page.wait_for_function('document.querySelector("#world").dataset.renderRevision===document.querySelector("#world").dataset.sceneRevision');shot(page,'habitat-'+name)
+  r['checks'].append('Additional light-gap and nutrient-edge habitat images reached with normal look/walk input; not independent original cameras');save()
   for id in ['ranger','local','coastal']:
    view(page,'npc-'+id);d=json.loads(data(page)['nearestSpeaker']);assert d['id']==id and d['distance']<=2.7;shot(page,'npc-'+id);assert 'sprechen' in page.locator('#study').inner_text();page.locator('#study').click();assert page.locator('#remember-perspective').is_visible();page.locator('#remember-perspective').click();assert 'vermerkt' in page.locator('#learning-status').inner_text();shot(page,'dialogue-'+id);page.locator('#close').click()
   page.locator('#journal-button').click()
