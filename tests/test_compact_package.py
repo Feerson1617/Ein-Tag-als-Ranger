@@ -7,7 +7,7 @@ class CompactPackageTests(unittest.TestCase):
  def test_closed_graph(self):
   g=ModuleGraph(ROOT/'dist','compact/main.js')
   self.assertFalse({'biodiversity.js','habitat-world.js','expedition-state.js','authored-wildlife.js','wildlife.js','interaction-scenarios.js'}.intersection(g.modules))
-  self.assertEqual(g.assets,{'assets/compact-roe-deer.glb','assets/terrain-atlas.webp','assets/sky-panorama.webp','assets/boardwalk-wood.webp'})
+  self.assertEqual(g.assets,{'assets/compact-roe-deer.glb','assets/wildlife-fox.glb','assets/terrain-atlas.webp','assets/sky-panorama.webp','assets/boardwalk-wood.webp'})
  def test_integrity_and_tampering(self):
   command=[sys.executable,str(ROOT/'tools/verify-compact.py')]
   self.assertEqual(subprocess.run(command,capture_output=True).returncode,0)

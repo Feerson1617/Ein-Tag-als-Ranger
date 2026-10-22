@@ -5,7 +5,7 @@ from module_graph import ModuleGraph
 root=Path(__file__).resolve().parents[1]
 p=argparse.ArgumentParser();p.add_argument('--web',type=Path,default=root/'outputs/Ranger-Kompakt');a=p.parse_args()
 m=json.loads((a.web/'build-manifest.json').read_text());graph=ModuleGraph(root/'dist','compact/main.js')
-assert m['edition']=='compact' and m['stage']==2
+assert m['edition']=='compact' and m['stage']==6
 assert set(m['modules'])==set(graph.modules) and set(m['assets'])==graph.assets
 actual={p.relative_to(a.web).as_posix()for p in a.web.rglob('*')if p.is_file()}
 assert actual==set(m['files'])|{'build-manifest.json'},'Unexpected/missing files'

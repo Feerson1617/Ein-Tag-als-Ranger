@@ -52,6 +52,7 @@ jobs:
       - run: python -m pip install -r tools/requirements-dev.txt
       - run: python -m playwright install --with-deps chromium
       - run: node tests/kompakt-check.mjs
+      - run: node tests/compact-learning-check.mjs
       - run: python tools/build-compact.py && python tools/verify-compact.py
       - run: python tools/browser-compact.py
       - run: python tools/browser-compact.py --site outputs --entry Ranger-Kompakt.html --smoke

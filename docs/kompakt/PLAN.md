@@ -1,5 +1,11 @@
 # Ranger Kompakt: Phasen und Verträge
 
+## Fortsetzungsauftrag vom 22.10.2026
+
+Der Eigentümer hat ausdrücklich die Fortsetzung sämtlicher Phasen ohne weitere Freigabefrage und den abschließenden Push in den bestehenden Draft-PR #3 beauftragt. Das frühere visuelle Stoppgatter wird dadurch für die Weiterentwicklung aufgehoben. Fachliche Unsicherheiten, fehlende Originalquellen und nicht verfügbare reale Geräte-/Unterrichtsprüfungen bleiben als solche ausgewiesen. Kein Merge, öffentliches Deployment oder Release ist beauftragt.
+
+Arbeitsfolge: (3) vollständiger kuratierter Bestand, Stützen, Ressourcen und Ereignisse; (4) K1–K5, sichere Migration, Datenmodelle und verwendbares Unterrichtspaket; (5) automatisierte Negativ-/Regressions-/Browser-/Paketprüfungen und tatsächliche Rendernachweise; (6) sauberes commitgebundenes Paket, aktualisierter Draft-PR und Push. Reale Hardwareabnahme und Unterrichtspilot können in dieser Cloud nicht ersetzt werden.
+
 Auftrag: die vier am 21.10.2026 übergebenen Kompakt-Unterlagen. SHA256/Inventar in EINGANGSDATEIEN.json. Der Masterprompt fordert ausdrücklich Implementierung der Phasen 0–2 und danach eine visuelle Eigentümerfreigabe. Kein Merge, öffentliches Deployment oder Release autorisiert.
 
 Ausgangsstand: frisch abgefragter origin/main a6c5c8e50c273895e5ca7667542f63d4e075c13b. Er enthält den vom Eigentümer inzwischen gemergten PR #1 mit Beobachtungsuhr und M3-Härtung (67b8d1c). Kein Zurücksetzen. Neuer Branch feature/ranger-kompakt. Die alte Fassung bleibt unter dist/index.html vollständig erhalten. Ein temporärer, benannter Git-Test-Worktree unter /tmp prüft ausschließlich diese Baseline; er ist kein zweites Repository/Spielprojekt und wird danach entfernt.

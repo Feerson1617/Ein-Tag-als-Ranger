@@ -1,0 +1,10 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import {fileURLToPath}from 'node:url';
+import {renderLessonDocument}from '../dist/compact/learning-documents.js';
+import {MATERIALS}from '../dist/compact/materials.js';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..'),out=path.join(root,'outputs','Ranger-Kompakt-Lernpaket');fs.mkdirSync(out,{recursive:true});
+for(const [teacher,name]of[[false,'Arbeitsblaetter.html'],[true,'Lehrkraefte.html']])fs.writeFileSync(path.join(out,name),renderLessonDocument(teacher));
+fs.writeFileSync(path.join(out,'Materialkarten.json'),JSON.stringify(MATERIALS,null,2)+'\n');
+const manifest={sourceHashes:Object.fromEntries(['learning-documents.js','materials.js'].map(name=>[name,crypto.createHash('sha256').update(fs.readFileSync(path.join(root,'dist/compact',name))).digest('hex')])),cards:MATERIALS.length,limitations:['No classroom pilot','No original school PDFs available','Free responses require human discussion'],files:Object.fromEntries(['Arbeitsblaetter.html','Lehrkraefte.html','Materialkarten.json'].map(name=>{const b=fs.readFileSync(path.join(out,name));return[name,{bytes:b.length,sha256:crypto.createHash('sha256').update(b).digest('hex')}];}))};fs.writeFileSync(path.join(out,'build-info.json'),JSON.stringify(manifest,null,2)+'\n');console.log(JSON.stringify(manifest));

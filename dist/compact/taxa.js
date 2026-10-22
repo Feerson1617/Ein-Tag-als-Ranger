@@ -1,4 +1,4 @@
-// Verträge aus der beigefügten Artenmatrix; Planungsdaten, keine Bestimmungsfreigabe.
+// Verträge aus der beigefügten Artenmatrix; Aktive Verträge; die Modellgeometrie ersetzt keine natürliche Feinbestimmung.
 export const TAXA = [
   {
     "matrixId": "W01",
@@ -13,7 +13,7 @@ export const TAXA = [
     "season": "2026-08-25 / Spätsommer",
     "bodySizeSource": "Artbezogene Maßquelle noch zu prüfen; Geometrie ist Entwurfsmaß.",
     "parameters": "Didaktische Entwurfswerte, keine lokale empirische Kalibrierung",
-    "status": "geplant / keine visuelle Freigabe"
+    "status": "aktives stilisiertes Modell; fachliche Grenzen im Lernpaket"
   },
   {
     "matrixId": "W02",
@@ -28,7 +28,7 @@ export const TAXA = [
     "season": "2026-08-25 / Spätsommer",
     "bodySizeSource": "Artbezogene Maßquelle noch zu prüfen; Geometrie ist Entwurfsmaß.",
     "parameters": "Didaktische Entwurfswerte, keine lokale empirische Kalibrierung",
-    "status": "geplant / keine visuelle Freigabe"
+    "status": "aktives stilisiertes Modell; fachliche Grenzen im Lernpaket"
   },
   {
     "matrixId": "W03",
@@ -43,7 +43,7 @@ export const TAXA = [
     "season": "2026-08-25 / Spätsommer",
     "bodySizeSource": "Artbezogene Maßquelle noch zu prüfen; Geometrie ist Entwurfsmaß.",
     "parameters": "Didaktische Entwurfswerte, keine lokale empirische Kalibrierung",
-    "status": "geplant / keine visuelle Freigabe"
+    "status": "aktives stilisiertes Modell; fachliche Grenzen im Lernpaket"
   },
   {
     "matrixId": "W04",
@@ -58,7 +58,7 @@ export const TAXA = [
     "season": "2026-08-25 / Spätsommer",
     "bodySizeSource": "Artbezogene Maßquelle noch zu prüfen; Geometrie ist Entwurfsmaß.",
     "parameters": "Didaktische Entwurfswerte, keine lokale empirische Kalibrierung",
-    "status": "geplant / keine visuelle Freigabe"
+    "status": "aktives stilisiertes Modell; fachliche Grenzen im Lernpaket"
   },
   {
     "matrixId": "W05",
@@ -73,7 +73,7 @@ export const TAXA = [
     "season": "2026-08-25 / Spätsommer",
     "bodySizeSource": "Artbezogene Maßquelle noch zu prüfen; Geometrie ist Entwurfsmaß.",
     "parameters": "Didaktische Entwurfswerte, keine lokale empirische Kalibrierung",
-    "status": "geplant / keine visuelle Freigabe"
+    "status": "aktives stilisiertes Modell; fachliche Grenzen im Lernpaket"
   },
   {
     "matrixId": "W06",
@@ -88,7 +88,7 @@ export const TAXA = [
     "season": "2026-08-25 / Spätsommer",
     "bodySizeSource": "Artbezogene Maßquelle noch zu prüfen; Geometrie ist Entwurfsmaß.",
     "parameters": "Didaktische Entwurfswerte, keine lokale empirische Kalibrierung",
-    "status": "geplant / keine visuelle Freigabe"
+    "status": "aktives stilisiertes Modell; fachliche Grenzen im Lernpaket"
   },
   {
     "matrixId": "W07",
@@ -103,7 +103,7 @@ export const TAXA = [
     "season": "2026-08-25 / Spätsommer",
     "bodySizeSource": "Artbezogene Maßquelle noch zu prüfen; Geometrie ist Entwurfsmaß.",
     "parameters": "Didaktische Entwurfswerte, keine lokale empirische Kalibrierung",
-    "status": "geplant / keine visuelle Freigabe"
+    "status": "aktives stilisiertes Modell; fachliche Grenzen im Lernpaket"
   },
   {
     "matrixId": "W08",
@@ -118,7 +118,7 @@ export const TAXA = [
     "season": "2026-08-25 / Spätsommer",
     "bodySizeSource": "Artbezogene Maßquelle noch zu prüfen; Geometrie ist Entwurfsmaß.",
     "parameters": "Didaktische Entwurfswerte, keine lokale empirische Kalibrierung",
-    "status": "geplant / keine visuelle Freigabe"
+    "status": "aktives stilisiertes Modell; fachliche Grenzen im Lernpaket"
   },
   {
     "matrixId": "W09",
@@ -133,7 +133,7 @@ export const TAXA = [
     "season": "2026-08-25 / Spätsommer",
     "bodySizeSource": "Artbezogene Maßquelle noch zu prüfen; Geometrie ist Entwurfsmaß.",
     "parameters": "Didaktische Entwurfswerte, keine lokale empirische Kalibrierung",
-    "status": "geplant / keine visuelle Freigabe"
+    "status": "aktives stilisiertes Modell; fachliche Grenzen im Lernpaket"
   },
   {
     "matrixId": "W10",
@@ -148,7 +148,7 @@ export const TAXA = [
     "season": "2026-08-25 / Spätsommer",
     "bodySizeSource": "Artbezogene Maßquelle noch zu prüfen; Geometrie ist Entwurfsmaß.",
     "parameters": "Didaktische Entwurfswerte, keine lokale empirische Kalibrierung",
-    "status": "geplant / keine visuelle Freigabe"
+    "status": "aktives stilisiertes Modell; fachliche Grenzen im Lernpaket"
   },
   {
     "matrixId": "W11",
@@ -163,7 +163,7 @@ export const TAXA = [
     "season": "2026-08-25 / Spätsommer",
     "bodySizeSource": "Artbezogene Maßquelle noch zu prüfen; Geometrie ist Entwurfsmaß.",
     "parameters": "Didaktische Entwurfswerte, keine lokale empirische Kalibrierung",
-    "status": "geplant / keine visuelle Freigabe"
+    "status": "aktives stilisiertes Modell; fachliche Grenzen im Lernpaket"
   },
   {
     "matrixId": "W12",
@@ -178,7 +178,7 @@ export const TAXA = [
     "season": "2026-08-25 / Spätsommer",
     "bodySizeSource": "Artbezogene Maßquelle noch zu prüfen; Geometrie ist Entwurfsmaß.",
     "parameters": "Didaktische Entwurfswerte, keine lokale empirische Kalibrierung",
-    "status": "geplant / keine visuelle Freigabe"
+    "status": "aktives stilisiertes Modell; fachliche Grenzen im Lernpaket"
   },
   {
     "matrixId": "W13",
@@ -193,7 +193,7 @@ export const TAXA = [
     "season": "2026-08-25 / Spätsommer",
     "bodySizeSource": "Artbezogene Maßquelle noch zu prüfen; Geometrie ist Entwurfsmaß.",
     "parameters": "Didaktische Entwurfswerte, keine lokale empirische Kalibrierung",
-    "status": "geplant / keine visuelle Freigabe"
+    "status": "aktives stilisiertes Modell; fachliche Grenzen im Lernpaket"
   },
   {
     "matrixId": "W14",
@@ -208,7 +208,7 @@ export const TAXA = [
     "season": "2026-08-25 / Spätsommer",
     "bodySizeSource": "Artbezogene Maßquelle noch zu prüfen; Geometrie ist Entwurfsmaß.",
     "parameters": "Didaktische Entwurfswerte, keine lokale empirische Kalibrierung",
-    "status": "geplant / keine visuelle Freigabe"
+    "status": "aktives stilisiertes Modell; fachliche Grenzen im Lernpaket"
   },
   {
     "matrixId": "W15",
@@ -223,7 +223,7 @@ export const TAXA = [
     "season": "2026-08-25 / Spätsommer",
     "bodySizeSource": "Artbezogene Maßquelle noch zu prüfen; Geometrie ist Entwurfsmaß.",
     "parameters": "Didaktische Entwurfswerte, keine lokale empirische Kalibrierung",
-    "status": "geplant / keine visuelle Freigabe"
+    "status": "aktives stilisiertes Modell; fachliche Grenzen im Lernpaket"
   },
   {
     "matrixId": "W16",
@@ -238,7 +238,7 @@ export const TAXA = [
     "season": "2026-08-25 / Spätsommer",
     "bodySizeSource": "Artbezogene Maßquelle noch zu prüfen; Geometrie ist Entwurfsmaß.",
     "parameters": "Didaktische Entwurfswerte, keine lokale empirische Kalibrierung",
-    "status": "geplant / keine visuelle Freigabe"
+    "status": "aktives stilisiertes Modell; fachliche Grenzen im Lernpaket"
   },
   {
     "matrixId": "W17",
@@ -253,7 +253,7 @@ export const TAXA = [
     "season": "2026-08-25 / Spätsommer",
     "bodySizeSource": "Artbezogene Maßquelle noch zu prüfen; Geometrie ist Entwurfsmaß.",
     "parameters": "Didaktische Entwurfswerte, keine lokale empirische Kalibrierung",
-    "status": "geplant / keine visuelle Freigabe"
+    "status": "aktives stilisiertes Modell; fachliche Grenzen im Lernpaket"
   },
   {
     "matrixId": "W18",
@@ -268,7 +268,7 @@ export const TAXA = [
     "season": "2026-08-25 / Spätsommer",
     "bodySizeSource": "Artbezogene Maßquelle noch zu prüfen; Geometrie ist Entwurfsmaß.",
     "parameters": "Didaktische Entwurfswerte, keine lokale empirische Kalibrierung",
-    "status": "geplant / keine visuelle Freigabe"
+    "status": "aktives stilisiertes Modell; fachliche Grenzen im Lernpaket"
   },
   {
     "matrixId": "W19",
@@ -283,7 +283,7 @@ export const TAXA = [
     "season": "2026-08-25 / Spätsommer",
     "bodySizeSource": "Artbezogene Maßquelle noch zu prüfen; Geometrie ist Entwurfsmaß.",
     "parameters": "Didaktische Entwurfswerte, keine lokale empirische Kalibrierung",
-    "status": "geplant / keine visuelle Freigabe"
+    "status": "aktives stilisiertes Modell; fachliche Grenzen im Lernpaket"
   },
   {
     "matrixId": "S01",
@@ -298,7 +298,7 @@ export const TAXA = [
     "season": "2026-08-25 / Spätsommer",
     "bodySizeSource": "Artbezogene Maßquelle noch zu prüfen; Geometrie ist Entwurfsmaß.",
     "parameters": "Didaktische Entwurfswerte, keine lokale empirische Kalibrierung",
-    "status": "geplant / keine visuelle Freigabe"
+    "status": "aktives stilisiertes Modell; fachliche Grenzen im Lernpaket"
   },
   {
     "matrixId": "S02",
@@ -313,7 +313,7 @@ export const TAXA = [
     "season": "2026-08-25 / Spätsommer",
     "bodySizeSource": "Artbezogene Maßquelle noch zu prüfen; Geometrie ist Entwurfsmaß.",
     "parameters": "Didaktische Entwurfswerte, keine lokale empirische Kalibrierung",
-    "status": "geplant / keine visuelle Freigabe"
+    "status": "aktives stilisiertes Modell; fachliche Grenzen im Lernpaket"
   },
   {
     "matrixId": "S03",
@@ -328,7 +328,7 @@ export const TAXA = [
     "season": "2026-08-25 / Spätsommer",
     "bodySizeSource": "Artbezogene Maßquelle noch zu prüfen; Geometrie ist Entwurfsmaß.",
     "parameters": "Didaktische Entwurfswerte, keine lokale empirische Kalibrierung",
-    "status": "geplant / keine visuelle Freigabe"
+    "status": "aktives stilisiertes Modell; fachliche Grenzen im Lernpaket"
   },
   {
     "matrixId": "S04",
@@ -343,7 +343,7 @@ export const TAXA = [
     "season": "2026-08-25 / Spätsommer",
     "bodySizeSource": "Artbezogene Maßquelle noch zu prüfen; Geometrie ist Entwurfsmaß.",
     "parameters": "Didaktische Entwurfswerte, keine lokale empirische Kalibrierung",
-    "status": "geplant / keine visuelle Freigabe"
+    "status": "aktives stilisiertes Modell; fachliche Grenzen im Lernpaket"
   },
   {
     "matrixId": "S05",
@@ -358,7 +358,7 @@ export const TAXA = [
     "season": "2026-08-25 / Spätsommer",
     "bodySizeSource": "Artbezogene Maßquelle noch zu prüfen; Geometrie ist Entwurfsmaß.",
     "parameters": "Didaktische Entwurfswerte, keine lokale empirische Kalibrierung",
-    "status": "geplant / keine visuelle Freigabe"
+    "status": "aktives stilisiertes Modell; fachliche Grenzen im Lernpaket"
   },
   {
     "matrixId": "S06",
@@ -373,7 +373,7 @@ export const TAXA = [
     "season": "2026-08-25 / Spätsommer",
     "bodySizeSource": "Artbezogene Maßquelle noch zu prüfen; Geometrie ist Entwurfsmaß.",
     "parameters": "Didaktische Entwurfswerte, keine lokale empirische Kalibrierung",
-    "status": "geplant / keine visuelle Freigabe"
+    "status": "aktives stilisiertes Modell; fachliche Grenzen im Lernpaket"
   },
   {
     "matrixId": "K01",
@@ -388,7 +388,7 @@ export const TAXA = [
     "season": "2026-08-25 / Spätsommer",
     "bodySizeSource": "Artbezogene Maßquelle noch zu prüfen; Geometrie ist Entwurfsmaß.",
     "parameters": "Didaktische Entwurfswerte, keine lokale empirische Kalibrierung",
-    "status": "geplant / keine visuelle Freigabe"
+    "status": "aktives stilisiertes Modell; fachliche Grenzen im Lernpaket"
   },
   {
     "matrixId": "K02",
@@ -403,7 +403,7 @@ export const TAXA = [
     "season": "2026-08-25 / Spätsommer",
     "bodySizeSource": "Artbezogene Maßquelle noch zu prüfen; Geometrie ist Entwurfsmaß.",
     "parameters": "Didaktische Entwurfswerte, keine lokale empirische Kalibrierung",
-    "status": "geplant / keine visuelle Freigabe"
+    "status": "aktives stilisiertes Modell; fachliche Grenzen im Lernpaket"
   },
   {
     "matrixId": "K03",
@@ -418,7 +418,7 @@ export const TAXA = [
     "season": "2026-08-25 / Spätsommer",
     "bodySizeSource": "Artbezogene Maßquelle noch zu prüfen; Geometrie ist Entwurfsmaß.",
     "parameters": "Didaktische Entwurfswerte, keine lokale empirische Kalibrierung",
-    "status": "geplant / keine visuelle Freigabe"
+    "status": "aktives stilisiertes Modell; fachliche Grenzen im Lernpaket"
   },
   {
     "matrixId": "K04",
@@ -433,7 +433,7 @@ export const TAXA = [
     "season": "2026-08-25 / Spätsommer",
     "bodySizeSource": "Artbezogene Maßquelle noch zu prüfen; Geometrie ist Entwurfsmaß.",
     "parameters": "Didaktische Entwurfswerte, keine lokale empirische Kalibrierung",
-    "status": "geplant / keine visuelle Freigabe"
+    "status": "aktives stilisiertes Modell; fachliche Grenzen im Lernpaket"
   },
   {
     "matrixId": "T01",
@@ -448,7 +448,7 @@ export const TAXA = [
     "season": "2026-08-25 / Spätsommer",
     "bodySizeSource": "Artbezogene Maßquelle noch zu prüfen; Geometrie ist Entwurfsmaß.",
     "parameters": "Didaktische Entwurfswerte, keine lokale empirische Kalibrierung",
-    "status": "geplant / keine visuelle Freigabe"
+    "status": "aktives stilisiertes Modell; fachliche Grenzen im Lernpaket"
   },
   {
     "matrixId": "T02",
@@ -463,7 +463,7 @@ export const TAXA = [
     "season": "2026-08-25 / Spätsommer",
     "bodySizeSource": "Artbezogene Maßquelle noch zu prüfen; Geometrie ist Entwurfsmaß.",
     "parameters": "Didaktische Entwurfswerte, keine lokale empirische Kalibrierung",
-    "status": "geplant / keine visuelle Freigabe"
+    "status": "aktives stilisiertes Modell; fachliche Grenzen im Lernpaket"
   },
   {
     "matrixId": "T03",
@@ -478,7 +478,7 @@ export const TAXA = [
     "season": "2026-08-25 / Spätsommer",
     "bodySizeSource": "Artbezogene Maßquelle noch zu prüfen; Geometrie ist Entwurfsmaß.",
     "parameters": "Didaktische Entwurfswerte, keine lokale empirische Kalibrierung",
-    "status": "geplant / keine visuelle Freigabe"
+    "status": "aktives stilisiertes Modell; fachliche Grenzen im Lernpaket"
   },
   {
     "matrixId": "T04",
@@ -493,7 +493,7 @@ export const TAXA = [
     "season": "2026-08-25 / Spätsommer",
     "bodySizeSource": "Artbezogene Maßquelle noch zu prüfen; Geometrie ist Entwurfsmaß.",
     "parameters": "Didaktische Entwurfswerte, keine lokale empirische Kalibrierung",
-    "status": "geplant / keine visuelle Freigabe"
+    "status": "aktives stilisiertes Modell; fachliche Grenzen im Lernpaket"
   },
   {
     "matrixId": "T05",
@@ -508,7 +508,7 @@ export const TAXA = [
     "season": "2026-08-25 / Spätsommer",
     "bodySizeSource": "Artbezogene Maßquelle noch zu prüfen; Geometrie ist Entwurfsmaß.",
     "parameters": "Didaktische Entwurfswerte, keine lokale empirische Kalibrierung",
-    "status": "geplant / keine visuelle Freigabe"
+    "status": "aktives stilisiertes Modell; fachliche Grenzen im Lernpaket"
   },
   {
     "matrixId": "T06",
@@ -523,7 +523,7 @@ export const TAXA = [
     "season": "2026-08-25 / Spätsommer",
     "bodySizeSource": "Artbezogene Maßquelle noch zu prüfen; Geometrie ist Entwurfsmaß.",
     "parameters": "Didaktische Entwurfswerte, keine lokale empirische Kalibrierung",
-    "status": "geplant / keine visuelle Freigabe"
+    "status": "aktives stilisiertes Modell; fachliche Grenzen im Lernpaket"
   },
   {
     "matrixId": "T07",
@@ -538,6 +538,6 @@ export const TAXA = [
     "season": "2026-08-25 / Spätsommer",
     "bodySizeSource": "Artbezogene Maßquelle noch zu prüfen; Geometrie ist Entwurfsmaß.",
     "parameters": "Didaktische Entwurfswerte, keine lokale empirische Kalibrierung",
-    "status": "geplant / keine visuelle Freigabe"
+    "status": "aktives stilisiertes Modell; fachliche Grenzen im Lernpaket"
   }
 ];

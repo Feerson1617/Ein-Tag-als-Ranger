@@ -26,7 +26,9 @@ function rounded(points){
 function finish(points,id){let distance=0;return points.map((p,i)=>{if(i)distance+=Math.hypot(p.x-points[i-1].x,p.z-points[i-1].z);const a=points[Math.max(0,i-1)],b=points[Math.min(points.length-1,i+1)],len=Math.hypot(b.x-a.x,b.z-a.z);return {...p,y:Math.max(.46,terrainHeight(p.x,p.z)+.09),tx:(b.x-a.x)/len,tz:(b.z-a.z)/len,width:1.8,distance,route:id};});}
 export const ROUTE=finish(rounded(ROUTE_POINTS),'main');
 export const SHORTCUT=finish(rounded([[-52,8],[-44,9],[-33,7],[-24,3]]),'shortcut');
-export const PATHS=[ROUTE,SHORTCUT];
+// A short study spur makes the creek viewing point physically reachable.
+export const OUTLOOK=finish(rounded([[70,10],[67,5],[63,4]]),'creek-outlook');
+export const PATHS=[ROUTE,SHORTCUT,OUTLOOK];
 export function nearestPath(x,z){let best=null,d2=Infinity;
  for(const path of PATHS)for(let i=1;i<path.length;i++){
   const a=path[i-1],b=path[i],dx=b.x-a.x,dz=b.z-a.z,t=clamp(((x-a.x)*dx+(z-a.z)*dz)/(dx*dx+dz*dz),0,1),px=a.x+t*dx,pz=a.z+t*dz,dd=(px-x)**2+(pz-z)**2;
@@ -45,4 +47,4 @@ export function canWalk(x,z,blockers=[]){
 }
 // Each plank follows the local tangent and width. No separate, intersecting underdeck.
 export function plankCorners(p,length=.19){const nx=-p.tz*p.width/2,nz=p.tx*p.width/2,dx=p.tx*length/2,dz=p.tz*length/2;return [[p.x-dx+nx,p.y,p.z-dz+nz],[p.x+dx+nx,p.y,p.z+dz+nz],[p.x+dx-nx,p.y,p.z+dz-nz],[p.x-dx-nx,p.y,p.z-dz-nz]];}
-export function routeMetrics(){return {width:160,depth:100,areaHa:1.6,mainMeters:ROUTE.at(-1).distance,shortcutMeters:SHORTCUT.at(-1).distance,walkSeconds:ROUTE.at(-1).distance/WALK_PROFILE.walk,shortcutSeconds:SHORTCUT.at(-1).distance/WALK_PROFILE.walk,maxSlope:Math.max(...ROUTE.slice(1).map((p,i)=>Math.abs(p.y-ROUTE[i].y)/(p.distance-ROUTE[i].distance)))};}
+export function routeMetrics(){return {width:160,depth:100,areaHa:1.6,mainMeters:ROUTE.at(-1).distance,shortcutMeters:SHORTCUT.at(-1).distance,outlookMeters:OUTLOOK.at(-1).distance,walkSeconds:ROUTE.at(-1).distance/WALK_PROFILE.walk,shortcutSeconds:SHORTCUT.at(-1).distance/WALK_PROFILE.walk,maxSlope:Math.max(...ROUTE.slice(1).map((p,i)=>Math.abs(p.y-ROUTE[i].y)/(p.distance-ROUTE[i].distance)))};}

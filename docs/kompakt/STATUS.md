@@ -13,3 +13,9 @@ Aktuelle Tests, Fehler und Bildnachweise: TESTS.md. Start: `python tools/build-c
 Remote-Aktion ausstehend: Der automatische Freigabeprüfer hat den Push von feature/ranger-kompakt wegen der Veröffentlichungssperre abgelehnt. Kein Remote-Branch/Draft-PR und keine neue GitHub-Actions-Prüfung wurden durch diese Arbeit angelegt. Lokale Commits und Prüfpakete bleiben zur ausdrücklichen Freigabe bereit.
 
 Abschließende lokale QA: 26 alte Node-Reihen, 14 Kompakt-Fallgruppen, 9 Python-Methoden, 18 Kompakt-Browserblöcke, 5 Standaloneblöcke und 2 Legacy-Smoke-Blöcke erfolgreich. Details: TESTS.md und verification/kompakt/SUMMARY.json. Die visuelle/fachliche Freigabe ist hiervon getrennt.
+
+## Fortsetzung vom 22.10.2026
+
+Auf ausdrücklichen Auftrag werden die weiteren Softwarephasen ohne erneute Freigabefrage umgesetzt; Push erst nach Abschluss in Draft-PR #3. Der aktuelle Arbeitsstand ergänzt 36 aktive Einträge, konkrete Ressourcen-/Ereignisverträge, vier datierte Fenster, K1–K5, sicheren v1→v2-Archivumzug und 25 verwendbare Unterrichtskarten mit Datenmodellen. Ein 10,05 m kurzer Priel-Beobachtungssteg erschließt die Küstenvogel-/Kleintieransichten, ohne den 362,21-m-Hauptweg oder die Dorfabkürzung zu verlängern.
+
+Zwischenstand: bisherige 26 Node-Reihen, 14 Referenz-Regressionsgruppen und 29 neue Lern-/Daten-/Importgruppen erfolgreich. Ein erster realer UI-Lauf prüfte Aufgabenangebot, beide Konkurrenzläufe und aktive Nahbeobachtung. Vollständige neue Browser-, Paket-, Stabilitäts- und visuelle Prüfungen folgen vor dem Push. Alte Freigabesperren und Testergebnisse oben sind historisch, keine Aussage über den endgültigen Ausbau. Reale Hardware und Unterrichtspilot bleiben ausdrücklich ungeprüft.
