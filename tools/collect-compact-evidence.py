@@ -23,7 +23,7 @@ for folder,names in [('compact-browser',['result.json','standalone-result.json',
 for name in ['check-run.json','complete-compact/final-validation.json','complete-compact/runtime-freeze.json','complete-compact/source-access.json']:copy(work/name,Path(name).name)
 for p in (work/'complete-compact').glob('final-*.log'):copy(p,'logs/'+p.name)
 for p in (work/'complete-compact/attempts').rglob('*'):
- if p.is_file()and(p.name in ['result.json','run.log','overlap.png','floating-acorn.png']or p.suffix=='.log'):copy(p,'attempts/'+str(p.relative_to(work/'complete-compact/attempts')))
+ if p.is_file()and(p.name in ['result.json','run.log','overlap.png','floating-acorn.png','failure.png','failed-earned-fieldbook.json']or p.suffix=='.log'):copy(p,'attempts/'+str(p.relative_to(work/'complete-compact/attempts')))
 legacy=load(work/'browser-chromium-subpath/result.json');legacySingle=load(work/'browser-chromium/result.json')
 for r in [legacy,legacySingle]:assert not any(r.get(k)for k in ['failed','errors','consoleErrors','httpErrors'])
 nodeCount=lambda name:json.loads((work/('complete-compact/final-'+name+'.log')).read_text().strip().splitlines()[-1])['passed']

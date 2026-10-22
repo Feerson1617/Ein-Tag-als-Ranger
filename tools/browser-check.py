@@ -104,7 +104,7 @@ try:
             for taxon in ['galium_odoratum','urtica_dioica','fagus_sylvatica']:
                 page.locator('#missions').click()
                 page.locator('summary').filter(has_text='Fokustaxa im Gebiet aufsuchen').click()
-                page.locator(f'[data-focus-taxon="{taxon}"]').click()
+                page.locator(f'#panel button[data-focus-taxon="{taxon}"]').click()
                 page.wait_for_function("taxon=>document.getElementById('world').dataset.focusTaxon===taxon && !!document.getElementById('world').dataset.focusIndividual && !document.getElementById('field-note').disabled",arg=taxon,timeout=120000)
                 page.screenshot(path=str(out/f'live-{taxon}.png'),timeout=90000)
                 page.locator('#field-note').click()
@@ -297,7 +297,7 @@ try:
         if browser.is_connected():browser.close()
     except Exception:
         try:
-            result['failureDOM']=page.evaluate('''()=>{const rect=e=>{const r=e.getBoundingClientRect(),s=getComputedStyle(e);return {x:r.x,y:r.y,width:r.width,height:r.height,display:s.display,visibility:s.visibility,opacity:s.opacity,detailsOpen:e.closest('details')?.open,topElement:document.elementFromPoint(Math.max(0,Math.min(innerWidth-1,r.x+r.width/2)),Math.max(0,Math.min(innerHeight-1,r.y+r.height/2)))?.id};};return {viewport:[innerWidth,innerHeight],hidden:document.hidden,fonts:document.fonts.status,graphics:document.querySelector('#world').dataset.graphicsState,panelOpen:document.querySelector('#panel').open,controls:[...document.querySelectorAll('[data-focus-taxon]')].map(e=>({taxon:e.dataset.focusTaxon,...rect(e)})),animations:document.getAnimations().map(a=>({state:a.playState,time:a.currentTime})),panelRect:rect(document.querySelector('#panel')),panelScrollTop:document.querySelector('#panel-content').scrollTop};}''')
+            result['failureDOM']=page.evaluate('''()=>{const rect=e=>{const r=e.getBoundingClientRect(),s=getComputedStyle(e);return {x:r.x,y:r.y,width:r.width,height:r.height,display:s.display,visibility:s.visibility,opacity:s.opacity,detailsOpen:e.closest('details')?.open,topElement:document.elementFromPoint(Math.max(0,Math.min(innerWidth-1,r.x+r.width/2)),Math.max(0,Math.min(innerHeight-1,r.y+r.height/2)))?.id};};return {viewport:[innerWidth,innerHeight],hidden:document.hidden,fonts:document.fonts.status,graphics:document.querySelector('#world').dataset.graphicsState,panelOpen:document.querySelector('#panel').open,controls:[...document.querySelectorAll('button[data-focus-taxon]')].map(e=>({taxon:e.dataset.focusTaxon,...rect(e)})),animations:document.getAnimations().map(a=>({state:a.playState,time:a.currentTime})),panelRect:rect(document.querySelector('#panel')),panelScrollTop:document.querySelector('#panel-content').scrollTop};}''')
             failed_book=stored()
             if failed_book is not None:
                 (out/'failed-earned-fieldbook.json').write_text(json.dumps(failed_book,ensure_ascii=False,indent=2)+'\n')

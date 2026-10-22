@@ -9,12 +9,14 @@ assert stability['passed']and stability['actualElapsedSeconds']>=1200 and not st
 assert standalone['runtimeSourceHashes']==result['runtimeSourceHashes']==learn['runtimeSourceHashes']==stability['runtimeSourceHashes'],'Tested runtime sources differ'
 assert result.get('captures')and len(result.get('videos',[]))==2,'Actual synchronized images and two videos required'
 assert len([r for r in learn['captures']if r.get('taxon')])==37,'36 taxa and caterpillar renders required'
+contactFile=learning/'jay-contact-result.json';contact=json.loads(contactFile.read_text())if contactFile.exists()else None
+if contact:assert contact['passed']and not contact['errors']and contact['runtimeSourceHashes']==learn['runtimeSourceHashes'],'Fresh actual transport capture required'
 sha=lambda b:hashlib.sha256(b).hexdigest()
 for name,digest in result['runtimeSourceHashes'].items():assert sha((root/'dist'/name).read_bytes())==digest,'Runtime changed since browser check: '+name
 out=root/'outputs/Ranger-Kompakt-Abnahme'
 if out.exists():shutil.rmtree(out)
 out.mkdir(parents=True);items=[];cards=[];clips=[]
-for source,folder,records in [(reference,'reference',result['captures']+standalone['captures']+result['videos']),(learning,'learning',learn['captures'])]:
+for source,folder,records in [(reference,'reference',result['captures']+standalone['captures']+result['videos']),(learning,'learning',learn['captures']+(contact['captures']if contact else[]))]:
  target=out/folder;target.mkdir()
  for r in records:
   name=r['file'];assert Path(name).name==name;data=(source/name).read_bytes();assert sha(data)==r['sha256'],name;(target/name).write_bytes(data);relative=folder+'/'+name;items.append({**r,'file':relative});title=r.get('taxon')or name
@@ -26,6 +28,7 @@ for source,folder,records in [(reference,'reference',result['captures']+standalo
   else:cards.append(f'<figure><img loading="lazy" src="{html.escape(relative)}" alt="{html.escape(title)}"><figcaption>{html.escape(title)}</figcaption></figure>')
 for source,names,folder in [(reference,['result.json','standalone-result.json','earned-fieldbook.json'],'reference'),(learning,['result.json','layout-result.json','earned-all-families.json','downloaded-fieldbook.json','readable-report.txt','quota-recovered-draft.json'],'learning')]:
  for name in names:shutil.copyfile(source/name,out/folder/name)
+if contact:shutil.copyfile(contactFile,out/'learning/jay-contact-result.json')
 shutil.copytree(root/'outputs/Ranger-Kompakt-Lernpaket',out/'Lernpaket')
 shutil.copyfile(root/'work/compact-stability/result.json',out/'cloud-stability.json');shutil.copyfile(root/'outputs/Ranger-Kompakt.html',out/'Ranger-Kompakt.html')
 commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=root,text=True).strip();info={'sourceCommit':commit,'sourceDirty':bool(subprocess.check_output(['git','status','--porcelain'],cwd=root,text=True).strip()),'browserTestSourceCommit':result['sourceCommit'],'identicalRuntimeSources':True,'runtimeSourceHashes':result['runtimeSourceHashes'],'browser':result['browserVersion'],'buildManifest':json.loads((root/'outputs/Ranger-Kompakt/build-manifest.json').read_text()),'media':items,'scope':'Complete software preview; user authorized continued phases and final push. Draft only; no merge/deployment/release. Real iPad 9/Safari/iPadOS 27, biology review and classroom pilot unverified.'}
