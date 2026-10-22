@@ -44,6 +44,8 @@ for q in (work/'final-qa').glob('*.log'):copy(q,'logs/'+q.name)
 add_folder(work/'qa-correction/coastal-tests','compact-node/coastal-tests')
 profile=work/'qa-correction/final-legacy-m3'
 if profile.exists():add_folder(profile,'legacy-m3-profile')
+legacy_ui=work/'qa-correction/final-legacy-ui'
+if legacy_ui.exists():add_folder(legacy_ui,'legacy-ui-resilience')
 for name in ['Arbeitsblaetter.html','Lehrkraefte.html','Arbeitsblaetter.pdf','Lehrkraefte.pdf','build-info.json']:
  copy(root/'outputs/Ranger-Kompakt-Lernpaket'/name,'materials/'+name)
 for filename in ['check-run.json','v020-check-summary.json']:
