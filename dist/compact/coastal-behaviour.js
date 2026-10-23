@@ -8,11 +8,11 @@ const point=a=>({x:a.x,y:a.y,z:a.z});
 const transition=(a,phase,time)=>{a.behaviorPhase=phase;a.phaseStartedAt=time;};
 function walk(a,target,speed,dt){const d=Math.hypot(target.x-a.x,target.z-a.z),move=Math.min(d,speed*dt);if(d>1e-8){a.x+=(target.x-a.x)/d*move;a.z+=(target.z-a.z)/d*move;}a.y=terrainHeight(a.x,a.z);a.walkDistance=(a.walkDistance||0)+move;return Math.max(0,d-move);}
 function pose(a,goal,dt){a.pose||={pitch:0,yaw:0,crouch:0};a.pose.pitch=approach(a.pose.pitch,goal.pitch,2.2*dt);a.pose.yaw=approach(a.pose.yaw,goal.yaw,2.2*dt);a.pose.crouch=approach(a.pose.crouch,goal.crouch,.8*dt);a.pose.billPitch=approach(a.pose.billPitch||0,goal.billPitch||0,2.2*dt);a.pose.clawPitch=approach(a.pose.clawPitch||0,goal.clawPitch||0,1.5*dt);}
-function preyPoint(prey){return {x:prey.x,y:prey.y+(prey.taxon==='mytilus_edulis'?(.05+.46*Math.cos(prey.shellOpening||0)-.06*Math.sin(prey.shellOpening||0))*prey.size/1.75:prey.size*.07),z:prey.z+(prey.taxon==='mytilus_edulis'?(.46*Math.sin(prey.shellOpening||0)+.06*Math.cos(prey.shellOpening||0))*prey.size/1.75:0)};}
+function preyPoint(prey,revision=1){const rimOffset=revision>=6?0:.06;return {x:prey.x,y:prey.y+(prey.taxon==='mytilus_edulis'?(.05+.46*Math.cos(prey.shellOpening||0)-rimOffset*Math.sin(prey.shellOpening||0))*prey.size/1.75:prey.size*.07),z:prey.z+(prey.taxon==='mytilus_edulis'?(.46*Math.sin(prey.shellOpening||0)+rimOffset*Math.cos(prey.shellOpening||0))*prey.size/1.75:0)};}
 function beginFlight(a,target,time){a.flight={start:point(a),target:{x:target.x,y:terrainHeight(target.x,target.z),z:target.z},elapsed:0,duration:Math.hypot(target.x-a.x,target.z-a.z)/3.5+1};a.supportId=null;transition(a,'flight',time);a.activity='flying';}
 function flight(a,dt,time){const f=a.flight;f.elapsed=Math.min(f.duration,f.elapsed+dt);const t=f.elapsed/f.duration,e=t*t*(3-2*t);a.x=f.start.x+(f.target.x-f.start.x)*e;a.z=f.start.z+(f.target.z-f.start.z)*e;a.y=f.start.y+(f.target.y-f.start.y)*e+Math.sin(Math.PI*t)*2;a.heading=Math.atan2(f.target.z-f.start.z,f.target.x-f.start.x);a.activity='flying';pose(a,{pitch:0,yaw:0,crouch:.15},dt);if(t===1){a.supportId='ground:coastal-rest-or-feeding';a.flight=null;transition(a,'waiting',time);}}
-function targetFor(a,p,prey){
- const target=preyPoint(prey),goal=a.taxon==='carcinus_maenas'?crabContactPose(a,target.y):contactPose(a,target.y),offset=a.taxon==='carcinus_maenas'?clawPoint({...a,x:0,z:0,heading:0,pose:goal}):billPoint({...a,x:0,z:0,heading:0,pose:goal}),heading=Math.atan2(target.z-a.z,target.x-a.x)-Math.atan2(offset.z,offset.x);a.heading=heading;
+function targetFor(a,p,prey,revision){
+ const target=preyPoint(prey,revision),goal=a.taxon==='carcinus_maenas'?crabContactPose(a,target.y):contactPose(a,target.y),offset=a.taxon==='carcinus_maenas'?clawPoint({...a,x:0,z:0,heading:0,pose:goal}):billPoint({...a,x:0,z:0,heading:0,pose:goal}),heading=Math.atan2(target.z-a.z,target.x-a.x)-Math.atan2(offset.z,offset.x);a.heading=heading;
  return {x:target.x-Math.cos(heading)*offset.x+Math.sin(heading)*offset.z,z:target.z-Math.sin(heading)*offset.x-Math.cos(heading)*offset.z};
 }
 function preyMatches(a,p,resource){return p.alive&&(resource==='shared-mussels'?p.taxon==='mytilus_edulis':resource==='shrimp'?p.taxon==='crangon_crangon':p.resourceClass===resource);}
@@ -40,11 +40,11 @@ function oneStep(state,a,dt,time,waterAt,emit){
  if(!prey){const reserved=new Set(ecology.actors.filter(p=>p!==a&&p.behaviorPhase!=='departing').map(p=>p.targetId));prey=food.filter(p=>!reserved.has(p.id)).sort((p,q)=>Math.hypot(p.x-a.x,p.z-a.z)-Math.hypot(q.x-a.x,q.z-a.z))[0];a.targetId=prey?.id;transition(a,'waiting',time);}
  if(!prey||!ecology.resources[profile.resource]?.amount){a.activity='resting';pose(a,{pitch:0,yaw:0,crouch:0},dt);return;}
  if(a.behaviorPhase==='handling'&&prey.taxon==='mytilus_edulis')prey.shellOpening=Math.min(.5,(time-a.phaseStartedAt)/profile.handling*.5);
- const target=preyPoint(prey),preyDepth=waterAt(time).waterLevel-terrainHeight(prey.x,prey.z),suitable=preyDepth>=profile.depth[0]&&preyDepth<=profile.depth[1];
+ const target=preyPoint(prey,state.modelRevision),preyDepth=waterAt(time).waterLevel-terrainHeight(prey.x,prey.z),suitable=preyDepth>=profile.depth[0]&&preyDepth<=profile.depth[1];
  if(!suitable){a.activity='resting';pose(a,{pitch:0,yaw:0,crouch:0},dt);if(a.behaviorPhase!=='waiting')transition(a,'waiting',time);return;}
  if(a.behaviorPhase==='waiting'){transition(a,'approaching',time);a.approachStartedAt=time;if(state.modelRevision>=5){a.feedingPreyId=prey.id;a.feedingEventId=`${state.worldVersion}:${ecology.window}:feeding:${a.id}:${prey.id}:${time.toFixed(9)}`;}}
  if(isCrab)pose(a,crabContactPose(a,target.y),dt);
- const bodyTarget=targetFor(a,profile,prey),remaining=walk(a,bodyTarget,isCrab?COASTAL_SPEED_LIMITS.crab:COASTAL_SPEED_LIMITS.birdWalk,dt);
+ const bodyTarget=targetFor(a,profile,prey,state.modelRevision),remaining=walk(a,bodyTarget,isCrab?COASTAL_SPEED_LIMITS.crab:COASTAL_SPEED_LIMITS.birdWalk,dt);
  if(a.behaviorPhase==='approaching'){
   a.activity='approaching';if(!isCrab)pose(a,contactPose(a,target.y),dt);
   if(remaining<.003)transition(a,'searching',time);return;

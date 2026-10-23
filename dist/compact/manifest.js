@@ -1,5 +1,5 @@
 import { TAXA } from './taxa.js';
-export const MODEL_REVISION=5;
+export const MODEL_REVISION=6;
 export const WORLD_VERSION='ranger-compact-v2';
 export const STORAGE_KEY='ranger-compact-fieldbook-v2';
 export const MANIFEST=Object.freeze({

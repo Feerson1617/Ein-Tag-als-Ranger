@@ -7,11 +7,11 @@ p=argparse.ArgumentParser();p.add_argument('--plan',default='work/final-qa-round
 load=lambda name:json.loads((root/name).read_text());sha=lambda path:hashlib.sha256(path.read_bytes()).hexdigest();commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=root,text=True).strip();assert not subprocess.check_output(['git','status','--porcelain'],cwd=root,text=True).strip(),'Source must be clean'
 plan=load(a.plan+'/result.json');freeze=load(a.plan+'/runtime-freeze.json');preflight=load(a.plan+'/preflight.json');review=load(a.review);ci=load(a.ci)
 assert plan['sourceCommit']==freeze['runtimeCommit']==preflight['sourceCommit']==review['sourceCommit']==ci['head']==commit
-assert plan['complete'] and preflight['complete'] and len(plan['checks'])==18,'The full original plan plus three explicit round-2 browser scenarios must have completed'
+assert plan['complete'] and preflight['complete'] and len(plan['checks'])==19,'The full original plan plus four explicit round-2 browser scenarios must have completed'
 assert plan['arrivalPlan']['walkWallBudgetSeconds']==900,'The original traversal contract remains unchanged'
 g=ModuleGraph(root/'dist','compact/main.js');hashes={n:sha(root/'dist'/n)for n in sorted(set(g.modules)|g.assets|{'kompakt.html','compact/style.css','icon.svg'})};assert hashes==freeze['sourceHashes']
 standalone=audit_standalone(root,root/'outputs/Ranger-Kompakt.html');web=load('outputs/Ranger-Kompakt/build-manifest.json');materials=load('outputs/Ranger-Kompakt-Lernpaket/build-info.json');assert web['sourceCommit']==materials['sourceCommit']==commit and not web['sourceDirty'] and not materials['sourceDirty'];assert materials.get('print');assert f'<meta name="compact-build" content="{commit}; dirty=false">' in (root/'outputs/Ranger-Kompakt.html').read_text()
-for directory in ['work/qa-correction/final-feeding','work/round2/final-detail-realtime','work/round2/final-event-integrity','work/round2/final-forest']:
+for directory in ['work/qa-correction/final-feeding','work/round2/final-detail-realtime','work/round2/final-event-integrity','work/round2/final-forest','work/round2/final-detail-lod']:
  r=load(directory+'/result.json');assert r['sourceCommit']==commit and r['htmlSHA256']==standalone['htmlSHA256'],directory
  if 'runtimeSourceHashes'in r:assert r['runtimeSourceHashes']==hashes,directory
 assert set(row['id']for row in review['results'])=={*(f'F{i:02}'for i in range(1,14)),*(f'N{i:02}'for i in range(1,8))}
@@ -29,18 +29,18 @@ def copy(source,destination):
  src=root/source;dest=out/destination;assert src.exists(),source;dest.parent.mkdir(parents=True,exist_ok=True)
  if src.is_dir():shutil.copytree(src,dest)
  else:shutil.copyfile(src,dest)
-copy('work/round2/INPUT-REVIEW.json','EINGANGSDATEIEN.json');copy('work/round2/FAILED-ATTEMPTS.json','FEHLVERSUCHE.json');copy('work/round2/attempt-cf8006','Zwischenversuche/Unterbrochener-Plan-cf8006');copy(a.plan,'Pruefplan');copy(a.review,'SICHTPRUEFUNG.json');copy(a.ci,'CI-RESULT.json');copy('verification/kompakt-runde2/original-fixtures','Originalfixtures');copy('verification/kompakt-runde2/baseline-forest','Vorher-Wald-1b51e7c');copy('docs/kompakt','Dokumentation');copy('outputs/Ranger-Kompakt.html','Ranger-Kompakt.html');copy('outputs/Ranger-Kompakt-Lernpaket','Lernpaket')
+copy('work/round2/INPUT-REVIEW.json','EINGANGSDATEIEN.json');copy('work/round2/FAILED-ATTEMPTS.json','FEHLVERSUCHE.json');copy('work/round2/attempt-cf8006','Zwischenversuche/Unterbrochener-Plan-cf8006');copy('work/round2/attempt-58985fa','Zwischenversuche/Unterbrochener-Plan-58985fa');copy(a.plan,'Pruefplan');copy(a.review,'SICHTPRUEFUNG.json');copy(a.ci,'CI-RESULT.json');copy('verification/kompakt-runde2/original-fixtures','Originalfixtures');copy('verification/kompakt-runde2/baseline-forest','Vorher-Wald-1b51e7c');copy('docs/kompakt','Dokumentation');copy('outputs/Ranger-Kompakt.html','Ranger-Kompakt.html');copy('outputs/Ranger-Kompakt-Lernpaket','Lernpaket')
 for folder in ['compact-regressions','compact-learning','compact-learning-standalone','compact-source','compact-browser','compact-stability','browser-chromium-subpath','browser-chromium']:
  copy('work/'+folder,'Aktuelle-Pruefungen/'+folder)
 for name in ['final-feeding','final-arrival','final-growth','final-imports','final-habitats','final-habitat-revision','final-print','coastal-tests']:
  copy('work/qa-correction/'+name,'Aktuelle-Pruefungen/'+name)
-for name in ['final-event-integrity','final-forest','final-detail-realtime','final-profile']:
+for name in ['final-event-integrity','final-forest','final-detail-realtime','final-detail-lod','final-profile']:
  copy('work/round2/'+name,'Aktuelle-Pruefungen/'+name)
 for row in preflight['checks']:copy(row['log'],'Vorpruefung-Logs/'+Path(row['log']).name)
 for row in load('work/check-run.json')['results']:
  for name in [('final-check-output.txt' if row['check']=='field' else row['check']+'-check-output.txt'),row['check']+'-check-errors.txt']:copy('work/'+name,'Legacy-Node-Logs/'+name)
 for name in ['check-run.json','v020-check-summary.json']:copy('work/'+name,'Legacy-Node-Logs/'+name)
-for name in ['sources','n05-baseline-browser','n05-browser','n05-full-imports','expanded-original-imports-preflight','forest-before-attempt1','forest-current-draft','f02-detail-draft','f02-detail-zoom','profile-baseline','n06-linux','n06-linux-node24.21','original-ambiguous-import-preflight','original-ambiguous-import-attempt2','preflight-compact','transition-smoke','transition-smoke-attempt2','transition-smoke-attempt3']:
+for name in ['sources','n05-baseline-browser','n05-browser','n05-full-imports','expanded-original-imports-preflight','forest-before-attempt1','forest-current-draft','f02-detail-draft','f02-detail-zoom','profile-baseline','n06-linux','n06-linux-node24.21','original-ambiguous-import-preflight','original-ambiguous-import-attempt2','preflight-compact','transition-smoke','transition-smoke-attempt2','transition-smoke-attempt3','detail-lod-before','detail-lod-before-attempt2','detail-lod-before-attempt3','detail-lod-after','detail-hollow-valve','transition-smoke-revision6','preflight-shell6']:
  copy('work/round2/'+name,'Zwischenversuche/'+name)
 for path in (root/'work/round2').glob('*.log'):copy(path.relative_to(root),'Zwischenversuche/Logs/'+path.name)
 artifacts={}

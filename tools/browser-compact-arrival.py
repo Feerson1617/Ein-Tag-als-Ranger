@@ -66,7 +66,10 @@ def start_window(page,id,realtime=False):
  assert {k:fresh['ecology']['resources'][k]for k in resources}=={'small-juveniles':3,'small-worms':3,'shrimp':5,'shared-mussels':18}
  pointer(page,page.locator(('[data-realtime="'if realtime else'[data-behavior="')+id+'"]'))
  page.wait_for_function('(id)=>document.querySelector("#world").dataset.modelObservation===id && document.querySelector("#world").dataset.renderRevision===document.querySelector("#world").dataset.sceneRevision',arg=id)
- if a.detail_realtime:pointer(page,page.locator('#behavior-detail'));page.wait_for_function('JSON.parse(document.querySelector("#world").dataset.feedingDetail||"null")!==null')
+ if a.detail_realtime:
+  pointer(page,page.locator('#behavior-detail'))
+  if not realtime:tick(page,.025) # First explicit fine step assigns the actual prey target at time zero.
+  page.wait_for_function('JSON.parse(document.querySelector("#world").dataset.feedingDetail||"null")!==null')
  if not realtime and page.locator('#binocular').get_attribute('aria-pressed')!='true':pointer(page,page.locator('#binocular'))
  row={'id':id,'realtime':realtime,'beforeNewContext':before,'freshContext':fresh,'captures':[],'samples':[],'startedWall':time.monotonic()};result['sequences'].append(row);save();return row
 def capture(page,row,s,phase):
@@ -106,6 +109,7 @@ def sequence(page,row):
   for capture in row['captures']:
    if capture['phase']=='after-departure':continue
    detail=capture['sample']['detail'];assert detail and detail['individualId']==row['id'] and detail['preyId']==row['preyId'];assert detail['eventId']==event['id'];assert detail['runId']==row['freshContext']['runId'];assert detail['sharedLiveSceneNodes'] and detail['preyGeometryUnscaled'] and detail['didacticMagnification']
+   if capture['phase']=='handling':assert detail['preyVisible'],'The actual contact prey must render in the magnified view'
  row.update(event=event,actualSeconds=time.monotonic()-started,passed=True);save()
 
 def begin_video(page):

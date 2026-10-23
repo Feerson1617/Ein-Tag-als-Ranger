@@ -36,7 +36,7 @@ check('F02 contact is reproduced on the actual head/claw and prey meshes, with p
   if(model.birdLegs)for(const leg of model.birdLegs){leg.foot.updateMatrixWorld(true);const foot=leg.foot.getWorldPosition(new THREE.Vector3());assert.ok(Math.abs(foot.y-a.y)<.002,'Stance foot not on local sediment');}
  }
 });
-check('F02 revision-5 encounter identity persists from approach into the actual acquired event and one concrete prey moves towards the mouth',()=>{
+check('F02 revision-5+ encounter identity persists from approach into the actual acquired event and one concrete prey moves towards the mouth',()=>{
  const s=world(123),first=new Map(),completed=new Set();
  for(let i=0;i<4800&&completed.size<ids.length;i++){
   stepReference(s,.025,{x:63,z:-12});stepEcology(s,.025,{x:63,z:-12});
@@ -51,6 +51,11 @@ check('F02 revision-5 encounter identity persists from approach into the actual 
   }
  }
  assert.deepEqual([...completed].sort(),[...ids].sort());
+});
+check('F02 opened concrete mussel valves reveal the same tissue mesh instead of overlapping solid shells',()=>{
+ const shell=createOrganism('mytilus_edulis'),tissue=shell.tissue,scale=shell.scale.x;
+ const firstHit=opening=>{for(const valve of shell.shellValves)valve.rotation.x=valve.userData.side*opening;shell.updateMatrixWorld(true);return new THREE.Raycaster(new THREE.Vector3(.02*scale,scale,.001*scale),new THREE.Vector3(0,-1,0)).intersectObject(shell,true)[0]?.object;};
+ assert.notEqual(firstHit(0),tissue,'Closed valves must cover their tissue');assert.equal(firstHit(.4),tissue,'Opening must expose the real tissue through the gape');assert.equal(firstHit(.5),tissue);assert.equal(shell.tissue,tissue);
 });
 check('F03 the original 60-Hz jumps are present in the baseline and absent under physical speed bounds',()=>{const old=JSON.parse(fs.readFileSync(new URL('../verification/kompakt-korrektur/baseline/reconstructed-audit.json',import.meta.url))).coastal[0];for(const id of ['compact-oystercatcher','compact-crab','compact-bee'])assert.ok(old.jumps[id].distance>.5);const now=scenarios[0].maximumMetersPerSecond;assert.ok(now['compact-crab']<.038);assert.ok(now['compact-bee']<2.8);assert.ok(now['compact-oystercatcher']<6);});
 check('F02 zero real prey cannot produce a feeding event or spend a fictional resource',()=>{const s=world(123);for(const key of ['small-juveniles','small-worms','shrimp','shared-mussels'])s.ecology.resources[key].amount=0;for(const a of s.ecology.actors)if(['mytilus_edulis','hediste_diversicolor','crangon_crangon'].includes(a.taxon))a.alive=false;for(let i=0;i<1200;i++){stepReference(s,.1,{x:0,z:0});stepEcology(s,.1);}assert.equal(successful(s).length,0);assert.throws(()=>requireFour(successful(s)));});

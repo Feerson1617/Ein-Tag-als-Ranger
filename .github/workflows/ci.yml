@@ -125,6 +125,7 @@ jobs:
       - run: python -m pip install -r tools/requirements-dev.txt
       - run: python -m playwright install --with-deps chromium
       - run: python tools/build-compact.py && python tools/verify-compact.py
+      - run: python tools/browser-compact-detail-lod.py --output work/qa-correction/detail-lod
       - run: python tools/browser-compact-event-integrity.py --output work/qa-correction/event-integrity
       - run: python tools/browser-compact-imports.py
       - run: python tools/browser-compact-feeding.py

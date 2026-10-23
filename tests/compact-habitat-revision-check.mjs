@@ -16,6 +16,7 @@ const seeds=[20260825,1,42,20261022],results=[];
 for(const seed of seeds){
  for(const revision of[1,2,3]){const actual=samples(state(seed,revision)),historical=samples(unchangedHistoricalState(seed,revision)),comparison=compareHistorical(actual,historical);historicalComparisons.push({seed,revision,...comparison,oldDigest:createHash('sha256').update(JSON.stringify(historical)).digest('hex'),currentDigest:createHash('sha256').update(JSON.stringify(actual)).digest('hex')});}
  assert.deepEqual(samples(state(seed,5)),samples(state(seed,4)),'Revision 5 visual refinement preserves every revision-4 plant, tree and support');
+ assert.deepEqual(samples(state(seed,6)),samples(state(seed,5)),'Revision 6 shell/contact refinement preserves every revision-5 plant, tree and support');
  const before=state(seed,3),after=state(seed,4),f=floodingStatistics(after),old=floodingStatistics(before),byId=new Map(before.plants.map(p=>[p.id,p]));
  assert.deepEqual(after.plants.map(p=>p.id),before.plants.map(p=>p.id),'Arrangement preserves every existing individual, count and iteration order');
  assert.deepEqual(after.trees.slice(0,3),before.trees.slice(0,3));assert.deepEqual(after.supports,before.supports);
