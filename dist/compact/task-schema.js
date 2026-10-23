@@ -1,6 +1,7 @@
 import { DETERMINATION_CHOICES,OBSERVABLE_FEATURES } from './determination.js';
 import { KEY_OPTIONS } from './catalog.js';
 import { FOOD_EDGES } from './learning-models.js';
+import { eventReference,selectedEventRows } from './evidence.js';
 
 const object=v=>v!==null&&typeof v==='object'&&!Array.isArray(v);
 const features=['spatulate-tip',...OBSERVABLE_FEATURES,...new Set(Object.values(KEY_OPTIONS).flatMap(k=>[...k.correct,...k.wrong]))];
@@ -30,7 +31,11 @@ export function validateTaskCollection(collection,learning,records){
   if(a.features!==undefined)list(a.features,mission+'.features',features);
   if(a.criteria!==undefined)list(a.criteria,mission+'.criteria',criteria);
   for(const [key,rows]of [['recordId',records],['controlId',learning.experiments],['competitorId',learning.experiments],['lowId',learning.protocols],['highId',learning.protocols]])if(a[key]!==undefined)reference(a[key],rows,mission+'.'+key);
-  for(const [key,rows]of [['eventIds',records.flatMap(r=>r.events||[])],['evidenceIds',records]])if(a[key]!==undefined){list(a[key],mission+'.'+key);for(const id of a[key])reference(id,rows,mission+'.'+key);}
+  if(a.evidenceIds!==undefined){list(a.evidenceIds,mission+'.evidenceIds');for(const id of a.evidenceIds)reference(id,records,mission+'.evidenceIds');}
+  if(a.eventIds!==undefined){
+   list(a.eventIds,mission+'.eventIds');const selected=new Set();
+   for(const id of a.eventIds){const rows=selectedEventRows(records,[id]);if(!rows.length)throw Error('Aufgabenbezug fehlt: '+mission+'.eventIds.');for(const {record,event}of rows){const key=eventReference(record,event);if(selected.has(key))throw Error('Doppelter Vorgangsbezug: '+mission+'.eventIds.');selected.add(key);}}
+  }
   if(a.determinations!==undefined){
    if(!Array.isArray(a.determinations))throw Error('Ungültige Bestimmungsantwort.');
    for(const d of a.determinations){if(!object(d))throw Error('Ungültige Bestimmungsantwort.');for(const key of ['recordId','choice','limit'])if(d[key]!==undefined)string(d[key],'Bestimmungsantwort.'+key,key==='choice'?choices:key==='limit'?limits:null);if(d.recordId)reference(d.recordId,records,'Bestimmungsantwort.recordId');if(d.features!==undefined)list(d.features,'Bestimmungsantwort.features',features);}

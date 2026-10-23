@@ -3,6 +3,7 @@ import { stationProtocolsIssue,evaluateStationComparison } from '../station-prot
 import { validateLearning,emptyLearning } from './missions.js';
 import { observationIssue } from './observation-schema.js';
 import { identityInventory,eventIssue } from './evidence.js';
+import { validateSceneContexts } from './observation-context.js';
 const OLD_KEY='ranger-compact-fieldbook-v1',OLD_VERSION='ranger-compact-reference-v1';
 const object=v=>v&&typeof v==='object'&&!Array.isArray(v);
 function inspect(v,depth=0){if(depth>18)throw Error('Datei zu stark verschachtelt.');if(typeof v==='string'&&v.length>20000)throw Error('Textfeld zu lang.');if(Array.isArray(v)){if(v.length>10000)throw Error('Zu viele Datensätze.');v.forEach(x=>inspect(x,depth+1));}else if(object(v))for(const [k,x]of Object.entries(v)){if(['__proto__','prototype','constructor'].includes(k))throw Error('Unzulässiger Datenschlüssel.');inspect(x,depth+1);}}
@@ -16,7 +17,7 @@ export function parseCompact(text){const d=read(text);
  if(d?.worldVersion===OLD_VERSION){validatePrevious(d);return {schemaVersion:2,worldVersion:WORLD_VERSION,records:[],archives:[],previousEditions:[d],learning:emptyLearning()};}
  if(!object(d)||![1,2].includes(d.schemaVersion)||d.worldVersion!==WORLD_VERSION||!Array.isArray(d.archives))throw Error('Keine passende Kompakt-Feldbuchdatei.');
  recordsValid(d.records,WORLD_VERSION);d.archives.forEach(validateArchive);const previous=d.previousEditions||[];if(!Array.isArray(previous))throw Error('Frühere Fassungen fehlen.');previous.forEach(validatePrevious);const learning=validateLearning(d.learning,d.records);
- const contexts=new Map();for(const r of [...d.records,...learning.protocols,...learning.measurements,...learning.samples,...learning.experiments,...(learning.perspectives||[])]){if(typeof r.runId!=='string'||!r.runId||!Number.isSafeInteger(r.initialSeed)||r.worldVersion!==WORLD_VERSION)throw Error('Unvollständiger Szenenkontext.');const context=JSON.stringify([r.initialSeed,r.worldVersion,r.window||'summer',r.modelRevision??1]);if(contexts.has(r.runId)&&contexts.get(r.runId)!==context)throw Error('Widersprüchlicher Szenenkontext im selben Rundgang.');contexts.set(r.runId,context);}
+ const rows=[...d.records,...learning.protocols,...learning.measurements,...learning.samples,...learning.experiments,...(learning.perspectives||[])];for(const r of rows)if(typeof r.runId!=='string'||!r.runId||!Number.isSafeInteger(r.initialSeed)||r.worldVersion!==WORLD_VERSION)throw Error('Unvollständiger Szenenkontext.');validateSceneContexts(rows);
  return {schemaVersion:2,worldVersion:WORLD_VERSION,records:d.records,archives:d.archives,previousEditions:previous,learning};
 }
 function validateArchive(a){if(!object(a)||![undefined,3].includes(a.schemaVersion)||!object(a.entries)||!Array.isArray(a.interactions))throw Error('Unbekanntes Altfeldbuch.');for(const e of Object.values(a.entries))if(!object(e)||!Number.isFinite(e.found)||!Array.isArray(e.behaviors)||e.behaviors.some(x=>typeof x!=='string'))throw Error('Ungültiger Archivfund.');if(a.learning!==undefined&&(!object(a.learning)||!Array.isArray(a.learning.observations)||!object(a.learning.missions)))throw Error('Ungültiger historischer Missionsstand.');const issue=stationProtocolsIssue(a.learning?.observations||[]);if(issue)throw Error(issue);return a;}

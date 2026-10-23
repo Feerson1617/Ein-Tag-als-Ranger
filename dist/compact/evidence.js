@@ -1,6 +1,18 @@
 import { createReferenceState } from './world-state.js';
 import { createEcology } from './ecology.js';
 const inventories=new Map();
+// Event counters restart with each model run. New task answers identify the
+// containing journal record as well; legacy event IDs still resolve on import.
+export const eventReference=(record,event)=>JSON.stringify(['record-event-v1',record.id,event.id]);
+function qualifiedEventReference(value){
+ if(typeof value!=='string'||!value.startsWith('["record-event-v1",'))return false;
+ try{const parts=JSON.parse(value);return Array.isArray(parts)&&parts.length===3&&parts[0]==='record-event-v1'&&parts.slice(1).every(x=>typeof x==='string'&&x.length>0)&&JSON.stringify(parts)===value;}catch{return false;}
+}
+export function selectedEventRows(records,references=[]){
+ const qualified=new Set(),legacy=new Set();
+ for(const reference of references)(qualifiedEventReference(reference)?qualified:legacy).add(reference);
+ return records.flatMap(record=>(record.events||[]).filter(event=>qualified.has(eventReference(record,event))||legacy.has(event.id)).map(event=>({record,event})));
+}
 export function identityInventory(seed,modelRevision=1){const cacheKey=seed+':'+modelRevision;if(inventories.has(cacheKey))return inventories.get(cacheKey);const state=createReferenceState(seed,modelRevision);createEcology(state);const rows=[...state.plants,...state.trees.map(t=>({...t,taxon:t.type==='beech'?'fagus_sylvatica':'quercus_robur'})),state.deer,state.bird,...state.ecology.actors],result={individuals:new Map(rows.map(r=>[r.id,r])),resources:state.ecology.resources,cloverIds:state.ecology.cloverIds,nettleId:state.ecology.nettleId};if(inventories.size>=16)inventories.delete(inventories.keys().next().value);inventories.set(cacheKey,result);return result;}
 export function eventIssue(record,event){
  if(!event||event.source!=='model-event'||event.window!==(record.window||'summer')||!Array.isArray(event.actors)||!event.actors.includes(record.individualId)||new Set(event.actors).size!==event.actors.length)return 'Ereignis und Beobachtungsindividuum passen nicht zusammen.';

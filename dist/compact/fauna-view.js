@@ -41,5 +41,6 @@ export async function createFaunaView(scene,state){
   }for(const foot of d.feet)foot.geometryGap=gaps.get(foot.part);a.needsUpdate=true;n.needsUpdate=true;
   const b=state.bird;bird.position.set(b.x,b.y,b.z);const flying=b.activity==='flying';bird.rotation.set(0,flying?Math.atan2(-(state.supports[b.targetIndex].z-b.z),state.supports[b.targetIndex].x-b.x)+Math.PI:0,flying?Math.PI/2:0);wings.forEach((w,i)=>{w.visible=flying;w.rotation.y=(i?1:-1)*Math.sin(b.phase*24)*.8;});headMesh.rotation.z=flying?-Math.PI/2:b.activity==='searching'?.06*Math.sin(b.phase*2):0;feetMesh.position.x=flying?.04*Math.min(1,b.flightTime/.3,Math.max(0,(3.5-b.flightTime)/.7)):0;
  }
- update();return {deer,bird,shadow,headMesh,feetMesh,birdCenter:()=>{bird.updateMatrixWorld(true);return new THREE.Vector3(.055,.12,0).applyMatrix4(bird.matrixWorld);},update};
+ function resetContext(){lastX=state.deer.x;lastZ=state.deer.z;cycle=0;update();}
+ update();return {deer,bird,shadow,headMesh,feetMesh,birdCenter:()=>{bird.updateMatrixWorld(true);return new THREE.Vector3(.055,.12,0).applyMatrix4(bird.matrixWorld);},update,resetContext};
 }

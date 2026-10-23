@@ -8,7 +8,7 @@ from browser_import_wait import choose_import_file
 import argparse,json,shutil,hashlib,time,traceback
 p=argparse.ArgumentParser();p.add_argument('--file-read-delay-ms',type=int,default=250);p.add_argument('--entry',default='Ranger-Kompakt.html');p.add_argument('--site',default='outputs');p.add_argument('--output',default='work/qa-correction/import-browser');a=p.parse_args()
 if not 0<=a.file_read_delay_ms<=5000:p.error('file read delay must be 0–5000 ms')
-root=Path(__file__).resolve().parents[1];out=root/a.output;out.mkdir(parents=True,exist_ok=True);key='ranger-compact-fieldbook-v2';valid=json.loads((root/'verification/kompakt-v2/learning/earned-all-families.json').read_text());r={'entry':a.entry,'scope':'Rendered DOM plus actual WebGL boot of standalone HTML; imports/storage corruption are explicitly labelled fixtures, not newly earned mission evidence','fileReadLatencyFixtureMs':a.file_read_delay_ms,'responseWait':'Fresh preview DOM mutation, not stale text or an arbitrary sleep','checks':[],'errors':[],'passed':False,'htmlSHA256':hashlib.sha256((root/a.site/a.entry).read_bytes()).hexdigest()}
+root=Path(__file__).resolve().parents[1];out=root/a.output;out.mkdir(parents=True,exist_ok=True);key='ranger-compact-fieldbook-v2';valid=json.loads((root/'verification/kompakt-v2/learning/earned-all-families.json').read_text());r={'entry':a.entry,'scope':'Rendered DOM plus actual WebGL boot of standalone HTML; imports/storage corruption are explicitly labelled fixtures, not newly earned mission evidence','baselineFixtureProvenance':'Two preserved historical own reconstructions, not claimed byte-identical to the unavailable independent archive originals','fileReadLatencyFixtureMs':a.file_read_delay_ms,'responseWait':'Fresh preview DOM mutation, not stale text or an arbitrary sleep','checks':[],'errors':[],'passed':False,'htmlSHA256':hashlib.sha256((root/a.site/a.entry).read_bytes()).hexdigest()}
 class Handler(SimpleHTTPRequestHandler):
  def log_message(self,*args):pass
 server=ThreadingHTTPServer(('127.0.0.1',0),partial(Handler,directory=str(root/a.site)));Thread(target=server.serve_forever,daemon=True).start();url=f'http://127.0.0.1:{server.server_port}/{a.entry}'
@@ -20,24 +20,74 @@ def boot(page):
  if a.file_read_delay_ms:page.add_init_script('const originalFileText=File.prototype.text;File.prototype.text=async function(){await new Promise(resolve=>setTimeout(resolve,'+str(a.file_read_delay_ms)+'));return originalFileText.call(this);};')
  page.goto(url);page.wait_for_function('document.querySelector("#world").dataset.ready==="true"',timeout=120000);page.locator('#start').click()
 def storage(page):return page.evaluate('(key)=>localStorage.getItem(key)',key)
+
+def context_fixture(before):
+ # Explicit synthetic import fixture built from a valid old fixed-individual
+ # record; it is never counted as newly acquired observation evidence.
+ old=json.loads(before)['records'][0];old['simulationTime']=240;old['events']=[]
+ old['note']='QA import fixture: old context; not a newly earned observation.'
+ new=json.loads(json.dumps(old));new.update(id='qa-new-context-record',runId='qa-local-import-run',simulationTime=6,note='QA import fixture: explicit local context; not a newly earned observation. <em data-qa-html-note="literal">Nur Text</em>')
+ new['sceneOrigin']={'kind':'local-observation-window','previousRunId':old['runId'],'previousSimulationTime':240,'siteId':'coast','x':63,'z':-12,'startSimulationTime':0}
+ return {'schemaVersion':2,'worldVersion':old['worldVersion'],'records':[old,new],'archives':[],'previousEditions':[],'learning':{'activeMission':None,'level':'gA','answers':{},'drafts':{},'protocols':[],'measurements':[],'samples':[],'experiments':[]}}
+
+def import_cases(before):
+ cases=[]
+ def add(name,data):cases.append((name,json.dumps(data,ensure_ascii=False)))
+ for name in ['repro-invalid-top-level-features.json','repro-impossible-coordinates.json']:
+  # Preserve these historical OWN-reconstruction fixture bytes. The two
+  # original independent archive files were not available for byte comparison.
+  cases.append((name,(root/'verification/kompakt-korrektur/baseline'/name).read_text()))
+ for field,value in [('features',{}),('recordId',3),('choice',[]),('limit',False)]:
+  d=json.loads(before);d['learning']['drafts']['K1']={field:value};add('K1-'+field,d)
+ for name,value in [('not-array',1),('null-item',[None]),('nested-features',[{'recordId':json.loads(before)['records'][0]['id'],'features':{}}])]:
+  d=json.loads(before);d['learning']['drafts']['K1']={'determinations':value};add('K1-determinations-'+name,d)
+ d=json.loads(before);d['learning']['drafts']['K2']={'experimentTide':{}};add('K2-experimentTide',d)
+ # Isolate records so unrelated strict K3 data cannot mask observation errors.
+ def isolated():
+  d=json.loads(before);d['records']=[d['records'][0]];d['learning']=context_fixture(before)['learning'];return d
+ for value in [0,False,'',None,'toString','constructor']:
+  d=isolated();d['records'][0]['window']=value;add('isolated-window-'+json.dumps(value),d)
+ for name,field,value in [('outside-world','x',999999),('unknown-method','method','invented-observation'),('unknown-individual','individualId','not-a-real-individual'),('wrong-site','siteId','compact-wadden'),('empty-run','runId',''),('negative-model-time','simulationTime',-1)]:
+  d=isolated();d['records'][0][field]=value;add(name,d)
+ d=isolated();d['records'][0]['x']+=1;add('fixed-plant-shifted-one-metre',d)
+ cases.extend([('invalid-json','{broken'),('null-top-level','null'),('array-top-level','[]')])
+ d=json.loads(before);overlap=json.loads(json.dumps(d['learning']['protocols'][0]));overlap['id']='qa-overlapping-protocol';d['learning']['protocols'].append(overlap);add('overlapping-protocol',d)
+ d=json.loads(before);d['learning']['samples'][0]['areaM2']+=.1;add('wrong-sample-area',d)
+ d=json.loads(before);d['learning']['experiments'][0]['result']['yield']+=1;add('invented-experiment-yield',d)
+ for name in ['own-run','wrong-location','unknown-site','backward-parent-time','missing-origin-in-run','changed-origin-in-run','cyclic-origin','nonzero-start','reused-run-id','null-origin','extra-origin-field']:
+  d=context_fixture(before);old,new=d['records'];origin=new['sceneOrigin']
+  if name=='own-run':origin['previousRunId']=new['runId']
+  elif name=='wrong-location':origin['x']=-60
+  elif name=='unknown-site':origin['siteId']='invented-coastal-site'
+  elif name=='backward-parent-time':origin['previousSimulationTime']=239
+  elif name in ['missing-origin-in-run','changed-origin-in-run']:
+   another=json.loads(json.dumps(new));another['id']='qa-context-copy';d['records'].append(another)
+   if name=='missing-origin-in-run':del new['sceneOrigin']
+   else:origin['previousSimulationTime']=241
+  elif name=='cyclic-origin':old['sceneOrigin']={**origin,'previousRunId':new['runId'],'previousSimulationTime':1200}
+  elif name=='nonzero-start':origin['startSimulationTime']=1
+  elif name=='reused-run-id':new['runId']=old['runId']
+  elif name=='null-origin':new['sceneOrigin']=None
+  elif name=='extra-origin-field':origin['unverifiedFlag']=True
+  add('sceneOrigin-'+name,d)
+ return cases
 with sync_playwright()as pw:
  b=pw.chromium.launch(headless=True,executable_path=shutil.which('chromium'),args=['--no-sandbox','--use-angle=swiftshader','--enable-unsafe-swiftshader']);ctx=b.new_context(viewport={'width':800,'height':600},accept_downloads=True);page=ctx.new_page()
  try:
   boot(page);page.locator('#journal-button').click();choose_import_file(page,{'name':'valid-acquired-v2.json','mimeType':'application/json','buffer':json.dumps(valid).encode()});page.locator('#apply-import').click();page.locator('#close').click()
   for mission in ['K1','K2','K3','K4','K5']:
    page.locator('#objective').click();page.locator(f'#panel [data-mission="{mission}"]').click();assert page.locator('#task-form').is_visible();assert not page.locator('#learning-status').inner_text();page.locator('#close').click()
-  r['checks'].append({'name':'valid older v2 imports through file input; K1-K5 actually render','passed':True});page.locator('#journal-button').click();before=storage(page);cases=[]
-  for name in ['repro-invalid-top-level-features.json','repro-impossible-coordinates.json']:cases.append((name,json.loads((root/'verification/kompakt-korrektur/baseline'/name).read_text())))
-  for field,value in [('features',{}),('recordId',3),('choice',[]),('limit',False)]:
-   d=json.loads(before);d['learning']['drafts']['K1']={field:value};cases.append(('K1-'+field,d))
-  d=json.loads(before);d['learning']['drafts']['K2']={'experimentTide':{}};cases.append(('K2-experimentTide',d))
-  # Isolate the observation: unrelated strict K3 protocols must not mask a
-  # permissive observation-window fallback. These are labelled import fixtures.
-  for value in [0,False,'',None,'toString','constructor']:
-   d=json.loads(before);d['records']=[d['records'][0]];d['records'][0]['window']=value;d['learning']={'activeMission':None,'level':'gA','answers':{},'drafts':{},'protocols':[],'measurements':[],'samples':[],'experiments':[]};cases.append(('isolated-window-'+json.dumps(value),d))
-  for name,d in cases:
-   choose_import_file(page,{'name':name+'.json','mimeType':'application/json','buffer':json.dumps(d).encode()});page.wait_for_function('!document.querySelector("#apply-import")&&document.querySelector("#import-preview").textContent.length>0');assert storage(page)==before;assert not page.locator('#apply-import').count();r['checks'].append({'name':name,'passed':True,'oldStorageByteIdentical':True,'message':page.locator('#import-preview').inner_text()});save()
-  page.screenshot(path=str(out/'invalid-import-rejected.png'));ctx.close()
+  r['checks'].append({'name':'valid older v2 imports through file input; K1-K5 actually render','passed':True});page.locator('#journal-button').click();before=storage(page)
+  for name,raw in import_cases(before):
+   choose_import_file(page,{'name':name+'.json','mimeType':'application/json','buffer':raw.encode()});page.wait_for_function('!document.querySelector("#apply-import")&&document.querySelector("#import-preview").textContent.length>0');assert storage(page)==before;assert not page.locator('#apply-import').count();r['checks'].append({'name':name,'passed':True,'oldStorageByteIdentical':True,'message':page.locator('#import-preview').inner_text()});save()
+  page.screenshot(path=str(out/'invalid-import-rejected.png'))
+  local_fixture=context_fixture(before);choose_import_file(page,{'name':'labelled-valid-local-context-fixture.json','mimeType':'application/json','buffer':json.dumps(local_fixture).encode()});page.locator('#apply-import').click()
+  assert json.loads(storage(page))==local_fixture
+  assert page.locator('[data-qa-html-note]').count()==0 and '<em data-qa-html-note="literal">Nur Text</em>' in page.locator('#panel-body').inner_text()
+  with page.expect_download()as dl:page.locator('#export').click()
+  exported=out/'valid-local-context-fixture-export.json';dl.value.save_as(str(exported));assert json.loads(exported.read_text())['records']==local_fixture['records']
+  choose_import_file(page,str(exported));page.locator('#apply-import').click();assert json.loads(storage(page))['records']==local_fixture['records']
+  r['checks'].append({'name':'labelled old and explicit local-context records survive native UI import/export/roundtrip with provenance and notes intact','passed':True,'fixtureNotEarnedEvidence':True,'export':exported.name,'sha256':hashlib.sha256(exported.read_bytes()).hexdigest()});save();ctx.close()
   bad=json.loads(json.dumps(valid));bad['learning']['drafts']['K1']['features']={};raw=json.dumps(bad,ensure_ascii=False);ctx=b.new_context(viewport={'width':800,'height':600},accept_downloads=True);ctx.add_init_script('if(localStorage.getItem('+json.dumps(key)+')===null)localStorage.setItem('+json.dumps(key)+','+json.dumps(raw)+');');page=ctx.new_page();boot(page);assert storage(page)==raw;page.locator('#journal-button').click()
   with page.expect_download()as dl:page.locator('#recovery-original').click()
   dl.value.save_as(str(out/'original-damaged-storage.json'));assert (out/'original-damaged-storage.json').read_text()==raw

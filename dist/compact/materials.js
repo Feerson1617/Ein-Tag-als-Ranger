@@ -1,6 +1,6 @@
 import { LESSON_RESOURCES,RESOURCE_SOURCES } from './lesson-resources.js';
-// Original teaching text. Source references are those supplied in the matrices;
-// the school PDFs were not available to this implementation.
+// Original teaching text and small factual source extractions. FA 2026 and the
+// 2017 guide were read; ETS original access remains blocked. See source audit.
 export const SOURCES={
  ...RESOURCE_SOURCES,
  flora:{title:'FloraWeb: ökologische Zeigerwerte',url:'https://www.floraweb.de/biologie-oekologie/anwendung-der-oekologie.html'},

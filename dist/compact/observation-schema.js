@@ -2,12 +2,13 @@ import { BOUNDS,zoneAt } from './layout.js';
 import { WINDOWS,CATALOG } from './catalog.js';
 import { identityInventory } from './evidence.js';
 import { MODEL_REVISION } from './manifest.js';
+import { originIssue } from './observation-context.js';
 export const observationSite=(x)=>x<-24?(x<-49?'compact-forest-core':'compact-forest-edge'):'compact-'+zoneAt(x);
 export function sceneFieldsIssue(row,{allowUndated=false}={}){
  if(row.window!==undefined&&(typeof row.window!=='string'||!Object.hasOwn(WINDOWS,row.window)))return 'Unbekanntes Beobachtungsfenster.';
  if(row.modelRevision!==undefined&&!Number.isInteger(row.modelRevision))return 'Ungültiger Modellstand.';
  if(!Number.isSafeInteger(row.initialSeed)||row.initialSeed<0||row.initialSeed>4294967295||typeof row.runId!=='string'||!row.runId||row.runId.length>200||!WINDOWS[row.window||'summer']||(!allowUndated||row.simulationTime!==undefined)&&(!Number.isFinite(row.simulationTime)||row.simulationTime<0||row.simulationTime>1e8)||!Number.isInteger(row.modelRevision??1)||(row.modelRevision??1)<1||(row.modelRevision??1)>MODEL_REVISION)return 'Ungültiger Rundgang, Modellstand oder Beobachtungszeitpunkt.';
- return null;
+ return originIssue(row);
 }
 export function observationIssue(row){
  const scene=sceneFieldsIssue(row);if(scene)return scene;

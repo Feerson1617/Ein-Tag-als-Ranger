@@ -9,10 +9,10 @@ import { createVegetationView,vegetationDetail } from '../dist/compact/vegetatio
 import * as THREE from '../dist/vendor/three.module.js';
 import { emptyLearning } from '../dist/compact/missions.js';
 import { parseCompact } from '../dist/compact/journal.js';
-const state=(seed,rev=3)=>{const s=createReferenceState(seed,rev);createEcology(s);return s;},rows=[];
+const state=(seed,rev=4)=>{const s=createReferenceState(seed,rev);createEcology(s);return s;},rows=[];
 let passed=0;const test=(name,fn)=>{fn();passed++;console.log('PASS '+name);};
 test('authored microhabitats and age structure preserve old identities and support trees',()=>{
- for(const seed of [123,20260825,20260826,987654]){
+ for(const seed of [20260825,1,42,20261022]){
   const a=state(seed,1),b=state(seed);assert.equal(new Set(b.plants.map(p=>p.id)).size,b.plants.length);
   for(const p of a.plants)assert(b.plants.some(q=>q.id===p.id&&q.taxon===p.taxon));
   assert.deepEqual(b.trees.slice(0,3),a.trees.slice(0,3));assert.deepEqual(new Set(b.trees.slice(3).map(t=>t.ageClass)),new Set(['young','mature','old']));
@@ -32,8 +32,8 @@ test('LOD keeps concrete matrices, nearby diagnostic plants and damaged-instance
  }
  assert.equal(vegetationDetail(40),'far');assert.equal(vegetationDetail(25),'middle');assert.equal(vegetationDetail(5),'near');assert.equal(v.meshes.reduce((n,m)=>n+m.count,0),s.plants.length);v.dispose();
 });
-test('normal high water leaves Keilmelde dry while lower marsh is reached; higher scenarios are separate',()=>{
- for(const row of rows){const f=row.flooding;assert.equal(f.halimione_portulacoides.submerged.normalHigh.count,0);assert(f.halimione_portulacoides.submerged.higher.count>0);assert.equal(f.festuca_rubra.submerged.normalHigh.count,0);assert(f.puccinellia_maritima.submerged.normalHigh.count>0);assert(f.salicornia_europaea.submerged.normalHigh.percent>80);assert(f.sporobolus_anglicus.submerged.normalHigh.percent>80);assert(f.halimione_portulacoides.surfaceRange[0]>f.puccinellia_maritima.surfaceRange[0]);}
+test('normal high water leaves Andel and Keilmelde dry while pioneers flood; absolute higher-water scenarios are separate',()=>{
+ for(const row of rows){const f=row.flooding;assert.equal(f.halimione_portulacoides.submerged.normalHigh.count,0);assert(f.halimione_portulacoides.submerged.higher.count>0);assert.equal(f.festuca_rubra.submerged.normalHigh.count,0);assert.equal(f.puccinellia_maritima.submerged.normalHigh.count,0);assert.equal(f.puccinellia_maritima.submerged.higher.percent,100);assert(f.salicornia_europaea.submerged.normalHigh.percent>80);assert(f.sporobolus_anglicus.submerged.normalHigh.percent>80);assert(f.halimione_portulacoides.surfaceRange[0]>f.puccinellia_maritima.surfaceRange[0]);}
 });
 test('historical revision 2 reconstructs its old plant coordinates; new terrain is explicitly revision 3',()=>{
  const a=state(123,2),b=state(123,3),p=a.plants.find(p=>p.taxon==='halimione_portulacoides'),q=b.plants.find(q=>q.id===p.id);assert.equal(p.x-q.x,8);assert(a.plants.length<b.plants.length);assert.equal(terrainHeight(8,0,2),1.7547694655894313);

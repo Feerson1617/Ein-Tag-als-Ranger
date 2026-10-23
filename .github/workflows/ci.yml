@@ -53,10 +53,16 @@ jobs:
       - run: python -m playwright install --with-deps chromium
       - run: node tests/kompakt-check.mjs
       - run: node tests/compact-learning-check.mjs
+      - run: node tests/compact-growth-boundary-check.mjs
+      - run: node tests/compact-observation-context-check.mjs work/qa-correction/context-node
+      - run: node tests/compact-event-reference-check.mjs work/qa-correction/event-reference
+      - run: node tests/compact-render-reset-check.mjs work/qa-correction/render-reset
       - run: node tests/compact-qa-check.mjs
       - run: node tests/compact-coastal-check.mjs work/qa-correction/coastal
       - run: node tests/compact-habitat-check.mjs work/qa-correction/habitats
+      - run: node tests/compact-habitat-revision-check.mjs work/qa-correction/habitat-revision
       - run: node tests/compact-pedagogy-check.mjs work/qa-correction/pedagogy
+      - run: node tests/compact-material-depth-check.mjs work/qa-correction/material-depth
       - run: python tools/build-compact.py && python tools/verify-compact.py
       - run: python tools/browser-compact-source.py
       - run: python tools/browser-compact.py
@@ -66,7 +72,9 @@ jobs:
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: ranger-compact-reference-evidence
-          path: work/compact-browser/
+          path: |
+            work/compact-browser/
+            work/qa-correction/
           retention-days: 7
 
   compact-learning:
@@ -88,6 +96,7 @@ jobs:
       - run: python tools/build-compact.py && python tools/verify-compact.py
       - run: python tools/browser-compact-learning.py --gallery
       - run: python tools/browser-compact-learning.py --site outputs --entry Ranger-Kompakt.html --output work/compact-learning-standalone
+      - run: python tools/browser-compact-growth.py
       - name: Preserve acquired learning evidence and actual active model renders
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
@@ -119,10 +128,38 @@ jobs:
       - run: python tools/browser-compact-imports.py
       - run: python tools/browser-compact-feeding.py
       - run: python tools/browser-compact-habitats.py
+      - run: python tools/browser-compact-habitat-revision.py --baseline verification/kompakt-endqa-20261023/baseline/habitats --baseline-fixed-gap verification/kompakt-endqa-20261023/baseline/habitats/fixed-gap --output work/qa-correction/habitat-revision
       - name: Preserve actual correction proof and failures
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: ranger-compact-correction-evidence
+          path: work/qa-correction/
+          retention-days: 7
+
+  compact-arrival-and-print:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '24.19.0'
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r tools/requirements-dev.txt
+      - run: python -m playwright install --with-deps chromium
+      - run: sudo apt-get update && sudo apt-get install -y poppler-utils
+      - run: python tools/build-compact.py && python tools/verify-compact.py
+      - run: python tools/browser-compact-arrival.py --output work/qa-correction/arrival-browser
+      - run: python tools/print-compact-materials.py --contact-sheets --audit-dir work/qa-correction/print-audit
+      - name: Preserve actual arrival, real-time video and fresh A4 evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: ranger-compact-arrival-print-evidence
           path: work/qa-correction/
           retention-days: 7

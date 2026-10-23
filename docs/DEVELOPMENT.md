@@ -22,6 +22,14 @@ Pillow prüft Bildpixel. Playwright steuert einen echten Browser; Chromium ist i
 dieser Cloud unter `/usr/bin/chromium` vorhanden. Auf anderen Maschinen mit
 `python -m playwright install chromium` einrichten. Keine historische Installation
 von Blender oder game-dev voraussetzen; für Spielstart und Prüfungen nicht nötig.
+Der frische A4-Druckaudit benötigt Poppler (`pdfinfo`, `pdftotext`, `pdftoppm`),
+unter Debian/Ubuntu aus `poppler-utils`. Kontaktbögen verwenden zusätzlich Pillow.
+FFmpeg erstellt bei Bedarf kompatible Videokopien ohne Änderung der Zeitfolge.
+Der Ankunftstest zeichnet die erste echte Nahrungssuchfolge über den nativen
+Canvas-Medienstream mit unveränderten Zeitstempeln auf. Die gesamte Wegsitzung
+wird durch Eingabetelemetrie und Bilder belegt. Ein verworfener Explorationslauf
+benötigte Playwright-FFmpeg; dessen blockierter Download und die lokale Prüfung
+mit bereits installiertem System-FFmpeg bleiben im Fehlversuchsarchiv dokumentiert.
 
 Erforderlich: Modulprüfungen, beide Builds/Paketverifikation und repräsentative
 Browserprüfung bei UI-Änderungen. Physisches Tablet und Unterrichtspilot sind
@@ -59,3 +67,23 @@ berichten. Browserausgaben liegen in `work/browser-*`, Node-Laufmetadaten in
 `work/check-run.json`. Gemeinsame Graphprüfung für Pages und Standalone in
 `tools/module_graph.py`: nichtliterale Imports und zyklische Graphen werden mit
 Fehler abgelehnt statt unvollständig veröffentlicht.
+
+Die Nachbesserungsrunde vom 23.10.2026 ist durch folgende zusätzliche Prüfungen
+wiederholbar. Der Gesamtplan verlangt einen sauberen Commit und läuft mit jeweils
+nur einem Browser; der Dauerlauf misst mindestens 20 echte Minuten nach Aufwärmen.
+
+```sh
+python3 tools/check-compact.py
+python3 tools/build-compact.py
+python3 tools/browser-compact-arrival.py
+python3 tools/print-compact-materials.py --contact-sheets --audit-dir work/qa-correction/final-print
+python3 tools/check-compact-corrections.py
+python3 tools/collect-compact-endqa.py
+```
+
+Der Ankunftstest geht den vollständigen Hauptweg per Tastatur/Maus ab. Er startet
+neue endliche Beobachtungsfenster ausschließlich über die sichtbare Oberfläche.
+Der zweite lange Aufenthalt verwendet ausdrücklich 1200 Modellsekunden; er gilt
+nicht als 20 Minuten eigener Wald- oder K1-Arbeit. Die erste Nahrungssuchfolge läuft
+in Echtzeit und bleibt als unbeschleunigtes Video erhalten. Historische Belege
+unter `verification/kompakt-korrektur/` werden nicht durch die neue Runde ersetzt.

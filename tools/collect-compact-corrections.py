@@ -5,7 +5,7 @@ root=Path(__file__).resolve().parents[1];work=root/'work';target=root/'verificat
 load=lambda p:json.loads(p.read_text());freeze=load(work/'final-qa/runtime-freeze.json');run=load(work/'final-qa/result.json');assert run['complete'],'Complete the entire declared browser plan first'
 rerun_path=work/'final-qa/reruns.json';reruns=load(rerun_path)if rerun_path.exists()else{'checks':[]};effective={r['name']:r for r in run['checks']}
 for r in reruns['checks']:effective[r['name']]=r
-reports=[('source',work/'compact-source/result.json'),('reference',work/'compact-browser/result.json'),('standalone',work/'compact-browser/standalone-result.json'),('learning-web',work/'compact-learning/result.json'),('learning-standalone',work/'compact-learning-standalone/result.json'),('stability',work/'compact-stability/result.json'),('feeding',work/'qa-correction/final-feeding/result.json'),('habitats',work/'qa-correction/final-habitats/result.json')]
+reports=[('source',work/'compact-source/result.json'),('reference',work/'compact-browser/result.json'),('standalone',work/'compact-browser/standalone-result.json'),('learning-web',work/'compact-learning/result.json'),('learning-standalone',work/'compact-learning-standalone/result.json'),('stability',work/'compact-stability/result.json'),('feeding',work/'qa-correction/final-feeding/result.json'),('habitats',work/'qa-correction/final-habitats/result.json'),('growth',work/'qa-correction/final-growth/result.json')]
 for name,path in reports:
  r=load(path);assert r['runtimeSourceHashes']==freeze['sourceHashes'],'Different measured runtime: '+name
 for name,digest in freeze['sourceHashes'].items():assert hashlib.sha256((root/'dist'/name).read_bytes()).hexdigest()==digest,'Runtime changed: '+name
@@ -32,7 +32,13 @@ for name,p in reports:
   for sequence in r['sequences']:
    for c in sequence['captures']:assert hashlib.sha256((p.parent/c['file']).read_bytes()).hexdigest()==c['sha256'],c['file']
   add_folder(p.parent,'feeding')
- if name=='habitats':add_folder(p.parent,'habitats')
+ if name=='growth':
+  for check in r['checks']:
+   for case in check.get('cases',[]):
+    if 'export'in case:
+     filename=case['export'];assert Path(filename).name==filename
+     assert hashlib.sha256((p.parent/filename).read_bytes()).hexdigest()==case['sha256'],'Changed native model export: '+filename
+ if name in ['habitats','growth']:add_folder(p.parent,name)
  if name=='stability':
   q=p.parent/'final.png'
   if q.exists():copy(q,'stability/final.png')

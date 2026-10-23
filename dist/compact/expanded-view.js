@@ -28,6 +28,8 @@ export async function createExpandedView(scene,state,world,reference){
  for(const a of state.ecology.actors){const model=a.taxon==='vulpes_vulpes'?fox:createOrganism(a.taxon,a.stage);if(a.taxon!=='vulpes_vulpes')model.scale.multiplyScalar(a.size/(a.taxon==='aglais_io'&&a.stage==='caterpillar'?.035:CATALOG[a.taxon].length));scene.add(model);models.set(a.id,model);roots.push(model);}
  for(const type of ['beech','oak']){const t=state.trees.find(t=>t.type===type);if(!t)throw Error('Baumstruktur fehlt: '+type);const taxon=type==='beech'?'fagus_sylvatica':'quercus_robur',sample={id:t.id,individualId:t.id,taxon,x:t.x+t.r,z:t.z,y:terrainHeight(t.x,t.z)+1.1,size:.5,treeId:t.id,aimY:terrainHeight(t.x,t.z)+1.25};const model=createOrganism(taxon);model.position.set(sample.x,sample.y,sample.z);scene.add(model);models.set(t.id,model);treeSamples.push(sample);}
  state.treeSamples=treeSamples;
+ const tissueOrigins=new Map([...models.values()].filter(m=>m.tissue).map(m=>[m,{position:m.tissue.position.clone(),quaternion:m.tissue.quaternion.clone(),scale:m.tissue.scale.clone()}]));
+ function resetContext(observer){for(const [m,home]of tissueOrigins){m.add(m.tissue);m.tissue.position.copy(home.position);m.tissue.quaternion.copy(home.quaternion);m.tissue.scale.copy(home.scale);m.tissue.visible=true;}update(observer);}
  const acorns=[],litter=[];
  for(let i=0;i<4;i++){const seed=new THREE.Mesh(new THREE.SphereGeometry(.009,8,5),new THREE.MeshStandardMaterial({color:'#9a774a',roughness:1}));seed.scale.set(1,1.5,1);seed.position.set(-38+i*.08,terrainHeight(-38,-9)+.012,-9);scene.add(seed);acorns.push(seed);}
  for(let i=0;i<6;i++){const leaf=new THREE.Mesh(leafGeometry(.12,.07),new THREE.MeshStandardMaterial({color:'#806047',side:THREE.DoubleSide,roughness:1}));leaf.position.set(-61+i*.035,terrainHeight(-61,-2.7)+.012,-2.7);scene.add(leaf);litter.push(leaf);}
@@ -57,5 +59,5 @@ export async function createExpandedView(scene,state,world,reference){
   if(world.water)world.water.position.y=e.tide.waterLevel;
  }
  function modelFor(individual){if(individual===state.deer.id)return reference.deer;if(individual===state.bird.id)return reference.bird;if(models.has(individual))return models.get(individual);const p=state.plants.find(p=>p.id===individual);if(!p)return null;const model=new THREE.Mesh(plantGeometry(p.taxon,1,state.ecology.window),new THREE.MeshStandardMaterial({vertexColors:true,side:THREE.DoubleSide,roughness:.9}));model.scale.setScalar(p.size);return model;}
- update();return {models,update,modelFor,fox,roots};
+ update();return {models,update,modelFor,fox,roots,resetContext};
 }
