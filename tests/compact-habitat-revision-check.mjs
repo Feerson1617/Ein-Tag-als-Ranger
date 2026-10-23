@@ -6,23 +6,16 @@ import { createEcology } from '../dist/compact/ecology.js';
 import { floodingStatistics } from '../dist/compact/habitats.js';
 import { nearestPath,terrainHeight } from '../dist/compact/layout.js';
 const state=(seed,revision)=>{const s=createReferenceState(seed,revision);createEcology(s);return s;};
-// Reproduced from immutable f92146876f4364a4fb78d30d9e9b190bbb7dc1f4, before
-// changing the runtime. Coordinates/IDs/sizes/angles, complete trees and bird
-// supports must remain reconstructible for old imported observation contexts.
-const historical={
- '1:20260825':'803b487d9f013ef5a4b6dbcc9f00a474971538755db40b0d04bbd0be3196ee56',
- '1:1':'7a289e242de462de97da3e08e3da9436518f6a19e27b371096677ff9f7dd326a',
- '1:42':'0bd3ee7c48d60a2d14299cc46920fb2747b7a8336a49dbdf6aaf9401c1a8f117',
- '1:20261022':'d7015e1c5e5945523ded93e842d09c35a681559c85534c827ff44b56fdaa3661',
- '3:20260825':'4b46a98b0a91c16a7d97c04a6ed23c6fd33512cc77f03ff2652d1b664eff446b',
- '3:1':'1d1b980830dc6856577bf4a4926e8615490ef395dcfdb8680acf1243ba2f61c9',
- '3:42':'c6bbf889f1e45d257af5363b0cea96c61e033c3b243768542051fa02fcafbf63',
- '3:20261022':'b3b7f1e00c2ce0ec27a514ff499028f1aa8082aa72c6f9aafb835fd92fcc93d1'
-};
+import {compareHistorical,unchangedHistoricalState,historicalSource,historicalTolerance} from './portable-historical-state.mjs';
+const historicalComparisons=[];
 const samples=s=>({plants:s.plants.map(({id,taxon,x,z,y,size,angle})=>({id,taxon,x,z,y,size,angle})),trees:s.trees,supports:s.supports});
+
+assert.doesNotThrow(()=>compareHistorical({x:1},{x:1+Number.EPSILON}));
+for(const [actual,expected]of [[{id:'changed'},{id:'old'}],[{ids:['b','a']},{ids:['a','b']}],[{x:1},{x:1+historicalTolerance.absolute*100}]])assert.throws(()=>compareHistorical(actual,expected));
 const seeds=[20260825,1,42,20261022],results=[];
 for(const seed of seeds){
- for(const revision of[1,2,3]){const digest=createHash('sha256').update(JSON.stringify(samples(state(seed,revision)))).digest('hex');assert.equal(digest,historical[`${revision===2?1:revision}:${seed}`],`Historical revision ${revision}, seed ${seed}`);}
+ for(const revision of[1,2,3]){const actual=samples(state(seed,revision)),historical=samples(unchangedHistoricalState(seed,revision)),comparison=compareHistorical(actual,historical);historicalComparisons.push({seed,revision,...comparison,oldDigest:createHash('sha256').update(JSON.stringify(historical)).digest('hex'),currentDigest:createHash('sha256').update(JSON.stringify(actual)).digest('hex')});}
+ assert.deepEqual(samples(state(seed,5)),samples(state(seed,4)),'Revision 5 visual refinement preserves every revision-4 plant, tree and support');
  const before=state(seed,3),after=state(seed,4),f=floodingStatistics(after),old=floodingStatistics(before),byId=new Map(before.plants.map(p=>[p.id,p]));
  assert.deepEqual(after.plants.map(p=>p.id),before.plants.map(p=>p.id),'Arrangement preserves every existing individual, count and iteration order');
  assert.deepEqual(after.trees.slice(0,3),before.trees.slice(0,3));assert.deepEqual(after.supports,before.supports);
@@ -44,5 +37,5 @@ for(const seed of seeds){
  results.push({seed,revision:4,historicalNormalHighAndel:old.puccinellia_maritima.submerged.normalHigh,rows:f});
  console.log('PASS historical reconstruction, same individuals, Andel height contour, complete gradient and path clearance: seed '+seed);
 }
-const out=process.argv[2];if(out){mkdirSync(out,{recursive:true});writeFileSync(out+'/habitat-revision-result.json',JSON.stringify({passed:true,seeds,scope:'Deterministic state/geometry checks; visual acceptance requires actual before/after renders. Absolute model water heights: low −1.05 m; normalHigh −0.25 m; higher +0.05 m; rare +0.30 m. No annual flooding-frequency inference.',baseline:'f92146876f4364a4fb78d30d9e9b190bbb7dc1f4',results},null,2)+'\n');}
+const out=process.argv[2];if(out){mkdirSync(out,{recursive:true});writeFileSync(out+'/habitat-revision-result.json',JSON.stringify({passed:true,seeds,environment:{node:process.version,platform:process.platform,architecture:process.arch},historicalSource,historicalComparisons,scope:'Deterministic state/geometry checks; visual acceptance requires actual before/after renders. Absolute model water heights: low −1.05 m; normalHigh −0.25 m; higher +0.05 m; rare +0.30 m. No annual flooding-frequency inference.',baseline:'f92146876f4364a4fb78d30d9e9b190bbb7dc1f4',results},null,2)+'\n');}
 console.log(JSON.stringify({passed:seeds.length,seeds:seeds.length,historicalRevisionSeedChecks:seeds.length*3}));
