@@ -106,10 +106,10 @@ def sequence(page,row):
  required={'approaching','searching','handling','swallowing','departing'};assert required<=seen,(row['id'],required-seen)
  assert event and event['after']==event['before']-1 and event['contactDistance']<.004
  if a.detail_realtime:
-  for capture in row['captures']:
-   if capture['phase']=='after-departure':continue
-   detail=capture['sample']['detail'];assert detail and detail['individualId']==row['id'] and detail['preyId']==row['preyId'];assert detail['eventId']==event['id'];assert detail['runId']==row['freshContext']['runId'];assert detail['sharedLiveSceneNodes'] and detail['preyGeometryUnscaled'] and detail['didacticMagnification']
-   if capture['phase']=='handling':assert detail['preyVisible'],'The actual contact prey must render in the magnified view'
+  for captured in row['captures']:
+   if captured['phase']=='after-departure':continue
+   detail=captured['sample']['detail'];assert detail and detail['individualId']==row['id'] and detail['preyId']==row['preyId'];assert detail['eventId']==event['id'];assert detail['runId']==row['freshContext']['runId'];assert detail['sharedLiveSceneNodes'] and detail['preyGeometryUnscaled'] and detail['didacticMagnification']
+   if captured['phase']=='handling':assert detail['preyVisible'],'The actual contact prey must render in the magnified view'
  row.update(event=event,actualSeconds=time.monotonic()-started,passed=True);save()
 
 def begin_video(page):
