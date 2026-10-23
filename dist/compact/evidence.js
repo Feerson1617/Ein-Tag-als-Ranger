@@ -1,5 +1,6 @@
 import { createReferenceState } from './world-state.js';
 import { createEcology } from './ecology.js';
+import { sceneContextKey } from './observation-context.js';
 const inventories=new Map();
 // Event counters restart with each model run. New task answers identify the
 // containing journal record as well; legacy event IDs still resolve on import.
@@ -13,6 +14,22 @@ export function eventReferenceCandidates(records,references=[]){
  for(const reference of references)(qualifiedEventReference(reference)?qualified:legacy).add(reference);
  return records.flatMap(record=>(record.events||[]).filter(event=>qualified.has(eventReference(record,event))||legacy.has(event.id)).map(event=>({record,event})));
 }
+// Copies in different notes may refer to one actual event. Its local counter
+// is scoped by the run and complete scene, and its immutable payload must agree.
+// JSON object key order is immaterial; array order and all values are not.
+const canonical=value=>Array.isArray(value)?value.map(canonical):value&&typeof value==='object'?Object.fromEntries(Object.keys(value).sort().map(key=>[key,canonical(value[key])])):value;
+export function conflictingEventReferences(records){
+ const seen=new Map(),conflicts=new Set();
+ for(const record of records)for(const event of record.events||[]){
+  const key=JSON.stringify([record.runId,event.id]),signature=JSON.stringify([sceneContextKey(record),canonical(event)]);
+  if(seen.has(key)&&seen.get(key)!==signature)conflicts.add(key);
+  else seen.set(key,signature);
+ }
+ return conflicts;
+}
+export function eventCopiesIssue(records){
+ return conflictingEventReferences(records).size?'Widersprüchliche Kopien desselben Modellereignisses im selben Rundgang. Originaldatei bewahren und die Ereignisbelege prüfen.':null;
+}
 // Old answers identify an event, not its containing record. Multiple saved
 // copies of that event within one run remain equivalent; another run is a
 // different event even when its local counter and interaction happen to match.
@@ -23,7 +40,8 @@ export function ambiguousEventReferences(records,references=[]){
 }
 export function selectedEventRows(records,references=[]){
  const ambiguous=new Set(ambiguousEventReferences(records,references));
- return eventReferenceCandidates(records,references.filter(reference=>!ambiguous.has(reference)));
+ const conflicts=conflictingEventReferences(records);
+ return eventReferenceCandidates(records,references.filter(reference=>!ambiguous.has(reference))).filter(({record,event})=>!conflicts.has(JSON.stringify([record.runId,event.id])));
 }
 export function identityInventory(seed,modelRevision=1){const cacheKey=seed+':'+modelRevision;if(inventories.has(cacheKey))return inventories.get(cacheKey);const state=createReferenceState(seed,modelRevision);createEcology(state);const rows=[...state.plants,...state.trees.map(t=>({...t,taxon:t.type==='beech'?'fagus_sylvatica':'quercus_robur'})),state.deer,state.bird,...state.ecology.actors],result={individuals:new Map(rows.map(r=>[r.id,r])),resources:state.ecology.resources,cloverIds:state.ecology.cloverIds,nettleId:state.ecology.nettleId};if(inventories.size>=16)inventories.delete(inventories.keys().next().value);inventories.set(cacheKey,result);return result;}
 export function eventIssue(record,event){

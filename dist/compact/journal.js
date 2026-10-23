@@ -2,7 +2,7 @@ import { MANIFEST, STORAGE_KEY, WORLD_VERSION } from './manifest.js';
 import { stationProtocolsIssue,evaluateStationComparison } from '../station-protocol.js';
 import { validateLearning,emptyLearning } from './missions.js';
 import { observationIssue } from './observation-schema.js';
-import { identityInventory,eventIssue } from './evidence.js';
+import { identityInventory,eventIssue,eventCopiesIssue } from './evidence.js';
 import { validateSceneContexts } from './observation-context.js';
 const OLD_KEY='ranger-compact-fieldbook-v1',OLD_VERSION='ranger-compact-reference-v1';
 const object=v=>v&&typeof v==='object'&&!Array.isArray(v);
@@ -11,7 +11,7 @@ function read(text){if(typeof text!=='string'||text.length>5*1024*1024)throw Err
 function recordsValid(records,version){if(!Array.isArray(records))throw Error('Belege fehlen.');const ids=new Set();for(const r of records){if(!object(r)||typeof r.id!=='string'||!r.id||ids.has(r.id)||!MANIFEST.activeTaxa.includes(r.taxon)||typeof r.individualId!=='string'||!r.individualId||r.worldVersion!==version||!Number.isSafeInteger(r.initialSeed)||r.initialSeed<0||r.initialSeed>4294967295||typeof r.runId!=='string'||!r.runId||r.source!=='own-observation'||!Number.isFinite(r.observationSeconds)||r.observationSeconds<2.5||!Number.isFinite(r.simulationTime)||r.simulationTime<0||!Number.isFinite(r.x)||!Number.isFinite(r.z)||typeof r.note!=='string')throw Error('Ungültiger Kompakt-Beleg.');ids.add(r.id);
  if(r.events!==undefined){if(!Array.isArray(r.events))throw Error('Ungültige Ereignisse.');const eventIds=new Set();for(const e of r.events){if(!object(e)||typeof e.id!=='string'||eventIds.has(e.id)||e.source!=='model-event'||e.window!==(r.window||'summer')||!Array.isArray(e.actors)||!e.actors.includes(r.individualId)||typeof e.resourceId!=='string'||typeof e.interaction!=='string'||typeof e.outcome!=='string'||!Number.isFinite(e.startedAt)||!Number.isFinite(e.endedAt)||e.startedAt<0||e.endedAt<e.startedAt||e.endedAt>r.simulationTime+1e-8||e.before!==null&&(!Number.isFinite(e.before)||e.before<0)||e.after!==null&&(!Number.isFinite(e.after)||e.after<0))throw Error('Widersprüchlicher Vorgangsbeleg.');eventIds.add(e.id);}}
  if(version===WORLD_VERSION){const spatialIssue=observationIssue(r);if(spatialIssue)throw Error(spatialIssue);const individual=identityInventory(r.initialSeed,r.modelRevision??1).individuals.get(r.individualId);if(!individual||individual.taxon!==r.taxon)throw Error('Individuen-ID und Taxon passen nicht zur gespeicherten Modellwelt.');for(const event of r.events||[]){const issue=eventIssue(r,event);if(issue)throw Error(issue);}}
- }return records;}
+ }const issue=eventCopiesIssue(records);if(issue)throw Error(issue);return records;}
 function validatePrevious(d){if(!object(d)||d.schemaVersion!==1||d.worldVersion!==OLD_VERSION||!Array.isArray(d.archives))throw Error('Unbekannte frühere Kompaktfassung.');recordsValid(d.records,OLD_VERSION);d.archives.forEach(validateArchive);return d;}
 export function parseCompact(text){const d=read(text);
  if(d?.worldVersion===OLD_VERSION){validatePrevious(d);return {schemaVersion:2,worldVersion:WORLD_VERSION,records:[],archives:[],previousEditions:[d],learning:emptyLearning()};}

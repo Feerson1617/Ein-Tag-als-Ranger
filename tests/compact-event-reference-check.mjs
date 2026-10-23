@@ -4,7 +4,7 @@ import {MANIFEST,WORLD_VERSION}from '../dist/compact/manifest.js';
 import {createReferenceState,stepReference}from '../dist/compact/world-state.js';
 import {createEcology,stepEcology}from '../dist/compact/ecology.js';
 import {localObservationContext}from '../dist/compact/observation-context.js';
-import {eventReference,selectedEventRows,ambiguousEventReferences}from '../dist/compact/evidence.js';
+import {eventReference,selectedEventRows,ambiguousEventReferences,eventCopiesIssue}from '../dist/compact/evidence.js';
 import {observationSite}from '../dist/compact/observation-schema.js';
 import {CompactJournal,parseCompact}from '../dist/compact/journal.js';
 import {emptyLearning,assessMission}from '../dist/compact/missions.js';
@@ -95,4 +95,42 @@ check('saving a qualified K2 choice removes its warning only after successful pe
   }finally{if(priorDocument===undefined)delete globalThis.document;else globalThis.document=priorDocument;}
  }
 });
-save();console.log(JSON.stringify({suite:'compact-event-reference',passed:checks.length}));
+save();
+check('N05 exact independent same-run conflict is rejected and cannot grade via legacy or qualified aliases',()=>{
+ const raw=fs.readFileSync(new URL('../verification/kompakt-runde2/original-fixtures/evidence/conflicting-same-run-events.json',import.meta.url),'utf8'),data=JSON.parse(raw);
+ assert.throws(()=>parseCompact(raw),/Widersprüchliche Kopien/);
+ for(const ref of [data.records[0].events[0].id,...data.records.map(r=>eventReference(r,r.events[0]))]){
+  assert.equal(selectedEventRows(data.records,[ref]).length,0);
+  data.learning.answers.K2.eventIds=[ref];assert.equal(assessMission('K2',data).complete,false);
+ }
+});
+check('N05 event copies require all payload values and scene context to agree; JSON object key order is irrelevant',()=>{
+ const {data}=twoRuns({seconds:30,oldObserver:{x:-59,z:3},oldCase:'tick-deer',newCase:'worm-litter'});
+ data.records=[data.records[1]];delete data.records[0].sceneOrigin;
+ const first=data.records[0],duplicate={...structuredClone(first),id:'same-event-second-note'};
+ data.records.push(duplicate);duplicate.events[0]=Object.fromEntries(Object.entries(duplicate.events[0]).reverse());assert.deepEqual(parseCompact(JSON.stringify(data)),data);
+ const mutations={interaction:e=>e.interaction='snail-grazing',actors:e=>e.actors.push('compact-tick'),resource:e=>e.resource='deer-host',resourceId:e=>e.resourceId='compact-deer-1',startedAt:e=>e.startedAt+=.1,endedAt:e=>e.endedAt+=.1,before:e=>e.before-=1,after:e=>e.after-=1,validAmounts:e=>{e.before-=1;e.after-=1;},outcome:e=>e.outcome='consumed',interpretation:e=>e.interpretation.limit='Different claim',mineralized:e=>e.mineralized=true};
+ for(const [name,mutate]of Object.entries(mutations)){
+  const candidate=structuredClone(data);mutate(candidate.records[1].events[0]);assert.ok(eventCopiesIssue(candidate.records),name);assert.throws(()=>parseCompact(JSON.stringify(candidate)),undefined,name);
+  assert.equal(selectedEventRows(candidate.records,[eventReference(candidate.records[1],candidate.records[1].events[0])]).length,0,name);
+ }
+ for(const [field,value]of [['initialSeed',1],['modelRevision',3],['window','spring']]){const candidate=structuredClone(data);candidate.records[1][field]=value;assert.ok(eventCopiesIssue(candidate.records),field);}
+ const distinct=structuredClone(data);distinct.records[1].events[0].id+='-another-real-counter';assert.equal(eventCopiesIssue(distinct.records),null);assert.deepEqual(parseCompact(JSON.stringify(distinct)),distinct);
+});
+check('N05 different actual events from one unchanged run remain selectable and importable',()=>{
+ const state=createReferenceState(MANIFEST.initialSeed);createEcology(state);advance(state,30,{x:-59,z:3});
+ const events=['tick-deer','worm-litter'].map(kind=>state.ecology.events.find(e=>e.interaction===kind));assert(events.every(Boolean));assert.notEqual(events[0].id,events[1].id);
+ const records=events.map((event,i)=>record(state,event,'genuine-different-event-'+i,'one-unchanged-run'));
+ const data={schemaVersion:2,worldVersion:WORLD_VERSION,records,archives:[],previousEditions:[],learning:emptyLearning()};assert.deepEqual(parseCompact(JSON.stringify(data)),data);assert.equal(eventCopiesIssue(records),null);
+ for(const r of records)assert.equal(selectedEventRows(records,[eventReference(r,r.events[0])]).length,1);
+});
+check('N05 rejected import/add/storage load preserve genuine records, learning and exact original storage bytes',()=>{
+ const raw=fs.readFileSync(new URL('../verification/kompakt-runde2/original-fixtures/evidence/conflicting-same-run-events.json',import.meta.url),'utf8'),bad=JSON.parse(raw);
+ let stored=null;const storage={getItem:()=>stored,setItem:(_,v)=>stored=v},journal=new CompactJournal(storage);
+ const genuine=parseCompact(fs.readFileSync(new URL('../verification/kompakt-v2/learning/earned-all-families.json',import.meta.url),'utf8'));journal.replace(genuine);const before=stored;
+ assert.throws(()=>journal.replace(bad),/Widersprüchliche Kopien/);assert.equal(stored,before);assert.deepEqual(journal.data,genuine);
+ journal.replace({...bad,records:[bad.records[0]],learning:emptyLearning()});const single=stored;assert.throws(()=>journal.add(bad.records[1]),/Widersprüchliche Kopien/);assert.equal(stored,single);
+ stored=raw;const blocked=new CompactJournal(storage);assert.equal(blocked.readBlocked,true);assert.equal(blocked.recovery,null);assert.equal(blocked.rawStored,raw);assert.equal(stored,raw);assert.throws(()=>blocked.replace(genuine));assert.equal(stored,raw);
+});
+
+console.log(JSON.stringify({suite:'compact-event-reference',passed:checks.length}));
