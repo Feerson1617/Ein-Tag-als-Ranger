@@ -1,83 +1,101 @@
-# Ranger Kompakt – Prüfprotokoll der Nachbesserungsrunde 23.10.2026
+# Ranger Kompakt – abschließende lokale Prüfungen und Nachweise
 
-**ENTWURF. Alle Schlussresultate, finalen Zählungen und Hashbindungen sind AUSSTEHEND.** Ausgang ist `f92146876f4364a4fb78d30d9e9b190bbb7dc1f4`, Kandidat mit Modellrevision 4. Frühere PASS-Zahlen aus dem historischen Abschlussbericht werden nicht übernommen. Ein gezielter Zwischenlauf beweist nur seine aufgezeichneten Eigenschaften auf seinem eigenen Quellstand.
+Abschließender lesender Abgleich: `2026-10-23T09:53:37.553510+00:00`. Runtime-Commit: `3920a1d1d2692889b75403c1b0e50f5b856398aa`. Der [zweite Gesamtplan](../../verification/kompakt-endqa-20261023/final/plan/result.json) ist vollständig: **15 von 15 Schritten bestanden**, `complete: true`.
 
-## Verbindliche Bindung der Schlussprüfung
+## Automatische Vorprüfungen
 
-| Merkmal | Finaler Eintrag |
-|---|---|
-| Abschließender Runtime-Commit | **AUSSTEHEND** |
-| Finaler Branch-/Berichtscommit | **AUSSTEHEND** |
-| Sauberer Arbeitsbaum und frischer Build | **AUSSTEHEND** |
-| Tatsächlich getestete `outputs/Ranger-Kompakt.html`: SHA256/Bytes | **AUSSTEHEND** |
-| Runtime-Quellenliste und Einzelhashes | **AUSSTEHEND** |
-| Quell-/Übergabepaket, Manifest-/Archivprüfung | **AUSSTEHEND** |
-| Testumgebung, Browser-/Node-/Python-Version, Grafikprofil | **AUSSTEHEND** |
-| CI-Lauf und geprüfter exakter Head | **AUSSTEHEND** |
-| Dauerlauf: getrennte Aufwärm-, Mess- und Abschlusszeiten | **AUSSTEHEND** |
+[Node-Rohbericht](../../verification/kompakt-endqa-20261023/final/legacy-node/check-run.json) und [Kompakt-Rohbericht](../../verification/kompakt-endqa-20261023/final/compact-node/result.json): 40 von 40 Node-Suiten sind bestanden: 28 Legacy-Suiten und 12 Kompakt-Suiten mit zusammen 105 Kompaktgruppen. Dazu gehören acht K2-Ereignisreferenzgruppen und fünf Materialtiefen-Gruppen. Die 105 Gruppen sind keine Zählung aller Node-Assertions. Neun [Pythonprüfungen](../../verification/kompakt-endqa-20261023/final/logs/final-python.log), beide Buildverifikationen und die vorläufige Quellenpaketprüfung sind bestanden. Der hier geprüfte Runtime-Stand ist vom späteren Dokumentations-/Paketstand zu unterscheiden. Konkreter Paketcommit und HTML-Hashes werden durch dessen Build-/Paketmanifest gebunden; CI-Ergebnisse gehören zum jeweiligen PR-Head.
 
-Bei späteren reinen Werkzeug-/Berichtsänderungen ist die Runtime-Dateimenge erneut bytegenau abzugleichen. Ein anderer HTML-Metatag wird nicht stillschweigend mit einem zuvor getesteten Auslieferungshash gleichgesetzt. Die endgültige ausgelieferte Datei benötigt ihre nachvollziehbare eigene Bindung und Prüfung.
+[Runtime-Freeze](../../verification/kompakt-endqa-20261023/final/plan/runtime-freeze.json): 51 Runtime-Dateien stimmen mit den aktuellen Quellen überein. Die geprüfte Einzeldatei hat 11.953.336 Bytes und SHA256 `b61a35456fcd6253ed6693d7fa8031f3ae5b7ca48502837d744c82b3dfc227b4`; der Webstart hat SHA256 `81d9b512b6526682e4800babdc9f2797f4385ddd04e6a908bea419d88e8ed5b3`. Die Berichte nennen ihre vorhandenen Bindungsfelder ausdrücklich; fehlende Commit- oder Hashfelder werden nicht ergänzt. Chromium 154.0.8037.57 läuft mit Cloud-Softwaregrafik, nicht auf dem Mindestgerät.
 
-## Gemeinsamer Schlussprüfplan
+## Vollständiger neuer Gesamtplan
 
-| Prüfung | Erwartete Aussage | Endergebnis / Zahl / Beleg |
+| Schritt | Ergebnis | Prozessdauer | Rohbericht / Review |
+|---|---|---:|---|
+| supplemental-arrival-3600 | PASS | 2016.05 s | [Beleg](../../verification/kompakt-endqa-20261023/final/supplemental-arrival-3600/result.json) |
+| feeding | PASS | 81.96 s | [Beleg](../../verification/kompakt-endqa-20261023/final/feeding/result.json) |
+| learning-web | PASS | 228.22 s | [Beleg](../../verification/kompakt-endqa-20261023/final/learning-web/result.json) |
+| source | PASS | 12.94 s | [Beleg](../../verification/kompakt-endqa-20261023/final/source/result.json) |
+| reference | PASS | 210.40 s | [Beleg](../../verification/kompakt-endqa-20261023/final/reference/result.json) |
+| standalone-smoke | PASS | 64.96 s | [Beleg](../../verification/kompakt-endqa-20261023/final/standalone/result.json) |
+| learning-standalone | PASS | 107.08 s | [Beleg](../../verification/kompakt-endqa-20261023/final/learning-standalone/result.json) |
+| growth | PASS | 8.37 s | [Beleg](../../verification/kompakt-endqa-20261023/final/growth/result.json) |
+| imports | PASS | 40.86 s | [Beleg](../../verification/kompakt-endqa-20261023/final/imports/result.json) |
+| habitats | PASS | 143.54 s | [Beleg](../../verification/kompakt-endqa-20261023/final/habitats/result.json) |
+| habitat-revision | PASS | 155.52 s | [Beleg](../../verification/kompakt-endqa-20261023/final/habitat-revision/result.json) |
+| materials | PASS | 13.24 s | [Beleg](../../verification/kompakt-endqa-20261023/final/reviews/final-print-review.json) |
+| stability | PASS | 1471.06 s | [Beleg](../../verification/kompakt-endqa-20261023/final/stability/result.json) |
+| legacy-full | PASS | 711.47 s | [Beleg](../../verification/kompakt-endqa-20261023/final/legacy/result.json) |
+| legacy-standalone | PASS | 87.13 s | [Beleg](../../verification/kompakt-endqa-20261023/final/legacy-standalone/result.json) |
+
+Laufbefehl: `python tools/check-compact-corrections.py --supplemental-arrival-wall-budget 3600`. Alle 15 Prozesse endeten mit Exitcode 0. Der Plan umfasst getrennte Prüfpfade mit unterschiedlicher Reichweite; insbesondere ist der Legacy-Einzeldateilauf ein Smoke-Test.
+
+## K1–K5: richtige, falsche und unsichere Bearbeitung
+
+Web: 18 Prüfgruppen, davon 17 Funktionsgruppen und eine Galerieprüfung; 46 Aufnahmen insgesamt, darunter 37 Galerieaufnahmen (36 aktive Taxa und Raupe). Einzeldatei: dieselben 17 Funktionsgruppen ohne Galerie. Beide Berichte melden keine JavaScript-Seitenfehler.
+
+| Familie | Tatsächlich angenommene Bearbeitung | Geprüfter Gegenfall / Unsicherheit |
 |---|---|---|
-| Sämtliche bestehenden Node-Suiten | Alte Missionen und vorhandene Kernverträge erhalten | **AUSSTEHEND** |
-| Sämtliche Kompakt-Node-Suiten | Modelle, Import, K1–K5, Kontextwechsel, qualifizierte K2-Referenzen, Wachstum, Rendererreset, Habitate und Materialtiefe | **AUSSTEHEND** |
-| Python-Paketprüfungen | Module, Assets, Hashes, Verpackung und bisherige Paketverträge | **AUSSTEHEND** |
-| Legacy-/Kompakt-Web- und Einzeldateibuilds | Frisch aus dem finalen Quellenstand, vollständiger Graph und verifizierte Inhalte | **AUSSTEHEND** |
-| Kompakt-Quellstart/Website/Einzeldatei | Tatsächlicher WebGL-Start und vorhandene grundlegende Funktionen | **AUSSTEHEND** |
-| K1–K5 im Web und in der Einzeldatei | Richtig/falsch/Unsicherheit, Kontrollvergleich, derselbe K3-Organismus, Nullprobe, Energiefehler und relevante Managementbelege | **AUSSTEHEND** |
-| Freie Erkundung, reguläre Wege, Gesprächsorte | Benutzbare normale Eingaben; keine Prüfkamera als Voraussetzung des Unterrichtswegs | **AUSSTEHEND** |
-| Neuer N01-Ankunftstest | Vollständiger normaler Weg, erreichbare Kontext-UI, endliche konkrete Erwerbe, alle Phasen und vollständiger Abgang | **AUSSTEHEND** |
-| N01-Echtzeit und lange Wartebedingung | Rohvideo und aktive Sichtung; echte Zeit und beschriftete Modellwartezeit getrennt | **AUSSTEHEND** |
-| Neue N02-/F05-Habitatbilder | Gleiche tatsächliche Vergleichskameras, Tief-/Hochwasser, normale Gehbilder, K1-Merkmale standardmäßig/gedreht | **AUSSTEHEND**; gestalterische Grenzen zusätzlich benennen |
-| Neue N03-Wachstums-UI | Nullkurven, vollständige Tabelle und native Exporte; positive Überläufe/Fehlerbereinigung | **AUSSTEHEND** |
-| Native Dateiimporte und Wiederherstellung | Ablehnung ohne Speicheränderung, gültige alte/neue Produkte, Originalbackup/-download, Kontextkonsistenz | **AUSSTEHEND** |
-| Export/Import/Reload und Quota | Bereits gespeicherte Bytes erhalten, aktuelle ungespeicherte Eingabe sicherbar | **AUSSTEHEND** |
-| Touch, Orientierung, Nahansicht, Grafikfehler | Tatsächliche DOM-/WebGL-Pfade; native Wiederherstellung und Reload-Fallback getrennt | **AUSSTEHEND** |
-| Mindestens 20 reale Minuten im Dauerlauf | Gemessene kontinuierliche Nutzung, Speicher-/Bestandsgrenzen und anschließende Fehlerwege | **AUSSTEHEND** |
-| Arbeitsblätter und Lehrkräftefassung | Frischer Chromium/A4-Druck, Text-/Tabellenvollständigkeit, Fortsetzungskennungen und ausreichend Schreibraum | **AUSSTEHEND** |
-| Kontaktbögen aller Seiten und große Detailansichten | Visuelle Umbruch-/Lesbarkeitsprüfung einschließlich C06/C14/C19/C23/C24 | **AUSSTEHEND** |
-| Große Fassung: echte Live-Missionen M1–M3 | Neuer tatsächlicher Erwerb bei unveränderten Belegbedingungen und Zeitgrenzen | **AUSSTEHEND**; alte M3-Fehlläufe nicht nachträglich als Erfolg ausgeben |
-| Große Fassung: Speicher/UI/Resilienz und Einzeldatei | Jeweils ausgeführter regulärer Pfad, Fixtures ausdrücklich beschriftet | **AUSSTEHEND** |
-| Physisches iPad 9 / Safari / iPadOS 27 | K1/K3, Dateien, Orientierung, Hintergrund/Rückkehr, 20 Minuten, Speichermangel | **NICHT GEPRÜFT** |
-| Fach-/Bildabnahme und Unterrichtspilot | Anonyme Lernprodukte, Transfer, Hilfebedarf, Zeiten, Ausfälle; fachliche Bewertung | **NICHT GEPRÜFT**; F05/F09-Lücken siehe Korrekturbericht |
+| K1 | Drei verschiedene eigene Beobachtungen, zwei Standorte mit gleicher Methode und neuer Eichen-Gruppentransfer | Plausibel falsche Art zurückgewiesen; begründete Unsicherheit erhalten; anonyme Labels vor begründeter Bestimmung |
+| K2 | Tatsächliche Kontroll- und Konkurrentenläufe mit Ressourcenbezug | Bloße Koexistenz als Erklärung zurückgewiesen |
+| K3 | Dasselbe konkrete Individuum in passender Szene und Zeitfolge; Q1/Q2/Q0 mit echtem Nullfund | Belege verschiedener Individuen zurückgewiesen |
+| K4 | Eigene Pilzsichtung und Verbindungen im ausgewiesenen Schnittmodell | Falscher Energiekreislauf zurückgewiesen |
+| K5 | Küstenbeleg, Kriterienbezug, Gewichte, Sach-/Wert-/Norm-/Folgenfelder und drei lokale Gespräche | Sachfremder Waldbeleg zurückgewiesen; freie Begründung bleibt unbenotet und menschlich zu beurteilen |
 
-## Bereits vorhandene eigene Zwischenbelege
+Nicht jede Familie besitzt eine eigene Unsicherheitsoption. Die Kompaktprüfungen und die Legacy-Missionen M1–M3 besitzen jeweils eigene Nachweise. Die Lernläufe bestätigen außerdem tatsächliches Reload mit erhaltenen Antworten und Belegen, JSON-/Lesedownloads, atomare Ablehnung widersprüchlicher Szenen/Seeds/Antwortformen, Quota-Verhalten, 25 Materialkarten, fünf numerische Modelle, V1-Migration, Lupe-Kontextverlust und Touch-/Viewportemulation. Emulation ersetzt kein physisches iPad-/Safari-Ergebnis. Beim Warnlayoutfall war `warningVisible: false`; geprüft wurde die berechnete Position, keine sichtbare Warnung.
 
-Diese Tabelle dokumentiert tatsächlich vorhandene Arbeitsergebnisse. Sie vergibt keinen neuen Gesamtstatus und enthält bewusst keine vorweggenommenen Schlusszählungen.
+## Legacy M1–M3, freies Spiel und Speichern/Laden
 
-| Zwischenprüfung | Aussage | Eigene Rohbelege |
-|---|---|---|
-| N01-Baseline f921 | Reale Modellfortschritte bis 180/240/600/1200 s; alle vier Vogelarten früh positiv, später endliche Pools erschöpft. Keine Behauptung 20 realer Unterrichtsminuten. | `work/qa-2026-10-23/context-baseline/{audit.mjs,source-commit.txt,result.json,summary.json,audit.log}` |
-| N01-Mehrseed-/Kontextsuite | Seeds 20260825/1/42/20261022 × dt=1/60 und 0,1, je 600 Modellsekunden; konkrete Partner/Kontakte/Ressourcen/Abgänge. Lokaler Neustart nach 240/1200 Modellsekunden, Observer/Feldbuch unverändert. K3-/Importnegativfälle und gültiger Alt+Neu-Roundtrip. | `context-current/result.json`, `context-node.log`; permanenter Test `tests/compact-observation-context-check.mjs` |
-| N03-Modell und UI | Gültige Nullfälle, berechtigter positiver Overflow und ungültige Eingaben; tatsächliche Diagramme/Tabellen/native JSON-Downloads. Eigener Fehlerzustand und Folgelauf geprüft. | `growth/baseline.json`, `growth/after-model.json`, `growth/browser/result.json`, native Exporte und unveränderte PNGs |
-| Renderreset | Vorfix machte kleine Muscheln am echten Küstenort unsichtbar. Nach Fix realer Observer/LOD, wiederhergestelltes Muschelgewebe und endliche Ausgangsressourcen. | `context-review/render-reset.json`, `context-review/render-regression-reconstructed-before/`, `context-review/render-regression-after/` |
-| Erweiterte Importfixtures | Exakt vom Browser-Treiber erzeugte Dateien im Modell vorab geprüft; neue sceneOrigin-Negativfälle und gültige Alt+Neu-Fixture. Noch keine neue UI-Ausführung daraus ableiten. | `context-review/import-fixtures/node-validation.json`; `tools/browser-compact-imports.py` |
-| Materialtiefe und Originalquellen | Lokale Quellenfälle, Original-Fundstellen und verwendete Grenzen dokumentiert. FA/Leitfaden gelesen; ETS blockiert; C17-Fekunditätsdefinition offen. | `materials/material-depth-result.json`, `materials/pedagogy-result.json`, `docs/kompakt/QUELLEN-2026-10-23.md/.json` |
-| Habitate | Eigene f921-/Rev4-Rekonstruktion, stabiler alter Bestand, höhengebundener Andel, normale Gezeitenbilder und begrenzte Waldverbesserung. | `habitats/REVIEW.md`, `habitats/model/`, `habitats/baseline-browser/`, `habitats/baseline-fixed-gap/`, `habitats/final-browser/` |
-| Druckentwicklung | Frische eigene Baseline bestätigt verwaiste Rückmeldezeilen/fragmentierte C04-Tabelle; archivierte Kandidaten und deren konkrete Grenzen. | `print/NOTES.md`, `print/baseline/`, `print/candidate-*/` |
-| Gesammelte Node-Zwischenläufe | Bestehende und hinzugefügte Suiten auf ihrem aufgezeichneten Arbeitsstand ausgeführt. Spätere K2-Änderung verlangt erneuten vollständigen Schlusslauf. | `growth/runner-11/`, `preflight-node/`; finale Gruppenanzahl **AUSSTEHEND** |
+Der getrennte [Legacy-Gesamtlauf](../../verification/kompakt-endqa-20261023/final/legacy/result.json) besteht mit **16 Prüfgruppen**, sauberem Runtime-Commit `3920a1d…` und 711,47 Sekunden Prozessdauer. M1 erwirbt drei tatsächliche fokussierte Pflanzenbelege und prüft Merkmalsvergleiche sowie begründete Unsicherheit. M2 verwendet ein tatsächliches Simulationsereignis, endliche gemeinsame Ressourcen, ausdrücklich gelesenes Modellprotokoll und Interpretation. M3 verwendet eine bestehende Probe und dasselbe konkrete Individuum `wadden:138` in demselben Rundgang und Szenenseed, an `probe-2` und Tiefe 5: Niedrigwasser bei Modellzeit 13,5882, Hochwasser bei 19,7332. Die geordneten Modellzeitfenster dauern 6,1915 beziehungsweise 6,1450 Modellsekunden; die Quelle ist ausdrücklich `model-protocol`.
 
-Pfade ohne vorangestelltes Verzeichnis beziehen sich in dieser Zwischenbelegtabelle auf `work/qa-2026-10-23/`.
+Ein tatsächliches Reload erhält erworbene Missionsbelege, Antworten und Abschlüsse; anschließend wird das freie Spiel fortgesetzt. Eigene UI-Fixtures prüfen M1 falsch/unvollständig/richtig/begründet unsicher, M2 fehlende Hypothese/falsche Herkunft und M3 die unzulässige Gleichsetzung von Nichtfund und Abwesenheit. Diese importierten Fixtures werden nicht als selbst erworbene Belege ausgegeben. Widersprüchliche Stationsimporte werden vor einer Ersetzung abgelehnt; gültige Importe verlangen ausdrückliche Ersetzung. Referenzansicht, JSON-/Berichtdownloads, abgebrochener neuer Rundgang, Werkzeuge, Tastatur, Karte mit acht Regionen und Tablet-Viewport sind geprüft.
 
-## Fehlversuche und Beschränkungen dieser Runde
+Die getrennten Fehlerfälle bestätigen tatsächlichen WebGL-Verlust und Wiederherstellung mit erhaltenem Feldbuch, blockierten Start bei absichtlich fehlendem Tiermodell mit erfolgreichem Reload sowie sichtbare Quota-Fehler. Der Bericht enthält keine fehlgeschlagenen Prüfungen, JavaScript-, Konsolen- oder HTTP-Fehler. Der getrennte [Legacy-Einzeldatei-Smoke](../../verification/kompakt-endqa-20261023/final/legacy-standalone/result.json) besteht mit drei Gruppen in 87,13 Sekunden: Start, verzögert geladenes und tatsächlich dargestelltes Referenzfoto sowie freies Erkunden mit Werkzeugen, Karte und emuliertem Tablet-Viewport. Anfangs sind 18 Medien dekodiert, nach Öffnen der Referenzen 33. Auch dieser Bericht enthält keine Prüf-/JS-/Konsolen-/HTTP-Fehler. Er wiederholt nicht den vollständigen M1–M3-Missionslauf.
 
-- Growth-UI-Vorlauf: lokaler HTTP-Socket im Sandboxmodus verweigert; kein Browser-Produkttest ausgeführt. Danach erkannte der Standalone-Audit eine zwischenzeitlich geänderte Materialquelle und brach vor Browserstart ab. Nach frischem Build bestand der gezielte UI-Lauf. Beide ursprünglichen Fehlprotokolle bleiben erhalten (`growth/browser-attempt1-sandbox.log`, `growth/browser-attempt2-stale-standalone.log`).
-- Growth-Baseline-Protokollierung: ein lokaler Node-Prozess durfte `git` nicht wie erwartet starten. Die Commitkennung wurde separat gelesen und die Reproduktion erneut gesichert (`growth/baseline-attempt.json`). Das ist kein Produktfehler.
-- Renderregression: Die erste kleine Vorfix-Reproduktion belegt den tatsächlichen Observerfehler. Der permanente Test war beim ersten Aufruf bereits auf den eingetroffenen Produktfix gerichtet. Seine Rotkontrolle verwendet eine ausdrücklich rekonstruierte isolierte Vorfixkopie; gemeinsame Quellen wurden nicht zurückgesetzt.
-- Habitatkandidat: kugelförmige Fernunterkronen wurden in eigener Sichtung als störend erkannt und in einer begrenzten weiteren Iteration korrigiert. Ein begonnener späterer Snapshot wurde wegen gleichzeitiger C17-Änderung kontrolliert beendet. Er bleibt ein abgebrochener Lauf; sein Nachfolger wird separat gewertet (`habitats/interrupted-snapshot-browser/`).
-- Druckkandidaten: Kurze Abschluss-/Auftragsseiten blieben in frühen Kandidaten sichtbar. Sie sind Entwicklungsversuche, kein finaler PASS. `pdftotext -layout` vermischte zunächst mehrzeilige Spalten; Textvollständigkeit wird nun mit `-raw`, Lage/Umbruch gesondert geprüft. Inhaltspflichten wurden nicht vermindert.
-- Quellen: ETS-Original und neue Schutzstation-/Nationalparkabrufe blockiert; einzelne Weiterleitungen/Interstitals waren keine Quelleninhalte. Quellenstatus pro tatsächlich gelesenem Text/Abstract dokumentiert. C17 enthält keine erfundene Fekunditätsnormalisierung.
-- Laufende/neue Arrival- und Schlussversuche: tatsächliches Ergebnis, Laufgrenzen, Fehlermeldung und Wiederholung **AUSSTEHEND**. Ein noch laufender Versuch ist weder bestanden noch fehlgeschlagen.
+## Import, Wachstum und Grafik
 
-Alle späteren Fehlversuche sind mit eigenem Ordner, Fehlerbild/-log, Quelle/HTML-Hash und unveränderten Anforderungen anzufügen. Kein Timeout-/Assertionabbau für ein grünes Ergebnis.
+[Native Importsuite](../../verification/kompakt-endqa-20261023/final/imports/result.json): **46 Fälle bestanden**, darunter 40 negative und sechs weitere Fälle. Drei tatsächliche Legacy-K2-UI-Fälle prüfen eindeutige Altbezüge, mehrfache Kopien desselben Rundgangs/Ereignisses und mehrdeutige Alt-IDs. Die ersten beiden bleiben gültig. Mehrdeutige Bezüge wählen keine Option automatisch; erst die ausdrückliche qualifizierte Neuauswahl und das Speichern ergeben den erfolgreichen Abschluss. Originalspeicher bleibt beim Öffnen erhalten. Fixture- und Exporthashes sind protokolliert. Die importierten Fixtures sind keine selbst erworbenen Beobachtungen.
 
-## Auswertung und Reproduktion
+[Wachstum](../../verification/kompakt-endqa-20261023/final/growth/result.json): vier Prüfgruppen bestanden. Vier gültige Nullrandfälle liefern endliche Nulltabellen, Plots und native Exporte. Die Ursache war `0 * exp(730) → NaN`; der Nullfall wird vor der potenziell überlaufenden Exponentialrechnung behandelt. Der tatsächlich ausgeführte positive Overflow bleibt ein Fehler und entfernt die vorherige Kurve samt Export; die nächste gültige Nullrechnung entfernt die Fehlermeldung. Negative, fehlende oder gebrochene unzulässige Eingaben werden durch die native Formularvalidierung blockiert. Für diese blockierten Fälle prüft der Treiber keine Entfernung des vorherigen Diagramms. Das gespeicherte Feldbuch bleibt unverändert.
 
-`python tools/check-compact-corrections.py` führt den deklarierten Gesamtplan nach sauberem Quellenstand aus. Die neuen gezielten Werkzeuge sind `tools/browser-compact-arrival.py`, `tools/browser-compact-growth.py`, `tools/browser-compact-habitat-revision.py`, `tools/print-compact-materials.py` und `tools/audit-compact-materials.py`. Sie verändern keine externen Dienste. Für den Habitatvergleich sind die tatsächlich vorhandenen Baselineverzeichnisse anzugeben; die Druckprüfung benötigt Poppler und für Kontaktbögen Pillow. Finale Befehle/Exitcodes/Laufzeiten werden aus den ausgeführten Logs übernommen, nicht aus dieser Planung abgeleitet.
+[Grafikwiederherstellung](../../verification/kompakt-endqa-20261023/final/reference/context-recovery-result.json): Der native Restore verwendet den tatsächlich erhaltenen Extension-Handle und bewahrt dieselbe Run-ID. Der Klick auf die öffentliche Retry-UI löst eine wirkliche Reloadnavigation mit neuer Run-ID aus. Beide Tests vergleichen unveränderte 922 Bytes des Feldbuchschlüssels mit einem eigenen Beleg (SHA256 `4857daf3dd4a393b3aaa27dc2ab41dce480128f9b36172a947a8d8b26b8fe202`). Das ist kein gesonderter Nachweis aller K1–K5-Antworten für beide Grafikpfade; diese Lernarbeit wird im normalen Reloadfall geprüft. Keine Extension-Mocks oder Zustandsinjektion ersetzen die beiden Grafikwege.
 
-Der echte native WebGL-Wiederherstellungsweg muss denselben Extension-Handle und Rundgang behalten. Der öffentliche Reload-Fallback darf eine neue Szene erzeugen; er muss gesicherte Lernbytes erhalten. Eine Headless-Tabaktivierung mit weiterhin gemeldeter Sichtbarkeit belegt keine Hintergrundpause. Ein injizierter Quota-Fehler ist eine Fehlerfixture, keine volle physische iPad-Platte.
+## Ankunft, Nahrungserwerb und Zeitarten
 
-Funktionale Stabilität bedeutet keine ausreichend flüssige Darstellung. Softwaregrafik und dünne Framezeitstichproben dürfen nicht als Apple-GPU-Benchmark oder vollständige FPS-Verteilung erscheinen. Der normale N01-Weg, die beschriftete lange Modellwartezeit und der separate 20-Minuten-Dauerlauf haben unterschiedliche Prüfziele und werden zeitlich nicht miteinander verrechnet.
+[Ankunftsreview](../../verification/kompakt-endqa-20261023/final/reviews/final-arrival-review.md): Der Hauptweg wurde mit gewöhnlichen W-/Mauseingaben gegangen: 1493,347 Wandsekunden, 225,730 Modellsekunden und 361,055 m abgetastete Strecke. Die vorgesehene Route misst 362,210 m. Rückweg und Abzweig benötigen weitere 268,597 und 74,630 Wandsekunden. Neue lokale Kontexte entstehen erst am tatsächlich erreichten Ort; Run-ID, Zeit, Herkunft, endliche Vorräte und unveränderter Beobachterstandort sind protokolliert.
+
+Acht Erwerbsfolgen und 48 Phasenbilder bestehen technisch: eine Echtzeitfolge und sieben ausdrücklich beschriftete Modellschrittfolgen. Das exportierte Feldbuch enthält einen tatsächlich über die UI gespeicherten Fernglasbeleg zum Austernfischer mit 18,2826 Sekunden aktiver Beobachtung. Seine Ereignisliste ist leer; Nahrungserwerbsereignisse liegen separat in der Browsertelemetrie. Daraus folgt kein abgeschlossener K2-Auftrag.
+
+Die WebM-Aufnahmeoperation dauerte 18,216 Wandsekunden. Das Originalvideo enthält 97 dekodierte VP8-Frames mit Präsentationszeiten von 0 bis 17,454 Sekunden; eine Container-Gesamtdauer ist nicht angegeben. Fünf Originalframes, acht Phasenbilder und zwei Endpunktbilder wurden angesehen; alle 48 Phasenbilder und drei Endpunktbilder wurden technisch geprüft. Der Zielvogel steht klein im Hintergrund. Konkrete Beute und vollständiges Schlucken sind nicht sicher visuell auflösbar; Telemetrie ersetzt diese Bildabnahme nicht.
+
+Die gesonderte Langwartebedingung umfasst 240 UI-Schritte zu je fünf Modellsekunden: 1200 Modellsekunden in 55,474 Wandsekunden bei unveränderter eigener Beobachtungszeit von null. Sie ist keine tatsächlich geleistete 20-minütige K1-Arbeit und ist vom gesonderten realen Stabilitätstest zu unterscheiden. Der ursprüngliche 900-Sekunden-Lauf bleibt fehlgeschlagen; 3600 Sekunden je Wegabschnitt sind ein ausdrücklich anderer funktionaler Budgetfall.
+
+## Reale Stabilitätsmessung und Cloud-Grafikbudget
+
+[Stabilitätsbericht](../../verification/kompakt-endqa-20261023/final/stability/result.json): **funktionales PASS** nach 251,18 Sekunden Aufwärmphase. Die 78 Stichproben reichen bis 1205,13 reale Sekunden ab Messbeginn; einschließlich anschließender Tab-/Kontextprüfungen dauerte der Abschnitt 1211,59 Sekunden. Die Stichproben wurden bei wiederholten Besuchen von acht öffentlichen Referenzansichten erhoben. Der Lauf bestätigt fortschreitende Modellzeit, dieselbe Run-ID, unveränderte Pflanzenzahl, begrenzte Geometrie-/Texturbelegung und keine JavaScript-Seitenfehler. Referenzansichten wurden über echte UI-Eingaben aufgerufen; dies ist kein durchgehend normal gegangener Weg und keine 20-minütige K1-Bearbeitung.
+
+Das **Cloud-Grafikbudget für 30 FPS ist nicht eingehalten**: medianes abgetastetes Frameintervall 374,95 ms, Maximum 1283,3 ms; `allSampledIntervalsWithinBudget: false`. Diese einzelnen Intervallstichproben sind keine vollständige FPS-Verteilung und kein physischer iPad-Benchmark. Die 78 Heapwerte liegen zwischen 86.564.136 und 91.806.989 Bytes; Garbage-Collection-Zyklen begrenzen ihre Aussagekraft. Daraus folgt keine Hardware-Speicherzertifizierung.
+
+Beim tatsächlichen Wechsel zu einem anderen Headless-Chromium-Tab blieb die gemeldete Sichtbarkeit `visible`; die Modellzeit stieg um 0,163 Sekunden. Der Lauf belegt daher keine Pause bei einem tatsächlich verborgenen Tab. Die native Wiederherstellung des verlorenen WebGL-Kontexts bestand mit demselben Rundgang und anschließendem echten Render-/Modellfortschritt; kein Reload oder injizierter Sichtbarkeitszustand ersetzte diesen Test.
+
+## Habitat und Druck
+
+[Habitatreview](../../verification/kompakt-endqa-20261023/final/reviews/final-habitat-review.md): Alle 26 aktuellen Originalbilder und fünf unveränderte Baselinebilder wurden angesehen. 16 feste Kamerapaare stimmen in x/z/yaw/pitch innerhalb 0,00001 überein; die Augenhöhe folgt dem Gelände. 51 Quellenhashes und acht vorhandene Diagnosebildhashes stimmen. Für die anderen 18 Bilder nennt der Originalreport keinen früheren Bildhash; neue Hashes sind im Review erfasst. Vier frische Modellseeds bestätigen die Andel-Höhenrevision. Analytische absolute Pegel von +0,05/+0,30 m sind keine natürlichen jährlichen Fluthäufigkeiten. F05 bleibt teilweise erfüllt: kahle Flächen, dünne Sträucher, wiederholte Formen und teilweise verdeckende Leistungshinweise bleiben sichtbar.
+
+[Druckreview](../../verification/kompakt-endqa-20261023/final/reviews/final-print-review.md): 39 Schülerseiten und 58 Lehrkräfteseiten, zusammen 97 frisch erzeugte Raster. Textaudit: 723/723 beziehungsweise 971/971 HTML-Fragmente im PDF. Alle elf Manifestdateien sind nach Größe und Hash geprüft. Fünf neue Kontaktbögen wurden angesehen. 97/97 frische Seitenraster stimmen byteweise mit den früher geprüften Rastern überein; deshalb werden 37 frühere Detailansichten ausdrücklich durch Rastergleichheit weiterverwendet. Die neu erzeugten PDF-Hashes sind im Review separat ausgewiesen. C04 enthält alle vier Antwortzeilen zusammen; lange Karten behalten nachvollziehbar mehrere Seiten.
+
+## Originalquellen und Materialtiefe
+
+[Quellenprotokoll](../../verification/kompakt-endqa-20261023/final/sources/QUELLEN-2026-10-23.md) und [Abruf-/Hashnachweis](../../verification/kompakt-endqa-20261023/final/sources/QUELLEN-2026-10-23.json) unterscheiden tatsächlich gelesene Fundstellen und Zugangslücken. Die Fachanforderungen Biologie SH 2026 wurden auf S. 49–55, 58 und 62 sowie ergänzend S. 72–73/75 gelesen; S. 62 wurde auch visuell geprüft. Beim Leitfaden 2017 wurden Druckseiten 44–49 gelesen, davon 47–49 (PDF 49–51) zusätzlich visuell geprüft. Dieser Leitfadenabschnitt ist ein möglicher Unterrichtsgang der Einführungsphase. Die ETS-Originalseiten 27–28 bleiben wegen Proxy-403 ungeprüft; eine vollständige ETS-Curriculum-Abdeckung wird nicht behauptet.
+
+C01 nutzt veröffentlichte Biomspannen mit Einheiten und Grenzen, keine erfundenen Stationsmessungen. C15 vergleicht zwei konkrete Studienarten und trennt ökologische Funktion von Abstammungsmerkmalen. C17 trennt Reife, potenzielle Nachkommen, Fürsorge, Dichteänderung und Überlebensschätzung; die Ei-/Weibchenbezugsgröße bleibt ausdrücklich offen. Materialangebot und Softwaretests belegen weder individuelle Schülerkompetenz noch reale Geräteführung oder Exkursion.
+
+## Historische Fehler und offene Abnahme
+
+Der bereitgestellte HTML-Prüfbericht und der Nachbesserungsauftrag wurden gelesen. Das unabhängige End-QA-ZIP vom 23.10.2026 überschritt die 32-MiB-Transfergrenze; seine Originalskripte, Bilder und Importdateien konnten nicht selbst gelesen werden. Die Baselinebilder dieser Runde sind eigene frische Browseraufnahmen. Als Rekonstruktion gekennzeichnete Fehlimporte werden nicht als bytegleich geprüfte Originaldateien dieses ZIPs ausgegeben.
+
+Der [historische Plan](../../verification/kompakt-endqa-20261023/final/historical-plan/result.json) gehört zu `78e723bcb5ca448fa7161146db82fc4451b59f38`: 13 von 15 Schritten bestanden. Arrival scheiterte nach 904,64 Sekunden an der ursprünglichen 900-Sekunden-Grenze; Web-Learning scheiterte nach 417,95 Sekunden an der fehlenden Löffleraufnahme. Diese Fehler bleiben erhalten. Der neue Galerieerfolg und der ergänzende Weglauf überschreiben sie nicht.
+
+Fachlich offen bleiben die C17-Fekunditätsnotation und der Weibchenbezug sowie die Prüfung der ETS-Originalseiten 27–28 (Proxy-403). Physisches Apple iPad 9 mit Safari/iPadOS 27, Unterrichtspilot, Lernwirkung und reale Geräteführung/Exkursion sind nicht geprüft. Cloud-Framezeiten und Touchemulation liefern dafür keinen Ersatz.
+
+Der Runtime-Freeze und die hier genannten Test-HTML-Hashes bleiben an den tatsächlichen Prüfstand gebunden. Ein späterer sauberer Dokumentations-/Paketcommit wird anhand seines Build-/Paketmanifests identifiziert; seine Identität wird nicht rückwirkend in diese Runtime-Nachweise geschrieben. Die konkreten CI-Ergebnisse werden am jeweiligen Head des [Draft-PR #3](https://github.com/Feerson1617/Ein-Tag-als-Ranger/pull/3) dokumentiert. Quellenpaket und Abnahme-ZIP sind lokale Ausgaben, kein Release oder Deployment.
