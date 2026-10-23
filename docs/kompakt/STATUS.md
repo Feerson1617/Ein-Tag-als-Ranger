@@ -2,7 +2,7 @@
 
 **Runde 2 ist ein eigener Prüfstand.** Ereigniskonsistenz, gekoppelte didaktische Detailkameras, räumlich variierte Waldkronen, eingegrenztes C17-Laichmaterial und portable historische Vergleiche sind gezielt nachgebessert. [Umfang und Verfahren](RUNDE2.md), [Curriculum](CURRICULUM-RUNDE2.md), [Quellenkontrolle](QUELLEN-RUNDE2.md), [realer Geräte-/Unterrichtspilot](IPAD-UND-UNTERRICHTSPILOT.md). Die Einzelbefunde F01–F13/N01–N07 stehen im neuen Abschlussmanifest und im Draft-PR #3. Neu laufende Prüfungen dürfen nicht aus den historischen Erfolgen unten abgeleitet werden.
 
-Der ursprüngliche 900-s-Weglauf und das 30-FPS-Ziel bleiben eigenständige Abnahmekriterien. C17 bietet jetzt einen Mittelwert je tatsächlich ablaichendem Weibchen einer Behandlung; eigene externe Primärkontrolle und Dauer bleiben offen. ETS 27–28 wurden anhand der mitgelieferten Originalseitenrender gelesen. Physisches iPad/Safari und Unterrichtspilot bleiben NICHT GEPRÜFT.
+Der ursprüngliche 900-s-Weglauf und das 30-FPS-Ziel bleiben eigenständige Abnahmekriterien. C17 bietet jetzt einen Mittelwert je tatsächlich ablaichendem Weibchen einer Behandlung; eigene externe Primärkontrolle und Dauer bleiben offen. ETS 27–28 wurden anhand der mitgelieferten Originalseitenrender und anschließend direkt aus der erfolgreich geladenen Original-PDF gelesen. Physisches iPad/Safari und Unterrichtspilot bleiben NICHT GEPRÜFT.
 
 ## Historisch versiegelter Prüfstand vor Runde 2
 

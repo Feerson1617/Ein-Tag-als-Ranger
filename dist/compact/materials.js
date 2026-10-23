@@ -1,6 +1,6 @@
 import { LESSON_RESOURCES,RESOURCE_SOURCES } from './lesson-resources.js';
 // Original teaching text and small factual source extractions. FA 2026 and the
-// 2017 guide were read; supplied ETS original page renders 27–28 were read in round 2. The complete ETS PDF is not newly retrieved. See source audit.
+// 2017 guide were read; ETS original PDF pages 27–28 and supplied page renders were read in round 2. Other school years are not fully audited. See source audit.
 export const SOURCES={
  ...RESOURCE_SOURCES,
  flora:{title:'FloraWeb: ökologische Zeigerwerte',url:'https://www.floraweb.de/biologie-oekologie/anwendung-der-oekologie.html'},

@@ -129,6 +129,18 @@ with sync_playwright()as pw:
   row=start_window(page,'compact-oystercatcher',True);result['realtimeVideoStartWall']=time.monotonic();begin_video(page);sequence(page,row);result['realtimeVideoEndWall']=time.monotonic();end_video(page)
   page.wait_for_function('!document.querySelector("#record").disabled');pointer(page,page.locator('#record'));page.locator('#note').fill('Nahrungssuche am selbst erreichten Küstenort im ausdrücklich neu begonnenen Modellfenster beobachtet.');pointer(page,page.locator('#save-note'));assert page.locator('#count').inner_text()=='1'
   for id in ['compact-avocet','compact-redshank','compact-spoonbill']:sequence(page,start_window(page,id,a.detail_realtime))
+  if a.detail_realtime:
+   # The four additional first encounters all use real time. Switch explicitly
+   # through the same public UI before the already-labelled model-step wait.
+   # Keep this exact run/world/visitor; do not create another context here.
+   before_switch=sample(page);stored_before=page.evaluate('localStorage.getItem("ranger-compact-fieldbook-v2")')
+   pointer(page,page.locator('#behavior-stop'));pointer(page,page.locator('#study'));pointer(page,page.locator('[data-behavior="compact-spoonbill"]'))
+   page.wait_for_function('document.querySelector("#world").dataset.modelObservation==="compact-spoonbill" && document.querySelector("#world").dataset.behaviorRealtime==="false" && document.querySelector("#world").dataset.renderRevision===document.querySelector("#world").dataset.sceneRevision')
+   pointer(page,page.locator('#behavior-detail'));after_switch=sample(page)
+   assert after_switch['runId']==before_switch['runId'] and after_switch['origin']==before_switch['origin'] and all(after_switch['observer'][axis]==before_switch['observer'][axis]for axis in ['x','z'])
+   assert page.evaluate('localStorage.getItem("ranger-compact-fieldbook-v2")')==stored_before
+   assert page.locator('#behavior-step').is_visible() and not after_switch['realtime']
+   result['longWaitModeSwitch']={'before':before_switch,'after':after_switch,'sameRunAndObserver':True,'fieldbookBytesUnchanged':True,'scope':'Explicit native UI change from real-time following to labelled model-time steps, with no reset or injected time.'};save()
   # A disclosed equivalent model wait. This is not 20 minutes of active forest/K1 work.
   before=sample(page);wait_start=time.monotonic()
   for i in range(240):tick(page,5)

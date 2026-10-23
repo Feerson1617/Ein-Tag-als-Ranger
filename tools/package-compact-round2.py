@@ -29,7 +29,7 @@ def copy(source,destination):
  src=root/source;dest=out/destination;assert src.exists(),source;dest.parent.mkdir(parents=True,exist_ok=True)
  if src.is_dir():shutil.copytree(src,dest)
  else:shutil.copyfile(src,dest)
-copy('work/round2/INPUT-REVIEW.json','EINGANGSDATEIEN.json');copy('work/round2/FAILED-ATTEMPTS.json','FEHLVERSUCHE.json');copy(a.plan,'Pruefplan');copy(a.review,'SICHTPRUEFUNG.json');copy(a.ci,'CI-RESULT.json');copy('verification/kompakt-runde2/original-fixtures','Originalfixtures');copy('verification/kompakt-runde2/baseline-forest','Vorher-Wald-1b51e7c');copy('docs/kompakt','Dokumentation');copy('outputs/Ranger-Kompakt.html','Ranger-Kompakt.html');copy('outputs/Ranger-Kompakt-Lernpaket','Lernpaket')
+copy('work/round2/INPUT-REVIEW.json','EINGANGSDATEIEN.json');copy('work/round2/FAILED-ATTEMPTS.json','FEHLVERSUCHE.json');copy('work/round2/attempt-cf8006','Zwischenversuche/Unterbrochener-Plan-cf8006');copy(a.plan,'Pruefplan');copy(a.review,'SICHTPRUEFUNG.json');copy(a.ci,'CI-RESULT.json');copy('verification/kompakt-runde2/original-fixtures','Originalfixtures');copy('verification/kompakt-runde2/baseline-forest','Vorher-Wald-1b51e7c');copy('docs/kompakt','Dokumentation');copy('outputs/Ranger-Kompakt.html','Ranger-Kompakt.html');copy('outputs/Ranger-Kompakt-Lernpaket','Lernpaket')
 for folder in ['compact-regressions','compact-learning','compact-learning-standalone','compact-source','compact-browser','compact-stability','browser-chromium-subpath','browser-chromium']:
  copy('work/'+folder,'Aktuelle-Pruefungen/'+folder)
 for name in ['final-feeding','final-arrival','final-growth','final-imports','final-habitats','final-habitat-revision','final-print','coastal-tests']:
@@ -40,7 +40,7 @@ for row in preflight['checks']:copy(row['log'],'Vorpruefung-Logs/'+Path(row['log
 for row in load('work/check-run.json')['results']:
  for name in [('final-check-output.txt' if row['check']=='field' else row['check']+'-check-output.txt'),row['check']+'-check-errors.txt']:copy('work/'+name,'Legacy-Node-Logs/'+name)
 for name in ['check-run.json','v020-check-summary.json']:copy('work/'+name,'Legacy-Node-Logs/'+name)
-for name in ['sources','n05-baseline-browser','n05-browser','n05-full-imports','expanded-original-imports-preflight','forest-before-attempt1','forest-current-draft','f02-detail-draft','f02-detail-zoom','profile-baseline','n06-linux','n06-linux-node24.21','original-ambiguous-import-preflight','original-ambiguous-import-attempt2','preflight-compact']:
+for name in ['sources','n05-baseline-browser','n05-browser','n05-full-imports','expanded-original-imports-preflight','forest-before-attempt1','forest-current-draft','f02-detail-draft','f02-detail-zoom','profile-baseline','n06-linux','n06-linux-node24.21','original-ambiguous-import-preflight','original-ambiguous-import-attempt2','preflight-compact','transition-smoke','transition-smoke-attempt2','transition-smoke-attempt3']:
  copy('work/round2/'+name,'Zwischenversuche/'+name)
 for path in (root/'work/round2').glob('*.log'):copy(path.relative_to(root),'Zwischenversuche/Logs/'+path.name)
 artifacts={}
