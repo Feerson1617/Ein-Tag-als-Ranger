@@ -23,8 +23,22 @@ class Handler(SimpleHTTPRequestHandler):
  def log_message(self,*args):pass
 server=ThreadingHTTPServer(('127.0.0.1',0),partial(Handler,directory=str(root/a.site)));Thread(target=server.serve_forever,daemon=True).start()
 def save():(out/'result.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
-def sample(page):
- return page.locator('#world').evaluate('c=>({time:Number(c.dataset.simulationTime),observer:JSON.parse(c.dataset.observer),actors:JSON.parse(c.dataset.coastal),events:JSON.parse(c.dataset.coastalEvents),ecology:JSON.parse(c.dataset.ecology),runId:c.dataset.runId,origin:JSON.parse(c.dataset.sceneOrigin||"null"),mode:c.dataset.modelObservation,realtime:c.dataset.behaviorRealtime==="true",ownSeconds:Number(c.dataset.observationSeconds),focus:c.dataset.focusIndividual,visibility:JSON.parse(c.dataset.behaviorVisibility||"null"),detail:JSON.parse(c.dataset.feedingDetail||"null")})')
+SAMPLE_SCRIPT='c=>({time:Number(c.dataset.simulationTime),observer:JSON.parse(c.dataset.observer),actors:JSON.parse(c.dataset.coastal),events:JSON.parse(c.dataset.coastalEvents),ecology:JSON.parse(c.dataset.ecology),runId:c.dataset.runId,origin:JSON.parse(c.dataset.sceneOrigin||"null"),mode:c.dataset.modelObservation,realtime:c.dataset.behaviorRealtime==="true",ownSeconds:Number(c.dataset.observationSeconds),focus:c.dataset.focusIndividual,visibility:JSON.parse(c.dataset.behaviorVisibility||"null"),detail:JSON.parse(c.dataset.feedingDetail||"null")})'
+def sample(page):return page.locator('#world').evaluate(SAMPLE_SCRIPT)
+def sequence_frame(page,individual,seen,episode):
+ # Read the actual pixels and before/after telemetry in one synchronous callback
+ # after the application's normal render. A separate full-page screenshot can
+ # cross a short phase under software rendering; it is context, not phase proof.
+ return page.locator('#world').evaluate('''(c,a)=>new Promise(resolve=>requestAnimationFrame(()=>{
+  const read=('''+SAMPLE_SCRIPT+'''),before=read(c),actor=before.actors.find(x=>x.id===a.individual);
+  const next=actor&&(!a.seen.includes(actor.phase)&&['approaching','searching','handling','swallowing','departing'].includes(actor.phase));
+  const departed=actor&&a.seen.includes('departing')&&(actor.targetId!==a.episode||actor.phase==='waiting');
+  if(next||departed){
+   const renderRevision=c.dataset.renderRevision,sceneRevision=c.dataset.sceneRevision,png=c.toDataURL('image/png');
+   before.frameCapture={png,after:read(c),renderRevision,sceneRevision,afterRenderRevision:c.dataset.renderRevision,afterSceneRevision:c.dataset.sceneRevision,method:'Actual canvas pixels and telemetry in one post-render rAF callback; no pause, clock change or reconstructed frame.'};
+  }
+  resolve(before);
+ }))''',{'individual':individual,'seen':sorted(seen),'episode':episode})
 def pointer(page,button):
  button.wait_for(state='visible');assert button.is_enabled();button.evaluate("b=>b.scrollIntoView({block:'center',behavior:'instant'})")
  hit=button.evaluate('b=>{const r=b.getBoundingClientRect(),x=r.left+r.width/2,y=r.top+r.height/2,e=document.elementFromPoint(x,y);return{x,y,hit:e===b||b.contains(e),visible:x>=0&&y>=0&&x<innerWidth&&y<innerHeight}}');assert hit['hit']and hit['visible'],hit;page.mouse.click(hit['x'],hit['y'])
@@ -73,17 +87,20 @@ def start_window(page,id,realtime=False):
  if not realtime and page.locator('#binocular').get_attribute('aria-pressed')!='true':pointer(page,page.locator('#binocular'))
  row={'id':id,'realtime':realtime,'beforeNewContext':before,'freshContext':fresh,'captures':[],'samples':[],'startedWall':time.monotonic()};result['sequences'].append(row);save();return row
 def capture(page,row,s,phase):
+ frame=s.pop('frameCapture');assert frame['renderRevision'] is not None and frame['renderRevision']==frame['sceneRevision']==frame['afterRenderRevision']==frame['afterSceneRevision']
+ raw=base64.b64decode(frame.pop('png').split(',',1)[1]);assert len(raw)>3000 and raw.startswith(bytes.fromhex('89504e470d0a1a0a'))
  v=s['visibility'];assert v and v['individualId']==row['id']and all(v[k]for k in ['meshVisible','bodyClear','billClear','bodyInFrame']),(row['id'],phase,v)
- name=f"sequence-{len(result['sequences'])}-{row['id']}-{phase}.png";page.screenshot(path=str(out/name));after=sample(page)
+ name=f"sequence-{len(result['sequences'])}-{row['id']}-{phase}.png";(out/name).write_bytes(raw);after=frame['after'];assert after['time']==s['time'] and after['runId']==s['runId']
  before_actor=next(a for a in s['actors']if a['id']==row['id']);after_actor=next(a for a in after['actors']if a['id']==row['id'])
  phase_stable=before_actor['phase']==after_actor['phase'] and before_actor.get('targetId')==after_actor.get('targetId')
- row['captures'].append({'file':name,'sha256':hashlib.sha256((out/name).read_bytes()).hexdigest(),'phase':phase,'sample':s,'afterCapture':after,'phaseStableAcrossCapture':phase_stable});save()
+ context_name=Path(name).stem+'-context.png';page.screenshot(path=str(out/context_name));context_after=sample(page);context_actor=next(a for a in context_after['actors']if a['id']==row['id'])
+ row['captures'].append({'file':name,'sha256':hashlib.sha256(raw).hexdigest(),'phase':phase,'sample':s,'afterCapture':after,'phaseStableAcrossCapture':phase_stable,'frameCapture':frame,'contextFile':context_name,'contextSHA256':hashlib.sha256((out/context_name).read_bytes()).hexdigest(),'contextAfterCapture':context_after,'contextPhaseStableAcrossCapture':before_actor['phase']==context_actor['phase']and before_actor.get('targetId')==context_actor.get('targetId'),'contextScope':'Actual full-page UI context; if its phase changed, it is not used as a phase proof. The canonical canvas PNG above is bound atomically to the recorded phase.'});save()
  if phase!='after-departure':assert phase_stable,('Phase crossed during actual capture; image is not a confirmed phase proof',row['id'],phase,after_actor['phase'])
  print('CAPTURE',row['id'],phase,round(s['time'],2),flush=True)
 def sequence(page,row):
  seen=set();episode=None;event=None;completed_departure=False;started=time.monotonic()
  for i in range(600):
-  s=sample(page);actor=next(a for a in s['actors']if a['id']==row['id']);phase=actor['phase'];row['lastSample']=s
+  s=sequence_frame(page,row['id'],seen,episode);actor=next(a for a in s['actors']if a['id']==row['id']);phase=actor['phase'];row['lastSample']=s
   if episode is None and phase=='approaching':episode=actor['targetId'];row['preyId']=episode
   if episode:
    event=next((e for e in s['events']if e['actors']==[row['id'],episode]),event)
