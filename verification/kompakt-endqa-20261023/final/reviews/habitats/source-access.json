@@ -1,0 +1,10 @@
+[
+  {
+    "url": "https://www.schutzstation-wattenmeer.de/wissen/pflanzen/salzwiese/",
+    "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+  },
+  {
+    "url": "https://www.nationalpark-wattenmeer.de/wp-content/uploads/2022/02/BR_Salzwiese_web.pdf",
+    "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+  }
+]

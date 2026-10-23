@@ -1,0 +1,13 @@
+--- a/tools/browser-compact-arrival.py
++++ b/tools/browser-compact-arrival.py
+@@ -89,7 +89,9 @@
+   assert s['mode']==row['id']and s['realtime']==row['realtime']
+   if not row['realtime']:assert s['ownSeconds']==0
+   row['samples'].append({'wallSeconds':time.monotonic()-started,'modelTime':s['time'],'phase':phase,'ownSeconds':s['ownSeconds'],'focus':s['focus']})
+-  if row['realtime']:page.wait_for_timeout(80)
++  if row['realtime']:
++   # Count model-progress samples, not repeated reads of a software-rendered frame.
++   page.wait_for_timeout(80);page.wait_for_function('(previous)=>Number(document.querySelector("#world").dataset.simulationTime)>previous',arg=s['time'])
+   else:
+    target=prey.get(actor.get('targetId'));near=target and phase=='approaching'and math.hypot(target['x']-actor['x'],target['z']-actor['z'])<1.05
+    tick(page,.025 if near else .1 if 'departing'in seen else 1 if phase=='waiting' else .25)

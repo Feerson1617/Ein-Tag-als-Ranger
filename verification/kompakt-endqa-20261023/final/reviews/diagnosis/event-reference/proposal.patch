@@ -1,0 +1,155 @@
+--- a/dist/compact/evidence.js
++++ b/dist/compact/evidence.js
+@@ -8,10 +8,22 @@
+  if(typeof value!=='string'||!value.startsWith('["record-event-v1",'))return false;
+  try{const parts=JSON.parse(value);return Array.isArray(parts)&&parts.length===3&&parts[0]==='record-event-v1'&&parts.slice(1).every(x=>typeof x==='string'&&x.length>0)&&JSON.stringify(parts)===value;}catch{return false;}
+ }
+-export function selectedEventRows(records,references=[]){
++export function eventReferenceCandidates(records,references=[]){
+  const qualified=new Set(),legacy=new Set();
+  for(const reference of references)(qualifiedEventReference(reference)?qualified:legacy).add(reference);
+  return records.flatMap(record=>(record.events||[]).filter(event=>qualified.has(eventReference(record,event))||legacy.has(event.id)).map(event=>({record,event})));
++}
++// Old answers identify an event, not its containing record. Multiple saved
++// copies of that event within one run remain equivalent; another run is a
++// different event even when its local counter and interaction happen to match.
++export function ambiguousEventReferences(records,references=[]){
++ const legacy=new Set(references.filter(reference=>!qualifiedEventReference(reference))),runs=new Map();
++ for(const record of records)for(const event of record.events||[])if(legacy.has(event.id)){const scopes=runs.get(event.id)||new Set();scopes.add(record.runId);runs.set(event.id,scopes);}
++ return [...legacy].filter(reference=>(runs.get(reference)?.size||0)>1);
++}
++export function selectedEventRows(records,references=[]){
++ const ambiguous=new Set(ambiguousEventReferences(records,references));
++ return eventReferenceCandidates(records,references.filter(reference=>!ambiguous.has(reference)));
+ }
+ export function identityInventory(seed,modelRevision=1){const cacheKey=seed+':'+modelRevision;if(inventories.has(cacheKey))return inventories.get(cacheKey);const state=createReferenceState(seed,modelRevision);createEcology(state);const rows=[...state.plants,...state.trees.map(t=>({...t,taxon:t.type==='beech'?'fagus_sylvatica':'quercus_robur'})),state.deer,state.bird,...state.ecology.actors],result={individuals:new Map(rows.map(r=>[r.id,r])),resources:state.ecology.resources,cloverIds:state.ecology.cloverIds,nettleId:state.ecology.nettleId};if(inventories.size>=16)inventories.delete(inventories.keys().next().value);inventories.set(cacheKey,result);return result;}
+ export function eventIssue(record,event){
+--- a/dist/compact/task-schema.js
++++ b/dist/compact/task-schema.js
+@@ -1,7 +1,7 @@
+ import { DETERMINATION_CHOICES,OBSERVABLE_FEATURES } from './determination.js';
+ import { KEY_OPTIONS } from './catalog.js';
+ import { FOOD_EDGES } from './learning-models.js';
+-import { eventReference,selectedEventRows } from './evidence.js';
++import { eventReference,eventReferenceCandidates } from './evidence.js';
+ 
+ const object=v=>v!==null&&typeof v==='object'&&!Array.isArray(v);
+ const features=['spatulate-tip',...OBSERVABLE_FEATURES,...new Set(Object.values(KEY_OPTIONS).flatMap(k=>[...k.correct,...k.wrong]))];
+@@ -34,7 +34,7 @@
+   if(a.evidenceIds!==undefined){list(a.evidenceIds,mission+'.evidenceIds');for(const id of a.evidenceIds)reference(id,records,mission+'.evidenceIds');}
+   if(a.eventIds!==undefined){
+    list(a.eventIds,mission+'.eventIds');const selected=new Set();
+-   for(const id of a.eventIds){const rows=selectedEventRows(records,[id]);if(!rows.length)throw Error('Aufgabenbezug fehlt: '+mission+'.eventIds.');for(const {record,event}of rows){const key=eventReference(record,event);if(selected.has(key))throw Error('Doppelter Vorgangsbezug: '+mission+'.eventIds.');selected.add(key);}}
++   for(const id of a.eventIds){const rows=eventReferenceCandidates(records,[id]);if(!rows.length)throw Error('Aufgabenbezug fehlt: '+mission+'.eventIds.');for(const {record,event}of rows){const key=eventReference(record,event);if(selected.has(key))throw Error('Doppelter Vorgangsbezug: '+mission+'.eventIds.');selected.add(key);}}
+   }
+   if(a.determinations!==undefined){
+    if(!Array.isArray(a.determinations))throw Error('Ungültige Bestimmungsantwort.');
+--- a/dist/compact/learning-ui.js
++++ b/dist/compact/learning-ui.js
+@@ -7,7 +7,7 @@
+ import { CRITERIA } from './management.js';
+ import { nearestSpeaker } from './village.js';
+ import { COASTAL_PROFILES } from './coastal-rig.js';
+-import { eventReference,selectedEventRows } from './evidence.js';
++import { eventReference,selectedEventRows,ambiguousEventReferences } from './evidence.js';
+ import { INTERACTIONS,competitionExperiment,forestMeasurement,sampleQuadrat,stationSnapshot,tideAt } from './ecology.js';
+ import { FOOD_EDGES,NODE_LABELS,growthModel,predatorPreyModel,toleranceModel,carbonModel,nitrogenModel } from './learning-models.js';
+ import { MATERIALS,SOURCES,MANAGEMENT_CARDS } from './materials.js';
+@@ -26,7 +26,7 @@
+  function refreshHud(){const id=journal.data.learning.activeMission;$('objective').textContent=id?`${id} · ${MISSIONS.find(m=>m.id===id).title}`:'Freie Erkundung';$('objective').dataset.activeMission=id||'free';}
+  function persist(changes){journal.updateLearning(changes);api.setDirty(false);api.refresh();refreshHud();}
+  function autosave(id,read){for(const el of $('task-form').querySelectorAll('input,textarea,select'))el.addEventListener('input',()=>safe(()=>{persist({drafts:{...journal.data.learning.drafts,[id]:read()}});}));}
+- function submit(id,read){$('save-task').onclick=()=>safe(()=>{const value=read();journal.answer(id,value);persist({drafts:{...journal.data.learning.drafts,[id]:value}});const r=assessMission(id,journal.data);$('task-feedback').textContent=(r.complete?'Strukturierte Belegprüfung erfüllt. ':'Noch offen: ')+r.message+' Die freie Begründung bleibt Grundlage der Besprechung und muss als eigenes Arbeitsprodukt vorliegen.';});}
++ function submit(id,read){$('save-task').onclick=()=>safe(()=>{const value=read();journal.answer(id,value);persist({drafts:{...journal.data.learning.drafts,[id]:value}});if(id==='K2')$('event-reference-warning')?.remove();const r=assessMission(id,journal.data);$('task-feedback').textContent=(r.complete?'Strukturierte Belegprüfung erfüllt. ':'Noch offen: ')+r.message+' Die freie Begründung bleibt Grundlage der Besprechung und muss als eigenes Arbeitsprodukt vorliegen.';});}
+  function hub(){const l=journal.data.learning;panel(`<span class="eyebrow">FRAGEN VERFOLGEN</span><h2>Wähle deinen Erkenntnisweg.</h2><p>Ein Ziel gleichzeitig. Du musst weder alle Familien noch alle Organismen sammeln. Beobachtung, Modellprotokoll und bereitgestelltes Wissen haben verschiedene Herkunft.</p><label>Anforderungsniveau<select id="level">${option('gA','gA · Kernuntersuchung',l.level)}${option('eA','eA · zusätzlich Flächenprobe und Datenmodelle',l.level)}</select></label><div class="actions"><button id="free-play">Frei erkunden</button><button id="materials">Lern- und Quellenkarten</button><button id="analysis">Datenmodelle</button></div>${MISSIONS.map(m=>{const r=assessMission(m.id,journal.data);return `<article><span class="badge">${m.id} · ${r.complete?'Belege strukturiert vollständig':'Untersuchung offen'}</span><h3>${e(m.title)}</h3><p>${e(m.goal)}</p><button data-mission="${m.id}">Untersuchung öffnen</button><details><summary>Zeit und Herkunft</summary><p>${e(m.minutes)}. Die automatische Prüfung bewertet Belegstruktur, nicht die Qualität freier Erklärungen.</p></details></article>`;}).join('')}<p id="learning-status" role="alert"></p>`);
+   $('level').onchange=()=>safe(()=>persist({level:$('level').value}));$('free-play').onclick=()=>safe(()=>{persist({activeMission:null});close();});$('materials').onclick=materials;$('analysis').onclick=analysis;$('panel-body').querySelectorAll('[data-mission]').forEach(b=>b.onclick=()=>safe(()=>{persist({activeMission:b.dataset.mission});task(b.dataset.mission);}));
+  }
+@@ -35,8 +35,8 @@
+    const candidates=journal.data.records.filter(r=>KEY_OPTIONS[r.taxon]),current=candidates.find(r=>r.id===a.recordId)||candidates[0],k=KEY_OPTIONS[current?.taxon];
+    body=`<p>Untersuche Waldkern und hellen Saum mit der Lupe oder derselben vergrößerten Modellansicht. Sichere drei verschiedene Funde. Am Ort kannst du methodengleiche Standortprotokolle aufnehmen.</p>${select('determination-record','Fundbeleg',candidates.map(r=>[r.id,`${fundLabel(r,journal.data)} · ${r.siteId||'Ort nicht vermerkt'}`]),current?.id)}<div id="key-fields">${k?checks('features',OBSERVABLE_FEATURES.map(f=>[f,FEATURE_LABELS[f]||f]),a.features||[])+select('choice','Meine Bestimmung',DETERMINATION_CHOICES,a.choice)+select('limit','Begründete Grenze',k.limits.map(x=>[x,FEATURE_LABELS[x]]),a.limit):'<p>Noch kein passender Fundbeleg. Bestimme keinen Programmnamen auswendig.</p>'}</div><button id="add-determination"${k?'':' disabled'}>Diesen Bestimmungsweg hinzufügen</button><ul>${(a.determinations||[]).map(d=>`<li>${e(fundLabel(journal.data.records.find(r=>r.id===d.recordId),journal.data))} · ${e(DETERMINATION_CHOICES.find(([id])=>id===d.choice)?.[1]||'noch keine Auswahl')} · ${e(d.limit||'zwei Merkmale')} · ${validDetermination(journal.data.records.find(r=>r.id===d.recordId),d)?'Merkmalsweg formal stimmig':'Merkmalsweg prüfen'}</li>`).join('')}</ul><p>Standortprotokolle: ${l.measurements.length}. Zeigerwerte mit Fundstellen stehen auf C04; x ist indifferent, kein Nullwert. Transfer: Untersuche einen noch unbenannten Zweig am hellen Waldort und vergleiche Stiel- und Traubeneiche. Fehlen Früchte oder Feinmerkmale, bleibt eine begründete Eichen-Gruppe zulässig.</p>`;
+   }else if(id==='K2'){
+-   const events=journal.data.records.flatMap(r=>(r.events||[]).map(ev=>[eventReference(r,ev),`${ev.interaction}: ${ev.outcome} · ${ev.resourceId} · Rundgang ${r.runId} · Modellzeit ${r.simulationTime.toFixed(1)} s · Beleg ${r.id}`])),chosenEvents=selectedEventRows(journal.data.records,a.eventIds||[]).map(({record,event})=>eventReference(record,event));
+-   body=`<p>Wähle einen lokalen Fall. Für Konkurrenz kannst du den kontrollierten Versuch ohne/mit Mitnutzer ausführen. Für einen Vorgangsfall benötigst du einen selbst gesicherten Ereignisbeleg.</p>${select('case-id','Fall',INTERACTIONS.filter(i=>!['root-fungus','fungus-wood','shore-feeding','shore-niche','communication'].includes(i.id)).map(i=>[i.id,i.id+' · '+i.kind]),a.caseId||'shell-competition')}<details><summary>Kontrollierter Konkurrenzversuch</summary><p>Nur der Mitnutzer wird verändert. Startpool 12, gleicher Seed, 12 Begegnungsschritte. Dies ist ein ausdrücklich gestaltetes Zusatzmodell, keine Naturmessung.</p>${select('experiment-tide','Tidebedingungen',[['exposed','Trockenfallend / zugänglich'],['covered','Bedeckt / für diesen Muschelversuch nicht zugänglich']],a.experimentTide||'exposed')}<div class="actions"><button type="button" id="run-control">Ohne Mitnutzer ausführen</button><button type="button" id="run-competitor">Mit Mitnutzer ausführen</button></div><div id="experiment-table">${experimentTable(l.experiments)}</div></details>${select('control-id','Kontrolllauf',l.experiments.map(x=>[x.id,`${x.parameters.competitor?'mit':'ohne'} Mitnutzer; Ertrag ${x.result.yield}; ${x.parameters.intraspecific?'gleiche':'verschiedene'} Art`]),a.controlId)}${select('competitor-id','Vergleichslauf',l.experiments.map(x=>[x.id,`${x.parameters.competitor?'mit':'ohne'} Mitnutzer; Ertrag ${x.result.yield}`]),a.competitorId)}${checks('event-ids',events,chosenEvents)}${select('claim','Meine Aussage',[['resource-limits-yield','Begrenzte gemeinsame Ressource vermindert den Ertrag'],['event-with-resource','Ein Vorgang mit konkreter Ressource / Partner ist dokumentiert'],['presence-proves','Gemeinsame Anwesenheit beweist schon eine Wechselwirkung']],a.claim)}${select('alternative','Kontrolle / Aussagegrenze',[['tide-controlled','Gleiche Tide kontrolliert den alternativen Zugang'],['resource-controlled','Gleicher Startpool kontrolliert die Ressourcenmenge'],['no-population-inference','Ein Einzelereignis belegt keine Populationsregel'],['no-seed-guarantee','Pollentransport garantiert keine Samenbildung'],['not-full-mineralization','Einziehen ist keine vollständige Mineralisierung'],['everything-proven','Das Modell beweist die Beziehung in der Natur']],a.alternative)}`;
++   const events=journal.data.records.flatMap(r=>(r.events||[]).map(ev=>[eventReference(r,ev),`${ev.interaction}: ${ev.outcome} · ${ev.resourceId} · Rundgang ${r.runId} · Modellzeit ${r.simulationTime.toFixed(1)} s · Beleg ${r.id}`])),chosenEvents=selectedEventRows(journal.data.records,a.eventIds||[]).map(({record,event})=>eventReference(record,event)),ambiguousEvents=ambiguousEventReferences(journal.data.records,a.eventIds||[]);
++   body=`<p>Wähle einen lokalen Fall. Für Konkurrenz kannst du den kontrollierten Versuch ohne/mit Mitnutzer ausführen. Für einen Vorgangsfall benötigst du einen selbst gesicherten Ereignisbeleg.</p>${select('case-id','Fall',INTERACTIONS.filter(i=>!['root-fungus','fungus-wood','shore-feeding','shore-niche','communication'].includes(i.id)).map(i=>[i.id,i.id+' · '+i.kind]),a.caseId||'shell-competition')}<details><summary>Kontrollierter Konkurrenzversuch</summary><p>Nur der Mitnutzer wird verändert. Startpool 12, gleicher Seed, 12 Begegnungsschritte. Dies ist ein ausdrücklich gestaltetes Zusatzmodell, keine Naturmessung.</p>${select('experiment-tide','Tidebedingungen',[['exposed','Trockenfallend / zugänglich'],['covered','Bedeckt / für diesen Muschelversuch nicht zugänglich']],a.experimentTide||'exposed')}<div class="actions"><button type="button" id="run-control">Ohne Mitnutzer ausführen</button><button type="button" id="run-competitor">Mit Mitnutzer ausführen</button></div><div id="experiment-table">${experimentTable(l.experiments)}</div></details>${select('control-id','Kontrolllauf',l.experiments.map(x=>[x.id,`${x.parameters.competitor?'mit':'ohne'} Mitnutzer; Ertrag ${x.result.yield}; ${x.parameters.intraspecific?'gleiche':'verschiedene'} Art`]),a.controlId)}${select('competitor-id','Vergleichslauf',l.experiments.map(x=>[x.id,`${x.parameters.competitor?'mit':'ohne'} Mitnutzer; Ertrag ${x.result.yield}`]),a.competitorId)}${ambiguousEvents.length?'<p id="event-reference-warning" role="status">Ein älterer Vorgangsbezug ist mehrdeutig: Sein Ereignisname kommt in mehreren Rundgängen vor. Er zählt bis zur erneuten Auswahl nicht als Beleg. Die gespeicherten Beobachtungen bleiben erhalten. Wähle unten den passenden Vorgang anhand von Rundgang, Modellzeit und Belegnummer.</p>':''}${checks('event-ids',events,chosenEvents)}${select('claim','Meine Aussage',[['resource-limits-yield','Begrenzte gemeinsame Ressource vermindert den Ertrag'],['event-with-resource','Ein Vorgang mit konkreter Ressource / Partner ist dokumentiert'],['presence-proves','Gemeinsame Anwesenheit beweist schon eine Wechselwirkung']],a.claim)}${select('alternative','Kontrolle / Aussagegrenze',[['tide-controlled','Gleiche Tide kontrolliert den alternativen Zugang'],['resource-controlled','Gleicher Startpool kontrolliert die Ressourcenmenge'],['no-population-inference','Ein Einzelereignis belegt keine Populationsregel'],['no-seed-guarantee','Pollentransport garantiert keine Samenbildung'],['not-full-mineralization','Einziehen ist keine vollständige Mineralisierung'],['everything-proven','Das Modell beweist die Beziehung in der Natur']],a.alternative)}`;
+   }else if(id==='K3'){
+    body=`<p>Am Watt-Probenpunkt wird eine Muschel als individuelles Schnittmodell untersucht. Nutze ausdrücklich gesteuerte Modellzeitfenster: erst Niedrigwasser, später Hochwasser. Stelle und 5-cm-Tiefe bleiben gleich. Die Protokolle zählen nicht als sechs Sekunden eigener Fernglassichtung.</p><p>Erfasste Protokolle: ${l.protocols.length}. ${l.level==='eA'?'Zusätzlich Q1, Q2 und die Nullprobe Q0 aufnehmen.':''}</p>${select('low-id','Früheres Niedrigwasserprotokoll',l.protocols.map(p=>[p.id,`${p.individualId} · ${p.activity} · t=${p.simulationTime.toFixed(1)} s · ${p.duration} s`]),a.lowId)}${select('high-id','Späteres Hochwasserprotokoll',l.protocols.map(p=>[p.id,`${p.individualId} · ${p.activity} · t=${p.simulationTime.toFixed(1)} s · ${p.duration} s`]),a.highId)}${select('filtration','Wann ist Filtration in diesem Modell möglich?',[['covered','Bei Wasserbedeckung'],['always','Immer, auch trocken']],a.filtration)}${select('access','Wann ist die Oberfläche für den Austernfischer besser erreichbar?',[['exposed','Beim Trockenfallen'],['covered','Bei hohem Wasserstand']],a.access)}${select('absence','Wie deute ich einen Nullfund?',[['not-detected','Unter dieser Methode nicht nachgewiesen'],['extinct','Dort ist die Art sicher ausgestorben']],a.absence)}${select('depth','Was bewirkt eine andere Untersuchungstiefe?',[['different-space','Sie verändert den Untersuchungsraum und die Vergleichbarkeit'],['irrelevant','Sie ist für den Vergleich egal']],a.depth)}${samplesTable(l.samples)}`;
+   }else if(id==='K4'){
+--- a/dist/field-guide.js
++++ b/dist/field-guide.js
+@@ -15,4 +15,4 @@
+ };
+ 
+ // Separate preview controls; the large world's instructions remain unchanged.
+-export const COMPACT_GUIDE='WASD oder linker Steuerkreis: normal 1,6 m/s. Umschalt oder „Zügig gehen“: 2,8 m/s, auf Tastatur und Touch gleich. Auf der Landschaft ziehen: umsehen. F: Fernglas für Tiere; L: Lupe für Pflanzen. Halte dasselbe sichtbare Individuum ruhig im Blick und sichere nach 2,5 Sekunden einen Beleg. Blickwechsel, Pause, Werkzeugwechsel und ein ausgeblendeter Tab unterbrechen die Beobachtung. Der Programmname ist noch keine eigene Bestimmung. P oder Ⅱ: Pause, Prüfansichten und Darstellung. „Freie Erkundung“ öffnet fünf wählbare Fragen. An Untersuchungsorten öffnet „Hier untersuchen“ vergrößerte aktive Modelle, Standortmessung oder Wattprobe. Eine Auswahl allein vergibt keinen Fund; halte die Nahansicht ebenfalls 2,5 Sekunden ruhig. An der Küste kannst du vorhandene Nahrungssuchvorgänge in Echtzeit oder beschrifteten Modellschritten verfolgen. Modellschritte ersetzen keine eigene Sichtungszeit. Ist die endliche Beute bereits aufgebraucht, beginnt „Neues Beobachtungsfenster hier beginnen“ ausdrücklich einen neuen Modellrundgang bei Zeit 0 mit endlichem Ausgangsbestand. Dein Standort und alle bisherigen Belege bleiben erhalten. Wähle K2-Vorgangsbelege anhand von Rundgang, Modellzeit und Belegnummer; gleichnamige Ereignisse bleiben getrennt auswählbar. K3 vergleicht nur Belege innerhalb desselben Rundgangs; die neue Herkunft wird im Feldbuch mitgesichert. Im Watt steuern beschriftete Tasten ausdrücklich die Modellzeit für den kontrollierten Muschelvergleich. Lern- und Quellenkarten sowie zusätzliche Datenmodelle liegen bei den Aufträgen. Datierte Fenster unter P erzeugen jeweils einen neuen Rundgangkontext. Das Feldbuch wird getrennt von der großen Fassung lokal gespeichert; exportiere wichtige Belege. Beschädigte Aufgabenentwürfe lassen sich im Feldbuch gezielt bereinigen; dabei wird der ursprüngliche Speicher gesichert. Altfeldbücher lassen sich als Archiv erhalten, ohne neue Missionserfolge zu erzeugen. Vier Waldfunde bleiben vor der Bestimmung unbenannt; vergleiche ihre Merkmale in K1. Im Dorf erscheint bei einer nahen Gesprächsperson „Mit … sprechen“. Der breite Deich ist in der Höhe verkürzt, keine geprüfte Schutzanlage. Die Tafel am Waldstart zeigt dieselbe Kurzanleitung.';
++export const COMPACT_GUIDE='WASD oder linker Steuerkreis: normal 1,6 m/s. Umschalt oder „Zügig gehen“: 2,8 m/s, auf Tastatur und Touch gleich. Auf der Landschaft ziehen: umsehen. F: Fernglas für Tiere; L: Lupe für Pflanzen. Halte dasselbe sichtbare Individuum ruhig im Blick und sichere nach 2,5 Sekunden einen Beleg. Blickwechsel, Pause, Werkzeugwechsel und ein ausgeblendeter Tab unterbrechen die Beobachtung. Der Programmname ist noch keine eigene Bestimmung. P oder Ⅱ: Pause, Prüfansichten und Darstellung. „Freie Erkundung“ öffnet fünf wählbare Fragen. An Untersuchungsorten öffnet „Hier untersuchen“ vergrößerte aktive Modelle, Standortmessung oder Wattprobe. Eine Auswahl allein vergibt keinen Fund; halte die Nahansicht ebenfalls 2,5 Sekunden ruhig. An der Küste kannst du vorhandene Nahrungssuchvorgänge in Echtzeit oder beschrifteten Modellschritten verfolgen. Modellschritte ersetzen keine eigene Sichtungszeit. Ist die endliche Beute bereits aufgebraucht, beginnt „Neues Beobachtungsfenster hier beginnen“ ausdrücklich einen neuen Modellrundgang bei Zeit 0 mit endlichem Ausgangsbestand. Dein Standort und alle bisherigen Belege bleiben erhalten. Wähle K2-Vorgangsbelege anhand von Rundgang, Modellzeit und Belegnummer; gleichnamige Ereignisse bleiben getrennt auswählbar. Mehrdeutige ältere Vorgangsbezüge bleiben lesbar; wähle den passenden Beleg in K2 erneut aus, bevor er für den Abschluss zählt. K3 vergleicht nur Belege innerhalb desselben Rundgangs; die neue Herkunft wird im Feldbuch mitgesichert. Im Watt steuern beschriftete Tasten ausdrücklich die Modellzeit für den kontrollierten Muschelvergleich. Lern- und Quellenkarten sowie zusätzliche Datenmodelle liegen bei den Aufträgen. Datierte Fenster unter P erzeugen jeweils einen neuen Rundgangkontext. Das Feldbuch wird getrennt von der großen Fassung lokal gespeichert; exportiere wichtige Belege. Beschädigte Aufgabenentwürfe lassen sich im Feldbuch gezielt bereinigen; dabei wird der ursprüngliche Speicher gesichert. Altfeldbücher lassen sich als Archiv erhalten, ohne neue Missionserfolge zu erzeugen. Vier Waldfunde bleiben vor der Bestimmung unbenannt; vergleiche ihre Merkmale in K1. Im Dorf erscheint bei einer nahen Gesprächsperson „Mit … sprechen“. Der breite Deich ist in der Höhe verkürzt, keine geprüfte Schutzanlage. Die Tafel am Waldstart zeigt dieselbe Kurzanleitung.';
+--- a/tests/compact-event-reference-check.mjs
++++ b/tests/compact-event-reference-check.mjs
+@@ -4,7 +4,7 @@
+ import {createReferenceState,stepReference}from '../dist/compact/world-state.js';
+ import {createEcology,stepEcology}from '../dist/compact/ecology.js';
+ import {localObservationContext}from '../dist/compact/observation-context.js';
+-import {eventReference,selectedEventRows}from '../dist/compact/evidence.js';
++import {eventReference,selectedEventRows,ambiguousEventReferences}from '../dist/compact/evidence.js';
+ import {observationSite}from '../dist/compact/observation-schema.js';
+ import {CompactJournal,parseCompact}from '../dist/compact/journal.js';
+ import {emptyLearning,assessMission}from '../dist/compact/missions.js';
+@@ -47,23 +47,52 @@
+  for(const collection of ['answers','drafts'])for(const eventIds of invalid){const candidate=structuredClone(data);candidate.learning[collection].K2=answer('bee-clover',eventIds);assert.throws(()=>parseCompact(JSON.stringify(candidate)),/Antwortauswahl|Vorgangsbezug|Aufgabenbezug/);}
+ });
+ 
+-check('legacy event-ID answers retain their original data through journal export and import',()=>{
++check('ambiguous legacy answers remain readable and unchanged but cannot select another run implicitly',()=>{
+  const {data,oldEvent}=twoRuns();data.learning.answers.K2=answer('bee-clover',[oldEvent.id]);data.learning.drafts.K2=structuredClone(data.learning.answers.K2);
+- const journal=new CompactJournal(null);journal.replace(data);assert.deepEqual(parseCompact(journal.export()),data);assert.equal(assessMission('K2',journal.data).complete,true);
+- assert.equal(journal.data.learning.answers.K2.eventIds[0],oldEvent.id);assert.equal(selectedEventRows(journal.data.records,[oldEvent.id]).length,2);
++ const journal=new CompactJournal(null);journal.replace(data);assert.deepEqual(parseCompact(journal.export()),data);assert.equal(assessMission('K2',journal.data).complete,false);
++ assert.equal(journal.data.learning.answers.K2.eventIds[0],oldEvent.id);assert.equal(selectedEventRows(journal.data.records,[oldEvent.id]).length,0);assert.deepEqual(ambiguousEventReferences(journal.data.records,[oldEvent.id]),[oldEvent.id]);
+  const legacy=parseCompact(fs.readFileSync(new URL('../verification/kompakt-v2/learning/earned-all-families.json',import.meta.url),'utf8'));
+  const before=Object.fromEntries(['K1','K2','K3','K4','K5'].map(id=>[id,assessMission(id,legacy)]));journal.replace(legacy);assert.deepEqual(parseCompact(journal.export()),legacy);for(const id of Object.keys(before))assert.deepEqual(assessMission(id,journal.data),before[id],id);
+ });
+ 
+-check('opening an old K2 answer preselects distinct qualified checkboxes with concrete provenance without changing storage',()=>{
++check('ambiguous K2 answers show a provenance warning without preselection or changing stored data',()=>{
+  const {data,state,oldEvent,refs}=twoRuns();data.learning.answers.K2=answer('bee-clover',[oldEvent.id]);const original=structuredClone(data),nodes=new Map(),priorDocument=globalThis.document;let html='';
+  const escape=value=>String(value??'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
+  try{
+   globalThis.document={getElementById:id=>{if(!nodes.has(id))nodes.set(id,{dataset:{},querySelectorAll:()=>[]});return nodes.get(id);}};
+   createLearningUI({journal:{data},state,observer:{x:63,z:-12},panel:value=>html=value,escape,context:()=>({runId:'local-run'}),close(){},toast(){},download(){}}).task('K2');
+   const inputs=[...html.matchAll(/<input type="checkbox" name="event-ids" value="([^"]+)"([^>]*)>/g)];assert.equal(inputs.length,2);
+-  for(let i=0;i<2;i++){assert.equal(inputs[i][1],escape(refs[i]));assert.match(inputs[i][2],/checked/);const r=data.records[i];assert.ok(html.includes('Rundgang '+r.runId));assert.ok(html.includes('Modellzeit '+r.simulationTime.toFixed(1)+' s'));assert.ok(html.includes('Beleg '+r.id));}
+-  assert.deepEqual(data,original);
++  for(let i=0;i<2;i++){assert.equal(inputs[i][1],escape(refs[i]));assert.doesNotMatch(inputs[i][2],/checked/);const r=data.records[i];assert.ok(html.includes('Rundgang '+r.runId));assert.ok(html.includes('Modellzeit '+r.simulationTime.toFixed(1)+' s'));assert.ok(html.includes('Beleg '+r.id));}
++  assert.match(html,/id="event-reference-warning"/);assert.match(html,/mehrdeutig/);assert.deepEqual(data,original);
+  }finally{if(priorDocument===undefined)delete globalThis.document;else globalThis.document=priorDocument;}
+ });
++check('unambiguous legacy references and repeated copies of one run/event retain their grading',()=>{
++ const {data,oldEvent}=twoRuns();data.records=[data.records[0]];data.learning.answers.K2=answer('bee-clover',[oldEvent.id]);
++ for(const copies of [1,2]){
++  if(copies===2)data.records.push({...structuredClone(data.records[0]),id:'second-note-same-event'});
++  const parsed=parseCompact(JSON.stringify(data));assert.deepEqual(parsed,data);assert.deepEqual(ambiguousEventReferences(parsed.records,[oldEvent.id]),[]);assert.equal(selectedEventRows(parsed.records,[oldEvent.id]).length,copies);assert.equal(assessMission('K2',parsed).complete,true);
++ }
++});
++
++check('adding a different same-ID event cannot complete an unchanged wrong legacy answer',()=>{
++ const {data,oldEvent,refs}=twoRuns({seconds:30,oldObserver:{x:-59,z:3},oldCase:'tick-deer',newCase:'worm-litter'}),newRecord=data.records.pop();data.learning.answers.K2=answer('worm-litter',[oldEvent.id]);
++ const journal=new CompactJournal(null);journal.replace(data);const savedAnswer=structuredClone(journal.data.learning.answers.K2);assert.equal(assessMission('K2',journal.data).complete,false);
++ journal.add(newRecord);assert.deepEqual(journal.data.learning.answers.K2,savedAnswer);assert.equal(assessMission('K2',journal.data).complete,false);assert.equal(selectedEventRows(journal.data.records,savedAnswer.eventIds).length,0);
++ journal.answer('K2',answer('worm-litter',[refs[1]]));assert.equal(assessMission('K2',journal.data).complete,true);assert.deepEqual(parseCompact(journal.export()),journal.data);
++});
++check('saving a qualified K2 choice removes its warning only after successful persistence without rerendering',()=>{
++ for(const failStorage of [false,true]){
++  const {data,state,oldEvent,refs}=twoRuns();data.learning.answers.K2=answer('bee-clover',[oldEvent.id]);data.learning.drafts.K2=structuredClone(data.learning.answers.K2);
++  let rejectWrites=false,warningRemoved=0,renders=0;const storage={getItem:()=>null,setItem:()=>{if(rejectWrites)throw Error('QA storage failure');}},journal=new CompactJournal(storage);journal.replace(data);const original=structuredClone(journal.data),nodes=new Map(),priorDocument=globalThis.document;
++  const node=id=>{if(id==='event-reference-warning'&&warningRemoved)return null;if(!nodes.has(id))nodes.set(id,{dataset:{},value:'',querySelectorAll:()=>[],remove:()=>{warningRemoved++;}});return nodes.get(id);};
++  try{
++   globalThis.document={getElementById:node,querySelectorAll:selector=>selector==='input[name="event-ids"]:checked'?[{value:refs[1]}]:[]};
++   createLearningUI({journal,state,observer:{x:63,z:-12},panel:html=>{renders++;assert.match(html,/id="event-reference-warning"/);},escape:String,context:()=>({runId:'local-run'}),close(){},toast(){},download(){},refresh(){},setDirty(){}}).task('K2');
++   for(const [id,value]of Object.entries({'case-id':'bee-clover','experiment-tide':'exposed','control-id':'','competitor-id':'',claim:'event-with-resource',alternative:'no-seed-guarantee',reasoning:'Der ausdrücklich ausgewählte Vorgang ist einem konkreten Rundgang zugeordnet.'}))node(id).value=value;
++   assert.equal(warningRemoved,0);rejectWrites=failStorage;node('save-task').onclick();assert.equal(renders,1);
++   if(failStorage){assert.equal(warningRemoved,0);assert.deepEqual(journal.data,original);}
++   else{assert.equal(warningRemoved,1);assert.deepEqual(journal.data.records,original.records);assert.deepEqual(journal.data.learning.answers.K2.eventIds,[refs[1]]);assert.deepEqual(journal.data.learning.drafts.K2.eventIds,[refs[1]]);assert.equal(assessMission('K2',journal.data).complete,true);assert.match(node('task-feedback').textContent,/^Strukturierte Belegprüfung erfüllt/);}
++  }finally{if(priorDocument===undefined)delete globalThis.document;else globalThis.document=priorDocument;}
++ }
++});
+ save();console.log(JSON.stringify({suite:'compact-event-reference',passed:checks.length}));

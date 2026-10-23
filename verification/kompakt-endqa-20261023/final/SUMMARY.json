@@ -1,0 +1,1214 @@
+{
+  "runtimeFreeze": {
+    "runtimeCommit": "3920a1d1d2692889b75403c1b0e50f5b856398aa",
+    "sourceHashes": {
+      "assets/boardwalk-wood.webp": "4d06022133e3772534374671fb73a4509ed109e1db6ca06a2d62a8c99c47ac6d",
+      "assets/compact-roe-deer.glb": "a89400df66033eb5eaa7f9bf13ccefaacfb866ab24e4576574d11965354ee619",
+      "assets/sky-panorama.webp": "46c360b491b11269d280e73ec0e71869afdfd62fb543b4250713234374a2f71d",
+      "assets/terrain-atlas.webp": "d637324d3ace6ef8e2c549e7f0a513efd1a4c06aab927f0ed1565bf77b2ced02",
+      "assets/wildlife-fox.glb": "61a4d1b845aa406928a327648417ae1c3982510b9c4e8ce33b7c494fbc98a22f",
+      "compact/catalog.js": "6b693d4c6a0f6b880b9ff99295826f3968e61ba96f52606997a1635ddf1fe39f",
+      "compact/coastal-behaviour.js": "39b1dcb8691cd48850321c4c734eabf0b2875b91a8cd09dcd7b571758b0f0927",
+      "compact/coastal-rig.js": "92a0270abdbf3aee7467e466cf344b08b8ef8bf5af4d903d3c672f9bcd4e2513",
+      "compact/comparison-views.js": "050f629dfc0b3b9bac1badc0c0564cfb08cf88e92006edcba377eabc623ecf82",
+      "compact/determination.js": "25f8ce960dba09ebeeb4470530d38608809bf98aa91d3575716b6ff835145c6f",
+      "compact/ecology.js": "e50f25a3146e79671472e7a5e6ed1d78f007564515bf9a78bb67fac9695ef8e0",
+      "compact/evidence.js": "0a6216bca6fdd1aa0e091a62ed62f57b04e83cfc8a597e294d6e18e8db61712d",
+      "compact/expanded-view.js": "74590c5e35ac021217b32ff5f2c5091da29ab78eaa38a43c460318dd8e6d6382",
+      "compact/fauna-view.js": "6d968276c131fb16ad2ecf073debb6f00b853f3742113e80ae35fe0b04c5b4f0",
+      "compact/geometry.js": "ac8a5e08a56f7ed75abb7a65baa6e20aba032984d7089e3b290d4769dd4307b0",
+      "compact/habitats.js": "e5448a68391c3b8f5c99219a39e3b79762ae651343cd870f0c99c4ac3a8b0e16",
+      "compact/inspection.js": "961c8c13e8e8e58595460fa40ed7bed0668367b120081dd95961a78ca87300ea",
+      "compact/journal.js": "e0c991989742c5ad3326ca63a7ba7ba033e89a5f23b74b648858ab10b67f1812",
+      "compact/layout.js": "e02558557a9c99fa0549c94f8cbfc8873e18f3c90df845155d51ee4d404209a6",
+      "compact/learning-documents.js": "53a2c78930b1a164c618bdfb91a49701076bf94fe22a8f990afca70402bc0173",
+      "compact/learning-models.js": "ac5200d27a29dc17ab2000a90554990a2a632532e920f887026407d0cfd2c20e",
+      "compact/learning-ui.js": "d590710b949bca8f47770bebb37d08adcc3d53ee7855eb9edf0d7d9196852e7b",
+      "compact/lesson-layouts.js": "38df6da54b9615722acef34264832c757c753b2ea250f0c14fe571d7f267ba10",
+      "compact/lesson-resources.js": "44b2f2ac295e374f6ba8e1351ca19dc01b10099bf0e3faba791c957bfae18f7b",
+      "compact/main.js": "17d0a0f69b37911606def302eff5c188098e49f4133893e15557b4dfd0c37714",
+      "compact/management.js": "e6d38fbfc2c7e131d60ca3e38a1c740ca9ba5c49628fd3ba51ca94242d2d75a3",
+      "compact/manifest.js": "c89f2dd2635407d111a195a806b7ea3f40101054883d65197175c748e3f652e6",
+      "compact/materials.js": "81b0144dd99d1392599406840614c613a9e81427382b8f628d6a5aa950f71b74",
+      "compact/missions.js": "8f8151a6b499658b1316ee57ac6fd4d4e94a980b5baf0e943ca2678edd03bfca",
+      "compact/observation-context.js": "eb320373daffbdefa9e99e2a59fdb1421d2b21c8ced15ab5f88fc567f9428080",
+      "compact/observation-schema.js": "1ab043f3d6f7b61ea00eea1510da71b897f0e6dcc52a934d4acae9c17d3e773e",
+      "compact/organism-models.js": "7cf080fb497a17d58ce4d1672ffc5cef12b7f2c033a336384e4aead7dfc27cb6",
+      "compact/path-mesh.js": "7a41ebc390aeca96cffd1e4fcee19f3b76310413fcee3489d1533ebd599a4c82",
+      "compact/style.css": "fa3e0391ced503e62691704482dfcd500f73e81aa43c0abb9559c0e7491b378b",
+      "compact/task-schema.js": "e2578f580e0f018fe7903bc6486873dd6cdf050bfcd9719798d6e6e1462c2d01",
+      "compact/taxa.js": "97cd6f5bad16208408512be876ebf63d5f9ee400dd31f94a61c8ca08e4e24fd3",
+      "compact/vegetation-view.js": "7e6f703c9a930a86dd2c9b202a79bf7842f4d1f41bf9a2a27d3ef24b3b22e47a",
+      "compact/village-view.js": "15d1902cbb96678503051ba0b11494d0ceea412dbc193f18bf16b0bfe9d91b03",
+      "compact/village.js": "05acf2a5ff040e4de2aaf2c3ebc3ee88daaf2edc75d12e80d49a5f54a60a3aec",
+      "compact/visibility.js": "50d59d44257e9d18547bfaec9277366d3339177c6ebce37d948b48c9940a86f1",
+      "compact/world-state.js": "360197f8bd8ab54c595386b66f2e676499630bc6ca896856034fba4910d9fd7f",
+      "compact/world-view.js": "024ef8803fcf0b8995caa6a72ca52468a4562d01194e8f2f678e4ed537b24a06",
+      "field-guide.js": "8bb0d901798611f74cabb0859b92cead469e7237c68afa67a73f352c7bfcb1bf",
+      "icon.svg": "cb8cda889f99e56d13d18e09929837b7c3630d3f9ff3219316d12d3077fc0869",
+      "kompakt.html": "781393f0611a24e8ce757e87124a6347c28f21c1132689c6e198cf421ccd6aa4",
+      "observation-clock.js": "2304e6c425192967f87841caa5072873cb5dd5c7f69c38fb45b237fd22f98b03",
+      "ranger-controls.js": "081497a5f6754ecd441e61ee55805da99b5121e96215cfa900209e00e41e5eda",
+      "station-protocol.js": "2590df7d9de4c8f4afda8fcafd619d565440c2dc7e1bb6ef4574aeadf803ae57",
+      "vendor/three.core.js": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20",
+      "vendor/three.module.js": "2884e2e6f26feaec0b454fcdc1e98c27d6433ba15253e5a3e22e111df81686fa",
+      "wildlife-glb.js": "32f8f947dd002ba7b571ee627e6291fa40a951fccdd9dee644661f19de487c35"
+    },
+    "scope": "Following documentation/evidence/tool commits must leave these exact application files unchanged."
+  },
+  "collectedAtCommit": "c894d1916f69dc113ea1d3e721611282a6eb2637",
+  "originalBrowserPlan": {
+    "sourceCommit": "78e723bcb5ca448fa7161146db82fc4451b59f38",
+    "checks": [
+      {
+        "name": "arrival",
+        "command": [
+          "/workspace/.ranger-clean-venv/bin/python",
+          "tools/browser-compact-arrival.py",
+          "--output",
+          "work/qa-correction/final-arrival"
+        ],
+        "exitCode": 1,
+        "passed": false,
+        "seconds": 904.64,
+        "log": "arrival.log"
+      },
+      {
+        "name": "feeding",
+        "command": [
+          "/workspace/.ranger-clean-venv/bin/python",
+          "tools/browser-compact-feeding.py",
+          "--output",
+          "work/qa-correction/final-feeding"
+        ],
+        "exitCode": 0,
+        "passed": true,
+        "seconds": 107.24,
+        "log": "feeding.log"
+      },
+      {
+        "name": "learning-web",
+        "command": [
+          "/workspace/.ranger-clean-venv/bin/python",
+          "tools/browser-compact-learning.py",
+          "--gallery"
+        ],
+        "exitCode": 1,
+        "passed": false,
+        "seconds": 417.95,
+        "log": "learning-web.log"
+      },
+      {
+        "name": "source",
+        "command": [
+          "/workspace/.ranger-clean-venv/bin/python",
+          "tools/browser-compact-source.py"
+        ],
+        "exitCode": 0,
+        "passed": true,
+        "seconds": 18.95,
+        "log": "source.log"
+      },
+      {
+        "name": "reference",
+        "command": [
+          "/workspace/.ranger-clean-venv/bin/python",
+          "tools/browser-compact.py"
+        ],
+        "exitCode": 0,
+        "passed": true,
+        "seconds": 309.91,
+        "log": "reference.log"
+      },
+      {
+        "name": "standalone-smoke",
+        "command": [
+          "/workspace/.ranger-clean-venv/bin/python",
+          "tools/browser-compact.py",
+          "--site",
+          "outputs",
+          "--entry",
+          "Ranger-Kompakt.html",
+          "--smoke"
+        ],
+        "exitCode": 0,
+        "passed": true,
+        "seconds": 92.0,
+        "log": "standalone-smoke.log"
+      },
+      {
+        "name": "learning-standalone",
+        "command": [
+          "/workspace/.ranger-clean-venv/bin/python",
+          "tools/browser-compact-learning.py",
+          "--site",
+          "outputs",
+          "--entry",
+          "Ranger-Kompakt.html",
+          "--output",
+          "work/compact-learning-standalone"
+        ],
+        "exitCode": 0,
+        "passed": true,
+        "seconds": 172.53,
+        "log": "learning-standalone.log"
+      },
+      {
+        "name": "growth",
+        "command": [
+          "/workspace/.ranger-clean-venv/bin/python",
+          "tools/browser-compact-growth.py",
+          "--output",
+          "work/qa-correction/final-growth"
+        ],
+        "exitCode": 0,
+        "passed": true,
+        "seconds": 11.89,
+        "log": "growth.log"
+      },
+      {
+        "name": "imports",
+        "command": [
+          "/workspace/.ranger-clean-venv/bin/python",
+          "tools/browser-compact-imports.py",
+          "--output",
+          "work/qa-correction/final-imports"
+        ],
+        "exitCode": 0,
+        "passed": true,
+        "seconds": 45.67,
+        "log": "imports.log"
+      },
+      {
+        "name": "habitats",
+        "command": [
+          "/workspace/.ranger-clean-venv/bin/python",
+          "tools/browser-compact-habitats.py",
+          "--output",
+          "work/qa-correction/final-habitats"
+        ],
+        "exitCode": 0,
+        "passed": true,
+        "seconds": 227.61,
+        "log": "habitats.log"
+      },
+      {
+        "name": "habitat-revision",
+        "command": [
+          "/workspace/.ranger-clean-venv/bin/python",
+          "tools/browser-compact-habitat-revision.py",
+          "--baseline",
+          "verification/kompakt-endqa-20261023/baseline/habitats",
+          "--baseline-fixed-gap",
+          "verification/kompakt-endqa-20261023/baseline/habitats/fixed-gap",
+          "--output",
+          "work/qa-correction/final-habitat-revision"
+        ],
+        "exitCode": 0,
+        "passed": true,
+        "seconds": 254.27,
+        "log": "habitat-revision.log"
+      },
+      {
+        "name": "materials",
+        "command": [
+          "/workspace/.ranger-clean-venv/bin/python",
+          "tools/print-compact-materials.py",
+          "--contact-sheets",
+          "--audit-dir",
+          "work/qa-correction/final-print"
+        ],
+        "exitCode": 0,
+        "passed": true,
+        "seconds": 13.4,
+        "log": "materials.log"
+      },
+      {
+        "name": "stability",
+        "command": [
+          "/workspace/.ranger-clean-venv/bin/python",
+          "tools/browser-compact-stability.py"
+        ],
+        "exitCode": 0,
+        "passed": true,
+        "seconds": 1475.95,
+        "log": "stability.log"
+      },
+      {
+        "name": "legacy-full",
+        "command": [
+          "/workspace/.ranger-clean-venv/bin/python",
+          "tools/browser-check.py",
+          "--live",
+          "--resilience",
+          "--width",
+          "800",
+          "--height",
+          "500",
+          "--site",
+          "outputs/GitHub-Pages",
+          "--prefix",
+          "/Ein-Tag-als-Ranger/"
+        ],
+        "exitCode": 0,
+        "passed": true,
+        "seconds": 1152.05,
+        "log": "legacy-full.log"
+      },
+      {
+        "name": "legacy-standalone",
+        "command": [
+          "/workspace/.ranger-clean-venv/bin/python",
+          "tools/browser-check.py",
+          "--smoke",
+          "--width",
+          "800",
+          "--height",
+          "500",
+          "--site",
+          "outputs",
+          "--entry",
+          "Feldbuch.html"
+        ],
+        "exitCode": 0,
+        "passed": true,
+        "seconds": 121.76,
+        "log": "legacy-standalone.log"
+      }
+    ],
+    "complete": true
+  },
+  "historicalBrowserPlan": {
+    "sourceCommit": "78e723bcb5ca448fa7161146db82fc4451b59f38",
+    "checks": [
+      {
+        "name": "arrival",
+        "command": [
+          "/workspace/.ranger-clean-venv/bin/python",
+          "tools/browser-compact-arrival.py",
+          "--output",
+          "work/qa-correction/final-arrival"
+        ],
+        "exitCode": 1,
+        "passed": false,
+        "seconds": 904.64,
+        "log": "arrival.log"
+      },
+      {
+        "name": "feeding",
+        "command": [
+          "/workspace/.ranger-clean-venv/bin/python",
+          "tools/browser-compact-feeding.py",
+          "--output",
+          "work/qa-correction/final-feeding"
+        ],
+        "exitCode": 0,
+        "passed": true,
+        "seconds": 107.24,
+        "log": "feeding.log"
+      },
+      {
+        "name": "learning-web",
+        "command": [
+          "/workspace/.ranger-clean-venv/bin/python",
+          "tools/browser-compact-learning.py",
+          "--gallery"
+        ],
+        "exitCode": 1,
+        "passed": false,
+        "seconds": 417.95,
+        "log": "learning-web.log"
+      },
+      {
+        "name": "source",
+        "command": [
+          "/workspace/.ranger-clean-venv/bin/python",
+          "tools/browser-compact-source.py"
+        ],
+        "exitCode": 0,
+        "passed": true,
+        "seconds": 18.95,
+        "log": "source.log"
+      },
+      {
+        "name": "reference",
+        "command": [
+          "/workspace/.ranger-clean-venv/bin/python",
+          "tools/browser-compact.py"
+        ],
+        "exitCode": 0,
+        "passed": true,
+        "seconds": 309.91,
+        "log": "reference.log"
+      },
+      {
+        "name": "standalone-smoke",
+        "command": [
+          "/workspace/.ranger-clean-venv/bin/python",
+          "tools/browser-compact.py",
+          "--site",
+          "outputs",
+          "--entry",
+          "Ranger-Kompakt.html",
+          "--smoke"
+        ],
+        "exitCode": 0,
+        "passed": true,
+        "seconds": 92.0,
+        "log": "standalone-smoke.log"
+      },
+      {
+        "name": "learning-standalone",
+        "command": [
+          "/workspace/.ranger-clean-venv/bin/python",
+          "tools/browser-compact-learning.py",
+          "--site",
+          "outputs",
+          "--entry",
+          "Ranger-Kompakt.html",
+          "--output",
+          "work/compact-learning-standalone"
+        ],
+        "exitCode": 0,
+        "passed": true,
+        "seconds": 172.53,
+        "log": "learning-standalone.log"
+      },
+      {
+        "name": "growth",
+        "command": [
+          "/workspace/.ranger-clean-venv/bin/python",
+          "tools/browser-compact-growth.py",
+          "--output",
+          "work/qa-correction/final-growth"
+        ],
+        "exitCode": 0,
+        "passed": true,
+        "seconds": 11.89,
+        "log": "growth.log"
+      },
+      {
+        "name": "imports",
+        "command": [
+          "/workspace/.ranger-clean-venv/bin/python",
+          "tools/browser-compact-imports.py",
+          "--output",
+          "work/qa-correction/final-imports"
+        ],
+        "exitCode": 0,
+        "passed": true,
+        "seconds": 45.67,
+        "log": "imports.log"
+      },
+      {
+        "name": "habitats",
+        "command": [
+          "/workspace/.ranger-clean-venv/bin/python",
+          "tools/browser-compact-habitats.py",
+          "--output",
+          "work/qa-correction/final-habitats"
+        ],
+        "exitCode": 0,
+        "passed": true,
+        "seconds": 227.61,
+        "log": "habitats.log"
+      },
+      {
+        "name": "habitat-revision",
+        "command": [
+          "/workspace/.ranger-clean-venv/bin/python",
+          "tools/browser-compact-habitat-revision.py",
+          "--baseline",
+          "verification/kompakt-endqa-20261023/baseline/habitats",
+          "--baseline-fixed-gap",
+          "verification/kompakt-endqa-20261023/baseline/habitats/fixed-gap",
+          "--output",
+          "work/qa-correction/final-habitat-revision"
+        ],
+        "exitCode": 0,
+        "passed": true,
+        "seconds": 254.27,
+        "log": "habitat-revision.log"
+      },
+      {
+        "name": "materials",
+        "command": [
+          "/workspace/.ranger-clean-venv/bin/python",
+          "tools/print-compact-materials.py",
+          "--contact-sheets",
+          "--audit-dir",
+          "work/qa-correction/final-print"
+        ],
+        "exitCode": 0,
+        "passed": true,
+        "seconds": 13.4,
+        "log": "materials.log"
+      },
+      {
+        "name": "stability",
+        "command": [
+          "/workspace/.ranger-clean-venv/bin/python",
+          "tools/browser-compact-stability.py"
+        ],
+        "exitCode": 0,
+        "passed": true,
+        "seconds": 1475.95,
+        "log": "stability.log"
+      },
+      {
+        "name": "legacy-full",
+        "command": [
+          "/workspace/.ranger-clean-venv/bin/python",
+          "tools/browser-check.py",
+          "--live",
+          "--resilience",
+          "--width",
+          "800",
+          "--height",
+          "500",
+          "--site",
+          "outputs/GitHub-Pages",
+          "--prefix",
+          "/Ein-Tag-als-Ranger/"
+        ],
+        "exitCode": 0,
+        "passed": true,
+        "seconds": 1152.05,
+        "log": "legacy-full.log"
+      },
+      {
+        "name": "legacy-standalone",
+        "command": [
+          "/workspace/.ranger-clean-venv/bin/python",
+          "tools/browser-check.py",
+          "--smoke",
+          "--width",
+          "800",
+          "--height",
+          "500",
+          "--site",
+          "outputs",
+          "--entry",
+          "Feldbuch.html"
+        ],
+        "exitCode": 0,
+        "passed": true,
+        "seconds": 121.76,
+        "log": "legacy-standalone.log"
+      }
+    ],
+    "complete": true
+  },
+  "finalBrowserPlan": {
+    "sourceCommit": "3920a1d1d2692889b75403c1b0e50f5b856398aa",
+    "arrivalPlan": {
+      "name": "supplemental-arrival-3600",
+      "walkWallBudgetSeconds": 3600,
+      "processTimeoutSeconds": 6000,
+      "scope": "The per-segment wall budget is operational. Supplemental functional traversal does not replace a historical 900-second failure and is not an FPS or physical-device performance result."
+    },
+    "checks": [
+      {
+        "name": "supplemental-arrival-3600",
+        "command": [
+          "/workspace/.ranger-clean-venv/bin/python",
+          "tools/browser-compact-arrival.py",
+          "--output",
+          "work/qa-correction/supplemental-arrival-3600",
+          "--walk-wall-budget",
+          "3600"
+        ],
+        "exitCode": 0,
+        "processTimeoutSeconds": 6000,
+        "passed": true,
+        "seconds": 2016.05,
+        "log": "supplemental-arrival-3600.log"
+      },
+      {
+        "name": "feeding",
+        "command": [
+          "/workspace/.ranger-clean-venv/bin/python",
+          "tools/browser-compact-feeding.py",
+          "--output",
+          "work/qa-correction/final-feeding"
+        ],
+        "exitCode": 0,
+        "processTimeoutSeconds": 2400,
+        "passed": true,
+        "seconds": 81.96,
+        "log": "feeding.log"
+      },
+      {
+        "name": "learning-web",
+        "command": [
+          "/workspace/.ranger-clean-venv/bin/python",
+          "tools/browser-compact-learning.py",
+          "--gallery"
+        ],
+        "exitCode": 0,
+        "processTimeoutSeconds": 2400,
+        "passed": true,
+        "seconds": 228.22,
+        "log": "learning-web.log"
+      },
+      {
+        "name": "source",
+        "command": [
+          "/workspace/.ranger-clean-venv/bin/python",
+          "tools/browser-compact-source.py"
+        ],
+        "exitCode": 0,
+        "processTimeoutSeconds": 2400,
+        "passed": true,
+        "seconds": 12.94,
+        "log": "source.log"
+      },
+      {
+        "name": "reference",
+        "command": [
+          "/workspace/.ranger-clean-venv/bin/python",
+          "tools/browser-compact.py"
+        ],
+        "exitCode": 0,
+        "processTimeoutSeconds": 2400,
+        "passed": true,
+        "seconds": 210.4,
+        "log": "reference.log"
+      },
+      {
+        "name": "standalone-smoke",
+        "command": [
+          "/workspace/.ranger-clean-venv/bin/python",
+          "tools/browser-compact.py",
+          "--site",
+          "outputs",
+          "--entry",
+          "Ranger-Kompakt.html",
+          "--smoke"
+        ],
+        "exitCode": 0,
+        "processTimeoutSeconds": 2400,
+        "passed": true,
+        "seconds": 64.96,
+        "log": "standalone-smoke.log"
+      },
+      {
+        "name": "learning-standalone",
+        "command": [
+          "/workspace/.ranger-clean-venv/bin/python",
+          "tools/browser-compact-learning.py",
+          "--site",
+          "outputs",
+          "--entry",
+          "Ranger-Kompakt.html",
+          "--output",
+          "work/compact-learning-standalone"
+        ],
+        "exitCode": 0,
+        "processTimeoutSeconds": 2400,
+        "passed": true,
+        "seconds": 107.08,
+        "log": "learning-standalone.log"
+      },
+      {
+        "name": "growth",
+        "command": [
+          "/workspace/.ranger-clean-venv/bin/python",
+          "tools/browser-compact-growth.py",
+          "--output",
+          "work/qa-correction/final-growth"
+        ],
+        "exitCode": 0,
+        "processTimeoutSeconds": 2400,
+        "passed": true,
+        "seconds": 8.37,
+        "log": "growth.log"
+      },
+      {
+        "name": "imports",
+        "command": [
+          "/workspace/.ranger-clean-venv/bin/python",
+          "tools/browser-compact-imports.py",
+          "--output",
+          "work/qa-correction/final-imports"
+        ],
+        "exitCode": 0,
+        "processTimeoutSeconds": 2400,
+        "passed": true,
+        "seconds": 40.86,
+        "log": "imports.log"
+      },
+      {
+        "name": "habitats",
+        "command": [
+          "/workspace/.ranger-clean-venv/bin/python",
+          "tools/browser-compact-habitats.py",
+          "--output",
+          "work/qa-correction/final-habitats"
+        ],
+        "exitCode": 0,
+        "processTimeoutSeconds": 2400,
+        "passed": true,
+        "seconds": 143.54,
+        "log": "habitats.log"
+      },
+      {
+        "name": "habitat-revision",
+        "command": [
+          "/workspace/.ranger-clean-venv/bin/python",
+          "tools/browser-compact-habitat-revision.py",
+          "--baseline",
+          "verification/kompakt-endqa-20261023/baseline/habitats",
+          "--baseline-fixed-gap",
+          "verification/kompakt-endqa-20261023/baseline/habitats/fixed-gap",
+          "--output",
+          "work/qa-correction/final-habitat-revision"
+        ],
+        "exitCode": 0,
+        "processTimeoutSeconds": 2400,
+        "passed": true,
+        "seconds": 155.52,
+        "log": "habitat-revision.log"
+      },
+      {
+        "name": "materials",
+        "command": [
+          "/workspace/.ranger-clean-venv/bin/python",
+          "tools/print-compact-materials.py",
+          "--contact-sheets",
+          "--audit-dir",
+          "work/qa-correction/final-print"
+        ],
+        "exitCode": 0,
+        "processTimeoutSeconds": 2400,
+        "passed": true,
+        "seconds": 13.24,
+        "log": "materials.log"
+      },
+      {
+        "name": "stability",
+        "command": [
+          "/workspace/.ranger-clean-venv/bin/python",
+          "tools/browser-compact-stability.py"
+        ],
+        "exitCode": 0,
+        "processTimeoutSeconds": 2400,
+        "passed": true,
+        "seconds": 1471.06,
+        "log": "stability.log"
+      },
+      {
+        "name": "legacy-full",
+        "command": [
+          "/workspace/.ranger-clean-venv/bin/python",
+          "tools/browser-check.py",
+          "--live",
+          "--resilience",
+          "--width",
+          "800",
+          "--height",
+          "500",
+          "--site",
+          "outputs/GitHub-Pages",
+          "--prefix",
+          "/Ein-Tag-als-Ranger/"
+        ],
+        "exitCode": 0,
+        "processTimeoutSeconds": 2400,
+        "passed": true,
+        "seconds": 711.47,
+        "log": "legacy-full.log"
+      },
+      {
+        "name": "legacy-standalone",
+        "command": [
+          "/workspace/.ranger-clean-venv/bin/python",
+          "tools/browser-check.py",
+          "--smoke",
+          "--width",
+          "800",
+          "--height",
+          "500",
+          "--site",
+          "outputs",
+          "--entry",
+          "Feldbuch.html"
+        ],
+        "exitCode": 0,
+        "processTimeoutSeconds": 2400,
+        "passed": true,
+        "seconds": 87.13,
+        "log": "legacy-standalone.log"
+      }
+    ],
+    "complete": true
+  },
+  "reruns": {
+    "checks": []
+  },
+  "latestBrowserChecks": {
+    "supplemental-arrival-3600": {
+      "name": "supplemental-arrival-3600",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-arrival.py",
+        "--output",
+        "work/qa-correction/supplemental-arrival-3600",
+        "--walk-wall-budget",
+        "3600"
+      ],
+      "exitCode": 0,
+      "processTimeoutSeconds": 6000,
+      "passed": true,
+      "seconds": 2016.05,
+      "log": "supplemental-arrival-3600.log"
+    },
+    "feeding": {
+      "name": "feeding",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-feeding.py",
+        "--output",
+        "work/qa-correction/final-feeding"
+      ],
+      "exitCode": 0,
+      "processTimeoutSeconds": 2400,
+      "passed": true,
+      "seconds": 81.96,
+      "log": "feeding.log"
+    },
+    "learning-web": {
+      "name": "learning-web",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-learning.py",
+        "--gallery"
+      ],
+      "exitCode": 0,
+      "processTimeoutSeconds": 2400,
+      "passed": true,
+      "seconds": 228.22,
+      "log": "learning-web.log"
+    },
+    "source": {
+      "name": "source",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-source.py"
+      ],
+      "exitCode": 0,
+      "processTimeoutSeconds": 2400,
+      "passed": true,
+      "seconds": 12.94,
+      "log": "source.log"
+    },
+    "reference": {
+      "name": "reference",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact.py"
+      ],
+      "exitCode": 0,
+      "processTimeoutSeconds": 2400,
+      "passed": true,
+      "seconds": 210.4,
+      "log": "reference.log"
+    },
+    "standalone-smoke": {
+      "name": "standalone-smoke",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact.py",
+        "--site",
+        "outputs",
+        "--entry",
+        "Ranger-Kompakt.html",
+        "--smoke"
+      ],
+      "exitCode": 0,
+      "processTimeoutSeconds": 2400,
+      "passed": true,
+      "seconds": 64.96,
+      "log": "standalone-smoke.log"
+    },
+    "learning-standalone": {
+      "name": "learning-standalone",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-learning.py",
+        "--site",
+        "outputs",
+        "--entry",
+        "Ranger-Kompakt.html",
+        "--output",
+        "work/compact-learning-standalone"
+      ],
+      "exitCode": 0,
+      "processTimeoutSeconds": 2400,
+      "passed": true,
+      "seconds": 107.08,
+      "log": "learning-standalone.log"
+    },
+    "growth": {
+      "name": "growth",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-growth.py",
+        "--output",
+        "work/qa-correction/final-growth"
+      ],
+      "exitCode": 0,
+      "processTimeoutSeconds": 2400,
+      "passed": true,
+      "seconds": 8.37,
+      "log": "growth.log"
+    },
+    "imports": {
+      "name": "imports",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-imports.py",
+        "--output",
+        "work/qa-correction/final-imports"
+      ],
+      "exitCode": 0,
+      "processTimeoutSeconds": 2400,
+      "passed": true,
+      "seconds": 40.86,
+      "log": "imports.log"
+    },
+    "habitats": {
+      "name": "habitats",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-habitats.py",
+        "--output",
+        "work/qa-correction/final-habitats"
+      ],
+      "exitCode": 0,
+      "processTimeoutSeconds": 2400,
+      "passed": true,
+      "seconds": 143.54,
+      "log": "habitats.log"
+    },
+    "habitat-revision": {
+      "name": "habitat-revision",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-habitat-revision.py",
+        "--baseline",
+        "verification/kompakt-endqa-20261023/baseline/habitats",
+        "--baseline-fixed-gap",
+        "verification/kompakt-endqa-20261023/baseline/habitats/fixed-gap",
+        "--output",
+        "work/qa-correction/final-habitat-revision"
+      ],
+      "exitCode": 0,
+      "processTimeoutSeconds": 2400,
+      "passed": true,
+      "seconds": 155.52,
+      "log": "habitat-revision.log"
+    },
+    "materials": {
+      "name": "materials",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/print-compact-materials.py",
+        "--contact-sheets",
+        "--audit-dir",
+        "work/qa-correction/final-print"
+      ],
+      "exitCode": 0,
+      "processTimeoutSeconds": 2400,
+      "passed": true,
+      "seconds": 13.24,
+      "log": "materials.log"
+    },
+    "stability": {
+      "name": "stability",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-stability.py"
+      ],
+      "exitCode": 0,
+      "processTimeoutSeconds": 2400,
+      "passed": true,
+      "seconds": 1471.06,
+      "log": "stability.log"
+    },
+    "legacy-full": {
+      "name": "legacy-full",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-check.py",
+        "--live",
+        "--resilience",
+        "--width",
+        "800",
+        "--height",
+        "500",
+        "--site",
+        "outputs/GitHub-Pages",
+        "--prefix",
+        "/Ein-Tag-als-Ranger/"
+      ],
+      "exitCode": 0,
+      "processTimeoutSeconds": 2400,
+      "passed": true,
+      "seconds": 711.47,
+      "log": "legacy-full.log"
+    },
+    "legacy-standalone": {
+      "name": "legacy-standalone",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-check.py",
+        "--smoke",
+        "--width",
+        "800",
+        "--height",
+        "500",
+        "--site",
+        "outputs",
+        "--entry",
+        "Feldbuch.html"
+      ],
+      "exitCode": 0,
+      "processTimeoutSeconds": 2400,
+      "passed": true,
+      "seconds": 87.13,
+      "log": "legacy-standalone.log"
+    }
+  },
+  "allLatestBrowserChecksPassed": true,
+  "legacyNodeSuites": 28,
+  "legacyNodePassed": 28,
+  "compactGroups": {
+    "kompakt": 14,
+    "compact-learning": 34,
+    "compact-growth-boundary": 4,
+    "compact-observation-context": 6,
+    "compact-event-reference": 8,
+    "compact-render-reset": 2,
+    "compact-qa": 9,
+    "compact-coastal": 5,
+    "compact-habitat": 6,
+    "compact-habitat-revision": 4,
+    "compact-pedagogy": 8,
+    "compact-material-depth": 5
+  },
+  "compactGroupCount": 105,
+  "pythonMethods": 9,
+  "pythonPassed": true,
+  "measuredStabilitySeconds": 1205.13,
+  "reportCounts": {
+    "supplemental-arrival-3600": {
+      "checks": 0,
+      "sequences": 8,
+      "captures": 0
+    },
+    "feeding": {
+      "checks": 0,
+      "sequences": 4,
+      "captures": 0
+    },
+    "habitat-revision": {
+      "checks": 7,
+      "sequences": 0,
+      "captures": 26
+    },
+    "growth": {
+      "checks": 4,
+      "sequences": 0,
+      "captures": 5
+    },
+    "habitats": {
+      "checks": 6,
+      "sequences": 0,
+      "captures": 26
+    },
+    "source": {
+      "checks": 2,
+      "sequences": 0,
+      "captures": 0
+    },
+    "reference": {
+      "checks": 19,
+      "sequences": 0,
+      "captures": 21
+    },
+    "standalone": {
+      "checks": 5,
+      "sequences": 0,
+      "captures": 13
+    },
+    "learning-web": {
+      "checks": 18,
+      "sequences": 0,
+      "captures": 46
+    },
+    "learning-standalone": {
+      "checks": 17,
+      "sequences": 0,
+      "captures": 9
+    },
+    "stability": {
+      "checks": 0,
+      "sequences": 0,
+      "captures": 0
+    }
+  },
+  "scope": "Own fresh tests of the new correction round. Supplied HTML/text were read; the independent ZIP exceeded the 32 MiB transfer limit. No unavailable original raw proof is claimed. Model time, actual active time and wall-time video are separately labelled.",
+  "notChecked": [
+    "Physical iPad 9 / Safari / iPadOS 27",
+    "Classroom pilot and acquired learning competence",
+    "Independent biological/visual final acceptance",
+    "ETS original PDF inaccessible through configured network"
+  ],
+  "historicalRuntimeFreeze": {
+    "runtimeCommit": "78e723bcb5ca448fa7161146db82fc4451b59f38",
+    "sourceHashes": {
+      "assets/boardwalk-wood.webp": "4d06022133e3772534374671fb73a4509ed109e1db6ca06a2d62a8c99c47ac6d",
+      "assets/compact-roe-deer.glb": "a89400df66033eb5eaa7f9bf13ccefaacfb866ab24e4576574d11965354ee619",
+      "assets/sky-panorama.webp": "46c360b491b11269d280e73ec0e71869afdfd62fb543b4250713234374a2f71d",
+      "assets/terrain-atlas.webp": "d637324d3ace6ef8e2c549e7f0a513efd1a4c06aab927f0ed1565bf77b2ced02",
+      "assets/wildlife-fox.glb": "61a4d1b845aa406928a327648417ae1c3982510b9c4e8ce33b7c494fbc98a22f",
+      "compact/catalog.js": "6b693d4c6a0f6b880b9ff99295826f3968e61ba96f52606997a1635ddf1fe39f",
+      "compact/coastal-behaviour.js": "39b1dcb8691cd48850321c4c734eabf0b2875b91a8cd09dcd7b571758b0f0927",
+      "compact/coastal-rig.js": "92a0270abdbf3aee7467e466cf344b08b8ef8bf5af4d903d3c672f9bcd4e2513",
+      "compact/comparison-views.js": "050f629dfc0b3b9bac1badc0c0564cfb08cf88e92006edcba377eabc623ecf82",
+      "compact/determination.js": "25f8ce960dba09ebeeb4470530d38608809bf98aa91d3575716b6ff835145c6f",
+      "compact/ecology.js": "e50f25a3146e79671472e7a5e6ed1d78f007564515bf9a78bb67fac9695ef8e0",
+      "compact/evidence.js": "b8aa6fe22b97ce5f3909902c4c18c79045d53badbbef4ff88c5a5b31e74a430c",
+      "compact/expanded-view.js": "74590c5e35ac021217b32ff5f2c5091da29ab78eaa38a43c460318dd8e6d6382",
+      "compact/fauna-view.js": "6d968276c131fb16ad2ecf073debb6f00b853f3742113e80ae35fe0b04c5b4f0",
+      "compact/geometry.js": "ac8a5e08a56f7ed75abb7a65baa6e20aba032984d7089e3b290d4769dd4307b0",
+      "compact/habitats.js": "e5448a68391c3b8f5c99219a39e3b79762ae651343cd870f0c99c4ac3a8b0e16",
+      "compact/inspection.js": "961c8c13e8e8e58595460fa40ed7bed0668367b120081dd95961a78ca87300ea",
+      "compact/journal.js": "e0c991989742c5ad3326ca63a7ba7ba033e89a5f23b74b648858ab10b67f1812",
+      "compact/layout.js": "e02558557a9c99fa0549c94f8cbfc8873e18f3c90df845155d51ee4d404209a6",
+      "compact/learning-documents.js": "53a2c78930b1a164c618bdfb91a49701076bf94fe22a8f990afca70402bc0173",
+      "compact/learning-models.js": "ac5200d27a29dc17ab2000a90554990a2a632532e920f887026407d0cfd2c20e",
+      "compact/learning-ui.js": "f896aa477c5db607978c486b56f8abd1bca68446e463717b4b0e6b0616b59f38",
+      "compact/lesson-layouts.js": "38df6da54b9615722acef34264832c757c753b2ea250f0c14fe571d7f267ba10",
+      "compact/lesson-resources.js": "44b2f2ac295e374f6ba8e1351ca19dc01b10099bf0e3faba791c957bfae18f7b",
+      "compact/main.js": "17d0a0f69b37911606def302eff5c188098e49f4133893e15557b4dfd0c37714",
+      "compact/management.js": "e6d38fbfc2c7e131d60ca3e38a1c740ca9ba5c49628fd3ba51ca94242d2d75a3",
+      "compact/manifest.js": "c89f2dd2635407d111a195a806b7ea3f40101054883d65197175c748e3f652e6",
+      "compact/materials.js": "81b0144dd99d1392599406840614c613a9e81427382b8f628d6a5aa950f71b74",
+      "compact/missions.js": "8f8151a6b499658b1316ee57ac6fd4d4e94a980b5baf0e943ca2678edd03bfca",
+      "compact/observation-context.js": "eb320373daffbdefa9e99e2a59fdb1421d2b21c8ced15ab5f88fc567f9428080",
+      "compact/observation-schema.js": "1ab043f3d6f7b61ea00eea1510da71b897f0e6dcc52a934d4acae9c17d3e773e",
+      "compact/organism-models.js": "7cf080fb497a17d58ce4d1672ffc5cef12b7f2c033a336384e4aead7dfc27cb6",
+      "compact/path-mesh.js": "7a41ebc390aeca96cffd1e4fcee19f3b76310413fcee3489d1533ebd599a4c82",
+      "compact/style.css": "fa3e0391ced503e62691704482dfcd500f73e81aa43c0abb9559c0e7491b378b",
+      "compact/task-schema.js": "905701f6f765f12559cae00848644ac90b1d46188b84031eaaf1c091749ba95b",
+      "compact/taxa.js": "97cd6f5bad16208408512be876ebf63d5f9ee400dd31f94a61c8ca08e4e24fd3",
+      "compact/vegetation-view.js": "7e6f703c9a930a86dd2c9b202a79bf7842f4d1f41bf9a2a27d3ef24b3b22e47a",
+      "compact/village-view.js": "15d1902cbb96678503051ba0b11494d0ceea412dbc193f18bf16b0bfe9d91b03",
+      "compact/village.js": "05acf2a5ff040e4de2aaf2c3ebc3ee88daaf2edc75d12e80d49a5f54a60a3aec",
+      "compact/visibility.js": "50d59d44257e9d18547bfaec9277366d3339177c6ebce37d948b48c9940a86f1",
+      "compact/world-state.js": "360197f8bd8ab54c595386b66f2e676499630bc6ca896856034fba4910d9fd7f",
+      "compact/world-view.js": "024ef8803fcf0b8995caa6a72ca52468a4562d01194e8f2f678e4ed537b24a06",
+      "field-guide.js": "d1e2994438e3d73a88704ed40b1e24982a836dd4c22cbe9ba634e6c36137799a",
+      "icon.svg": "cb8cda889f99e56d13d18e09929837b7c3630d3f9ff3219316d12d3077fc0869",
+      "kompakt.html": "781393f0611a24e8ce757e87124a6347c28f21c1132689c6e198cf421ccd6aa4",
+      "observation-clock.js": "2304e6c425192967f87841caa5072873cb5dd5c7f69c38fb45b237fd22f98b03",
+      "ranger-controls.js": "081497a5f6754ecd441e61ee55805da99b5121e96215cfa900209e00e41e5eda",
+      "station-protocol.js": "2590df7d9de4c8f4afda8fcafd619d565440c2dc7e1bb6ef4574aeadf803ae57",
+      "vendor/three.core.js": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20",
+      "vendor/three.module.js": "2884e2e6f26feaec0b454fcdc1e98c27d6433ba15253e5a3e22e111df81686fa",
+      "wildlife-glb.js": "32f8f947dd002ba7b571ee627e6291fa40a951fccdd9dee644661f19de487c35"
+    },
+    "scope": "Following documentation/evidence/tool commits must leave these exact application files unchanged."
+  },
+  "originalBrowserPlanPassed": false,
+  "originalBrowserPlanFailures": [
+    "arrival",
+    "learning-web"
+  ],
+  "finalBrowserPlanPassed": true,
+  "finalBrowserPlanFailures": [],
+  "arrivalEvidence": {
+    "original": {
+      "status": "FAILED",
+      "passed": false,
+      "walkWallBudgetSeconds": 900,
+      "report": "historical-plan/arrival-failure/result.json",
+      "log": "historical-plan/arrival.log",
+      "runtimeCommit": "78e723bcb5ca448fa7161146db82fc4451b59f38",
+      "elapsedWallSeconds": 904.64,
+      "reportSHA256": "a666ba7563bd70e4e99128ec92078648df209b230e5c12390c669e2951cc33ad",
+      "scope": "Historical pre-fix runtime; FAILED under the unchanged original 900-second guard. This is not final-runtime evidence."
+    },
+    "supplemental": {
+      "status": "PASS",
+      "passed": true,
+      "walkWallBudgetSeconds": 3600,
+      "processTimeoutSeconds": 6000,
+      "report": "supplemental-arrival-3600/result.json",
+      "reportSHA256": "c0e883cc519d52348b931eb986f27168bc8af8728e32867500eba7466ca2eb54",
+      "runtimeCommit": "3920a1d1d2692889b75403c1b0e50f5b856398aa",
+      "execution": {
+        "name": "supplemental-arrival-3600",
+        "command": [
+          "/workspace/.ranger-clean-venv/bin/python",
+          "tools/browser-compact-arrival.py",
+          "--output",
+          "work/qa-correction/supplemental-arrival-3600",
+          "--walk-wall-budget",
+          "3600"
+        ],
+        "exitCode": 0,
+        "processTimeoutSeconds": 6000,
+        "passed": true,
+        "seconds": 2016.05,
+        "log": "supplemental-arrival-3600.log"
+      },
+      "scope": "Separate current-runtime slow-cloud functional route; no FPS, minimum-device or original-budget PASS."
+    },
+    "policy": "Historical 900-second FAILED remains unchanged. The fresh runtime uses a separately named 3600-second functional route; neither its PASS nor allLatestBrowserChecksPassed certifies performance. Walk budgets apply per segment; process budget is separate."
+  },
+  "supplementalBrowserChecks": {
+    "supplemental-arrival-3600": {
+      "status": "PASS",
+      "passed": true,
+      "walkWallBudgetSeconds": 3600,
+      "processTimeoutSeconds": 6000,
+      "report": "supplemental-arrival-3600/result.json",
+      "reportSHA256": "c0e883cc519d52348b931eb986f27168bc8af8728e32867500eba7466ca2eb54",
+      "runtimeCommit": "3920a1d1d2692889b75403c1b0e50f5b856398aa",
+      "execution": {
+        "name": "supplemental-arrival-3600",
+        "command": [
+          "/workspace/.ranger-clean-venv/bin/python",
+          "tools/browser-compact-arrival.py",
+          "--output",
+          "work/qa-correction/supplemental-arrival-3600",
+          "--walk-wall-budget",
+          "3600"
+        ],
+        "exitCode": 0,
+        "processTimeoutSeconds": 6000,
+        "passed": true,
+        "seconds": 2016.05,
+        "log": "supplemental-arrival-3600.log"
+      },
+      "scope": "Separate current-runtime slow-cloud functional route; no FPS, minimum-device or original-budget PASS."
+    }
+  },
+  "latestBrowserChecksScope": "Latest comparable checks of the fresh runtime, with explicitly supplemental 3600-second route budget. Historical 900-second FAILED remains independently archived; functional PASS is not performance or physical-device acceptance.",
+  "originalArrivalBudgetPassed": false,
+  "performanceAcceptance": "NOT ESTABLISHED: no physical iPad/Safari test or FPS acceptance; original historical 900-second route FAILED.",
+  "independentVisualAcceptance": "NOT ESTABLISHED; own visual limits remain in the final review index.",
+  "finalOwnReviews": "reviews/FINAL-REVIEW-INDEX.json",
+  "modelEvidenceProvenance": "MODEL-EVIDENCE-PROVENANCE.json",
+  "historicalHabitatModel": {
+    "path": "reviews/habitats/historical-model",
+    "role": "Earlier own habitat-review source; not the fresh final Node test."
+  },
+  "ownReviewProvenance": "reviews/PROVENANCE.json",
+  "earlierAttemptArchive": "failed-attempts/ARCHIVE-SCOPE.json",
+  "folderCopyScope": "Recursive folders can include unreferenced supporting files. Only files named by current validated reports/manifests/reviews are current check evidence; other copied files do not acquire PASS status by inclusion.",
+  "finalReviewBindingScope": "Arrival and feeding structured reviews are bound to the exact final reports, freeze, HTML and original media. Their explicit visual limits remain unchanged."
+}

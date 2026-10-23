@@ -1,0 +1,419 @@
+{
+  "scope": "Read-only review of existing final browser output; no new browser, build, image manipulation or tracked-file changes. Eleven current PNGs and five f921 PNGs visually compared; all 26 PNGs structurally validated and hashed.",
+  "runtimeCommit": "78e723bcb5ca448fa7161146db82fc4451b59f38",
+  "sourceReport": "work/qa-correction/final-habitat-revision/result.json",
+  "sourceReportSHA256": "63b79be5b4507fbcb2f204ed5fbf0b0086d1f5b56b48bd77331c169018df8ed5",
+  "runtimeFreeze": "work/final-qa/runtime-freeze.json",
+  "runtimeFreezeSHA256": "d143ce1cd50ad75d4b7f4b9ac69638c81f714eb4e0bd39be9c142295e785f8fa",
+  "htmlSHA256": "a96e7c830df5c8dd0c92dd9df8f509b722b0485ca843a7f4cdb69866bf152bc7",
+  "sourceHashCount": 51,
+  "allRuntimeHashesMatchFreezeAndDisk": true,
+  "allRecordedDiagnosticImageHashesMatch": true,
+  "recordedDiagnosticImageHashCount": 8,
+  "noteAboutWorldImageHashes": "The original report did not record hashes for 18 world screenshots. This review records their hashes now; it does not claim a prior hash comparison for these images.",
+  "baselineHTMLSHA256": "d774d542d8a2984100b880ed1d771721e064299da11c8f9b3c616fc7ea844ff9",
+  "sameCameraComparisons": [
+    {
+      "file": "start.png",
+      "maximumPoseDifference": 0,
+      "matchedWithin": 1e-05
+    },
+    {
+      "file": "woodruff.png",
+      "maximumPoseDifference": 0.0,
+      "matchedWithin": 1e-05
+    },
+    {
+      "file": "nettle.png",
+      "maximumPoseDifference": 0.0,
+      "matchedWithin": 1e-05
+    },
+    {
+      "file": "wood.png",
+      "maximumPoseDifference": 0,
+      "matchedWithin": 1e-05
+    },
+    {
+      "file": "village.png",
+      "maximumPoseDifference": 0,
+      "matchedWithin": 1e-05
+    },
+    {
+      "file": "ramp.png",
+      "maximumPoseDifference": 0,
+      "matchedWithin": 1e-05
+    },
+    {
+      "file": "salt-shrub.png",
+      "maximumPoseDifference": 0.0,
+      "matchedWithin": 1e-05
+    },
+    {
+      "file": "salt-segments.png",
+      "maximumPoseDifference": 0.0,
+      "matchedWithin": 1e-05
+    },
+    {
+      "file": "salt-grass.png",
+      "maximumPoseDifference": 0.0,
+      "matchedWithin": 1e-05
+    },
+    {
+      "file": "coast.png",
+      "maximumPoseDifference": 0,
+      "matchedWithin": 1e-05
+    },
+    {
+      "file": "habitat-light-gap-fixed.png",
+      "maximumPoseDifference": 0,
+      "matchedWithin": 1e-05
+    },
+    {
+      "file": "habitat-nutrient-edge.png",
+      "maximumPoseDifference": 0,
+      "matchedWithin": 1e-05
+    },
+    {
+      "file": "keilm-low.png",
+      "maximumPoseDifference": 0.0,
+      "matchedWithin": 1e-05
+    },
+    {
+      "file": "keilm-high.png",
+      "maximumPoseDifference": 0.0,
+      "matchedWithin": 1e-05
+    },
+    {
+      "file": "andel-low.png",
+      "maximumPoseDifference": 0,
+      "matchedWithin": 1e-05
+    },
+    {
+      "file": "andel-high.png",
+      "maximumPoseDifference": 0,
+      "matchedWithin": 1e-05
+    }
+  ],
+  "visuallyInspectedCurrentImages": [
+    "start.png",
+    "habitat-light-gap-fixed.png",
+    "wood.png",
+    "habitat-nutrient-edge.png",
+    "andel-high.png",
+    "andel-low.png",
+    "keilm-high.png",
+    "forest-normal-walk.png",
+    "habitat-light-gap.png",
+    "diagnostic-galium_odoratum-rotated.png",
+    "diagnostic-quercus_robur-rotated.png"
+  ],
+  "visuallyInspectedBaselineImages": [
+    "start.png",
+    "habitat-light-gap-fixed.png",
+    "wood.png",
+    "habitat-nutrient-edge.png",
+    "andel-high.png"
+  ],
+  "images": [
+    {
+      "file": "work/qa-correction/final-habitat-revision/start.png",
+      "sha256": "223880af99b5188801a51f7308d8dafd54290aa0b306e5c247407a2237b1415a",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngChunksAndIDATValid": true,
+      "matchesRecordedSHA256": null
+    },
+    {
+      "file": "work/qa-correction/final-habitat-revision/woodruff.png",
+      "sha256": "5cebd721c947b5eba07eae7c317df9285656959a06cdc28f24432f3410c96a83",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngChunksAndIDATValid": true,
+      "matchesRecordedSHA256": null
+    },
+    {
+      "file": "work/qa-correction/final-habitat-revision/nettle.png",
+      "sha256": "b6f75807c18d0b2bc49939e0e8a1a543258e057bf871f0f56e379365985f691e",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngChunksAndIDATValid": true,
+      "matchesRecordedSHA256": null
+    },
+    {
+      "file": "work/qa-correction/final-habitat-revision/wood.png",
+      "sha256": "99e214dba7cce553ba907ffa4f9dcde1fe254ce2c45ac60ae17bad27bb57c783",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngChunksAndIDATValid": true,
+      "matchesRecordedSHA256": null
+    },
+    {
+      "file": "work/qa-correction/final-habitat-revision/village.png",
+      "sha256": "9a2cc5345a0850e898b03700316fabdbc406395d802a61f49c3af9920c966c93",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngChunksAndIDATValid": true,
+      "matchesRecordedSHA256": null
+    },
+    {
+      "file": "work/qa-correction/final-habitat-revision/ramp.png",
+      "sha256": "6deb1fdcb792241f6e558566498cd25cb6f7e19da1eba1b82ff5f6397d6ece28",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngChunksAndIDATValid": true,
+      "matchesRecordedSHA256": null
+    },
+    {
+      "file": "work/qa-correction/final-habitat-revision/salt-shrub.png",
+      "sha256": "d5dbad65f536c51f65e586bdddaa28d576fbb6f6520c87142aa77dd37cd8c447",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngChunksAndIDATValid": true,
+      "matchesRecordedSHA256": null
+    },
+    {
+      "file": "work/qa-correction/final-habitat-revision/salt-segments.png",
+      "sha256": "1e74d562f1b47aea84ed21d3228da04ed390950f5a9412ed33c5981c29a396dd",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngChunksAndIDATValid": true,
+      "matchesRecordedSHA256": null
+    },
+    {
+      "file": "work/qa-correction/final-habitat-revision/salt-grass.png",
+      "sha256": "328b809be6139f6c270095567bc776a529d004375deb13a66f18eb8b51a013fe",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngChunksAndIDATValid": true,
+      "matchesRecordedSHA256": null
+    },
+    {
+      "file": "work/qa-correction/final-habitat-revision/coast.png",
+      "sha256": "7055fd0bbf5d5e1636b4b0937e940bca9c0282825b7f527559f0d043cb1a1f6e",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngChunksAndIDATValid": true,
+      "matchesRecordedSHA256": null
+    },
+    {
+      "file": "work/qa-correction/final-habitat-revision/forest-normal-walk.png",
+      "sha256": "7fae298a4f63003be46c4154ee3dde0ef612f20f37a20d8b9c6d195dccade98b",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngChunksAndIDATValid": true,
+      "matchesRecordedSHA256": null
+    },
+    {
+      "file": "work/qa-correction/final-habitat-revision/habitat-light-gap-fixed.png",
+      "sha256": "7f0491e1eef0de586b25c98536121533a83e9e504427be4cbe80cf8352a77a51",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngChunksAndIDATValid": true,
+      "matchesRecordedSHA256": null
+    },
+    {
+      "file": "work/qa-correction/final-habitat-revision/habitat-light-gap.png",
+      "sha256": "600d545b7873a7b46689ef1c43fcdde099e1d98f8ea8a1e0739c1438e1f44756",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngChunksAndIDATValid": true,
+      "matchesRecordedSHA256": null
+    },
+    {
+      "file": "work/qa-correction/final-habitat-revision/habitat-nutrient-edge.png",
+      "sha256": "eb6a27871989245b7967e54a3aff127b931c645846926b2e8936e000c99e97aa",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngChunksAndIDATValid": true,
+      "matchesRecordedSHA256": null
+    },
+    {
+      "file": "work/qa-correction/final-habitat-revision/keilm-low.png",
+      "sha256": "b6501b01a02e58b15e505b2a4077059aa85f1ab39cbd1ec01a8454a6d731baa9",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngChunksAndIDATValid": true,
+      "matchesRecordedSHA256": null
+    },
+    {
+      "file": "work/qa-correction/final-habitat-revision/keilm-high.png",
+      "sha256": "b6501b01a02e58b15e505b2a4077059aa85f1ab39cbd1ec01a8454a6d731baa9",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngChunksAndIDATValid": true,
+      "matchesRecordedSHA256": null
+    },
+    {
+      "file": "work/qa-correction/final-habitat-revision/andel-low.png",
+      "sha256": "f5ffbb13d6c2186d768a266b92741ab23cb54664d001e62fdb243866ecb9b201",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngChunksAndIDATValid": true,
+      "matchesRecordedSHA256": null
+    },
+    {
+      "file": "work/qa-correction/final-habitat-revision/andel-high.png",
+      "sha256": "a050faabc5a6253a76b28752e3b2ed83972862f3d3d340d1253dcb78d03b166e",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngChunksAndIDATValid": true,
+      "matchesRecordedSHA256": null
+    },
+    {
+      "file": "work/qa-correction/final-habitat-revision/diagnostic-galium_odoratum-standard.png",
+      "sha256": "ab19f9bf1f050e4c93a7cd2dc514c3b50ff7c003b2013e1c8c0ff2cc59bbe5c6",
+      "dimensions": [
+        516,
+        258
+      ],
+      "pngChunksAndIDATValid": true,
+      "matchesRecordedSHA256": true
+    },
+    {
+      "file": "work/qa-correction/final-habitat-revision/diagnostic-galium_odoratum-rotated.png",
+      "sha256": "61e8170fb8de04778b12171806be307d2cfb26cfd6672998db27c63f9e799419",
+      "dimensions": [
+        516,
+        258
+      ],
+      "pngChunksAndIDATValid": true,
+      "matchesRecordedSHA256": true
+    },
+    {
+      "file": "work/qa-correction/final-habitat-revision/diagnostic-fagus_sylvatica-standard.png",
+      "sha256": "2001e9fd732bf0a398d9a0d6d12f1616f811bdd40b925b63f01adba9ab817755",
+      "dimensions": [
+        516,
+        258
+      ],
+      "pngChunksAndIDATValid": true,
+      "matchesRecordedSHA256": true
+    },
+    {
+      "file": "work/qa-correction/final-habitat-revision/diagnostic-fagus_sylvatica-rotated.png",
+      "sha256": "d451729309eb79ea4f7a590e515f3725bde171a6d83a23db17958a5e0301dce2",
+      "dimensions": [
+        516,
+        258
+      ],
+      "pngChunksAndIDATValid": true,
+      "matchesRecordedSHA256": true
+    },
+    {
+      "file": "work/qa-correction/final-habitat-revision/diagnostic-urtica_dioica-standard.png",
+      "sha256": "84523107f723d695616a035b0711c1e797567db34e8d629ecd255d60b54feb93",
+      "dimensions": [
+        516,
+        258
+      ],
+      "pngChunksAndIDATValid": true,
+      "matchesRecordedSHA256": true
+    },
+    {
+      "file": "work/qa-correction/final-habitat-revision/diagnostic-urtica_dioica-rotated.png",
+      "sha256": "2c57abde8b8c43a50cf114ccae9c26b524fc2c26263dd3f18176711be306c9eb",
+      "dimensions": [
+        516,
+        258
+      ],
+      "pngChunksAndIDATValid": true,
+      "matchesRecordedSHA256": true
+    },
+    {
+      "file": "work/qa-correction/final-habitat-revision/diagnostic-quercus_robur-standard.png",
+      "sha256": "09b212fe52dc14ebdb826d20598bc5168e880cb7ec2b8fbbb621d2a8a5b86791",
+      "dimensions": [
+        516,
+        258
+      ],
+      "pngChunksAndIDATValid": true,
+      "matchesRecordedSHA256": true
+    },
+    {
+      "file": "work/qa-correction/final-habitat-revision/diagnostic-quercus_robur-rotated.png",
+      "sha256": "c2355eecb8f968c0bb0943dc1eb88dbd7854947cc716544f23fff8e1b4b18b16",
+      "dimensions": [
+        516,
+        258
+      ],
+      "pngChunksAndIDATValid": true,
+      "matchesRecordedSHA256": true
+    }
+  ],
+  "currentTides": {
+    "andel-low.png": {
+      "phase": 0.0035399999999673544,
+      "waterLevel": -1.0499010585315833,
+      "label": "Niedrigwasser"
+    },
+    "andel-high.png": {
+      "phase": 0.5034166666667365,
+      "waterLevel": -0.25009216759913766,
+      "label": "Hochwasser"
+    },
+    "keilm-low.png": {
+      "phase": 0.002861666666662425,
+      "waterLevel": -1.0499353429149239,
+      "label": "Niedrigwasser"
+    },
+    "keilm-high.png": {
+      "phase": 0.5021949999999672,
+      "waterLevel": -0.2500380409976136,
+      "label": "Hochwasser"
+    }
+  },
+  "n02ModelResult": "work/qa-correction/final-review-node/compact-habitat-revision/habitat-revision-result.json",
+  "n02ModelResultSHA256": "dfa2f3879a8eeb1b965bf88a3f11b997f7a3ebda3da7a80e597b13a08d7a4bf7",
+  "n02Seeds": [
+    20260825,
+    1,
+    42,
+    20261022
+  ],
+  "f05Status": "Visible targeted improvement; full visual acceptance remains open.",
+  "f05RemainingLimits": [
+    "Bare light-gap foreground and thin skeletal bramble shrubs.",
+    "Repeated polygonal crowns and straight trunks; biological age classes only partly inferable from images.",
+    "Coarse deadwood, floor and distant scenery remain stylized.",
+    "Actual slow-rendering notice covers part of the right light-gap and edge view; no hidden-region approval.",
+    "No real iPad 9/Safari/iPadOS 27 check or device-performance certification."
+  ],
+  "n02Status": "Current low/high-water images support corrected Andel stand and unchanged dry Keilmelde; complete four-seed height counts come from the separate passed model table, not image counting.",
+  "completeF05VisualAcceptance": false
+}

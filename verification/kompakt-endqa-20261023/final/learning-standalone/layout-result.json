@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "scope": "Read-only computed layout in the actual running app; no warning visibility or game state injection",
+  "cssSHA256": "fa3e0391ced503e62691704482dfcd500f73e81aa43c0abb9559c0e7491b378b",
+  "viewport": {
+    "width": 800,
+    "height": 600
+  },
+  "warningVisible": false,
+  "computedLayout": {
+    "warningTop": 196,
+    "controlBottom": 179
+  }
+}
