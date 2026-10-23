@@ -8,7 +8,7 @@ from browser_import_wait import choose_import_file
 import argparse,json,shutil,hashlib,time,traceback,subprocess
 p=argparse.ArgumentParser();p.add_argument('--file-read-delay-ms',type=int,default=250);p.add_argument('--entry',default='Ranger-Kompakt.html');p.add_argument('--site',default='outputs');p.add_argument('--output',default='work/qa-correction/import-browser');a=p.parse_args()
 if not 0<=a.file_read_delay_ms<=5000:p.error('file read delay must be 0–5000 ms')
-root=Path(__file__).resolve().parents[1];out=root/a.output;out.mkdir(parents=True,exist_ok=True);key='ranger-compact-fieldbook-v2';valid=json.loads((root/'verification/kompakt-v2/learning/earned-all-families.json').read_text());r={'entry':a.entry,'scope':'Rendered DOM plus actual WebGL boot of standalone HTML; imports/storage corruption are explicitly labelled fixtures, not newly earned mission evidence','baselineFixtureProvenance':'Two preserved historical own reconstructions, not claimed byte-identical to the unavailable independent archive originals','fileReadLatencyFixtureMs':a.file_read_delay_ms,'responseWait':'Fresh preview DOM mutation, not stale text or an arbitrary sleep','checks':[],'errors':[],'passed':False,'htmlSHA256':hashlib.sha256((root/a.site/a.entry).read_bytes()).hexdigest()}
+root=Path(__file__).resolve().parents[1];out=root/a.output;out.mkdir(parents=True,exist_ok=True);key='ranger-compact-fieldbook-v2';valid=json.loads((root/'verification/kompakt-v2/learning/earned-all-families.json').read_text());r={'entry':a.entry,'scope':'Rendered DOM plus actual WebGL boot of standalone HTML; imports/storage corruption are explicitly labelled fixtures, not newly earned mission evidence','baselineFixtureProvenance':'Preserved historical own reconstructions and now available exact independently supplied original fixtures, explicitly named separately; imported work is not newly earned evidence','fileReadLatencyFixtureMs':a.file_read_delay_ms,'responseWait':'Fresh preview DOM mutation, not stale text or an arbitrary sleep','checks':[],'errors':[],'passed':False,'htmlSHA256':hashlib.sha256((root/a.site/a.entry).read_bytes()).hexdigest()}
 class Handler(SimpleHTTPRequestHandler):
  def log_message(self,*args):pass
 server=ThreadingHTTPServer(('127.0.0.1',0),partial(Handler,directory=str(root/a.site)));Thread(target=server.serve_forever,daemon=True).start();url=f'http://127.0.0.1:{server.server_port}/{a.entry}'
@@ -54,30 +54,40 @@ console.log(JSON.stringify({single:book([first]),repeated:book([first,{...struct
  return json.loads(subprocess.run(['node','--input-type=module','-e',script],cwd=root,capture_output=True,text=True,check=True).stdout)
 
 def event_reference_checks(page):
- for name,fixture in event_reference_fixtures().items():
+ fixtures=event_reference_fixtures();fixtures['independent-original-ambiguous']=json.loads((root/'verification/kompakt-runde2/original-fixtures/evidence/ambiguous-two-runs.json').read_text())
+ for name,fixture in fixtures.items():
   filename='labelled-legacy-event-'+name+'.json';fixture_path=out/filename;fixture_path.write_text(json.dumps(fixture,ensure_ascii=False,indent=2)+'\n')
+  if name=='independent-original-ambiguous':fixture_path.write_bytes((root/'verification/kompakt-runde2/original-fixtures/evidence/ambiguous-two-runs.json').read_bytes())
+  ambiguous=name in ['ambiguous','independent-original-ambiguous']
   choose_import_file(page,str(fixture_path));page.locator('#apply-import').click();original=storage(page)
   assert json.loads(original)==fixture
-  page.locator('#close').click();page.wait_for_function('(complete)=>JSON.parse(document.querySelector("#world").dataset.missions).find(m=>m.id==="K2").complete===complete',arg=name!='ambiguous')
+  page.locator('#close').click();page.wait_for_function('(complete)=>JSON.parse(document.querySelector("#world").dataset.missions).find(m=>m.id==="K2").complete===complete',arg=not ambiguous)
   page.locator('#objective').click();page.locator('#panel [data-mission="K2"]').click()
-  assert storage(page)==original
+  # Explicit mission selection legitimately persists activeMission. The old
+  # synthetic cases already select K2 and retain their exact byte assertion.
+  # The supplied original starts in free play: assert its sole intended change,
+  # keeping every event, answer and draft exactly as imported.
+  if name=='independent-original-ambiguous':
+   expected_open=json.loads(original);expected_open['learning']['activeMission']='K2';assert json.loads(storage(page))==expected_open
+  else:assert storage(page)==original
   assert page.locator('input[name="event-ids"]').count()==len(fixture['records'])
-  assert page.locator('input[name="event-ids"]:checked').count()==(0 if name=='ambiguous' else len(fixture['records']))
-  assert page.locator('#event-reference-warning').count()==int(name=='ambiguous')
-  check={'name':'legacy event reference '+name+' imports and renders without silent reassignment','passed':True,'fixtureNotEarnedEvidence':True,'fixture':filename,'fixtureSHA256':hashlib.sha256(fixture_path.read_bytes()).hexdigest(),'oldStorageByteIdenticalOnOpen':True,'automaticK2Complete':name!='ambiguous'}
-  if name=='ambiguous':
-   assert 'mehrdeutig' in page.locator('#event-reference-warning').inner_text();page.screenshot(path=str(out/'legacy-ambiguous-selection.png'))
+  assert page.locator('input[name="event-ids"]:checked').count()==(0 if ambiguous else len(fixture['records']))
+  assert page.locator('#event-reference-warning').count()==int(ambiguous)
+  check={'name':'legacy event reference '+name+' imports and renders without silent reassignment','passed':True,'fixtureNotEarnedEvidence':True,'fixture':filename,'fixtureSHA256':hashlib.sha256(fixture_path.read_bytes()).hexdigest(),'oldStorageByteIdenticalOnOpen':storage(page)==original,'onlyIntendedOpenChange':'activeMission selected explicitly' if name=='independent-original-ambiguous' else None,'importedRecordsAnswersDraftsUnchanged':True,'automaticK2Complete':not ambiguous}
+  if ambiguous:
+   ambiguous_capture='legacy-'+name+'-selection.png';qualified_capture='legacy-'+name+'-qualified-selection.png'
+   assert 'mehrdeutig' in page.locator('#event-reference-warning').inner_text();page.screenshot(path=str(out/ambiguous_capture))
    page.locator('input[name="event-ids"]').nth(1).check();page.locator('#save-task').click()
    assert page.locator('#task-feedback').inner_text().startswith('Strukturierte Belegprüfung erfüllt.')
    assert page.locator('#event-reference-warning').count()==0
    expected=json.dumps(['record-event-v1',fixture['records'][1]['id'],fixture['records'][1]['events'][0]['id']],separators=(',',':'))
    selected=json.loads(storage(page));assert selected['records']==fixture['records'];assert selected['learning']['answers']['K2']['eventIds']==[expected]
-   page.wait_for_function('JSON.parse(document.querySelector("#world").dataset.missions).find(m=>m.id==="K2").complete===true');page.screenshot(path=str(out/'legacy-explicit-qualified-selection.png'))
-   check.update(explicitReselectionCompleted=True,qualifiedReference=expected,screenshots=['legacy-ambiguous-selection.png','legacy-explicit-qualified-selection.png'])
+   page.wait_for_function('JSON.parse(document.querySelector("#world").dataset.missions).find(m=>m.id==="K2").complete===true');page.screenshot(path=str(out/qualified_capture))
+   check.update(explicitReselectionCompleted=True,qualifiedReference=expected,screenshots=[ambiguous_capture,qualified_capture])
   page.locator('#close').click();page.locator('#journal-button').click()
   with page.expect_download()as dl:page.locator('#export').click()
   exported=out/('legacy-event-'+name+'-export.json');dl.value.save_as(str(exported));export_data=json.loads(exported.read_text());assert export_data['records']==fixture['records']
-  expected_answer=selected['learning']['answers']['K2'] if name=='ambiguous' else fixture['learning']['answers']['K2'];assert export_data['learning']['answers']['K2']==expected_answer
+  expected_answer=selected['learning']['answers']['K2'] if ambiguous else fixture['learning']['answers']['K2'];assert export_data['learning']['answers']['K2']==expected_answer
   choose_import_file(page,str(exported));page.locator('#apply-import').click();assert json.loads(storage(page))['learning']['answers']['K2']==expected_answer
   check.update(export=exported.name,exportSHA256=hashlib.sha256(exported.read_bytes()).hexdigest());r['checks'].append(check);save()
 
@@ -88,6 +98,10 @@ def import_cases(before):
   # Preserve these historical OWN-reconstruction fixture bytes. The two
   # original independent archive files were not available for byte comparison.
   cases.append((name,(root/'verification/kompakt-korrektur/baseline'/name).read_text()))
+ for name in ['repro-invalid-top-level-features.json','repro-impossible-coordinates.json']:
+  original=root/'verification/kompakt-runde2/original-fixtures/inputs'/name
+  cases.append(('independent-original-'+name,original.read_text()))
+ cases.append(('independent-original-conflicting-same-run-events',(root/'verification/kompakt-runde2/original-fixtures/evidence/conflicting-same-run-events.json').read_text()))
  for field,value in [('features',{}),('recordId',3),('choice',[]),('limit',False)]:
   d=json.loads(before);d['learning']['drafts']['K1']={field:value};add('K1-'+field,d)
  for name,value in [('not-array',1),('null-item',[None]),('nested-features',[{'recordId':json.loads(before)['records'][0]['id'],'features':{}}])]:
@@ -132,6 +146,10 @@ with sync_playwright()as pw:
   for name,raw in import_cases(before):
    choose_import_file(page,{'name':name+'.json','mimeType':'application/json','buffer':raw.encode()});page.wait_for_function('!document.querySelector("#apply-import")&&document.querySelector("#import-preview").textContent.length>0');assert storage(page)==before;assert not page.locator('#apply-import').count();r['checks'].append({'name':name,'passed':True,'oldStorageByteIdentical':True,'message':page.locator('#import-preview').inner_text()});save()
   page.screenshot(path=str(out/'invalid-import-rejected.png'))
+  original_revision3=root/'verification/kompakt-runde2/original-fixtures/inputs/previous-revision3-earned.json';original_data=json.loads(original_revision3.read_text());choose_import_file(page,str(original_revision3));page.locator('#apply-import').click();stored_original=json.loads(storage(page));assert stored_original['records']==original_data['records'];assert stored_original['learning']==original_data['learning'];page.locator('#close').click()
+  for mission in ['K1','K2','K3','K4','K5']:
+   page.locator('#objective').click();page.locator(f'#panel [data-mission="{mission}"]').click();assert page.locator('#task-form').is_visible();assert not page.locator('#learning-status').inner_text();page.locator('#close').click()
+  page.locator('#journal-button').click();r['checks'].append({'name':'exact independently supplied revision-3 earned fieldbook imports unchanged and K1-K5 render','passed':True,'originalSHA256':hashlib.sha256(original_revision3.read_bytes()).hexdigest(),'scope':'Imported original external evidence, not newly earned observations'});save()
   local_fixture=context_fixture(before);choose_import_file(page,{'name':'labelled-valid-local-context-fixture.json','mimeType':'application/json','buffer':json.dumps(local_fixture).encode()});page.locator('#apply-import').click()
   assert json.loads(storage(page))==local_fixture
   assert page.locator('[data-qa-html-note]').count()==0 and '<em data-qa-html-note="literal">Nur Text</em>' in page.locator('#panel-body').inner_text()

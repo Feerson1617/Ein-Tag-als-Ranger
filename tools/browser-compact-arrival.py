@@ -11,7 +11,7 @@ from module_graph import ModuleGraph
 from compact_runtime import audit_standalone
 import argparse,json,shutil,hashlib,subprocess,time,traceback,math,base64
 
-p=argparse.ArgumentParser();p.add_argument('--site',default='outputs');p.add_argument('--entry',default='Ranger-Kompakt.html');p.add_argument('--output',default='work/qa-2026-10-23/arrival-browser');p.add_argument('--walk-wall-budget',type=int,default=900,help='Explicit operational wall-clock budget per walked segment; the default 900-second run and any longer supplemental run must be reported separately.');a=p.parse_args()
+p=argparse.ArgumentParser();p.add_argument('--detail-realtime',action='store_true',help='Additional 1200x750 didactic-detail scenario: all four first encounters run in real time; default route/budget assertions remain unchanged.');p.add_argument('--site',default='outputs');p.add_argument('--entry',default='Ranger-Kompakt.html');p.add_argument('--output',default='work/qa-2026-10-23/arrival-browser');p.add_argument('--walk-wall-budget',type=int,default=900,help='Explicit operational wall-clock budget per walked segment; the default 900-second run and any longer supplemental run must be reported separately.');a=p.parse_args()
 if a.walk_wall_budget<=0:p.error('--walk-wall-budget must be positive')
 root=Path(__file__).resolve().parents[1];out=root/a.output;out.mkdir(parents=True,exist_ok=True)
 audit=audit_standalone(root,root/a.site/a.entry);graph=ModuleGraph(root/'dist','compact/main.js')
@@ -24,7 +24,7 @@ class Handler(SimpleHTTPRequestHandler):
 server=ThreadingHTTPServer(('127.0.0.1',0),partial(Handler,directory=str(root/a.site)));Thread(target=server.serve_forever,daemon=True).start()
 def save():(out/'result.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
 def sample(page):
- return page.locator('#world').evaluate('c=>({time:Number(c.dataset.simulationTime),observer:JSON.parse(c.dataset.observer),actors:JSON.parse(c.dataset.coastal),events:JSON.parse(c.dataset.coastalEvents),ecology:JSON.parse(c.dataset.ecology),runId:c.dataset.runId,origin:JSON.parse(c.dataset.sceneOrigin||"null"),mode:c.dataset.modelObservation,realtime:c.dataset.behaviorRealtime==="true",ownSeconds:Number(c.dataset.observationSeconds),focus:c.dataset.focusIndividual,visibility:JSON.parse(c.dataset.behaviorVisibility||"null")})')
+ return page.locator('#world').evaluate('c=>({time:Number(c.dataset.simulationTime),observer:JSON.parse(c.dataset.observer),actors:JSON.parse(c.dataset.coastal),events:JSON.parse(c.dataset.coastalEvents),ecology:JSON.parse(c.dataset.ecology),runId:c.dataset.runId,origin:JSON.parse(c.dataset.sceneOrigin||"null"),mode:c.dataset.modelObservation,realtime:c.dataset.behaviorRealtime==="true",ownSeconds:Number(c.dataset.observationSeconds),focus:c.dataset.focusIndividual,visibility:JSON.parse(c.dataset.behaviorVisibility||"null"),detail:JSON.parse(c.dataset.feedingDetail||"null")})')
 def pointer(page,button):
  button.wait_for(state='visible');assert button.is_enabled();button.evaluate("b=>b.scrollIntoView({block:'center',behavior:'instant'})")
  hit=button.evaluate('b=>{const r=b.getBoundingClientRect(),x=r.left+r.width/2,y=r.top+r.height/2,e=document.elementFromPoint(x,y);return{x,y,hit:e===b||b.contains(e),visible:x>=0&&y>=0&&x<innerWidth&&y<innerHeight}}');assert hit['hit']and hit['visible'],hit;page.mouse.click(hit['x'],hit['y'])
@@ -66,6 +66,7 @@ def start_window(page,id,realtime=False):
  assert {k:fresh['ecology']['resources'][k]for k in resources}=={'small-juveniles':3,'small-worms':3,'shrimp':5,'shared-mussels':18}
  pointer(page,page.locator(('[data-realtime="'if realtime else'[data-behavior="')+id+'"]'))
  page.wait_for_function('(id)=>document.querySelector("#world").dataset.modelObservation===id && document.querySelector("#world").dataset.renderRevision===document.querySelector("#world").dataset.sceneRevision',arg=id)
+ if a.detail_realtime:pointer(page,page.locator('#behavior-detail'));page.wait_for_function('JSON.parse(document.querySelector("#world").dataset.feedingDetail||"null")!==null')
  if not realtime and page.locator('#binocular').get_attribute('aria-pressed')!='true':pointer(page,page.locator('#binocular'))
  row={'id':id,'realtime':realtime,'beforeNewContext':before,'freshContext':fresh,'captures':[],'samples':[],'startedWall':time.monotonic()};result['sequences'].append(row);save();return row
 def capture(page,row,s,phase):
@@ -88,6 +89,8 @@ def sequence(page,row):
     capture(page,row,s,'after-departure');completed_departure=True;break
    if actor.get('targetId')==episode and phase not in seen:seen.add(phase);capture(page,row,s,phase)
   assert s['mode']==row['id']and s['realtime']==row['realtime']
+  if a.detail_realtime and s['detail'] and s['detail']['eventRecorded']:
+   detail=s['detail'];assert any(e['id']==detail['eventId'] and e['actors']==[detail['individualId'],detail['preyId']]for e in s['events']),'Detail must not assign a previous acquisition to the next prey'
   if not row['realtime']:assert s['ownSeconds']==0
   row['samples'].append({'wallSeconds':time.monotonic()-started,'modelTime':s['time'],'phase':phase,'ownSeconds':s['ownSeconds'],'focus':s['focus']})
   if row['realtime']:
@@ -99,6 +102,10 @@ def sequence(page,row):
  assert completed_departure,(row['id'],'No confirmed departure from the acquired prey')
  required={'approaching','searching','handling','swallowing','departing'};assert required<=seen,(row['id'],required-seen)
  assert event and event['after']==event['before']-1 and event['contactDistance']<.004
+ if a.detail_realtime:
+  for capture in row['captures']:
+   if capture['phase']=='after-departure':continue
+   detail=capture['sample']['detail'];assert detail and detail['individualId']==row['id'] and detail['preyId']==row['preyId'];assert detail['eventId']==event['id'];assert detail['runId']==row['freshContext']['runId'];assert detail['sharedLiveSceneNodes'] and detail['preyGeometryUnscaled'] and detail['didacticMagnification']
  row.update(event=event,actualSeconds=time.monotonic()-started,passed=True);save()
 
 def begin_video(page):
@@ -110,7 +117,7 @@ def end_video(page):
 
 with sync_playwright()as pw:
  b=pw.chromium.launch(headless=True,executable_path=shutil.which('chromium'),args=['--no-sandbox','--use-angle=swiftshader','--enable-unsafe-swiftshader']);result['browser']=b.version
- ctx=b.new_context(viewport={'width':800,'height':600},accept_downloads=True);page=ctx.new_page();result['videoTimingScope']='Canvas recording uses browser wall-time timestamps during the first actual real-time sequence; model time is separately recorded.';page.set_default_timeout(45000);page.on('pageerror',lambda e:result['errors'].append(str(e)))
+ ctx=b.new_context(viewport={'width':1200 if a.detail_realtime else 800,'height':750 if a.detail_realtime else 600},accept_downloads=True,**({'record_video_dir':str(out/'page-video'),'record_video_size':{'width':1200,'height':750}} if a.detail_realtime else {}));page=ctx.new_page();result['videoTimingScope']='Canvas recording uses browser wall-time timestamps during the first actual real-time sequence; model time is separately recorded.';page.set_default_timeout(45000);page.on('pageerror',lambda e:result['errors'].append(str(e)))
  try:
   page.goto(f'http://127.0.0.1:{server.server_port}/{a.entry}');page.wait_for_selector('#world[data-ready=true]',timeout=120000);pointer(page,page.locator('#start'));result['initial']=sample(page)
   walk(page,layout['route'],'full-main-route');result['routeMetrics']=layout['metrics']
@@ -121,7 +128,7 @@ with sync_playwright()as pw:
   # First new local window is entirely real time, including unaccelerated video.
   row=start_window(page,'compact-oystercatcher',True);result['realtimeVideoStartWall']=time.monotonic();begin_video(page);sequence(page,row);result['realtimeVideoEndWall']=time.monotonic();end_video(page)
   page.wait_for_function('!document.querySelector("#record").disabled');pointer(page,page.locator('#record'));page.locator('#note').fill('Nahrungssuche am selbst erreichten Küstenort im ausdrücklich neu begonnenen Modellfenster beobachtet.');pointer(page,page.locator('#save-note'));assert page.locator('#count').inner_text()=='1'
-  for id in ['compact-avocet','compact-redshank','compact-spoonbill']:sequence(page,start_window(page,id))
+  for id in ['compact-avocet','compact-redshank','compact-spoonbill']:sequence(page,start_window(page,id,a.detail_realtime))
   # A disclosed equivalent model wait. This is not 20 minutes of active forest/K1 work.
   before=sample(page);wait_start=time.monotonic()
   for i in range(240):tick(page,5)
@@ -142,5 +149,7 @@ with sync_playwright()as pw:
    if page.evaluate('!!window.__arrivalVideo'):end_video(page)
   except Exception:
    result['passed']=False;result['videoFailure']=traceback.format_exc();save();raise
-  finally:ctx.close();b.close();server.shutdown();server.server_close()
+  finally:
+   if a.detail_realtime and page.video:result['pageVideo']=str(Path(page.video.path()).relative_to(out));result['pageVideoScope']='Original complete real-time browser recording including visible labels, whole native walk, four first real-time sequences and explicitly labelled later model-step segments; no accelerated playback or synthesized frames';save()
+   ctx.close();b.close();server.shutdown();server.server_close()
 print(json.dumps({'passed':result['passed'],'sequences':len(result['sequences'])}))

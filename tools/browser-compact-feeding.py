@@ -10,7 +10,7 @@ from playwright.sync_api import sync_playwright
 from module_graph import ModuleGraph
 from compact_runtime import audit_standalone
 import argparse,json,shutil,hashlib,subprocess,time,traceback,html
-p=argparse.ArgumentParser();p.add_argument('--entry',default='Ranger-Kompakt.html');p.add_argument('--site',default='outputs');p.add_argument('--output',default='work/qa-correction/feeding-browser');a=p.parse_args();root=Path(__file__).resolve().parents[1];out=root/a.output;out.mkdir(parents=True,exist_ok=True)
+p=argparse.ArgumentParser();p.add_argument('--detail',action='store_true');p.add_argument('--entry',default='Ranger-Kompakt.html');p.add_argument('--site',default='outputs');p.add_argument('--output',default='work/qa-correction/feeding-browser');a=p.parse_args();root=Path(__file__).resolve().parents[1];out=root/a.output;out.mkdir(parents=True,exist_ok=True)
 # Immutable authored prey positions select sampling cadence only. They never
 # place animals, advance a hidden clock, create a resource or grant evidence.
 inventory_code="import{identityInventory}from'./dist/compact/evidence.js';import{MANIFEST,MODEL_REVISION}from'./dist/compact/manifest.js';console.log(JSON.stringify([...identityInventory(MANIFEST.initialSeed,MODEL_REVISION).individuals.values()].map(p=>({id:p.id,x:p.x,z:p.z}))));"
@@ -21,7 +21,7 @@ class Handler(SimpleHTTPRequestHandler):
 server=ThreadingHTTPServer(('127.0.0.1',0),partial(Handler,directory=str(root/a.site)));Thread(target=server.serve_forever,daemon=True).start();url=f'http://127.0.0.1:{server.server_port}/{a.entry}'
 def save():(out/'result.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
 def sample(page,id):
- d=page.locator('#world').evaluate('(c)=>({time:Number(c.dataset.simulationTime),observer:JSON.parse(c.dataset.observer),actors:JSON.parse(c.dataset.coastal),events:JSON.parse(c.dataset.coastalEvents),runId:c.dataset.runId,modelObservation:c.dataset.modelObservation,ownSeconds:Number(c.dataset.observationSeconds),renderRevision:c.dataset.renderRevision,sceneRevision:c.dataset.sceneRevision,visibility:JSON.parse(c.dataset.behaviorVisibility||"null")})');d['actor']=next(a for a in d.pop('actors')if a['id']==id);return d
+ d=page.locator('#world').evaluate('(c)=>({time:Number(c.dataset.simulationTime),observer:JSON.parse(c.dataset.observer),actors:JSON.parse(c.dataset.coastal),events:JSON.parse(c.dataset.coastalEvents),runId:c.dataset.runId,modelObservation:c.dataset.modelObservation,ownSeconds:Number(c.dataset.observationSeconds),renderRevision:c.dataset.renderRevision,sceneRevision:c.dataset.sceneRevision,visibility:JSON.parse(c.dataset.behaviorVisibility||"null"),detail:JSON.parse(c.dataset.feedingDetail||"null")})');d['actor']=next(a for a in d.pop('actors')if a['id']==id);return d
 def tick(page,size):page.locator('#behavior-step-size').select_option(str(size));page.locator('#behavior-step').click();page.wait_for_function('document.querySelector("#world").dataset.renderRevision===document.querySelector("#world").dataset.sceneRevision')
 def capture(page,row,s,phase):
  assert s['visibility']and all(s['visibility'][k]for k in ['meshVisible','bodyClear','billClear','bodyInFrame']),(row['id'],phase,'Actual model hidden or occluded',s['visibility'])
@@ -30,7 +30,9 @@ with sync_playwright()as pw:
  b=pw.chromium.launch(headless=True,executable_path=shutil.which('chromium'),args=['--no-sandbox','--use-angle=swiftshader','--enable-unsafe-swiftshader']);result['browser']=b.version
  try:
   for id in ['avocet','redshank','spoonbill','oystercatcher']:
-   ctx=b.new_context(viewport={'width':1000,'height':700},accept_downloads=True);page=ctx.new_page();page.set_default_timeout(45000);page.on('pageerror',lambda e:result['errors'].append(str(e)));page.goto(url);page.wait_for_function('document.querySelector("#world").dataset.ready==="true"',timeout=120000);page.locator('#start').click();page.locator('#menu-button').click();page.get_by_text('Referenzabschnitt prüfen',exact=True).click();page.locator(f'[data-view="feeding-{id}"]').click();page.wait_for_function('document.querySelector("#world").dataset.renderRevision===document.querySelector("#world").dataset.sceneRevision');page.locator('#binocular').click();page.locator('#study').click();page.locator(f'[data-behavior="compact-{id}"]').click();page.wait_for_function('document.querySelector("#world").dataset.modelObservation!==""');row={'id':'compact-'+id,'captures':[],'event':None};result['sequences'].append(row);s=sample(page,row['id']);capture(page,row,s,'initial');seen=set();episode=None
+   ctx=b.new_context(viewport={'width':1000,'height':700},accept_downloads=True);page=ctx.new_page();page.set_default_timeout(45000);page.on('pageerror',lambda e:result['errors'].append(str(e)));page.goto(url);page.wait_for_function('document.querySelector("#world").dataset.ready==="true"',timeout=120000);page.locator('#start').click();page.locator('#menu-button').click();page.get_by_text('Referenzabschnitt prüfen',exact=True).click();page.locator(f'[data-view="feeding-{id}"]').click();page.wait_for_function('document.querySelector("#world").dataset.renderRevision===document.querySelector("#world").dataset.sceneRevision');page.locator('#binocular').click();page.locator('#study').click();page.locator(f'[data-behavior="compact-{id}"]').click();page.wait_for_function('document.querySelector("#world").dataset.modelObservation!==""');
+   if a.detail:page.locator('#behavior-detail').click();page.wait_for_function('JSON.parse(document.querySelector("#world").dataset.feedingDetail||"null")!==null')
+   row={'id':'compact-'+id,'captures':[],'event':None};result['sequences'].append(row);s=sample(page,row['id']);capture(page,row,s,'initial');seen=set();episode=None
    if id in ['avocet','redshank']:
     target=26 if id=='avocet'else 18
     while sample(page,row['id'])['time']<target-6:tick(page,5)
@@ -38,6 +40,8 @@ with sync_playwright()as pw:
    for i in range(480):
     target=initial_positions.get(s['actor'].get('targetId'));near_contact=target and s['actor']['phase']=='approaching' and ((target['x']-s['actor']['x'])**2+(target['z']-s['actor']['z'])**2)**.5<1.05
     tick(page,.025 if near_contact else .1 if 'departing'in seen else .25);s=sample(page,row['id']);row['lastSample']=s;phase=s['actor']['phase'];assert s['modelObservation']==row['id'];assert s['ownSeconds']==0,'Model stepping must not fabricate active sighting time'
+    if a.detail and s['detail'] and s['detail']['eventRecorded']:
+     d=s['detail'];assert any(e['id']==d['eventId'] and e['actors']==[d['individualId'],d['preyId']]for e in s['events'])
     if episode is None and phase=='approaching':episode=s['actor']['targetId'];row['preyId']=episode
     if episode is None:continue
     event=next((e for e in s['events']if e['actors']==[row['id'],episode]),None)
@@ -46,7 +50,12 @@ with sync_playwright()as pw:
      assert ((s['actor']['x']-event['bodyPosition']['x'])**2+(s['actor']['z']-event['bodyPosition']['z'])**2)**.5>=.40,'No actual departure from acquired prey'
      capture(page,row,s,'after-departure');break
     if s['actor'].get('targetId')==episode and phase not in seen:seen.add(phase);capture(page,row,s,phase)
-   required={'approaching','searching','handling','swallowing','departing'};assert required<=seen,(id,'Missing actual rendered phases',required-seen);assert row['event'],id+' no successful real resource acquisition';assert row['event']['after']==row['event']['before']-1;assert row['event']['contactDistance']<.004;assert page.locator('#count').inner_text()=='0';assert not result['errors'];row['passed']=True;save();ctx.close();print('PASS',id,flush=True)
+   required={'approaching','searching','handling','swallowing','departing'};assert required<=seen,(id,'Missing actual rendered phases',required-seen);assert row['event'],id+' no successful real resource acquisition';assert row['event']['after']==row['event']['before']-1;assert row['event']['contactDistance']<.004;
+   if a.detail:
+    for c in row['captures']:
+     if c['phase'] in ['initial','after-departure']:continue
+     d=c['sample']['detail'];assert d and d['eventId']==row['event']['id'] and d['individualId']==row['id'] and d['preyId']==row['preyId'];assert d['sharedLiveSceneNodes'] and d['preyGeometryUnscaled']
+   assert page.locator('#count').inner_text()=='0';assert not result['errors'];row['passed']=True;save();ctx.close();print('PASS',id,flush=True)
   result['passed']=True;result['completedAt']=time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime());save()
   cards=[]
   for row in result['sequences']:

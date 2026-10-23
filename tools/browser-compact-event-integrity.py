@@ -5,11 +5,11 @@ from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
 from threading import Thread
 from playwright.sync_api import sync_playwright
 from browser_import_wait import choose_import_file
-import argparse, hashlib, json, shutil, time, traceback
+import argparse, hashlib, json, shutil, time, traceback, subprocess
 p=argparse.ArgumentParser();p.add_argument('--entry',default='outputs/Ranger-Kompakt.html');p.add_argument('--output',default='work/round2/n05-browser');p.add_argument('--expect-old-bug',action='store_true');a=p.parse_args()
 root=Path(__file__).resolve().parents[1];entry=(root/a.entry).resolve();out=root/a.output;out.mkdir(parents=True,exist_ok=True)
 fixture=root/'verification/kompakt-runde2/original-fixtures/evidence/conflicting-same-run-events.json';raw=fixture.read_bytes();valid=root/'verification/kompakt-v2/learning/earned-all-families.json';key='ranger-compact-fieldbook-v2'
-r={'passed':False,'scope':'Native import of exact independently supplied conflicting-event fixture; old baseline reproduction is expected product failure, not a repaired product PASS. Fixtures are not earned observation evidence.','expectedOldBug':a.expect_old_bug,'htmlSHA256':hashlib.sha256(entry.read_bytes()).hexdigest(),'fixtureSHA256':hashlib.sha256(raw).hexdigest(),'checks':[],'errors':[]}
+r={'sourceCommit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=root,text=True).strip(),'sourceDirty':bool(subprocess.check_output(['git','status','--porcelain'],cwd=root,text=True).strip()),'passed':False,'scope':'Native import of exact independently supplied conflicting-event fixture; old baseline reproduction is expected product failure, not a repaired product PASS. Fixtures are not earned observation evidence.','expectedOldBug':a.expect_old_bug,'htmlSHA256':hashlib.sha256(entry.read_bytes()).hexdigest(),'fixtureSHA256':hashlib.sha256(raw).hexdigest(),'checks':[],'errors':[]}
 class Handler(SimpleHTTPRequestHandler):
  def log_message(self,*args):pass
 server=ThreadingHTTPServer(('127.0.0.1',0),partial(Handler,directory=str(entry.parent)));Thread(target=server.serve_forever,daemon=True).start()

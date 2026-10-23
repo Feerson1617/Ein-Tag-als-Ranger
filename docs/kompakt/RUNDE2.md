@@ -24,3 +24,11 @@ python tools/browser-compact-imports.py --output work/round2/n05-full-imports
 ## Weitere Punkte
 
 F02, F05, F09/C17, N06 und N07 sind in Bearbeitung; für sie wird aus N05 kein PASS abgeleitet. Das mitgelieferte Originaljoblog bestätigt nun den 900-s-Abbruch bei Hauptwegpunkt 710, letzte protokollierte Modellzeit 90,1 s. Es ersetzt die vorher fehlende Diagnosegrundlage; eine genaue GPU-/CPU-Ursache folgt daraus allein nicht. Physisches iPad 9/Safari/iPadOS 27 und Unterrichtspilot bleiben NICHT GEPRÜFT.
+
+## Weitere gezielte Änderungen und erneute Prüfung
+
+Modellrevision 5 behält alle Revision-4-Pflanzen, Baumpositionen und Vogelstützen exakt. Oberhalb der unveränderten Kollisionen bekommen bestehende Kronen unterschiedlich hohe, tiefere, asymmetrische Volumen; Ast-/Stammverläufe variieren. Die drei diagnostischen Stützbäume behalten ihre ursprüngliche Verankerung. F05 wird am aktuellen Bild beurteilt, nicht an Objektzahlen; eine vollständige Anatomieabnahme ist damit nicht verbunden.
+
+Die optionale didaktische Detailvergrößerung rendert dasselbe aktive Vogel-/Beutegeometriepaar aus einer Übersicht und einer Kontaktkamera. Keine generische zusätzliche Animation und keine vergrößerte Beute in der Landschaft. Die ab Annäherung stabile Ereignis-ID erscheint später unverändert im tatsächlichen Erwerbsereignis. Erst ein erfolgreicher konkreter Kontakt verbraucht Nahrung. Im vorhandenen Schluckabschnitt wandert dieselbe Beute vom Schnabel zum Mund; dies ist als schematischer Weg ohne Innenanatomie gekennzeichnet. Die Detailansicht selbst vergibt keinen Beleg. Alte Revisionen behalten ihre ursprüngliche Darstellung/Belege.
+
+C17, Quellenreichweite und alle Karten sind in den separaten Runde-2-Dokumenten beschrieben. Der vollständige Schlussplan, sämtliche Fehlversuche, die Einzelmatrix sowie neue Originalbilder/-videos werden an genau den aktuellen Quell-SHA und die neu gebaute HTML gebunden. Das kleine Übergabepaket enthält Text, Fixtures, Rohstatus und Dateihashes; große Medien bleiben im gesonderten Abnahmearchiv. Keine Veröffentlichung der Anwendung und kein Merge.

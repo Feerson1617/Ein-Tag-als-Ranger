@@ -1,3 +1,17 @@
+# Reproduzierbare Prüfung der zweiten Korrekturrunde
+
+```sh
+python tools/check-compact-corrections.py --round2 --output work/final-qa-round2
+```
+
+Dieser vollständige Plan prüft zuerst alle 40 Node-Suiten, Python, beide Builds und das Quellpaket. Danach laufen die bisherigen 15 Browserprüfungen mit unveränderter ursprünglicher 900-s-Weggrenze sowie Original-N05-Import, frisch gepaarte Waldkameras und ein ausdrücklich gesonderter 3600-s-Funktionsweg mit vier Echtzeit-Detailfolgen. Kein fehlgeschlagener Schritt wird in PASS umgedeutet. Der abschließende Planstatus enthält alle tatsächlich ausgeführten Ergebnisse. Die neue UI-Importsuite erhält zusätzlich die gelieferten bytegleichen Original-F01/F04/N05-Dateien und das alte Revision-3-Feldbuch.
+
+Historische Revisionsprüfung: `node tests/compact-habitat-revision-check.mjs work/historical` vergleicht die aktuelle Modellfunktion mit neun unveränderten Git-Modulen von `f921468`. Diskrete Struktur/IDs/Reihenfolge bleiben exakt; numerische Toleranz 1e-10 plus vier relative Maschinen-Epsilon liegt weit unter 3 cm Importtoleranz. Der Fixture-Snapshot wird über SHA256, Git-Blob-Identität und bei verfügbarem Commit direkt gegen `git show` geprüft. Separate Linux-/macOS-Jobs mit Node 24.19/24.21 führen auch die nachfolgenden Gradienten-/Pfadprüfungen aus. Nicht ausgeführte Matrixfelder erhalten kein PASS.
+
+`tools/profile-compact.py` misst tatsächliche rAF-Intervalle, Modellfortschritt, Renderer, CPU-Profile und Prozess-CPU-Zeit. Sein erfolgreicher Messablauf bedeutet kein bestandenes 30-FPS-Ziel. `tools/print-compact-materials.py --contact-sheets` rendert beide aktuellen A4-Fassungen unabhängig vom Wegerfolg; alle neuen Raster und C17-Details benötigen eine eigene Sichtprüfung. Der CI-Druckschritt läuft nun auch nach einem fehlgeschlagenen Wegtest.
+
+## Vorheriger versiegelter Prüfstand (historisch, keine neuen Runde-2-Erfolge)
+
 # Ranger Kompakt – abschließende lokale Prüfungen und Nachweise
 
 Abschließender lesender Abgleich: `2026-10-23T09:53:37.553510+00:00`. Runtime-Commit: `3920a1d1d2692889b75403c1b0e50f5b856398aa`. Der [zweite Gesamtplan](../../verification/kompakt-endqa-20261023/final/plan/result.json) ist vollständig: **15 von 15 Schritten bestanden**, `complete: true`.

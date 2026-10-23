@@ -1,3 +1,4 @@
+import {carriedPreyPoint,billPoint} from '../dist/compact/coastal-rig.js';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import * as THREE from '../dist/vendor/three.module.js?revision=120';
@@ -34,6 +35,22 @@ check('F02 contact is reproduced on the actual head/claw and prey meshes, with p
   if(model.birdLegs){const skin=model.headSkinMesh,pos=skin.geometry.attributes.position;let gap=Infinity;for(let i=0;i<skin.userData.skinVertexCount;i++){const p=new THREE.Vector3().fromBufferAttribute(pos,i).applyMatrix4(skin.matrixWorld);gap=Math.min(gap,p.y-terrainHeight(p.x,p.z));}assert.ok(gap>=-.001,id+' head enters sediment: '+gap);}
   if(model.birdLegs)for(const leg of model.birdLegs){leg.foot.updateMatrixWorld(true);const foot=leg.foot.getWorldPosition(new THREE.Vector3());assert.ok(Math.abs(foot.y-a.y)<.002,'Stance foot not on local sediment');}
  }
+});
+check('F02 revision-5 encounter identity persists from approach into the actual acquired event and one concrete prey moves towards the mouth',()=>{
+ const s=world(123),first=new Map(),completed=new Set();
+ for(let i=0;i<4800&&completed.size<ids.length;i++){
+  stepReference(s,.025,{x:63,z:-12});stepEcology(s,.025,{x:63,z:-12});
+  for(const id of ids){const a=s.ecology.actors.find(a=>a.id===id);if(completed.has(id))continue;
+   if(!first.has(id)&&a.behaviorPhase==='approaching')first.set(id,{eventId:a.feedingEventId,preyId:a.targetId});
+   const entry=first.get(id);if(!entry)continue;assert.equal(a.feedingEventId,entry.eventId);
+   if(a.behaviorPhase==='swallowing'){
+    const event=s.ecology.events.find(e=>e.id===entry.eventId);assert(event);assert.equal(event.actors[1],entry.preyId);assert.equal(a.carriedPreyId,entry.preyId);assert.equal(a.feedingPreyId,entry.preyId);assert.equal(a.lastFeeding.eventId,event.id);
+    const beginning=carriedPreyPoint(a,a.phaseStartedAt,5),end=carriedPreyPoint(a,a.phaseStartedAt+.85,5);assert.deepEqual(beginning,billPoint(a));assert(Math.hypot(end.x-beginning.x,end.y-beginning.y,end.z-beginning.z)>.02);
+    assert.deepEqual(carriedPreyPoint(a,a.phaseStartedAt+.85,4),billPoint(a),'Old revisions keep the original trajectory');completed.add(id);
+   }
+  }
+ }
+ assert.deepEqual([...completed].sort(),[...ids].sort());
 });
 check('F03 the original 60-Hz jumps are present in the baseline and absent under physical speed bounds',()=>{const old=JSON.parse(fs.readFileSync(new URL('../verification/kompakt-korrektur/baseline/reconstructed-audit.json',import.meta.url))).coastal[0];for(const id of ['compact-oystercatcher','compact-crab','compact-bee'])assert.ok(old.jumps[id].distance>.5);const now=scenarios[0].maximumMetersPerSecond;assert.ok(now['compact-crab']<.038);assert.ok(now['compact-bee']<2.8);assert.ok(now['compact-oystercatcher']<6);});
 check('F02 zero real prey cannot produce a feeding event or spend a fictional resource',()=>{const s=world(123);for(const key of ['small-juveniles','small-worms','shrimp','shared-mussels'])s.ecology.resources[key].amount=0;for(const a of s.ecology.actors)if(['mytilus_edulis','hediste_diversicolor','crangon_crangon'].includes(a.taxon))a.alive=false;for(let i=0;i<1200;i++){stepReference(s,.1,{x:0,z:0});stepEcology(s,.1);}assert.equal(successful(s).length,0);assert.throws(()=>requireFour(successful(s)));});

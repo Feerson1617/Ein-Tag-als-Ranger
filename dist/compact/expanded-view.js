@@ -5,6 +5,7 @@ import { MANIFEST } from './manifest.js';
 import { terrainHeight } from './layout.js';
 import { plantGeometry,leafGeometry } from './geometry.js';
 import { CATALOG } from './catalog.js';
+import { carriedPreyPoint } from './coastal-rig.js';
 
 function quadrupedPose(mesh,a,time){
  const g=mesh.geometry,rig=g.attributes.rigData,joints=g.attributes.rigJoint,p=g.attributes.position,n=g.attributes.normal;
@@ -51,7 +52,7 @@ export async function createExpandedView(scene,state,world,reference){
    for(const [i,w]of (m.animation?.wings||[]).entries()){if(m.birdLegs||['garrulus_glandarius','parus_major'].includes(a.taxon))w.visible=a.activity==='flying';w.rotation.x=(i?1:-1)*Math.sin(state.time*(a.taxon==='bombus_lapidarius'?70:6))*(['carrying-pollen','returning-to-flower','flying'].includes(a.activity)?.8:.18);}
    if(a.taxon==='lumbricidae'){m.position.x=a.homeX-Math.min(.12,(6-e.resources['leaf-litter'].amount)*.02);}
   }
-  for(const a of e.actors)if(a.carriedPreyId){const prey=e.actors.find(p=>p.id===a.carriedPreyId),preyModel=models.get(prey.id),predator=models.get(a.id),anchor=predator.beakContact||predator.clawContact;predator.updateMatrixWorld(true);const contact=anchor.getWorldPosition(new THREE.Vector3());if(prey.emptyShell&&preyModel.tissue){const tissue=preyModel.tissue;if(tissue.parent!==scene)scene.attach(tissue);tissue.visible=true;tissue.position.copy(contact);}else{preyModel.visible=true;preyModel.position.copy(contact);}}
+  for(const a of e.actors)if(a.carriedPreyId){const prey=e.actors.find(p=>p.id===a.carriedPreyId),preyModel=models.get(prey.id),predator=models.get(a.id),anchor=predator.beakContact||predator.clawContact;predator.updateMatrixWorld(true);const contact=state.modelRevision>=5&&a.taxon!=='carcinus_maenas'?new THREE.Vector3().copy(carriedPreyPoint(a,state.time,state.modelRevision)):anchor.getWorldPosition(new THREE.Vector3());if(prey.emptyShell&&preyModel.tissue){const tissue=preyModel.tissue;if(tissue.parent!==scene)scene.attach(tissue);tissue.visible=true;tissue.position.copy(contact);}else{preyModel.visible=true;preyModel.position.copy(contact);}}
   for(const [id,row]of affected){const r=e.resources[id],fraction=r.amount/r.initial,signature=fraction+'|'+e.window;if(signature!==row.last){row.mesh.geometry.dispose();row.mesh.geometry=plantGeometry(row.p.taxon,fraction,e.window);row.last=signature;}}
   for(let i=0;i<acorns.length;i++)acorns[i].visible=e.window==='autumn'&&i<e.resources.acorns.amount;
   carriedAcorn.visible=e.window==='autumn'&&e.actors.find(a=>a.id==='compact-jay').carryingAcorn;

@@ -45,7 +45,7 @@ test('C15 uses two named species and study landscapes while keeping morphology a
  assert(!c.task.includes('widerlege')); // Lack of evidence for equal dispersal is not evidence of inequality.
 });
 
-test('C17 distinguishes density decline, modeled juvenile survival and unresolved fecundity instead of inventing a common rate',()=>{
+test('C17 distinguishes density, juvenile survival, event fecundity and an unresolved annual rate',()=>{
  const c=get('C17'),text=plain(c),survival=c.tables[1].rows;
  const [,start,end]=survival[0][1].match(/(\d+) → (\d+) Individuen\/m²/).map(Number);
  const remaining=(100*end/start).toFixed(1).replace('.',','),loss=(100*(start-end)/start).toFixed(1).replace('.',',');
@@ -53,18 +53,25 @@ test('C17 distinguishes density decline, modeled juvenile survival and unresolve
  const rates=[...survival[1][1].matchAll(/(\d+) %/g)].map(m=>Number(m[1]));
  assert(c.expected[1].includes((rates[0]-rates[1])+' Prozentpunkte'));
  for(const term of ['Gelbkörper','Ovulation','15–17 Monate','8 Monate','keine individuelle Überlebensquote','10e4-10e5','Weibchenbezug','keine gemessenen Pflegetage'])assert(text.includes(term),term);
- assert(c.limit.includes('Keine vollständige Primärzahlenmatrix'));assert.equal(lessonFormat(c),'lifehistory');
+ assert(c.limit.includes('keine natürliche Jahresfekundität'));assert(c.limit.includes('Versuchsdauer'));assert(c.limit.includes('Volltextkontrolle'));assert.equal(lessonFormat(c),'lifehistory');
  assert(article(student,'C17').includes('Ort / Zeitraum / Methode'));
+});
+
+test('C17 cockle denominator, arithmetic mean, event unit and open duration agree in tasks, source and teacher answer',()=>{
+ const c=get('C17'),text=plain(c),answer=c.expected.find(x=>x.startsWith('Laichversuch:'));
+ assert.equal((3380000/12).toFixed(1),'281666.7');assert(answer.includes('281.666,7 Eier je tatsächlich ablaichendem Weibchen dieser Behandlung'));assert(answer.includes('arithmetischer Mittelwert'));assert(answer.includes('Nicht 33.800'));assert(c.task.includes('Nenner 12 und nicht 100'));assert(c.task.includes('fehlende Versuchsdauer'));assert(c.sources.includes('pronkerCockle'));assert(SOURCES.pronkerCockle.url.endsWith('10.1111/are.12178'));
+ for(const term of ['12 tatsächlich ablaichende Weibchen','100 konditionierten Tieren','3.380.000 Eier','keine natürliche Jahresfekundität','Dauer','Exzerpt'])assert(text.includes(term),term);
+ for(const html of [student,teacher]){const a=article(html,'C17');assert(a.includes('3.380.000'));assert(a.includes('12 tatsächlich ablaichende Weibchen'));assert(a.includes('10.1111/are.12178'));}assert(article(teacher,'C17').includes('281.666,7'));
 });
 
 test('The previous six data cases and the three separate evidence levels remain present',()=>{
  for(const id of ['C04','C13','C15','C21','C23','C24']){assert(get(id).tables.length);assert(article(student,id));assert(article(teacher,id));}
  assert.equal((student.match(/<article /g)||[]).length,25);
  assert(student.includes('Ebene 3 braucht das ausgefüllte Arbeitsprodukt'));
- assert(student.includes('ETS-Plan 2025/26 ist mangels zugänglichem Original nicht vollständig verifiziert'));
+ assert(student.includes('Ökologieseiten 27–28'));assert(student.includes('bereitgestellter Originalseiten-Abbildungen'));assert(student.includes('Andere Jahrgänge sind damit nicht vollständig geprüft'));
  assert(student.includes('Virtuelle Tests bescheinigen keine reale Geräteführung oder Exkursion'));
 });
 
-const result={passed:checks.length,checks,scope:'Data/context/rendering regression only; no proof of physical device skill, fieldwork or learning outcomes. C17 fecundity interpretation and ETS original access remain open.'};
+const result={passed:checks.length,checks,scope:'Data/context/rendering regression only; no proof of physical device skill, fieldwork or learning outcomes. C17 event mean is supplied; primary full text, duration and natural annual rate remain open. ETS page renders read separately.'};
 if(process.argv[2]){mkdirSync(process.argv[2],{recursive:true});writeFileSync(process.argv[2]+'/material-depth-result.json',JSON.stringify(result,null,2)+'\n');}
 console.log(JSON.stringify(result));

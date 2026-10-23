@@ -1,3 +1,11 @@
+# Korrekturrunde 2
+
+Siehe [gezielten Auftrag und Änderungen](RUNDE2.md), [Quellen](QUELLEN-RUNDE2.md) und [Curriculum-Abgleich aller 25 Karten](CURRICULUM-RUNDE2.md). F02 betrifft jetzt sichtbare Kleinstbeute; der bereits gelöste Nullereignisfehler bleibt behoben. N05 wird vor der Importübernahme zurückgewiesen, identische Ereigniskopien und echte Mehr-Rundgang-Fälle bleiben lesbar. Modellrevision 5 ergänzt eine tatsächliche Beutebewegung vom Schnabel zum Mund und zwei ausdrücklich didaktische Kameras auf denselben Szenenknoten. Landschaftsmaßstab und Belegzeiten bleiben erhalten. Alte Revisionen 1–4 bleiben importierbar.
+
+N06 nutzt den echten unveränderten alten Quellstand statt eines plattformgebundenen JSON-Sollhashs. N07 bleibt eine reale Betriebsgrenze, solange der unveränderte 900-s-Nachtest nicht erfolgreich ist. Der konkrete Geräte-/Unterrichtspilot ist vorbereitet; Ergebnisse sind offen.
+
+## Vorherige Korrekturen und Nachweise (historischer Prüfstand)
+
 # Ranger Kompakt – Korrekturmatrix
 
 Geprüfter Runtime-Stand: `3920a1d1d2692889b75403c1b0e50f5b856398aa`. Alle 15 Schritte des [neuen lokalen Funktionsprüfplans](../../verification/kompakt-endqa-20261023/final/plan/result.json) sind bestanden. Die fachlichen, visuellen und gerätebezogenen Grenzen der folgenden Matrix bleiben davon getrennt. Details stehen in [TESTS.md](TESTS.md).

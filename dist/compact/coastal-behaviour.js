@@ -1,5 +1,5 @@
 import { terrainHeight } from './layout.js';
-import { COASTAL_PROFILES,coastalRig,billPoint,contactPose,clawPoint,crabContactPose,CRAB_RIG } from './coastal-rig.js';
+import { COASTAL_PROFILES,coastalRig,billPoint,carriedPreyPoint,contactPose,clawPoint,crabContactPose,CRAB_RIG } from './coastal-rig.js';
 export const COASTAL_SPEED_LIMITS=Object.freeze({birdWalk:.36,birdFlight:6,crab:.035,bee:2.8});
 const approach=(v,target,step)=>v+Math.sign(target-v)*Math.min(Math.abs(target-v),step);
 const distance=(a,b)=>Math.hypot(a.x-b.x,a.y-b.y,a.z-b.z);
@@ -42,7 +42,7 @@ function oneStep(state,a,dt,time,waterAt,emit){
  if(a.behaviorPhase==='handling'&&prey.taxon==='mytilus_edulis')prey.shellOpening=Math.min(.5,(time-a.phaseStartedAt)/profile.handling*.5);
  const target=preyPoint(prey),preyDepth=waterAt(time).waterLevel-terrainHeight(prey.x,prey.z),suitable=preyDepth>=profile.depth[0]&&preyDepth<=profile.depth[1];
  if(!suitable){a.activity='resting';pose(a,{pitch:0,yaw:0,crouch:0},dt);if(a.behaviorPhase!=='waiting')transition(a,'waiting',time);return;}
- if(a.behaviorPhase==='waiting'){transition(a,'approaching',time);a.approachStartedAt=time;}
+ if(a.behaviorPhase==='waiting'){transition(a,'approaching',time);a.approachStartedAt=time;if(state.modelRevision>=5){a.feedingPreyId=prey.id;a.feedingEventId=`${state.worldVersion}:${ecology.window}:feeding:${a.id}:${prey.id}:${time.toFixed(9)}`;}}
  if(isCrab)pose(a,crabContactPose(a,target.y),dt);
  const bodyTarget=targetFor(a,profile,prey),remaining=walk(a,bodyTarget,isCrab?COASTAL_SPEED_LIMITS.crab:COASTAL_SPEED_LIMITS.birdWalk,dt);
  if(a.behaviorPhase==='approaching'){
@@ -61,13 +61,13 @@ function oneStep(state,a,dt,time,waterAt,emit){
   const contact=isCrab?clawPoint(a):billPoint(a),gap=distance(contact,target),bodyDepth=waterAt(time).waterLevel-terrainHeight(a.x,a.z);
   if(time-a.phaseStartedAt<profile.handling||gap>=contactTolerance(prey)||bodyDepth<profile.depth[0]-.02||bodyDepth>profile.depth[1]+.02)return;
   const interaction=profile.resource==='shared-mussels'?'shell-competition':'shore-feeding';
-  emit(state,interaction,[a.id,prey.id],profile.resource,-1,interaction==='shore-feeding'?'consumed':'prey-removed',{startedAt:a.approachStartedAt,endedAt:time,contactAt:a.contactAt,handlingStartedAt:a.phaseStartedAt,preyLength:prey.size,accessible:true,technique:profile.technique,waterDepth:bodyDepth,preyWaterDepth:preyDepth,contactPoint:contact,preyPoint:target,preyPosition:point(prey),bodyPosition:point(a),bodyHeading:a.heading,bodyPose:{...a.pose},shellOpening:prey.shellOpening||0,contactDistance:gap,sequence:['approach',isCrab?'claw-contact':'bill-contact','handling','prey-acquired'],modelRevision:state.modelRevision??1});
-  prey.alive=false;prey.emptyShell=prey.taxon==='mytilus_edulis';a.carriedPreyId=prey.id;a.lastFeeding={preyId:prey.id,consumedAt:time,contactAt:a.contactAt};transition(a,'swallowing',time);
+  const event=emit(state,interaction,[a.id,prey.id],profile.resource,-1,interaction==='shore-feeding'?'consumed':'prey-removed',{...(state.modelRevision>=5?{id:a.feedingEventId}:{}),startedAt:a.approachStartedAt,endedAt:time,contactAt:a.contactAt,handlingStartedAt:a.phaseStartedAt,preyLength:prey.size,accessible:true,technique:profile.technique,waterDepth:bodyDepth,preyWaterDepth:preyDepth,contactPoint:contact,preyPoint:target,preyPosition:point(prey),bodyPosition:point(a),bodyHeading:a.heading,bodyPose:{...a.pose},shellOpening:prey.shellOpening||0,contactDistance:gap,sequence:['approach',isCrab?'claw-contact':'bill-contact','handling','prey-acquired'],modelRevision:state.modelRevision??1});
+  prey.alive=false;prey.emptyShell=prey.taxon==='mytilus_edulis';a.carriedPreyId=prey.id;a.lastFeeding={preyId:prey.id,consumedAt:time,contactAt:a.contactAt,...(state.modelRevision>=5?{eventId:event.id}:{})};transition(a,'swallowing',time);
  }
 }
 export function stepCoastal(state,dt,waterAt,emit){
  // Substeps resolve contact/handling at coarse caller timesteps as well as 60 Hz.
  const actors=state.ecology.actors.filter(a=>COASTAL_PROFILES[a.taxon]||a.taxon==='carcinus_maenas'),start=state.time-dt;let elapsed=0;
  while(elapsed<dt-1e-10){const h=Math.min(.025,dt-elapsed);elapsed+=h;
-  for(const a of actors)oneStep(state,a,h,start+elapsed,waterAt,emit);for(const a of actors)if(a.carriedPreyId){const prey=state.ecology.actors.find(p=>p.id===a.carriedPreyId);prey.carriedBy=a.id;if(!prey.emptyShell)Object.assign(prey,billPoint(a));}}
+  for(const a of actors)oneStep(state,a,h,start+elapsed,waterAt,emit);for(const a of actors)if(a.carriedPreyId){const prey=state.ecology.actors.find(p=>p.id===a.carriedPreyId);prey.carriedBy=a.id;if(!prey.emptyShell)Object.assign(prey,a.taxon==='carcinus_maenas'?clawPoint(a):carriedPreyPoint(a,start+elapsed,state.modelRevision));}}
 }

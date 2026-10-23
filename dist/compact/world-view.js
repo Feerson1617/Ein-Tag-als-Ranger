@@ -9,7 +9,7 @@ import { createVillageView } from './village-view.js';
 import { forestHabitatAt } from './habitats.js';
 export async function createWorldView(scene,state){
  const loader=new THREE.TextureLoader();const [terrainTexture,skyTexture,woodTexture]=await Promise.all([MANIFEST.assets.terrain,MANIFEST.assets.sky,MANIFEST.assets.wood].map(url=>loader.loadAsync(url)));for(const t of [terrainTexture,skyTexture,woodTexture])t.colorSpace=THREE.SRGBColorSpace;terrainTexture.anisotropy=4;woodTexture.anisotropy=4;woodTexture.wrapS=woodTexture.wrapT=THREE.RepeatWrapping;skyTexture.mapping=THREE.EquirectangularReflectionMapping;scene.background=skyTexture;scene.backgroundIntensity=.8;
- const structured=state.modelRevision>=4;
+ const structured=state.modelRevision>=4,refined=state.modelRevision>=5;
  const random=randomGenerator(state.initialSeed+10),sphere=new THREE.SphereGeometry(1,10,6),box=new THREE.BoxGeometry(1,1,1),bark=new GeometryBatch(),architecture=new GeometryBatch();
  // Opaque vertex-coloured terrain avoids transparent full-ground grass cards.
  const ground=new THREE.PlaneGeometry(220,150,220,150);ground.rotateX(-Math.PI/2);const p=ground.attributes.position,colors=[];
@@ -38,15 +38,20 @@ export async function createWorldView(scene,state){
    if(index<3){
     stick(bark,[t.x,y,t.z],[t.x+.12,y+t.h*.72,t.z],t.r,trunkColor,t.r*.45);
     for(let k=0;k<7;k++){const a=k*2.399,h=t.h*(.42+(k%3)*.12),len=1.7+(k%4)*.48;stick(bark,[t.x,y+h,t.z],[t.x+Math.cos(a)*len,y+h+1.5,t.z+Math.sin(a)*len],t.r*.31,'#777768',.025);}
+   }else if(refined){
+    // Roots and the full human-height collision cylinder remain fixed. Above
+    // it, each existing stem changes direction towards its own uneven crown.
+    const dx=Math.cos(phase)*bend*2.6,dz=Math.sin(phase)*bend*2.6,base=[t.x,y+Math.min(2.3,fork*.65),t.z],elbow=[t.x+dx*.4,y+fork,t.z+dz*.6],top=[t.x+dx,y+t.h*.86,t.z+dz];
+    stick(bark,[t.x,y,t.z],base,t.r,trunkColor,t.r*.84);stick(bark,base,elbow,t.r*.84,trunkColor,t.r*.59);stick(bark,elbow,top,t.r*.59,trunkColor,.035);
    }else{
     stick(bark,[t.x,y,t.z],[t.x+bend,y+fork,t.z],t.r,trunkColor,t.r*.68);
     stick(bark,[t.x+bend,y+fork,t.z],[t.x+bend*.5,y+t.h*.86,t.z+.3],t.r*.68,trunkColor,.055);
    }
    const branches=young?4:5;
    for(let k=0;k<branches;k++){
-    const a=phase+k*2.399,h=t.h*(young?.47+(k%3)*.14:.59+(k%3)*.10),reach=cr*(young?.34:.62+(k%2)*.12),end=[t.x+Math.cos(a)*reach,y+h,t.z+Math.sin(a)*reach];
+    const a=phase+k*2.399,h=t.h*(refined?(young?.31+k*.16:.46+k*.09+.09*Math.sin(phase+k*1.7)):(young?.47+(k%3)*.14:.59+(k%3)*.10)),reach=cr*(refined?(young?.27+.08*k:.40+.20*Math.sin(phase+k)**2):(young?.34:.62+(k%2)*.12)),end=[t.x+Math.cos(a)*reach,y+h,t.z+Math.sin(a)*reach];
     if(index>=3){const join=[t.x+bend,y+fork*(.85+(k%2)*.15),t.z],elbow=[t.x+Math.cos(a)*reach*.54,y+h-.4,t.z+Math.sin(a)*reach*.54];stick(bark,join,elbow,t.r*(old?.44:.32),trunkColor,.05);stick(bark,elbow,end,.05,trunkColor,.016);}
-    const scale=young?[cr*.57*aspect[0],cr*.83*aspect[1],cr*.58*aspect[2]]:[cr*(.58+(k%2)*.07)*aspect[0],cr*(.31+(k%3)*.055)*aspect[1],cr*.62*aspect[2]];
+    const scale=refined?[cr*(young?.54:.49+.15*Math.sin(phase+k)**2)*aspect[0],cr*(young?.75:.57+.15*Math.cos(phase+k)**2),cr*(young?.52:.50+.16*Math.cos(phase-k)**2)*aspect[2]]:young?[cr*.57*aspect[0],cr*.83*aspect[1],cr*.58*aspect[2]]:[cr*(.58+(k%2)*.07)*aspect[0],cr*(.31+(k%3)*.055)*aspect[1],cr*.62*aspect[2]];
     crowns.add(forms[k%3],oak?(k%2?'#5a7042':'#6e7e4a'):(k%2?'#677d4b':'#7b8c57'),end,scale,[.06*(k-2),a,.1*(k%2)]);
     for(let j=0;j<24;j++){const theta=random()*Math.PI*2,r=Math.sqrt(random())*cr*.57;leaves.push({x:end[0]+Math.cos(theta)*r,y:end[1]+(random()-.5)*cr*.7,z:end[2]+Math.sin(theta)*r,a:random()*Math.PI*2,s:.14+random()*.12,oak});}
    }
@@ -61,7 +66,9 @@ export async function createWorldView(scene,state){
  const background=new GeometryBatch(),crown=new THREE.IcosahedronGeometry(1,1);
  const backdrop=[];for(let row=0;row<3;row++)for(let i=0;i<31;i++)backdrop.push({x:-83-row*7-random()*2,z:-53+i*3.6+(random()-.5)*2});
  for(const side of [-1,1])for(let i=0;i<20;i++)backdrop.push({x:-106+i*4.1,z:side*(53+random()*7)});
- for(const t of backdrop){const y=terrainHeight(t.x,t.z),h=7+random()*8;stick(background,[t.x,y,t.z],[t.x,y+h*.7,t.z],structured?.18+random()*.26:.19,'#777568',.08);if(structured&&random()<.44){const understoryHeight=1.1+random()*2.4;background.add(crown,'#5b6c48',[t.x+(random()-.5)*1.5,y+understoryHeight*.48,t.z],[1.4+random()*1.6,understoryHeight*.55,1.6+random()*.9]);}for(let k=0;k<4;k++)background.add(crown,k%2?'#526347':'#65734f',[t.x+(random()-.5)*2,y+h-1.5+random()*2,t.z+(random()-.5)*2],[1.6+random()*(structured?2.3:1),structured?1.4+random()*1.2:2+random()*1.8,1.5+random()*(structured?2.3:1)]);}
+ for(const t of backdrop){const y=terrainHeight(t.x,t.z),h=7+random()*8;stick(background,[t.x,y,t.z],[t.x,y+h*.7,t.z],structured?.18+random()*.26:.19,'#777568',.08);if(structured&&random()<.44){const understoryHeight=1.1+random()*2.4;const sx=t.x+(random()-.5)*1.5,rx=1.4+random()*1.6,rz=1.6+random()*.9;
+ if(refined){for(let k=0;k<3;k++){const a=k*2.399+sx*.31,spread=rx*.4,ex=sx+Math.cos(a)*spread,ez=t.z+Math.sin(a)*spread,ey=y+understoryHeight*(.33+k*.17);stick(background,[sx,y,t.z],[ex,ey,ez],.035,'#756f56',.008);background.add(crown,k%2?'#667747':'#54683f',[ex,ey,ez],[rx*(.5+k*.07),understoryHeight*(.38+k*.05),rz*.55],[.13*k,a,.1]);}}
+ else background.add(crown,'#5b6c48',[sx,y+understoryHeight*.48,t.z],[rx,understoryHeight*.55,rz]);}for(let k=0;k<4;k++)background.add(crown,k%2?'#526347':'#65734f',[t.x+(random()-.5)*2,y+h-1.5+random()*2,t.z+(random()-.5)*2],[1.6+random()*(structured?2.3:1),structured?1.4+random()*1.2:2+random()*1.8,1.5+random()*(structured?2.3:1)]);}
  const scenic=background.mesh();scenic.castShadow=false;scene.add(scenic);
  // Broad crown masses use small opaque leaf clusters, detail leaves retain shape.
  const dummy=new THREE.Object3D();

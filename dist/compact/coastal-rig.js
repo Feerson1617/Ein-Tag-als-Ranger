@@ -12,6 +12,19 @@ export function billPoint(a){
  const r=coastalRig(a.taxon),p=a.pose||{pitch:0,yaw:0,crouch:0},nx=r.head[0]-r.pivot[0],ny=r.head[1]-r.pivot[1],bx=r.bill[0]-r.head[0],by=r.bill[1]-r.head[1],beta=p.billPitch||0,rotX=nx*Math.cos(p.pitch)-ny*Math.sin(p.pitch)+bx*Math.cos(beta)-by*Math.sin(beta),rotY=nx*Math.sin(p.pitch)+ny*Math.cos(p.pitch)+bx*Math.sin(beta)+by*Math.cos(beta),lx=(r.pivot[0]+rotX*Math.cos(p.yaw))*r.scale,lz=-rotX*Math.sin(p.yaw)*r.scale;
  return {x:a.x+Math.cos(a.heading)*lx-Math.sin(a.heading)*lz,y:a.y+(r.pivot[1]-(p.crouch||0)+rotY)*r.scale,z:a.z+Math.sin(a.heading)*lx+Math.cos(a.heading)*lz};
 }
+// Actual prey moves from bill tip to mouth during the existing swallowing
+// phase. A teaching trajectory, not an anatomical oesophagus reconstruction.
+// Earlier revisions retain their original tip-only representation.
+export function carriedPreyPoint(a,time,revision=5){
+ const tip=billPoint(a);if(revision<5||a.behaviorPhase!=='swallowing')return tip;
+ const r=coastalRig(a.taxon);if(!r)return tip;
+ const p=a.pose,nx=r.head[0]-r.pivot[0],ny=r.head[1]-r.pivot[1],pitch=p.pitch||0,yaw=p.yaw||0;
+ const neckX=nx*Math.cos(pitch)-ny*Math.sin(pitch),neckY=nx*Math.sin(pitch)+ny*Math.cos(pitch);
+ const x=(r.pivot[0]+neckX*Math.cos(yaw))*r.scale,z=-neckX*Math.sin(yaw)*r.scale;
+ const mouth={x:a.x+Math.cos(a.heading)*x-Math.sin(a.heading)*z,y:a.y+(r.pivot[1]-(p.crouch||0)+neckY)*r.scale,z:a.z+Math.sin(a.heading)*x+Math.cos(a.heading)*z};
+ const t=Math.min(1,Math.max(0,(time-a.phaseStartedAt)/.85));
+ return {x:tip.x+(mouth.x-tip.x)*t,y:tip.y+(mouth.y-tip.y)*t,z:tip.z+(mouth.z-tip.z)*t};
+}
 export function contactPose(a,targetY){
  const r=coastalRig(a.taxon),nx=r.head[0]-r.pivot[0],ny=r.head[1]-r.pivot[1],bx=r.bill[0]-r.head[0],by=r.bill[1]-r.head[1],beta=r.billPitch,billY=bx*Math.sin(beta)+by*Math.cos(beta),wanted=(targetY-a.y)/r.scale-(r.pivot[1]-r.crouch)-billY,headFloor=.21-(r.pivot[1]-r.crouch),neckY=Math.max(headFloor,wanted),pitch=Math.asin(Math.max(-1,Math.min(1,neckY/Math.hypot(nx,ny))))-Math.atan2(ny,nx);
  return {pitch,yaw:0,crouch:r.crouch,billPitch:beta};
