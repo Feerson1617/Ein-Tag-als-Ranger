@@ -1,7 +1,7 @@
 import { DETERMINATION_CHOICES,OBSERVABLE_FEATURES } from './determination.js';
 import { KEY_OPTIONS } from './catalog.js';
 import { FOOD_EDGES } from './learning-models.js';
-import { eventReference,selectedEventRows } from './evidence.js';
+import { eventReference,eventReferenceCandidates } from './evidence.js';
 
 const object=v=>v!==null&&typeof v==='object'&&!Array.isArray(v);
 const features=['spatulate-tip',...OBSERVABLE_FEATURES,...new Set(Object.values(KEY_OPTIONS).flatMap(k=>[...k.correct,...k.wrong]))];
@@ -34,7 +34,7 @@ export function validateTaskCollection(collection,learning,records){
   if(a.evidenceIds!==undefined){list(a.evidenceIds,mission+'.evidenceIds');for(const id of a.evidenceIds)reference(id,records,mission+'.evidenceIds');}
   if(a.eventIds!==undefined){
    list(a.eventIds,mission+'.eventIds');const selected=new Set();
-   for(const id of a.eventIds){const rows=selectedEventRows(records,[id]);if(!rows.length)throw Error('Aufgabenbezug fehlt: '+mission+'.eventIds.');for(const {record,event}of rows){const key=eventReference(record,event);if(selected.has(key))throw Error('Doppelter Vorgangsbezug: '+mission+'.eventIds.');selected.add(key);}}
+   for(const id of a.eventIds){const rows=eventReferenceCandidates(records,[id]);if(!rows.length)throw Error('Aufgabenbezug fehlt: '+mission+'.eventIds.');for(const {record,event}of rows){const key=eventReference(record,event);if(selected.has(key))throw Error('Doppelter Vorgangsbezug: '+mission+'.eventIds.');selected.add(key);}}
   }
   if(a.determinations!==undefined){
    if(!Array.isArray(a.determinations))throw Error('Ungültige Bestimmungsantwort.');

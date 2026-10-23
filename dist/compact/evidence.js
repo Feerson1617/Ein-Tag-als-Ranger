@@ -8,10 +8,22 @@ function qualifiedEventReference(value){
  if(typeof value!=='string'||!value.startsWith('["record-event-v1",'))return false;
  try{const parts=JSON.parse(value);return Array.isArray(parts)&&parts.length===3&&parts[0]==='record-event-v1'&&parts.slice(1).every(x=>typeof x==='string'&&x.length>0)&&JSON.stringify(parts)===value;}catch{return false;}
 }
-export function selectedEventRows(records,references=[]){
+export function eventReferenceCandidates(records,references=[]){
  const qualified=new Set(),legacy=new Set();
  for(const reference of references)(qualifiedEventReference(reference)?qualified:legacy).add(reference);
  return records.flatMap(record=>(record.events||[]).filter(event=>qualified.has(eventReference(record,event))||legacy.has(event.id)).map(event=>({record,event})));
+}
+// Old answers identify an event, not its containing record. Multiple saved
+// copies of that event within one run remain equivalent; another run is a
+// different event even when its local counter and interaction happen to match.
+export function ambiguousEventReferences(records,references=[]){
+ const legacy=new Set(references.filter(reference=>!qualifiedEventReference(reference))),runs=new Map();
+ for(const record of records)for(const event of record.events||[])if(legacy.has(event.id)){const scopes=runs.get(event.id)||new Set();scopes.add(record.runId);runs.set(event.id,scopes);}
+ return [...legacy].filter(reference=>(runs.get(reference)?.size||0)>1);
+}
+export function selectedEventRows(records,references=[]){
+ const ambiguous=new Set(ambiguousEventReferences(records,references));
+ return eventReferenceCandidates(records,references.filter(reference=>!ambiguous.has(reference)));
 }
 export function identityInventory(seed,modelRevision=1){const cacheKey=seed+':'+modelRevision;if(inventories.has(cacheKey))return inventories.get(cacheKey);const state=createReferenceState(seed,modelRevision);createEcology(state);const rows=[...state.plants,...state.trees.map(t=>({...t,taxon:t.type==='beech'?'fagus_sylvatica':'quercus_robur'})),state.deer,state.bird,...state.ecology.actors],result={individuals:new Map(rows.map(r=>[r.id,r])),resources:state.ecology.resources,cloverIds:state.ecology.cloverIds,nettleId:state.ecology.nettleId};if(inventories.size>=16)inventories.delete(inventories.keys().next().value);inventories.set(cacheKey,result);return result;}
 export function eventIssue(record,event){

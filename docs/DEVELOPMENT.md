@@ -78,8 +78,29 @@ python3 tools/build-compact.py
 python3 tools/browser-compact-arrival.py
 python3 tools/print-compact-materials.py --contact-sheets --audit-dir work/qa-correction/final-print
 python3 tools/check-compact-corrections.py
-python3 tools/collect-compact-endqa.py
 ```
+
+Der Standard-Ankunftslauf behält seine operative Wandzeitgrenze von 900 Sekunden
+je Wegabschnitt. Dieser Lauf scheiterte in der Cloudsoftwaregrafik nach 904,64
+Sekunden; der Fehler bleibt als eigener Befund erhalten. Die gesonderte funktionale
+Nachprüfung wird ausdrücklich mit einem anderen Namen und Budget gestartet:
+
+```sh
+python3 tools/check-compact-corrections.py --supplemental-arrival-wall-budget 3600
+```
+
+Dabei heißen Prüfung und Belegordner `supplemental-arrival-3600`; die separate
+Prozessgrenze beträgt 6000 Sekunden. Ein Erfolg ist weder ein bestandener
+900-Sekunden-Lauf noch ein Geschwindigkeits- oder Gerätebeleg. Gehbewegung,
+Sichtbarkeit, aktive Beobachtung, Phasen, Kontakt, Ressourcenabgang und Herkunft
+werden unverändert geprüft. Im Echtzeitmodus wartet der Treiber zwischen seinen
+Stichproben auf tatsächlichen Modellfortschritt.
+
+`collect-compact-endqa.py` versiegelt genau diese Korrekturrunde. Er benötigt den
+vollständigen frischen Plan, aktuelle Sicht-/Druckreviews und das getrennte Archiv
+`work/qa-2026-10-23/historical-plan/` des ersten 78e723b-Laufs. Alte und neue
+Runtimehashes werden getrennt validiert. Vergleichbare Wiederholungen dürfen nur
+bei identischen Befehlen und Budgets den jeweils letzten Prüfstand ergänzen.
 
 Der Ankunftstest geht den vollständigen Hauptweg per Tastatur/Maus ab. Er startet
 neue endliche Beobachtungsfenster ausschließlich über die sichtbare Oberfläche.

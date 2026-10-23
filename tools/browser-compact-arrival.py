@@ -11,10 +11,11 @@ from module_graph import ModuleGraph
 from compact_runtime import audit_standalone
 import argparse,json,shutil,hashlib,subprocess,time,traceback,math,base64
 
-p=argparse.ArgumentParser();p.add_argument('--site',default='outputs');p.add_argument('--entry',default='Ranger-Kompakt.html');p.add_argument('--output',default='work/qa-2026-10-23/arrival-browser');a=p.parse_args()
+p=argparse.ArgumentParser();p.add_argument('--site',default='outputs');p.add_argument('--entry',default='Ranger-Kompakt.html');p.add_argument('--output',default='work/qa-2026-10-23/arrival-browser');p.add_argument('--walk-wall-budget',type=int,default=900,help='Explicit operational wall-clock budget per walked segment; the default 900-second run and any longer supplemental run must be reported separately.');a=p.parse_args()
+if a.walk_wall_budget<=0:p.error('--walk-wall-budget must be positive')
 root=Path(__file__).resolve().parents[1];out=root/a.output;out.mkdir(parents=True,exist_ok=True)
 audit=audit_standalone(root,root/a.site/a.entry);graph=ModuleGraph(root/'dist','compact/main.js')
-result={'passed':False,'sourceCommit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=root,text=True).strip(),'sourceDirty':bool(subprocess.check_output(['git','status','--porcelain'],cwd=root,text=True).strip()),'htmlSHA256':audit['htmlSHA256'],'runtimeSourceHashes':{n:hashlib.sha256((root/'dist'/n).read_bytes()).hexdigest()for n in sorted(set(graph.modules)|graph.assets|{'kompakt.html','compact/style.css','icon.svg'})},'scope':'Fresh standalone HTML; full authored path walked using ordinary W/mouse input; no reference-camera visits, position/clock/resource/evidence writes. Explicit UI new contexts at the reached coast, finite resource acquisition, model steps separate from real-time sighting. Cloud software graphics, no iPad/Safari certification.','errors':[],'walk':[],'sequences':[]}
+result={'passed':False,'sourceCommit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=root,text=True).strip(),'sourceDirty':bool(subprocess.check_output(['git','status','--porcelain'],cwd=root,text=True).strip()),'htmlSHA256':audit['htmlSHA256'],'runtimeSourceHashes':{n:hashlib.sha256((root/'dist'/n).read_bytes()).hexdigest()for n in sorted(set(graph.modules)|graph.assets|{'kompakt.html','compact/style.css','icon.svg'})},'scope':'Fresh standalone HTML; full authored path walked using ordinary W/mouse input; no reference-camera visits, position/clock/resource/evidence writes. Explicit UI new contexts at the reached coast, finite resource acquisition, model steps separate from real-time sighting. Cloud software graphics, no iPad/Safari certification.','errors':[],'walk':[],'sequences':[],'walkWallBudgetSeconds':a.walk_wall_budget,'walkBudgetScope':'Default 900-second operational traversal guard. A larger explicitly requested budget is a supplemental functional walk, not a passed 900-second run or evidence of improved performance.'}
 layout=json.loads(subprocess.check_output(['node','--input-type=module','-e',"import{ROUTE,OUTLOOK,routeMetrics}from'./dist/compact/layout.js';console.log(JSON.stringify({route:ROUTE,outlook:OUTLOOK,metrics:routeMetrics()}));"],cwd=root,text=True))
 inventory=json.loads(subprocess.check_output(['node','--input-type=module','-e',"import{identityInventory}from'./dist/compact/evidence.js';import{MANIFEST,MODEL_REVISION}from'./dist/compact/manifest.js';console.log(JSON.stringify([...identityInventory(MANIFEST.initialSeed,MODEL_REVISION).individuals.values()].map(p=>({id:p.id,x:p.x,z:p.z}))));"],cwd=root,text=True));prey={p['id']:p for p in inventory}
 resources=['small-juveniles','small-worms','shrimp','shared-mussels']
@@ -41,7 +42,7 @@ def walk(page,path,name):
    s=sample(page);o=s['observer'];moved=math.hypot(o['x']-last['x'],o['z']-last['z']);travel+=moved;last=o
    if math.hypot(o['x']-motion_anchor['x'],o['z']-motion_anchor['z'])>.025:last_motion=time.monotonic();motion_anchor=o
    assert time.monotonic()-last_motion<12,('Ordinary walk is blocked',name,i,o)
-   assert time.monotonic()-started<900,('Full path did not finish',name,i,o)
+   assert time.monotonic()-started<a.walk_wall_budget,('Full path did not finish within the explicitly recorded operational wall budget',a.walk_wall_budget,name,i,o)
    # Advance by proximity along the authored centreline, never by setting position.
    nearby=range(i,min(len(path),i+30));i=min(nearby,key=lambda j:math.hypot(path[j]['x']-o['x'],path[j]['z']-o['z']))
    if i>=len(path)-4 and math.hypot(path[-1]['x']-o['x'],path[-1]['z']-o['z'])<.5:break
@@ -89,7 +90,9 @@ def sequence(page,row):
   assert s['mode']==row['id']and s['realtime']==row['realtime']
   if not row['realtime']:assert s['ownSeconds']==0
   row['samples'].append({'wallSeconds':time.monotonic()-started,'modelTime':s['time'],'phase':phase,'ownSeconds':s['ownSeconds'],'focus':s['focus']})
-  if row['realtime']:page.wait_for_timeout(80)
+  if row['realtime']:
+   # Count model-progress samples, not repeated reads of a software-rendered frame.
+   page.wait_for_timeout(80);page.wait_for_function('(previous)=>Number(document.querySelector("#world").dataset.simulationTime)>previous',arg=s['time'])
   else:
    target=prey.get(actor.get('targetId'));near=target and phase=='approaching'and math.hypot(target['x']-actor['x'],target['z']-actor['z'])<1.05
    tick(page,.025 if near else .1 if 'departing'in seen else 1 if phase=='waiting' else .25)

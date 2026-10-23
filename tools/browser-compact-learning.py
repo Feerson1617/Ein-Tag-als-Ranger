@@ -70,6 +70,20 @@ def inspect(page,taxon,record=True,stage=None,capture=False):
   page.locator('#note').fill('Eigene Modellbeobachtung: erkennbare Merkmale notiert; natürliche Feinbestimmung bleibt begrenzt.');page.locator('#save-note').click();assert not page.locator('#panel').evaluate('(p)=>p.open');assert data(page)['records'][-1]['individualId']==individual
  else:close(page)
  return individual
+def gallery_local_window(page,location):
+ # The gallery inventories nearby active models. A moving bird can briefly
+ # leave a study radius; use the public local window before the coastal list.
+ # This is a new labelled context, not continuity with earlier gallery images.
+ before=page.locator('#world').evaluate('c=>({runId:c.dataset.runId,time:Number(c.dataset.simulationTime),observer:JSON.parse(c.dataset.observer)})')
+ stored=page.evaluate("localStorage.getItem('ranger-compact-fieldbook-v2')")
+ click_inspection_button(page,page.locator('#new-observation-context'))
+ page.wait_for_function('(old)=>{const d=document.querySelector("#world").dataset;return d.runId!==old&&Number(d.simulationTime)===0&&d.renderRevision===d.sceneRevision}',arg=before['runId'])
+ after=page.locator('#world').evaluate('c=>({runId:c.dataset.runId,time:Number(c.dataset.simulationTime),observer:JSON.parse(c.dataset.observer),origin:JSON.parse(c.dataset.sceneOrigin)})')
+ assert after['observer']==before['observer'],'Gallery context must preserve the actual visitor position and view'
+ assert after['origin']['previousRunId']==before['runId']and abs(after['origin']['previousSimulationTime']-before['time'])<.002
+ assert after['origin']['siteId']==location and after['origin']['startSimulationTime']==0
+ assert page.evaluate("localStorage.getItem('ranger-compact-fieldbook-v2')")==stored,'Opening a gallery context must not add evidence or change saved work'
+ result.setdefault('galleryObservationContexts',[]).append({'location':location,'before':before,'after':after,'source':'Explicit local observation window through the public study button; no injected state.'});save()
 with sync_playwright()as pw:
  options={'headless':True}
  if shutil.which('chromium'):options.update(executable_path=shutil.which('chromium'),args=['--no-sandbox','--use-angle=swiftshader','--enable-unsafe-swiftshader'])
@@ -150,7 +164,9 @@ with sync_playwright()as pw:
    close(page);page.locator('#menu-button').click();page.locator('#season-window').select_option('autumn');page.locator('#close').click();view(page,'oak');inspect(page,'garrulus_glandarius',record=False,capture=True);seen.add(('garrulus_glandarius',''))
    visits=[('summer','woodruff'),('summer','nettle'),('summer','flowers'),('summer','wood'),('summer','oak'),('summer','upper-marsh'),('summer','lower-marsh'),('summer','salt-shrub'),('summer','salt-segments'),('summer','salt-grass'),('summer','coast'),('summer','outlook'),('dusk','dusk'),('autumn','oak')]
    for window,location in visits:
-    close(page);page.locator('#menu-button').click();page.locator('#season-window').select_option(window);page.locator('#close').click();view(page,location);page.locator('#study').click();buttons=page.locator('[data-inspect]').evaluate_all('(bs)=>bs.map(b=>({taxon:b.dataset.taxon,stage:b.dataset.stage}))');close(page)
+    close(page);page.locator('#menu-button').click();page.locator('#season-window').select_option(window);page.locator('#close').click();view(page,location);page.locator('#study').click()
+    if location in ['coast','outlook']:gallery_local_window(page,location)
+    buttons=page.locator('[data-inspect]').evaluate_all('(bs)=>bs.map(b=>({taxon:b.dataset.taxon,stage:b.dataset.stage}))');close(page)
     for b in buttons:
      key=(b['taxon'],b['stage']if b['taxon']=='aglais_io'else'');
      if key in seen:continue
