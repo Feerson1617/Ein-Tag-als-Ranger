@@ -73,14 +73,19 @@ for name in filter(None, tracked):
 # Use this checkout or the separately updated Feldbuch-Projekt.zip to rerun GPU
 # tests. The handoff intentionally avoids duplicating all historical media.
 (out / 'Reproduktion/README.md').write_text(
-    '# Reproduktion\n\nQuellstand: `' + freeze['sourceCommit'] + '`. Die beigelegten Treiber und '
-    'Originalfixtures behalten ihre Repo-Pfade. In einem Checkout dieses Commits '
-    'oder dem gleich zugeordneten Feldbuch-Projekt.zip die relative Struktur erhalten. '
+    '# Reproduktion\n\nGeprüfter Produktstand: `' + freeze['sourceCommit'] + '`. '
+    'Die beigelegten QA-Treiber enthalten die anschließend geprüften Korrekturen '
+    'für den echten Quelleinstieg und pausierte WebGL-Aufnahmen; die Runtime ist bytegleich. '
+    'Die genaue Build-/QA-Provenienz und Startbefehle stehen in '
+    '[START-REPRODUKTION.md](START-REPRODUKTION.md). '
+    'Treiber und Originalfixtures behalten ihre Repo-Pfade. Im zugeordneten '
+    'Git-Checkout oder Feldbuch-Projekt.zip die relative Struktur erhalten. '
     'Node, Python mit Playwright/Pillow, Chromium und Poppler bereitstellen; '
     '`python tools/check-compact-v1.py --output work/neuer-v1-lauf` ausführen. '
     'Keine Entwickler-Homepfade notwendig; PLAYWRIGHT_BROWSERS_PATH nur bei Bedarf '
     'auf die lokale Installation setzen. GPU-Prozesse seriell ausführen. '
-    'Der ursprüngliche 900-s-Diagnosefehler wird weiterhin als Fehler gemeldet.\n')
+    'Der ursprüngliche 900-s-Treiber wird unverändert ausgeführt; ein neuer Fehler '
+    'wird weiterhin als Fehler gemeldet. Historische Ergebnisse bleiben erhalten.\n')
 metadata = {'candidate': candidate, 'status': review['status'], 'sourceCommit': freeze['sourceCommit'],
             'runtimeTreeSHA256': hashlib.sha256(json.dumps(freeze['runtimeSourceHashes'], sort_keys=True, separators=(',', ':')).encode()).hexdigest(),
             'htmlSHA256': freeze['htmlSHA256'], 'softwareGatesPassed': r['softwareGatesPassed'],
