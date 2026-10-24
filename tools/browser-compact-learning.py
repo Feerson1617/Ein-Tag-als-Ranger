@@ -13,10 +13,18 @@ from compact_runtime import audit_standalone
 import argparse,base64,hashlib,json,shutil,subprocess,sys,time,traceback
 p=argparse.ArgumentParser();p.add_argument('--site',default='outputs/Ranger-Kompakt');p.add_argument('--entry',default='index.html');p.add_argument('--gallery',action='store_true');p.add_argument('--output',default='work/compact-learning');a=p.parse_args()
 root=Path(__file__).resolve().parents[1];out=root/a.output;out.mkdir(parents=True,exist_ok=True);site=root/a.site
-if a.entry=='index.html':subprocess.run([sys.executable,str(root/'tools/verify-compact.py'),'--web',str(site)],cwd=root,check=True,stdout=subprocess.PIPE)
+source_entry=a.entry=='kompakt.html' and site.resolve()==(root/'dist').resolve();source_audit=None
+if source_entry:
+ # Maintained ES-module entry: inline standalone extraction is inapplicable.
+ # Audit the actual local entry/closure instead, before unchanged native UI tests.
+ source_text=(site/a.entry).read_text();assert '<script type="module" src="compact/main.js"></script>' in source_text;assert 'href="compact/style.css"' in source_text
+ source_graph=ModuleGraph(root/'dist','compact/main.js');source_names=set(source_graph.modules)|source_graph.assets|{'kompakt.html','compact/style.css','icon.svg'}
+ assert all((root/'dist'/name).is_file()for name in source_names)
+ source_audit={'entry':'dist/kompakt.html','modules':len(source_graph.modules),'assets':len(source_graph.assets),'runtimeFiles':len(source_names),'scope':'Actual maintained source ES-module closure; no inline packaged/standalone claim.'}
+elif a.entry=='index.html':subprocess.run([sys.executable,str(root/'tools/verify-compact.py'),'--web',str(site)],cwd=root,check=True,stdout=subprocess.PIPE)
 else:
  audit_standalone(root,site/a.entry);subprocess.run([sys.executable,str(root/'tools/verify-compact.py')],cwd=root,check=True,stdout=subprocess.PIPE)
-g=ModuleGraph(root/'dist','compact/main.js');result={'entry':a.entry,'htmlSHA256':hashlib.sha256((site/a.entry).read_bytes()).hexdigest(),'sourceCommit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=root,text=True).strip(),'sourceDirty':bool(subprocess.check_output(['git','status','--porcelain'],cwd=root,text=True).strip()),'runtimeSourceHashes':{name:hashlib.sha256((root/'dist'/name).read_bytes()).hexdigest()for name in sorted(set(g.modules)|g.assets|{'compact/style.css','kompakt.html','icon.svg'})},'startedAt':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime()),'checks':[],'errors':[],'captures':[],'hardwareScope':'Cloud Chromium, software graphics; no actual Safari/iPad/Mac or classroom pilot'}
+g=ModuleGraph(root/'dist','compact/main.js');result={'entry':a.entry,'site':a.site,'entryKind':'maintained-source'if source_entry else'web-packet'if a.entry=='index.html'else'standalone','sourceClosureAudit':source_audit,'htmlSHA256':hashlib.sha256((site/a.entry).read_bytes()).hexdigest(),'sourceCommit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=root,text=True).strip(),'sourceDirty':bool(subprocess.check_output(['git','status','--porcelain'],cwd=root,text=True).strip()),'runtimeSourceHashes':{name:hashlib.sha256((root/'dist'/name).read_bytes()).hexdigest()for name in sorted(set(g.modules)|g.assets|{'compact/style.css','kompakt.html','icon.svg'})},'startedAt':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime()),'checks':[],'errors':[],'captures':[],'hardwareScope':'Cloud Chromium, software graphics; no actual Safari/iPad/Mac or classroom pilot'}
 class Handler(SimpleHTTPRequestHandler):
  def log_message(self,*args):pass
  def do_GET(self):

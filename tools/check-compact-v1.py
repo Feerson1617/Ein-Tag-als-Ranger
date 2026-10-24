@@ -42,7 +42,7 @@ try:
  commands=[
   ('source',['tools/browser-compact-source.py','--output',str(out/'source')]),
   ('reference',['tools/browser-compact.py','--output',str(out/'reference')]),
-  ('learning-source',['tools/browser-compact-learning.py','--gallery','--output',str(out/'learning-source')]),
+  ('learning-source',['tools/browser-compact-learning.py','--site','dist','--entry','kompakt.html','--gallery','--output',str(out/'learning-source')]),
   ('learning-web',['tools/browser-compact-learning.py','--site','outputs/Ranger-Kompakt','--entry','index.html','--output',str(out/'learning-web')]),
   ('learning-standalone',['tools/browser-compact-learning.py','--site','outputs','--entry','Ranger-Kompakt.html','--output',str(out/'learning-standalone')]),
   ('standalone-smoke',['tools/browser-compact.py','--site','outputs','--entry','Ranger-Kompakt.html','--smoke','--output',str(out/'standalone-smoke')]),
