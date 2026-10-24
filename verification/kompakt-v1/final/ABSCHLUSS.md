@@ -15,9 +15,9 @@ Kandidat: **`ranger-kompakt-v1.0.0-rc.1-e9899efaa314`**. Genau dieser Kandidat w
 | Lernpaket-Buildinfo SHA256 | `584a0ff36352faabc7c726f82b9e81f0a4ed1db2d02b2f7bd19682a2fef6dc6d` |
 | Korrektur des tatsächlichen Quelltests | `bd859abe098a50408f8b950794b012b59b8432dd` |
 | Korrektur pausierter Bildaufnahmen | `a1602a6fee0c37406d7eaded0724ae03f92b6f61` |
-| Abschließend geprüfter QA-/Pakettreiberstand | `39c76226d42e0d34dda130b984c4c58825b84d39` |
+| Stand der letzten Node-/Python-/Paketverifizierungen | `39c76226d42e0d34dda130b984c4c58825b84d39` |
 
-Die Runtimeabbildung umfasst die tatsächlich eingebundenen Module, CSS, Einstieg, Medien und Icon. Ihr Hash entsteht aus der sortierten kompakten JSON-Dateihashabbildung in [runtime-freeze.json](Nachweise/runtime-freeze.json). Nach dem Produktcommit änderten sich ausschließlich QA-Treiber und Abschlussdokumente. Der bytegleiche Produktbaum und die drei gelieferten Artefaktstempel wurden erneut verifiziert; kein nachträgliches Neubauen unter einem Dokumentationscommit. Der spätere reine Liefercommit wird in `LIEFERUNG.json` neben dem fertigen Archiv vermerkt, um eine Selbstreferenz im Commit zu vermeiden.
+Die Runtimeabbildung umfasst die tatsächlich eingebundenen Module, CSS, Einstieg, Medien und Icon. Ihr Hash entsteht aus der sortierten kompakten JSON-Dateihashabbildung in [runtime-freeze.json](Nachweise/runtime-freeze.json). Nach dem Produktcommit änderten sich ausschließlich QA-Treiber und Abschlussdokumente. Der bytegleiche Produktbaum und die drei gelieferten Artefaktstempel wurden erneut verifiziert; kein nachträgliches Neubauen unter einem Dokumentationscommit. Der spätere Liefercommit wird in `LIEFERUNG.json` im fertigen Paket und daneben vermerkt, um eine Selbstreferenz im Commit zu vermeiden. Die abschließende reine Paketkorrektur erhält die vollständige Version im ZIP-Dateinamen; sie ändert keine Runtime und wird durch tatsächliches Packen samt ZIP-/Hashprüfung geprüft.
 
 Eigene Ausführung: 24.10.2026 UTC, Node 24.19.0, Python 3.12.14, Chromium 154.0.8037.57 mit SwiftShader. Das sind Cloudprüfungen, keine benannten unterstützten realen Schulgeräte. Genaue Start-/Abschlusszeiten stehen in den Rohberichten.
 

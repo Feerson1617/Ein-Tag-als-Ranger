@@ -94,7 +94,7 @@ metadata = {'candidate': candidate, 'status': review['status'], 'sourceCommit': 
 (out / 'KANDIDAT.json').write_text(json.dumps(metadata, ensure_ascii=False, indent=2) + '\n')
 manifest = {str(f.relative_to(out)): {'bytes': f.stat().st_size, 'sha256': sha(f)} for f in sorted(out.rglob('*')) if f.is_file()}
 (out / 'SHA256.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + '\n')
-archive = out.with_suffix('.zip')
+archive = out.parent / (out.name + '.zip')
 assert not archive.exists()
 with zipfile.ZipFile(archive, 'w', zipfile.ZIP_DEFLATED, compresslevel=7) as z:
     for file in sorted(out.rglob('*')):
