@@ -9,7 +9,8 @@ from threading import Thread
 from playwright.sync_api import sync_playwright
 from module_graph import ModuleGraph
 from compact_runtime import audit_standalone
-import argparse,json,shutil,hashlib,subprocess,time,traceback,math,base64
+import argparse,json,shutil,hashlib,subprocess,time,traceback,math,base64,io
+from PIL import Image
 
 p=argparse.ArgumentParser();p.add_argument('--detail-realtime',action='store_true',help='Additional 1200x750 didactic-detail scenario: all four first encounters run in real time; default route/budget assertions remain unchanged.');p.add_argument('--site',default='outputs');p.add_argument('--entry',default='Ranger-Kompakt.html');p.add_argument('--output',default='work/qa-2026-10-23/arrival-browser');p.add_argument('--walk-wall-budget',type=int,default=900,help='Explicit operational wall-clock budget per walked segment; the default 900-second run and any longer supplemental run must be reported separately.');p.add_argument('--v1-route',action='store_true',help='Additional native shortcut out/back and precise native-joystick endpoint alignment for V1; original default900s route remains unchanged.');a=p.parse_args()
 if a.walk_wall_budget<=0:p.error('--walk-wall-budget must be positive')
@@ -27,19 +28,28 @@ SAMPLE_SCRIPT='c=>({time:Number(c.dataset.simulationTime),observer:JSON.parse(c.
 def sample(page):return page.locator('#world').evaluate(SAMPLE_SCRIPT)
 def sequence_frame(page,individual,seen,episode):
  # Read the actual pixels and before/after telemetry in one synchronous callback
- # after the application's normal render. A separate full-page screenshot can
- # cross a short phase under software rendering; it is context, not phase proof.
- return page.locator('#world').evaluate('''(c,a)=>new Promise(resolve=>requestAnimationFrame(()=>{
+ # after an actual advancing frame. Paused model-step mode instead reads the
+ # retained compositor with strictly identical before/after model state.
+ s=page.locator('#world').evaluate('''(c,a)=>new Promise(resolve=>requestAnimationFrame(()=>{
   const read=('''+SAMPLE_SCRIPT+'''),before=read(c),actor=before.actors.find(x=>x.id===a.individual);
   const late=actor&&a.detail&&actor.phase==='swallowing'&&!a.seen.includes('mouth-transfer')&&before.events.some(e=>e.actors[0]===actor.id&&e.actors[1]===a.episode&&before.time-e.endedAt>=.7);
   const next=actor&&(!a.seen.includes(actor.phase)&&['approaching','searching','handling','swallowing','departing'].includes(actor.phase));
   const departed=actor&&a.seen.includes('departing')&&(actor.targetId!==a.episode||actor.phase==='waiting');
   if(next||departed||late){
-   const renderRevision=c.dataset.renderRevision,sceneRevision=c.dataset.sceneRevision,png=c.toDataURL('image/png');
+   const renderRevision=c.dataset.renderRevision,sceneRevision=c.dataset.sceneRevision,png=before.realtime?c.toDataURL('image/png'):null;
    before.frameCapture={png,after:read(c),renderRevision,sceneRevision,afterRenderRevision:c.dataset.renderRevision,afterSceneRevision:c.dataset.sceneRevision,method:'Actual canvas pixels and telemetry in one post-render rAF callback; no pause, clock change or reconstructed frame.'};
   }
   resolve(before);
  }))''',{'individual':individual,'seen':sorted(seen),'episode':episode,'detail':a.detail_realtime})
+ if s.get('frameCapture') and not s['realtime']:
+  # With preserveDrawingBuffer=false an idle model-step canvas has discarded
+  # its direct read buffer. Capture the actual retained compositor instead.
+  # Model time is already paused by the PUBLIC model-step mode, not by this test.
+  frame=s['frameCapture'];raw=page.screenshot();after=sample(page)
+  for key in ['time','runId','observer','actors','events','ecology','mode','realtime']:assert after[key]==s[key],('Paused composited capture changed model state',key)
+  revisions=page.locator('#world').evaluate('c=>({render:c.dataset.renderRevision,scene:c.dataset.sceneRevision})')
+  frame.update(png='data:image/png;base64,'+base64.b64encode(raw).decode(),after=after,afterRenderRevision=revisions['render'],afterSceneRevision=revisions['scene'],method='Actual composited browser pixels in public paused model-step mode; exact model state before/after; no state/time injection or reconstructed frame.')
+ return s
 def pointer(page,button):
  button.wait_for(state='visible');assert button.is_enabled();button.evaluate("b=>b.scrollIntoView({block:'center',behavior:'instant'})")
  hit=button.evaluate('b=>{const r=b.getBoundingClientRect(),x=r.left+r.width/2,y=r.top+r.height/2,e=document.elementFromPoint(x,y);return{x,y,hit:e===b||b.contains(e),visible:x>=0&&y>=0&&x<innerWidth&&y<innerHeight}}');assert hit['hit']and hit['visible'],hit;page.mouse.click(hit['x'],hit['y'])
@@ -114,6 +124,7 @@ def start_window(page,id,realtime=False):
 def capture(page,row,s,phase):
  frame=s.pop('frameCapture');assert frame['renderRevision'] is not None and frame['renderRevision']==frame['sceneRevision']==frame['afterRenderRevision']==frame['afterSceneRevision']
  raw=base64.b64decode(frame.pop('png').split(',',1)[1]);assert len(raw)>3000 and raw.startswith(bytes.fromhex('89504e470d0a1a0a'))
+ extrema=Image.open(io.BytesIO(raw)).convert('RGB').getextrema();assert max(hi-lo for lo,hi in extrema)>8,('Empty/uniform capture cannot prove a rendered feeding phase',row['id'],phase,extrema)
  v=s['visibility'];assert v and v['individualId']==row['id']and all(v[k]for k in ['meshVisible','bodyClear','billClear','bodyInFrame']),(row['id'],phase,v)
  name=f"sequence-{len(result['sequences'])}-{row['id']}-{phase}.png";(out/name).write_bytes(raw);after=frame['after'];assert after['time']==s['time'] and after['runId']==s['runId']
  before_actor=next(a for a in s['actors']if a['id']==row['id']);after_actor=next(a for a in after['actors']if a['id']==row['id'])
