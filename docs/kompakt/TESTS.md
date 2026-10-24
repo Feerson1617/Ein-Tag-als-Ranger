@@ -1,5 +1,7 @@
 # Aktueller V1-Prüfplan
 
+Abgeschlossen: **[V1-Releasekandidat und aktuelle21-Punkte-Matrix](ABSCHLUSS-V1.md)**. Produkt `e9899efaa314`, HTML `87ff215191f543c1…`;31/31Prozessprüfungen bestanden,20Matrixpunkte im erklärten Umfang bestanden, F12 NICHT GEPRÜFT. Neue Original900-s-Diagnose jeGehsegment bestanden; historischeFehlläufe und verfehltesCloud30FPS-Ziel bleiben separat erhalten. Details und QA-Abdeckungskorrekturen stehen im Abschlussbericht. Die folgenden älteren Texte tragen ihren dort angegebenen Prüfstand.
+
 ```sh
 PLAYWRIGHT_BROWSERS_PATH=/pfad/zu/playwright python tools/check-compact-v1.py --output work/v1-final-eindeutig
 ```

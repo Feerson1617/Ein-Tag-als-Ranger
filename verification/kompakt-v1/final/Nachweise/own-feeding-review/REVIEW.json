@@ -1,0 +1,111 @@
+{
+  "sourceCommit": "e9899efaa314d052191d7d3a95b5de904f2932b6",
+  "htmlSHA256": "87ff215191f543c1d91cadeef0ecf14c98012ff1f2b0c9866df0bbe2fd6494b8",
+  "reviewedUTC": "2026-10-24T14:03:23.350936+00:00",
+  "scope": "Eigene tatsächliche Sichtung aller acht Kontaktbögen mit je sieben aktuellen Phasen nach dem nativen vollständigen Weg. Folgen1–4 unbeschleunigter Modelllauf; Folgen5–8 nach explizit1200Modellsekunden, dann öffentliche feine Modellschritte. Numerische Kontakt-/Identitätsprüfungen ergänzen die Sichtung. D1 äußere Aufnahme, keine innere Verdauungsanatomie.",
+  "passedWithinDeclaredB1B5Scope": true,
+  "actuallyViewedContactSheets": [
+    "sequence-1-native-pixel-contact.png",
+    "sequence-2-native-pixel-contact.png",
+    "sequence-3-native-pixel-contact.png",
+    "sequence-4-native-pixel-contact.png",
+    "sequence-5-composited-contact.png",
+    "sequence-6-composited-contact.png",
+    "sequence-7-composited-contact.png",
+    "sequence-8-composited-contact.png"
+  ],
+  "validImageCount": 56,
+  "validImageSources": "28 atomare direkte Echtzeit-Canvasbilder plus28 unabhängige Compositorbilder bei exakt unverändertem pausierten Modellzustand.",
+  "failedImageCount": 28,
+  "failedImageScope": "Die28 direkten pausierten Canvasexporte sind schwarz: preserveDrawingBuffer=false. Sie bleiben Fehlbelege und sind KEINE positiven visuellen Nachweise. CAPTURE-VALIDATION und echter Regressionstest legen Ursache/Fix offen.",
+  "findings": [
+    "Austernfischer: konkrete Muschel, Öffnung/Kontakt, sichtbares Gewebe/äußerer Transport und Mundbezug bleiben mit demselben Kopf/Ereignis verbunden.",
+    "Säbelschnäbler/Rotschenkel: winzige Würmer bleiben maßstabstreue dünne Striche. Kontakt und äußere Aufnahme sind in der Folge nachvollziehbar, keine Detailbestimmung der Wurmanatomie aus der Linse behauptet.",
+    "Löffler: seitlicher Suchschwenk, konkrete Garnele und Aufnahme bleiben am ganzen Kopf/Schnabel gerahmt.",
+    "Alle vier Köpfe bleiben bis nach der Aufnahme im verständlichen Ausschnitt; die Kamera springt nicht zu einer neuen Beute. Kein Blick in den Rachen gefordert oder behauptet.",
+    "Die Modelllinse allein erzeugt keinen eigenen Feldbuchbeleg; der tatsächliche native Vogelbeleg und die getrennten Kontakt-/Sichtbedingungen bleiben geprüft."
+  ],
+  "sequences": [
+    {
+      "number": 1,
+      "individualId": "compact-oystercatcher",
+      "runId": "ad383d41-6570-4cc1-a19c-1bdbc2954719",
+      "preyId": "compact-mussel-16",
+      "eventId": "ranger-compact-v2:summer:feeding:compact-oystercatcher:compact-mussel-16:0.025000000",
+      "realtime": true,
+      "sheet": "sequence-1-native-pixel-contact.png",
+      "sheetSHA256": "fe9c42c30c4a093a97990276fbbcfa9c1a84ae6578f7e692ab01d052692170a8"
+    },
+    {
+      "number": 2,
+      "individualId": "compact-avocet",
+      "runId": "9831aa9d-047f-4556-9490-7646eaa70dc1",
+      "preyId": "compact-juvenile-worm-0",
+      "eventId": "ranger-compact-v2:summer:feeding:compact-avocet:compact-juvenile-worm-0:29.319700000",
+      "realtime": true,
+      "sheet": "sequence-2-native-pixel-contact.png",
+      "sheetSHA256": "a786d45278851aea35cb629e91d495b4b106f74074c6669bea9d34f6a51293c5"
+    },
+    {
+      "number": 3,
+      "individualId": "compact-redshank",
+      "runId": "28835527-a967-4fd1-bf98-8d1b3ca169c3",
+      "preyId": "compact-juvenile-worm-3",
+      "eventId": "ranger-compact-v2:summer:feeding:compact-redshank:compact-juvenile-worm-3:20.927200000",
+      "realtime": true,
+      "sheet": "sequence-3-native-pixel-contact.png",
+      "sheetSHA256": "394323f6a15e30ed86c6cae7bac5550edfc60488596cbea2ea108e55ba7015a0"
+    },
+    {
+      "number": 4,
+      "individualId": "compact-spoonbill",
+      "runId": "0fbfe895-716e-4181-bb81-025c06b0db7b",
+      "preyId": "compact-shrimp-4",
+      "eventId": "ranger-compact-v2:summer:feeding:compact-spoonbill:compact-shrimp-4:0.025000000",
+      "realtime": true,
+      "sheet": "sequence-4-native-pixel-contact.png",
+      "sheetSHA256": "8043639eed7292083f8694246ec9daafa3340f50832c2e0c7ade0a464a255642"
+    },
+    {
+      "number": 5,
+      "individualId": "compact-avocet",
+      "runId": "8ff5b4e1-228d-4b93-a366-74a4bbefbae6",
+      "preyId": "compact-juvenile-worm-0",
+      "eventId": "ranger-compact-v2:summer:feeding:compact-avocet:compact-juvenile-worm-0:29.325000000",
+      "realtime": false,
+      "sheet": "sequence-5-composited-contact.png",
+      "sheetSHA256": "8c5712423fddee4f91fc6b247948066f1b905a7b64123f278c6be425627afdbf"
+    },
+    {
+      "number": 6,
+      "individualId": "compact-redshank",
+      "runId": "94c2882c-820e-455c-aa43-dbf83afa62c4",
+      "preyId": "compact-juvenile-worm-3",
+      "eventId": "ranger-compact-v2:summer:feeding:compact-redshank:compact-juvenile-worm-3:20.925000000",
+      "realtime": false,
+      "sheet": "sequence-6-composited-contact.png",
+      "sheetSHA256": "31627f2d1ad52613d6f8f82f652b4ea8b1364e0367f3f10e14001fff3fbec628"
+    },
+    {
+      "number": 7,
+      "individualId": "compact-spoonbill",
+      "runId": "eff120c8-61f4-4fc1-9a55-ed94f514fad0",
+      "preyId": "compact-shrimp-4",
+      "eventId": "ranger-compact-v2:summer:feeding:compact-spoonbill:compact-shrimp-4:0.025000000",
+      "realtime": false,
+      "sheet": "sequence-7-composited-contact.png",
+      "sheetSHA256": "df44881d91ad261796a01ff8f86b34c627f9da8b77b3e716161ec57d82849514"
+    },
+    {
+      "number": 8,
+      "individualId": "compact-oystercatcher",
+      "runId": "d51ec496-3d82-4fc0-a484-ca372f2c21f5",
+      "preyId": "compact-mussel-16",
+      "eventId": "ranger-compact-v2:summer:feeding:compact-oystercatcher:compact-mussel-16:0.025000000",
+      "realtime": false,
+      "sheet": "sequence-8-composited-contact.png",
+      "sheetSHA256": "4dba2d2179d3b6482c7ba8a1194b826cf3cb316b59963a25dd548c163e0e2b2b"
+    }
+  ],
+  "videoScope": "Videos sind verfügbar. Nur ausgewählte Standbilder daraus gesichtet, kein Ansehen des gesamten Gehvideos behauptet; die vollständigen sieben Phasen pro Folge sind die zeitlich gebundenen Bildbelege."
+}

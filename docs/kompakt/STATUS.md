@@ -1,5 +1,7 @@
 # Ranger Kompakt – Prüfstatus
 
+Abgeschlossen: **[V1-Releasekandidat und aktuelle21-Punkte-Matrix](ABSCHLUSS-V1.md)**. Produkt `e9899efaa314`, HTML `87ff215191f543c1…`;31/31Prozessprüfungen bestanden,20Matrixpunkte im erklärten Umfang bestanden, F12 NICHT GEPRÜFT. Neue Original900-s-Diagnose jeGehsegment bestanden; historischeFehlläufe und verfehltesCloud30FPS-Ziel bleiben separat erhalten. Details und QA-Abdeckungskorrekturen stehen im Abschlussbericht. Die folgenden älteren Texte tragen ihren dort angegebenen Prüfstand.
+
 ## Aktiver V1-Abschlussdurchgang
 
 Der freigegebene Umfang steht im [vor Änderungen festgelegten Abschlussvertrag](../ABSCHLUSSVERTRAG-V1.md). Der neue Kandidat heißt `ranger-kompakt-v1.0.0-rc.1`; eindeutige Buildidentität ist zusätzlich sein vollständiger Quellcommit samt Runtime- und HTML-Hashes. Aktuelle Ergebnisse stehen ausschließlich im versionierten V1-Abschlussset (`ABSCHLUSS.md`, 21-Felder-Matrix und Rohprotokolle). Die folgenden Runde-2-Angaben sind historische Nachweise und keine aktuellen V1-Ergebnisse.

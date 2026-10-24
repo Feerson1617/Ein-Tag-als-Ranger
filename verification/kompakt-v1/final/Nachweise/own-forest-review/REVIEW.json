@@ -1,0 +1,102 @@
+{
+  "sourceCommit": "e9899efaa314d052191d7d3a95b5de904f2932b6",
+  "reviewedUTC": "2026-10-24T12:16:24.000750+00:00",
+  "scope": "Own actual visual review of all six exact camera pairs and all three ordinary-walk screenshots before/current, via documented unmodified source images/contact sheets. Fixed camera equality asserted by driver; walking images are not falsely paired at equal positions. D2 bounded pass, not complete naturalism or all36-taxa anatomy approval.",
+  "passedWithinDeclaredD2Scope": true,
+  "cameraPairs": [
+    {
+      "name": "start",
+      "beforeSHA256": "1a7095538458b194517ed69a9c269dd454a03d22e3267e5a501c6b6c16c53f83",
+      "afterSHA256": "61fe2456712935f037a6a9062e6639e6d023f6d4d589e5f3f0bcbfc94e34ff72",
+      "sameActualCamera": true,
+      "scope": "Same actual X/Z/yaw/pitch/FOV. Animals/model times may differ; normal walk images are not falsely fixed-position paired."
+    },
+    {
+      "name": "woodruff",
+      "beforeSHA256": "deed56614743242221f016b78d657a4f0562845ad7a10d1b4adec9fc433649fa",
+      "afterSHA256": "f162c131854df59f9b906b3cbc41548eb42d47aadb0a7c0da2ccf6675f0b8435",
+      "sameActualCamera": true,
+      "scope": "Same actual X/Z/yaw/pitch/FOV. Animals/model times may differ; normal walk images are not falsely fixed-position paired."
+    },
+    {
+      "name": "nettle",
+      "beforeSHA256": "332a6befcbde30400cf6dac799625004e50f93653919f958528cba755bcc38a4",
+      "afterSHA256": "bfee3ff0f96b0dc030f3fd70f4889d4fb3a61e7f81fe68fffc6d952e01d4b734",
+      "sameActualCamera": true,
+      "scope": "Same actual X/Z/yaw/pitch/FOV. Animals/model times may differ; normal walk images are not falsely fixed-position paired."
+    },
+    {
+      "name": "wood",
+      "beforeSHA256": "34b55d6b29a9c17dade9deded5c10a4892e43938168a7215bb3704169a69c51f",
+      "afterSHA256": "3c7a2676a4f69e125ef972c5f2b6f0acdba5f6e1d330e958ee18c76ba91b71fc",
+      "sameActualCamera": true,
+      "scope": "Same actual X/Z/yaw/pitch/FOV. Animals/model times may differ; normal walk images are not falsely fixed-position paired."
+    },
+    {
+      "name": "village-edge",
+      "beforeSHA256": "1d93e1739a9a343537bd85ddb4af74d3fd8345a49025475d039326ef17f99ce2",
+      "afterSHA256": "1d93e1739a9a343537bd85ddb4af74d3fd8345a49025475d039326ef17f99ce2",
+      "sameActualCamera": true,
+      "scope": "Same actual X/Z/yaw/pitch/FOV. Animals/model times may differ; normal walk images are not falsely fixed-position paired."
+    },
+    {
+      "name": "oak-edge",
+      "beforeSHA256": "48eb678a32a392ebda2d8f95dc8c39c75011884fc7a131b23a11cb8d47cb437f",
+      "afterSHA256": "284d766995bcaae99514805b75dd897c36e7b61cd32f64dc335b25c83b8cc6e2",
+      "sameActualCamera": true,
+      "scope": "Same actual X/Z/yaw/pitch/FOV. Animals/model times may differ; normal walk images are not falsely fixed-position paired."
+    }
+  ],
+  "findings": {
+    "start": "Unterschiedliche Kronen und Stammfarben, unregelmäßigere Hintergrundgruppen/Lücken; Reh, Waldmeister und Weg sichtbar. Stammfüße bleiben im Kern bewusst offen. Illustration bleibt deutlich stilisiert.",
+    "wood": "Totholz mit Stirnflächen/Rindenmerkmalen und umgebenden Pflanzen erhalten; höhere Strauchformen sind nun an vorhandenen Baumfüßen gruppiert statt frei über die Hintergrundfläche verteilt.",
+    "village-edge": "Dorf/heller Übergang und Deichblick erhalten; keine Vegetationswand am Weg.",
+    "woodruff": "Wirtel und schmale Blattstellung sowie anonymer Bestand unverdeckt, Reh sichtbar.",
+    "nettle": "Gegenständige gezähnte Blätter unverändert sichtbar; Strauchgruppen liegen seitlich des Beobachtungsfensters.",
+    "oak-edge": "Eichenstamm/Blattzweig und Saumübergang sichtbar; Strauchgruppen am Boden/unter bestehenden Bäumen, Lücken erhalten. Restliche polygonale Rundformen sind eine Stilfrage der gezielten Nutzerabnahme."
+  },
+  "W1": "Age-related crown/stem forms, colors, groups and gaps differ; three diagnostic support trunks deliberately preserved. Background remains a stylized illustration.",
+  "W2": "Herb layer, grouped low shrubs/young crown forms and higher canopy transitions present, with a deliberately open beech core.",
+  "W3": "Existing decorative shrub components overlap at actual terrain/tree bases; no added counted biological individuals. Rounded polygonal shapes remain a declared style choice.",
+  "W4": "Reh, diagnostic herbs, oak leaf branch, deadwood and path remain visible from intended views.",
+  "W5": "IDs/anchors/positions/initial inventories and historical revisions tested separately; no plant/path move inferred from decoration. Full native route has its own later proof.",
+  "subjectiveStyleAcceptance": "Pending targeted user decision; no further aesthetic iteration opened.",
+  "actualCurrentImages": [
+    {
+      "file": "forest-profile/start.png",
+      "sha256": "61fe2456712935f037a6a9062e6639e6d023f6d4d589e5f3f0bcbfc94e34ff72"
+    },
+    {
+      "file": "forest-profile/woodruff.png",
+      "sha256": "f162c131854df59f9b906b3cbc41548eb42d47aadb0a7c0da2ccf6675f0b8435"
+    },
+    {
+      "file": "forest-profile/nettle.png",
+      "sha256": "bfee3ff0f96b0dc030f3fd70f4889d4fb3a61e7f81fe68fffc6d952e01d4b734"
+    },
+    {
+      "file": "forest-profile/wood.png",
+      "sha256": "3c7a2676a4f69e125ef972c5f2b6f0acdba5f6e1d330e958ee18c76ba91b71fc"
+    },
+    {
+      "file": "forest-profile/village-edge.png",
+      "sha256": "1d93e1739a9a343537bd85ddb4af74d3fd8345a49025475d039326ef17f99ce2"
+    },
+    {
+      "file": "forest-profile/oak-edge.png",
+      "sha256": "284d766995bcaae99514805b75dd897c36e7b61cd32f64dc335b25c83b8cc6e2"
+    },
+    {
+      "file": "forest-profile/ordinary-walk-1.png",
+      "sha256": "88b90bc32010ad26fecf22a6ed35540e26d020c82980fc4a6ac266a7f2b542aa"
+    },
+    {
+      "file": "forest-profile/ordinary-walk-2.png",
+      "sha256": "b2f6d83810ffd97c08c21541423bbcdf251475391f8811ec4a9e1d1927c2f88b"
+    },
+    {
+      "file": "forest-profile/ordinary-walk-3.png",
+      "sha256": "bd868384b24efe7f18c38f97d80f0770ddf0cc1bf3709d392ef7cf3ea1d3334b"
+    }
+  ]
+}

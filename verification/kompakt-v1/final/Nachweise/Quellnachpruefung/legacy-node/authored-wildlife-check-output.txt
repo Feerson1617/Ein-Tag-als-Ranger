@@ -1,0 +1,46 @@
+{
+  "models": [
+    {
+      "species": "fox",
+      "triangles": 8348,
+      "blendedNeckVertices": 307,
+      "legs": 4
+    },
+    {
+      "species": "hare",
+      "triangles": 8526,
+      "blendedNeckVertices": 313,
+      "legs": 4
+    },
+    {
+      "species": "capreolus_capreolus",
+      "triangles": 9464,
+      "blendedNeckVertices": 408,
+      "legs": 4
+    },
+    {
+      "species": "sciurus_vulgaris",
+      "triangles": 6278,
+      "blendedNeckVertices": 212,
+      "legs": 4
+    },
+    {
+      "species": "phoca_vitulina",
+      "triangles": 5926,
+      "blendedNeckVertices": 462,
+      "legs": 0
+    },
+    {
+      "species": "halichoerus_grypus",
+      "triangles": 5950,
+      "blendedNeckVertices": 459,
+      "legs": 0
+    }
+  ],
+  "renderedFrames": 120,
+  "identityAndInstancing": true,
+  "maxVertexAttributes": 16,
+  "parserBoundsAndSpeciesGuard": true,
+  "concurrentDownloads": 2,
+  "transientNetworkRetry": true
+}

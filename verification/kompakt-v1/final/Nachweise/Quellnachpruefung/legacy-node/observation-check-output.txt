@@ -1,0 +1,6 @@
+{
+  "collision": "body radius, initial placement, respawn and movement verified",
+  "flight": "low birds avoid signs; high birds may fly above",
+  "animation": "independent distance-coupled gaits, soft stopping/feeding, continuous half-time and birth identity verified",
+  "marker": "visible target follows projected body; behind-camera targets hidden; portrait bounds fit"
+}

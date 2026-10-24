@@ -1,0 +1,45 @@
+{
+  "qaCommit": "39c76226d42e0d34dda130b984c4c58825b84d39",
+  "productRuntimeCommit": "e9899efaa314d052191d7d3a95b5de904f2932b6",
+  "complete": true,
+  "checks": [
+    {
+      "name": "legacy-node",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 31.381,
+      "log": "logs/legacy-node.log"
+    },
+    {
+      "name": "compact-node",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 20.979,
+      "log": "logs/compact-node.log"
+    },
+    {
+      "name": "python",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 4.122,
+      "log": "logs/python.log"
+    },
+    {
+      "name": "verify-web",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 0.815,
+      "log": "logs/verify-web.log"
+    },
+    {
+      "name": "verify-compact",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 0.164,
+      "log": "logs/verify-compact.log"
+    }
+  ],
+  "passed": true,
+  "runtimeByteIdentical": true,
+  "htmlSHA256": "87ff215191f543c1d91cadeef0ecf14c98012ff1f2b0c9866df0bbe2fd6494b8"
+}

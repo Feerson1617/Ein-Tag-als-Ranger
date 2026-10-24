@@ -1,0 +1,204 @@
+{"scenario":"predation","pairs":8,"groups":32,"kestrels":[{"habitat":"meadow","group":0,"phases":["circle","hover","stoop","climb"],"attempts":12,"minAltitude":0.3599303919388752,"maxAltitude":9.630991137173346,"airborneFraction":0.9889583333333334,"closestAttemptM":0.39541456330069497},{"habitat":"meadow","group":1,"phases":["circle","hover","stoop","climb"],"attempts":14,"minAltitude":0.27193006769897476,"maxAltitude":9.697973227791532,"airborneFraction":0.9852083333333334,"closestAttemptM":0.32066124543721014},{"habitat":"meadow","group":2,"phases":["circle","hover","stoop","climb"],"attempts":12,"minAltitude":0.265375495370589,"maxAltitude":9.698617546039372,"airborneFraction":0.9883333333333333,"closestAttemptM":0.31635837027250086},{"habitat":"meadow","group":3,"phases":["circle","hover","stoop","climb"],"attempts":14,"minAltitude":0.27856180547720244,"maxAltitude":9.66156664604045,"airborneFraction":0.9854166666666667,"closestAttemptM":0.32073898345407365},{"habitat":"farmland","group":0,"phases":["circle","hover","stoop","climb"],"attempts":12,"minAltitude":0.26407582601637847,"maxAltitude":9.656181595133551,"airborneFraction":0.9883333333333333,"closestAttemptM":0.31475313530337906},{"habitat":"farmland","group":1,"phases":["circle","hover","stoop","climb"],"attempts":14,"minAltitude":0.3075426093692487,"maxAltitude":9.699817537206297,"airborneFraction":0.9858333333333333,"closestAttemptM":0.34467280269067596},{"habitat":"farmland","group":2,"phases":["circle","hover","stoop","climb"],"attempts":11,"minAltitude":0.29454900242335935,"maxAltitude":9.699561495725565,"airborneFraction":0.9897916666666666,"closestAttemptM":0.33644959929519036},{"habitat":"farmland","group":3,"phases":["circle","hover","stoop","climb"],"attempts":11,"minAltitude":0.16,"maxAltitude":9.697912672906785,"airborneFraction":0.9635416666666666,"closestAttemptM":0.31455390677922307}],"phases":["stalk","pursuit","recovery","circle","hover","stoop","climb","ambush","handle"]}
+{"scenario":"competition","pairs":8,"groups":32,"kestrels":[],"phases":["approach","retreat"]}
+{"scenario":"parasitism","pairs":8,"groups":32,"kestrels":[],"phases":["host"]}
+{"scenario":"mutualism","pairs":9,"groups":36,"kestrels":[],"phases":["approach","visit"]}
+{"scenario":"herbivory","pairs":8,"groups":32,"kestrels":[],"phases":["approach","visit"]}
+{"scenario":"dispersal","pairs":4,"groups":16,"kestrels":[],"phases":["approach","visit","transport","cache"]}
+{"highTideRoosts":24,"ebbReturn":true,"disturbanceReturn":true,"kestrelImmediateClimb":true}
+{
+  "pairCases": 45,
+  "encounterGroups": 180,
+  "preservedIndividuals": 276,
+  "secondsPerScenario": 240,
+  "report": [
+    {
+      "scenario": "predation",
+      "pairs": 8,
+      "groups": 32,
+      "kestrels": [
+        {
+          "habitat": "meadow",
+          "group": 0,
+          "phases": [
+            "circle",
+            "hover",
+            "stoop",
+            "climb"
+          ],
+          "attempts": 12,
+          "minAltitude": 0.3599303919388752,
+          "maxAltitude": 9.630991137173346,
+          "airborneFraction": 0.9889583333333334,
+          "closestAttemptM": 0.39541456330069497
+        },
+        {
+          "habitat": "meadow",
+          "group": 1,
+          "phases": [
+            "circle",
+            "hover",
+            "stoop",
+            "climb"
+          ],
+          "attempts": 14,
+          "minAltitude": 0.27193006769897476,
+          "maxAltitude": 9.697973227791532,
+          "airborneFraction": 0.9852083333333334,
+          "closestAttemptM": 0.32066124543721014
+        },
+        {
+          "habitat": "meadow",
+          "group": 2,
+          "phases": [
+            "circle",
+            "hover",
+            "stoop",
+            "climb"
+          ],
+          "attempts": 12,
+          "minAltitude": 0.265375495370589,
+          "maxAltitude": 9.698617546039372,
+          "airborneFraction": 0.9883333333333333,
+          "closestAttemptM": 0.31635837027250086
+        },
+        {
+          "habitat": "meadow",
+          "group": 3,
+          "phases": [
+            "circle",
+            "hover",
+            "stoop",
+            "climb"
+          ],
+          "attempts": 14,
+          "minAltitude": 0.27856180547720244,
+          "maxAltitude": 9.66156664604045,
+          "airborneFraction": 0.9854166666666667,
+          "closestAttemptM": 0.32073898345407365
+        },
+        {
+          "habitat": "farmland",
+          "group": 0,
+          "phases": [
+            "circle",
+            "hover",
+            "stoop",
+            "climb"
+          ],
+          "attempts": 12,
+          "minAltitude": 0.26407582601637847,
+          "maxAltitude": 9.656181595133551,
+          "airborneFraction": 0.9883333333333333,
+          "closestAttemptM": 0.31475313530337906
+        },
+        {
+          "habitat": "farmland",
+          "group": 1,
+          "phases": [
+            "circle",
+            "hover",
+            "stoop",
+            "climb"
+          ],
+          "attempts": 14,
+          "minAltitude": 0.3075426093692487,
+          "maxAltitude": 9.699817537206297,
+          "airborneFraction": 0.9858333333333333,
+          "closestAttemptM": 0.34467280269067596
+        },
+        {
+          "habitat": "farmland",
+          "group": 2,
+          "phases": [
+            "circle",
+            "hover",
+            "stoop",
+            "climb"
+          ],
+          "attempts": 11,
+          "minAltitude": 0.29454900242335935,
+          "maxAltitude": 9.699561495725565,
+          "airborneFraction": 0.9897916666666666,
+          "closestAttemptM": 0.33644959929519036
+        },
+        {
+          "habitat": "farmland",
+          "group": 3,
+          "phases": [
+            "circle",
+            "hover",
+            "stoop",
+            "climb"
+          ],
+          "attempts": 11,
+          "minAltitude": 0.16,
+          "maxAltitude": 9.697912672906785,
+          "airborneFraction": 0.9635416666666666,
+          "closestAttemptM": 0.31455390677922307
+        }
+      ],
+      "phases": [
+        "stalk",
+        "pursuit",
+        "recovery",
+        "circle",
+        "hover",
+        "stoop",
+        "climb",
+        "ambush",
+        "handle"
+      ]
+    },
+    {
+      "scenario": "competition",
+      "pairs": 8,
+      "groups": 32,
+      "kestrels": [],
+      "phases": [
+        "approach",
+        "retreat"
+      ]
+    },
+    {
+      "scenario": "parasitism",
+      "pairs": 8,
+      "groups": 32,
+      "kestrels": [],
+      "phases": [
+        "host"
+      ]
+    },
+    {
+      "scenario": "mutualism",
+      "pairs": 9,
+      "groups": 36,
+      "kestrels": [],
+      "phases": [
+        "approach",
+        "visit"
+      ]
+    },
+    {
+      "scenario": "herbivory",
+      "pairs": 8,
+      "groups": 32,
+      "kestrels": [],
+      "phases": [
+        "approach",
+        "visit"
+      ]
+    },
+    {
+      "scenario": "dispersal",
+      "pairs": 4,
+      "groups": 16,
+      "kestrels": [],
+      "phases": [
+        "approach",
+        "visit",
+        "transport",
+        "cache"
+      ]
+    }
+  ]
+}
