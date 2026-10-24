@@ -11,12 +11,12 @@ from module_graph import ModuleGraph
 from compact_runtime import audit_standalone
 import argparse,json,shutil,hashlib,subprocess,time,traceback,math,base64
 
-p=argparse.ArgumentParser();p.add_argument('--detail-realtime',action='store_true',help='Additional 1200x750 didactic-detail scenario: all four first encounters run in real time; default route/budget assertions remain unchanged.');p.add_argument('--site',default='outputs');p.add_argument('--entry',default='Ranger-Kompakt.html');p.add_argument('--output',default='work/qa-2026-10-23/arrival-browser');p.add_argument('--walk-wall-budget',type=int,default=900,help='Explicit operational wall-clock budget per walked segment; the default 900-second run and any longer supplemental run must be reported separately.');a=p.parse_args()
+p=argparse.ArgumentParser();p.add_argument('--detail-realtime',action='store_true',help='Additional 1200x750 didactic-detail scenario: all four first encounters run in real time; default route/budget assertions remain unchanged.');p.add_argument('--site',default='outputs');p.add_argument('--entry',default='Ranger-Kompakt.html');p.add_argument('--output',default='work/qa-2026-10-23/arrival-browser');p.add_argument('--walk-wall-budget',type=int,default=900,help='Explicit operational wall-clock budget per walked segment; the default 900-second run and any longer supplemental run must be reported separately.');p.add_argument('--v1-route',action='store_true',help='Additional native shortcut out/back and precise native-joystick endpoint alignment for V1; original default900s route remains unchanged.');a=p.parse_args()
 if a.walk_wall_budget<=0:p.error('--walk-wall-budget must be positive')
 root=Path(__file__).resolve().parents[1];out=root/a.output;out.mkdir(parents=True,exist_ok=True)
 audit=audit_standalone(root,root/a.site/a.entry);graph=ModuleGraph(root/'dist','compact/main.js')
 result={'passed':False,'sourceCommit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=root,text=True).strip(),'sourceDirty':bool(subprocess.check_output(['git','status','--porcelain'],cwd=root,text=True).strip()),'htmlSHA256':audit['htmlSHA256'],'runtimeSourceHashes':{n:hashlib.sha256((root/'dist'/n).read_bytes()).hexdigest()for n in sorted(set(graph.modules)|graph.assets|{'kompakt.html','compact/style.css','icon.svg'})},'scope':'Fresh standalone HTML; full authored path walked using ordinary W/mouse input; no reference-camera visits, position/clock/resource/evidence writes. Explicit UI new contexts at the reached coast, finite resource acquisition, model steps separate from real-time sighting. Cloud software graphics, no iPad/Safari certification.','errors':[],'walk':[],'sequences':[],'walkWallBudgetSeconds':a.walk_wall_budget,'walkBudgetScope':'Default 900-second operational traversal guard. A larger explicitly requested budget is a supplemental functional walk, not a passed 900-second run or evidence of improved performance.'}
-layout=json.loads(subprocess.check_output(['node','--input-type=module','-e',"import{ROUTE,OUTLOOK,routeMetrics}from'./dist/compact/layout.js';console.log(JSON.stringify({route:ROUTE,outlook:OUTLOOK,metrics:routeMetrics()}));"],cwd=root,text=True))
+layout=json.loads(subprocess.check_output(['node','--input-type=module','-e',"import{ROUTE,OUTLOOK,SHORTCUT,routeMetrics}from'./dist/compact/layout.js';console.log(JSON.stringify({route:ROUTE,outlook:OUTLOOK,shortcut:SHORTCUT,metrics:routeMetrics()}));"],cwd=root,text=True))
 inventory=json.loads(subprocess.check_output(['node','--input-type=module','-e',"import{identityInventory}from'./dist/compact/evidence.js';import{MANIFEST,MODEL_REVISION}from'./dist/compact/manifest.js';console.log(JSON.stringify([...identityInventory(MANIFEST.initialSeed,MODEL_REVISION).individuals.values()].map(p=>({id:p.id,x:p.x,z:p.z}))));"],cwd=root,text=True));prey={p['id']:p for p in inventory}
 resources=['small-juveniles','small-worms','shrimp','shared-mussels']
 class Handler(SimpleHTTPRequestHandler):
@@ -31,14 +31,15 @@ def sequence_frame(page,individual,seen,episode):
  # cross a short phase under software rendering; it is context, not phase proof.
  return page.locator('#world').evaluate('''(c,a)=>new Promise(resolve=>requestAnimationFrame(()=>{
   const read=('''+SAMPLE_SCRIPT+'''),before=read(c),actor=before.actors.find(x=>x.id===a.individual);
+  const late=actor&&a.detail&&actor.phase==='swallowing'&&!a.seen.includes('mouth-transfer')&&before.events.some(e=>e.actors[0]===actor.id&&e.actors[1]===a.episode&&before.time-e.endedAt>=.7);
   const next=actor&&(!a.seen.includes(actor.phase)&&['approaching','searching','handling','swallowing','departing'].includes(actor.phase));
   const departed=actor&&a.seen.includes('departing')&&(actor.targetId!==a.episode||actor.phase==='waiting');
-  if(next||departed){
+  if(next||departed||late){
    const renderRevision=c.dataset.renderRevision,sceneRevision=c.dataset.sceneRevision,png=c.toDataURL('image/png');
    before.frameCapture={png,after:read(c),renderRevision,sceneRevision,afterRenderRevision:c.dataset.renderRevision,afterSceneRevision:c.dataset.sceneRevision,method:'Actual canvas pixels and telemetry in one post-render rAF callback; no pause, clock change or reconstructed frame.'};
   }
   resolve(before);
- }))''',{'individual':individual,'seen':sorted(seen),'episode':episode})
+ }))''',{'individual':individual,'seen':sorted(seen),'episode':episode,'detail':a.detail_realtime})
 def pointer(page,button):
  button.wait_for(state='visible');assert button.is_enabled();button.evaluate("b=>b.scrollIntoView({block:'center',behavior:'instant'})")
  hit=button.evaluate('b=>{const r=b.getBoundingClientRect(),x=r.left+r.width/2,y=r.top+r.height/2,e=document.elementFromPoint(x,y);return{x,y,hit:e===b||b.contains(e),visible:x>=0&&y>=0&&x<innerWidth&&y<innerHeight}}');assert hit['hit']and hit['visible'],hit;page.mouse.click(hit['x'],hit['y'])
@@ -68,6 +69,30 @@ def walk(page,path,name):
  finally:page.keyboard.up('w')
  after=sample(page);assert math.hypot(after['observer']['x']-path[-1]['x'],after['observer']['z']-path[-1]['z'])<.55,('Endpoint not reached',name,after['observer'])
  row={'name':name,'start':before,'end':after,'actualSeconds':time.monotonic()-started,'modelSeconds':after['time']-before['time'],'sampledTravelMeters':travel};result.setdefault('walkSegments',[]).append(row);save();page.screenshot(path=str(out/('walk-'+name+'.png')))
+def align_outlook(page):
+ # Reach the actual authored endpoint using the real analog control. No JS
+ # observer/camera/clock write. This strengthens the endpoint from55cm to8mm.
+ started=time.monotonic();target=layout['outlook'][-1];before=sample(page)
+ if page.locator('#binocular').get_attribute('aria-pressed')!='true':pointer(page,page.locator('#binocular'))
+ for tolerance,offset in [(.045,10),(.008,6)]:
+  for retry in range(8):
+   o=sample(page)['observer'];distance=math.hypot(o['x']-target['x'],o['z']-target['z'])
+   if distance<tolerance:break
+   look(page,math.atan2(-(target['x']-o['x']),-(target['z']-o['z'])))
+   rect=page.locator('#joystick').bounding_box();assert rect
+   x=rect['x']+rect['width']/2;y=rect['y']+rect['height']/2;page.mouse.move(x,y);page.mouse.down();page.mouse.move(x,y-offset)
+   best=distance
+   try:
+    for step in range(300):
+     assert time.monotonic()-started<150,'Native endpoint alignment exceeded its separate150s operational budget'
+     sample_before=sample(page);o=sample_before['observer'];distance=math.hypot(o['x']-target['x'],o['z']-target['z'])
+     if distance<tolerance or distance>best+.02:break
+     best=min(best,distance);page.wait_for_function('(t)=>Number(document.querySelector("#world").dataset.simulationTime)>t',arg=sample_before['time'])
+   finally:page.mouse.up()
+  else:raise AssertionError('Native endpoint alignment could not reach stronger tolerance')
+ after=sample(page);assert math.hypot(after['observer']['x']-target['x'],after['observer']['z']-target['z'])<.008
+ result['nativeEndpointAlignment']={'before':before,'after':after,'actualSeconds':time.monotonic()-started,'input':'ordinary native mouse/joystick analog movement; no observer injection','toleranceMeters':.008};save()
+
 def tick(page,size):
  page.locator('#behavior-step-size').select_option(str(size));pointer(page,page.locator('#behavior-step'));page.wait_for_function('document.querySelector("#world").dataset.renderRevision===document.querySelector("#world").dataset.sceneRevision')
 def start_window(page,id,realtime=False):
@@ -107,7 +132,9 @@ def sequence(page,row):
    if event and 'departing'in seen and(actor.get('targetId')!=episode or phase=='waiting'):
     assert math.hypot(actor['x']-event['bodyPosition']['x'],actor['z']-event['bodyPosition']['z'])>=.4
     capture(page,row,s,'after-departure');completed_departure=True;break
-   if actor.get('targetId')==episode and phase not in seen:seen.add(phase);capture(page,row,s,phase)
+   if a.detail_realtime and event and phase=='swallowing' and s['time']-event['endedAt']>=.7 and 'mouth-transfer'not in seen:
+    seen.add('mouth-transfer');capture(page,row,s,'mouth-transfer')
+   elif actor.get('targetId')==episode and phase not in seen:seen.add(phase);capture(page,row,s,phase)
   assert s['mode']==row['id']and s['realtime']==row['realtime']
   if a.detail_realtime and s['detail'] and s['detail']['eventRecorded']:
    detail=s['detail'];assert any(e['id']==detail['eventId'] and e['actors']==[detail['individualId'],detail['preyId']]for e in s['events']),'Detail must not assign a previous acquisition to the next prey'
@@ -123,6 +150,9 @@ def sequence(page,row):
  required={'approaching','searching','handling','swallowing','departing'};assert required<=seen,(row['id'],required-seen)
  assert event and event['after']==event['before']-1 and event['contactDistance']<.004
  if a.detail_realtime:
+  assert 'mouth-transfer'in seen,(row['id'],'No actual late swallowing render captured')
+  transfer=next(c['sample']['detail']for c in row['captures']if c['phase']=='mouth-transfer');distance=lambda p,q:math.sqrt(sum((p[k]-q[k])**2 for k in ['x','y','z']))
+  assert distance(transfer['carried'],transfer['mouth'])<distance(transfer['tip'],transfer['mouth'])*.2,'Actual concrete prey must reach the external mouth junction'
   for captured in row['captures']:
    if captured['phase']=='after-departure':continue
    detail=captured['sample']['detail'];assert detail and detail['individualId']==row['id'] and detail['preyId']==row['preyId'];assert detail['eventId']==event['id'];assert detail['runId']==row['freshContext']['runId'];assert detail['sharedLiveSceneNodes'] and detail['preyGeometryUnscaled'] and detail['didacticMagnification']
@@ -138,13 +168,16 @@ def end_video(page):
 
 with sync_playwright()as pw:
  b=pw.chromium.launch(headless=True,executable_path=shutil.which('chromium'),args=['--no-sandbox','--use-angle=swiftshader','--enable-unsafe-swiftshader']);result['browser']=b.version
- ctx=b.new_context(viewport={'width':1200 if a.detail_realtime else 800,'height':750 if a.detail_realtime else 600},accept_downloads=True,**({'record_video_dir':str(out/'page-video'),'record_video_size':{'width':1200,'height':750}} if a.detail_realtime else {}));page=ctx.new_page();result['videoTimingScope']='Canvas recording uses browser wall-time timestamps during the first actual real-time sequence; model time is separately recorded.';page.set_default_timeout(45000);page.on('pageerror',lambda e:result['errors'].append(str(e)))
+ ctx=b.new_context(viewport={'width':1200 if a.detail_realtime else 800,'height':750 if a.detail_realtime else 600},accept_downloads=True,has_touch=a.v1_route,**({'record_video_dir':str(out/'page-video'),'record_video_size':{'width':1200,'height':750}} if a.detail_realtime else {}));page=ctx.new_page();result['videoTimingScope']='Canvas recording uses browser wall-time timestamps during the first actual real-time sequence; model time is separately recorded.';page.set_default_timeout(45000);page.on('pageerror',lambda e:result['errors'].append(str(e)))
  try:
   page.goto(f'http://127.0.0.1:{server.server_port}/{a.entry}');page.wait_for_selector('#world[data-ready=true]',timeout=120000);pointer(page,page.locator('#start'));result['initial']=sample(page)
+  if a.v1_route:
+   walk(page,layout['shortcut'],'shortcut-out');walk(page,list(reversed(layout['shortcut'])),'shortcut-return')
   walk(page,layout['route'],'full-main-route');result['routeMetrics']=layout['metrics']
   # Return along the same physical boardwalk to the existing study spur.
   branch=min(range(len(layout['route'])),key=lambda i:math.hypot(layout['route'][i]['x']-70,layout['route'][i]['z']-10))
   walk(page,list(reversed(layout['route'][branch:])),'return-to-study-spur');walk(page,layout['outlook'],'study-spur')
+  if a.v1_route:align_outlook(page)
   arrived=sample(page);result['arrival']=arrived;assert all(arrived['ecology']['resources'][key]==0 for key in resources),'Expected finite prey depleted after actual full route'
   # First new local window is entirely real time, including unaccelerated video.
   row=start_window(page,'compact-oystercatcher',True);result['realtimeVideoStartWall']=time.monotonic();begin_video(page);sequence(page,row);result['realtimeVideoEndWall']=time.monotonic();end_video(page)
@@ -183,6 +216,6 @@ with sync_playwright()as pw:
   except Exception:
    result['passed']=False;result['videoFailure']=traceback.format_exc();save();raise
   finally:
-   if a.detail_realtime and page.video:result['pageVideo']=str(Path(page.video.path()).relative_to(out));result['pageVideoScope']='Original complete real-time browser recording including visible labels, whole native walk, four first real-time sequences and explicitly labelled later model-step segments; no accelerated playback or synthesized frames';save()
+   if a.detail_realtime and page.video:result['pageVideo']=str(Path(page.video.path()).relative_to(out));result['pageVideoScope']='Original real-time browser recording from actual start until completion or failure; completed route and sequence coverage is stated individually in result.json. No accelerated playback or synthesized frames';save()
    ctx.close();b.close();server.shutdown();server.server_close()
 print(json.dumps({'passed':result['passed'],'sequences':len(result['sequences'])}))

@@ -9,6 +9,20 @@ const transition=(a,phase,time)=>{a.behaviorPhase=phase;a.phaseStartedAt=time;};
 function walk(a,target,speed,dt){const d=Math.hypot(target.x-a.x,target.z-a.z),move=Math.min(d,speed*dt);if(d>1e-8){a.x+=(target.x-a.x)/d*move;a.z+=(target.z-a.z)/d*move;}a.y=terrainHeight(a.x,a.z);a.walkDistance=(a.walkDistance||0)+move;return Math.max(0,d-move);}
 function pose(a,goal,dt){a.pose||={pitch:0,yaw:0,crouch:0};a.pose.pitch=approach(a.pose.pitch,goal.pitch,2.2*dt);a.pose.yaw=approach(a.pose.yaw,goal.yaw,2.2*dt);a.pose.crouch=approach(a.pose.crouch,goal.crouch,.8*dt);a.pose.billPitch=approach(a.pose.billPitch||0,goal.billPitch||0,2.2*dt);a.pose.clawPitch=approach(a.pose.clawPitch||0,goal.clawPitch||0,1.5*dt);}
 function preyPoint(prey,revision=1){const rimOffset=revision>=6?0:.06;return {x:prey.x,y:prey.y+(prey.taxon==='mytilus_edulis'?(.05+.46*Math.cos(prey.shellOpening||0)-rimOffset*Math.sin(prey.shellOpening||0))*prey.size/1.75:prey.size*.07),z:prey.z+(prey.taxon==='mytilus_edulis'?(.46*Math.sin(prey.shellOpening||0)+rimOffset*Math.cos(prey.shellOpening||0))*prey.size/1.75:0)};}
+// Revision7 fixes an observed sub-millimetre soil penetration in the search
+// sweep. Contact/handling still settles onto the actual unchanged prey point.
+function groundSafeSearchPose(a,goal,dt,revision,clearance=.003){
+ pose(a,goal,dt);
+ if((revision??1)<7)return;
+ // Constrain the actual interpolated pose, including its return from a sweep.
+ // Goal-only correction missed the intermediate yaw on sloping sediment.
+ const r=coastalRig(a.taxon),nx=r.head[0]-r.pivot[0],ny=r.head[1]-r.pivot[1],bx=r.bill[0]-r.head[0],by=r.bill[1]-r.head[1];
+ for(let i=0;i<4;i++){
+  const tip=billPoint(a),floor=terrainHeight(tip.x,tip.z)+clearance;if(tip.y>=floor-1e-10)break;
+  const beta=a.pose.billPitch||0,wanted=(floor-a.y)/r.scale-(r.pivot[1]-a.pose.crouch)-bx*Math.sin(beta)-by*Math.cos(beta);
+  a.pose.pitch=Math.max(a.pose.pitch,Math.asin(Math.max(-1,Math.min(1,wanted/Math.hypot(nx,ny))))-Math.atan2(ny,nx));
+ }
+}
 function beginFlight(a,target,time){a.flight={start:point(a),target:{x:target.x,y:terrainHeight(target.x,target.z),z:target.z},elapsed:0,duration:Math.hypot(target.x-a.x,target.z-a.z)/3.5+1};a.supportId=null;transition(a,'flight',time);a.activity='flying';}
 function flight(a,dt,time){const f=a.flight;f.elapsed=Math.min(f.duration,f.elapsed+dt);const t=f.elapsed/f.duration,e=t*t*(3-2*t);a.x=f.start.x+(f.target.x-f.start.x)*e;a.z=f.start.z+(f.target.z-f.start.z)*e;a.y=f.start.y+(f.target.y-f.start.y)*e+Math.sin(Math.PI*t)*2;a.heading=Math.atan2(f.target.z-f.start.z,f.target.x-f.start.x);a.activity='flying';pose(a,{pitch:0,yaw:0,crouch:.15},dt);if(t===1){a.supportId='ground:coastal-rest-or-feeding';a.flight=null;transition(a,'waiting',time);}}
 function targetFor(a,p,prey,revision){
@@ -46,13 +60,13 @@ function oneStep(state,a,dt,time,waterAt,emit){
  if(isCrab)pose(a,crabContactPose(a,target.y),dt);
  const bodyTarget=targetFor(a,profile,prey,state.modelRevision),remaining=walk(a,bodyTarget,isCrab?COASTAL_SPEED_LIMITS.crab:COASTAL_SPEED_LIMITS.birdWalk,dt);
  if(a.behaviorPhase==='approaching'){
-  a.activity='approaching';if(!isCrab)pose(a,contactPose(a,target.y),dt);
+  a.activity='approaching';if(!isCrab)groundSafeSearchPose(a,contactPose(a,target.y),dt,state.modelRevision);
   if(remaining<.003)transition(a,'searching',time);return;
  }
  if(a.behaviorPhase==='searching'){
   a.activity=profile.technique;const goal=isCrab?null:contactPose(a,target.y);
   if(goal&&time-a.phaseStartedAt<profile.search){goal.yaw=profile.sweep*Math.sin((time-a.phaseStartedAt)*profile.frequency);if(a.taxon==='tringa_totanus')goal.pitch+=.08*Math.sin((time-a.phaseStartedAt)*profile.frequency);}
-  if(goal)pose(a,goal,dt);
+  if(goal)groundSafeSearchPose(a,goal,dt,state.modelRevision,time-a.phaseStartedAt<profile.search?.003:.00005);
   const contact=isCrab?clawPoint(a):billPoint(a);
   if(time-a.phaseStartedAt>=profile.search&&distance(contact,target)<contactTolerance(prey)){a.contactAt=time;a.contactPoint=contact;transition(a,'handling',time);}return;
  }

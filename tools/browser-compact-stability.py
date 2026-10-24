@@ -7,9 +7,9 @@ from playwright.sync_api import sync_playwright
 from module_graph import ModuleGraph
 from compact_runtime import audit_standalone
 import argparse,hashlib,json,shutil,statistics,subprocess,time,traceback
-p=argparse.ArgumentParser();p.add_argument('--site',default='outputs');p.add_argument('--entry',default='Ranger-Kompakt.html');p.add_argument('--seconds',type=int,default=1200);a=p.parse_args()
+p=argparse.ArgumentParser();p.add_argument('--site',default='outputs');p.add_argument('--entry',default='Ranger-Kompakt.html');p.add_argument('--seconds',type=int,default=1200);p.add_argument('--output',default='work/compact-stability');a=p.parse_args()
 if a.seconds<1200:p.error('The documented stability run requires at least 1200 seconds.')
-root=Path(__file__).resolve().parents[1];out=root/'work/compact-stability';out.mkdir(parents=True,exist_ok=True);site=root/a.site;html_audit=audit_standalone(root,site/a.entry)
+root=Path(__file__).resolve().parents[1];out=root/a.output;out.mkdir(parents=True,exist_ok=True);site=root/a.site;html_audit=audit_standalone(root,site/a.entry)
 subprocess.run(['python',str(root/'tools/verify-compact.py')],cwd=root,check=True,stdout=subprocess.PIPE)
 g=ModuleGraph(root/'dist','compact/main.js');result={'htmlAudit':html_audit,'entry':a.entry,'sourceCommit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=root,text=True).strip(),'runtimeSourceHashes':{name:hashlib.sha256((root/'dist'/name).read_bytes()).hexdigest()for name in sorted(set(g.modules)|g.assets|{'compact/style.css','kompakt.html','icon.svg'})},'scope':'Cloud Chromium software rendering, 800x600, tablet profile; no actual iPad/Safari/iPadOS 27 or classroom test','errors':[],'samples':[],'passed':False}
 def save():(out/'result.json').write_text(json.dumps(result,indent=2,ensure_ascii=False)+'\n')

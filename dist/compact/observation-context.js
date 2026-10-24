@@ -6,6 +6,16 @@ export const COASTAL_STATIONS=Object.freeze([
  {id:'outlook',x:63,z:4},{id:'creek-east',x:73,z:2}
 ]);
 const validRun=id=>typeof id==='string'&&id.length>0&&id.length<=200;
+// Live-only witness, never an imported authenticity assertion. A visible bird
+// body or a freestanding model lens alone cannot prove its feeding contact.
+export function witnessedFeeding(event,{runId,individualId,time,contact,visibleNow}){
+ return !!(contact&&visibleNow&&['shore-feeding','shell-competition'].includes(event.interaction)&&
+  contact.runId===runId&&contact.eventId===event.id&&
+  contact.individualId===individualId&&event.actors[0]===individualId&&
+  contact.preyId===event.actors[1]&&Number.isFinite(contact.time)&&
+  contact.time>=event.contactAt-1e-8&&contact.time<=event.endedAt+1e-8&&
+  Number.isFinite(time)&&time>=event.endedAt-1e-8&&time-event.endedAt<=.1);
+}
 // An explicitly requested new model run at the visitor's actual location.
 // No event, observation time, journal entry or previous resource is transferred.
 export function localObservationContext(state,observer,{runId,newRunId,siteId}){

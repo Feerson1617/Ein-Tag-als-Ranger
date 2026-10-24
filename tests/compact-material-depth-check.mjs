@@ -57,10 +57,10 @@ test('C17 distinguishes density, juvenile survival, event fecundity and an unres
  assert(article(student,'C17').includes('Ort / Zeitraum / Methode'));
 });
 
-test('C17 cockle denominator, arithmetic mean, event unit and open duration agree in tasks, source and teacher answer',()=>{
+test('C17 cockle denominator, arithmetic mean, event unit and separate conditioning/spawning periods agree in tasks, source and teacher answer',()=>{
  const c=get('C17'),text=plain(c),answer=c.expected.find(x=>x.startsWith('Laichversuch:'));
- assert.equal((3380000/12).toFixed(1),'281666.7');assert(answer.includes('281.666,7 Eier je tatsächlich ablaichendem Weibchen dieser Behandlung'));assert(answer.includes('arithmetischer Mittelwert'));assert(answer.includes('Nicht 33.800'));assert(c.task.includes('Nenner 12 und nicht 100'));assert(c.task.includes('fehlende Versuchsdauer'));assert(c.sources.includes('pronkerCockle'));assert(SOURCES.pronkerCockle.url.endsWith('10.1111/are.12178'));
- for(const term of ['12 tatsächlich ablaichende Weibchen','100 konditionierten Tieren','3.380.000 Eier','keine natürliche Jahresfekundität','Dauer','Exzerpt'])assert(text.includes(term),term);
+ assert.equal((3380000/12).toFixed(1),'281666.7');assert(answer.includes('281.666,7 Eier je tatsächlich ablaichendem Weibchen dieser Behandlung'));assert(answer.includes('arithmetischer Mittelwert'));assert(answer.includes('Nicht 33.800'));assert(c.task.includes('Nenner 12 und nicht 100'));assert(c.task.includes('sechswöchige Konditionierung'));assert(c.info.some(x=>x.includes('sechs Wochen Konditionierung')));assert(answer.includes('Konditionierungszeit nicht als Laichdauer'));assert(SOURCES.pronkerCockle.title.includes('S.304–305'));assert(c.sources.includes('pronkerCockle'));assert.equal(SOURCES.pronkerCockle.url,'https://www.vliz.be/imisdocs/publications/283880.pdf');assert(SOURCES.pronkerCockle.title.includes('10.1111/are.12178'));
+ for(const term of ['12 tatsächlich ablaichende Weibchen','100 konditionierten Tieren','3.380.000 Eier','keine natürliche Jahresfekundität','Dauer','Konditionierung','thermisch ausgelösten Laichversuch','Laichdauer'])assert(text.includes(term),term);
  for(const html of [student,teacher]){const a=article(html,'C17');assert(a.includes('3.380.000'));assert(a.includes('12 tatsächlich ablaichende Weibchen'));assert(a.includes('10.1111/are.12178'));}assert(article(teacher,'C17').includes('281.666,7'));
 });
 
@@ -72,6 +72,6 @@ test('The previous six data cases and the three separate evidence levels remain 
  assert(student.includes('Virtuelle Tests bescheinigen keine reale Geräteführung oder Exkursion'));
 });
 
-const result={passed:checks.length,checks,scope:'Data/context/rendering regression only; no proof of physical device skill, fieldwork or learning outcomes. C17 event mean is supplied; primary full text, duration and natural annual rate remain open. ETS page renders read separately.'};
+const result={passed:checks.length,checks,scope:'Data/context/rendering regression only; no proof of physical device skill, fieldwork or learning outcomes. C17 event mean is supplied; conditioning/spawning context follows the supplied primary review; own current primary retrieval is blocked, natural annual rate remains open. ETS page renders read separately.'};
 if(process.argv[2]){mkdirSync(process.argv[2],{recursive:true});writeFileSync(process.argv[2]+'/material-depth-result.json',JSON.stringify(result,null,2)+'\n');}
 console.log(JSON.stringify(result));

@@ -1,3 +1,5 @@
+import argparse
+p=argparse.ArgumentParser();p.add_argument('--output',default='work/compact-source');a=p.parse_args()
 """Actual maintained source-entry smoke, distinct from web/standalone testing."""
 from pathlib import Path
 from functools import partial
@@ -6,7 +8,7 @@ from threading import Thread
 from playwright.sync_api import sync_playwright
 from module_graph import ModuleGraph
 import json,hashlib,shutil,subprocess,traceback
-root=Path(__file__).resolve().parents[1];out=root/'work/compact-source';out.mkdir(parents=True,exist_ok=True);g=ModuleGraph(root/'dist','compact/main.js');r={'sourceCommit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=root,text=True).strip(),'entry':'dist/kompakt.html','runtimeSourceHashes':{n:hashlib.sha256((root/'dist'/n).read_bytes()).hexdigest()for n in sorted(set(g.modules)|g.assets|{'kompakt.html','compact/style.css','icon.svg'})},'checks':[],'errors':[],'passed':False,'scope':'Actual source entry, Chromium software WebGL; no physical device certification'}
+root=Path(__file__).resolve().parents[1];out=root/a.output;out.mkdir(parents=True,exist_ok=True);g=ModuleGraph(root/'dist','compact/main.js');r={'sourceCommit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=root,text=True).strip(),'entry':'dist/kompakt.html','runtimeSourceHashes':{n:hashlib.sha256((root/'dist'/n).read_bytes()).hexdigest()for n in sorted(set(g.modules)|g.assets|{'kompakt.html','compact/style.css','icon.svg'})},'checks':[],'errors':[],'passed':False,'scope':'Actual source entry, Chromium software WebGL; no physical device certification'}
 class H(SimpleHTTPRequestHandler):
  def log_message(self,*args):pass
 s=ThreadingHTTPServer(('127.0.0.1',0),partial(H,directory=str(root/'dist')));Thread(target=s.serve_forever,daemon=True).start();origin=f'http://127.0.0.1:{s.server_port}'

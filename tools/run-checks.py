@@ -9,14 +9,17 @@ if not node: raise SystemExit('Node.js fehlt: node muss im PATH verfügbar sein 
 parser=argparse.ArgumentParser(description='Vorhandene Prüfreihen mit Fehlerstatus und Zeitlimit ausführen.')
 parser.add_argument('--workers',type=int,default=3)
 parser.add_argument('--timeout',type=int,default=300)
+parser.add_argument('--output',default='work')
 args=parser.parse_args()
+output_dir=root/args.output
+output_dir.mkdir(parents=True,exist_ok=True)
 if args.workers<1 or args.timeout<1: parser.error('workers und timeout müssen positiv sein')
 started=time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime())
 names=['factor','sim','regional-evolution','behavior','living-world','ranger','scenario','field','quest','live-experiment','world','observation','coast-performance','locomotion','route-birds','village-barrier','ranger-usability','compact-world','fidelity','web-performance','render-retention','avian-anatomy','ranger-session','authored-wildlife','evidence-regression','catalogue-audit','learning-missions','mission-runtime']
 def run(name):
     start=time.monotonic()
-    output=root/('work/final-check-output.txt' if name=='field' else f'work/{name}-check-output.txt')
-    error=root/f'work/{name}-check-errors.txt'
+    output=output_dir/('final-check-output.txt' if name=='field' else f'{name}-check-output.txt')
+    error=output_dir/f'{name}-check-errors.txt'
     with output.open('w') as out, error.open('w') as err:
         try:
             result=subprocess.run([node,str(root/f'tests/{name}-check.mjs')],stdout=out,stderr=err,cwd=root,timeout=args.timeout)
@@ -28,6 +31,6 @@ with ThreadPoolExecutor(max_workers=args.workers) as pool:
     results=[]
     for f in as_completed([pool.submit(run,name) for name in names]):
         result=f.result();results.append(result);print(json.dumps(result),flush=True)
-(root/'work/v020-check-summary.json').write_text(json.dumps(results,indent=2)+'\n')
-(root/'work/check-run.json').write_text(json.dumps({'startedAt':started,'commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=root,text=True).strip(),'node':subprocess.check_output([node,'--version'],text=True).strip(),'python':os.sys.version,'results':results},indent=2)+'\n')
+(output_dir/'v020-check-summary.json').write_text(json.dumps(results,indent=2)+'\n')
+(output_dir/'check-run.json').write_text(json.dumps({'startedAt':started,'commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=root,text=True).strip(),'node':subprocess.check_output([node,'--version'],text=True).strip(),'python':os.sys.version,'results':results},indent=2)+'\n')
 if not all(r['passed'] for r in results):raise SystemExit(1)

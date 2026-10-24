@@ -1,5 +1,17 @@
 # Ranger Kompakt – Prüfstatus
 
+## Aktiver V1-Abschlussdurchgang
+
+Der freigegebene Umfang steht im [vor Änderungen festgelegten Abschlussvertrag](../ABSCHLUSSVERTRAG-V1.md). Der neue Kandidat heißt `ranger-kompakt-v1.0.0-rc.1`; eindeutige Buildidentität ist zusätzlich sein vollständiger Quellcommit samt Runtime- und HTML-Hashes. Aktuelle Ergebnisse stehen ausschließlich im versionierten V1-Abschlussset (`ABSCHLUSS.md`, 21-Felder-Matrix und Rohprotokolle). Die folgenden Runde-2-Angaben sind historische Nachweise und keine aktuellen V1-Ergebnisse.
+
+Revision 7 korrigiert Detailfokus, kleine Bedienflächen, echte Grafik-Kontextwiederherstellung, Suchbodenfreiheit und die sichtbare Kontaktfläche vorhandener Beute. Sie gliedert statische Dekoration räumlich und gestaltet den vorhandenen Wald einmal begrenzt nach. Die biologischen Startbestände bleiben gleich; Revisionen 1–6 werden gegen unveränderte Git-Quellen geprüft. Die gekennzeichnete Modellansicht vergibt keine eigenen Sichtungsbelege.
+
+V1 trennt äußere Nahrungsaufnahme von innerer Verdauung; Software-Funktion von physischer Hardwareleistung und Unterrichtspilot. Die historischen roten 900-s- und Softwaregrafikbefunde bleiben rot. Die 0,065-s-Kappung bleibt bestehen; langsamer Modellfortschritt wird angezeigt. Kein neuer 30-FPS-Nachweis. Physisches iPad/Safari mit tatsächlich gemessenen Versionen und Unterrichtspilot bleiben NICHT GEPRÜFT; die frühere Versionsannahme ist kein unterstütztes Geräteprofil.
+
+C17: sechs Wochen Konditionierung, danach gesonderter thermisch ausgelöster Laichversuch; 12 tatsächlich laichende Weibchen unter 100 konditionierten Tieren, keine Jahresrate. Diese Bedingungen wurden im gelieferten unabhängigen Abschlussreview primär abgeglichen; der eigene neue Volltextabruf war mit 403 blockiert. [Quellenprovenienz](QUELLEN-V1.md), [auszufüllendes Geräte-/Pilotblatt](GERAETE-UND-PILOT-V1.md). Die fünf A4-Dokumente enthalten den vollständigen 25-Karten-Pool und zwei kurze Unterrichtspfade; ihre Zeiten sind Planungswerte.
+
+## Historischer Runde-2-Stand
+
 **Runde 2 ist ein eigener Prüfstand.** Ereigniskonsistenz, gekoppelte didaktische Detailkameras, räumlich variierte Waldkronen, eingegrenztes C17-Laichmaterial und portable historische Vergleiche sind gezielt nachgebessert. [Umfang und Verfahren](RUNDE2.md), [Curriculum](CURRICULUM-RUNDE2.md), [Quellenkontrolle](QUELLEN-RUNDE2.md), [realer Geräte-/Unterrichtspilot](IPAD-UND-UNTERRICHTSPILOT.md). Die Einzelbefunde F01–F13/N01–N07 stehen im neuen Abschlussmanifest und im Draft-PR #3. Neu laufende Prüfungen dürfen nicht aus den historischen Erfolgen unten abgeleitet werden.
 
 Der ursprüngliche 900-s-Weglauf und das 30-FPS-Ziel bleiben eigenständige Abnahmekriterien. C17 bietet jetzt einen Mittelwert je tatsächlich ablaichendem Weibchen einer Behandlung; eigene externe Primärkontrolle und Dauer bleiben offen. ETS 27–28 wurden anhand der mitgelieferten Originalseitenrender und anschließend direkt aus der erfolgreich geladenen Original-PDF gelesen. Physisches iPad/Safari und Unterrichtspilot bleiben NICHT GEPRÜFT.

@@ -1,3 +1,17 @@
+# Aktueller V1-Prüfplan
+
+```sh
+PLAYWRIGHT_BROWSERS_PATH=/pfad/zu/playwright python tools/check-compact-v1.py --output work/v1-final-eindeutig
+```
+
+Voraussetzungen: sauberer Git-Commit, Node, Python mit Playwright/Pillow, Chromium, Poppler (`pdfinfo`, `pdftotext`, `pdftoppm`). Keine neuen npm-Pakete oder externen Laufzeitdienste. Das Zielverzeichnis muss neu sein. Browserprozesse laufen seriell. Der Plan friert die gesamte Runtime einschließlich CSS/Medien ein und protokolliert jeden Prozess samt Exitcode und Buildbindung. Die 28 Legacy- und 13 Kompakt-Suiten sowie die nach aktuellem Bestand gefundenen Pythonprüfungen sind Vorprüfungen; danach folgen reale UI-/WebGL-Läufe an Quelle, Website und Einzeldatei, Native-200%-Zoom, echte Grafikverluste, 20 reale Minuten und vollständige Begehung einschließlich Abkürzung.
+
+Die unveränderte ursprüngliche 900-s-Prüfung bleibt eine separat ausgewiesene Softwaregrafik-Diagnose. Sie läuft tatsächlich; ein FAIL bleibt FAIL und der Gesamtprozess endet dann mit Exitcode 1. `softwareGatesPassed` beurteilt ausschließlich den zuvor in [D3](../ABSCHLUSSVERTRAG-V1.md) erklärten Pflichtumfang; `allProcessesPassed` umfasst zusätzlich die Diagnose. Bilder, Druckraster, nachvollziehbare Mund-/Beutekontakte und Waldentwurf benötigen zusätzlich die eigene dokumentierte Sichtprüfung. Ein grüner Prozess allein bescheinigt weder Ästhetik noch Hardwareleistung oder Lernwirkung.
+
+Der aktuelle Abschlussbericht bindet alle Ergebnisse an tatsächliche Commits, Hashes und Daten. Physischer Safari-/iPad-Hintergrundwechsel sowie Unterrichtspilot können in dieser Cloud nicht ersetzt werden. `browser-compact-v1-reference.py` dient ausschließlich einer ausdrücklich gekennzeichneten Vorprüfung; Referenzbesuche gelten niemals als normaler Fußweg. Alte Läufe und ihre Fehlschläge werden nicht überschrieben.
+
+## Historische Runde-2-Verfahren und Ergebnisse
+
 # Reproduzierbare Prüfung der zweiten Korrekturrunde
 
 ```sh

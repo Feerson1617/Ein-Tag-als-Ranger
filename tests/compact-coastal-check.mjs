@@ -8,7 +8,7 @@ import {terrainHeight}from '../dist/compact/layout.js';
 import {coastalRig,COASTAL_PROFILES,CRAB_RIG}from '../dist/compact/coastal-rig.js';
 import {createOrganism,poseCoastalBird,poseCrab}from '../dist/compact/organism-models.js';
 import {CATALOG}from '../dist/compact/catalog.js';
-const ids=Object.values(COASTAL_PROFILES).map(p=>'compact-'+p.id),out='work/qa-correction/coastal-tests';fs.mkdirSync(out,{recursive:true});let passed=0;
+const ids=Object.values(COASTAL_PROFILES).map(p=>'compact-'+p.id),out=process.argv[2]||'work/qa-correction/coastal-tests';fs.mkdirSync(out,{recursive:true});let passed=0;
 const check=(title,fn)=>{fn();passed++;console.log('PASS',title);};
 const world=seed=>{const s=createReferenceState(seed);createEcology(s);return s;};
 const requireFour=events=>{for(const id of ids)assert.ok(events.some(e=>e.actors[0]===id&&e.after===e.before-1),'No successful feeding for '+id);};

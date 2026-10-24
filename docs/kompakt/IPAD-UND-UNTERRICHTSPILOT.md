@@ -1,3 +1,5 @@
+> Aktualisierung24.10.2026: Die unten genannte Gerätekombination ist ein historischer, ungeprüfter Wunsch, keine Gerätefreigabe. Für den V1-Kandidaten gilt das auszufüllende Blatt [GERAETE-UND-PILOT-V1.md](GERAETE-UND-PILOT-V1.md) mit tatsächlich installierten Versionen.
+
 # Reale Abnahme: Prüfprofil und Pilotplan
 
 **Status: NICHT GEPRÜFT.** Kein physisches Gerät und keine Lerngruppe stehen dieser Cloudprüfung zur Verfügung. Chromium-Touchemulation, Modellereignisse und Formularabschlüsse liefern dafür keine Ergebnisse. Dies ist ein ausführbarer Prüfplan; alle Ergebnisfelder bleiben offen.

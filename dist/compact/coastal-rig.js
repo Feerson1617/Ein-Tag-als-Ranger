@@ -18,12 +18,17 @@ export function billPoint(a){
 export function carriedPreyPoint(a,time,revision=5){
  const tip=billPoint(a);if(revision<5||a.behaviorPhase!=='swallowing')return tip;
  const r=coastalRig(a.taxon);if(!r)return tip;
+ const mouth=mouthPoint(a);
+ const t=Math.min(1,Math.max(0,(time-a.phaseStartedAt)/.85));
+ return {x:tip.x+(mouth.x-tip.x)*t,y:tip.y+(mouth.y-tip.y)*t,z:tip.z+(mouth.z-tip.z)*t};
+}
+// Shared actual head/bill junction, also used to frame the external uptake.
+export function mouthPoint(a){
+ const r=coastalRig(a.taxon);
  const p=a.pose,nx=r.head[0]-r.pivot[0],ny=r.head[1]-r.pivot[1],pitch=p.pitch||0,yaw=p.yaw||0;
  const neckX=nx*Math.cos(pitch)-ny*Math.sin(pitch),neckY=nx*Math.sin(pitch)+ny*Math.cos(pitch);
  const x=(r.pivot[0]+neckX*Math.cos(yaw))*r.scale,z=-neckX*Math.sin(yaw)*r.scale;
- const mouth={x:a.x+Math.cos(a.heading)*x-Math.sin(a.heading)*z,y:a.y+(r.pivot[1]-(p.crouch||0)+neckY)*r.scale,z:a.z+Math.sin(a.heading)*x+Math.cos(a.heading)*z};
- const t=Math.min(1,Math.max(0,(time-a.phaseStartedAt)/.85));
- return {x:tip.x+(mouth.x-tip.x)*t,y:tip.y+(mouth.y-tip.y)*t,z:tip.z+(mouth.z-tip.z)*t};
+ return {x:a.x+Math.cos(a.heading)*x-Math.sin(a.heading)*z,y:a.y+(r.pivot[1]-(p.crouch||0)+neckY)*r.scale,z:a.z+Math.sin(a.heading)*x+Math.cos(a.heading)*z};
 }
 export function contactPose(a,targetY){
  const r=coastalRig(a.taxon),nx=r.head[0]-r.pivot[0],ny=r.head[1]-r.pivot[1],bx=r.bill[0]-r.head[0],by=r.bill[1]-r.head[1],beta=r.billPitch,billY=bx*Math.sin(beta)+by*Math.cos(beta),wanted=(targetY-a.y)/r.scale-(r.pivot[1]-r.crouch)-billY,headFloor=.21-(r.pivot[1]-r.crouch),neckY=Math.max(headFloor,wanted),pitch=Math.asin(Math.max(-1,Math.min(1,neckY/Math.hypot(nx,ny))))-Math.atan2(ny,nx);

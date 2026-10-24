@@ -23,10 +23,11 @@ parser.add_argument('--live-mission',choices=['all','m1','m2','m3'],default='all
 parser.add_argument('--live',action='store_true',help='Additionally earn all three missions from the live scene')
 parser.add_argument('--resilience',action='store_true',help='Test real WebGL loss, failed model load and quota errors')
 parser.add_argument('--smoke',action='store_true',help='Boot, visible scene and tools only')
+parser.add_argument('--output',default=None)
 args=parser.parse_args()
 prefix='/'+args.prefix.strip('/')+'/' if args.prefix.strip('/') else '/'
 site=(ROOT/args.site).resolve()
-out=ROOT/'work'/('browser-'+args.browser+('-subpath' if prefix!='/' else ''))
+out=ROOT/args.output if args.output else ROOT/'work'/('browser-'+args.browser+('-subpath' if prefix!='/' else ''))
 out.mkdir(parents=True,exist_ok=True)
 # A failed capture must never leave an older image posing as current evidence.
 previous=out/'failure.png'
