@@ -1,0 +1,60 @@
+{
+  "commit": "1605e337dbca86938f963debf064a1537164c065",
+  "sourceDirty": false,
+  "startedAt": "2026-10-22T19:50:53Z",
+  "site": "outputs/GitHub-Pages",
+  "entry": "index.html",
+  "prefix": "/Ein-Tag-als-Ranger/",
+  "viewport": [
+    800,
+    500
+  ],
+  "browser": "chromium",
+  "liveMissionSelection": null,
+  "passed": [
+    "boot, two main entries, three mission choices, real WebGL startup",
+    "contradictory station import is rejected before replacement; current fieldbook preserved",
+    "versioned import requires explicit replacement, individual IDs retained",
+    "references available before determination; opening does not discover taxa",
+    "UI fixture M1: wrong/incomplete/correct/justified uncertain decisions, no complete collection",
+    "UI fixture M2: missing hypothesis and false provenance rejected; supported combinations accepted",
+    "UI fixture M3: absence overclaim rejected, controlled comparison accepted",
+    "JSON/report downloads, session cancellation preserves work, open responses remain text",
+    "free exploration: real tools, keyboard, map with eight regions, tablet viewport (emulation only)",
+    "fault injection: real WebGL context loss/restoration preserves fieldbook",
+    "fault injection: required model failure blocks startup; reload recovers",
+    "fault injection: quota failure is visible instead of a persistence promise"
+  ],
+  "failed": [],
+  "errors": [],
+  "consoleErrors": [],
+  "httpErrors": [],
+  "notTested": [
+    "physical iPad/Safari",
+    "classroom timing/learning effect",
+    "20-minute minimum-device performance"
+  ],
+  "browserVersion": "154.0.8037.57",
+  "readySeconds": 13.36,
+  "resourceTransferBytes": 26674578,
+  "navigationTransferBytes": 8666,
+  "initialTransferBytes": 26683244,
+  "faultViewport": {
+    "width": 800,
+    "height": 500
+  },
+  "renderDiagnostics": {
+    "cpuSimulationMs": "15.8",
+    "cpuRenderMs": "12.9",
+    "targetFps": "60",
+    "pixelRatio": "1.00",
+    "gpuMs": "18042.6",
+    "fps": "0",
+    "drawCalls": "275",
+    "triangles": "539958"
+  },
+  "expectedFailures": [
+    "Aborted fox model request",
+    "Synthetic quota failure"
+  ]
+}

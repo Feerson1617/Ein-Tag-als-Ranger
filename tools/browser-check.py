@@ -23,11 +23,15 @@ parser.add_argument('--live-mission',choices=['all','m1','m2','m3'],default='all
 parser.add_argument('--live',action='store_true',help='Additionally earn all three missions from the live scene')
 parser.add_argument('--resilience',action='store_true',help='Test real WebGL loss, failed model load and quota errors')
 parser.add_argument('--smoke',action='store_true',help='Boot, visible scene and tools only')
+parser.add_argument('--output',default=None)
 args=parser.parse_args()
 prefix='/'+args.prefix.strip('/')+'/' if args.prefix.strip('/') else '/'
 site=(ROOT/args.site).resolve()
-out=ROOT/'work'/('browser-'+args.browser+('-subpath' if prefix!='/' else ''))
+out=ROOT/args.output if args.output else ROOT/'work'/('browser-'+args.browser+('-subpath' if prefix!='/' else ''))
 out.mkdir(parents=True,exist_ok=True)
+# A failed capture must never leave an older image posing as current evidence.
+previous=out/'failure.png'
+if previous.exists():previous.rename(out/('previous-failure-'+str(previous.stat().st_mtime_ns)+'.png'))
 class Handler(SimpleHTTPRequestHandler):
     def translate_path(self,path):
         path=urlsplit(path).path
@@ -42,7 +46,7 @@ url=f'http://127.0.0.1:{server.server_port}'+prefix+args.entry
 result={'commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),
         'sourceDirty':bool(subprocess.check_output(['git','status','--porcelain','--untracked-files=normal'],cwd=ROOT,text=True).strip()),
         'startedAt':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime()),'site':args.site,'entry':args.entry,'prefix':prefix,'viewport':[args.width,args.height],
-        'browser':args.browser,'passed':[],'failed':[],'errors':[],'consoleErrors':[],'httpErrors':[],
+        'browser':args.browser,'liveMissionSelection':args.live_mission if args.live else None,'passed':[],'failed':[],'errors':[],'consoleErrors':[],'httpErrors':[],
         'notTested':['physical iPad/Safari','classroom timing/learning effect','20-minute minimum-device performance']}
 def passed(label):
     result['passed'].append(label);print('PASS '+label,flush=True)
@@ -101,7 +105,7 @@ try:
             for taxon in ['galium_odoratum','urtica_dioica','fagus_sylvatica']:
                 page.locator('#missions').click()
                 page.locator('summary').filter(has_text='Fokustaxa im Gebiet aufsuchen').click()
-                page.locator(f'[data-focus-taxon="{taxon}"]').click()
+                page.locator(f'#panel button[data-focus-taxon="{taxon}"]').click()
                 page.wait_for_function("taxon=>document.getElementById('world').dataset.focusTaxon===taxon && !!document.getElementById('world').dataset.focusIndividual && !document.getElementById('field-note').disabled",arg=taxon,timeout=120000)
                 page.screenshot(path=str(out/f'live-{taxon}.png'),timeout=90000)
                 page.locator('#field-note').click()
@@ -227,7 +231,10 @@ try:
                 after=int(page.locator('#world').get_attribute('data-decoded-assets')or 0)
                 assert 0<initial<after<100
                 result['standaloneDecodedAssets']={'initial':initial,'afterReferences':after}
-                page.locator('#mission-free').click()
+                free=page.locator('#mission-free');page.bring_to_front();free.evaluate("b=>b.scrollIntoView({block:'center',inline:'nearest',behavior:'instant'})");assert free.is_visible()and free.is_enabled()
+                hit=free.evaluate('''b=>{const r=b.getBoundingClientRect(),x=r.left+r.width/2,y=r.top+r.height/2,e=document.elementFromPoint(x,y);return {x,y,width:r.width,height:r.height,inViewport:x>=0&&y>=0&&x<innerWidth&&y<innerHeight,hit:b===e||b.contains(e),visibility:document.visibilityState};}''')
+                result['freeResumePointer']=hit;assert hit['inViewport']and hit['hit']and hit['width']>0 and hit['height']>0,hit
+                page.mouse.click(hit['x'],hit['y']);page.locator('#panel').wait_for(state='hidden')
                 passed('standalone deferred photograph decodes and renders; most media remain deferred')
             else:page.locator('#close-panel').click()
         page.locator('#pause').click();assert page.locator('#resume-game').is_visible();page.locator('#resume-game').click()
@@ -294,9 +301,16 @@ try:
         if browser.is_connected():browser.close()
     except Exception:
         try:
+            result['failureDOM']=page.evaluate('''()=>{const rect=e=>{const r=e.getBoundingClientRect(),s=getComputedStyle(e);return {x:r.x,y:r.y,width:r.width,height:r.height,display:s.display,visibility:s.visibility,opacity:s.opacity,detailsOpen:e.closest('details')?.open,topElement:document.elementFromPoint(Math.max(0,Math.min(innerWidth-1,r.x+r.width/2)),Math.max(0,Math.min(innerHeight-1,r.y+r.height/2)))?.id};};return {viewport:[innerWidth,innerHeight],hidden:document.hidden,fonts:document.fonts.status,graphics:document.querySelector('#world').dataset.graphicsState,panelOpen:document.querySelector('#panel').open,controls:[...document.querySelectorAll('button[data-focus-taxon]')].map(e=>({taxon:e.dataset.focusTaxon,...rect(e)})),animations:document.getAnimations().map(a=>({state:a.playState,time:a.currentTime})),panelRect:rect(document.querySelector('#panel')),panelScrollTop:document.querySelector('#panel-content').scrollTop};}''')
+            failed_book=stored()
+            if failed_book is not None:
+                (out/'failed-earned-fieldbook.json').write_text(json.dumps(failed_book,ensure_ascii=False,indent=2)+'\n')
+        except Exception as diagnostic_error:result['failureDiagnosticError']=str(diagnostic_error)
+        try:
             result['failureUI']={'toast':page.locator('#toast').inner_text(),'focus':page.locator('#focus-name').inner_text(),'progress':page.locator('#progress').inner_text(),'tool':page.locator('#world').get_attribute('data-tool'),'observation':page.locator('#world').evaluate('(e)=>Object.fromEntries(Object.entries(e.dataset).filter(([k])=>/focus|observation|simulationTime|fps|frameP95/i.test(k)))')}
             page.screenshot(path=str(out/'failure.png'),timeout=30000)
-        except Exception:pass
+            result['failureScreenshot']='failure.png'
+        except Exception as capture_error:result['failureScreenshotError']=str(capture_error)
         raise
 
 except Exception as error:

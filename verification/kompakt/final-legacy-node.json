@@ -1,0 +1,190 @@
+{
+  "startedAt": "2026-10-21T20:49:32Z",
+  "commit": "2326283ab01fbb25644f82e3cada26d9a2b509ea",
+  "node": "v24.19.0",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "results": [
+    {
+      "check": "living-world",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 14.2,
+      "error": ""
+    },
+    {
+      "check": "ranger",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 8.4,
+      "error": ""
+    },
+    {
+      "check": "behavior",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 34.6,
+      "error": ""
+    },
+    {
+      "check": "scenario",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 20.2,
+      "error": ""
+    },
+    {
+      "check": "quest",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 2.7,
+      "error": ""
+    },
+    {
+      "check": "regional-evolution",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 47.9,
+      "error": ""
+    },
+    {
+      "check": "world",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 14.3,
+      "error": ""
+    },
+    {
+      "check": "observation",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 0.2,
+      "error": ""
+    },
+    {
+      "check": "live-experiment",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 20.3,
+      "error": ""
+    },
+    {
+      "check": "coast-performance",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 5.4,
+      "error": ""
+    },
+    {
+      "check": "locomotion",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 16.2,
+      "error": ""
+    },
+    {
+      "check": "village-barrier",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 5.6,
+      "error": ""
+    },
+    {
+      "check": "route-birds",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 21.7,
+      "error": ""
+    },
+    {
+      "check": "ranger-usability",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 7.4,
+      "error": ""
+    },
+    {
+      "check": "compact-world",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 10.9,
+      "error": ""
+    },
+    {
+      "check": "web-performance",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 0.1,
+      "error": ""
+    },
+    {
+      "check": "render-retention",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 0.6,
+      "error": ""
+    },
+    {
+      "check": "avian-anatomy",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 0.7,
+      "error": ""
+    },
+    {
+      "check": "ranger-session",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 0.1,
+      "error": ""
+    },
+    {
+      "check": "authored-wildlife",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 0.4,
+      "error": ""
+    },
+    {
+      "check": "evidence-regression",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 0.4,
+      "error": ""
+    },
+    {
+      "check": "catalogue-audit",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 0.1,
+      "error": ""
+    },
+    {
+      "check": "learning-missions",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 0.2,
+      "error": ""
+    },
+    {
+      "check": "fidelity",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 10.6,
+      "error": ""
+    },
+    {
+      "check": "mission-runtime",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 4.5,
+      "error": ""
+    },
+    {
+      "check": "field",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 97.4,
+      "error": ""
+    }
+  ]
+}

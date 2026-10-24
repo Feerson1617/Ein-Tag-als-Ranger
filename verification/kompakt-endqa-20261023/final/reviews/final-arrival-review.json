@@ -1,0 +1,1139 @@
+{
+  "reviewedAtUTC": "2026-10-23T09:04:37.761015+00:00",
+  "status": "FUNCTIONAL EVIDENCE PASS WITH EXPLICIT VISUAL LIMITS; HISTORICAL 900-SECOND FAILURE PRESERVED",
+  "scope": "Own read-only audit of the completed supplemental arrival run. Original screenshots and five unchanged decoded frames inspected as listed; no new browser run, product edit, artificial evidence or independent visual/device acceptance.",
+  "technicalEvidenceChecksPassed": true,
+  "unconditionalVisualAcceptance": false,
+  "minimumDevicePerformanceEstablished": false,
+  "sourceCommit": "3920a1d1d2692889b75403c1b0e50f5b856398aa",
+  "sourceDirty": false,
+  "sourceReport": "work/qa-correction/supplemental-arrival-3600/result.json",
+  "sourceReportSHA256": "c0e883cc519d52348b931eb986f27168bc8af8728e32867500eba7466ca2eb54",
+  "runtimeFreeze": "work/final-qa/runtime-freeze.json",
+  "runtimeFreezeSHA256": "76848e7e5c86e476f38831af4d4162623adfc01a8ad310c7b7ab1dc0aee0a667",
+  "runtimeHashCount": 51,
+  "allRuntimeHashesMatchFreezeAndDisk": true,
+  "htmlSHA256": "b61a35456fcd6253ed6693d7fa8031f3ae5b7ca48502837d744c82b3dfc227b4",
+  "planExecution": {
+    "name": "supplemental-arrival-3600",
+    "command": [
+      "/workspace/.ranger-clean-venv/bin/python",
+      "tools/browser-compact-arrival.py",
+      "--output",
+      "work/qa-correction/supplemental-arrival-3600",
+      "--walk-wall-budget",
+      "3600"
+    ],
+    "exitCode": 0,
+    "processTimeoutSeconds": 6000,
+    "passed": true,
+    "seconds": 2016.05,
+    "log": "supplemental-arrival-3600.log"
+  },
+  "arrivalAtModelSeconds": 259.635,
+  "arrivalResources": {
+    "small-juveniles": 0,
+    "small-worms": 0,
+    "shrimp": 0,
+    "shared-mussels": 0
+  },
+  "route": {
+    "authoredMainMeters": 362.2102529662271,
+    "segments": [
+      {
+        "name": "full-main-route",
+        "actualSeconds": 1493.3465494069987,
+        "modelSeconds": 225.73,
+        "sampledTravelMeters": 361.05462179541036,
+        "endpointDistanceMeters": 0.050709793674148455,
+        "startObserver": {
+          "x": -52,
+          "z": 8,
+          "yaw": 1.5707963267948966,
+          "pitch": -0.06
+        },
+        "endObserver": {
+          "x": 77.05046265833779,
+          "z": 33.99499967121502,
+          "yaw": -1.580874235949245,
+          "pitch": -0.06
+        }
+      },
+      {
+        "name": "return-to-study-spur",
+        "actualSeconds": 268.59697368199886,
+        "modelSeconds": 26.927999999999997,
+        "sampledTravelMeters": 42.4222194484285,
+        "endpointDistanceMeters": 0.4039461567041071,
+        "startObserver": {
+          "x": 77.05046265833779,
+          "z": 33.99499967121502,
+          "yaw": -1.580874235949245,
+          "pitch": -0.06
+        },
+        "endObserver": {
+          "x": 69.76001085479557,
+          "z": 10.324927234469603,
+          "yaw": -6.933331908068384,
+          "pitch": -0.06
+        }
+      },
+      {
+        "name": "study-spur",
+        "actualSeconds": 74.62964562100024,
+        "modelSeconds": 6.146999999999991,
+        "sampledTravelMeters": 9.817461211223298,
+        "endpointDistanceMeters": 0.4493101695694989,
+        "startObserver": {
+          "x": 69.76001085479557,
+          "z": 10.324927234469603,
+          "yaw": -6.933331908068384,
+          "pitch": -0.06
+        },
+        "endObserver": {
+          "x": 63.44446495992412,
+          "z": 4.065806746449154,
+          "yaw": -4.849736327013698,
+          "pitch": -0.06
+        }
+      }
+    ],
+    "segmentWallBudgetSeconds": 3600,
+    "processBudgetSeconds": 6000,
+    "original900BudgetPassed": false,
+    "scope": "Observed endpoint agreement and driver telemetry from native W/mouse input, not a continuous video of the entire route. Sampled movement length is below authored route length by endpoint/timestep sampling; route-level movement remains separate from model-window resets."
+  },
+  "sequences": [
+    {
+      "index": 1,
+      "individualId": "compact-oystercatcher",
+      "realtime": true,
+      "runId": "a6094798-d760-4dd5-b928-24a98e66c503",
+      "previousRunId": "0b36290b-bbfa-45e3-a322-24ec850bf635",
+      "previousSimulationTime": 259.63539999999335,
+      "localSite": "outlook",
+      "observerUnchangedByNewContext": true,
+      "initialResources": {
+        "small-juveniles": 3,
+        "small-worms": 3,
+        "shrimp": 5,
+        "shared-mussels": 18
+      },
+      "phaseCaptureModelTimes": {
+        "approaching": 0.115,
+        "searching": 0.522,
+        "handling": 1.172,
+        "swallowing": 4.097,
+        "departing": 5.072,
+        "after-departure": 6.323
+      },
+      "captureCount": 6,
+      "allHashesAndPNGsValid": true,
+      "allVisibilityChecksPassed": true,
+      "fiveNamedPhasesStableAcrossCapture": true,
+      "preyId": "compact-mussel-16",
+      "eventId": "ranger-compact-v2:summer:3",
+      "resource": "shared-mussels",
+      "resourceBefore": 18,
+      "resourceAfter": 17,
+      "contactDistanceMeters": 0.002334588660752086,
+      "preyAliveDuringHandlingRemovedBySwallowing": true,
+      "departureDistanceMeters": 0.44461788501454563,
+      "modelStepsOwnObservationSecondsZero": false,
+      "actualSeconds": 18.167270137999367
+    },
+    {
+      "index": 2,
+      "individualId": "compact-avocet",
+      "realtime": false,
+      "runId": "ff1fff9e-5b9c-4bab-9de4-440e7e1fd7d7",
+      "previousRunId": "a6094798-d760-4dd5-b928-24a98e66c503",
+      "previousSimulationTime": 6.71330000000006,
+      "localSite": "outlook",
+      "observerUnchangedByNewContext": true,
+      "initialResources": {
+        "small-juveniles": 3,
+        "small-worms": 3,
+        "shrimp": 5,
+        "shared-mussels": 18
+      },
+      "phaseCaptureModelTimes": {
+        "approaching": 30,
+        "searching": 30.225,
+        "handling": 31.225,
+        "swallowing": 31.725,
+        "departing": 32.725,
+        "after-departure": 33.925
+      },
+      "captureCount": 6,
+      "allHashesAndPNGsValid": true,
+      "allVisibilityChecksPassed": true,
+      "fiveNamedPhasesStableAcrossCapture": true,
+      "preyId": "compact-juvenile-worm-0",
+      "eventId": "ranger-compact-v2:summer:23",
+      "resource": "small-juveniles",
+      "resourceBefore": 3,
+      "resourceAfter": 2,
+      "contactDistanceMeters": 4.79573714073922e-09,
+      "preyAliveDuringHandlingRemovedBySwallowing": true,
+      "departureDistanceMeters": 0.45000000000000284,
+      "modelStepsOwnObservationSecondsZero": true,
+      "actualSeconds": 13.19317942699854
+    },
+    {
+      "index": 3,
+      "individualId": "compact-redshank",
+      "realtime": false,
+      "runId": "2312997e-3121-4717-b036-e71aba25c9fd",
+      "previousRunId": "ff1fff9e-5b9c-4bab-9de4-440e7e1fd7d7",
+      "previousSimulationTime": 33.94170000000037,
+      "localSite": "outlook",
+      "observerUnchangedByNewContext": true,
+      "initialResources": {
+        "small-juveniles": 3,
+        "small-worms": 3,
+        "shrimp": 5,
+        "shared-mussels": 18
+      },
+      "phaseCaptureModelTimes": {
+        "approaching": 21,
+        "searching": 21.35,
+        "handling": 22.1,
+        "swallowing": 22.85,
+        "departing": 23.85,
+        "after-departure": 25.05
+      },
+      "captureCount": 6,
+      "allHashesAndPNGsValid": true,
+      "allVisibilityChecksPassed": true,
+      "fiveNamedPhasesStableAcrossCapture": true,
+      "preyId": "compact-juvenile-worm-3",
+      "eventId": "ranger-compact-v2:summer:17",
+      "resource": "small-worms",
+      "resourceBefore": 3,
+      "resourceAfter": 2,
+      "contactDistanceMeters": 3.68771679859492e-11,
+      "preyAliveDuringHandlingRemovedBySwallowing": true,
+      "departureDistanceMeters": 0.4230272276353756,
+      "modelStepsOwnObservationSecondsZero": true,
+      "actualSeconds": 17.25594736200037
+    },
+    {
+      "index": 4,
+      "individualId": "compact-spoonbill",
+      "realtime": false,
+      "runId": "e9c2cbab-5329-4ac3-80fd-7568778a6bce",
+      "previousRunId": "2312997e-3121-4717-b036-e71aba25c9fd",
+      "previousSimulationTime": 25.08339999999997,
+      "localSite": "outlook",
+      "observerUnchangedByNewContext": true,
+      "initialResources": {
+        "small-juveniles": 3,
+        "small-worms": 3,
+        "shrimp": 5,
+        "shared-mussels": 18
+      },
+      "phaseCaptureModelTimes": {
+        "approaching": 4.5,
+        "searching": 5.95,
+        "handling": 7.2,
+        "swallowing": 7.95,
+        "departing": 8.95,
+        "after-departure": 10.15
+      },
+      "captureCount": 6,
+      "allHashesAndPNGsValid": true,
+      "allVisibilityChecksPassed": true,
+      "fiveNamedPhasesStableAcrossCapture": true,
+      "preyId": "compact-shrimp-3",
+      "eventId": "ranger-compact-v2:summer:6",
+      "resource": "shrimp",
+      "resourceBefore": 4,
+      "resourceAfter": 3,
+      "contactDistanceMeters": 8.771263920207955e-10,
+      "preyAliveDuringHandlingRemovedBySwallowing": true,
+      "departureDistanceMeters": 0.432121833088573,
+      "modelStepsOwnObservationSecondsZero": true,
+      "actualSeconds": 11.302843700999802
+    },
+    {
+      "index": 5,
+      "individualId": "compact-avocet",
+      "realtime": false,
+      "runId": "76421e1f-bd25-46fd-9057-e6443e0b99ee",
+      "previousRunId": "e9c2cbab-5329-4ac3-80fd-7568778a6bce",
+      "previousSimulationTime": 1210.149999999995,
+      "localSite": "outlook",
+      "observerUnchangedByNewContext": true,
+      "initialResources": {
+        "small-juveniles": 3,
+        "small-worms": 3,
+        "shrimp": 5,
+        "shared-mussels": 18
+      },
+      "phaseCaptureModelTimes": {
+        "approaching": 30,
+        "searching": 30.225,
+        "handling": 31.225,
+        "swallowing": 31.725,
+        "departing": 32.725,
+        "after-departure": 33.925
+      },
+      "captureCount": 6,
+      "allHashesAndPNGsValid": true,
+      "allVisibilityChecksPassed": true,
+      "fiveNamedPhasesStableAcrossCapture": true,
+      "preyId": "compact-juvenile-worm-0",
+      "eventId": "ranger-compact-v2:summer:23",
+      "resource": "small-juveniles",
+      "resourceBefore": 3,
+      "resourceAfter": 2,
+      "contactDistanceMeters": 4.79573714073922e-09,
+      "preyAliveDuringHandlingRemovedBySwallowing": true,
+      "departureDistanceMeters": 0.45000000000000284,
+      "modelStepsOwnObservationSecondsZero": true,
+      "actualSeconds": 10.246011627999906
+    },
+    {
+      "index": 6,
+      "individualId": "compact-redshank",
+      "realtime": false,
+      "runId": "e210d6b8-98ba-439b-9c11-ad5b83fe1fd7",
+      "previousRunId": "76421e1f-bd25-46fd-9057-e6443e0b99ee",
+      "previousSimulationTime": 33.94170000000013,
+      "localSite": "outlook",
+      "observerUnchangedByNewContext": true,
+      "initialResources": {
+        "small-juveniles": 3,
+        "small-worms": 3,
+        "shrimp": 5,
+        "shared-mussels": 18
+      },
+      "phaseCaptureModelTimes": {
+        "approaching": 21,
+        "searching": 21.35,
+        "handling": 22.1,
+        "swallowing": 22.85,
+        "departing": 23.85,
+        "after-departure": 25.05
+      },
+      "captureCount": 6,
+      "allHashesAndPNGsValid": true,
+      "allVisibilityChecksPassed": true,
+      "fiveNamedPhasesStableAcrossCapture": true,
+      "preyId": "compact-juvenile-worm-3",
+      "eventId": "ranger-compact-v2:summer:17",
+      "resource": "small-worms",
+      "resourceBefore": 3,
+      "resourceAfter": 2,
+      "contactDistanceMeters": 3.68771679859492e-11,
+      "preyAliveDuringHandlingRemovedBySwallowing": true,
+      "departureDistanceMeters": 0.4230272276353756,
+      "modelStepsOwnObservationSecondsZero": true,
+      "actualSeconds": 16.47527463299957
+    },
+    {
+      "index": 7,
+      "individualId": "compact-spoonbill",
+      "realtime": false,
+      "runId": "e368dc71-87a9-44ce-8ac6-d4aeddebaab7",
+      "previousRunId": "e210d6b8-98ba-439b-9c11-ad5b83fe1fd7",
+      "previousSimulationTime": 25.066700000000015,
+      "localSite": "outlook",
+      "observerUnchangedByNewContext": true,
+      "initialResources": {
+        "small-juveniles": 3,
+        "small-worms": 3,
+        "shrimp": 5,
+        "shared-mussels": 18
+      },
+      "phaseCaptureModelTimes": {
+        "approaching": 4.5,
+        "searching": 5.95,
+        "handling": 7.2,
+        "swallowing": 7.95,
+        "departing": 8.95,
+        "after-departure": 10.15
+      },
+      "captureCount": 6,
+      "allHashesAndPNGsValid": true,
+      "allVisibilityChecksPassed": true,
+      "fiveNamedPhasesStableAcrossCapture": true,
+      "preyId": "compact-shrimp-3",
+      "eventId": "ranger-compact-v2:summer:6",
+      "resource": "shrimp",
+      "resourceBefore": 4,
+      "resourceAfter": 3,
+      "contactDistanceMeters": 8.771263920207955e-10,
+      "preyAliveDuringHandlingRemovedBySwallowing": true,
+      "departureDistanceMeters": 0.432121833088573,
+      "modelStepsOwnObservationSecondsZero": true,
+      "actualSeconds": 8.832909888998984
+    },
+    {
+      "index": 8,
+      "individualId": "compact-oystercatcher",
+      "realtime": false,
+      "runId": "c5668f56-a9e3-45d7-b43a-8c27c2a228a0",
+      "previousRunId": "e368dc71-87a9-44ce-8ac6-d4aeddebaab7",
+      "previousSimulationTime": 10.166600000000093,
+      "localSite": "outlook",
+      "observerUnchangedByNewContext": true,
+      "initialResources": {
+        "small-juveniles": 3,
+        "small-worms": 3,
+        "shrimp": 5,
+        "shared-mussels": 18
+      },
+      "phaseCaptureModelTimes": {
+        "approaching": 6.5,
+        "searching": 6.625,
+        "handling": 7.375,
+        "swallowing": 10.375,
+        "departing": 11.375,
+        "after-departure": 12.475
+      },
+      "captureCount": 6,
+      "allHashesAndPNGsValid": true,
+      "allVisibilityChecksPassed": true,
+      "fiveNamedPhasesStableAcrossCapture": true,
+      "preyId": "compact-mussel-5",
+      "eventId": "ranger-compact-v2:summer:9",
+      "resource": "shared-mussels",
+      "resourceBefore": 17,
+      "resourceAfter": 16,
+      "contactDistanceMeters": 0.0023443280093688908,
+      "preyAliveDuringHandlingRemovedBySwallowing": true,
+      "departureDistanceMeters": 0.4322493133031281,
+      "modelStepsOwnObservationSecondsZero": true,
+      "actualSeconds": 10.206367605000196
+    }
+  ],
+  "originalPhaseImageCount": 48,
+  "originalRouteImageCount": 3,
+  "images": [
+    {
+      "file": "work/qa-correction/supplemental-arrival-3600/walk-full-main-route.png",
+      "sha256": "334f87d7e06db2fcd98f89a700644cac565d8ff0d0213624b0700845db617073",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngIntegrityValid": true,
+      "recordedHashPresent": false,
+      "actuallyViewed": true,
+      "kind": "route endpoint"
+    },
+    {
+      "file": "work/qa-correction/supplemental-arrival-3600/walk-return-to-study-spur.png",
+      "sha256": "30e3a55d6b82266b0640653391a066135c800de74b8dc9c242487cce507a7679",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngIntegrityValid": true,
+      "recordedHashPresent": false,
+      "actuallyViewed": false,
+      "kind": "route endpoint"
+    },
+    {
+      "file": "work/qa-correction/supplemental-arrival-3600/walk-study-spur.png",
+      "sha256": "91e37cc717da3832d846745484d682257cba8308f7ac245d8c15594c8efba11d",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngIntegrityValid": true,
+      "recordedHashPresent": false,
+      "actuallyViewed": true,
+      "kind": "route endpoint"
+    },
+    {
+      "file": "work/qa-correction/supplemental-arrival-3600/sequence-1-compact-oystercatcher-approaching.png",
+      "sha256": "0bf3cc9a6d3b042eb2e6a732cfb0ec80db9c7b498276eb1b6b59cf7dc4b0097b",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngIntegrityValid": true,
+      "recordedHashPresent": true,
+      "actuallyViewed": false,
+      "kind": "sequence phase"
+    },
+    {
+      "file": "work/qa-correction/supplemental-arrival-3600/sequence-1-compact-oystercatcher-searching.png",
+      "sha256": "3db2538e1c6eb468e799f74a5cbc2d1583e9fee3a2d28e8d94333d3de04c5302",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngIntegrityValid": true,
+      "recordedHashPresent": true,
+      "actuallyViewed": false,
+      "kind": "sequence phase"
+    },
+    {
+      "file": "work/qa-correction/supplemental-arrival-3600/sequence-1-compact-oystercatcher-handling.png",
+      "sha256": "29d2fb0576272fc3d79487dd1ae102966da917e76c514f6c20b560dffb06fc65",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngIntegrityValid": true,
+      "recordedHashPresent": true,
+      "actuallyViewed": true,
+      "kind": "sequence phase"
+    },
+    {
+      "file": "work/qa-correction/supplemental-arrival-3600/sequence-1-compact-oystercatcher-swallowing.png",
+      "sha256": "d3fcbc048409ca6a57310b9f82f784218ca4b76a2d7715ffddde18129893fe21",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngIntegrityValid": true,
+      "recordedHashPresent": true,
+      "actuallyViewed": false,
+      "kind": "sequence phase"
+    },
+    {
+      "file": "work/qa-correction/supplemental-arrival-3600/sequence-1-compact-oystercatcher-departing.png",
+      "sha256": "e1fb18fbd7b86dd73a3597b482aa1f65cbf623b48272652bf0662eca43e6ec02",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngIntegrityValid": true,
+      "recordedHashPresent": true,
+      "actuallyViewed": false,
+      "kind": "sequence phase"
+    },
+    {
+      "file": "work/qa-correction/supplemental-arrival-3600/sequence-1-compact-oystercatcher-after-departure.png",
+      "sha256": "524d1f8d61dd62f0f2d98bd15f00306fbc444d4a89f17514abc8060dd8342ea8",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngIntegrityValid": true,
+      "recordedHashPresent": true,
+      "actuallyViewed": false,
+      "kind": "sequence phase"
+    },
+    {
+      "file": "work/qa-correction/supplemental-arrival-3600/sequence-2-compact-avocet-approaching.png",
+      "sha256": "60c01d2fd71639e7cab00abc28adac21898e7da04a95b5e606c6b72b3b72311b",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngIntegrityValid": true,
+      "recordedHashPresent": true,
+      "actuallyViewed": false,
+      "kind": "sequence phase"
+    },
+    {
+      "file": "work/qa-correction/supplemental-arrival-3600/sequence-2-compact-avocet-searching.png",
+      "sha256": "0305cac0af1eec80a4fb104500ffb478e4a28efa7c09f20682a898e2fdb86f1d",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngIntegrityValid": true,
+      "recordedHashPresent": true,
+      "actuallyViewed": false,
+      "kind": "sequence phase"
+    },
+    {
+      "file": "work/qa-correction/supplemental-arrival-3600/sequence-2-compact-avocet-handling.png",
+      "sha256": "2548fe7f19cb931aa57cd4cd0bb87583c397af7896f262812f17ae9d5674e51e",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngIntegrityValid": true,
+      "recordedHashPresent": true,
+      "actuallyViewed": false,
+      "kind": "sequence phase"
+    },
+    {
+      "file": "work/qa-correction/supplemental-arrival-3600/sequence-2-compact-avocet-swallowing.png",
+      "sha256": "ae3e0ee5a4afce2c92d8e3915fc790f649da3f82117b1e7c474d142182c866f4",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngIntegrityValid": true,
+      "recordedHashPresent": true,
+      "actuallyViewed": true,
+      "kind": "sequence phase"
+    },
+    {
+      "file": "work/qa-correction/supplemental-arrival-3600/sequence-2-compact-avocet-departing.png",
+      "sha256": "f72a47055974e4e8b31f8bd15a83b721462c0e95968fac8f1ca46a4162a996d9",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngIntegrityValid": true,
+      "recordedHashPresent": true,
+      "actuallyViewed": false,
+      "kind": "sequence phase"
+    },
+    {
+      "file": "work/qa-correction/supplemental-arrival-3600/sequence-2-compact-avocet-after-departure.png",
+      "sha256": "50d0b85c4249e5eb8c3efc17497f06d30f9df19ecbba8687cfd7fc420d5b4ab1",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngIntegrityValid": true,
+      "recordedHashPresent": true,
+      "actuallyViewed": false,
+      "kind": "sequence phase"
+    },
+    {
+      "file": "work/qa-correction/supplemental-arrival-3600/sequence-3-compact-redshank-approaching.png",
+      "sha256": "ca90791c8ba2dd46aceb9c93420ce87309181b03c770389f8765cd5915a4f8c9",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngIntegrityValid": true,
+      "recordedHashPresent": true,
+      "actuallyViewed": false,
+      "kind": "sequence phase"
+    },
+    {
+      "file": "work/qa-correction/supplemental-arrival-3600/sequence-3-compact-redshank-searching.png",
+      "sha256": "5dbc73ff6fe0289a3acb5160f859f8d648d131f44e6d52d91551c2d3b77813b8",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngIntegrityValid": true,
+      "recordedHashPresent": true,
+      "actuallyViewed": false,
+      "kind": "sequence phase"
+    },
+    {
+      "file": "work/qa-correction/supplemental-arrival-3600/sequence-3-compact-redshank-handling.png",
+      "sha256": "129e4f6b6c759eb2ab832f57b804688a0e082a539e7ca5154b3171bdf2d1beb6",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngIntegrityValid": true,
+      "recordedHashPresent": true,
+      "actuallyViewed": true,
+      "kind": "sequence phase"
+    },
+    {
+      "file": "work/qa-correction/supplemental-arrival-3600/sequence-3-compact-redshank-swallowing.png",
+      "sha256": "a05ed3e8259a001bb937eb62ce998633e10c6e8315df586cb8b35bae432a1c7f",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngIntegrityValid": true,
+      "recordedHashPresent": true,
+      "actuallyViewed": false,
+      "kind": "sequence phase"
+    },
+    {
+      "file": "work/qa-correction/supplemental-arrival-3600/sequence-3-compact-redshank-departing.png",
+      "sha256": "19e60ab3e970deb0f7591fc488f81116899b16047964e546f2996193338fffe9",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngIntegrityValid": true,
+      "recordedHashPresent": true,
+      "actuallyViewed": false,
+      "kind": "sequence phase"
+    },
+    {
+      "file": "work/qa-correction/supplemental-arrival-3600/sequence-3-compact-redshank-after-departure.png",
+      "sha256": "57ef9c2953fa292b997b1e65d5e04ff5baafdf0fb5e8e81755603270bdac0955",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngIntegrityValid": true,
+      "recordedHashPresent": true,
+      "actuallyViewed": false,
+      "kind": "sequence phase"
+    },
+    {
+      "file": "work/qa-correction/supplemental-arrival-3600/sequence-4-compact-spoonbill-approaching.png",
+      "sha256": "b3eefa5eb37bdde485da43309c9dae9688ed34b03bf2ebb88c9ab239d112c054",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngIntegrityValid": true,
+      "recordedHashPresent": true,
+      "actuallyViewed": false,
+      "kind": "sequence phase"
+    },
+    {
+      "file": "work/qa-correction/supplemental-arrival-3600/sequence-4-compact-spoonbill-searching.png",
+      "sha256": "2e2a0825ae863481f48e485282552c9bcb33453f55ded9d691cad5218e178a5a",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngIntegrityValid": true,
+      "recordedHashPresent": true,
+      "actuallyViewed": false,
+      "kind": "sequence phase"
+    },
+    {
+      "file": "work/qa-correction/supplemental-arrival-3600/sequence-4-compact-spoonbill-handling.png",
+      "sha256": "a714484c75c5f0e83d32d2b68a30fd660b54620aafe11ba99173d49969a42740",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngIntegrityValid": true,
+      "recordedHashPresent": true,
+      "actuallyViewed": true,
+      "kind": "sequence phase"
+    },
+    {
+      "file": "work/qa-correction/supplemental-arrival-3600/sequence-4-compact-spoonbill-swallowing.png",
+      "sha256": "83b0b22adb6d092c32553d772a51ae320186407f0902239cf702b52a03dd1b39",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngIntegrityValid": true,
+      "recordedHashPresent": true,
+      "actuallyViewed": false,
+      "kind": "sequence phase"
+    },
+    {
+      "file": "work/qa-correction/supplemental-arrival-3600/sequence-4-compact-spoonbill-departing.png",
+      "sha256": "c4ee8cf07a37bc33759755475cc0ee60ece7ec8ea5a8020271f7f3ce006fe059",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngIntegrityValid": true,
+      "recordedHashPresent": true,
+      "actuallyViewed": false,
+      "kind": "sequence phase"
+    },
+    {
+      "file": "work/qa-correction/supplemental-arrival-3600/sequence-4-compact-spoonbill-after-departure.png",
+      "sha256": "d9fa05ccebf615e5e4044210958794e5a04dbfd11dc922087309c7a476af99c3",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngIntegrityValid": true,
+      "recordedHashPresent": true,
+      "actuallyViewed": false,
+      "kind": "sequence phase"
+    },
+    {
+      "file": "work/qa-correction/supplemental-arrival-3600/sequence-5-compact-avocet-approaching.png",
+      "sha256": "b82701a1a7c207284872b2f58eaef1637e4f811a4746f0389cc07d8264c4a853",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngIntegrityValid": true,
+      "recordedHashPresent": true,
+      "actuallyViewed": false,
+      "kind": "sequence phase"
+    },
+    {
+      "file": "work/qa-correction/supplemental-arrival-3600/sequence-5-compact-avocet-searching.png",
+      "sha256": "0305cac0af1eec80a4fb104500ffb478e4a28efa7c09f20682a898e2fdb86f1d",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngIntegrityValid": true,
+      "recordedHashPresent": true,
+      "actuallyViewed": false,
+      "kind": "sequence phase"
+    },
+    {
+      "file": "work/qa-correction/supplemental-arrival-3600/sequence-5-compact-avocet-handling.png",
+      "sha256": "2548fe7f19cb931aa57cd4cd0bb87583c397af7896f262812f17ae9d5674e51e",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngIntegrityValid": true,
+      "recordedHashPresent": true,
+      "actuallyViewed": true,
+      "kind": "sequence phase"
+    },
+    {
+      "file": "work/qa-correction/supplemental-arrival-3600/sequence-5-compact-avocet-swallowing.png",
+      "sha256": "ae3e0ee5a4afce2c92d8e3915fc790f649da3f82117b1e7c474d142182c866f4",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngIntegrityValid": true,
+      "recordedHashPresent": true,
+      "actuallyViewed": false,
+      "kind": "sequence phase"
+    },
+    {
+      "file": "work/qa-correction/supplemental-arrival-3600/sequence-5-compact-avocet-departing.png",
+      "sha256": "f72a47055974e4e8b31f8bd15a83b721462c0e95968fac8f1ca46a4162a996d9",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngIntegrityValid": true,
+      "recordedHashPresent": true,
+      "actuallyViewed": false,
+      "kind": "sequence phase"
+    },
+    {
+      "file": "work/qa-correction/supplemental-arrival-3600/sequence-5-compact-avocet-after-departure.png",
+      "sha256": "50d0b85c4249e5eb8c3efc17497f06d30f9df19ecbba8687cfd7fc420d5b4ab1",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngIntegrityValid": true,
+      "recordedHashPresent": true,
+      "actuallyViewed": false,
+      "kind": "sequence phase"
+    },
+    {
+      "file": "work/qa-correction/supplemental-arrival-3600/sequence-6-compact-redshank-approaching.png",
+      "sha256": "d3ed10ed00d88055ba05532cf541a79772d6f42fdc73fa0e8455893fc2dec1a3",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngIntegrityValid": true,
+      "recordedHashPresent": true,
+      "actuallyViewed": false,
+      "kind": "sequence phase"
+    },
+    {
+      "file": "work/qa-correction/supplemental-arrival-3600/sequence-6-compact-redshank-searching.png",
+      "sha256": "5dbc73ff6fe0289a3acb5160f859f8d648d131f44e6d52d91551c2d3b77813b8",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngIntegrityValid": true,
+      "recordedHashPresent": true,
+      "actuallyViewed": false,
+      "kind": "sequence phase"
+    },
+    {
+      "file": "work/qa-correction/supplemental-arrival-3600/sequence-6-compact-redshank-handling.png",
+      "sha256": "129e4f6b6c759eb2ab832f57b804688a0e082a539e7ca5154b3171bdf2d1beb6",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngIntegrityValid": true,
+      "recordedHashPresent": true,
+      "actuallyViewed": false,
+      "kind": "sequence phase"
+    },
+    {
+      "file": "work/qa-correction/supplemental-arrival-3600/sequence-6-compact-redshank-swallowing.png",
+      "sha256": "a05ed3e8259a001bb937eb62ce998633e10c6e8315df586cb8b35bae432a1c7f",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngIntegrityValid": true,
+      "recordedHashPresent": true,
+      "actuallyViewed": true,
+      "kind": "sequence phase"
+    },
+    {
+      "file": "work/qa-correction/supplemental-arrival-3600/sequence-6-compact-redshank-departing.png",
+      "sha256": "19e60ab3e970deb0f7591fc488f81116899b16047964e546f2996193338fffe9",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngIntegrityValid": true,
+      "recordedHashPresent": true,
+      "actuallyViewed": false,
+      "kind": "sequence phase"
+    },
+    {
+      "file": "work/qa-correction/supplemental-arrival-3600/sequence-6-compact-redshank-after-departure.png",
+      "sha256": "57ef9c2953fa292b997b1e65d5e04ff5baafdf0fb5e8e81755603270bdac0955",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngIntegrityValid": true,
+      "recordedHashPresent": true,
+      "actuallyViewed": false,
+      "kind": "sequence phase"
+    },
+    {
+      "file": "work/qa-correction/supplemental-arrival-3600/sequence-7-compact-spoonbill-approaching.png",
+      "sha256": "b3eefa5eb37bdde485da43309c9dae9688ed34b03bf2ebb88c9ab239d112c054",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngIntegrityValid": true,
+      "recordedHashPresent": true,
+      "actuallyViewed": false,
+      "kind": "sequence phase"
+    },
+    {
+      "file": "work/qa-correction/supplemental-arrival-3600/sequence-7-compact-spoonbill-searching.png",
+      "sha256": "47c304c97a273919cbdf56d211aed0e7c9eb8936477922ae91cb469d0f189abc",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngIntegrityValid": true,
+      "recordedHashPresent": true,
+      "actuallyViewed": false,
+      "kind": "sequence phase"
+    },
+    {
+      "file": "work/qa-correction/supplemental-arrival-3600/sequence-7-compact-spoonbill-handling.png",
+      "sha256": "a714484c75c5f0e83d32d2b68a30fd660b54620aafe11ba99173d49969a42740",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngIntegrityValid": true,
+      "recordedHashPresent": true,
+      "actuallyViewed": false,
+      "kind": "sequence phase"
+    },
+    {
+      "file": "work/qa-correction/supplemental-arrival-3600/sequence-7-compact-spoonbill-swallowing.png",
+      "sha256": "83b0b22adb6d092c32553d772a51ae320186407f0902239cf702b52a03dd1b39",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngIntegrityValid": true,
+      "recordedHashPresent": true,
+      "actuallyViewed": false,
+      "kind": "sequence phase"
+    },
+    {
+      "file": "work/qa-correction/supplemental-arrival-3600/sequence-7-compact-spoonbill-departing.png",
+      "sha256": "c4ee8cf07a37bc33759755475cc0ee60ece7ec8ea5a8020271f7f3ce006fe059",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngIntegrityValid": true,
+      "recordedHashPresent": true,
+      "actuallyViewed": false,
+      "kind": "sequence phase"
+    },
+    {
+      "file": "work/qa-correction/supplemental-arrival-3600/sequence-7-compact-spoonbill-after-departure.png",
+      "sha256": "d9fa05ccebf615e5e4044210958794e5a04dbfd11dc922087309c7a476af99c3",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngIntegrityValid": true,
+      "recordedHashPresent": true,
+      "actuallyViewed": true,
+      "kind": "sequence phase"
+    },
+    {
+      "file": "work/qa-correction/supplemental-arrival-3600/sequence-8-compact-oystercatcher-approaching.png",
+      "sha256": "e947f2ec804c138debfec443c025988c7794f2bc78c652869b4d5630574a3504",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngIntegrityValid": true,
+      "recordedHashPresent": true,
+      "actuallyViewed": false,
+      "kind": "sequence phase"
+    },
+    {
+      "file": "work/qa-correction/supplemental-arrival-3600/sequence-8-compact-oystercatcher-searching.png",
+      "sha256": "cfef57e63ff74c6dbd371ba4fb147096bd9c07ecfa893d3442c032134fa76436",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngIntegrityValid": true,
+      "recordedHashPresent": true,
+      "actuallyViewed": false,
+      "kind": "sequence phase"
+    },
+    {
+      "file": "work/qa-correction/supplemental-arrival-3600/sequence-8-compact-oystercatcher-handling.png",
+      "sha256": "b19c0e6de8e600524fbea4d50e7c4cec6689959d20c6c3257f83eba90544d751",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngIntegrityValid": true,
+      "recordedHashPresent": true,
+      "actuallyViewed": false,
+      "kind": "sequence phase"
+    },
+    {
+      "file": "work/qa-correction/supplemental-arrival-3600/sequence-8-compact-oystercatcher-swallowing.png",
+      "sha256": "3375783b13baa5432ace50709882995683c2acb8d1dfa7f21b8ab7ee7de5e32a",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngIntegrityValid": true,
+      "recordedHashPresent": true,
+      "actuallyViewed": true,
+      "kind": "sequence phase"
+    },
+    {
+      "file": "work/qa-correction/supplemental-arrival-3600/sequence-8-compact-oystercatcher-departing.png",
+      "sha256": "a8b7d425f209b91f78ea8e31b6a0ea437a879b988eb1d3a69755e025d905004e",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngIntegrityValid": true,
+      "recordedHashPresent": true,
+      "actuallyViewed": false,
+      "kind": "sequence phase"
+    },
+    {
+      "file": "work/qa-correction/supplemental-arrival-3600/sequence-8-compact-oystercatcher-after-departure.png",
+      "sha256": "7dc1b4c63e891e01bbd1bd51de822d81f99fb2ea366b113200dd43566b5180a3",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngIntegrityValid": true,
+      "recordedHashPresent": true,
+      "actuallyViewed": false,
+      "kind": "sequence phase"
+    }
+  ],
+  "visuallyInspectedOriginalScreenshots": 10,
+  "modelWait": {
+    "modelSeconds": 1200,
+    "actualSeconds": 55.47398587000134,
+    "ownObservationSecondsBefore": 0,
+    "ownObservationSecondsAfter": 0,
+    "sameRun": true,
+    "allFourPoolsDepletedAfterWait": true,
+    "scope": "240 ordinary UI clicks of labelled 5-model-second steps; equivalent 20-minute model delay, not actual active forest/K1 time"
+  },
+  "fieldbook": {
+    "file": "work/qa-correction/supplemental-arrival-3600/arrival-fieldbook.json",
+    "sha256": "647041f94f561e458a692fc97ce6bb0cc2f8cea3833e9395706a0741a4269de1",
+    "records": 1,
+    "source": "own-observation",
+    "individualId": "compact-oystercatcher",
+    "method": "binocular",
+    "runId": "a6094798-d760-4dd5-b928-24a98e66c503",
+    "originMatchesFirstLocalWindow": true,
+    "activeObservationSeconds": 18.28260000000008,
+    "modelTime": 6.648300000000059,
+    "savedEvents": 0,
+    "scope": "One actual binocular observation saved and exported through normal UI. It contains no saved model-event entries; the feeding event is separately in the browser telemetry. This is not a completed K2 mission or an active 20-minute K1 product."
+  },
+  "video": {
+    "file": "work/qa-correction/supplemental-arrival-3600/coastal-feeding-realtime.webm",
+    "sha256": "b72e1bbd1d8cb49154262f8001e08be194cc44c5cbfe7fcc4d71b7e8bb44a553",
+    "bytes": 213407,
+    "codec": "vp8",
+    "dimensions": [
+      800,
+      600
+    ],
+    "decodedFrames": 97,
+    "firstPTSSeconds": 0.0,
+    "lastPTSSeconds": 17.454,
+    "recordingOperationWallSeconds": 18.21581685199999,
+    "containerDurationAvailable": false,
+    "timestampsStrictlyIncreasing": true,
+    "maxFrameGapSeconds": 0.3810000000000002,
+    "ffprobe": "work/qa-2026-10-23/arrival-final-review/video-probe.json",
+    "ffprobeSHA256": "ba28e327ae61f1e30ea8e474d779e7fbab86b3082aaf95abf4b94a6cf20f8ff1",
+    "selectedFrames": [
+      {
+        "file": "work/qa-2026-10-23/arrival-final-review/video-frame-01.png",
+        "sha256": "0e972f9d25bfcc5795445204f1930eaa29c9f2ec92e0b9402908df642da969db",
+        "decodedFrameIndex": 0,
+        "presentationSeconds": 0.0,
+        "actuallyViewed": true,
+        "operation": "Unscaled unretimed original decoded frame selected by index; no interpolation, crop, overlay or other image edits."
+      },
+      {
+        "file": "work/qa-2026-10-23/arrival-final-review/video-frame-02.png",
+        "sha256": "2924e0960dfd81e5c020714bdcdc070d1f033637a2abb5f29df56402f14dcd0a",
+        "decodedFrameIndex": 24,
+        "presentationSeconds": 4.373,
+        "actuallyViewed": true,
+        "operation": "Unscaled unretimed original decoded frame selected by index; no interpolation, crop, overlay or other image edits."
+      },
+      {
+        "file": "work/qa-2026-10-23/arrival-final-review/video-frame-03.png",
+        "sha256": "1220a2b70358901d292c40765a78230cb50d9cf74502d6a52a7b57afe2f7448f",
+        "decodedFrameIndex": 48,
+        "presentationSeconds": 8.63,
+        "actuallyViewed": true,
+        "operation": "Unscaled unretimed original decoded frame selected by index; no interpolation, crop, overlay or other image edits."
+      },
+      {
+        "file": "work/qa-2026-10-23/arrival-final-review/video-frame-04.png",
+        "sha256": "c2e34d379a65e05c26bccdc92418f2984a0b62331708479d4a1fceede2b2af50",
+        "decodedFrameIndex": 72,
+        "presentationSeconds": 12.957,
+        "actuallyViewed": true,
+        "operation": "Unscaled unretimed original decoded frame selected by index; no interpolation, crop, overlay or other image edits."
+      },
+      {
+        "file": "work/qa-2026-10-23/arrival-final-review/video-frame-05.png",
+        "sha256": "d8db64ee0c216131865e7f4601daf1f1754681d75a35c6043618676099c577df",
+        "decodedFrameIndex": 96,
+        "presentationSeconds": 17.454,
+        "actuallyViewed": true,
+        "operation": "Unscaled unretimed original decoded frame selected by index; no interpolation, crop, overlay or other image edits."
+      }
+    ],
+    "scope": "Actual unaccelerated canvas recording of first real-time sequence only. The 18.216-second recorder operation and last encoded PTS 17.454 seconds are reported separately. Do not treat nominal r_frame_rate=1000/1 as an actual FPS measurement; WebM has variable timestamps and no container duration."
+  },
+  "historicalArrival": {
+    "status": "FAILED",
+    "sourceCommit": "78e723bcb5ca448fa7161146db82fc4451b59f38",
+    "walkWallBudgetSeconds": 900,
+    "plan": "work/qa-2026-10-23/historical-plan/result.json",
+    "planSHA256": "ee5fd42259714bb7cad27ad7180f135b0efc70e8cea6dc316bc4aeb92f5f93c4",
+    "report": "work/qa-2026-10-23/historical-plan/arrival-failure/result.json",
+    "reportSHA256": "a666ba7563bd70e4e99128ec92078648df209b230e5c12390c669e2951cc33ad",
+    "log": "work/qa-2026-10-23/historical-plan/arrival.log",
+    "logSHA256": "d8ac0abcfc27d62f0c5318d417da97c27bc29b7257e3063ccd17c46e2f82aaec",
+    "scope": "Preserved original historical runtime failure; no substitution by the supplemental success."
+  },
+  "visualFindings": [
+    "The real-time video and original screenshot place the target oystercatcher as a small background bird between boardwalk posts; the larger foreground bird is not the target. Head/body posture changes can be seen, but the selected video frames do not independently resolve the concrete mussel or a swallowing motion.",
+    "The inspected model-step originals clearly label model time with no own observation. Avocet, redshank and spoonbill are larger than the real-time target, and head/body pose differences are visible; tiny prey and swallowing remain insufficiently resolved for unconditional visual acceptance.",
+    "The post-departure spoonbill original already labels the next approach. Its after-departure proof refers to leaving the completed prey episode; target change and movement are verified from telemetry, not a dedicated UI label.",
+    "All48 original phase screenshots have correct recorded SHA256, valid native800x600PNG data and episode/phase/visibility metadata. Only8 of those phase screenshots plus2 route originals were visually inspected in this review; five original decoded video frames were inspected."
+  ],
+  "limitations": [
+    "No physical iPad9/Safari/iPadOS27 test, FPS acceptance or classroom pilot. The main route took1493.347wall seconds and exceeds900seconds; a functional3600-budget PASS is not improved-performance evidence.",
+    "Body/bill clear and in-frame are programmatic visibility checks; they do not guarantee that tiny prey or swallowing are visually intelligible.",
+    "The long wait is240 explicitly clicked5-model-second steps completed in55.474wall seconds, with zero own observation accumulation; it is not20minutes of active K1 work.",
+    "Model-step episodes may already have consumed earlier prey before the captured approach; recorded before/after values such as shrimp4→3 and mussels17→16 are preserved, not rewritten to initial pools.",
+    "No full-screen route video; only actual input telemetry, three endpoint screenshots, and the separate real-time feeding video."
+  ]
+}

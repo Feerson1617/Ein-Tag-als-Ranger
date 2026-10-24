@@ -1,0 +1,8 @@
+{
+  "scope": "Coverage-label correction, not a runtime defect or failed assertion. Original raw jobs unchanged. The job named learning-source actually used the default outputs/Ranger-Kompakt/index.html (18groups+gallery); maintained source had boot/tools/timed-inspection proof only. A proper native K1–K5 source-entry run is required before final acceptance.",
+  "actualOriginalLearningEntry": "outputs/Ranger-Kompakt/index.html",
+  "actualSourceBootEntry": "dist/kompakt.html",
+  "requiredSupplement": "Full existing native learning suite against --site dist --entry kompakt.html; add an exact maintained-source closure audit because inline-standalone audit is inapplicable. Preserve all existing UI assertions, timeouts, web and standalone audits.",
+  "runtimeChangeRequired": false,
+  "status": "PENDING"
+}

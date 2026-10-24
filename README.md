@@ -178,3 +178,12 @@ Artabhängige Flügel-, Brust-, Kopf- und Schnabelfarben ersetzen eine missverst
 Durchgehende Fundamente reichen bis unter das sichtbare Dorfgelände. Häuser und Grundstücke behalten ihre Maße. Eine zusammenhängende Holzunterlage schließt Lücken zwischen Bohlen an Kurven und Ausbuchtungen. Sprinttempo: 7,5 statt 5 m/s (+50 %). Der Tablet-Steuerkreis steigert das Tempo proportional zum Ausschlag; diagonales Gehen überschreitet das Maximum nicht. Die Startanleitung ist angepasst. Alle 17 Prüfreihen bestehen; Messungen und Grenzen stehen in `PRUEFUNG.md`.
 
 ## Frühere Änderungen – historischer Stand
+
+
+## Ranger Kompakt: eigene Softwarevorschau
+
+Die große Fassung bleibt erhalten. `dist/kompakt.html` startet die separate kompakte Welt: drei Biologiezonen, 36 kuratierte Einträge, sechs Funktionsgruppen und fünf wählbare Lernfamilien. Der Einstieg ist freie Erkundung. Lernpaket und Datenmodelle sind über die Auftragsauswahl erreichbar; ein Gesamtsammelzwang besteht nicht.
+
+`python tools/build-compact.py` erzeugt `outputs/Ranger-Kompakt/`, die Einzeldatei `outputs/Ranger-Kompakt.html` und `outputs/Ranger-Kompakt-Vorschau.zip`. Zum lokalen Serverstart: `python -m http.server 4173 --directory outputs/Ranger-Kompakt`. `python tools/print-compact-materials.py` erzeugt zusätzlich Arbeitsblätter/Lehrkräfte-PDFs und das Lernpaket-ZIP. Die Paketwerkzeuge veröffentlichen nichts.
+
+[Stand](docs/kompakt/STATUS.md), [Prüfungen](docs/kompakt/TESTS.md), [Korrekturbericht F01–F13](docs/kompakt/KORREKTUREN.md), [Lehrkräftehandbuch](docs/kompakt/LEHRKRAEFTE.md), [25 Unterrichtsbausteine](docs/kompakt/CURRICULUM-UMSETZUNG.md), [Modellgrenzen](docs/kompakt/MODELLGRENZEN.md). Zielgerät laut Eigentümer: iPad 9 mit Safari unter iPadOS 27; die reale Geräte-/OS-Kombination und der Unterrichtspilot sind noch nicht verifiziert. Weiterarbeit und abschließender Push sind ausdrücklich beauftragt. Draft-PR, kein Merge/Deployment/Release.

@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "worldVersion": "ranger-compact-v2",
+  "records": [],
+  "archives": [],
+  "previousEditions": [],
+  "learning": {
+    "activeMission": null,
+    "level": "gA",
+    "answers": {},
+    "protocols": [],
+    "measurements": [],
+    "samples": [],
+    "experiments": [],
+    "drafts": {},
+    "perspectives": [
+      {
+        "id": "6c6f277b-a31a-4312-b7f5-2c0af14b974f",
+        "speakerId": "ranger",
+        "source": "model-dialogue",
+        "x": -22.297890806036296,
+        "z": 1.7879810981791544,
+        "runId": "df6af8de-586d-4547-8926-0fc81a5298eb",
+        "modelRevision": 4,
+        "initialSeed": 20260825,
+        "worldVersion": "ranger-compact-v2",
+        "simulationTime": 14.927999999999955,
+        "window": "summer"
+      },
+      {
+        "id": "82e83ed3-22ca-4fae-89f9-6e47d76e17bb",
+        "speakerId": "local",
+        "source": "model-dialogue",
+        "x": -13.915771299503223,
+        "z": -5.622195640273663,
+        "runId": "df6af8de-586d-4547-8926-0fc81a5298eb",
+        "modelRevision": 4,
+        "initialSeed": 20260825,
+        "worldVersion": "ranger-compact-v2",
+        "simulationTime": 15.28799999999995,
+        "window": "summer"
+      },
+      {
+        "id": "2985f271-9810-48a0-ab35-fde5a608ef85",
+        "speakerId": "coastal",
+        "source": "model-dialogue",
+        "x": -3.328583567115688,
+        "z": 17.974945751920576,
+        "runId": "df6af8de-586d-4547-8926-0fc81a5298eb",
+        "modelRevision": 4,
+        "initialSeed": 20260825,
+        "worldVersion": "ranger-compact-v2",
+        "simulationTime": 15.599799999999965,
+        "window": "summer"
+      }
+    ]
+  },
+  "exportedAt": "2026-10-23T09:09:48.156Z"
+}

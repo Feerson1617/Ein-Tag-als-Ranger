@@ -1,0 +1,198 @@
+{
+  "passed": 10,
+  "checks": [
+    {
+      "name": "concrete episode identity survives next target; explicit new run/individual resets it"
+    },
+    {
+      "name": "lens scissor intersects actual viewport and scroll surface"
+    },
+    {
+      "name": "all four coastal birds including oyster shell competition require same-run actual contact and visible acquisition; body/lens/old-event alone cannot earn it"
+    },
+    {
+      "name": "four species approach/contact extents fit wide and narrow lenses without head/resource clipping",
+      "fitted": 5564
+    },
+    {
+      "name": "spatial static groups preserve every triangle attribute and actual occlusion ray hit",
+      "groups": 22
+    },
+    {
+      "name": "instance matrices, colours and total decorative count are unchanged"
+    },
+    {
+      "name": "actual tiny resource anchors remove coarse terrain obstruction; original vertices/UVs and total surface remain",
+      "previousGround": -1.113936800956726,
+      "contactHeight": -1.118117119236853,
+      "insertedVertices": 2
+    },
+    {
+      "name": "revision7 searching and return poses avoid sediment while all four concrete feeding events remain positive",
+      "samples": 5169,
+      "minimumClearance": 0.00004999555163087699,
+      "oldPenetration": -0.007171804973890694
+    },
+    {
+      "name": "revisions1–6 match unchanged936 Git model sources in the same process",
+      "commit": "936e69dc2bd91ab4ab59bc1c63f7c66696085e1d",
+      "modules": 9,
+      "gitAvailable": true,
+      "cases": [
+        {
+          "seed": 20260825,
+          "revision": 1,
+          "modelSeconds": 60.00000000000058,
+          "events": 35
+        },
+        {
+          "seed": 20260825,
+          "revision": 2,
+          "modelSeconds": 60.00000000000058,
+          "events": 35
+        },
+        {
+          "seed": 20260825,
+          "revision": 3,
+          "modelSeconds": 60.00000000000058,
+          "events": 35
+        },
+        {
+          "seed": 20260825,
+          "revision": 4,
+          "modelSeconds": 60.00000000000058,
+          "events": 35
+        },
+        {
+          "seed": 20260825,
+          "revision": 5,
+          "modelSeconds": 60.00000000000058,
+          "events": 35
+        },
+        {
+          "seed": 20260825,
+          "revision": 6,
+          "modelSeconds": 60.00000000000058,
+          "events": 35
+        },
+        {
+          "seed": 1219,
+          "revision": 1,
+          "modelSeconds": 60.00000000000058,
+          "events": 35
+        },
+        {
+          "seed": 1219,
+          "revision": 2,
+          "modelSeconds": 60.00000000000058,
+          "events": 35
+        },
+        {
+          "seed": 1219,
+          "revision": 3,
+          "modelSeconds": 60.00000000000058,
+          "events": 35
+        },
+        {
+          "seed": 1219,
+          "revision": 4,
+          "modelSeconds": 60.00000000000058,
+          "events": 35
+        },
+        {
+          "seed": 1219,
+          "revision": 5,
+          "modelSeconds": 60.00000000000058,
+          "events": 35
+        },
+        {
+          "seed": 1219,
+          "revision": 6,
+          "modelSeconds": 60.00000000000058,
+          "events": 35
+        },
+        {
+          "seed": 77,
+          "revision": 1,
+          "modelSeconds": 60.00000000000058,
+          "events": 35
+        },
+        {
+          "seed": 77,
+          "revision": 2,
+          "modelSeconds": 60.00000000000058,
+          "events": 35
+        },
+        {
+          "seed": 77,
+          "revision": 3,
+          "modelSeconds": 60.00000000000058,
+          "events": 35
+        },
+        {
+          "seed": 77,
+          "revision": 4,
+          "modelSeconds": 60.00000000000058,
+          "events": 35
+        },
+        {
+          "seed": 77,
+          "revision": 5,
+          "modelSeconds": 60.00000000000058,
+          "events": 35
+        },
+        {
+          "seed": 77,
+          "revision": 6,
+          "modelSeconds": 60.00000000000058,
+          "events": 35
+        },
+        {
+          "seed": 4294967295,
+          "revision": 1,
+          "modelSeconds": 60.00000000000058,
+          "events": 35
+        },
+        {
+          "seed": 4294967295,
+          "revision": 2,
+          "modelSeconds": 60.00000000000058,
+          "events": 35
+        },
+        {
+          "seed": 4294967295,
+          "revision": 3,
+          "modelSeconds": 60.00000000000058,
+          "events": 35
+        },
+        {
+          "seed": 4294967295,
+          "revision": 4,
+          "modelSeconds": 60.00000000000058,
+          "events": 35
+        },
+        {
+          "seed": 4294967295,
+          "revision": 5,
+          "modelSeconds": 60.00000000000058,
+          "events": 35
+        },
+        {
+          "seed": 4294967295,
+          "revision": 6,
+          "modelSeconds": 60.00000000000058,
+          "events": 35
+        }
+      ],
+      "stats": {
+        "numeric": 659240,
+        "exact": 397008,
+        "maxAbsoluteError": 0
+      }
+    },
+    {
+      "name": "new rendering revision preserves biological inventory, positions, support anchors and initial resources"
+    }
+  ],
+  "scope": "Actual pinned historical model sources and Three.js geometry; not WebGL or visual/device acceptance."
+}

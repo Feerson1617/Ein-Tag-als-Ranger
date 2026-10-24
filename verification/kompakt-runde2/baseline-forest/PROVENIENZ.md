@@ -1,0 +1,1 @@
+Own fresh execution of unchanged standalone HTML from 1b51e7c370b6a8e1e67eacd9db89882eed8d52db. Exact HTML SHA256 in result.json. Five fixed cameras are paired; three keyboard walk images are separate. These are prior-version baselines, not current-head evidence.

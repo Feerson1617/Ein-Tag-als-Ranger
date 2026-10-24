@@ -1,0 +1,43 @@
+Preflight invoked before regenerating both legacy and compact outputs. Four source-binding tests correctly reject stale artifacts; this is not a passing package check. Final complete plan rebuilds both before repeating all nine methods.
+FAIL
+
+======================================================================
+FAIL: test_integrity_and_tampering (test_compact_package.CompactPackageTests.test_integrity_and_tampering)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/Ein-Tag-als-Ranger/tests/test_compact_package.py", line 13, in test_integrity_and_tampering
+    self.assertEqual(subprocess.run(command,capture_output=True).returncode,0)
+AssertionError: 1 != 0
+
+======================================================================
+FAIL: test_standalone_closure_and_syntax (test_compact_package.CompactPackageTests.test_standalone_closure_and_syntax)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/Ein-Tag-als-Ranger/tests/test_compact_package.py", line 19, in test_standalone_closure_and_syntax
+    for name in g.modules:self.assertEqual(sources[name],g.rewrite(name,lambda r:('module://'if r.target in g.modules else'asset://')+r.target))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: "// O[2585 chars]5/17/20, Referenz-IDs 4056/3393/1825; gelesene[31886 chars]};\n" != "// O[2585 chars]5/17/18, Referenz-IDs 4056/3393/1825; gelesene[31870 chars]};\n"
+Diff is 37676 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_current_package_and_tampered_output (test_packaging.PackagingTests.test_current_package_and_tampered_output)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/Ein-Tag-als-Ranger/tests/test_packaging.py", line 27, in test_current_package_and_tampered_output
+    self.assertEqual(verify(manifest.parent).returncode,0)
+AssertionError: 1 != 0
+
+======================================================================
+FAIL: test_standalone_roundtrip_and_bootstrap_syntax (test_packaging.PackagingTests.test_standalone_roundtrip_and_bootstrap_syntax)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/Ein-Tag-als-Ranger/tests/test_packaging.py", line 45, in test_standalone_roundtrip_and_bootstrap_syntax
+    for name in graph.modules:self.assertEqual(sources[name],graph.rewrite(name,lambda ref:('module://'if ref.target in graph.modules else'asset://')+ref.target))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: "// S[3811 chars]e in ausdrücklich beschrifteten Modellzeitschr[932 chars]';\n" != "// S[3811 chars]e in Echtzeit oder beschrifteten Modellschritt[1246 chars]';\n"
+Diff is 6924 characters long. Set self.maxDiff to None to see it.
+
+----------------------------------------------------------------------
+Ran 9 tests in 1.780s
+
+FAILED (failures=4)

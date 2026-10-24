@@ -1,0 +1,1270 @@
+{
+  "modelRevision": 3,
+  "worldVersion": "ranger-compact-v2",
+  "initialSeed": 20260825,
+  "status": "didactic model parameters and geometry measurements; no empirical local calibration",
+  "sourceHashes": {
+    "coastal-rig.js": "92a0270abdbf3aee7467e466cf344b08b8ef8bf5af4d903d3c672f9bcd4e2513",
+    "coastal-behaviour.js": "39b1dcb8691cd48850321c4c734eabf0b2875b91a8cd09dcd7b571758b0f0927",
+    "habitats.js": "10aad218dd69d51e842b59ef0164d9de8c0deaf30bc52d5165fc9ce317cde6c7",
+    "vegetation-view.js": "7e6f703c9a930a86dd2c9b202a79bf7842f4d1f41bf9a2a27d3ef24b3b22e47a",
+    "world-view.js": "4302cfa6e1600a6f9f2d62835c38b0d3e90ea232d9904c0559ae6936860f112a",
+    "lesson-resources.js": "c650d8090445596c50be8cbd7a57d636d1f71c267fabd20fb5644f083923bbf8",
+    "lesson-layouts.js": "eec60d3c481ccfa0bf587f4213bdbe6847d75039934e4ecad149b1bd67adf3f2",
+    "task-schema.js": "4ce4ca8e8f6c27182b3abe36d90d956fcbc6526d240911dbc996c53b670fc418",
+    "observation-schema.js": "2f0467f9693eca83c3a5a678128d86a5956de2b74df79a342b4875454569e12c",
+    "determination.js": "25f8ce960dba09ebeeb4470530d38608809bf98aa91d3575716b6ff835145c6f",
+    "management.js": "e6d38fbfc2c7e131d60ca3e38a1c740ca9ba5c49628fd3ba51ca94242d2d75a3",
+    "catalog.js": "6b693d4c6a0f6b880b9ff99295826f3968e61ba96f52606997a1635ddf1fe39f",
+    "ecology.js": "e50f25a3146e79671472e7a5e6ed1d78f007564515bf9a78bb67fac9695ef8e0",
+    "organism-models.js": "7cf080fb497a17d58ce4d1672ffc5cef12b7f2c033a336384e4aead7dfc27cb6",
+    "expanded-view.js": "b6201ad45f5a675fdf0d1092811fd8621c644ed9732e46fef51eb48e22ddb963",
+    "fauna-view.js": "985a83582ff0ffac0e8d6ef20e2edc80a09b66e88f3768dd404f746507820feb",
+    "world-state.js": "360197f8bd8ab54c595386b66f2e676499630bc6ca896856034fba4910d9fd7f",
+    "layout.js": "e02558557a9c99fa0549c94f8cbfc8873e18f3c90df845155d51ee4d404209a6",
+    "learning-models.js": "078199d66bff5bd360c3010646c690dff92a58a160127204ba9fe9243a9a6d2e",
+    "missions.js": "55677975084e5dd4cc674ce0890305d0c3909fd82dce2241ec2b9526bd3147ee",
+    "materials.js": "b96c109d4a29a43223aa1f3c708af65f5d8258b03d3e43d5fa6d89100a799610"
+  },
+  "routes": {
+    "width": 160,
+    "depth": 100,
+    "areaHa": 1.6,
+    "mainMeters": 362.2102529662271,
+    "shortcutMeters": 29.145962247263665,
+    "outlookMeters": 10.045360768162785,
+    "walkSeconds": 226.3814081038919,
+    "shortcutSeconds": 18.21622640453979,
+    "maxSlope": 0.15203972178347044
+  },
+  "walking": {
+    "walk": 1.6,
+    "brisk": 2.8,
+    "observation": 0.8
+  },
+  "tide": {
+    "cycleModelSeconds": 120,
+    "lowWaterM": -1.05,
+    "highWaterM": -0.25,
+    "status": "synthetic compressed tide cycle, not a real local timetable"
+  },
+  "windows": {
+    "summer": {
+      "date": "2026-08-25",
+      "label": "Spätsommer · Grundszene"
+    },
+    "autumn": {
+      "date": "2026-10-05",
+      "label": "Herbst · Eicheln und Verstecken"
+    },
+    "dusk": {
+      "date": "2026-08-25 20:00",
+      "label": "Dämmerung · Fuchs und Waldmaus"
+    },
+    "spring": {
+      "date": "2026-05-10",
+      "label": "Frühjahr · Kommunikationsmodell"
+    }
+  },
+  "organisms": [
+    {
+      "id": "fagus_sylvatica",
+      "kind": "tree",
+      "nominalDesignDimensionM": 10,
+      "actualReferenceMeshBoundsXYZm": [
+        0.496042,
+        0.089661,
+        0.108103
+      ],
+      "status": "didactic design in metres; species size source not independently calibrated",
+      "diagnostics": [
+        "smooth-bark",
+        "elliptic-leaf",
+        "ectomycorrhiza"
+      ],
+      "microhabitat": "Waldkern; Baum",
+      "sourceStatus": "S13, S32; Morphologie belegt; lokale Bestandsdichte nicht empirisch festgelegt",
+      "identificationLimit": "model comparison; natural identification may need more characters"
+    },
+    {
+      "id": "quercus_robur",
+      "kind": "tree",
+      "nominalDesignDimensionM": 9,
+      "actualReferenceMeshBoundsXYZm": [
+        0.494271,
+        0.089661,
+        0.10748
+      ],
+      "status": "didactic design in metres; species size source not independently calibrated",
+      "diagnostics": [
+        "lobed-leaf",
+        "short-petiole",
+        "stalked-acorn"
+      ],
+      "microhabitat": "Lichter Waldsaum; Baum",
+      "sourceStatus": "S14, S25, S26; Einzelmerkmale nötig, nicht nur generische Eichenkrone",
+      "identificationLimit": "model comparison; natural identification may need more characters"
+    },
+    {
+      "id": "galium_odoratum",
+      "kind": "plant",
+      "nominalDesignDimensionM": 0.25,
+      "actualReferenceMeshBoundsXYZm": [
+        0.215,
+        0.25,
+        0.213076
+      ],
+      "status": "didactic design in metres; species size source not independently calibrated",
+      "diagnostics": [
+        "leaf-whorls",
+        "narrow-leaves",
+        "no-summer-flowers"
+      ],
+      "microhabitat": "Frischer schattiger Laubwaldboden; Kraut",
+      "sourceStatus": "S11; Blüte Mai/Juni; bei fehlenden Unterscheidungsmerkmalen Labkraut-Gruppe zulassen",
+      "identificationLimit": "model comparison; natural identification may need more characters"
+    },
+    {
+      "id": "urtica_dioica",
+      "kind": "plant",
+      "nominalDesignDimensionM": 0.9,
+      "actualReferenceMeshBoundsXYZm": [
+        0.666,
+        0.9,
+        0.660041
+      ],
+      "status": "didactic design in metres; species size source not independently calibrated",
+      "diagnostics": [
+        "opposite-leaves",
+        "serrated-edge",
+        "stinging-hairs"
+      ],
+      "microhabitat": "Heller nährstoffreicher Wald-/Dorfrand",
+      "sourceStatus": "S12, S20, S53–54; Microlophium carnosum als fachlicher Modellhintergrund, im Feldbuch nur belegbare Gruppenauflösung",
+      "identificationLimit": "group-or-aggregate"
+    },
+    {
+      "id": "rubus_fruticosus",
+      "kind": "plant",
+      "nominalDesignDimensionM": 1.25,
+      "actualReferenceMeshBoundsXYZm": [
+        2.053126,
+        1.099418,
+        1.947829
+      ],
+      "status": "didactic design in metres; species size source not independently calibrated",
+      "diagnostics": [
+        "arching-prickles",
+        "compound-leaves",
+        "aggregate-fruit"
+      ],
+      "microhabitat": "Lichter Waldsaum/Dorfrand; Strauch",
+      "sourceStatus": "S15, S16, S23; Aggregat absichtlich, keine Scheingenauigkeit",
+      "identificationLimit": "group-or-aggregate"
+    },
+    {
+      "id": "trifolium_pratense",
+      "kind": "plant",
+      "nominalDesignDimensionM": 0.3,
+      "actualReferenceMeshBoundsXYZm": [
+        0.255263,
+        0.339296,
+        0.231466
+      ],
+      "status": "didactic design in metres; species size source not independently calibrated",
+      "diagnostics": [
+        "three-leaflets",
+        "pink-floret-head",
+        "pollen-contact"
+      ],
+      "microhabitat": "Kleine sonnige Fläche am Dorf; kein viertes Wiesenbiom",
+      "sourceStatus": "S17, S18, S51, S52; Besuche belegt, nicht jeder Besuch bestäubt",
+      "identificationLimit": "model comparison; natural identification may need more characters"
+    },
+    {
+      "id": "fomes_fomentarius",
+      "kind": "fungus",
+      "nominalDesignDimensionM": 0.22,
+      "actualReferenceMeshBoundsXYZm": [
+        0.22,
+        0.135827,
+        0.246958
+      ],
+      "status": "didactic design in metres; species size source not independently calibrated",
+      "diagnostics": [
+        "hoof-bracket",
+        "grey-rings",
+        "pores-below"
+      ],
+      "microhabitat": "Buchen-Totholz",
+      "sourceStatus": "S30, S31; belegt; kein makroskopisch sichtbarer Sofortabbau",
+      "identificationLimit": "model comparison; natural identification may need more characters"
+    },
+    {
+      "id": "capreolus_capreolus",
+      "kind": "mammal",
+      "nominalDesignDimensionM": 1.12,
+      "actualReferenceMeshBoundsXYZm": [
+        1.12,
+        1.210853,
+        0.299195
+      ],
+      "status": "didactic design in metres; species size source not independently calibrated",
+      "diagnostics": [
+        "slender-legs",
+        "white-rump",
+        "short-tail"
+      ],
+      "microhabitat": "Deckungsreicher Saum; zeitweiser Besucher",
+      "sourceStatus": "S23, S22; Bestands-/Fluchtdistanzen sind keine recherchierten Zahlenparameter",
+      "identificationLimit": "model comparison; natural identification may need more characters"
+    },
+    {
+      "id": "vulpes_vulpes",
+      "kind": "mammal",
+      "nominalDesignDimensionM": 1.1,
+      "actualReferenceMeshBoundsXYZm": [
+        1.1,
+        0.584585,
+        0.199529
+      ],
+      "status": "didactic design in metres; species size source not independently calibrated",
+      "diagnostics": [
+        "pointed-muzzle",
+        "bushy-tail",
+        "dark-legs"
+      ],
+      "microhabitat": "Waldsaum; optionales Dämmerungsfenster",
+      "sourceStatus": "S24; keine autonome Vollpopulation im Kleinstareal behaupten",
+      "identificationLimit": "model comparison; natural identification may need more characters"
+    },
+    {
+      "id": "apodemus_sylvaticus",
+      "kind": "mammal",
+      "nominalDesignDimensionM": 0.095,
+      "actualReferenceMeshBoundsXYZm": [
+        0.095,
+        0.03032,
+        0.022843
+      ],
+      "status": "didactic design in metres; species size source not independently calibrated",
+      "diagnostics": [
+        "large-eyes",
+        "long-tail",
+        "round-ears"
+      ],
+      "microhabitat": "Streu/Deckung und Saum",
+      "sourceStatus": "S25; Samenfunktionen belegt, Studie nicht norddeutsche Dichtekalibrierung",
+      "identificationLimit": "model comparison; natural identification may need more characters"
+    },
+    {
+      "id": "dendrocopos_major",
+      "kind": "bird",
+      "nominalDesignDimensionM": 0.24,
+      "actualReferenceMeshBoundsXYZm": [
+        0.10045,
+        0.237876,
+        0.293778
+      ],
+      "status": "didactic design in metres; species size source not independently calibrated",
+      "diagnostics": [
+        "white-shoulders",
+        "red-vent",
+        "stiff-tail"
+      ],
+      "microhabitat": "Stamm/Totholz und echte Äste",
+      "sourceStatus": "S28; Fachmerkmale und Animationen benötigen Detailprüfung; keine Luftstützpunkte",
+      "identificationLimit": "model comparison; natural identification may need more characters"
+    },
+    {
+      "id": "garrulus_glandarius",
+      "kind": "bird",
+      "nominalDesignDimensionM": 0.34,
+      "actualReferenceMeshBoundsXYZm": [
+        0.34,
+        0.226073,
+        0.557241
+      ],
+      "status": "didactic design in metres; species size source not independently calibrated",
+      "diagnostics": [
+        "blue-barred-wing",
+        "pale-rump",
+        "pink-brown-body"
+      ],
+      "microhabitat": "Wald/lichte Eichenstelle",
+      "sourceStatus": "S26, S25; Verstecken nicht mit Keimung oder garantiertem Mutualismus gleichsetzen",
+      "identificationLimit": "model comparison; natural identification may need more characters"
+    },
+    {
+      "id": "parus_major",
+      "kind": "bird",
+      "nominalDesignDimensionM": 0.14,
+      "actualReferenceMeshBoundsXYZm": [
+        0.14,
+        0.093089,
+        0.229452
+      ],
+      "status": "didactic design in metres; species size source not independently calibrated",
+      "diagnostics": [
+        "white-cheeks",
+        "yellow-belly",
+        "black-stripe"
+      ],
+      "microhabitat": "Zweige/Kronen/Saum",
+      "sourceStatus": "S27; Höhlen-/Revieraufgaben nur mit passender Jahreszeit",
+      "identificationLimit": "model comparison; natural identification may need more characters"
+    },
+    {
+      "id": "bombus_lapidarius",
+      "kind": "insect",
+      "nominalDesignDimensionM": 0.017,
+      "actualReferenceMeshBoundsXYZm": [
+        0.017,
+        0.007202,
+        0.017844
+      ],
+      "status": "didactic design in metres; species size source not independently calibrated",
+      "diagnostics": [
+        "hairy-body",
+        "red-tail",
+        "six-legs"
+      ],
+      "microhabitat": "Sonniger Dorf-/Waldsaum mit Blüten",
+      "sourceStatus": "S19, S17–18, S51–52; genaue Flugzahlen unkalibriert",
+      "identificationLimit": "model comparison; natural identification may need more characters"
+    },
+    {
+      "id": "aglais_io",
+      "kind": "insect",
+      "nominalDesignDimensionM": 0.06,
+      "actualReferenceMeshBoundsXYZm": [
+        0.047772,
+        0.015123,
+        0.06
+      ],
+      "status": "didactic design in metres; species size source not independently calibrated",
+      "diagnostics": [
+        "four-eyespots",
+        "club-antennae",
+        "nettle-caterpillar"
+      ],
+      "microhabitat": "Brennnessel- und Blütensaum",
+      "sourceStatus": "S20; saisonale Stadien explizit",
+      "identificationLimit": "model comparison; natural identification may need more characters"
+    },
+    {
+      "id": "coccinella_septempunctata",
+      "kind": "insect",
+      "nominalDesignDimensionM": 0.007,
+      "actualReferenceMeshBoundsXYZm": [
+        0.007,
+        0.002875,
+        0.007348
+      ],
+      "status": "didactic design in metres; species size source not independently calibrated",
+      "diagnostics": [
+        "seven-spots",
+        "six-legs",
+        "aphid-prey"
+      ],
+      "microhabitat": "Blattlauskolonie am Saum",
+      "sourceStatus": "S21, S53–54; echte Beuteobjekte im Nahmodell; Feldstudie liefert keine örtliche Fressrate",
+      "identificationLimit": "model comparison; natural identification may need more characters"
+    },
+    {
+      "id": "aphidoidea",
+      "kind": "insect",
+      "nominalDesignDimensionM": 0.003,
+      "actualReferenceMeshBoundsXYZm": [
+        0.003,
+        0.001417,
+        0.003149
+      ],
+      "status": "didactic design in metres; species size source not independently calibrated",
+      "diagnostics": [
+        "siphunculi",
+        "six-legs",
+        "plant-host"
+      ],
+      "microhabitat": "Geeignete krautige Wirtspflanze",
+      "sourceStatus": "S53–54: Brennnessel–Microlophium carnosum–Coccinella septempunctata belegt; Feldbestimmung bleibt Blattlausgruppe, lokale Raten offen",
+      "identificationLimit": "group-or-aggregate"
+    },
+    {
+      "id": "lumbricidae",
+      "kind": "worm",
+      "nominalDesignDimensionM": 0.18,
+      "actualReferenceMeshBoundsXYZm": [
+        0.18,
+        0.014121,
+        0.015788
+      ],
+      "status": "didactic design in metres; species size source not independently calibrated",
+      "diagnostics": [
+        "segmented-body",
+        "adult-clitellum",
+        "litter-pulling"
+      ],
+      "microhabitat": "Feuchter Streuboden, Untersuchungsfenster",
+      "sourceStatus": "S55: Lumbricus terrestris zieht Streu in senkrechte Gänge; Schülerbestimmung zunächst Gruppe; keine Schweizer Kohlenstoffraten als norddeutsche Messwerte",
+      "identificationLimit": "group-or-aggregate"
+    },
+    {
+      "id": "ixodes_ricinus",
+      "kind": "arachnid",
+      "nominalDesignDimensionM": 0.004,
+      "actualReferenceMeshBoundsXYZm": [
+        0.004,
+        0.001794,
+        0.004585
+      ],
+      "status": "didactic design in metres; species size source not independently calibrated",
+      "diagnostics": [
+        "eight-legs",
+        "adult-female",
+        "attached-host"
+      ],
+      "microhabitat": "Feuchter Saum / adulte Zecke am Reh",
+      "sourceStatus": "S22; kein Live-Ausgraben/Anfassen realer Tiere als Arbeitsauftrag",
+      "identificationLimit": "model comparison; natural identification may need more characters"
+    },
+    {
+      "id": "halimione_portulacoides",
+      "kind": "plant",
+      "nominalDesignDimensionM": 0.65,
+      "actualReferenceMeshBoundsXYZm": [
+        0.542042,
+        0.580623,
+        0.536747
+      ],
+      "status": "didactic design in metres; species size source not independently calibrated",
+      "diagnostics": [
+        "fleshy-opposite-leaves",
+        "silvery-shrub",
+        "branched-wood"
+      ],
+      "microhabitat": "Gut entwässerte untere Salzwiese/Prielränder",
+      "sourceStatus": "S05; nicht starre mittlere Höhenzone an jedem Standort",
+      "identificationLimit": "model comparison; natural identification may need more characters"
+    },
+    {
+      "id": "salicornia_europaea",
+      "kind": "plant",
+      "nominalDesignDimensionM": 0.3,
+      "actualReferenceMeshBoundsXYZm": [
+        0.121958,
+        0.3105,
+        0.14346
+      ],
+      "status": "didactic design in metres; species size source not independently calibrated",
+      "diagnostics": [
+        "segmented-shoot",
+        "reduced-leaves",
+        "succulent"
+      ],
+      "microhabitat": "Pionierzone",
+      "sourceStatus": "S04; Aggregat statt unsicherer Kleinart",
+      "identificationLimit": "group-or-aggregate"
+    },
+    {
+      "id": "festuca_rubra",
+      "kind": "plant",
+      "nominalDesignDimensionM": 0.55,
+      "actualReferenceMeshBoundsXYZm": [
+        0.765818,
+        0.74508,
+        0.673013
+      ],
+      "status": "didactic design in metres; species size source not independently calibrated",
+      "diagnostics": [
+        "fine-rolled-leaves",
+        "narrow-panicle",
+        "upper-marsh"
+      ],
+      "microhabitat": "Obere Salzwiese",
+      "sourceStatus": "S04; Unterart nicht ohne diagnostische Belege festlegen",
+      "identificationLimit": "group-or-aggregate"
+    },
+    {
+      "id": "sporobolus_anglicus",
+      "kind": "plant",
+      "nominalDesignDimensionM": 0.95,
+      "actualReferenceMeshBoundsXYZm": [
+        1.292322,
+        1.218524,
+        1.255581
+      ],
+      "status": "didactic design in metres; species size source not independently calibrated",
+      "diagnostics": [
+        "broad-grass-leaves",
+        "upright-tuft",
+        "spike-branches"
+      ],
+      "microhabitat": "Pionierzone und passende Übergänge",
+      "sourceStatus": "S07–09; ähnliche Cytotypen, keine sichere Feldbestimmung allein aus Horstform",
+      "identificationLimit": "model comparison; natural identification may need more characters"
+    },
+    {
+      "id": "puccinellia_maritima",
+      "kind": "plant",
+      "nominalDesignDimensionM": 0.4,
+      "actualReferenceMeshBoundsXYZm": [
+        0.556959,
+        0.541876,
+        0.489464
+      ],
+      "status": "didactic design in metres; species size source not independently calibrated",
+      "diagnostics": [
+        "fine-grey-leaves",
+        "open-panicle",
+        "lower-marsh"
+      ],
+      "microhabitat": "Untere Salzwiese",
+      "sourceStatus": "S06; Teilareal nicht durch Artlabel allein wissenschaftlich bewiesen",
+      "identificationLimit": "model comparison; natural identification may need more characters"
+    },
+    {
+      "id": "limonium_vulgare",
+      "kind": "plant",
+      "nominalDesignDimensionM": 0.45,
+      "actualReferenceMeshBoundsXYZm": [
+        0.406452,
+        0.400794,
+        0.410584
+      ],
+      "status": "didactic design in metres; species size source not independently calibrated",
+      "diagnostics": [
+        "basal-rosette",
+        "branched-purple-flowers",
+        "marsh"
+      ],
+      "microhabitat": "Passende Salzrasen/Prielumfeld",
+      "sourceStatus": "S04/S03 als Standortkontext; konkrete Salzdrüsen-/Blühmerkmale vor Detailasset zusätzlich prüfen",
+      "identificationLimit": "model comparison; natural identification may need more characters"
+    },
+    {
+      "id": "recurvirostra_avosetta",
+      "kind": "bird",
+      "nominalDesignDimensionM": 0.43,
+      "actualReferenceMeshBoundsXYZm": [
+        0.428651,
+        0.47463,
+        0.581524
+      ],
+      "status": "didactic design in metres; species size source not independently calibrated",
+      "diagnostics": [
+        "upcurved-bill",
+        "black-white-plumage",
+        "sweeping"
+      ],
+      "microhabitat": "Sehr flaches Wasser/feiner nasser Schlick; Rast höher",
+      "sourceStatus": "S34; Beutegrößen und Wassertiefen zunächst qualitative Zustandsbedingungen",
+      "identificationLimit": "model comparison; natural identification may need more characters"
+    },
+    {
+      "id": "platalea_leucorodia",
+      "kind": "bird",
+      "nominalDesignDimensionM": 0.85,
+      "actualReferenceMeshBoundsXYZm": [
+        0.847488,
+        0.775696,
+        0.950394
+      ],
+      "status": "didactic design in metres; species size source not independently calibrated",
+      "diagnostics": [
+        "spatulate-tip",
+        "pale-body",
+        "sweeping"
+      ],
+      "microhabitat": "Flacher Priel, Randwasser; Rast",
+      "sourceStatus": "S35–36; kein reiner Muschelfresser, keine Kolonie auf Miniwiese",
+      "identificationLimit": "model comparison; natural identification may need more characters"
+    },
+    {
+      "id": "tringa_totanus",
+      "kind": "bird",
+      "nominalDesignDimensionM": 0.28,
+      "actualReferenceMeshBoundsXYZm": [
+        0.278975,
+        0.3229,
+        0.395622
+      ],
+      "status": "didactic design in metres; species size source not independently calibrated",
+      "diagnostics": [
+        "red-legs",
+        "red-bill-base",
+        "probing"
+      ],
+      "microhabitat": "Feuchter Schlick/Prielrand, Salzwiese als Rast-/saisonal Brutgebiet",
+      "sourceStatus": "S33; Brut-/Warnverhalten nicht zwangsläufig in Spätsommerszene",
+      "identificationLimit": "model comparison; natural identification may need more characters"
+    },
+    {
+      "id": "haematopus_ostralegus",
+      "kind": "bird",
+      "nominalDesignDimensionM": 0.43,
+      "actualReferenceMeshBoundsXYZm": [
+        0.428502,
+        0.403219,
+        0.576038
+      ],
+      "status": "didactic design in metres; species size source not independently calibrated",
+      "diagnostics": [
+        "straight-orange-bill",
+        "black-white-body",
+        "shell-opening"
+      ],
+      "microhabitat": "Trockenfallende Muschel-/Wattfläche und Hochwasserrast",
+      "sourceStatus": "S37–38; individuelle Suchweise nicht automatisch genetische Spezialisierung",
+      "identificationLimit": "model comparison; natural identification may need more characters"
+    },
+    {
+      "id": "cerastoderma_edule",
+      "kind": "bivalve",
+      "nominalDesignDimensionM": 0.025,
+      "actualReferenceMeshBoundsXYZm": [
+        0.025,
+        0.022331,
+        0.009925
+      ],
+      "status": "didactic design in metres; species size source not independently calibrated",
+      "diagnostics": [
+        "radial-ribs",
+        "paired-valves",
+        "shallow-burial"
+      ],
+      "microhabitat": "Oberflächennah im Sediment",
+      "sourceStatus": "S44–45; konkretes M3-Individuum/Probenkontrolle dokumentieren",
+      "identificationLimit": "model comparison; natural identification may need more characters"
+    },
+    {
+      "id": "mytilus_edulis",
+      "kind": "bivalve",
+      "nominalDesignDimensionM": 0.045,
+      "actualReferenceMeshBoundsXYZm": [
+        0.045063,
+        0.024429,
+        0.012343
+      ],
+      "status": "didactic design in metres; species size source not independently calibrated",
+      "diagnostics": [
+        "elongate-dark-shell",
+        "byssus",
+        "attached-bed"
+      ],
+      "microhabitat": "Kleine geeignete Bank/Haftsubstrat",
+      "sourceStatus": "S44–45; kein Anspruch, vollständige heutige Mischbank inklusive aller Neozoen zu zeigen",
+      "identificationLimit": "model comparison; natural identification may need more characters"
+    },
+    {
+      "id": "arenicola_marina",
+      "kind": "worm",
+      "nominalDesignDimensionM": 0.2,
+      "actualReferenceMeshBoundsXYZm": [
+        0.2,
+        0.012986,
+        0.017107
+      ],
+      "status": "didactic design in metres; species size source not independently calibrated",
+      "diagnostics": [
+        "casts-and-funnel",
+        "segmented-body",
+        "burrow-section"
+      ],
+      "microhabitat": "Geeignetes Sand-/Mischwatt",
+      "sourceStatus": "S44; Detritus/Mikroorganismen statt anorganischer Sand als Energiequelle",
+      "identificationLimit": "model comparison; natural identification may need more characters"
+    },
+    {
+      "id": "hediste_diversicolor",
+      "kind": "worm",
+      "nominalDesignDimensionM": 0.065,
+      "actualReferenceMeshBoundsXYZm": [
+        0.065,
+        0.004221,
+        0.010758
+      ],
+      "status": "didactic design in metres; species size source not independently calibrated",
+      "diagnostics": [
+        "paired-parapodia",
+        "segmented-body",
+        "tube"
+      ],
+      "microhabitat": "Schlick-/Mischwatt, Wohnröhre",
+      "sourceStatus": "S41; ältere Quelle Nereis diversicolor als Synonym; Einsetztiefe nicht als Naturkonstante",
+      "identificationLimit": "model comparison; natural identification may need more characters"
+    },
+    {
+      "id": "crangon_crangon",
+      "kind": "crustacean",
+      "nominalDesignDimensionM": 0.035,
+      "actualReferenceMeshBoundsXYZm": [
+        0.035,
+        0.004788,
+        0.009754
+      ],
+      "status": "didactic design in metres; species size source not independently calibrated",
+      "diagnostics": [
+        "long-antennae",
+        "segmented-abdomen",
+        "swimmerets"
+      ],
+      "microhabitat": "Priel/Pfützen/überflutete Wattflächen",
+      "sourceStatus": "S40; nicht trocken zwischen Salzwiesenhalmen herumgehen",
+      "identificationLimit": "model comparison; natural identification may need more characters"
+    },
+    {
+      "id": "carcinus_maenas",
+      "kind": "crustacean",
+      "nominalDesignDimensionM": 0.055,
+      "actualReferenceMeshBoundsXYZm": [
+        0.055221,
+        0.014916,
+        0.068858
+      ],
+      "status": "didactic design in metres; species size source not independently calibrated",
+      "diagnostics": [
+        "wide-carapace",
+        "two-claws",
+        "sideways-walk"
+      ],
+      "microhabitat": "Priel, Muschelbank, nasser Wattboden/Deckung",
+      "sourceStatus": "S39–40; kein freies Beutespektrum nur nach Ressourcentext",
+      "identificationLimit": "model comparison; natural identification may need more characters"
+    },
+    {
+      "id": "peringia_ulvae",
+      "kind": "gastropod",
+      "nominalDesignDimensionM": 0.004,
+      "actualReferenceMeshBoundsXYZm": [
+        0.004,
+        0.002979,
+        0.002738
+      ],
+      "status": "didactic design in metres; species size source not independently calibrated",
+      "diagnostics": [
+        "coiled-shell",
+        "grazing-foot",
+        "small-size"
+      ],
+      "microhabitat": "Oberfläche feuchten Schlicks",
+      "sourceStatus": "S42–43; Detailbestimmung und Bestandszahlen nicht aus Fernsicht",
+      "identificationLimit": "model comparison; natural identification may need more characters"
+    }
+  ],
+  "functionalGroups": [
+    {
+      "id": "phytoplankton",
+      "name": "Phytoplankton",
+      "role": "Photosynthese im Wasser; Muschel-Nahrung",
+      "view": "water-section"
+    },
+    {
+      "id": "benthic-diatoms",
+      "name": "Benthische Kieselalgen",
+      "role": "Belag am Sediment; Schnecken-Nahrung",
+      "view": "sediment-section"
+    },
+    {
+      "id": "wood-insect-larvae",
+      "name": "Holzbewohnende Insektenlarven",
+      "role": "Spechtressource im Holz; Sammelgruppe",
+      "view": "wood-section"
+    },
+    {
+      "id": "ectomycorrhiza",
+      "name": "Ektomykorrhizapilze",
+      "role": "Pilz erhält Zucker; Baum erhält Mineralstoffe/Wasser",
+      "view": "root-section"
+    },
+    {
+      "id": "saprotrophs",
+      "name": "Saprotrophe Pilze und Bakterien",
+      "role": "Abbau und mikrobielle Mineralisierung; eigene Atmung",
+      "view": "soil-section"
+    },
+    {
+      "id": "nitrogen-process-groups",
+      "name": "N-Mikroorganismen nach Prozess",
+      "role": "Fixierung, Ammonifikation, Nitrifikation und Denitrifikation getrennt",
+      "view": "nitrogen-section"
+    }
+  ],
+  "interactions": [
+    {
+      "id": "fox-mouse",
+      "kind": "predation",
+      "actors": [
+        "vulpes_vulpes",
+        "apodemus_sylvaticus"
+      ],
+      "resource": "wood-mice",
+      "window": "dusk",
+      "sequence": [
+        "stalk",
+        "attempt",
+        "caught-or-escaped"
+      ],
+      "conclusion": "Einzelner Jagdversuch; kein Beweis einer Populationsregel",
+      "source": "S24"
+    },
+    {
+      "id": "ladybird-aphid",
+      "kind": "predation",
+      "actors": [
+        "coccinella_septempunctata",
+        "aphidoidea"
+      ],
+      "resource": "aphid-colony",
+      "window": "summer",
+      "sequence": [
+        "search",
+        "contact",
+        "consume"
+      ],
+      "conclusion": "Blattlaus als Beute dieses Individuums",
+      "source": "S53,S54"
+    },
+    {
+      "id": "shell-competition",
+      "kind": "interspecific-competition",
+      "actors": [
+        "haematopus_ostralegus",
+        "carcinus_maenas"
+      ],
+      "resource": "shared-mussels",
+      "window": "summer",
+      "sequence": [
+        "accessible",
+        "remove",
+        "reduced-yield"
+      ],
+      "conclusion": "Zugang und Ertrag am begrenzten Pool; Kontrollvergleich erforderlich",
+      "source": "S37,S39"
+    },
+    {
+      "id": "same-species-competition",
+      "kind": "intraspecific-competition",
+      "actors": [
+        "coccinella_septempunctata",
+        "coccinella_septempunctata"
+      ],
+      "resource": "aphid-colony",
+      "window": "summer",
+      "sequence": [
+        "shared-resource",
+        "remove",
+        "reduced-yield"
+      ],
+      "conclusion": "Begrenzte Beute bei zwei Individuen, kein Revierkampf",
+      "source": "S53"
+    },
+    {
+      "id": "tick-deer",
+      "kind": "parasitism",
+      "actors": [
+        "ixodes_ricinus",
+        "capreolus_capreolus"
+      ],
+      "resource": "deer-host",
+      "window": "summer",
+      "sequence": [
+        "attached",
+        "feeding"
+      ],
+      "conclusion": "Adulte Zecke am konkreten Wirt; relative Kosten nur Ergänzungsmodell",
+      "source": "S22"
+    },
+    {
+      "id": "root-fungus",
+      "kind": "symbiosis",
+      "actors": [
+        "fagus_sylvatica",
+        "ectomycorrhiza"
+      ],
+      "resource": "root-exchange",
+      "window": "summer",
+      "sequence": [
+        "carbon-to-fungus",
+        "mineral-to-root"
+      ],
+      "conclusion": "Bereitgestelltes Wurzelschnittmodell, keine Fernglassichtung",
+      "source": "S32"
+    },
+    {
+      "id": "bee-clover",
+      "kind": "pollination",
+      "actors": [
+        "bombus_lapidarius",
+        "trifolium_pratense"
+      ],
+      "resource": "clover-pollen",
+      "window": "summer",
+      "sequence": [
+        "anther-contact",
+        "pollen-carried",
+        "stigma-contact"
+      ],
+      "conclusion": "Pollentransport; weder Befruchtung noch Samenbildung garantiert",
+      "source": "S17,S51,S52"
+    },
+    {
+      "id": "deer-browse",
+      "kind": "herbivory",
+      "actors": [
+        "capreolus_capreolus",
+        "rubus_fruticosus"
+      ],
+      "resource": "browse-shoot",
+      "window": "summer",
+      "sequence": [
+        "bite",
+        "shoot-reduced"
+      ],
+      "conclusion": "Materialverändernder Verbiss, keine bloße Kopfbewegung",
+      "source": "S23"
+    },
+    {
+      "id": "caterpillar-nettle",
+      "kind": "herbivory",
+      "actors": [
+        "aglais_io",
+        "urtica_dioica"
+      ],
+      "resource": "nettle-leaf",
+      "window": "summer",
+      "sequence": [
+        "bite",
+        "leaf-reduced"
+      ],
+      "conclusion": "Raupenfraß; Falter und Raupe gehören zu einem Taxon",
+      "source": "S20"
+    },
+    {
+      "id": "worm-litter",
+      "kind": "detritus",
+      "actors": [
+        "lumbricidae",
+        "saprotrophs"
+      ],
+      "resource": "leaf-litter",
+      "window": "summer",
+      "sequence": [
+        "grip",
+        "pull",
+        "mixed-litter"
+      ],
+      "conclusion": "Streueinzug; vollständige Mineralisierung ist ein anderer Prozess",
+      "source": "S55"
+    },
+    {
+      "id": "fungus-wood",
+      "kind": "decomposition",
+      "actors": [
+        "fomes_fomentarius",
+        "saprotrophs"
+      ],
+      "resource": "dead-wood",
+      "window": "summer",
+      "sequence": [
+        "wood",
+        "fungal-growth",
+        "carbon-release"
+      ],
+      "conclusion": "Langzeit-Schnittmodell; Zunderschwamm ist kein Mykorrhizapartner",
+      "source": "S30,S31"
+    },
+    {
+      "id": "jay-acorn",
+      "kind": "zoochory",
+      "actors": [
+        "garrulus_glandarius",
+        "quercus_robur"
+      ],
+      "resource": "acorns",
+      "window": "autumn",
+      "sequence": [
+        "pick",
+        "carry",
+        "cache"
+      ],
+      "conclusion": "Transport/Verstecken; kein garantierter Keimungserfolg",
+      "source": "S25,S26"
+    },
+    {
+      "id": "shore-feeding",
+      "kind": "niche",
+      "actors": [
+        "platalea_leucorodia",
+        "recurvirostra_avosetta",
+        "tringa_totanus",
+        "haematopus_ostralegus"
+      ],
+      "resource": "size-specific-prey",
+      "window": "summer",
+      "sequence": [
+        "depth-access",
+        "technique",
+        "prey-size"
+      ],
+      "conclusion": "Mehrere Nischendimensionen; keine Erklärung allein durch Schnabelform",
+      "source": "S33-S40"
+    },
+    {
+      "id": "communication",
+      "kind": "communication-model",
+      "actors": [
+        "parus_major",
+        "parus_major"
+      ],
+      "resource": "signal",
+      "window": "spring",
+      "sequence": [
+        "signal",
+        "receiver-orients"
+      ],
+      "conclusion": "Gestaltete Sender-/Empfängerfolge; keine unabhängige Naturvalidierung oder Absichtsdeutung",
+      "source": "S27; didactic response sequence"
+    }
+  ],
+  "initialResources": {
+    "aphid-colony": {
+      "id": "ranger-compact-v2:urtica_dioica:263",
+      "amount": 9,
+      "initial": 9,
+      "units": "model aphids",
+      "hostId": "ranger-compact-v2:urtica_dioica:263"
+    },
+    "shared-mussels": {
+      "id": "compact-mussel-pool",
+      "amount": 18,
+      "initial": 18,
+      "units": "20–40 mm model mussels",
+      "sizeRange": [
+        0.02,
+        0.04
+      ]
+    },
+    "clover-pollen": {
+      "id": "ranger-compact-v2:trifolium_pratense:454",
+      "recipientId": "ranger-compact-v2:trifolium_pratense:455",
+      "amount": 6,
+      "initial": 6,
+      "units": "relative pollen packets"
+    },
+    "browse-shoot": {
+      "id": "ranger-compact-v2:rubus_fruticosus:452",
+      "amount": 5,
+      "initial": 5,
+      "units": "visible model shoots"
+    },
+    "nettle-leaf": {
+      "id": "ranger-compact-v2:urtica_dioica:263",
+      "amount": 8,
+      "initial": 8,
+      "units": "relative leaf pieces"
+    },
+    "leaf-litter": {
+      "id": "compact-leaf-litter",
+      "amount": 6,
+      "initial": 6,
+      "units": "relative leaf fragments"
+    },
+    "dead-wood": {
+      "id": "compact-dead-log",
+      "amount": 100,
+      "initial": 100,
+      "units": "relative carbon; separate long-term model"
+    },
+    "acorns": {
+      "id": "compact-oak-acorns",
+      "amount": 4,
+      "initial": 4,
+      "units": "model acorns"
+    },
+    "wood-mice": {
+      "id": "compact-mouse-cover",
+      "amount": 3,
+      "initial": 3,
+      "units": "encounter individuals"
+    },
+    "wood-larvae": {
+      "id": "wood-insect-larvae",
+      "amount": 8,
+      "initial": 8,
+      "units": "grouped model larvae"
+    },
+    "small-juveniles": {
+      "id": "compact-juvenile-ragworms",
+      "amount": 3,
+      "initial": 3,
+      "units": "six-mm juvenile ragworms; not adult shrimp"
+    },
+    "small-worms": {
+      "id": "compact-small-ragworms",
+      "amount": 3,
+      "initial": 3,
+      "units": "twelve-mm juvenile ragworms"
+    },
+    "shrimp": {
+      "id": "compact-creek-shrimps",
+      "amount": 5,
+      "initial": 5,
+      "units": "25–41 mm model shrimp"
+    },
+    "deer-host": {
+      "id": "compact-deer-1",
+      "amount": 1,
+      "initial": 1,
+      "units": "one host; costs qualitative"
+    },
+    "phytoplankton": {
+      "id": "phytoplankton",
+      "amount": 100,
+      "initial": 100,
+      "units": "relative suspended food; no natural concentration"
+    },
+    "benthic-diatoms": {
+      "id": "benthic-diatoms",
+      "amount": 30,
+      "initial": 30,
+      "units": "relative surface food"
+    }
+  },
+  "sampling": [
+    {
+      "id": "Q1",
+      "x": 63,
+      "z": -12,
+      "width": 0.9,
+      "depth": 0.3,
+      "areaM2": 0.27,
+      "sedimentDepthCm": 5,
+      "rule": "present living cockles; same ID counted once"
+    },
+    {
+      "id": "Q2",
+      "x": 63,
+      "z": -11.7,
+      "width": 0.9,
+      "depth": 0.3,
+      "areaM2": 0.27,
+      "sedimentDepthCm": 5,
+      "rule": "present living cockles; same ID counted once"
+    },
+    {
+      "id": "Q0",
+      "x": 66,
+      "z": -12,
+      "width": 0.9,
+      "depth": 0.3,
+      "areaM2": 0.27,
+      "sedimentDepthCm": 5,
+      "rule": "same method; valid zero find"
+    }
+  ],
+  "models": [
+    {
+      "kind": "exponential-logistic",
+      "units": {
+        "t": "days",
+        "N": "model individuals",
+        "rate": "per day",
+        "capacity": "model individuals"
+      },
+      "parameters": {
+        "initial": 10,
+        "rate": 0.25,
+        "capacity": 100,
+        "days": 20
+      },
+      "source": "theoretical-model",
+      "assumptions": "Closed homogeneous population; r and K constant; not a prediction for rendered animals"
+    },
+    {
+      "kind": "lotka-volterra",
+      "units": {
+        "t": "model days",
+        "prey": "model individuals",
+        "predator": "model individuals",
+        "a": "per day",
+        "b": "per predator per day",
+        "c": "per day",
+        "d": "per prey per day"
+      },
+      "parameters": {
+        "prey": 30,
+        "predator": 6,
+        "a": 0.5,
+        "b": 0.025,
+        "c": 0.2,
+        "d": 0.01,
+        "days": 40,
+        "disturbance": false
+      },
+      "source": "theoretical-model",
+      "assumptions": "Two closed populations; homogeneous encounters; unlimited prey food; no alternative prey, seasons or age structure. Not a fox forecast."
+    },
+    {
+      "kind": "tolerance",
+      "units": {
+        "flooding": "hours flooded per model day",
+        "physiological": "relative long-term growth",
+        "realized": "relative growth with designed competitor"
+      },
+      "parameters": {
+        "competitor": false
+      },
+      "source": "didactic-model",
+      "assumptions": "One-factor long-term model; salinity, substrate and drainage fixed; not calibrated to any marsh species. Transect zoning is not this experiment."
+    },
+    {
+      "kind": "carbon",
+      "units": {
+        "t": "model days",
+        "pools": "relative carbon units",
+        "flows": "relative carbon units per day"
+      },
+      "parameters": {
+        "days": 30,
+        "photosynthesis": 3,
+        "plantRespiration": 0.8,
+        "detritusInput": 1,
+        "decomposition": 0.04
+      },
+      "source": "didactic-model",
+      "assumptions": "Closed carbon balance, explicit atmospheric pool; energy is not conserved as usable energy and not cycled. Soil carbon can later respire; no permanent blue-carbon claim."
+    },
+    {
+      "kind": "nitrogen",
+      "units": {
+        "t": "model days",
+        "pools": "relative N units; not mg/l",
+        "flows": "relative N units per model day"
+      },
+      "parameters": {
+        "oxygen": true,
+        "days": 20,
+        "input": 0,
+        "initialPools": {
+          "n2": 100,
+          "organic": 20,
+          "ammonium": 4,
+          "nitrite": 0,
+          "nitrate": 5
+        },
+        "rates": {
+          "fixation": 0.4,
+          "ammonification": 0.6,
+          "assimilationNH4": 0.15,
+          "assimilationNO3": 0.3,
+          "nitrification1": 0.5,
+          "nitrification2": 0.4,
+          "denitrification": 0.35
+        }
+      },
+      "source": "didactic-model",
+      "assumptions": "Sequential one-day fluxes in the listed code order, bounded by the available source pool; rates are designed teaching values, not natural kinetic constants. Input enters NH₄⁺. Fixation represents protected microbial sites; ambient oxygen switch controls nitrification/denitrification, not all nitrogenase regulation. No quantitative water-quality forecast, energy budget or instantaneous visible die-off."
+    }
+  ]
+}

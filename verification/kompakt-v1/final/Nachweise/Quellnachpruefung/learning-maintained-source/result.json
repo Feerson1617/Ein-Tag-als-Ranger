@@ -1,0 +1,1293 @@
+{
+  "entry": "kompakt.html",
+  "site": "dist",
+  "entryKind": "maintained-source",
+  "sourceClosureAudit": {
+    "entry": "dist/kompakt.html",
+    "modules": 46,
+    "assets": 5,
+    "runtimeFiles": 54,
+    "scope": "Actual maintained source ES-module closure; no inline packaged/standalone claim."
+  },
+  "htmlSHA256": "15c1f1697f831fc9379fbc8a3e0866bd9c46865fac10fa404e0d9405c13105b8",
+  "sourceCommit": "bd859abe098a50408f8b950794b012b59b8432dd",
+  "sourceDirty": false,
+  "runtimeSourceHashes": {
+    "assets/boardwalk-wood.webp": "4d06022133e3772534374671fb73a4509ed109e1db6ca06a2d62a8c99c47ac6d",
+    "assets/compact-roe-deer.glb": "a89400df66033eb5eaa7f9bf13ccefaacfb866ab24e4576574d11965354ee619",
+    "assets/sky-panorama.webp": "46c360b491b11269d280e73ec0e71869afdfd62fb543b4250713234374a2f71d",
+    "assets/terrain-atlas.webp": "d637324d3ace6ef8e2c549e7f0a513efd1a4c06aab927f0ed1565bf77b2ced02",
+    "assets/wildlife-fox.glb": "61a4d1b845aa406928a327648417ae1c3982510b9c4e8ce33b7c494fbc98a22f",
+    "compact/catalog.js": "6b693d4c6a0f6b880b9ff99295826f3968e61ba96f52606997a1635ddf1fe39f",
+    "compact/classroom-start.js": "232de97d9c04a91d3635bdae4bf4b10e31d369a8a1b5817399fcf5e506a1ede9",
+    "compact/coastal-behaviour.js": "48cf887fd0b3af1387ea7748c3d990925df48bbb74dd0a85b855bc2230cf71af",
+    "compact/coastal-rig.js": "ad5380582adc3ea554e591a152418fc21b8b49002c69329072608126fe860d94",
+    "compact/comparison-views.js": "050f629dfc0b3b9bac1badc0c0564cfb08cf88e92006edcba377eabc623ecf82",
+    "compact/determination.js": "25f8ce960dba09ebeeb4470530d38608809bf98aa91d3575716b6ff835145c6f",
+    "compact/ecology.js": "e50f25a3146e79671472e7a5e6ed1d78f007564515bf9a78bb67fac9695ef8e0",
+    "compact/evidence.js": "2f24a2acbe26a962d1636c91c49fd15208b6ce0f0e134b0a9dbfdb5084f2461d",
+    "compact/expanded-view.js": "77bf56bb7d37b0ddf6b5e0e33410105a6bd4a8c9c532a3adf3013a09caf36410",
+    "compact/fauna-view.js": "6d968276c131fb16ad2ecf073debb6f00b853f3742113e80ae35fe0b04c5b4f0",
+    "compact/feeding-detail.js": "d4c69e70bdebecd6a80cf08ee98e3ef3627dd098a4e04bc3fcef1c566f00769b",
+    "compact/geometry.js": "ac8a5e08a56f7ed75abb7a65baa6e20aba032984d7089e3b290d4769dd4307b0",
+    "compact/habitats.js": "e5448a68391c3b8f5c99219a39e3b79762ae651343cd870f0c99c4ac3a8b0e16",
+    "compact/inspection.js": "961c8c13e8e8e58595460fa40ed7bed0668367b120081dd95961a78ca87300ea",
+    "compact/journal.js": "a085cceff59298a2f473af7e756f1122217c8e30fbfff4ea5b87bcd21ce9f795",
+    "compact/layout.js": "e02558557a9c99fa0549c94f8cbfc8873e18f3c90df845155d51ee4d404209a6",
+    "compact/learning-documents.js": "6df51c6489ae318e0d33560d037acdb148c0baf4931547bd5d8e022dbc2d2266",
+    "compact/learning-models.js": "ac5200d27a29dc17ab2000a90554990a2a632532e920f887026407d0cfd2c20e",
+    "compact/learning-ui.js": "c8b1932bec3670873087b839dac336d972117fcf031368d02262b4ed81468ca6",
+    "compact/lesson-layouts.js": "38df6da54b9615722acef34264832c757c753b2ea250f0c14fe571d7f267ba10",
+    "compact/lesson-resources.js": "8137b9a9629677330de652ac2314b5353e23c52d5d6c41badab02cfcd21f26fe",
+    "compact/main.js": "0820495bf3529fa19de51dd9fef894ac94e9fdbfc5cccfe6286fb78189c69173",
+    "compact/management.js": "e6d38fbfc2c7e131d60ca3e38a1c740ca9ba5c49628fd3ba51ca94242d2d75a3",
+    "compact/manifest.js": "284978e1f4a23de69779b82f0b19e31b426b7e5ebf608f69785cdd0655035c19",
+    "compact/materials.js": "c4f2c85b0d1b36ef4fb4ae9ae55ad230d08e94a2bb886b6363b1a51ddcd44124",
+    "compact/missions.js": "8f8151a6b499658b1316ee57ac6fd4d4e94a980b5baf0e943ca2678edd03bfca",
+    "compact/observation-context.js": "e8fd4548bd0c576b1647a38f9b6ac78d980f533438110a573cb3094a40de868f",
+    "compact/observation-schema.js": "1ab043f3d6f7b61ea00eea1510da71b897f0e6dcc52a934d4acae9c17d3e773e",
+    "compact/organism-models.js": "0299d0ff193cc9bd211de3b833827495e81e597a273fffcfa36b07fc1d25d8e6",
+    "compact/path-mesh.js": "7a41ebc390aeca96cffd1e4fcee19f3b76310413fcee3489d1533ebd599a4c82",
+    "compact/render-groups.js": "f99fc8c1a5462b176ea45befdd7ac57728784a90a46c95a3c32491a658609057",
+    "compact/style.css": "122258ce887ae2659413bb1c837f74e7b0f270b6cf2c64839047de399b90cf47",
+    "compact/task-schema.js": "e2578f580e0f018fe7903bc6486873dd6cdf050bfcd9719798d6e6e1462c2d01",
+    "compact/taxa.js": "97cd6f5bad16208408512be876ebf63d5f9ee400dd31f94a61c8ca08e4e24fd3",
+    "compact/vegetation-view.js": "7e6f703c9a930a86dd2c9b202a79bf7842f4d1f41bf9a2a27d3ef24b3b22e47a",
+    "compact/village-view.js": "15d1902cbb96678503051ba0b11494d0ceea412dbc193f18bf16b0bfe9d91b03",
+    "compact/village.js": "05acf2a5ff040e4de2aaf2c3ebc3ee88daaf2edc75d12e80d49a5f54a60a3aec",
+    "compact/visibility.js": "50d59d44257e9d18547bfaec9277366d3339177c6ebce37d948b48c9940a86f1",
+    "compact/world-state.js": "360197f8bd8ab54c595386b66f2e676499630bc6ca896856034fba4910d9fd7f",
+    "compact/world-view.js": "64a70560e048c2b46afea2e5a2909221228bc51ea5e619cc061b5fa7bf4d8494",
+    "field-guide.js": "696cf216e632d4ad5c1a937174a9933975fc08d0a97ebd19fcb448dbc2e01e16",
+    "icon.svg": "cb8cda889f99e56d13d18e09929837b7c3630d3f9ff3219316d12d3077fc0869",
+    "kompakt.html": "15c1f1697f831fc9379fbc8a3e0866bd9c46865fac10fa404e0d9405c13105b8",
+    "observation-clock.js": "2304e6c425192967f87841caa5072873cb5dd5c7f69c38fb45b237fd22f98b03",
+    "ranger-controls.js": "081497a5f6754ecd441e61ee55805da99b5121e96215cfa900209e00e41e5eda",
+    "station-protocol.js": "2590df7d9de4c8f4afda8fcafd619d565440c2dc7e1bb6ef4574aeadf803ae57",
+    "vendor/three.core.js": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20",
+    "vendor/three.module.js": "2884e2e6f26feaec0b454fcdc1e98c27d6433ba15253e5a3e22e111df81686fa",
+    "wildlife-glb.js": "32f8f947dd002ba7b571ee627e6291fa40a951fccdd9dee644661f19de487c35"
+  },
+  "startedAt": "2026-10-24T13:37:49Z",
+  "checks": [
+    {
+      "name": "36 active entries; five optional families initially incomplete, free play remains available",
+      "passed": true
+    },
+    {
+      "name": "K1 earned from three different actual model observations, justified uncertainty and two same-method sites",
+      "passed": true
+    },
+    {
+      "name": "K1 blind labels, plausible wrong choice rejected, uncertainty retained and actual unseen oak transfer earned as justified group",
+      "passed": true
+    },
+    {
+      "name": "K2 real control/competitor runs; co-presence answer rejected, controlled resource explanation accepted",
+      "passed": true
+    },
+    {
+      "name": "K3 earned with same individual after negative different-individual attempt; eA Q1/Q2/Q0 and true zero recorded",
+      "passed": true
+    },
+    {
+      "name": "K4 own fungus observation plus explicit section-model edges; false energy cycle rejected",
+      "passed": true
+    },
+    {
+      "name": "K5 rejects forest-only evidence and accepts a real coastal-plant link with weights, separate fact/value/norm/consequence, three local dialogues and ungraded argument",
+      "passed": true
+    },
+    {
+      "name": "visible slow-render warning keeps objective and study controls unobscured",
+      "passed": true,
+      "warningVisible": false,
+      "computedLayout": {
+        "warningTop": 196,
+        "controlBottom": 179
+      }
+    },
+    {
+      "name": "real reload preserves all acquired answers/evidence and recomputes five statuses; actual JSON and readable report downloads",
+      "passed": true
+    },
+    {
+      "name": "contradictory imported scene protocol rejected by real file input without replacing saved work",
+      "passed": true
+    },
+    {
+      "name": "controlled experiment with contradictory initial seed rejected by actual import without altering old work",
+      "passed": true
+    },
+    {
+      "name": "malformed nested task answer rejected atomically before it can break mission rendering",
+      "passed": true
+    },
+    {
+      "name": "quota during real answer editing leaves old storage intact and exports current uncommitted work",
+      "passed": true
+    },
+    {
+      "name": "all 25 student/teacher cards download and five actual numeric models produce plots, full tables and provenance downloads",
+      "passed": true
+    },
+    {
+      "name": "actual WebGL loss in magnified view cancels evidence; closing releases the inspection context",
+      "passed": true
+    },
+    {
+      "name": "actual v1 boot migration preserves original compact file and large-world key without new observations/credit",
+      "passed": true
+    },
+    {
+      "name": "requested iPad 9 viewport approximation: touch movement, automatic tablet pixel cap, portrait/landscape, dialogs and acquired evidence",
+      "passed": true,
+      "scope": "Chromium touch emulation, 1080x810 and 810x1080, DPR2; no actual Apple hardware, Safari or iPadOS 27 certification"
+    },
+    {
+      "name": "all 36 active taxa plus caterpillar captured from actual magnified meshes through reachable study sites",
+      "passed": true,
+      "taxa": [
+        "aglais_io",
+        "aphidoidea",
+        "apodemus_sylvaticus",
+        "arenicola_marina",
+        "bombus_lapidarius",
+        "capreolus_capreolus",
+        "carcinus_maenas",
+        "cerastoderma_edule",
+        "coccinella_septempunctata",
+        "crangon_crangon",
+        "dendrocopos_major",
+        "fagus_sylvatica",
+        "festuca_rubra",
+        "fomes_fomentarius",
+        "galium_odoratum",
+        "garrulus_glandarius",
+        "haematopus_ostralegus",
+        "halimione_portulacoides",
+        "hediste_diversicolor",
+        "ixodes_ricinus",
+        "limonium_vulgare",
+        "lumbricidae",
+        "mytilus_edulis",
+        "parus_major",
+        "peringia_ulvae",
+        "platalea_leucorodia",
+        "puccinellia_maritima",
+        "quercus_robur",
+        "recurvirostra_avosetta",
+        "rubus_fruticosus",
+        "salicornia_europaea",
+        "sporobolus_anglicus",
+        "trifolium_pratense",
+        "tringa_totanus",
+        "urtica_dioica",
+        "vulpes_vulpes"
+      ]
+    }
+  ],
+  "errors": [],
+  "captures": [
+    {
+      "file": "K1-earned.png",
+      "sha256": "4cc8f319d3d7ace5f328813ecbfb0a117423960ca1c962288ecae99119b74984",
+      "bytes": 211734,
+      "source": "actual browser screenshot"
+    },
+    {
+      "file": "K1-transfer.png",
+      "sha256": "ae2bc0ebbd82e7d52ce24257bcd91ccb700cbe7b8ba9a1b2e2d8603a304c9bc7",
+      "bytes": 217500,
+      "source": "actual browser screenshot"
+    },
+    {
+      "file": "K2-earned.png",
+      "sha256": "261077986d01a47b8a5ff69f7304179a8c94c33d607f0d8935aa8910a4aeaad3",
+      "bytes": 204618,
+      "source": "actual browser screenshot"
+    },
+    {
+      "file": "K3-earned.png",
+      "sha256": "66311571db3bc26dafcb1c846876ddb95123bc6d3f2e5d932ea9698a71136e95",
+      "bytes": 217614,
+      "source": "actual browser screenshot"
+    },
+    {
+      "file": "K4-earned.png",
+      "sha256": "bde71ca9a0d5a8f1f58bce3b7e26e0c114f63e5f6e202ab4f93896d1dd494281",
+      "bytes": 202389,
+      "source": "actual browser screenshot"
+    },
+    {
+      "file": "K5-forest-rejected.png",
+      "sha256": "fd249bf271f0c2b78414bdb0ca4530ca8ebd76c110604435c195096a48b19ba2",
+      "bytes": 207102,
+      "source": "actual browser screenshot"
+    },
+    {
+      "file": "K5-earned.png",
+      "sha256": "27380946dc695b84c87457fe17ef2101e1a176967a545d326633ec7217491778",
+      "bytes": 224860,
+      "source": "actual browser screenshot"
+    },
+    {
+      "file": "tablet-landscape.png",
+      "sha256": "1e65a3600a8aaee9518f0a11be5f870472145f06f8742161ce408d0938a8a539",
+      "bytes": 2290237,
+      "source": "actual browser screenshot"
+    },
+    {
+      "file": "tablet-portrait.png",
+      "sha256": "36744454bc7ff9dc270438d2a29c4cd85b92e3ed508fcb3d0b7e8019fb0f71a8",
+      "bytes": 1071606,
+      "source": "actual browser screenshot"
+    },
+    {
+      "file": "model-tringa_totanus.png",
+      "sha256": "abbfb2ac7f43165653ce0ae69f342daed8c5634b9b9d8bdfc767e8a766dd4afe",
+      "bytes": 12035,
+      "canvasOnly": true,
+      "taxon": "tringa_totanus",
+      "stage": "adult",
+      "individualId": "compact-redshank",
+      "runId": "9f123496-acf1-4bbf-bd01-ae6f6eb366b6",
+      "simulationTime": "0.262",
+      "window": "summer",
+      "source": "actual active mesh in the magnified WebGL view"
+    },
+    {
+      "file": "model-garrulus_glandarius.png",
+      "sha256": "43d14874fbf010b3ce6c039e82d9b1ab7a8f7c015277b5027bafd6b2be760b3d",
+      "bytes": 12292,
+      "canvasOnly": true,
+      "taxon": "garrulus_glandarius",
+      "stage": "adult",
+      "individualId": "compact-jay",
+      "runId": "f79f6fba-ae89-4927-857d-f42fc05a5cb6",
+      "simulationTime": "0.590",
+      "window": "autumn",
+      "source": "actual active mesh in the magnified WebGL view"
+    },
+    {
+      "file": "model-galium_odoratum.png",
+      "sha256": "ab19f9bf1f050e4c93a7cd2dc514c3b50ff7c003b2013e1c8c0ff2cc59bbe5c6",
+      "bytes": 14958,
+      "canvasOnly": true,
+      "taxon": "galium_odoratum",
+      "stage": "adult",
+      "individualId": "ranger-compact-v2:galium_odoratum:0",
+      "runId": "66ecd3b2-eb78-4a68-a548-534904ddebd3",
+      "simulationTime": "0.935",
+      "window": "summer",
+      "source": "actual active mesh in the magnified WebGL view"
+    },
+    {
+      "file": "model-rubus_fruticosus.png",
+      "sha256": "30066b2ea4cfe7318fadef33bdaed7b6c712174ac2d8adcda8f758986c39a9c8",
+      "bytes": 15842,
+      "canvasOnly": true,
+      "taxon": "rubus_fruticosus",
+      "stage": "adult",
+      "individualId": "ranger-compact-v2:rubus_fruticosus:451",
+      "runId": "66ecd3b2-eb78-4a68-a548-534904ddebd3",
+      "simulationTime": "0.968",
+      "window": "summer",
+      "source": "actual active mesh in the magnified WebGL view"
+    },
+    {
+      "file": "model-fagus_sylvatica.png",
+      "sha256": "2001e9fd732bf0a398d9a0d6d12f1616f811bdd40b925b63f01adba9ab817755",
+      "bytes": 9464,
+      "canvasOnly": true,
+      "taxon": "fagus_sylvatica",
+      "stage": "adult",
+      "individualId": "support-beech-a",
+      "runId": "66ecd3b2-eb78-4a68-a548-534904ddebd3",
+      "simulationTime": "1.083",
+      "window": "summer",
+      "source": "actual active mesh in the magnified WebGL view"
+    },
+    {
+      "file": "model-capreolus_capreolus.png",
+      "sha256": "674f75ed1f7e833d748650f8cdfd83f4f5cf5c46706b1c6249b67cdeefe1078f",
+      "bytes": 21303,
+      "canvasOnly": true,
+      "taxon": "capreolus_capreolus",
+      "stage": "adult",
+      "individualId": "compact-deer-1",
+      "runId": "66ecd3b2-eb78-4a68-a548-534904ddebd3",
+      "simulationTime": "1.117",
+      "window": "summer",
+      "source": "actual active mesh in the magnified WebGL view"
+    },
+    {
+      "file": "model-dendrocopos_major.png",
+      "sha256": "028197c95d094a0970cf8fec1f3267f397529a6ba9446aaeebed2c093c5bf41e",
+      "bytes": 11395,
+      "canvasOnly": true,
+      "taxon": "dendrocopos_major",
+      "stage": "adult",
+      "individualId": "compact-woodpecker-1",
+      "runId": "66ecd3b2-eb78-4a68-a548-534904ddebd3",
+      "simulationTime": "1.167",
+      "window": "summer",
+      "source": "actual active mesh in the magnified WebGL view"
+    },
+    {
+      "file": "model-parus_major.png",
+      "sha256": "ca1925a4f2ec39cadebb7b23895ef47d2512f875f4fd46cc037d140ee0bc1445",
+      "bytes": 12264,
+      "canvasOnly": true,
+      "taxon": "parus_major",
+      "stage": "adult",
+      "individualId": "compact-tit-0",
+      "runId": "66ecd3b2-eb78-4a68-a548-534904ddebd3",
+      "simulationTime": "1.282",
+      "window": "summer",
+      "source": "actual active mesh in the magnified WebGL view"
+    },
+    {
+      "file": "model-ixodes_ricinus.png",
+      "sha256": "a3e988a163e0eaf1fdb485ae966f19ad51236f65389512eb4f59836301a898a9",
+      "bytes": 18474,
+      "canvasOnly": true,
+      "taxon": "ixodes_ricinus",
+      "stage": "adult-female",
+      "individualId": "compact-tick",
+      "runId": "66ecd3b2-eb78-4a68-a548-534904ddebd3",
+      "simulationTime": "1.397",
+      "window": "summer",
+      "source": "actual active mesh in the magnified WebGL view"
+    },
+    {
+      "file": "model-urtica_dioica.png",
+      "sha256": "84523107f723d695616a035b0711c1e797567db34e8d629ecd255d60b54feb93",
+      "bytes": 8845,
+      "canvasOnly": true,
+      "taxon": "urtica_dioica",
+      "stage": "adult",
+      "individualId": "ranger-compact-v2:urtica_dioica:252",
+      "runId": "b6f2394e-5f07-4230-b544-143053ccebb0",
+      "simulationTime": "1.725",
+      "window": "summer",
+      "source": "actual active mesh in the magnified WebGL view"
+    },
+    {
+      "file": "model-aglais_io-caterpillar.png",
+      "sha256": "c901a87a1a117e6c14b02dce1c36cbaf90cbb620b78668e65e54e7a63d4fdd18",
+      "bytes": 19204,
+      "canvasOnly": true,
+      "taxon": "aglais_io",
+      "stage": "caterpillar",
+      "individualId": "compact-caterpillar",
+      "runId": "b6f2394e-5f07-4230-b544-143053ccebb0",
+      "simulationTime": "1.758",
+      "window": "summer",
+      "source": "actual active mesh in the magnified WebGL view"
+    },
+    {
+      "file": "model-coccinella_septempunctata.png",
+      "sha256": "d723b64c4a386091448fa29481fe6340741f90e7b21a8e898c7fe2f1c7a7785a",
+      "bytes": 18267,
+      "canvasOnly": true,
+      "taxon": "coccinella_septempunctata",
+      "stage": "adult",
+      "individualId": "compact-ladybird-0",
+      "runId": "b6f2394e-5f07-4230-b544-143053ccebb0",
+      "simulationTime": "1.873",
+      "window": "summer",
+      "source": "actual active mesh in the magnified WebGL view"
+    },
+    {
+      "file": "model-aphidoidea.png",
+      "sha256": "d2de02a6b597fcba30b56bbadeaa848dbb0186efe39b2623d5f0ab9d5407f8d6",
+      "bytes": 17336,
+      "canvasOnly": true,
+      "taxon": "aphidoidea",
+      "stage": "adult",
+      "individualId": "compact-aphid-0",
+      "runId": "b6f2394e-5f07-4230-b544-143053ccebb0",
+      "simulationTime": "1.988",
+      "window": "summer",
+      "source": "actual active mesh in the magnified WebGL view"
+    },
+    {
+      "file": "model-trifolium_pratense.png",
+      "sha256": "313e57ecd65a97aa641e1c2665649887ab3a55df5396221b8313af1232488175",
+      "bytes": 15364,
+      "canvasOnly": true,
+      "taxon": "trifolium_pratense",
+      "stage": "adult",
+      "individualId": "ranger-compact-v2:trifolium_pratense:454",
+      "runId": "b481cd6f-2aac-4af5-97cf-83b5d46a9ad7",
+      "simulationTime": "2.251",
+      "window": "summer",
+      "source": "actual active mesh in the magnified WebGL view"
+    },
+    {
+      "file": "model-bombus_lapidarius.png",
+      "sha256": "dd2b95dd087e9739a65c9bfd3a3561f1e7cb174947690bf3c28b057cef94b75d",
+      "bytes": 18621,
+      "canvasOnly": true,
+      "taxon": "bombus_lapidarius",
+      "stage": "worker",
+      "individualId": "compact-bee",
+      "runId": "b481cd6f-2aac-4af5-97cf-83b5d46a9ad7",
+      "simulationTime": "2.301",
+      "window": "summer",
+      "source": "actual active mesh in the magnified WebGL view"
+    },
+    {
+      "file": "model-aglais_io.png",
+      "sha256": "b59af5812db3cf10003af6bd068dd94b90269b772c3f0cb2f8954942791a6118",
+      "bytes": 13900,
+      "canvasOnly": true,
+      "taxon": "aglais_io",
+      "stage": "adult",
+      "individualId": "compact-butterfly",
+      "runId": "b481cd6f-2aac-4af5-97cf-83b5d46a9ad7",
+      "simulationTime": "2.351",
+      "window": "summer",
+      "source": "actual active mesh in the magnified WebGL view"
+    },
+    {
+      "file": "model-fomes_fomentarius.png",
+      "sha256": "09d30b0b038ee6f23bb44598bba3d457487aa8f6d0f26c5371af19ef5441c414",
+      "bytes": 17507,
+      "canvasOnly": true,
+      "taxon": "fomes_fomentarius",
+      "stage": "fruiting-body",
+      "individualId": "compact-bracket",
+      "runId": "86a93cea-ed65-4247-b66d-abb73d4038a0",
+      "simulationTime": "2.663",
+      "window": "summer",
+      "source": "actual active mesh in the magnified WebGL view"
+    },
+    {
+      "file": "model-lumbricidae.png",
+      "sha256": "fe85f0a3b40a6b4167f9cc4e953115dc8260cf268069d4e2fd1a12e3b3142fc6",
+      "bytes": 11771,
+      "canvasOnly": true,
+      "taxon": "lumbricidae",
+      "stage": "adult",
+      "individualId": "compact-earthworm",
+      "runId": "86a93cea-ed65-4247-b66d-abb73d4038a0",
+      "simulationTime": "2.843",
+      "window": "summer",
+      "source": "actual active mesh in the magnified WebGL view"
+    },
+    {
+      "file": "model-quercus_robur.png",
+      "sha256": "09b212fe52dc14ebdb826d20598bc5168e880cb7ec2b8fbbb621d2a8a5b86791",
+      "bytes": 10241,
+      "canvasOnly": true,
+      "taxon": "quercus_robur",
+      "stage": "adult",
+      "individualId": "support-oak-c",
+      "runId": "d0faf0fb-4bee-4ab3-ac7f-71b19f0fa044",
+      "simulationTime": "3.205",
+      "window": "summer",
+      "source": "actual active mesh in the magnified WebGL view"
+    },
+    {
+      "file": "model-festuca_rubra.png",
+      "sha256": "4ffa9321aa255c37e9e2580b483dfb90a0c60a368cec5919248bd1dbe0943596",
+      "bytes": 8889,
+      "canvasOnly": true,
+      "taxon": "festuca_rubra",
+      "stage": "adult",
+      "individualId": "ranger-compact-v2:festuca_rubra:497",
+      "runId": "7d5b09de-2425-4000-8933-2370847a3193",
+      "simulationTime": "3.451",
+      "window": "summer",
+      "source": "actual active mesh in the magnified WebGL view"
+    },
+    {
+      "file": "model-limonium_vulgare.png",
+      "sha256": "014a441fa9b3994b21301c5f4dfee553070771d8d71ce2ab5ea8e4f106b87509",
+      "bytes": 15979,
+      "canvasOnly": true,
+      "taxon": "limonium_vulgare",
+      "stage": "adult",
+      "individualId": "ranger-compact-v2:limonium_vulgare:606",
+      "runId": "7d5b09de-2425-4000-8933-2370847a3193",
+      "simulationTime": "3.550",
+      "window": "summer",
+      "source": "actual active mesh in the magnified WebGL view"
+    },
+    {
+      "file": "model-sporobolus_anglicus.png",
+      "sha256": "8a0dc72df7e3cc441e99cc6500498efe1ce508e308d787ada6e53ef26fc46330",
+      "bytes": 14889,
+      "canvasOnly": true,
+      "taxon": "sporobolus_anglicus",
+      "stage": "adult",
+      "individualId": "ranger-compact-v2:sporobolus_anglicus:402",
+      "runId": "c3981569-6f26-4051-96e7-8cc9ffab887e",
+      "simulationTime": "3.960",
+      "window": "summer",
+      "source": "actual active mesh in the magnified WebGL view"
+    },
+    {
+      "file": "model-puccinellia_maritima.png",
+      "sha256": "ea31e89729cdcefe519c773e815cf405afd8b5adccd508e6b3cbf18da4a05435",
+      "bytes": 10826,
+      "canvasOnly": true,
+      "taxon": "puccinellia_maritima",
+      "stage": "adult",
+      "individualId": "ranger-compact-v2:puccinellia_maritima:542",
+      "runId": "c3981569-6f26-4051-96e7-8cc9ffab887e",
+      "simulationTime": "4.009",
+      "window": "summer",
+      "source": "actual active mesh in the magnified WebGL view"
+    },
+    {
+      "file": "model-halimione_portulacoides.png",
+      "sha256": "e0176529836d67e328c161df1cb2698d6800ad958594b7498d0928631b20fa43",
+      "bytes": 27813,
+      "canvasOnly": true,
+      "taxon": "halimione_portulacoides",
+      "stage": "adult",
+      "individualId": "ranger-compact-v2:halimione_portulacoides:320",
+      "runId": "722015fe-beb4-4a37-9b33-b27ef2c515d0",
+      "simulationTime": "4.386",
+      "window": "summer",
+      "source": "actual active mesh in the magnified WebGL view"
+    },
+    {
+      "file": "model-salicornia_europaea.png",
+      "sha256": "db6c42ff65e9542e82bc837e9ca584f69e281a24f9abf1d9fcab8a7ff3d295f5",
+      "bytes": 18508,
+      "canvasOnly": true,
+      "taxon": "salicornia_europaea",
+      "stage": "adult",
+      "individualId": "ranger-compact-v2:salicornia_europaea:355",
+      "runId": "a8b08ef8-fa20-40ce-970c-131d0f3e873c",
+      "simulationTime": "4.683",
+      "window": "summer",
+      "source": "actual active mesh in the magnified WebGL view"
+    },
+    {
+      "file": "model-recurvirostra_avosetta.png",
+      "sha256": "5467c1238bb32048ec44b4835d84cf29127dc922bf3d1352ecdbf9fffc0a2d61",
+      "bytes": 12119,
+      "canvasOnly": true,
+      "taxon": "recurvirostra_avosetta",
+      "stage": "adult",
+      "individualId": "compact-avocet",
+      "runId": "1b0f3ef8-c646-4dca-91c7-cabd53c56a1e",
+      "simulationTime": "0.033",
+      "window": "summer",
+      "source": "actual active mesh in the magnified WebGL view"
+    },
+    {
+      "file": "model-haematopus_ostralegus.png",
+      "sha256": "5b20f21fddab5488b7f205076575b3d5c6acb75142eb60d8be073c996af41cd4",
+      "bytes": 12029,
+      "canvasOnly": true,
+      "taxon": "haematopus_ostralegus",
+      "stage": "adult",
+      "individualId": "compact-oystercatcher",
+      "runId": "1b0f3ef8-c646-4dca-91c7-cabd53c56a1e",
+      "simulationTime": "0.067",
+      "window": "summer",
+      "source": "actual active mesh in the magnified WebGL view"
+    },
+    {
+      "file": "model-mytilus_edulis.png",
+      "sha256": "f04f2ce949e6c8b689739c1f129ce9b08c9eb05827c848c04b309b9f0f29b359",
+      "bytes": 16581,
+      "canvasOnly": true,
+      "taxon": "mytilus_edulis",
+      "stage": "adult",
+      "individualId": "compact-mussel-0",
+      "runId": "1b0f3ef8-c646-4dca-91c7-cabd53c56a1e",
+      "simulationTime": "0.182",
+      "window": "summer",
+      "source": "actual active mesh in the magnified WebGL view"
+    },
+    {
+      "file": "model-cerastoderma_edule.png",
+      "sha256": "aed0f50f4ef71865fa737d08f1ea1c4b041d4726809f8d19ffe588feea8bb6c9",
+      "bytes": 28322,
+      "canvasOnly": true,
+      "taxon": "cerastoderma_edule",
+      "stage": "adult",
+      "individualId": "compact-cockle-0",
+      "runId": "1b0f3ef8-c646-4dca-91c7-cabd53c56a1e",
+      "simulationTime": "0.232",
+      "window": "summer",
+      "source": "actual active mesh in the magnified WebGL view"
+    },
+    {
+      "file": "model-arenicola_marina.png",
+      "sha256": "e6e317bb891f9d01d15adcef34809773954ac6f224b8ad06e9a86c93b12b70ab",
+      "bytes": 11434,
+      "canvasOnly": true,
+      "taxon": "arenicola_marina",
+      "stage": "adult",
+      "individualId": "compact-lugworm",
+      "runId": "1b0f3ef8-c646-4dca-91c7-cabd53c56a1e",
+      "simulationTime": "0.265",
+      "window": "summer",
+      "source": "actual active mesh in the magnified WebGL view"
+    },
+    {
+      "file": "model-hediste_diversicolor.png",
+      "sha256": "5604e4db9490f7c89e6ab1d3b5ca8c9b842f3c8514965da8b4899b89da89b97e",
+      "bytes": 14159,
+      "canvasOnly": true,
+      "taxon": "hediste_diversicolor",
+      "stage": "adult",
+      "individualId": "compact-ragworm",
+      "runId": "1b0f3ef8-c646-4dca-91c7-cabd53c56a1e",
+      "simulationTime": "0.380",
+      "window": "summer",
+      "source": "actual active mesh in the magnified WebGL view"
+    },
+    {
+      "file": "model-carcinus_maenas.png",
+      "sha256": "342d0b2e756d09d7ac1109ca231069f1e3277cc6ff654ce035d5a293162381be",
+      "bytes": 15510,
+      "canvasOnly": true,
+      "taxon": "carcinus_maenas",
+      "stage": "adult",
+      "individualId": "compact-crab",
+      "runId": "1b0f3ef8-c646-4dca-91c7-cabd53c56a1e",
+      "simulationTime": "0.495",
+      "window": "summer",
+      "source": "actual active mesh in the magnified WebGL view"
+    },
+    {
+      "file": "model-peringia_ulvae.png",
+      "sha256": "c344cb5550fb0b393f7f70d06a8f3a768f5f7cf775fa6fd8dde8896644ce58ec",
+      "bytes": 23243,
+      "canvasOnly": true,
+      "taxon": "peringia_ulvae",
+      "stage": "adult",
+      "individualId": "compact-snail-0",
+      "runId": "1b0f3ef8-c646-4dca-91c7-cabd53c56a1e",
+      "simulationTime": "0.529",
+      "window": "summer",
+      "source": "actual active mesh in the magnified WebGL view"
+    },
+    {
+      "file": "model-platalea_leucorodia.png",
+      "sha256": "fc8f8303703b2416afbb64153f7ac82d2784d076dbf180ad4966bd214b200f41",
+      "bytes": 11625,
+      "canvasOnly": true,
+      "taxon": "platalea_leucorodia",
+      "stage": "adult",
+      "individualId": "compact-spoonbill",
+      "runId": "ab0ae720-920c-4115-a2ff-da6341f646e1",
+      "simulationTime": "0.098",
+      "window": "summer",
+      "source": "actual active mesh in the magnified WebGL view"
+    },
+    {
+      "file": "model-crangon_crangon.png",
+      "sha256": "a0d06fba1e647d90298c1ebf40aecee02c67db37d38d739d41cb1024879cee3e",
+      "bytes": 12381,
+      "canvasOnly": true,
+      "taxon": "crangon_crangon",
+      "stage": "adult",
+      "individualId": "compact-shrimp-0",
+      "runId": "ab0ae720-920c-4115-a2ff-da6341f646e1",
+      "simulationTime": "0.213",
+      "window": "summer",
+      "source": "actual active mesh in the magnified WebGL view"
+    },
+    {
+      "file": "model-vulpes_vulpes.png",
+      "sha256": "3a740982a5eebe178d3def81a756d3c04e4fc8a877d49c62af37fed323fceab0",
+      "bytes": 20843,
+      "canvasOnly": true,
+      "taxon": "vulpes_vulpes",
+      "stage": "adult",
+      "individualId": "compact-fox",
+      "runId": "01f409d0-26f2-49e1-98b0-4c1e6f32aaa2",
+      "simulationTime": "0.558",
+      "window": "dusk",
+      "source": "actual active mesh in the magnified WebGL view"
+    },
+    {
+      "file": "model-apodemus_sylvaticus.png",
+      "sha256": "17ddf25a5ca52c961a07d2d33232d5de3ae26dd97bf80e229758d67f8109e6fc",
+      "bytes": 18444,
+      "canvasOnly": true,
+      "taxon": "apodemus_sylvaticus",
+      "stage": "adult",
+      "individualId": "compact-mouse-0",
+      "runId": "01f409d0-26f2-49e1-98b0-4c1e6f32aaa2",
+      "simulationTime": "0.657",
+      "window": "dusk",
+      "source": "actual active mesh in the magnified WebGL view"
+    }
+  ],
+  "hardwareScope": "Cloud Chromium, software graphics; no actual Safari/iPad/Mac or classroom pilot",
+  "browserVersion": "154.0.8037.57",
+  "boots": [
+    {
+      "readyMilliseconds": 1705.0999999940395,
+      "transferBytes": 9467953,
+      "encodedBodyBytes": 9451753,
+      "resourceCount": 53
+    },
+    {
+      "readyMilliseconds": 2247,
+      "transferBytes": 9467953,
+      "encodedBodyBytes": 9451753,
+      "resourceCount": 53
+    },
+    {
+      "readyMilliseconds": 2367.800000011921,
+      "transferBytes": 9467953,
+      "encodedBodyBytes": 9451753,
+      "resourceCount": 53
+    },
+    {
+      "readyMilliseconds": 1329.2999999970198,
+      "transferBytes": 9467953,
+      "encodedBodyBytes": 9451753,
+      "resourceCount": 53
+    },
+    {
+      "readyMilliseconds": 1615.0999999940395,
+      "transferBytes": 9467953,
+      "encodedBodyBytes": 9451753,
+      "resourceCount": 53
+    }
+  ],
+  "inspectionPointerChecks": [
+    {
+      "x": 262.9765625,
+      "y": 267.890625,
+      "width": 309.953125,
+      "height": 44,
+      "inViewport": true,
+      "hit": true,
+      "visibility": "visible",
+      "focused": true
+    },
+    {
+      "x": 262.1015625,
+      "y": 317.890625,
+      "width": 308.203125,
+      "height": 44,
+      "inViewport": true,
+      "hit": true,
+      "visibility": "visible",
+      "focused": true
+    },
+    {
+      "x": 262.09375,
+      "y": 318.4375,
+      "width": 308.1875,
+      "height": 44,
+      "inViewport": true,
+      "hit": true,
+      "visibility": "visible",
+      "focused": true
+    },
+    {
+      "x": 298.015625,
+      "y": 365.9375,
+      "width": 310.84375,
+      "height": 44,
+      "inViewport": true,
+      "hit": true,
+      "visibility": "visible",
+      "focused": true
+    },
+    {
+      "x": 367.953125,
+      "y": 365.9375,
+      "width": 225.5,
+      "height": 44,
+      "inViewport": true,
+      "hit": true,
+      "visibility": "visible",
+      "focused": true
+    },
+    {
+      "x": 259.1328125,
+      "y": 365.9375,
+      "width": 240.609375,
+      "height": 44,
+      "inViewport": true,
+      "hit": true,
+      "visibility": "visible",
+      "focused": true
+    },
+    {
+      "x": 267.9765625,
+      "y": 507.4375,
+      "width": 309.953125,
+      "height": 44,
+      "inViewport": true,
+      "hit": true,
+      "visibility": "visible",
+      "focused": true
+    },
+    {
+      "x": 371.1953125,
+      "y": 267.890625,
+      "width": 193.515625,
+      "height": 44,
+      "inViewport": true,
+      "hit": true,
+      "visibility": "visible",
+      "focused": true
+    },
+    {
+      "x": 555.8515625,
+      "y": 365.9375,
+      "width": 190.828125,
+      "height": 44,
+      "inViewport": true,
+      "hit": true,
+      "visibility": "visible",
+      "focused": true
+    },
+    {
+      "x": 262.9765625,
+      "y": 267.890625,
+      "width": 309.953125,
+      "height": 44,
+      "inViewport": true,
+      "hit": true,
+      "visibility": "visible",
+      "focused": true
+    },
+    {
+      "x": 521.703125,
+      "y": 267.890625,
+      "width": 193.5,
+      "height": 44,
+      "inViewport": true,
+      "hit": true,
+      "visibility": "visible",
+      "focused": true
+    },
+    {
+      "x": 262.1015625,
+      "y": 317.890625,
+      "width": 308.203125,
+      "height": 44,
+      "inViewport": true,
+      "hit": true,
+      "visibility": "visible",
+      "focused": true
+    },
+    {
+      "x": 493.3046875,
+      "y": 317.890625,
+      "width": 140.203125,
+      "height": 44,
+      "inViewport": true,
+      "hit": true,
+      "visibility": "visible",
+      "focused": true
+    },
+    {
+      "x": 201.2109375,
+      "y": 368.890625,
+      "width": 186.421875,
+      "height": 44,
+      "inViewport": true,
+      "hit": true,
+      "visibility": "visible",
+      "focused": true
+    },
+    {
+      "x": 393.296875,
+      "y": 368.890625,
+      "width": 183.75,
+      "height": 44,
+      "inViewport": true,
+      "hit": true,
+      "visibility": "visible",
+      "focused": true
+    },
+    {
+      "x": 229.8515625,
+      "y": 419.890625,
+      "width": 243.703125,
+      "height": 44,
+      "inViewport": true,
+      "hit": true,
+      "visibility": "visible",
+      "focused": true
+    },
+    {
+      "x": 262.09375,
+      "y": 318.4375,
+      "width": 308.1875,
+      "height": 44,
+      "inViewport": true,
+      "hit": true,
+      "visibility": "visible",
+      "focused": true
+    },
+    {
+      "x": 556.1015625,
+      "y": 318.4375,
+      "width": 265.828125,
+      "height": 44,
+      "inViewport": true,
+      "hit": true,
+      "visibility": "visible",
+      "focused": true
+    },
+    {
+      "x": 247.40625,
+      "y": 369.4375,
+      "width": 278.8125,
+      "height": 44,
+      "inViewport": true,
+      "hit": true,
+      "visibility": "visible",
+      "focused": true
+    },
+    {
+      "x": 483.015625,
+      "y": 369.4375,
+      "width": 178.40625,
+      "height": 44,
+      "inViewport": true,
+      "hit": true,
+      "visibility": "visible",
+      "focused": true
+    },
+    {
+      "x": 507.046875,
+      "y": 314.9375,
+      "width": 164.1875,
+      "height": 44,
+      "inViewport": true,
+      "hit": true,
+      "visibility": "visible",
+      "focused": true
+    },
+    {
+      "x": 408.375,
+      "y": 365.9375,
+      "width": 199.75,
+      "height": 44,
+      "inViewport": true,
+      "hit": true,
+      "visibility": "visible",
+      "focused": true
+    },
+    {
+      "x": 213.8125,
+      "y": 416.9375,
+      "width": 211.625,
+      "height": 44,
+      "inViewport": true,
+      "hit": true,
+      "visibility": "visible",
+      "focused": true
+    },
+    {
+      "x": 367.953125,
+      "y": 365.9375,
+      "width": 225.5,
+      "height": 44,
+      "inViewport": true,
+      "hit": true,
+      "visibility": "visible",
+      "focused": true
+    },
+    {
+      "x": 584.015625,
+      "y": 365.9375,
+      "width": 192.625,
+      "height": 44,
+      "inViewport": true,
+      "hit": true,
+      "visibility": "visible",
+      "focused": true
+    },
+    {
+      "x": 298.015625,
+      "y": 365.9375,
+      "width": 310.84375,
+      "height": 44,
+      "inViewport": true,
+      "hit": true,
+      "visibility": "visible",
+      "focused": true
+    },
+    {
+      "x": 243.8046875,
+      "y": 365.9375,
+      "width": 202.421875,
+      "height": 44,
+      "inViewport": true,
+      "hit": true,
+      "visibility": "visible",
+      "focused": true
+    },
+    {
+      "x": 450.9921875,
+      "y": 365.9375,
+      "width": 197.953125,
+      "height": 44,
+      "inViewport": true,
+      "hit": true,
+      "visibility": "visible",
+      "focused": true
+    },
+    {
+      "x": 273.7890625,
+      "y": 365.9375,
+      "width": 262.390625,
+      "height": 44,
+      "inViewport": true,
+      "hit": true,
+      "visibility": "visible",
+      "focused": true
+    },
+    {
+      "x": 488.3046875,
+      "y": 365.9375,
+      "width": 152.640625,
+      "height": 44,
+      "inViewport": true,
+      "hit": true,
+      "visibility": "visible",
+      "focused": true
+    },
+    {
+      "x": 259.1328125,
+      "y": 365.9375,
+      "width": 240.609375,
+      "height": 44,
+      "inViewport": true,
+      "hit": true,
+      "visibility": "visible",
+      "focused": true
+    },
+    {
+      "x": 223.796875,
+      "y": 365.9375,
+      "width": 162.40625,
+      "height": 44,
+      "inViewport": true,
+      "hit": true,
+      "visibility": "visible",
+      "focused": true
+    },
+    {
+      "x": 288.7265625,
+      "y": 299.890625,
+      "width": 361.453125,
+      "height": 44,
+      "inViewport": true,
+      "hit": true,
+      "visibility": "visible",
+      "focused": true
+    },
+    {
+      "x": 213.640625,
+      "y": 299.890625,
+      "width": 211.28125,
+      "height": 44,
+      "inViewport": true,
+      "hit": true,
+      "visibility": "visible",
+      "focused": true
+    },
+    {
+      "x": 430.1484375,
+      "y": 299.890625,
+      "width": 207.734375,
+      "height": 44,
+      "inViewport": true,
+      "hit": true,
+      "visibility": "visible",
+      "focused": true
+    },
+    {
+      "x": 207.875,
+      "y": 299.890625,
+      "width": 199.75,
+      "height": 44,
+      "inViewport": true,
+      "hit": true,
+      "visibility": "visible",
+      "focused": true
+    },
+    {
+      "x": 414.1640625,
+      "y": 299.890625,
+      "width": 198.828125,
+      "height": 44,
+      "inViewport": true,
+      "hit": true,
+      "visibility": "visible",
+      "focused": true
+    },
+    {
+      "x": 198.640625,
+      "y": 299.890625,
+      "width": 181.28125,
+      "height": 44,
+      "inViewport": true,
+      "hit": true,
+      "visibility": "visible",
+      "focused": true
+    },
+    {
+      "x": 402.3671875,
+      "y": 299.890625,
+      "width": 212.171875,
+      "height": 44,
+      "inViewport": true,
+      "hit": true,
+      "visibility": "visible",
+      "focused": true
+    },
+    {
+      "x": 427.0390625,
+      "y": 299.890625,
+      "width": 199.734375,
+      "height": 44,
+      "inViewport": true,
+      "hit": true,
+      "visibility": "visible",
+      "focused": true
+    },
+    {
+      "x": 209.2890625,
+      "y": 299.890625,
+      "width": 202.578125,
+      "height": 44,
+      "inViewport": true,
+      "hit": true,
+      "visibility": "visible",
+      "focused": true
+    },
+    {
+      "x": 288.7265625,
+      "y": 299.890625,
+      "width": 361.453125,
+      "height": 44,
+      "inViewport": true,
+      "hit": true,
+      "visibility": "visible",
+      "focused": true
+    },
+    {
+      "x": 187.71875,
+      "y": 267.890625,
+      "width": 159.4375,
+      "height": 44,
+      "inViewport": true,
+      "hit": true,
+      "visibility": "visible",
+      "focused": true
+    },
+    {
+      "x": 215.40625,
+      "y": 299.890625,
+      "width": 214.8125,
+      "height": 44,
+      "inViewport": true,
+      "hit": true,
+      "visibility": "visible",
+      "focused": true
+    },
+    {
+      "x": 507.5078125,
+      "y": 340.4375,
+      "width": 172.203125,
+      "height": 44,
+      "inViewport": true,
+      "hit": true,
+      "visibility": "visible",
+      "focused": true
+    },
+    {
+      "x": 198.640625,
+      "y": 391.4375,
+      "width": 181.28125,
+      "height": 44,
+      "inViewport": true,
+      "hit": true,
+      "visibility": "visible",
+      "focused": true
+    }
+  ],
+  "galleryObservationContexts": [
+    {
+      "location": "coast",
+      "before": {
+        "runId": "af346382-a246-4780-b5eb-a7e00c375ed4",
+        "time": 5.24,
+        "observer": {
+          "x": 63,
+          "z": -13,
+          "yaw": -2.3036114285814033,
+          "pitch": -0.12788807707486585
+        }
+      },
+      "after": {
+        "runId": "1b0f3ef8-c646-4dca-91c7-cabd53c56a1e",
+        "time": 0,
+        "observer": {
+          "x": 63,
+          "z": -13,
+          "yaw": -2.3036114285814033,
+          "pitch": -0.12788807707486585
+        },
+        "origin": {
+          "kind": "local-observation-window",
+          "previousRunId": "af346382-a246-4780-b5eb-a7e00c375ed4",
+          "previousSimulationTime": 5.239500000000007,
+          "siteId": "coast",
+          "x": 63,
+          "z": -13,
+          "startSimulationTime": 0
+        }
+      },
+      "source": "Explicit local observation window through the public study button; no injected state."
+    },
+    {
+      "location": "outlook",
+      "before": {
+        "runId": "2a512f59-131b-472c-b80b-1939d484dc95",
+        "time": 0.759,
+        "observer": {
+          "x": 63,
+          "z": 4,
+          "yaw": 1.8157749899217608,
+          "pitch": -0.45750674338114333
+        }
+      },
+      "after": {
+        "runId": "ab0ae720-920c-4115-a2ff-da6341f646e1",
+        "time": 0,
+        "observer": {
+          "x": 63,
+          "z": 4,
+          "yaw": 1.8157749899217608,
+          "pitch": -0.45750674338114333
+        },
+        "origin": {
+          "kind": "local-observation-window",
+          "previousRunId": "2a512f59-131b-472c-b80b-1939d484dc95",
+          "previousSimulationTime": 0.7585999999999767,
+          "siteId": "outlook",
+          "x": 63,
+          "z": 4,
+          "startSimulationTime": 0
+        }
+      },
+      "source": "Explicit local observation window through the public study button; no injected state."
+    }
+  ],
+  "completedAt": "2026-10-24T13:41:03Z"
+}

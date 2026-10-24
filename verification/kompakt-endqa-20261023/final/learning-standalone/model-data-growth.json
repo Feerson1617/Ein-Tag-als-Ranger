@@ -1,0 +1,124 @@
+{
+  "kind": "exponential-logistic",
+  "source": "theoretical-model",
+  "units": {
+    "t": "days",
+    "N": "model individuals",
+    "rate": "per day",
+    "capacity": "model individuals"
+  },
+  "parameters": {
+    "initial": 10,
+    "rate": 0.25,
+    "capacity": 100,
+    "days": 20
+  },
+  "rows": [
+    {
+      "t": 0,
+      "exponential": 10,
+      "logistic": 10
+    },
+    {
+      "t": 1,
+      "exponential": 12.840254166877415,
+      "logistic": 12.48563052561278
+    },
+    {
+      "t": 2,
+      "exponential": 16.487212707001284,
+      "logistic": 15.482809896025467
+    },
+    {
+      "t": 3,
+      "exponential": 21.170000166126748,
+      "logistic": 19.042907380130778
+    },
+    {
+      "t": 4,
+      "exponential": 27.18281828459045,
+      "logistic": 23.19693166840739
+    },
+    {
+      "t": 5,
+      "exponential": 34.903429574618414,
+      "logistic": 27.94433242825154
+    },
+    {
+      "t": 6,
+      "exponential": 44.81689070338064,
+      "logistic": 33.24278617431193
+    },
+    {
+      "t": 7,
+      "exponential": 57.54602676005731,
+      "logistic": 39.00208499252912
+    },
+    {
+      "t": 8,
+      "exponential": 73.89056098930651,
+      "logistic": 45.085306037928376
+    },
+    {
+      "t": 9,
+      "exponential": 94.87735836358526,
+      "logistic": 51.31907941750047
+    },
+    {
+      "t": 10,
+      "exponential": 121.82493960703474,
+      "logistic": 57.51208513645147
+    },
+    {
+      "t": 11,
+      "exponential": 156.4263188418817,
+      "logistic": 63.47792702379811
+    },
+    {
+      "t": 12,
+      "exponential": 200.8553692318767,
+      "logistic": 69.05678577030156
+    },
+    {
+      "t": 13,
+      "exponential": 257.90339917193063,
+      "logistic": 74.13075002595107
+    },
+    {
+      "t": 14,
+      "exponential": 331.15451958692313,
+      "logistic": 78.63017115706754
+    },
+    {
+      "t": 15,
+      "exponential": 425.21082000062785,
+      "logistic": 82.5314227678894
+    },
+    {
+      "t": 16,
+      "exponential": 545.9815003314424,
+      "logistic": 85.84864497582141
+    },
+    {
+      "t": 17,
+      "exponential": 701.0541234668785,
+      "logistic": 88.6227759479256
+    },
+    {
+      "t": 18,
+      "exponential": 900.171313005218,
+      "logistic": 90.91066375909784
+    },
+    {
+      "t": 19,
+      "exponential": 1155.8428452718767,
+      "logistic": 92.77597488787924
+    },
+    {
+      "t": 20,
+      "exponential": 1484.131591025766,
+      "logistic": 94.28256185740149
+    }
+  ],
+  "assumptions": "Geschlossene, homogene Population ohne Zu- oder Abwanderung; r und K konstant. Ohne Anfangsbestand bleibt N = 0. Theoretisches Modell, keine Vorhersage für die dargestellten Tiere."
+}

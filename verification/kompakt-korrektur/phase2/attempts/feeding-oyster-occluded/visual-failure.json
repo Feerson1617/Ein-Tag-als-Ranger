@@ -1,0 +1,5 @@
+{
+  "visualStatus": "FEHLGESCHLAGEN",
+  "scope": "Browser state assertions passed all four; actual screenshot review found oystercatcher occluded by boardwalk. Not accepted as full visual evidence.",
+  "requiredCorrection": "Initial mussel-bed placement outside boardwalk and actual body/bill occlusion assertions."
+}

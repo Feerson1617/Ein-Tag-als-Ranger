@@ -1,0 +1,8 @@
+START legacy-browser
+{'name': 'legacy-browser', 'command': ['/workspace/.ranger-clean-venv/bin/python', 'tools/browser-check.py', '--live', '--resilience', '--width', '600', '--height', '375', '--site', 'outputs/GitHub-Pages', '--prefix', '/Ein-Tag-als-Ranger/', '--live-mission', 'm3'], 'status': 'passed', 'startedAt': '2026-10-22T08:48:36Z', 'exitCode': 0, 'seconds': 1032.15}
+START legacy-standalone-browser
+{'name': 'legacy-standalone-browser', 'command': ['/workspace/.ranger-clean-venv/bin/python', 'tools/browser-check.py', '--smoke', '--width', '800', '--height', '500', '--site', 'outputs', '--entry', 'Feldbuch.html'], 'status': 'passed', 'startedAt': '2026-10-22T09:05:48Z', 'exitCode': 0, 'seconds': 194.9}
+START learning-pdfs
+{'name': 'learning-pdfs', 'command': ['/workspace/.ranger-clean-venv/bin/python', 'tools/print-compact-materials.py'], 'status': 'passed', 'startedAt': '2026-10-22T09:09:03Z', 'exitCode': 0, 'seconds': 5.25}
+START cloud-stability
+{'name': 'cloud-stability', 'command': ['/workspace/.ranger-clean-venv/bin/python', 'tools/browser-compact-stability.py'], 'status': 'failed', 'startedAt': '2026-10-22T09:09:08Z', 'exitCode': 1, 'seconds': 111.17}

@@ -1,0 +1,117 @@
+{
+  "sourceCommit": "f05ab562706975072f01998e4c252c03f25b9412",
+  "checks": [
+    {
+      "name": "feeding",
+      "passed": true,
+      "source": "Already executed after the final app change; exact HTML differs only by commit/dirty build stamp, independently hash-verified. Original source commit and actual hash remain in its own report.",
+      "proof": "work/qa-correction/final-feeding/result.json",
+      "sequences": 4
+    },
+    {
+      "name": "learning-web",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-learning.py",
+        "--gallery"
+      ],
+      "exitCode": 1,
+      "passed": false,
+      "seconds": 1051.63,
+      "log": "learning-web.log"
+    },
+    {
+      "name": "source",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-source.py"
+      ],
+      "exitCode": 0,
+      "passed": true,
+      "seconds": 35.12,
+      "log": "source.log"
+    },
+    {
+      "name": "reference",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact.py"
+      ],
+      "exitCode": 0,
+      "passed": true,
+      "seconds": 1505.83,
+      "log": "reference.log"
+    },
+    {
+      "name": "standalone-smoke",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact.py",
+        "--site",
+        "outputs",
+        "--entry",
+        "Ranger-Kompakt.html",
+        "--smoke"
+      ],
+      "exitCode": 0,
+      "passed": true,
+      "seconds": 262.22,
+      "log": "standalone-smoke.log"
+    },
+    {
+      "name": "learning-standalone",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-learning.py",
+        "--site",
+        "outputs",
+        "--entry",
+        "Ranger-Kompakt.html",
+        "--output",
+        "work/compact-learning-standalone"
+      ],
+      "exitCode": 0,
+      "passed": true,
+      "seconds": 403.45,
+      "log": "learning-standalone.log"
+    },
+    {
+      "name": "imports",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-imports.py",
+        "--output",
+        "work/qa-correction/final-imports"
+      ],
+      "exitCode": 0,
+      "passed": true,
+      "seconds": 143.03,
+      "log": "imports.log"
+    },
+    {
+      "name": "habitats",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-habitats.py",
+        "--output",
+        "work/qa-correction/final-habitats"
+      ],
+      "exitCode": 0,
+      "passed": true,
+      "seconds": 589.36,
+      "log": "habitats.log"
+    },
+    {
+      "name": "materials",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/print-compact-materials.py"
+      ],
+      "exitCode": 0,
+      "passed": true,
+      "seconds": 3.53,
+      "log": "materials.log"
+    }
+  ],
+  "complete": false
+}

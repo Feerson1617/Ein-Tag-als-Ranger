@@ -1,0 +1,99 @@
+{
+  "sourceCommit": "39c76226d42e0d34dda130b984c4c58825b84d39",
+  "sourceDirty": false,
+  "node": "v24.19.0",
+  "passed": true,
+  "checks": [
+    {
+      "name": "kompakt",
+      "exitCode": 0,
+      "passed": true,
+      "seconds": 0.36,
+      "log": "kompakt.log"
+    },
+    {
+      "name": "compact-learning",
+      "exitCode": 0,
+      "passed": true,
+      "seconds": 2.47,
+      "log": "compact-learning.log"
+    },
+    {
+      "name": "compact-growth-boundary",
+      "exitCode": 0,
+      "passed": true,
+      "seconds": 0.03,
+      "log": "compact-growth-boundary.log"
+    },
+    {
+      "name": "compact-observation-context",
+      "exitCode": 0,
+      "passed": true,
+      "seconds": 6.13,
+      "log": "compact-observation-context.log"
+    },
+    {
+      "name": "compact-event-reference",
+      "exitCode": 0,
+      "passed": true,
+      "seconds": 0.77,
+      "log": "compact-event-reference.log"
+    },
+    {
+      "name": "compact-render-reset",
+      "exitCode": 0,
+      "passed": true,
+      "seconds": 0.37,
+      "log": "compact-render-reset.log"
+    },
+    {
+      "name": "compact-qa",
+      "exitCode": 0,
+      "passed": true,
+      "seconds": 0.11,
+      "log": "compact-qa.log"
+    },
+    {
+      "name": "compact-coastal",
+      "exitCode": 0,
+      "passed": true,
+      "seconds": 5.88,
+      "log": "compact-coastal.log"
+    },
+    {
+      "name": "compact-habitat",
+      "exitCode": 0,
+      "passed": true,
+      "seconds": 0.42,
+      "log": "compact-habitat.log"
+    },
+    {
+      "name": "compact-habitat-revision",
+      "exitCode": 0,
+      "passed": true,
+      "seconds": 1.02,
+      "log": "compact-habitat-revision.log"
+    },
+    {
+      "name": "compact-pedagogy",
+      "exitCode": 0,
+      "passed": true,
+      "seconds": 0.12,
+      "log": "compact-pedagogy.log"
+    },
+    {
+      "name": "compact-material-depth",
+      "exitCode": 0,
+      "passed": true,
+      "seconds": 0.03,
+      "log": "compact-material-depth.log"
+    },
+    {
+      "name": "compact-v1-contract",
+      "exitCode": 0,
+      "passed": true,
+      "seconds": 3.22,
+      "log": "compact-v1-contract.log"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+PASS two real same-named events in different contexts remain independently selectable and roundtrip intact
+PASS a same-ID event from a different run cannot silently satisfy the selected K2 case
+PASS duplicate references, legacy aliases and missing containing records are rejected in answers and drafts
+PASS ambiguous legacy answers remain readable and unchanged but cannot select another run implicitly
+PASS ambiguous K2 answers show a provenance warning without preselection or changing stored data
+PASS unambiguous legacy references and repeated copies of one run/event retain their grading
+PASS adding a different same-ID event cannot complete an unchanged wrong legacy answer
+PASS saving a qualified K2 choice removes its warning only after successful persistence without rerendering
+PASS N05 exact independent same-run conflict is rejected and cannot grade via legacy or qualified aliases
+PASS N05 event copies require all payload values and scene context to agree; JSON object key order is irrelevant
+PASS N05 different actual events from one unchanged run remain selectable and importable
+PASS N05 rejected import/add/storage load preserve genuine records, learning and exact original storage bytes
+{"suite":"compact-event-reference","passed":12}

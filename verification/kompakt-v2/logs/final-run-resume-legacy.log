@@ -1,0 +1,2 @@
+START legacy-browser
+{'name': 'legacy-browser', 'command': ['/workspace/.ranger-clean-venv/bin/python', 'tools/browser-check.py', '--live', '--resilience', '--width', '800', '--height', '500', '--site', 'outputs/GitHub-Pages', '--prefix', '/Ein-Tag-als-Ranger/'], 'status': 'failed', 'startedAt': '2026-10-22T07:59:56Z', 'exitCode': 1, 'seconds': 1015.07}

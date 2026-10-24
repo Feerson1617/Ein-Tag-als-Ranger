@@ -1,0 +1,221 @@
+{
+  "sourceCommit": "78e723bcb5ca448fa7161146db82fc4451b59f38",
+  "checks": [
+    {
+      "name": "arrival",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-arrival.py",
+        "--output",
+        "work/qa-correction/final-arrival"
+      ],
+      "exitCode": 1,
+      "passed": false,
+      "seconds": 904.64,
+      "log": "arrival.log"
+    },
+    {
+      "name": "feeding",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-feeding.py",
+        "--output",
+        "work/qa-correction/final-feeding"
+      ],
+      "exitCode": 0,
+      "passed": true,
+      "seconds": 107.24,
+      "log": "feeding.log"
+    },
+    {
+      "name": "learning-web",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-learning.py",
+        "--gallery"
+      ],
+      "exitCode": 1,
+      "passed": false,
+      "seconds": 417.95,
+      "log": "learning-web.log"
+    },
+    {
+      "name": "source",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-source.py"
+      ],
+      "exitCode": 0,
+      "passed": true,
+      "seconds": 18.95,
+      "log": "source.log"
+    },
+    {
+      "name": "reference",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact.py"
+      ],
+      "exitCode": 0,
+      "passed": true,
+      "seconds": 309.91,
+      "log": "reference.log"
+    },
+    {
+      "name": "standalone-smoke",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact.py",
+        "--site",
+        "outputs",
+        "--entry",
+        "Ranger-Kompakt.html",
+        "--smoke"
+      ],
+      "exitCode": 0,
+      "passed": true,
+      "seconds": 92.0,
+      "log": "standalone-smoke.log"
+    },
+    {
+      "name": "learning-standalone",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-learning.py",
+        "--site",
+        "outputs",
+        "--entry",
+        "Ranger-Kompakt.html",
+        "--output",
+        "work/compact-learning-standalone"
+      ],
+      "exitCode": 0,
+      "passed": true,
+      "seconds": 172.53,
+      "log": "learning-standalone.log"
+    },
+    {
+      "name": "growth",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-growth.py",
+        "--output",
+        "work/qa-correction/final-growth"
+      ],
+      "exitCode": 0,
+      "passed": true,
+      "seconds": 11.89,
+      "log": "growth.log"
+    },
+    {
+      "name": "imports",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-imports.py",
+        "--output",
+        "work/qa-correction/final-imports"
+      ],
+      "exitCode": 0,
+      "passed": true,
+      "seconds": 45.67,
+      "log": "imports.log"
+    },
+    {
+      "name": "habitats",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-habitats.py",
+        "--output",
+        "work/qa-correction/final-habitats"
+      ],
+      "exitCode": 0,
+      "passed": true,
+      "seconds": 227.61,
+      "log": "habitats.log"
+    },
+    {
+      "name": "habitat-revision",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-habitat-revision.py",
+        "--baseline",
+        "verification/kompakt-endqa-20261023/baseline/habitats",
+        "--baseline-fixed-gap",
+        "verification/kompakt-endqa-20261023/baseline/habitats/fixed-gap",
+        "--output",
+        "work/qa-correction/final-habitat-revision"
+      ],
+      "exitCode": 0,
+      "passed": true,
+      "seconds": 254.27,
+      "log": "habitat-revision.log"
+    },
+    {
+      "name": "materials",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/print-compact-materials.py",
+        "--contact-sheets",
+        "--audit-dir",
+        "work/qa-correction/final-print"
+      ],
+      "exitCode": 0,
+      "passed": true,
+      "seconds": 13.4,
+      "log": "materials.log"
+    },
+    {
+      "name": "stability",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-stability.py"
+      ],
+      "exitCode": 0,
+      "passed": true,
+      "seconds": 1475.95,
+      "log": "stability.log"
+    },
+    {
+      "name": "legacy-full",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-check.py",
+        "--live",
+        "--resilience",
+        "--width",
+        "800",
+        "--height",
+        "500",
+        "--site",
+        "outputs/GitHub-Pages",
+        "--prefix",
+        "/Ein-Tag-als-Ranger/"
+      ],
+      "exitCode": 0,
+      "passed": true,
+      "seconds": 1152.05,
+      "log": "legacy-full.log"
+    },
+    {
+      "name": "legacy-standalone",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-check.py",
+        "--smoke",
+        "--width",
+        "800",
+        "--height",
+        "500",
+        "--site",
+        "outputs",
+        "--entry",
+        "Feldbuch.html"
+      ],
+      "exitCode": 0,
+      "passed": true,
+      "seconds": 121.76,
+      "log": "legacy-standalone.log"
+    }
+  ],
+  "complete": true
+}

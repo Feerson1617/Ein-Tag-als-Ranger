@@ -1,0 +1,40 @@
+{
+  "source": "User-supplied Ranger-Kompakt-Codex-Uebergabe-ergaenzt (3).zip; exact extracted original bytes, external evidence, not own test outcomes",
+  "files": [
+    {
+      "path": "evidence/conflicting-same-run-events.json",
+      "bytes": 3716,
+      "sha256": "f9065d06cba40456bb9e4b9e21eefccc5a58ddb0d03335dfddd1b2171585000f"
+    },
+    {
+      "path": "evidence/ambiguous-two-runs.json",
+      "bytes": 3716,
+      "sha256": "fa15f8b2d03a0bd907f9a86695345c72e45f334cb186988c078a72d45ab27e17"
+    },
+    {
+      "path": "inputs/previous-revision3-earned.json",
+      "bytes": 32996,
+      "sha256": "17ebf89a77079b23913b3388987cfacdda155424938e2950ac31673c1b808fd8"
+    },
+    {
+      "path": "inputs/repro-impossible-coordinates.json",
+      "bytes": 21916,
+      "sha256": "8d81aefd4104fd2423501b647cf945267875bd0e67efe3770b07ab96dabbdb21"
+    },
+    {
+      "path": "inputs/repro-invalid-top-level-features.json",
+      "bytes": 21919,
+      "sha256": "1b17ed7fc65bac2b676d93299399ab5c729b8019f98cb73879fa805682842e06"
+    },
+    {
+      "path": "evidence/github-arrival-job.log",
+      "bytes": 68608,
+      "sha256": "631fa950e43dfd6d7b7c1c9d579f19a7c4fa8424c76a7a3beea0fb33f9622512"
+    },
+    {
+      "path": "evidence/historical-state-compare.json",
+      "bytes": 3262,
+      "sha256": "d81bf66fc7387e931101e9dba5ebea97ecdae43a280f919b0c47ab461d2d4a85"
+    }
+  ]
+}

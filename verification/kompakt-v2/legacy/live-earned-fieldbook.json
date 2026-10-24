@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 3,
+  "entries": {},
+  "interactions": [],
+  "learning": {
+    "version": 1,
+    "activeMission": null,
+    "missions": {
+      "m3": {
+        "version": 1,
+        "startedAt": 1792659003556,
+        "hypothesis": "Wasserbedeckung verändert mögliche Filtration und Erreichbarkeit.",
+        "reflection": "",
+        "answers": {
+          "lowId": "beleg-1792659218183-1",
+          "highId": "beleg-1792659365100-2",
+          "filtration": "covered",
+          "access": "exposed",
+          "absence": "not-detected",
+          "depth": "different-space"
+        },
+        "determinations": [],
+        "helpLevel": 0,
+        "complete": true,
+        "completedAt": 1792659367237
+      }
+    },
+    "observations": [
+      {
+        "id": "beleg-1792659218183-1",
+        "missionId": "m3",
+        "missionVersion": 1,
+        "helpLevel": 0,
+        "certainty": null,
+        "interpretation": null,
+        "source": "model-protocol",
+        "taxon": "cerastoderma_edule",
+        "partnerIds": [
+          "wadden:138"
+        ],
+        "scene": {
+          "habitat": "wadden",
+          "seed": 1219,
+          "runId": "69d50ad7-aa66-45f7-9a44-ba0454777d60",
+          "scenario": null
+        },
+        "siteId": "probe-2",
+        "simulationTime": 6.500000000000012,
+        "duration": 6.175000000000012,
+        "tidePhase": 0,
+        "waterLevel": -0.9,
+        "sampleDepth": 5,
+        "present": true,
+        "observedFact": "Freigelegte Herzmuschel; Wasserstand -0.90 Modellmeter; Zustand resting",
+        "evidence": {
+          "kind": "station",
+          "activity": "resting"
+        }
+      },
+      {
+        "id": "beleg-1792659365100-2",
+        "missionId": "m3",
+        "missionVersion": 1,
+        "helpLevel": 0,
+        "certainty": null,
+        "interpretation": null,
+        "source": "model-protocol",
+        "taxon": "cerastoderma_edule",
+        "partnerIds": [
+          "wadden:138"
+        ],
+        "scene": {
+          "habitat": "wadden",
+          "seed": 1219,
+          "runId": "69d50ad7-aa66-45f7-9a44-ba0454777d60",
+          "scenario": null
+        },
+        "siteId": "probe-2",
+        "simulationTime": 12.674999999999986,
+        "duration": 6.174999999999974,
+        "tidePhase": 0.5,
+        "waterLevel": 0.4,
+        "sampleDepth": 5,
+        "present": true,
+        "observedFact": "Freigelegte Herzmuschel; Wasserstand 0.40 Modellmeter; Zustand filtering",
+        "evidence": {
+          "kind": "station",
+          "activity": "filtering"
+        }
+      }
+    ]
+  }
+}

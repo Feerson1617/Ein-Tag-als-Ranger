@@ -1,0 +1,54 @@
+PASS 36 active entries; five optional families initially incomplete, free play remains available
+Traceback (most recent call last):
+  File "/workspace/Ein-Tag-als-Ranger/tools/browser-compact-learning.py", line 57, in <module>
+    task(page,'K1');records=data(page)['records'];features={'galium_odoratum':['leaf-whorls','narrow-leaves'],'fagus_sylvatica':['smooth-bark','elliptic-leaf'],'urtica_dioica':['opposite-leaves','serrated-edge']}
+    ^^^^^^^^^^^^^^^
+  File "/workspace/Ein-Tag-als-Ranger/tools/browser-compact-learning.py", line 33, in task
+    def task(page,id):hub(page);page.locator(f'#panel [data-mission="{id}"]').click()
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.ranger-clean-venv/lib/python3.12/site-packages/playwright/sync_api/_generated.py", line 17876, in click
+    self._sync(
+  File "/workspace/.ranger-clean-venv/lib/python3.12/site-packages/playwright/_impl/_sync_base.py", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File "/workspace/.ranger-clean-venv/lib/python3.12/site-packages/playwright/_impl/_locator.py", line 165, in click
+    return await self._frame._click(self._selector, strict=True, **params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.ranger-clean-venv/lib/python3.12/site-packages/playwright/_impl/_frame.py", line 593, in _click
+    await self._channel.send("click", self._timeout, locals_to_params(locals()))
+  File "/workspace/.ranger-clean-venv/lib/python3.12/site-packages/playwright/_impl/_connection.py", line 76, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.ranger-clean-venv/lib/python3.12/site-packages/playwright/_impl/_connection.py", line 632, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.click: Timeout 45000ms exceeded.
+Call log:
+  - waiting for locator("#panel [data-mission=\"K1\"]")
+
+
+Traceback (most recent call last):
+  File "/workspace/Ein-Tag-als-Ranger/tools/browser-compact-learning.py", line 57, in <module>
+    task(page,'K1');records=data(page)['records'];features={'galium_odoratum':['leaf-whorls','narrow-leaves'],'fagus_sylvatica':['smooth-bark','elliptic-leaf'],'urtica_dioica':['opposite-leaves','serrated-edge']}
+    ^^^^^^^^^^^^^^^
+  File "/workspace/Ein-Tag-als-Ranger/tools/browser-compact-learning.py", line 33, in task
+    def task(page,id):hub(page);page.locator(f'#panel [data-mission="{id}"]').click()
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.ranger-clean-venv/lib/python3.12/site-packages/playwright/sync_api/_generated.py", line 17876, in click
+    self._sync(
+  File "/workspace/.ranger-clean-venv/lib/python3.12/site-packages/playwright/_impl/_sync_base.py", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File "/workspace/.ranger-clean-venv/lib/python3.12/site-packages/playwright/_impl/_locator.py", line 165, in click
+    return await self._frame._click(self._selector, strict=True, **params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.ranger-clean-venv/lib/python3.12/site-packages/playwright/_impl/_frame.py", line 593, in _click
+    await self._channel.send("click", self._timeout, locals_to_params(locals()))
+  File "/workspace/.ranger-clean-venv/lib/python3.12/site-packages/playwright/_impl/_connection.py", line 76, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.ranger-clean-venv/lib/python3.12/site-packages/playwright/_impl/_connection.py", line 632, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.click: Timeout 45000ms exceeded.
+Call log:
+  - waiting for locator("#panel [data-mission=\"K1\"]")
+

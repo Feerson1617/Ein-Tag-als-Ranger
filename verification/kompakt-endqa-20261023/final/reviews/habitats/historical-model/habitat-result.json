@@ -1,0 +1,1433 @@
+{
+  "passed": 6,
+  "scope": "Deterministic model/geometry/validation checks, not visual ecology approval",
+  "routeMetrics": {
+    "width": 160,
+    "depth": 100,
+    "areaHa": 1.6,
+    "mainMeters": 362.2102529662271,
+    "shortcutMeters": 29.145962247263665,
+    "outlookMeters": 10.045360768162785,
+    "walkSeconds": 226.3814081038919,
+    "shortcutSeconds": 18.21622640453979,
+    "maxSlope": 0.15203972178347044
+  },
+  "rows": [
+    {
+      "seed": 20260825,
+      "plantCount": 1292,
+      "flooding": {
+        "galium_odoratum": {
+          "count": 879,
+          "surfaceRange": [
+            0.2407680851710573,
+            0.35979595763391126
+          ],
+          "submerged": {
+            "low": {
+              "waterLevel": -1.05,
+              "count": 0,
+              "percent": 0
+            },
+            "normalHigh": {
+              "waterLevel": -0.25,
+              "count": 0,
+              "percent": 0
+            },
+            "higher": {
+              "waterLevel": 0.05,
+              "count": 0,
+              "percent": 0
+            },
+            "rare": {
+              "waterLevel": 0.3,
+              "count": 0,
+              "percent": 0
+            }
+          }
+        },
+        "urtica_dioica": {
+          "count": 77,
+          "surfaceRange": [
+            0.2937634269580713,
+            0.3378090868045891
+          ],
+          "submerged": {
+            "low": {
+              "waterLevel": -1.05,
+              "count": 0,
+              "percent": 0
+            },
+            "normalHigh": {
+              "waterLevel": -0.25,
+              "count": 0,
+              "percent": 0
+            },
+            "higher": {
+              "waterLevel": 0.05,
+              "count": 0,
+              "percent": 0
+            },
+            "rare": {
+              "waterLevel": 0.3,
+              "count": 0,
+              "percent": 0
+            }
+          }
+        },
+        "halimione_portulacoides": {
+          "count": 35,
+          "surfaceRange": [
+            -0.051452326640908194,
+            0.06909409720710172
+          ],
+          "submerged": {
+            "low": {
+              "waterLevel": -1.05,
+              "count": 0,
+              "percent": 0
+            },
+            "normalHigh": {
+              "waterLevel": -0.25,
+              "count": 0,
+              "percent": 0
+            },
+            "higher": {
+              "waterLevel": 0.05,
+              "count": 20,
+              "percent": 57.14285714285714
+            },
+            "rare": {
+              "waterLevel": 0.3,
+              "count": 35,
+              "percent": 100
+            }
+          }
+        },
+        "salicornia_europaea": {
+          "count": 47,
+          "surfaceRange": [
+            -0.7051817195239839,
+            -0.37353528662331054
+          ],
+          "submerged": {
+            "low": {
+              "waterLevel": -1.05,
+              "count": 0,
+              "percent": 0
+            },
+            "normalHigh": {
+              "waterLevel": -0.25,
+              "count": 47,
+              "percent": 100
+            },
+            "higher": {
+              "waterLevel": 0.05,
+              "count": 47,
+              "percent": 100
+            },
+            "rare": {
+              "waterLevel": 0.3,
+              "count": 47,
+              "percent": 100
+            }
+          }
+        },
+        "sporobolus_anglicus": {
+          "count": 40,
+          "surfaceRange": [
+            -0.49388129870147157,
+            -0.33954085210195784
+          ],
+          "submerged": {
+            "low": {
+              "waterLevel": -1.05,
+              "count": 0,
+              "percent": 0
+            },
+            "normalHigh": {
+              "waterLevel": -0.25,
+              "count": 40,
+              "percent": 100
+            },
+            "higher": {
+              "waterLevel": 0.05,
+              "count": 40,
+              "percent": 100
+            },
+            "rare": {
+              "waterLevel": 0.3,
+              "count": 40,
+              "percent": 100
+            }
+          }
+        },
+        "rubus_fruticosus": {
+          "count": 50,
+          "surfaceRange": [
+            0.24036081136077492,
+            0.35237276679886514
+          ],
+          "submerged": {
+            "low": {
+              "waterLevel": -1.05,
+              "count": 0,
+              "percent": 0
+            },
+            "normalHigh": {
+              "waterLevel": -0.25,
+              "count": 0,
+              "percent": 0
+            },
+            "higher": {
+              "waterLevel": 0.05,
+              "count": 0,
+              "percent": 0
+            },
+            "rare": {
+              "waterLevel": 0.3,
+              "count": 0,
+              "percent": 0
+            }
+          }
+        },
+        "trifolium_pratense": {
+          "count": 43,
+          "surfaceRange": [
+            0.28627895519530844,
+            0.3306653308079422
+          ],
+          "submerged": {
+            "low": {
+              "waterLevel": -1.05,
+              "count": 0,
+              "percent": 0
+            },
+            "normalHigh": {
+              "waterLevel": -0.25,
+              "count": 0,
+              "percent": 0
+            },
+            "higher": {
+              "waterLevel": 0.05,
+              "count": 0,
+              "percent": 0
+            },
+            "rare": {
+              "waterLevel": 0.3,
+              "count": 0,
+              "percent": 0
+            }
+          }
+        },
+        "festuca_rubra": {
+          "count": 45,
+          "surfaceRange": [
+            0.1869372660543492,
+            0.21556154654899207
+          ],
+          "submerged": {
+            "low": {
+              "waterLevel": -1.05,
+              "count": 0,
+              "percent": 0
+            },
+            "normalHigh": {
+              "waterLevel": -0.25,
+              "count": 0,
+              "percent": 0
+            },
+            "higher": {
+              "waterLevel": 0.05,
+              "count": 0,
+              "percent": 0
+            },
+            "rare": {
+              "waterLevel": 0.3,
+              "count": 45,
+              "percent": 100
+            }
+          }
+        },
+        "puccinellia_maritima": {
+          "count": 55,
+          "surfaceRange": [
+            -0.2249567603425464,
+            -0.06629245405091662
+          ],
+          "submerged": {
+            "low": {
+              "waterLevel": -1.05,
+              "count": 0,
+              "percent": 0
+            },
+            "normalHigh": {
+              "waterLevel": -0.25,
+              "count": 0,
+              "percent": 0
+            },
+            "higher": {
+              "waterLevel": 0.05,
+              "count": 55,
+              "percent": 100
+            },
+            "rare": {
+              "waterLevel": 0.3,
+              "count": 55,
+              "percent": 100
+            }
+          }
+        },
+        "limonium_vulgare": {
+          "count": 21,
+          "surfaceRange": [
+            -0.1564573618433687,
+            0.0963403186958742
+          ],
+          "submerged": {
+            "low": {
+              "waterLevel": -1.05,
+              "count": 0,
+              "percent": 0
+            },
+            "normalHigh": {
+              "waterLevel": -0.25,
+              "count": 0,
+              "percent": 0
+            },
+            "higher": {
+              "waterLevel": 0.05,
+              "count": 19,
+              "percent": 90.47619047619048
+            },
+            "rare": {
+              "waterLevel": 0.3,
+              "count": 21,
+              "percent": 100
+            }
+          }
+        },
+        "fagus_sylvatica": {
+          "count": 68,
+          "surfaceRange": [
+            0.2403826906465767,
+            0.35991230844250055
+          ],
+          "submerged": {
+            "low": {
+              "waterLevel": -1.05,
+              "count": 0,
+              "percent": 0
+            },
+            "normalHigh": {
+              "waterLevel": -0.25,
+              "count": 0,
+              "percent": 0
+            },
+            "higher": {
+              "waterLevel": 0.05,
+              "count": 0,
+              "percent": 0
+            },
+            "rare": {
+              "waterLevel": 0.3,
+              "count": 0,
+              "percent": 0
+            }
+          }
+        },
+        "quercus_robur": {
+          "count": 11,
+          "surfaceRange": [
+            0.26041178813009963,
+            0.34829369588952125
+          ],
+          "submerged": {
+            "low": {
+              "waterLevel": -1.05,
+              "count": 0,
+              "percent": 0
+            },
+            "normalHigh": {
+              "waterLevel": -0.25,
+              "count": 0,
+              "percent": 0
+            },
+            "higher": {
+              "waterLevel": 0.05,
+              "count": 0,
+              "percent": 0
+            },
+            "rare": {
+              "waterLevel": 0.3,
+              "count": 0,
+              "percent": 0
+            }
+          }
+        }
+      }
+    },
+    {
+      "seed": 1,
+      "plantCount": 1265,
+      "flooding": {
+        "galium_odoratum": {
+          "count": 862,
+          "surfaceRange": [
+            0.2407680851710573,
+            0.35979595763391126
+          ],
+          "submerged": {
+            "low": {
+              "waterLevel": -1.05,
+              "count": 0,
+              "percent": 0
+            },
+            "normalHigh": {
+              "waterLevel": -0.25,
+              "count": 0,
+              "percent": 0
+            },
+            "higher": {
+              "waterLevel": 0.05,
+              "count": 0,
+              "percent": 0
+            },
+            "rare": {
+              "waterLevel": 0.3,
+              "count": 0,
+              "percent": 0
+            }
+          }
+        },
+        "urtica_dioica": {
+          "count": 76,
+          "surfaceRange": [
+            0.2943281097047128,
+            0.3415228523774961
+          ],
+          "submerged": {
+            "low": {
+              "waterLevel": -1.05,
+              "count": 0,
+              "percent": 0
+            },
+            "normalHigh": {
+              "waterLevel": -0.25,
+              "count": 0,
+              "percent": 0
+            },
+            "higher": {
+              "waterLevel": 0.05,
+              "count": 0,
+              "percent": 0
+            },
+            "rare": {
+              "waterLevel": 0.3,
+              "count": 0,
+              "percent": 0
+            }
+          }
+        },
+        "halimione_portulacoides": {
+          "count": 37,
+          "surfaceRange": [
+            -0.07296532989012587,
+            0.06794498393555454
+          ],
+          "submerged": {
+            "low": {
+              "waterLevel": -1.05,
+              "count": 0,
+              "percent": 0
+            },
+            "normalHigh": {
+              "waterLevel": -0.25,
+              "count": 0,
+              "percent": 0
+            },
+            "higher": {
+              "waterLevel": 0.05,
+              "count": 20,
+              "percent": 54.054054054054056
+            },
+            "rare": {
+              "waterLevel": 0.3,
+              "count": 37,
+              "percent": 100
+            }
+          }
+        },
+        "salicornia_europaea": {
+          "count": 46,
+          "surfaceRange": [
+            -0.6819097330058506,
+            -0.3764365104477872
+          ],
+          "submerged": {
+            "low": {
+              "waterLevel": -1.05,
+              "count": 0,
+              "percent": 0
+            },
+            "normalHigh": {
+              "waterLevel": -0.25,
+              "count": 46,
+              "percent": 100
+            },
+            "higher": {
+              "waterLevel": 0.05,
+              "count": 46,
+              "percent": 100
+            },
+            "rare": {
+              "waterLevel": 0.3,
+              "count": 46,
+              "percent": 100
+            }
+          }
+        },
+        "sporobolus_anglicus": {
+          "count": 40,
+          "surfaceRange": [
+            -0.46987502982252705,
+            -0.33741696059981235
+          ],
+          "submerged": {
+            "low": {
+              "waterLevel": -1.05,
+              "count": 0,
+              "percent": 0
+            },
+            "normalHigh": {
+              "waterLevel": -0.25,
+              "count": 40,
+              "percent": 100
+            },
+            "higher": {
+              "waterLevel": 0.05,
+              "count": 40,
+              "percent": 100
+            },
+            "rare": {
+              "waterLevel": 0.3,
+              "count": 40,
+              "percent": 100
+            }
+          }
+        },
+        "rubus_fruticosus": {
+          "count": 41,
+          "surfaceRange": [
+            0.24255034285656563,
+            0.3526148071764976
+          ],
+          "submerged": {
+            "low": {
+              "waterLevel": -1.05,
+              "count": 0,
+              "percent": 0
+            },
+            "normalHigh": {
+              "waterLevel": -0.25,
+              "count": 0,
+              "percent": 0
+            },
+            "higher": {
+              "waterLevel": 0.05,
+              "count": 0,
+              "percent": 0
+            },
+            "rare": {
+              "waterLevel": 0.3,
+              "count": 0,
+              "percent": 0
+            }
+          }
+        },
+        "trifolium_pratense": {
+          "count": 43,
+          "surfaceRange": [
+            0.28648868316082104,
+            0.32775526917351994
+          ],
+          "submerged": {
+            "low": {
+              "waterLevel": -1.05,
+              "count": 0,
+              "percent": 0
+            },
+            "normalHigh": {
+              "waterLevel": -0.25,
+              "count": 0,
+              "percent": 0
+            },
+            "higher": {
+              "waterLevel": 0.05,
+              "count": 0,
+              "percent": 0
+            },
+            "rare": {
+              "waterLevel": 0.3,
+              "count": 0,
+              "percent": 0
+            }
+          }
+        },
+        "festuca_rubra": {
+          "count": 45,
+          "surfaceRange": [
+            0.1920592449977815,
+            0.222277372924387
+          ],
+          "submerged": {
+            "low": {
+              "waterLevel": -1.05,
+              "count": 0,
+              "percent": 0
+            },
+            "normalHigh": {
+              "waterLevel": -0.25,
+              "count": 0,
+              "percent": 0
+            },
+            "higher": {
+              "waterLevel": 0.05,
+              "count": 0,
+              "percent": 0
+            },
+            "rare": {
+              "waterLevel": 0.3,
+              "count": 45,
+              "percent": 100
+            }
+          }
+        },
+        "puccinellia_maritima": {
+          "count": 55,
+          "surfaceRange": [
+            -0.22489326655480427,
+            -0.06668630056719987
+          ],
+          "submerged": {
+            "low": {
+              "waterLevel": -1.05,
+              "count": 0,
+              "percent": 0
+            },
+            "normalHigh": {
+              "waterLevel": -0.25,
+              "count": 0,
+              "percent": 0
+            },
+            "higher": {
+              "waterLevel": 0.05,
+              "count": 55,
+              "percent": 100
+            },
+            "rare": {
+              "waterLevel": 0.3,
+              "count": 55,
+              "percent": 100
+            }
+          }
+        },
+        "limonium_vulgare": {
+          "count": 20,
+          "surfaceRange": [
+            -0.16818529252557496,
+            0.07855080949841162
+          ],
+          "submerged": {
+            "low": {
+              "waterLevel": -1.05,
+              "count": 0,
+              "percent": 0
+            },
+            "normalHigh": {
+              "waterLevel": -0.25,
+              "count": 0,
+              "percent": 0
+            },
+            "higher": {
+              "waterLevel": 0.05,
+              "count": 18,
+              "percent": 90
+            },
+            "rare": {
+              "waterLevel": 0.3,
+              "count": 20,
+              "percent": 100
+            }
+          }
+        },
+        "fagus_sylvatica": {
+          "count": 55,
+          "surfaceRange": [
+            0.24067816556435784,
+            0.3492191555726343
+          ],
+          "submerged": {
+            "low": {
+              "waterLevel": -1.05,
+              "count": 0,
+              "percent": 0
+            },
+            "normalHigh": {
+              "waterLevel": -0.25,
+              "count": 0,
+              "percent": 0
+            },
+            "higher": {
+              "waterLevel": 0.05,
+              "count": 0,
+              "percent": 0
+            },
+            "rare": {
+              "waterLevel": 0.3,
+              "count": 0,
+              "percent": 0
+            }
+          }
+        },
+        "quercus_robur": {
+          "count": 16,
+          "surfaceRange": [
+            0.25753340472272407,
+            0.33151807794441296
+          ],
+          "submerged": {
+            "low": {
+              "waterLevel": -1.05,
+              "count": 0,
+              "percent": 0
+            },
+            "normalHigh": {
+              "waterLevel": -0.25,
+              "count": 0,
+              "percent": 0
+            },
+            "higher": {
+              "waterLevel": 0.05,
+              "count": 0,
+              "percent": 0
+            },
+            "rare": {
+              "waterLevel": 0.3,
+              "count": 0,
+              "percent": 0
+            }
+          }
+        }
+      }
+    },
+    {
+      "seed": 42,
+      "plantCount": 1283,
+      "flooding": {
+        "galium_odoratum": {
+          "count": 882,
+          "surfaceRange": [
+            0.2407680851710573,
+            0.35979595763391126
+          ],
+          "submerged": {
+            "low": {
+              "waterLevel": -1.05,
+              "count": 0,
+              "percent": 0
+            },
+            "normalHigh": {
+              "waterLevel": -0.25,
+              "count": 0,
+              "percent": 0
+            },
+            "higher": {
+              "waterLevel": 0.05,
+              "count": 0,
+              "percent": 0
+            },
+            "rare": {
+              "waterLevel": 0.3,
+              "count": 0,
+              "percent": 0
+            }
+          }
+        },
+        "urtica_dioica": {
+          "count": 75,
+          "surfaceRange": [
+            0.2919808887114987,
+            0.3397757276126346
+          ],
+          "submerged": {
+            "low": {
+              "waterLevel": -1.05,
+              "count": 0,
+              "percent": 0
+            },
+            "normalHigh": {
+              "waterLevel": -0.25,
+              "count": 0,
+              "percent": 0
+            },
+            "higher": {
+              "waterLevel": 0.05,
+              "count": 0,
+              "percent": 0
+            },
+            "rare": {
+              "waterLevel": 0.3,
+              "count": 0,
+              "percent": 0
+            }
+          }
+        },
+        "halimione_portulacoides": {
+          "count": 37,
+          "surfaceRange": [
+            -0.07638318095802749,
+            0.0668162757385484
+          ],
+          "submerged": {
+            "low": {
+              "waterLevel": -1.05,
+              "count": 0,
+              "percent": 0
+            },
+            "normalHigh": {
+              "waterLevel": -0.25,
+              "count": 0,
+              "percent": 0
+            },
+            "higher": {
+              "waterLevel": 0.05,
+              "count": 22,
+              "percent": 59.45945945945946
+            },
+            "rare": {
+              "waterLevel": 0.3,
+              "count": 37,
+              "percent": 100
+            }
+          }
+        },
+        "salicornia_europaea": {
+          "count": 44,
+          "surfaceRange": [
+            -0.663156100048861,
+            -0.37039890105617296
+          ],
+          "submerged": {
+            "low": {
+              "waterLevel": -1.05,
+              "count": 0,
+              "percent": 0
+            },
+            "normalHigh": {
+              "waterLevel": -0.25,
+              "count": 44,
+              "percent": 100
+            },
+            "higher": {
+              "waterLevel": 0.05,
+              "count": 44,
+              "percent": 100
+            },
+            "rare": {
+              "waterLevel": 0.3,
+              "count": 44,
+              "percent": 100
+            }
+          }
+        },
+        "sporobolus_anglicus": {
+          "count": 40,
+          "surfaceRange": [
+            -0.4961727443367251,
+            -0.33984173209926155
+          ],
+          "submerged": {
+            "low": {
+              "waterLevel": -1.05,
+              "count": 0,
+              "percent": 0
+            },
+            "normalHigh": {
+              "waterLevel": -0.25,
+              "count": 40,
+              "percent": 100
+            },
+            "higher": {
+              "waterLevel": 0.05,
+              "count": 40,
+              "percent": 100
+            },
+            "rare": {
+              "waterLevel": 0.3,
+              "count": 40,
+              "percent": 100
+            }
+          }
+        },
+        "rubus_fruticosus": {
+          "count": 43,
+          "surfaceRange": [
+            0.2405662417592923,
+            0.35194456573332056
+          ],
+          "submerged": {
+            "low": {
+              "waterLevel": -1.05,
+              "count": 0,
+              "percent": 0
+            },
+            "normalHigh": {
+              "waterLevel": -0.25,
+              "count": 0,
+              "percent": 0
+            },
+            "higher": {
+              "waterLevel": 0.05,
+              "count": 0,
+              "percent": 0
+            },
+            "rare": {
+              "waterLevel": 0.3,
+              "count": 0,
+              "percent": 0
+            }
+          }
+        },
+        "trifolium_pratense": {
+          "count": 43,
+          "surfaceRange": [
+            0.28612051702725044,
+            0.3269306762968138
+          ],
+          "submerged": {
+            "low": {
+              "waterLevel": -1.05,
+              "count": 0,
+              "percent": 0
+            },
+            "normalHigh": {
+              "waterLevel": -0.25,
+              "count": 0,
+              "percent": 0
+            },
+            "higher": {
+              "waterLevel": 0.05,
+              "count": 0,
+              "percent": 0
+            },
+            "rare": {
+              "waterLevel": 0.3,
+              "count": 0,
+              "percent": 0
+            }
+          }
+        },
+        "festuca_rubra": {
+          "count": 45,
+          "surfaceRange": [
+            0.19041079923307488,
+            0.2177119393054726
+          ],
+          "submerged": {
+            "low": {
+              "waterLevel": -1.05,
+              "count": 0,
+              "percent": 0
+            },
+            "normalHigh": {
+              "waterLevel": -0.25,
+              "count": 0,
+              "percent": 0
+            },
+            "higher": {
+              "waterLevel": 0.05,
+              "count": 0,
+              "percent": 0
+            },
+            "rare": {
+              "waterLevel": 0.3,
+              "count": 45,
+              "percent": 100
+            }
+          }
+        },
+        "puccinellia_maritima": {
+          "count": 55,
+          "surfaceRange": [
+            -0.2246305432548876,
+            -0.06701288392867036
+          ],
+          "submerged": {
+            "low": {
+              "waterLevel": -1.05,
+              "count": 0,
+              "percent": 0
+            },
+            "normalHigh": {
+              "waterLevel": -0.25,
+              "count": 0,
+              "percent": 0
+            },
+            "higher": {
+              "waterLevel": 0.05,
+              "count": 55,
+              "percent": 100
+            },
+            "rare": {
+              "waterLevel": 0.3,
+              "count": 55,
+              "percent": 100
+            }
+          }
+        },
+        "limonium_vulgare": {
+          "count": 19,
+          "surfaceRange": [
+            -0.1648371170581571,
+            0.09042043068883318
+          ],
+          "submerged": {
+            "low": {
+              "waterLevel": -1.05,
+              "count": 0,
+              "percent": 0
+            },
+            "normalHigh": {
+              "waterLevel": -0.25,
+              "count": 0,
+              "percent": 0
+            },
+            "higher": {
+              "waterLevel": 0.05,
+              "count": 17,
+              "percent": 89.47368421052632
+            },
+            "rare": {
+              "waterLevel": 0.3,
+              "count": 19,
+              "percent": 100
+            }
+          }
+        },
+        "fagus_sylvatica": {
+          "count": 54,
+          "surfaceRange": [
+            0.24058150169888465,
+            0.3571759924110893
+          ],
+          "submerged": {
+            "low": {
+              "waterLevel": -1.05,
+              "count": 0,
+              "percent": 0
+            },
+            "normalHigh": {
+              "waterLevel": -0.25,
+              "count": 0,
+              "percent": 0
+            },
+            "higher": {
+              "waterLevel": 0.05,
+              "count": 0,
+              "percent": 0
+            },
+            "rare": {
+              "waterLevel": 0.3,
+              "count": 0,
+              "percent": 0
+            }
+          }
+        },
+        "quercus_robur": {
+          "count": 12,
+          "surfaceRange": [
+            0.2737724895730858,
+            0.34799233346981356
+          ],
+          "submerged": {
+            "low": {
+              "waterLevel": -1.05,
+              "count": 0,
+              "percent": 0
+            },
+            "normalHigh": {
+              "waterLevel": -0.25,
+              "count": 0,
+              "percent": 0
+            },
+            "higher": {
+              "waterLevel": 0.05,
+              "count": 0,
+              "percent": 0
+            },
+            "rare": {
+              "waterLevel": 0.3,
+              "count": 0,
+              "percent": 0
+            }
+          }
+        }
+      }
+    },
+    {
+      "seed": 20261022,
+      "plantCount": 1277,
+      "flooding": {
+        "galium_odoratum": {
+          "count": 868,
+          "surfaceRange": [
+            0.24088685546313815,
+            0.35979595763391126
+          ],
+          "submerged": {
+            "low": {
+              "waterLevel": -1.05,
+              "count": 0,
+              "percent": 0
+            },
+            "normalHigh": {
+              "waterLevel": -0.25,
+              "count": 0,
+              "percent": 0
+            },
+            "higher": {
+              "waterLevel": 0.05,
+              "count": 0,
+              "percent": 0
+            },
+            "rare": {
+              "waterLevel": 0.3,
+              "count": 0,
+              "percent": 0
+            }
+          }
+        },
+        "urtica_dioica": {
+          "count": 72,
+          "surfaceRange": [
+            0.2918418351659214,
+            0.34237543788243874
+          ],
+          "submerged": {
+            "low": {
+              "waterLevel": -1.05,
+              "count": 0,
+              "percent": 0
+            },
+            "normalHigh": {
+              "waterLevel": -0.25,
+              "count": 0,
+              "percent": 0
+            },
+            "higher": {
+              "waterLevel": 0.05,
+              "count": 0,
+              "percent": 0
+            },
+            "rare": {
+              "waterLevel": 0.3,
+              "count": 0,
+              "percent": 0
+            }
+          }
+        },
+        "halimione_portulacoides": {
+          "count": 36,
+          "surfaceRange": [
+            -0.0885077709251472,
+            0.06876912573110346
+          ],
+          "submerged": {
+            "low": {
+              "waterLevel": -1.05,
+              "count": 0,
+              "percent": 0
+            },
+            "normalHigh": {
+              "waterLevel": -0.25,
+              "count": 0,
+              "percent": 0
+            },
+            "higher": {
+              "waterLevel": 0.05,
+              "count": 22,
+              "percent": 61.111111111111114
+            },
+            "rare": {
+              "waterLevel": 0.3,
+              "count": 36,
+              "percent": 100
+            }
+          }
+        },
+        "salicornia_europaea": {
+          "count": 51,
+          "surfaceRange": [
+            -0.7083549660432409,
+            -0.36900061057144795
+          ],
+          "submerged": {
+            "low": {
+              "waterLevel": -1.05,
+              "count": 0,
+              "percent": 0
+            },
+            "normalHigh": {
+              "waterLevel": -0.25,
+              "count": 51,
+              "percent": 100
+            },
+            "higher": {
+              "waterLevel": 0.05,
+              "count": 51,
+              "percent": 100
+            },
+            "rare": {
+              "waterLevel": 0.3,
+              "count": 51,
+              "percent": 100
+            }
+          }
+        },
+        "sporobolus_anglicus": {
+          "count": 40,
+          "surfaceRange": [
+            -0.49436410229329647,
+            -0.34129826673930025
+          ],
+          "submerged": {
+            "low": {
+              "waterLevel": -1.05,
+              "count": 0,
+              "percent": 0
+            },
+            "normalHigh": {
+              "waterLevel": -0.25,
+              "count": 40,
+              "percent": 100
+            },
+            "higher": {
+              "waterLevel": 0.05,
+              "count": 40,
+              "percent": 100
+            },
+            "rare": {
+              "waterLevel": 0.3,
+              "count": 40,
+              "percent": 100
+            }
+          }
+        },
+        "rubus_fruticosus": {
+          "count": 45,
+          "surfaceRange": [
+            0.24001371463540158,
+            0.3516927781046994
+          ],
+          "submerged": {
+            "low": {
+              "waterLevel": -1.05,
+              "count": 0,
+              "percent": 0
+            },
+            "normalHigh": {
+              "waterLevel": -0.25,
+              "count": 0,
+              "percent": 0
+            },
+            "higher": {
+              "waterLevel": 0.05,
+              "count": 0,
+              "percent": 0
+            },
+            "rare": {
+              "waterLevel": 0.3,
+              "count": 0,
+              "percent": 0
+            }
+          }
+        },
+        "trifolium_pratense": {
+          "count": 43,
+          "surfaceRange": [
+            0.28569348551616325,
+            0.32953676397723497
+          ],
+          "submerged": {
+            "low": {
+              "waterLevel": -1.05,
+              "count": 0,
+              "percent": 0
+            },
+            "normalHigh": {
+              "waterLevel": -0.25,
+              "count": 0,
+              "percent": 0
+            },
+            "higher": {
+              "waterLevel": 0.05,
+              "count": 0,
+              "percent": 0
+            },
+            "rare": {
+              "waterLevel": 0.3,
+              "count": 0,
+              "percent": 0
+            }
+          }
+        },
+        "festuca_rubra": {
+          "count": 45,
+          "surfaceRange": [
+            0.18749821729979466,
+            0.21713948193419172
+          ],
+          "submerged": {
+            "low": {
+              "waterLevel": -1.05,
+              "count": 0,
+              "percent": 0
+            },
+            "normalHigh": {
+              "waterLevel": -0.25,
+              "count": 0,
+              "percent": 0
+            },
+            "higher": {
+              "waterLevel": 0.05,
+              "count": 0,
+              "percent": 0
+            },
+            "rare": {
+              "waterLevel": 0.3,
+              "count": 45,
+              "percent": 100
+            }
+          }
+        },
+        "puccinellia_maritima": {
+          "count": 55,
+          "surfaceRange": [
+            -0.2249629086222887,
+            -0.07085109149430445
+          ],
+          "submerged": {
+            "low": {
+              "waterLevel": -1.05,
+              "count": 0,
+              "percent": 0
+            },
+            "normalHigh": {
+              "waterLevel": -0.25,
+              "count": 0,
+              "percent": 0
+            },
+            "higher": {
+              "waterLevel": 0.05,
+              "count": 55,
+              "percent": 100
+            },
+            "rare": {
+              "waterLevel": 0.3,
+              "count": 55,
+              "percent": 100
+            }
+          }
+        },
+        "limonium_vulgare": {
+          "count": 22,
+          "surfaceRange": [
+            -0.19141491402200156,
+            0.07857843746217663
+          ],
+          "submerged": {
+            "low": {
+              "waterLevel": -1.05,
+              "count": 0,
+              "percent": 0
+            },
+            "normalHigh": {
+              "waterLevel": -0.25,
+              "count": 0,
+              "percent": 0
+            },
+            "higher": {
+              "waterLevel": 0.05,
+              "count": 21,
+              "percent": 95.45454545454545
+            },
+            "rare": {
+              "waterLevel": 0.3,
+              "count": 22,
+              "percent": 100
+            }
+          }
+        },
+        "fagus_sylvatica": {
+          "count": 65,
+          "surfaceRange": [
+            0.24100469638602473,
+            0.3576152300931969
+          ],
+          "submerged": {
+            "low": {
+              "waterLevel": -1.05,
+              "count": 0,
+              "percent": 0
+            },
+            "normalHigh": {
+              "waterLevel": -0.25,
+              "count": 0,
+              "percent": 0
+            },
+            "higher": {
+              "waterLevel": 0.05,
+              "count": 0,
+              "percent": 0
+            },
+            "rare": {
+              "waterLevel": 0.3,
+              "count": 0,
+              "percent": 0
+            }
+          }
+        },
+        "quercus_robur": {
+          "count": 10,
+          "surfaceRange": [
+            0.25232661094372444,
+            0.3297384196930907
+          ],
+          "submerged": {
+            "low": {
+              "waterLevel": -1.05,
+              "count": 0,
+              "percent": 0
+            },
+            "normalHigh": {
+              "waterLevel": -0.25,
+              "count": 0,
+              "percent": 0
+            },
+            "higher": {
+              "waterLevel": 0.05,
+              "count": 0,
+              "percent": 0
+            },
+            "rare": {
+              "waterLevel": 0.3,
+              "count": 0,
+              "percent": 0
+            }
+          }
+        }
+      }
+    }
+  ]
+}

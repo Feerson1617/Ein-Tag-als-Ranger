@@ -1,0 +1,17 @@
+{
+  "sourceCommit": "f92146876f4364a4fb78d30d9e9b190bbb7dc1f4",
+  "scenarios": 8,
+  "allFourPositiveFromInitialModelStart": true,
+  "allCoastalPoolsEmptyAt240": true,
+  "anySuccessAfter240": false,
+  "actualSteppedModelSeconds": [
+    1199.9999999991542,
+    1199.9999999999363,
+    1199.9999999991542,
+    1199.9999999999363,
+    1199.9999999991542,
+    1199.9999999999363,
+    1199.9999999991542,
+    1199.9999999999363
+  ]
+}
