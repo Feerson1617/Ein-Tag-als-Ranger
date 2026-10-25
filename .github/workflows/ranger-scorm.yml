@@ -102,6 +102,8 @@ jobs:
         with:
           name: Ranger-Kompakt-itslearning-SCORM12.zip
           path: work/scorm/download
+          skip-decompress: true
+          digest-mismatch: error
       - name: Verify exact offered file before calling it an import candidate
         run: python tools/scorm/verify.py work/scorm/download/Ranger-Kompakt-itslearning-SCORM12.zip --expected tools/scorm-template/dist/Ranger-Kompakt-itslearning-SCORM12.zip --report work/scorm/download-verified.json
       - name: Download and itslearning instructions

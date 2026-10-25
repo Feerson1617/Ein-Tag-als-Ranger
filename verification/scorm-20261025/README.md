@@ -23,3 +23,20 @@ Die Landschaft und die tatsächlich gerenderte Nahrungsaufnahme wurden an unver�
 Bei der abschließenden Sichtung enthielten die herunterladbaren Schülerpfade noch die normale Anleitung „JSON exportieren“. Ausschließlich das SCORM-Staging ersetzt sie durch Arbeitsblattsicherung und den Hinweis auf den flüchtigen Sitzungsspeicher. Unbenutzte ursprüngliche Seitentexte werden nicht mehr in der Dokument-Metadatenkopie mitgeliefert.
 
 **BESTANDEN:** Der aktualisierte vollständige Sitzungstest erwirbt erneut K1–K5, lädt alle drei Schülerdokumente tatsächlich herunter, prüft deren Texte sowie leeren Neustart und unveränderte Fremddaten (`student-documents-browser.log`). Die heruntergeladenen Schülerpfade A/B haben weiterhin jeweils zwei A4-Seiten, der Arbeitsblattpool 38 (`scorm-student-print.json`). Direkte `file://`-Navigation war durch die Browserrichtlinie **FEHLGESCHLAGEN**; der reguläre lokale HTTP-Druckserver wurde erfolgreich verwendet, ohne Richtlinienänderung.
+
+## Direkter Artefaktdownload: Ursache und Korrektur
+
+**FEHLGESCHLAGEN:** SCORM-Lauf [40223709507](https://github.com/Feerson1617/Ein-Tag-als-Ranger/actions/runs/40223709507) am Commit `0c5cc3e7c9a601b0ef3cb1e0dcfd5a03a8d65f48`. Generische Vorlagenprüfung, normale Regressionen, Ranger-Chromium/WebKit, direkter Upload und Download sind laut Actions-Schrittstatus **BESTANDEN**; erst die Prüfung der angebotenen Datei scheiterte. Der Artefakt-API-Hash und die Größe stimmen mit der lokal erzeugten ZIP dieses Commits überein. Sie wird wegen des fehlgeschlagenen Rückdownloadnachweises nicht als Importkandidat ausgewiesen.
+
+Die Download-Action v8 verwendet am gepinnten Commit `@actions/artifact@6.3.1`. Dessen unveränderte Downloadfunktion entpackt ZIP-Antworten standardmäßig, auch nach `archive: false` beim Upload. Im Workflow fehlte `skip-decompress: true`. **BESTANDEN:** lokale Reproduktion mit genau dieser Bibliothek und der tatsächlichen SCORM-ZIP: Standardmodus extrahiert das Wurzelmanifest und lässt keine ZIP zurück; der korrigierte Modus erhält den Dateinamen und sämtliche Bytes. Die unveränderte Paketprüfung besteht auf der so zurückgeladenen Datei (`download-action-reproduction.json`, `download-action-local-package.json`, vollständiges lokales Protokoll).
+
+Reproduktion vom Repositoryverzeichnis aus:
+
+```sh
+npm install --prefix work/scorm/action-download-repro --no-audit --no-fund @actions/artifact@6.3.1
+node verification/scorm-20261025/reproduce-download-action.mjs
+```
+
+Der Workflow setzt nun ausdrücklich `skip-decompress: true` und `digest-mismatch: error`; die anschließende Bytegleichheits-, XSD- und Paketprüfung bleibt unverändert verpflichtend. Die lokale HTTP-Reproduktion ersetzt keinen GitHub-Rückdownload. Nur der neue erfolgreiche Actions-Lauf am Liefercommit kann diesen belegen.
+
+**NICHT GEPRÜFT:** vollständiger Traceback des ersten Actions-Dateifehlers in dieser Cloud. Der Log-/Artefakthost `productionresultssa19.blob.core.windows.net` liefert HTTP 403; es werden keine fehlenden Logzeilen ergänzt. Schrittstatus und Artefaktmetadaten wurden über die GitHub-API gelesen; die oben beschriebene Ursache wurde unabhängig lokal reproduziert.

@@ -1,0 +1,76 @@
+{
+  "status": "BESTANDEN",
+  "zip": "Ranger-Kompakt-itslearning-SCORM12.zip",
+  "bytes": 6688236,
+  "sha256": "418b54d01adab7747680a361d1e6683f4a3510299625707b0b382c545eeb5237",
+  "launch": "index.html",
+  "files": [
+    "MATERIALS.json",
+    "QUELLEN-UND-RECHTE.md",
+    "THREE-LICENSE.txt",
+    "XMLSchema.dtd",
+    "__scorm/THIRD-PARTY-NOTICES.txt",
+    "__scorm/package-info.json",
+    "adlcp_rootv1p2.xsd",
+    "assets/boardwalk-wood-4d06022133e3.webp",
+    "assets/compact-roe-deer-a89400df6603.glb",
+    "assets/sky-panorama-46c360b491b1.webp",
+    "assets/terrain-atlas-d637324d3ace.webp",
+    "assets/wildlife-fox-61a4d1b845aa.glb",
+    "datatypes.dtd",
+    "icon.svg",
+    "ims_xml.xsd",
+    "imscp_rootv1p1p2.xsd",
+    "imsmanifest.xml",
+    "index.html",
+    "web/compact-122258ce887a.css",
+    "web/ranger-5988734e791d.js",
+    "web/scorm-layout.css",
+    "web/storage-adapter.js"
+  ],
+  "xsd": true,
+  "source_files_unchanged": true,
+  "dynamic_references_requiring_browser_coverage": [
+    {
+      "path": "web/ranger-5988734e791d.js",
+      "line": 16524,
+      "kind": "load"
+    },
+    {
+      "path": "web/ranger-5988734e791d.js",
+      "line": 16682,
+      "kind": "assigned URL"
+    },
+    {
+      "path": "web/ranger-5988734e791d.js",
+      "line": 16712,
+      "kind": "load"
+    },
+    {
+      "path": "web/ranger-5988734e791d.js",
+      "line": 30181,
+      "kind": "fetch"
+    },
+    {
+      "path": "web/ranger-5988734e791d.js",
+      "line": 32030,
+      "kind": "loadAsync"
+    },
+    {
+      "path": "web/ranger-5988734e791d.js",
+      "line": 32309,
+      "kind": "fetch"
+    },
+    {
+      "path": "web/ranger-5988734e791d.js",
+      "line": 32599,
+      "kind": "assigned URL"
+    }
+  ],
+  "limits": "Static analysis cannot prove all computed URLs or persistence behavior; test each application in a browser and real LMS.",
+  "downloadedBytesEqual": true,
+  "rangerMode": "ranger-session-only",
+  "studentOnly": true,
+  "templateCommit": "86006235258195cae76a6cfe33c0be58f4bd05d1",
+  "originalTemplateFilesUnchanged": true
+}
