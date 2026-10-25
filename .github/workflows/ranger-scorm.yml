@@ -1,0 +1,133 @@
+name: Ranger SCORM 1.2
+on:
+  push:
+    branches: [feature/ranger-kompakt]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  template-reference:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    env:
+      TEST_WEBKIT: '1'
+      LIBGL_ALWAYS_SOFTWARE: '1'
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          repository: Feerson1617/Interaktive-Lernmodelle-SKORM
+          ref: 86006235258195cae76a6cfe33c0be58f4bd05d1
+          path: work/scorm/reference
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '24.19.0'
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - run: python tools/scorm/prepare-reference.py work/scorm/reference
+      - run: python -m pip install -r tools/scorm-template/requirements.txt
+      - run: npm ci
+        working-directory: work/scorm/reference
+      - run: npx playwright install --with-deps chromium webkit
+        working-directory: work/scorm/reference
+      - name: Unchanged generic tests plus explicit Ranger-mode tests
+        working-directory: work/scorm/reference
+        run: |
+          npm run prepare:example
+          npm run build
+          npm test
+          npm run test:browser
+          npx playwright test --config playwright.smoke.config.js
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
+        if: always()
+        with:
+          name: Ranger-SCORM-template-proof
+          path: work/scorm/reference/test-results/
+          retention-days: 30
+  ranger-export:
+    needs: template-reference
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    env:
+      TEST_WEBKIT: '1'
+      LIBGL_ALWAYS_SOFTWARE: '1'
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '24.19.0'
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - run: npm ci --prefix tools/scorm-template
+      - run: python -m pip install -r tools/requirements-dev.txt -r tools/scorm-template/requirements.txt
+      - run: python -m playwright install --with-deps chromium
+      - run: npx playwright install --with-deps chromium webkit
+        working-directory: tools/scorm-template
+      - name: Normal Ranger build and unchanged scientific/storage regressions
+        run: |
+          mkdir -p work/scorm
+          node tests/compact-storage-adapter-check.mjs
+          node tests/compact-learning-check.mjs
+          node tests/compact-material-depth-check.mjs work/scorm/material-depth
+          python tools/build-compact.py > work/scorm/web-build.json
+          python tools/verify-compact.py
+          python tools/browser-compact-learning.py --output work/scorm/normal-learning
+          python tools/browser-compact-growth.py --output work/scorm/normal-growth
+      - name: Stage actual student web build; use universal builder and independent XSD validator
+        run: |
+          node tools/scorm/stage.mjs > work/scorm/stage.log
+          node tools/scorm-template/scripts/build.mjs tools/scorm/ranger.config.json
+          python tools/scorm/verify.py tools/scorm-template/dist/Ranger-Kompakt-itslearning-SCORM12.zip --report work/scorm/package.json
+      - name: Actual extracted ZIP in Chromium and WebKit; no tracking and volatile K1–K5
+        run: tools/scorm-template/node_modules/.bin/playwright test --config tools/scorm/playwright.config.js
+      - name: Upload the SCORM ZIP itself, without a transport ZIP
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
+        id: scorm
+        with:
+          path: tools/scorm-template/dist/Ranger-Kompakt-itslearning-SCORM12.zip
+          archive: false
+          if-no-files-found: error
+          retention-days: 90
+      - name: Download the offered bytes again
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8; supports unarchived files
+        with:
+          name: Ranger-Kompakt-itslearning-SCORM12.zip
+          path: work/scorm/download
+      - name: Verify exact offered file before calling it an import candidate
+        run: python tools/scorm/verify.py work/scorm/download/Ranger-Kompakt-itslearning-SCORM12.zip --expected tools/scorm-template/dist/Ranger-Kompakt-itslearning-SCORM12.zip --report work/scorm/download-verified.json
+      - name: Download and itslearning instructions
+        env:
+          ARTIFACT_URL: ${{ steps.scorm.outputs.artifact-url }}
+          ARTIFACT_ID: ${{ steps.scorm.outputs.artifact-id }}
+        run: |
+          python - <<'PY'
+          import json,os
+          from pathlib import Path
+          proof=json.loads(Path('work/scorm/download-verified.json').read_text())
+          proof.update(sourceCommit=os.environ['GITHUB_SHA'],artifactURL=os.environ['ARTIFACT_URL'],artifactID=os.environ['ARTIFACT_ID'])
+          Path('work/scorm/delivery.json').write_text(json.dumps(proof,ensure_ascii=False,indent=2)+'\n')
+          with open(os.environ['GITHUB_STEP_SUMMARY'],'a')as out:
+            out.write(f"**BESTANDEN:** Direktdatei hochgeladen, zurückgeladen, bytegleich und erneut validiert.\n\n[SCORM-ZIP herunterladen]({proof['artifactURL']})\n\n`{proof['zip']}` · {proof['bytes']} Bytes · SHA-256 `{proof['sha256']}`\n\n")
+            out.write('Diese ZIP ohne Entpacken in itslearning als SCORM-1.2-Lernpaket importieren. Kein zusätzlicher Transportumschlag. LMS-Zugriffsdaten oder automatische Statuswerte liegen außerhalb des Ranger-Vertrags.\n\n**NICHT GEPRÜFT:** tatsächlicher itslearning-Import, physisches iPad 9/Safari und Unterrichtspilot.\n')
+          PY
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        if: always()
+        with:
+          name: Ranger-SCORM-proof
+          path: |
+            work/scorm/*.json
+            work/scorm/*.log
+            work/scorm/browser-artifacts/
+            work/scorm/normal-learning/
+            work/scorm/normal-growth/
+            work/scorm/material-depth/
+          retention-days: 30

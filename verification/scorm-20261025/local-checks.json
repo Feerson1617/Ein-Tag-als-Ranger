@@ -1,0 +1,87 @@
+{
+  "dateUTC": "2026-10-25",
+  "baseCommit": "28284b1e1638f546b5b191cf3b9935fc09ad3ce6",
+  "scope": "Local pre-commit checks; final exact-commit package and downloaded artifact are gated independently in GitHub Actions.",
+  "sourceHashes": {
+    "dist/compact/main.js": "31bf5aa5c5bcbc987aa72b403cd51a38dde59042c8db97cf97ab5984b5433b06",
+    "dist/compact/learning-ui.js": "85f3aa45ec88530640c520a5448d0a513097c8bb627b1e1fc5c58efa4618489b",
+    "dist/compact/storage-adapter.js": "9fc019798a2cc68f4f4737770c0d1aa3a1413e1cf23c4abc726efcf33c1311ad",
+    "dist/field-guide.js": "988dd059541a9068814eb9d4fca98cae7fe4ff086d3384c160261872d785df7d",
+    "dist/compact/materials.js": "1d044e93ca1120a74e6f8e824f3d2f97957b70631f4ea4fa580691d7c56437d4",
+    "tools/scorm/stage.mjs": "ab37ea03788898c2a1e58959f838a49433d7b399ef4cada1be2f15b0a5fb1ff9",
+    "tools/scorm/ranger.config.json": "ad2970ba844853bd0867c00a7166132d23d63a4bdabe33d55ab1b2eb1474afdf",
+    "tools/scorm/verify.py": "3d655326942a26b22dc54437a1472c3cf703bcb7119bdc07dc7cf2a73c2789aa",
+    "tools/scorm/tests/ranger.spec.js": "6dc2fd4b20e42c6bee07907ea80a4fde6350f5e4c4f2dce12736d50d81b8e357",
+    ".github/workflows/ranger-scorm.yml": "b7089d62a2ac5afc477d74f9bf1617cfa005545eb39956e8059c51701c5b31d3"
+  },
+  "checks": [
+    {
+      "name": "Legacy Node",
+      "status": "BESTANDEN",
+      "suites": 28
+    },
+    {
+      "name": "Compact Node (includes compact-world also in legacy list)",
+      "status": "BESTANDEN",
+      "suites": 15
+    },
+    {
+      "name": "Python package tests after fresh legacy builds",
+      "status": "BESTANDEN",
+      "tests": 9
+    },
+    {
+      "name": "Template Node; original 16 preserved plus 3 Ranger tests",
+      "status": "BESTANDEN",
+      "tests": 19
+    },
+    {
+      "name": "Template Python; original 26 preserved plus 2 Ranger tests",
+      "status": "BESTANDEN",
+      "tests": 28
+    },
+    {
+      "name": "Generic Chromium browser/smoke",
+      "status": "BESTANDEN",
+      "tests": 15
+    },
+    {
+      "name": "SCORM core Chromium: API, no-API, volatile K1–K5, reload, restart, tablet",
+      "status": "BESTANDEN",
+      "tests": 7,
+      "note": "Last full local run still failed its new interaction test; that separate corrected test is below. No overall green full-run claim."
+    },
+    {
+      "name": "SCORM visible coastal interaction, corrected driver",
+      "status": "BESTANDEN",
+      "tests": 1
+    },
+    {
+      "name": "Normal browser learning/persistence/import/export",
+      "status": "BESTANDEN",
+      "checks": 17
+    },
+    {
+      "name": "Normal growth HTML, input validity and exports after local button correction",
+      "status": "BESTANDEN"
+    },
+    {
+      "name": "Five actual PDFs, two font profiles",
+      "status": "BESTANDEN"
+    },
+    {
+      "name": "Local WebKit browser",
+      "status": "NICHT GEPRÜFT",
+      "reason": "Browser installation FEHLGESCHLAGEN: proxy HTTP 403 Domain forbidden; CI has its own mandatory WebKit gate."
+    },
+    {
+      "name": "Historical 900-second cloud arrival run",
+      "status": "FEHLGESCHLAGEN",
+      "reason": "Preserved existing limit/assertions; this task does not resolve or relabel that result."
+    },
+    {
+      "name": "itslearning / physical iPad 9 Safari / classroom pilot",
+      "status": "NICHT GEPRÜFT"
+    }
+  ]
+}

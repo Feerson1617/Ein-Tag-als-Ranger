@@ -1,0 +1,67 @@
+
+> scorm-universalvorlage@1.0.0 test
+> node --test tests/*.test.js && python3 -m unittest discover -s tests -p 'test_*.py' -v
+
+✔ Ranger: initialize/finish/error queries only, including hide and bfcache (2.581052ms)
+✔ Ranger: no API, failed init and finish retry do not read/write data (0.2162ms)
+✔ Unknown tracking mode fails closed (0.1689ms)
+✔ SCORM initializes once, prevents default completion and finishes once without a score (3.351862ms)
+✔ Preserves existing LMS status: incomplete (0.116052ms)
+✔ Preserves existing LMS status: completed (11.356653ms)
+✔ Preserves existing LMS status: passed (0.108681ms)
+✔ Preserves existing LMS status: failed (0.074521ms)
+✔ Preserves existing LMS status: browsed (0.056594ms)
+✔ SCORM reports init failure without unhandled exceptions or fabricated success (0.24957ms)
+✔ SCORM reports get failure without unhandled exceptions or fabricated success (0.059348ms)
+✔ SCORM reports set failure without unhandled exceptions or fabricated success (0.108971ms)
+✔ SCORM reports commit failure without unhandled exceptions or fabricated success (0.129572ms)
+✔ SCORM reports finish failure without unhandled exceptions or fabricated success (0.073339ms)
+✔ Finds API in current window, ancestors, opener and opener ancestors (0.089092ms)
+✔ Inaccessible parents, closed openers, loops and excessive nesting terminate safely (0.181639ms)
+✔ Unavailable API supports an explicit retry once it becomes accessible (0.091025ms)
+✔ A throwing API is reported and never breaks the game (0.078346ms)
+✔ Visibility commits, pagehide finishes, cached return reinitializes, duplicate close is harmless (0.266415ms)
+ℹ tests 19
+ℹ suites 0
+ℹ pass 19
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 88.768527
+test_bare_module (test_package.PackageTests.test_bare_module) ... ok
+test_case_collision (test_package.PackageTests.test_case_collision) ... ok
+test_changed_original_is_detected (test_package.PackageTests.test_changed_original_is_detected) ... ok
+test_classroom_mode_needs_explicit_adapter (test_package.PackageTests.test_classroom_mode_needs_explicit_adapter) ... ok
+test_duplicate_zip_entries (test_package.PackageTests.test_duplicate_zip_entries) ... ok
+test_dynamic_reference_is_reported_not_claimed_verified (test_package.PackageTests.test_dynamic_reference_is_reported_not_claimed_verified) ... ok
+test_external_css_and_gltf (test_package.PackageTests.test_external_css_and_gltf) ... ok
+test_external_dynamic_import (test_package.PackageTests.test_external_dynamic_import) ... ok
+test_external_fetch (test_package.PackageTests.test_external_fetch) ... ok
+test_inline_css_external_resource (test_package.PackageTests.test_inline_css_external_resource) ... ok
+test_inline_css_local_resource (test_package.PackageTests.test_inline_css_local_resource) ... ok
+test_missing_asset (test_package.PackageTests.test_missing_asset) ... ok
+test_missing_dynamic_module (test_package.PackageTests.test_missing_dynamic_module) ... ok
+test_missing_gltf_texture (test_package.PackageTests.test_missing_gltf_texture) ... ok
+test_modified_schema (test_package.PackageTests.test_modified_schema) ... ok
+test_no_base_redirect (test_package.PackageTests.test_no_base_redirect) ... ok
+test_no_outer_folder (test_package.PackageTests.test_no_outer_folder) ... ok
+test_no_zip_inside_zip (test_package.PackageTests.test_no_zip_inside_zip) ... ok
+test_output_path_rejected (test_package.PackageTests.test_output_path_rejected) ... ok
+test_reproducible_bytes (test_package.PackageTests.test_reproducible_bytes) ... ok
+test_root_relative_module (test_package.PackageTests.test_root_relative_module) ... ok
+test_scorm_version (test_package.PackageTests.test_scorm_version) ... ok
+test_symlink_rejected (test_package.PackageTests.test_symlink_rejected) ... ok
+test_traversal (test_package.PackageTests.test_traversal) ... ok
+test_valid_modules_nested_launch_and_xml_escaping (test_package.PackageTests.test_valid_modules_nested_launch_and_xml_escaping) ... ok
+test_xsd_required_resource_type (test_package.PackageTests.test_xsd_required_resource_type) ... ok
+test_explicit_mode_config_and_policy (test_ranger.RangerTests.test_explicit_mode_config_and_policy) ... ok
+test_optional_literature_is_not_an_asset_exemption (test_ranger.RangerTests.test_optional_literature_is_not_an_asset_exemption) ... ok
+
+----------------------------------------------------------------------
+Ran 28 tests in 0.523s
+
+OK
+Validated: /workspace/Ein-Tag-als-Ranger/tools/scorm-template/dist/unit-fixture.zip (14708 bytes)
+Validated: /workspace/Ein-Tag-als-Ranger/tools/scorm-template/dist/unit-fixture.zip (14708 bytes)
+Validated: /workspace/Ein-Tag-als-Ranger/tools/scorm-template/dist/ranger-unit.zip (14081 bytes)

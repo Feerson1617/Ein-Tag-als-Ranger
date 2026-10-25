@@ -1,0 +1,51 @@
+[2m[WebServer] [22m(node:218407) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[2m[WebServer] [22m(Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 8 tests using 1 worker
+
+(node:218424) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:218424) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [chromium] › tools/scorm/tests/ranger.spec.js:15:79 › http embedded: real ZIP, API discovery, resources, finish (7.3s)
+  ✓  2 [chromium] › tools/scorm/tests/ranger.spec.js:15:79 › http popup: real ZIP, API discovery, resources, finish (5.9s)
+  ✓  3 [chromium] › tools/scorm/tests/ranger.spec.js:15:79 › https embedded: real ZIP, API discovery, resources, finish (7.0s)
+  ✓  4 [chromium] › tools/scorm/tests/ranger.spec.js:15:79 › https popup: real ZIP, API discovery, resources, finish (6.2s)
+  ✓  5 [chromium] › tools/scorm/tests/ranger.spec.js:23:1 › Missing API leaves actual Ranger usable (7.5s)
+  ✓  6 [chromium] › tools/scorm/tests/ranger.spec.js:25:1 › Volatile K1–K5, model memory, no persistent access; reload/restart empty (1.8m)
+  ✓  7 [chromium] › tools/scorm/tests/ranger.spec.js:65:1 › Tablet touch, rotation, scroll and actual landscape (17.5s)
+  ✘  8 [chromium] › tools/scorm/tests/ranger.spec.js:70:1 › Visible coastal interaction in the actual SCO retains finite prey and labelled model time (40.3s)
+
+
+  1) [chromium] › tools/scorm/tests/ranger.spec.js:70:1 › Visible coastal interaction in the actual SCO retains finite prey and labelled model time 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBeTruthy[2m()[22m
+
+    Received: [31mundefined[39m
+
+      79 |  }
+      80 |  for(const phase of ['approaching','searching','handling','swallowing','departing'])expect(phases.has(phase),phase).toBe(true);
+    > 81 |  expect(event).toBeTruthy();expect(event.after).toBe(event.before-1);expect(event.contactDistance).toBeLessThan(.004);await expect(f.locator('#count')).toHaveText('0');await expect(f.locator('#feeding-detail')).toBeVisible();
+         |                ^
+      82 |  await info.attach('visible-coastal-model',{body:JSON.stringify({event,observations,scope:'Rendered, explicitly stepped model; no own binocular evidence fabricated.'},null,2),contentType:'application/json'});
+      83 |  await f.locator('#feeding-close').click();await f.locator('#behavior-stop').click();await f.locator('#scorm-exit').click();
+      84 | });
+        at /workspace/Ein-Tag-als-Ranger/tools/scorm/tests/ranger.spec.js:81:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    work/scorm/browser-artifacts/ranger-Visible-coastal-int-30cba-rey-and-labelled-model-time-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: work/scorm/browser-artifacts/ranger-Visible-coastal-int-30cba-rey-and-labelled-model-time-chromium/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    work/scorm/browser-artifacts/ranger-Visible-coastal-int-30cba-rey-and-labelled-model-time-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace work/scorm/browser-artifacts/ranger-Visible-coastal-int-30cba-rey-and-labelled-model-time-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [chromium] › tools/scorm/tests/ranger.spec.js:70:1 › Visible coastal interaction in the actual SCO retains finite prey and labelled model time 
+  7 passed (3.4m)

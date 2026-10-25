@@ -28,7 +28,7 @@ Stand: 22.10.2026. G = 3D-Beobachtung, Zusatzmodell und Begleitunterricht werden
 | C20 | Stickstoffkreislauf; SE10 | eA | N-Formen und mikrobielle Prozesse unterscheiden | Knöllchen-/Boden-/Sedimentschema und Datenfall Nährstoffeintrag | N2, Ammonium, Nitrit, Nitrat, organischer N; Sauerstoffbedingungen | Stoffwege/Begründung des Eintragsrisikos | Fixierung, Ammonifikation, Nitrifikation, Denitrifikation unterscheiden | Keine mg/l ohne kalibrierten Datensatz; Nährstoffeintrag nicht immer sofort sichtbares Fischsterben |
 | C21 | Anthropogener Treibhauseffekt und Folgen; SE10/11 | gA/eA; Mechanismus zusätzlich lokal ausdrücklich genannt | Ursache, langfristigen Wandel und Tagesdynamik trennen | Deichblick/Salzwiesenszenario + begründete Hintergrunddaten | Meeresspiegel-Szenarien, Sedimenthöhen, Flächenraum, Unsicherheit | Wirkungskette mit getrennten Zeitskalen | Tide nicht Klimawandel; Verlagerung braucht Raum und Sediment | Kein unkalibrierter 2100-Slider als reale örtliche Prognose |
 | C22 | Management, Erhalt, Renaturierung, Nutzung, Biodiversität; SE11/Bw1–3 | gA/eA | Fakten, Werte und Interessen abwägen | K5 Dorf: Wegeführung/Ruhefläche; optionale Deich-/Schlickgrasdaten | Eigene Beobachtungen plus offene Kosten-/Folgenkarten | Begründete Entscheidung mit Alternative und Folgeprüfung | Mehrere vertretbare Lösungen; ethische Abwägung nicht als Quiznote | NPC-Aussagen sind Perspektiven; kein allwissender richtiger NPC |
-| C23 | Hormonartig wirkende Stoffe; SE10 | eA | Langzeitwirkung und Evidenz beurteilen | Datenfall im Dorf-/Unterrichtsteil, kein neuer See nötig | Kidd et al. 2007: Referenz-/Expositionsdaten (Quellenrechte beachten) | Interpretation mit Kontroll-/Übertragbarkeitskritik | Art, Gewässertyp, Dosis und Zeit nennen | Kanadischer Süßwasserfall ist kein Messbeleg für die eigene Salzwiese |
+| C23 | Hormonartig wirkende Stoffe; SE10 | eA | Entwicklungswirkung und Evidenz beurteilen | Tse-2013-BPA-Zebrafischfall im Unterrichtsteil | 50 µM BPA, DMSO-Kontrolle, Expressions-/Morphologierichtungen in getrennten Zeitpunkten | Interpretation mit Kontroll-/Übertragbarkeitskritik | Stadium, Endpunkt, Dosis und Zeit nennen | Kein Rezeptor-, Populations- oder lokaler Salzwiesennachweis |
 | C24 | Ökologischer Fußabdruck; SE11 | eA | Indikator, Systemgrenze und Handlungsoptionen beurteilen | Begleitende Dorf-/Anreisefrage mit geeigneten Daten | Globale Hektar/Biokapazität vs gesonderte CO2-Emissionen | Vergleich und Indikatorkritik | CO2-Fußabdruck nicht als gesamter ökologischer Fußabdruck etikettieren | Kein selbst erfundener Punktescore als standardisierte Ökobilanz |
 | C25 | Exkursion / Multimar II; C1 S.28 | Schulinterner Unterrichtsbezug | Virtuelle und reale Untersuchungen vergleichen | Vor-/Nachbereitung; reale Durchführung außerhalb des Spiels | Reale Merkmale, Messwerte, Unsicherheiten | Transferprotokoll/Designkorrektur | Reale Geräteführung und Naturschutzpraxis beobachten | Spiel ersetzt keine reale Exkursion oder Gerätekompetenz |
 
@@ -200,8 +200,10 @@ https://www.nationalpark-wattenmeer.de/wissen/natur/tiere/
 **[S46] Lazonder & Harmsen 2016: Meta-Analyse zur Unterstützung beim forschenden Lernen.**
 https://doi.org/10.3102/0034654315627366
 
-**[S47] Kidd et al. 2007: Whole-lake experiment zu synthetischem Östrogen.**
-https://doi.org/10.1073/pnas.0609568104
+**[S47] Tse et al. 2013: BPA-Exposition und frühe Zebrafischentwicklung (aktiver C23-Fall).**
+https://doi.org/10.1242/bio.20134283
+
+Kidd et al. 2007 bleibt ein historischer Literaturhinweis in früheren Prüfberichten, kein Datensatz des aktiven C23-Falls.
 
 **[S48] Global Footprint Network: Begriff und Maßeinheit des ökologischen Fußabdrucks.**
 https://footprintnetwork.org/our-work/ecological-footprint/

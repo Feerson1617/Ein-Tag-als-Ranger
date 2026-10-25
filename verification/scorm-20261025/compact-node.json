@@ -1,0 +1,92 @@
+[
+  {
+    "test": "tests/compact-coastal-check.mjs",
+    "status": "BESTANDEN",
+    "exitCode": 0,
+    "seconds": 7.56
+  },
+  {
+    "test": "tests/compact-event-reference-check.mjs",
+    "status": "BESTANDEN",
+    "exitCode": 0,
+    "seconds": 0.94
+  },
+  {
+    "test": "tests/compact-growth-boundary-check.mjs",
+    "status": "BESTANDEN",
+    "exitCode": 0,
+    "seconds": 0.05
+  },
+  {
+    "test": "tests/compact-habitat-check.mjs",
+    "status": "BESTANDEN",
+    "exitCode": 0,
+    "seconds": 0.48
+  },
+  {
+    "test": "tests/compact-habitat-revision-check.mjs",
+    "status": "BESTANDEN",
+    "exitCode": 0,
+    "seconds": 1.1
+  },
+  {
+    "test": "tests/compact-learning-check.mjs",
+    "status": "BESTANDEN",
+    "exitCode": 0,
+    "seconds": 2.78
+  },
+  {
+    "test": "tests/compact-material-depth-check.mjs",
+    "status": "BESTANDEN",
+    "exitCode": 0,
+    "seconds": 0.05
+  },
+  {
+    "test": "tests/compact-observation-context-check.mjs",
+    "status": "BESTANDEN",
+    "exitCode": 0,
+    "seconds": 7.8
+  },
+  {
+    "test": "tests/compact-pedagogy-check.mjs",
+    "status": "BESTANDEN",
+    "exitCode": 0,
+    "seconds": 0.13
+  },
+  {
+    "test": "tests/compact-qa-check.mjs",
+    "status": "BESTANDEN",
+    "exitCode": 0,
+    "seconds": 0.13
+  },
+  {
+    "test": "tests/compact-render-reset-check.mjs",
+    "status": "BESTANDEN",
+    "exitCode": 0,
+    "seconds": 0.58
+  },
+  {
+    "test": "tests/compact-storage-adapter-check.mjs",
+    "status": "BESTANDEN",
+    "exitCode": 0,
+    "seconds": 0.07
+  },
+  {
+    "test": "tests/compact-v1-contract-check.mjs",
+    "status": "BESTANDEN",
+    "exitCode": 0,
+    "seconds": 3.99
+  },
+  {
+    "test": "tests/compact-world-check.mjs",
+    "status": "BESTANDEN",
+    "exitCode": 0,
+    "seconds": 3.61
+  },
+  {
+    "test": "tests/kompakt-check.mjs",
+    "status": "BESTANDEN",
+    "exitCode": 0,
+    "seconds": 0.56
+  }
+]

@@ -12,7 +12,7 @@ K3 kontrolliert dasselbe Herzmuschelindividuum bei identischem Seed, Rundgang, W
 
 Die fünf Zusatzmodelle sind explizit synthetisch oder theoretisch: exponentiell/logistisch, Lotka–Volterra, Ein-Faktor-Toleranz, Kohlenstoff und Stickstoff. Toleranzkurve und räumliche Zonierung sind verschieden. Keine feste universelle 10%-Regel; Energie ist kein Stoffkreislauf. Pflanzenatmung, N-Formen und verschiedene mikrobielle Schritte sind berücksichtigt. Rechnerwerte sind keine Fuchsprognose, örtlichen Salzoptima, Ellenberg-Messwerte, Ökobilanz oder Gewässermessungen.
 
-C04, C15, C23 und C24 verlangen ergänzende Quellenarbeit. Original-Ellenbergzahlen, Phylogenien und Kidd-Datentabellen wurden nicht neu extrahiert/verifiziert; es gibt hierzu konkrete Aufgaben und Erwartungshorizonte, aber keinen erfundenen Ersatzdatensatz. C25 verlangt eine reale Exkursion außerhalb des Spiels. Die ursprünglichen Schul-PDFs und separate Quellen-/Rechenbasisdateien wurden nicht mitgeliefert.
+C23 nutzt die lokal paraphrasierten Versuchsbedingungen und Ergebnisrichtungen aus Tse et al. 2013 (BPA, Zebrafischembryonen). Keine Originalabbildungen, Rohwinkel, erfundenen Häufigkeiten oder Rezeptor-/Populationsnachweise. C17 unterscheidet Konditionierung, anschließenden Laichversuch und Versuchseizahl. C25 verlangt eine reale Exkursion außerhalb des Spiels. Quellenstand und Grenzen: QUELLEN-V1.md.
 
 Das Feldbuch speichert Belege und Lernprodukte, keinen vollständigen fortgesetzten Weltzustand. Neustart und Fensterwechsel erhalten eine neue Rundgang-ID. Alte Kompaktfassungen und große Feldbücher bleiben vollständig als unveränderte Archive exportierbar und erzeugen keine neuen Abschlüsse. Grafikprofile ändern keine biologischen Bestände.
 

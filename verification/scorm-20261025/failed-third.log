@@ -1,0 +1,59 @@
+[2m[WebServer] [22m(node:217209) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[2m[WebServer] [22m(Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 7 tests using 1 worker
+
+(node:217226) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:217226) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [chromium] › tools/scorm/tests/ranger.spec.js:15:79 › http embedded: real ZIP, API discovery, resources, finish (7.9s)
+  ✓  2 [chromium] › tools/scorm/tests/ranger.spec.js:15:79 › http popup: real ZIP, API discovery, resources, finish (6.2s)
+  ✓  3 [chromium] › tools/scorm/tests/ranger.spec.js:15:79 › https embedded: real ZIP, API discovery, resources, finish (7.8s)
+  ✓  4 [chromium] › tools/scorm/tests/ranger.spec.js:15:79 › https popup: real ZIP, API discovery, resources, finish (7.2s)
+  ✓  5 [chromium] › tools/scorm/tests/ranger.spec.js:23:1 › Missing API leaves actual Ranger usable (6.9s)
+  ✘  6 [chromium] › tools/scorm/tests/ranger.spec.js:25:1 › Volatile K1–K5, model memory, no persistent access; reload/restart empty (2.1m)
+(node:218225) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:218225) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  7 [chromium] › tools/scorm/tests/ranger.spec.js:61:1 › Tablet touch, rotation, scroll and actual landscape (16.3s)
+
+
+  1) [chromium] › tools/scorm/tests/ranger.spec.js:25:1 › Volatile K1–K5, model memory, no persistent access; reload/restart empty 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoEqual[2m([22m[32mexpected[39m[2m) // deep equality[22m
+
+    Expected: [32m[][39m
+    Received: [31mundefined[39m
+
+      56 |  const previousRun=await f.locator('#world').getAttribute('data-run-id');await f.evaluate(()=>location.reload());await ready(f);expect(await f.locator('#world').getAttribute('data-run-id')).not.toBe(previousRun);expect(Number(await f.locator('#world').getAttribute('data-simulation-time'))).toBeLessThan(10);expect(await f.locator('#world').getAttribute('data-scene-origin')).toBe('null');await expect(f.locator('#count')).toHaveText('0');expect(await f.locator('#world').evaluate(c=>JSON.parse(c.dataset.missions).every(m=>!m.complete))).toBe(true);await task(f,'K2');await expect(f.locator('#reasoning')).toHaveValue('');await expect(f.locator('#control-id option')).toHaveCount(1);await task(f,'K3');await expect(f.locator('#low-id option')).toHaveCount(1);await task(f,'K1');await expect(f.locator('#determination-record option')).toHaveCount(1);await hub(f);await f.locator('#analysis').click();await expect(f.locator('#parameter-initial')).toHaveValue('10');await expect(f.locator('#model-output')).toBeEmpty();expect(await f.evaluate(()=>window.__persistentCalls)).toEqual([]);
+      57 |  expect(await page.evaluate(()=>[localStorage.getItem('foreign-sentinel'),sessionStorage.getItem('foreign-sentinel'),localStorage.getItem('ranger-compact-fieldbook-v2'),document.cookie])).toEqual(['keep-local','keep-session','must-not-read','foreign_sentinel=keep']);
+    > 58 |  await close(f);await f.locator('#scorm-exit').click();apiOnly(await page.evaluate(()=>calls));f=await launch(page,'popup');await expect(f.locator('#count')).toHaveText('0');expect(await f.evaluate(()=>window.__persistentCalls)).toEqual([]);await f.close();expect(errors).toEqual([]);
+         |                                                                                                                                                                                                                                      ^
+      59 | });
+      60 |
+      61 | test('Tablet touch, rotation, scroll and actual landscape',async({browser,browserName},info)=>{
+        at /workspace/Ein-Tag-als-Ranger/tools/scorm/tests/ranger.spec.js:58:230
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    work/scorm/browser-artifacts/ranger-Volatile-K1–K5-mode-99b93-access-reload-restart-empty-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: screenshot (image/png) ──────────────────────────────────────────────────────────
+    work/scorm/browser-artifacts/ranger-Volatile-K1–K5-mode-99b93-access-reload-restart-empty-chromium/test-failed-2.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: work/scorm/browser-artifacts/ranger-Volatile-K1–K5-mode-99b93-access-reload-restart-empty-chromium/error-context.md
+
+    attachment #5: trace (application/zip) ─────────────────────────────────────────────────────────
+    work/scorm/browser-artifacts/ranger-Volatile-K1–K5-mode-99b93-access-reload-restart-empty-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace work/scorm/browser-artifacts/ranger-Volatile-K1–K5-mode-99b93-access-reload-restart-empty-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [chromium] › tools/scorm/tests/ranger.spec.js:25:1 › Volatile K1–K5, model memory, no persistent access; reload/restart empty 
+  6 passed (3.0m)

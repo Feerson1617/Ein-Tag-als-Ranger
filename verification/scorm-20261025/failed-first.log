@@ -1,0 +1,64 @@
+[2m[WebServer] [22m(node:213816) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[2m[WebServer] [22m(Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 7 tests using 1 worker
+
+(node:213833) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:213833) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [chromium] › tools/scorm/tests/ranger.spec.js:15:79 › http embedded: real ZIP, API discovery, resources, finish (7.8s)
+  ✓  2 [chromium] › tools/scorm/tests/ranger.spec.js:15:79 › http popup: real ZIP, API discovery, resources, finish (6.2s)
+  ✓  3 [chromium] › tools/scorm/tests/ranger.spec.js:15:79 › https embedded: real ZIP, API discovery, resources, finish (7.2s)
+  ✓  4 [chromium] › tools/scorm/tests/ranger.spec.js:15:79 › https popup: real ZIP, API discovery, resources, finish (6.3s)
+  ✓  5 [chromium] › tools/scorm/tests/ranger.spec.js:22:1 › Missing API leaves actual Ranger usable (7.2s)
+  ✘  6 [chromium] › tools/scorm/tests/ranger.spec.js:24:1 › Volatile K1–K5, model memory, no persistent access; reload/restart empty (2.1m)
+(node:214453) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:214453) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  7 [chromium] › tools/scorm/tests/ranger.spec.js:60:1 › Tablet touch, rotation, scroll and actual landscape (15.8s)
+
+
+  1) [chromium] › tools/scorm/tests/ranger.spec.js:24:1 › Volatile K1–K5, model memory, no persistent access; reload/restart empty 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoHaveCount[2m([22m[32mexpected[39m[2m)[22m failed
+
+    Locator:  locator('#model-output svg')
+    Expected: [32m1[39m
+    Received: [31m0[39m
+    Timeout:  45000ms
+
+    Call log:
+    [2m  - Expect "toHaveCount" with timeout 45000ms[22m
+    [2m  - waiting for locator('#model-output svg')[22m
+    [2m    49 × locator resolved to 0 elements[22m
+    [2m       - unexpected value "0"[22m
+
+
+      49 |  await hub(f);await f.locator('#materials').click();await expect(f.locator('#teacher-material')).toHaveCount(0);await expect(f.locator('[data-starter="teacher"]')).toHaveCount(0);await expect(f.getByText('Erwartungskriterien für die Besprechung',{exact:true})).toHaveCount(0);
+      50 |  const dl=page.waitForEvent('download');await f.locator('#student-material').click();const download=await dl;await download.saveAs(info.outputPath('actual-student-worksheets.html'));
+    > 51 |  await f.locator('#open-analysis').click();for(const model of ['growth','predator','tolerance','carbon','nitrogen']){await f.locator('#model-type').selectOption(model);await f.locator('#run-model').click();await expect(f.locator('#model-output svg')).toHaveCount(1);await expect(f.locator('#export-model')).toHaveCount(0);}
+         |                                                                                                                                                                                                                                                            ^
+      52 |  await f.locator('#model-type').selectOption('growth');await f.locator('#parameter-initial').fill('17');await f.locator('#run-model').click();const result=await f.locator('#model-output').innerText();await task(f,'K2');await hub(f);await f.locator('#analysis').click();await expect(f.locator('#parameter-initial')).toHaveValue('17');await expect(f.locator('#model-output')).toHaveText(result);await capture(page,info,'model-preserved');
+      53 |  await close(f);await f.locator('#binocular').click();await expect(f.locator('#binocular')).toHaveAttribute('aria-pressed','true');await f.locator('#magnifier').click();await expect(f.locator('#magnifier')).toHaveAttribute('aria-pressed','true');await f.locator('#menu-button').click();const time=await f.locator('#world').getAttribute('data-simulation-time');await page.waitForTimeout(200);expect(await f.locator('#world').getAttribute('data-simulation-time')).toBe(time);await f.locator('#resume').click();await expect.poll(()=>f.locator('#world').getAttribute('data-simulation-time')).not.toBe(time);
+      54 |  expect(await f.evaluate(()=>window.__persistentCalls)).toEqual([]);apiOnly(await page.evaluate(()=>calls));await info.attach('volatile-before-reload',{body:JSON.stringify({count,allFiveEarned:true,persistentCalls:await f.evaluate(()=>window.__persistentCalls),api:await page.evaluate(()=>calls)}),contentType:'application/json'});
+        at /workspace/Ein-Tag-als-Ranger/tools/scorm/tests/ranger.spec.js:51:252
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    work/scorm/browser-artifacts/ranger-Volatile-K1–K5-mode-99b93-access-reload-restart-empty-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: work/scorm/browser-artifacts/ranger-Volatile-K1–K5-mode-99b93-access-reload-restart-empty-chromium/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    work/scorm/browser-artifacts/ranger-Volatile-K1–K5-mode-99b93-access-reload-restart-empty-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace work/scorm/browser-artifacts/ranger-Volatile-K1–K5-mode-99b93-access-reload-restart-empty-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [chromium] › tools/scorm/tests/ranger.spec.js:24:1 › Volatile K1–K5, model memory, no persistent access; reload/restart empty 
+  6 passed (3.1m)
