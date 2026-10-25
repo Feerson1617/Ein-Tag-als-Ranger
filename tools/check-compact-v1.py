@@ -36,6 +36,7 @@ try:
  for name,args in [
   ('build-web',['tools/build-web.py']),('verify-web',['tools/verify-web.py']),('build-legacy-html',['tools/build-standalone.py']),('build-compact',['tools/build-compact.py']),('verify-compact',['tools/verify-compact.py']),
   ('build-materials',['tools/print-compact-materials.py','--contact-sheets','--audit-dir',str(out/'print')]),
+  ('print-fonts',['tools/check-compact-print-fonts.py','--output',str(out/'print-fonts')]),
   ('legacy-node',['tools/run-checks.py','--output',str(out/'legacy-node')]),('compact-node',['tools/check-compact.py','--output',str(out/'compact-node')]),
   ('python',['-m','unittest','discover','-s','tests','-p','test_*.py','-v']),('source-package',['tools/package-project.py'])]:run(name,args,timeout=900,preflight=True)
  html=root/'outputs/Ranger-Kompakt.html';freeze['htmlSHA256']=sha(html);freeze['webManifestSHA256']=sha(root/'outputs/Ranger-Kompakt/build-manifest.json');freeze['lessonBuildInfoSHA256']=sha(root/'outputs/Ranger-Kompakt-Lernpaket/build-info.json');(out/'runtime-freeze.json').write_text(json.dumps(freeze,indent=2)+'\n')
@@ -47,6 +48,8 @@ try:
   ('learning-standalone',['tools/browser-compact-learning.py','--site','outputs','--entry','Ranger-Kompakt.html','--output',str(out/'learning-standalone')]),
   ('standalone-smoke',['tools/browser-compact.py','--site','outputs','--entry','Ranger-Kompakt.html','--smoke','--output',str(out/'standalone-smoke')]),
   ('feeding',['tools/browser-compact-feeding.py','--output',str(out/'feeding')]),
+  ('feeding-detail',['tools/browser-compact-feeding.py','--detail','--output',str(out/'feeding-detail')]),
+  ('paused-capture',['tools/browser-compact-paused-capture.py','--output',str(out/'paused-capture')]),
   ('imports',['tools/browser-compact-imports.py','--output',str(out/'imports')]),
   ('growth',['tools/browser-compact-growth.py','--output',str(out/'growth')]),
   ('habitats',['tools/browser-compact-habitats.py','--output',str(out/'habitats')]),

@@ -129,6 +129,7 @@ jobs:
       - run: python tools/browser-compact-event-integrity.py --output work/qa-correction/event-integrity
       - run: python tools/browser-compact-imports.py
       - run: python tools/browser-compact-feeding.py
+      - run: python tools/browser-compact-feeding.py --detail --output work/qa-correction/feeding-detail
       - run: python tools/browser-compact-habitats.py
       - run: python tools/browser-compact-habitat-revision.py --baseline verification/kompakt-endqa-20261023/baseline/habitats --baseline-fixed-gap verification/kompakt-endqa-20261023/baseline/habitats/fixed-gap --output work/qa-correction/habitat-revision
       - name: Preserve actual correction proof and failures
@@ -154,10 +155,12 @@ jobs:
           python-version: '3.12'
       - run: python -m pip install -r tools/requirements-dev.txt
       - run: python -m playwright install --with-deps chromium
-      - run: sudo apt-get update && sudo apt-get install -y poppler-utils
+      - run: sudo apt-get update && sudo apt-get install -y poppler-utils fonts-dejavu-core fonts-liberation
       - run: python tools/build-compact.py && python tools/verify-compact.py
       - run: python tools/browser-compact-arrival.py --output work/qa-correction/arrival-browser
       - run: python tools/print-compact-materials.py --contact-sheets --audit-dir work/qa-correction/print-audit
+        if: always()
+      - run: python tools/check-compact-print-fonts.py --output work/qa-correction/print-fonts
         if: always()
       - name: Preserve actual arrival, real-time video and fresh A4 evidence
         if: always()

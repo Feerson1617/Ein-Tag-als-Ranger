@@ -31,7 +31,7 @@ svg{width:100%;max-height:200px}
 .card-frame h2{margin:8px 0}
 .page-identity{display:flex;justify-content:space-between;gap:12px;font-size:12px;border-bottom:1px solid #83988a;padding-bottom:6px}
 .page-identity span{text-align:right}
-@media print{body{margin:0;padding:0}article{break-before:page;margin:0;border:0}.cover{break-after:page}.writing{height:101px}}
+@media print{body{font-family:Arial,"Liberation Sans",sans-serif;margin:0;padding:0}article{break-before:page;margin:0;border:0}.cover{break-after:page}.writing{height:101px}}
 `;
 
 function renderCard(c,teacher){

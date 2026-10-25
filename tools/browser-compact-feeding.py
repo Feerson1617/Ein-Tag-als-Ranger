@@ -30,9 +30,21 @@ with sync_playwright()as pw:
  b=pw.chromium.launch(headless=True,executable_path=shutil.which('chromium'),args=['--no-sandbox','--use-angle=swiftshader','--enable-unsafe-swiftshader']);result['browser']=b.version
  try:
   for id in ['avocet','redshank','spoonbill','oystercatcher']:
-   ctx=b.new_context(viewport={'width':1000,'height':700},accept_downloads=True);page=ctx.new_page();page.set_default_timeout(45000);page.on('pageerror',lambda e:result['errors'].append(str(e)));page.goto(url);page.wait_for_function('document.querySelector("#world").dataset.ready==="true"',timeout=120000);page.locator('#start').click();page.locator('#menu-button').click();page.get_by_text('Referenzabschnitt prüfen',exact=True).click();page.locator(f'[data-view="feeding-{id}"]').click();page.wait_for_function('document.querySelector("#world").dataset.renderRevision===document.querySelector("#world").dataset.sceneRevision');page.locator('#binocular').click();page.locator('#study').click();page.locator(f'[data-behavior="compact-{id}"]').click();page.wait_for_function('document.querySelector("#world").dataset.modelObservation!==""');
-   if a.detail:page.locator('#behavior-detail').click();page.wait_for_function('JSON.parse(document.querySelector("#world").dataset.feedingDetail||"null")!==null')
+   ctx=b.new_context(viewport={'width':1000,'height':700},accept_downloads=True);page=ctx.new_page();page.set_default_timeout(45000);page.on('pageerror',lambda e:result['errors'].append(str(e)));page.goto(url);page.wait_for_function('document.querySelector("#world").dataset.ready==="true"',timeout=120000);page.locator('#start').click();page.locator('#menu-button').click();page.get_by_text('Referenzabschnitt prüfen',exact=True).click();page.locator(f'[data-view="feeding-{id}"]').click();page.wait_for_function('document.querySelector("#world").dataset.renderRevision===document.querySelector("#world").dataset.sceneRevision');page.locator('#binocular').click();page.locator('#study').click()
+   # Start the complete episode via public UI before locking the lens. A busy
+   # renderer may otherwise reach the first contact before setup has finished.
+   before_window=sample(page,'compact-'+id);stored_before=page.evaluate('localStorage.getItem("ranger-compact-fieldbook-v2")')
+   page.locator('#new-observation-context').click()
+   page.wait_for_function('(old)=>document.querySelector("#world").dataset.runId!==old && Number(document.querySelector("#world").dataset.simulationTime)===0',arg=before_window['runId'])
+   fresh_window=sample(page,'compact-'+id);assert fresh_window['observer']==before_window['observer'];assert page.evaluate('localStorage.getItem("ranger-compact-fieldbook-v2")')==stored_before
+   page.locator(f'[data-behavior="compact-{id}"]').click();page.wait_for_function('document.querySelector("#world").dataset.modelObservation!==""');
+   if a.detail:page.locator('#behavior-detail').click();tick(page,.025);page.wait_for_function('JSON.parse(document.querySelector("#world").dataset.feedingDetail||"null")!==null')
    row={'id':'compact-'+id,'captures':[],'event':None};result['sequences'].append(row);s=sample(page,row['id']);capture(page,row,s,'initial');seen=set();episode=None
+   row['beforeNewWindow']=before_window;row['freshWindow']=fresh_window
+   # The first fine step can already be the approach. Do not silently skip that
+   # phase and switch the test to a second prey while the lens keeps the first.
+   if s['actor']['phase']=='approaching':
+    episode=s['actor']['targetId'];row['preyId']=episode;seen.add('approaching');capture(page,row,s,'approaching')
    if id in ['avocet','redshank']:
     target=26 if id=='avocet'else 18
     while sample(page,row['id'])['time']<target-6:tick(page,5)
