@@ -1,0 +1,50 @@
+{
+  "status": "PARTIAL OWN VIEW; full native supplementary captures pending",
+  "viewed": [
+    {
+      "file": "ui/viewport-0-1440x900-top.png",
+      "sha256": "282015c4395fb2acfe922de7734c2e473b7a06585ec8765510f1f7349ef4dea8"
+    },
+    {
+      "file": "ui/viewport-0-1440x900-bottom.png",
+      "sha256": "282015c4395fb2acfe922de7734c2e473b7a06585ec8765510f1f7349ef4dea8"
+    },
+    {
+      "file": "ui/viewport-1-1080x810-top.png",
+      "sha256": "026a399a3c90aa7c267faf7493c26fd7e9ca692672c8bafbe1b938e6aa6bd94d"
+    },
+    {
+      "file": "ui/viewport-1-1080x810-bottom.png",
+      "sha256": "026a399a3c90aa7c267faf7493c26fd7e9ca692672c8bafbe1b938e6aa6bd94d"
+    },
+    {
+      "file": "ui/viewport-2-810x1080-top.png",
+      "sha256": "877dc21adc6b1a723b34dc5d6f498907cc4c582400fc8cf141a91c06e8d65b5c"
+    },
+    {
+      "file": "ui/viewport-2-810x1080-bottom.png",
+      "sha256": "877dc21adc6b1a723b34dc5d6f498907cc4c582400fc8cf141a91c06e8d65b5c"
+    },
+    {
+      "file": "ui/viewport-3-600x375-top.png",
+      "sha256": "a353a65adad749551e60bdc0d90eb8f620d621f998601e00b3779b34eee78dfe"
+    },
+    {
+      "file": "ui/viewport-3-600x375-bottom.png",
+      "sha256": "1625e3a0704396bae2c376aa99f38e77db348ea5111c52cef7359b9bc9d081cc"
+    },
+    {
+      "file": "ui/viewport-4-1080x810-top.png",
+      "sha256": "026a399a3c90aa7c267faf7493c26fd7e9ca692672c8bafbe1b938e6aa6bd94d"
+    },
+    {
+      "file": "ui/viewport-4-1080x810-bottom.png",
+      "sha256": "026a399a3c90aa7c267faf7493c26fd7e9ca692672c8bafbe1b938e6aa6bd94d"
+    }
+  ],
+  "findings": [
+    "1440×900,1080×810,810×1080: Kopf/Schnabel und Hinweis auf Modellansicht lesbar, Schließen erreichbar; Rotation zurück hält denselbenVorgang.",
+    "600×375: linkeDetailfläche und rechteSteuerfläche scrollen getrennt; aktueller oberer/unterer Ausschnitt zeigt Text und Schließen. Für die gesamteLinse und echte200%-Pixelaufnahme folgt die vorab geplanteZusatzprüfung.",
+    "Der native Haupttest meldet720×406CSS bei1440×900Browserfenster undDPR2. Das ist echteBrowservergrößerung, keineCSS-Transformation; physischesSafari nichtgeprüft."
+  ]
+}

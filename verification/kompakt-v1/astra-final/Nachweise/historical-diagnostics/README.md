@@ -1,0 +1,9 @@
+# Vorprüfung und Fehlbelege vor dem neuen Produktcommit
+
+Diese Dateien gehören zur Ursachenanalyse vor `4eb186a5325ae30dfa233e10dd44eb73ea710afa`. Sie sind keine neuen positiven Tests des späteren Builds. Die ausgelieferte alte HTML hatte SHA256 `87ff215191f543c1d91cadeef0ecf14c98012ff1f2b0c9866df0bbe2fd6494b8` (Produkt e9899ef, QA-Head c5baa84).
+
+- GitHub-Lauf40101598733: acht Jobs bestanden, Ankunft/Druck fehlgeschlagen. Nutzerbericht:900-s-Abbruch bei Wegpunkt1386, x54.73158935811298/z-9.557866034125013; Starter3 statt2A4-Seiten, Schüler40 statt39. Vollständige CI-Tracebacks lagen nicht vor. Offizielle Log-/Artefaktabrufe HTTP403; keine fehlenden Protokollzeilen erfunden. Signierte URL-Querys wurden aus den Fehlerkopien entfernt.
+- Lokal unveränderter900-s-Treiber: vollständig bestanden; Hauptweg667,25s. Das ist keine Aufhebung des CI-Fehlers und keine genaue Rekonstruktion dessen Rechnerlast.
+- Druck: generischer Betriebssystemfont als Ursache mit tatsächlichen Chromium154-PDFs isoliert. Die unveränderte Originalassertion scheitert mit DejaVu Sans an drei Starterseiten. Vollständiger lokaler Traceback erhalten. Default-Cloudfont OpenAI Sans reproduziert den Fehler nicht. Keine behauptete eigene macOS-Ausführung.
+- Detail-Fütterung: eigener zusätzlicher Test zuerst FEHLGESCHLAGEN. Er ignorierte den bereits begonnenen ersten Löffler-Beutevorgang, während die Kamera korrekt daran gebunden blieb. Der korrigierte Treiber startet einen ausdrücklich neuen lokalen Versuch über öffentliche UI bei Zeit0 und hält die erste Phase fest; Ort und gespeicherte Bytes bleiben identisch. Alle ursprünglichen Assertions erhalten.
+- Isolierte Vorprüfung nach dem Fix besteht Druck/Fontprofile und vier Detailfolgen. Der saubere neue Abschlusslauf steht eine Ebene höher und ersetzt diese Herkunft nicht.

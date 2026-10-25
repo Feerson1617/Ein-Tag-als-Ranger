@@ -1,0 +1,23 @@
+{
+  "status": "completed",
+  "result": {
+    "name": "v1-full-walk-feeding-retry",
+    "role": "mandatory",
+    "passed": true,
+    "exitCode": 0,
+    "seconds": 1933.016,
+    "command": [
+      "/workspace/.ranger-clean-venv/bin/python",
+      "tools/browser-compact-arrival.py",
+      "--detail-realtime",
+      "--v1-route",
+      "--walk-wall-budget",
+      "3600",
+      "--output",
+      "/workspace/Ein-Tag-als-Ranger/work/astra-abschluss-20261025/final-4eb186a/v1-full-walk-feeding-retry"
+    ],
+    "log": "logs/v1-full-walk-feeding-retry.log",
+    "context": "contexts/v1-full-walk-feeding-retry.json"
+  },
+  "softwareGatesPassed": true
+}

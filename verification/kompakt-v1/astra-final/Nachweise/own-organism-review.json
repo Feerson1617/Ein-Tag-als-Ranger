@@ -1,0 +1,48 @@
+{
+  "sourceCommit": "4eb186a5325ae30dfa233e10dd44eb73ea710afa",
+  "htmlSHA256": "3748c6590afefb18a5e07bb3cedc2c40b0b2be1619a57cc52553a30de5869412",
+  "reviewedUTC": "2026-10-25T04:48:47.245377+00:00",
+  "passedWithinDeclaredScope": true,
+  "scope": "Eigene gezielte Sichtung von sechs aktuellen Modell-Galeriebildern im Quelleinstieg und zwei tatsächlich erworbenen Missionszuständen der ausgelieferten HTML. Kein Urteil über sämtliche36Taxa, keine natürliche Vollanatomie oder Unterrichtswirkung.",
+  "viewed": [
+    {
+      "file": "learning-source/model-capreolus_capreolus.png",
+      "sha256": "df393bc9475a632d04923738028eace0adfcedc82dd60c9944a5d34490f6e376"
+    },
+    {
+      "file": "learning-source/model-dendrocopos_major.png",
+      "sha256": "e89e5c84b27c0e785cc35216b06ddada4fdd045633cc489797ffa1a7a8cd641f"
+    },
+    {
+      "file": "learning-source/model-galium_odoratum.png",
+      "sha256": "ab19f9bf1f050e4c93a7cd2dc514c3b50ff7c003b2013e1c8c0ff2cc59bbe5c6"
+    },
+    {
+      "file": "learning-source/model-urtica_dioica.png",
+      "sha256": "84523107f723d695616a035b0711c1e797567db34e8d629ecd255d60b54feb93"
+    },
+    {
+      "file": "learning-source/model-quercus_robur.png",
+      "sha256": "09b212fe52dc14ebdb826d20598bc5168e880cb7ec2b8fbbb621d2a8a5b86791"
+    },
+    {
+      "file": "learning-source/model-trifolium_pratense.png",
+      "sha256": "313e57ecd65a97aa641e1c2665649887ab3a55df5396221b8313af1232488175"
+    },
+    {
+      "file": "learning-standalone/K1-earned.png",
+      "sha256": "4cc8f319d3d7ace5f328813ecbfb0a117423960ca1c962288ecae99119b74984"
+    },
+    {
+      "file": "learning-standalone/K3-earned.png",
+      "sha256": "66311571db3bc26dafcb1c846876ddb95123bc6d3f2e5d932ea9698a71136e95"
+    }
+  ],
+  "findings": [
+    "Reh: Vierbeinige Silhouette, schlanke Beine, Ohren und kurzer Kopf erkennbar; Gelenke/Oberflächen stark stilisiert. Keine detaillierte Bewegungs-/Anatomiezertifizierung aus diesem Einzelbild.",
+    "Specht: aufrechte Silhouette, Schnabel, schwarzweiße Partien und rote Unterschwanzregion erkennbar. Keine Bestimmung sämtlicher Gefieder-/Geschlechtsmerkmale behauptet.",
+    "Waldmeister: Blattquirle erkennbar; Brennnessel: gezähnte Blattkonturen; Eichenzweig: gelappte Blattflächen; Klee: farbiger Blütenkopf. Flache, teils kantennahe Blätter bleiben eine Modellgrenze; die Galerie allein beweist nicht jedes Bestimmungsmerkmal.",
+    "Die tatsächliche HTML zeigt K1-Strukturfeedback getrennt von nicht automatisch benotetem Freitext. K3 zeigt Größen/Einheiten, Nullprobe und Vergleichsbedingungen. Bilder sind gescrollte Dialogausschnitte; vollständige Erreichbarkeit wird separat durch UI-Prüfungen belegt."
+  ],
+  "newAnatomicalBlockerObserved": false
+}

@@ -1,0 +1,289 @@
+{
+  "schemaVersion": 3,
+  "title": "Mein ökologisches Feldbuch",
+  "exportedAt": "2026-10-25T05:06:35.712Z",
+  "entries": {
+    "parus_major": {
+      "found": 1,
+      "habitat": "forest",
+      "behaviors": [],
+      "determination": {
+        "status": "feature-based",
+        "recordId": "test-m1-0",
+        "features": [
+          "parus_major:0",
+          "parus_major:1"
+        ]
+      }
+    }
+  },
+  "interactions": [],
+  "learning": {
+    "version": 1,
+    "activeMission": null,
+    "missions": {
+      "m1": {
+        "version": 1,
+        "hypothesis": "Ich vermute einen Zusammenhang.",
+        "reflection": "<script>alert(\"kein HTML\")</script>",
+        "answers": {},
+        "determinations": [
+          {
+            "recordId": "test-m1-0",
+            "answer": {
+              "taxon": "parus_major",
+              "features": [
+                "parus_major:0",
+                "parus_major:1"
+              ],
+              "certainty": "certain",
+              "group": "",
+              "reason": ""
+            },
+            "result": {
+              "ok": true,
+              "uncertain": false,
+              "message": "Zwei passende Merkmale dokumentiert. Die Referenzzuordnung ersetzt keine allgemeine Artvalidierung."
+            },
+            "time": 1792904722956
+          },
+          {
+            "recordId": "test-m1-1",
+            "answer": {
+              "taxon": "cyanistes_caeruleus",
+              "features": [],
+              "certainty": "uncertain",
+              "group": "Meisen",
+              "reason": "model-limited"
+            },
+            "result": {
+              "ok": true,
+              "uncertain": true,
+              "message": "Begründete unsichere Gruppenbestimmung dokumentiert."
+            },
+            "time": 1792904726796
+          },
+          {
+            "recordId": "test-m1-2",
+            "answer": {
+              "taxon": "galium_odoratum",
+              "features": [
+                "galium_odoratum:0",
+                "galium_odoratum:1"
+              ],
+              "certainty": "certain",
+              "group": "Meisen",
+              "reason": "model-limited"
+            },
+            "result": {
+              "ok": true,
+              "uncertain": false,
+              "message": "Zwei passende Merkmale dokumentiert. Die Referenzzuordnung ersetzt keine allgemeine Artvalidierung."
+            },
+            "time": 1792904738389
+          }
+        ],
+        "helpLevel": 0,
+        "complete": true,
+        "completedAt": 1792904742225
+      },
+      "m2": {
+        "version": 1,
+        "hypothesis": "Testvermutung; fachlich nicht automatisch benotet.",
+        "reflection": "<script>alert(\"kein HTML\")</script>",
+        "answers": {
+          "recordId": "test-m2",
+          "provenance": "model-protocol",
+          "counterexample": "insufficient",
+          "relation": "inter",
+          "claims": [
+            "same-resource",
+            "finite",
+            "effect"
+          ]
+        },
+        "determinations": [],
+        "helpLevel": 0,
+        "complete": true,
+        "completedAt": 1792904769354
+      },
+      "m3": {
+        "version": 1,
+        "hypothesis": "Ich vermute einen Zusammenhang.",
+        "reflection": "<script>alert(\"kein HTML\")</script>",
+        "answers": {
+          "lowId": "test-low",
+          "highId": "test-high",
+          "filtration": "covered",
+          "access": "exposed",
+          "absence": "not-detected",
+          "depth": "different-space"
+        },
+        "determinations": [],
+        "helpLevel": 0,
+        "complete": true,
+        "completedAt": 1792904779381
+      }
+    },
+    "observations": [
+      {
+        "id": "test-m1-0",
+        "missionId": "m1",
+        "missionVersion": 1,
+        "taxon": "parus_major",
+        "source": "own-observation",
+        "partnerIds": [
+          "forest:test-m1-0"
+        ],
+        "simulationTime": 30,
+        "duration": 4,
+        "observedFact": "Synthetischer Beleg ausschließlich für die UI-Prüfung",
+        "scene": {
+          "habitat": "forest",
+          "seed": 719,
+          "scenario": null
+        },
+        "siteId": "forest-entry-30m"
+      },
+      {
+        "id": "test-m1-1",
+        "missionId": "m1",
+        "missionVersion": 1,
+        "taxon": "cyanistes_caeruleus",
+        "source": "own-observation",
+        "partnerIds": [
+          "forest:test-m1-1"
+        ],
+        "simulationTime": 30,
+        "duration": 4,
+        "observedFact": "Synthetischer Beleg ausschließlich für die UI-Prüfung",
+        "scene": {
+          "habitat": "forest",
+          "seed": 719,
+          "scenario": null
+        },
+        "siteId": "forest-entry-30m"
+      },
+      {
+        "id": "test-m1-2",
+        "missionId": "m1",
+        "missionVersion": 1,
+        "taxon": "galium_odoratum",
+        "source": "own-observation",
+        "partnerIds": [
+          "forest:test-m1-2"
+        ],
+        "simulationTime": 30,
+        "duration": 4,
+        "observedFact": "Synthetischer Beleg ausschließlich für die UI-Prüfung",
+        "scene": {
+          "habitat": "forest",
+          "seed": 719,
+          "scenario": null
+        },
+        "siteId": "forest-entry-30m"
+      },
+      {
+        "id": "test-m2",
+        "missionId": "m2",
+        "missionVersion": 1,
+        "taxon": "hare",
+        "source": "model-protocol",
+        "partnerIds": [
+          "meadow:1",
+          "meadow:2"
+        ],
+        "simulationTime": 30,
+        "duration": 0,
+        "observedFact": "Synthetischer Beleg ausschließlich für die UI-Prüfung",
+        "scene": {
+          "habitat": "meadow",
+          "seed": 819,
+          "scenario": "competition"
+        },
+        "siteId": "forest-entry-30m",
+        "taxa": [
+          "hare",
+          "oryctolagus_cuniculus"
+        ],
+        "evidence": {
+          "kind": "competition",
+          "resourceId": "food-1",
+          "resourceStock": 0.4
+        }
+      },
+      {
+        "id": "test-low",
+        "missionId": "m3",
+        "missionVersion": 1,
+        "taxon": "cerastoderma_edule",
+        "source": "model-protocol",
+        "partnerIds": [
+          "wadden:101"
+        ],
+        "simulationTime": 30,
+        "duration": 7,
+        "observedFact": "Synthetischer Beleg ausschließlich für die UI-Prüfung",
+        "scene": {
+          "habitat": "wadden",
+          "seed": 1219,
+          "runId": "synthetic-run-1",
+          "scenario": null
+        },
+        "siteId": "probe-2",
+        "tidePhase": 0,
+        "waterLevel": -0.9,
+        "sampleDepth": 3,
+        "present": true,
+        "evidence": {
+          "kind": "station",
+          "activity": "resting"
+        }
+      },
+      {
+        "id": "test-high",
+        "missionId": "m3",
+        "missionVersion": 1,
+        "taxon": "cerastoderma_edule",
+        "source": "model-protocol",
+        "partnerIds": [
+          "wadden:101"
+        ],
+        "simulationTime": 45,
+        "duration": 7,
+        "observedFact": "Synthetischer Beleg ausschließlich für die UI-Prüfung",
+        "scene": {
+          "habitat": "wadden",
+          "seed": 1219,
+          "runId": "synthetic-run-1",
+          "scenario": null
+        },
+        "siteId": "probe-2",
+        "tidePhase": 0.5,
+        "waterLevel": 0.4,
+        "sampleDepth": 3,
+        "present": true,
+        "evidence": {
+          "kind": "station",
+          "activity": "filtering"
+        }
+      }
+    ]
+  },
+  "quests": {
+    "scenario": null,
+    "completed": {
+      "example": {
+        "encounters": {
+          "one": {
+            "evidence": {
+              "kind": "pairSighting"
+            },
+            "plantId": "stable-plant-id"
+          }
+        }
+      }
+    },
+    "active": null
+  }
+}

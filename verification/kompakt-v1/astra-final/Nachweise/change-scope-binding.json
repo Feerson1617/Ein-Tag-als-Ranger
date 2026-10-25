@@ -1,0 +1,19 @@
+{
+  "previousProductCommit": "e9899efaa314d052191d7d3a95b5de904f2932b6",
+  "currentProductCommit": "4eb186a5325ae30dfa233e10dd44eb73ea710afa",
+  "changedRuntimeFiles": [
+    "compact/classroom-start.js",
+    "compact/learning-documents.js"
+  ],
+  "unchangedRuntimeFileCount": 52,
+  "allFiveDocumentHTMLsByteIdenticalOutsideStyleTags": {
+    "Arbeitsblaetter": true,
+    "Lehrkraefte": true,
+    "START-IM-UNTERRICHT": true,
+    "PFAD-A-Artenliste": true,
+    "PFAD-B-Kuestenvoegel": true
+  },
+  "materialCardsJSONByteIdentical": true,
+  "protectedGameAndStorageCodeByteIdentical": true,
+  "scope": "Print-only source correction. This equality does not relabel old execution results as new. All declared current tests are separately executed."
+}

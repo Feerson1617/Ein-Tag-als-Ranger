@@ -1,0 +1,5 @@
+PASS N03: a closed empty population stays exactly zero at both rate and time limits
+PASS N03: zero population does not bypass invalid parameters or fractional time
+PASS N03: positive exponential overflow is still rejected with a useful explanation
+PASS N03: ordinary positive growth and analytic equilibria retain their meaning
+{"suite":"compact-growth-boundary","passed":4,"groups":4,"checks":["N03: a closed empty population stays exactly zero at both rate and time limits","N03: zero population does not bypass invalid parameters or fractional time","N03: positive exponential overflow is still rejected with a useful explanation","N03: ordinary positive growth and analytic equilibria retain their meaning"]}

@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "productCommit": "4eb186a5325ae30dfa233e10dd44eb73ea710afa",
+  "originalWebManifestSHA256": "0746e31d51e2dc0f9236a747ae9e40a5fe9943ca964daa2f18bc4301403d4bf9",
+  "currentWebManifestSHA256": "bde34af101acb396cc2c73d37985865660e806daf99bd5394564a4bd97d93aaa",
+  "changedWebFiles": [
+    "STATUS.md",
+    "build-manifest.json"
+  ],
+  "allExecutableAndMediaFilesByteIdentical": true,
+  "htmlSHA256": "3748c6590afefb18a5e07bb3cedc2c40b0b2be1619a57cc52553a30de5869412",
+  "lessonBuildInfoSHA256": "e62322175e3ba3f2645fc7be8cf379113293dfe22777dc3e1bb26dc3938b3e97",
+  "statusSourceSHA256": "9073815372e617890382b8e78678f3fa99a0c934e62478dedc65414135ced91c",
+  "cause": "Built STATUS.md incorrectly advertised the earlier e989 candidate and linked an absent ABSCHLUSS-V1.md. Replace only this status with a self-contained accurate current document; original status/manifests preserved.",
+  "verification": "Actual unchanged verify-compact.py rerun; complete closed inventory and runtime/source equality passed. No later functional run is claimed for different executable bytes."
+}

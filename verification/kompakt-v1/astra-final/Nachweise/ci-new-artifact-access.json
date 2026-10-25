@@ -1,0 +1,8 @@
+{
+  "artifactId": 12587122579,
+  "name": "ranger-compact-arrival-print-evidence",
+  "exitCode": 1,
+  "bytes": 0,
+  "errorSanitized": "Get \"https://productionresultssa15.blob.core.windows.net/actions-results/43abf9da-f9b3-8ac1-81c2-c0e7799de153/workflow-job-run-a5e2dfd8-675d-5ce9-919f-7ba8c4fbbe91/artifacts/e37ebc0f7339a9a9b22a216ea83337d55a93425c0ec2a43267ea8beaa928d955.zip\": Forbidden\n",
+  "scope": "Official current CI artifact endpoint; no reconstructed result."
+}

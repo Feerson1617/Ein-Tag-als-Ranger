@@ -1,0 +1,826 @@
+[
+  {
+    "file": "feeding-sheets/sequence-1-compact-oystercatcher.png",
+    "sha256": "53f7213ac2683790c50266132f714ccab0f338dbee8e5bd370ae36824ba8287f",
+    "individualId": "compact-oystercatcher",
+    "realtime": true,
+    "preyId": "compact-mussel-16",
+    "runId": "27e7dbb5-b6a8-41d4-bcc2-d2a31133582d",
+    "eventId": "ranger-compact-v2:summer:feeding:compact-oystercatcher:compact-mussel-16:0.025000000",
+    "images": [
+      {
+        "file": "v1-full-walk-feeding-retry/sequence-1-compact-oystercatcher-approaching.png",
+        "sha256": "49ec633590c5eb12ba4e365b1ccb908a1affc9d80a6b2d749269299d1bcde3aa",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "approaching",
+        "method": "Actual canvas pixels and telemetry in one post-render rAF callback; no pause, clock change or reconstructed frame."
+      },
+      {
+        "file": "v1-full-walk-feeding-retry/sequence-1-compact-oystercatcher-searching.png",
+        "sha256": "a340f41beca38443b773bb3168a3aa14477781ffde61eef8dfc5fcc6c1d6b3ed",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "searching",
+        "method": "Actual canvas pixels and telemetry in one post-render rAF callback; no pause, clock change or reconstructed frame."
+      },
+      {
+        "file": "v1-full-walk-feeding-retry/sequence-1-compact-oystercatcher-handling.png",
+        "sha256": "ee0d1ac570468361a4f9a122743cb9908504742c319f36fc860e5b9959f3d012",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "handling",
+        "method": "Actual canvas pixels and telemetry in one post-render rAF callback; no pause, clock change or reconstructed frame."
+      },
+      {
+        "file": "v1-full-walk-feeding-retry/sequence-1-compact-oystercatcher-swallowing.png",
+        "sha256": "bb1ae3e6884052f6f73ed0f7e5371907f261af07775539042bdd1a4e35ac3d34",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "swallowing",
+        "method": "Actual canvas pixels and telemetry in one post-render rAF callback; no pause, clock change or reconstructed frame."
+      },
+      {
+        "file": "v1-full-walk-feeding-retry/sequence-1-compact-oystercatcher-mouth-transfer.png",
+        "sha256": "136b34fd8dfe6468b3351f31400bf11134718459fd3de427a19a2fd732ca8575",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "mouth-transfer",
+        "method": "Actual canvas pixels and telemetry in one post-render rAF callback; no pause, clock change or reconstructed frame."
+      },
+      {
+        "file": "v1-full-walk-feeding-retry/sequence-1-compact-oystercatcher-departing.png",
+        "sha256": "1a667f8df8cd536679cf3818a4cfec2a4103c864a8bdef6387b3738babfe7d97",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "departing",
+        "method": "Actual canvas pixels and telemetry in one post-render rAF callback; no pause, clock change or reconstructed frame."
+      },
+      {
+        "file": "v1-full-walk-feeding-retry/sequence-1-compact-oystercatcher-after-departure.png",
+        "sha256": "0f3c8465ea26ee480e1e04a82a366d6a863481ccba0341aedce974c5da55239d",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "after-departure",
+        "method": "Actual canvas pixels and telemetry in one post-render rAF callback; no pause, clock change or reconstructed frame."
+      }
+    ],
+    "scope": "Actual1:1nativepixel crops of current phased WebGL frames; no resizing, fabricated pose or visual acceptance claim. Own viewing required separately."
+  },
+  {
+    "file": "feeding-sheets/sequence-2-compact-avocet.png",
+    "sha256": "1ebed4a41c800d2437f20eae2f75faf307a06ac64f9f3e3184b690919881b9e7",
+    "individualId": "compact-avocet",
+    "realtime": true,
+    "preyId": "compact-juvenile-worm-0",
+    "runId": "023b2196-c510-40d2-8283-2230fd807e1d",
+    "eventId": "ranger-compact-v2:summer:feeding:compact-avocet:compact-juvenile-worm-0:29.318600000",
+    "images": [
+      {
+        "file": "v1-full-walk-feeding-retry/sequence-2-compact-avocet-approaching.png",
+        "sha256": "6d241fac147307c31638b77242ed57ac77beeab1ba9c0a15c40d8d5cd7043e31",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "approaching",
+        "method": "Actual canvas pixels and telemetry in one post-render rAF callback; no pause, clock change or reconstructed frame."
+      },
+      {
+        "file": "v1-full-walk-feeding-retry/sequence-2-compact-avocet-searching.png",
+        "sha256": "f93490a23a8c28895c51a95d2869048aec9614f9efc61dc7d02a23b4fce6f560",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "searching",
+        "method": "Actual canvas pixels and telemetry in one post-render rAF callback; no pause, clock change or reconstructed frame."
+      },
+      {
+        "file": "v1-full-walk-feeding-retry/sequence-2-compact-avocet-handling.png",
+        "sha256": "10db9998a910b245cd8e3d5f6fc37e6fdc469361f56d2a8c5cffdad1656b76dc",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "handling",
+        "method": "Actual canvas pixels and telemetry in one post-render rAF callback; no pause, clock change or reconstructed frame."
+      },
+      {
+        "file": "v1-full-walk-feeding-retry/sequence-2-compact-avocet-swallowing.png",
+        "sha256": "3493b2470bb27c507795d79670627a38ea18a97a4f6c15365d2877041a158d39",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "swallowing",
+        "method": "Actual canvas pixels and telemetry in one post-render rAF callback; no pause, clock change or reconstructed frame."
+      },
+      {
+        "file": "v1-full-walk-feeding-retry/sequence-2-compact-avocet-mouth-transfer.png",
+        "sha256": "fe6ec111b6f398246109feda3f6a1257dce4e55b02b8eef90d696175a489928a",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "mouth-transfer",
+        "method": "Actual canvas pixels and telemetry in one post-render rAF callback; no pause, clock change or reconstructed frame."
+      },
+      {
+        "file": "v1-full-walk-feeding-retry/sequence-2-compact-avocet-departing.png",
+        "sha256": "e420392d256d7fe6aa9aad8e8de9816fe9ed03714fc8c6baa87866019aab30e5",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "departing",
+        "method": "Actual canvas pixels and telemetry in one post-render rAF callback; no pause, clock change or reconstructed frame."
+      },
+      {
+        "file": "v1-full-walk-feeding-retry/sequence-2-compact-avocet-after-departure.png",
+        "sha256": "239f2f330319e7f71e10f5cbf23f198a1fd400e55a95ea6d182e1117bc19a26e",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "after-departure",
+        "method": "Actual canvas pixels and telemetry in one post-render rAF callback; no pause, clock change or reconstructed frame."
+      }
+    ],
+    "scope": "Actual1:1nativepixel crops of current phased WebGL frames; no resizing, fabricated pose or visual acceptance claim. Own viewing required separately."
+  },
+  {
+    "file": "feeding-sheets/sequence-3-compact-redshank.png",
+    "sha256": "209d569540c6f3c96817887589ddd8997ad187546c271a812a56322c5011ed65",
+    "individualId": "compact-redshank",
+    "realtime": true,
+    "preyId": "compact-juvenile-worm-3",
+    "runId": "90828749-a8c0-4278-acda-5a5162297474",
+    "eventId": "ranger-compact-v2:summer:feeding:compact-redshank:compact-juvenile-worm-3:20.928300000",
+    "images": [
+      {
+        "file": "v1-full-walk-feeding-retry/sequence-3-compact-redshank-approaching.png",
+        "sha256": "b96df731058f41422c7eb84ffce0731e3f7a41fc255a6aaee12a734004d5b4eb",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "approaching",
+        "method": "Actual canvas pixels and telemetry in one post-render rAF callback; no pause, clock change or reconstructed frame."
+      },
+      {
+        "file": "v1-full-walk-feeding-retry/sequence-3-compact-redshank-searching.png",
+        "sha256": "0f77340e8bb8b7f0622b6d93ae3bce771b8be7c3b6a40ce6cf907f823b24f9d2",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "searching",
+        "method": "Actual canvas pixels and telemetry in one post-render rAF callback; no pause, clock change or reconstructed frame."
+      },
+      {
+        "file": "v1-full-walk-feeding-retry/sequence-3-compact-redshank-handling.png",
+        "sha256": "79aa5e81ac1279b2d79dc927f07f07af340ec12283c38a20865d539ddeba4830",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "handling",
+        "method": "Actual canvas pixels and telemetry in one post-render rAF callback; no pause, clock change or reconstructed frame."
+      },
+      {
+        "file": "v1-full-walk-feeding-retry/sequence-3-compact-redshank-swallowing.png",
+        "sha256": "b481dc880e5228e23e8634ec57f8821d0f4864daf8434cb1fb95dbd1852ea079",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "swallowing",
+        "method": "Actual canvas pixels and telemetry in one post-render rAF callback; no pause, clock change or reconstructed frame."
+      },
+      {
+        "file": "v1-full-walk-feeding-retry/sequence-3-compact-redshank-mouth-transfer.png",
+        "sha256": "15786c7827722eeca8152f47f16099d0b392f4dc5df25d365025ce6da5d8ef4a",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "mouth-transfer",
+        "method": "Actual canvas pixels and telemetry in one post-render rAF callback; no pause, clock change or reconstructed frame."
+      },
+      {
+        "file": "v1-full-walk-feeding-retry/sequence-3-compact-redshank-departing.png",
+        "sha256": "f518046c63865308bdeb67c3071fb9374a289862146b75936ba56e36730f4010",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "departing",
+        "method": "Actual canvas pixels and telemetry in one post-render rAF callback; no pause, clock change or reconstructed frame."
+      },
+      {
+        "file": "v1-full-walk-feeding-retry/sequence-3-compact-redshank-after-departure.png",
+        "sha256": "febfe608cd003dcaac20d76f9c306d6d09c42361404ca9fa1a96ad4a2cc08b21",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "after-departure",
+        "method": "Actual canvas pixels and telemetry in one post-render rAF callback; no pause, clock change or reconstructed frame."
+      }
+    ],
+    "scope": "Actual1:1nativepixel crops of current phased WebGL frames; no resizing, fabricated pose or visual acceptance claim. Own viewing required separately."
+  },
+  {
+    "file": "feeding-sheets/sequence-4-compact-spoonbill.png",
+    "sha256": "bd8f09b2bc9cd4d3d16f87b904a72bb98cf8cfbe4c9f52dd63b15f00edbe7787",
+    "individualId": "compact-spoonbill",
+    "realtime": true,
+    "preyId": "compact-shrimp-4",
+    "runId": "cb42337a-1b5d-4166-8cbc-7aba743680cb",
+    "eventId": "ranger-compact-v2:summer:feeding:compact-spoonbill:compact-shrimp-4:0.025000000",
+    "images": [
+      {
+        "file": "v1-full-walk-feeding-retry/sequence-4-compact-spoonbill-approaching.png",
+        "sha256": "87323c618535f5641a443e3bc944402fb302c0ac1dbb766358772833ecf3f267",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "approaching",
+        "method": "Actual canvas pixels and telemetry in one post-render rAF callback; no pause, clock change or reconstructed frame."
+      },
+      {
+        "file": "v1-full-walk-feeding-retry/sequence-4-compact-spoonbill-searching.png",
+        "sha256": "7f7e1075c03e07b3f7b4720f2fa867e088916bf9a5578fe3146b569163343849",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "searching",
+        "method": "Actual canvas pixels and telemetry in one post-render rAF callback; no pause, clock change or reconstructed frame."
+      },
+      {
+        "file": "v1-full-walk-feeding-retry/sequence-4-compact-spoonbill-handling.png",
+        "sha256": "f5c4a54fa58a43b04658af255826e51bfa56f3e9276791a41c2c629feb88bd8e",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "handling",
+        "method": "Actual canvas pixels and telemetry in one post-render rAF callback; no pause, clock change or reconstructed frame."
+      },
+      {
+        "file": "v1-full-walk-feeding-retry/sequence-4-compact-spoonbill-swallowing.png",
+        "sha256": "fbf1ea0a4a2f8aa931c9651b45492588a13b3915bb1584061dbca441f58ad800",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "swallowing",
+        "method": "Actual canvas pixels and telemetry in one post-render rAF callback; no pause, clock change or reconstructed frame."
+      },
+      {
+        "file": "v1-full-walk-feeding-retry/sequence-4-compact-spoonbill-mouth-transfer.png",
+        "sha256": "e1162be2edb5dbfb4c61134672d98de92f07a5f7ad64131d88ccf26a6c00bfda",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "mouth-transfer",
+        "method": "Actual canvas pixels and telemetry in one post-render rAF callback; no pause, clock change or reconstructed frame."
+      },
+      {
+        "file": "v1-full-walk-feeding-retry/sequence-4-compact-spoonbill-departing.png",
+        "sha256": "488c3bab2cbf2af14be511862ce8c1d9992fe9a2a81ed3330b414d1f793916b4",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "departing",
+        "method": "Actual canvas pixels and telemetry in one post-render rAF callback; no pause, clock change or reconstructed frame."
+      },
+      {
+        "file": "v1-full-walk-feeding-retry/sequence-4-compact-spoonbill-after-departure.png",
+        "sha256": "f34a1b94b3a872d9120973bb32ea9fea91d232d89ef9505e99a42f70f6fbda45",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "after-departure",
+        "method": "Actual canvas pixels and telemetry in one post-render rAF callback; no pause, clock change or reconstructed frame."
+      }
+    ],
+    "scope": "Actual1:1nativepixel crops of current phased WebGL frames; no resizing, fabricated pose or visual acceptance claim. Own viewing required separately."
+  },
+  {
+    "file": "feeding-sheets/sequence-5-compact-avocet.png",
+    "sha256": "ae257249b1fd6d67a5f07d1dfb7fedc2a2356afce6bd1920930f3471ad37f21e",
+    "individualId": "compact-avocet",
+    "realtime": false,
+    "preyId": "compact-juvenile-worm-0",
+    "runId": "c723d748-1195-45df-862d-1c6a6db3fbfe",
+    "eventId": "ranger-compact-v2:summer:feeding:compact-avocet:compact-juvenile-worm-0:29.325000000",
+    "images": [
+      {
+        "file": "v1-full-walk-feeding-retry/sequence-5-compact-avocet-approaching.png",
+        "sha256": "24302c7a719325f2ee7007b822cfc325caa08aeb82d9a9ea6fd2837d01813d99",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "approaching",
+        "method": "Actual composited browser pixels in public paused model-step mode; exact model state before/after; no state/time injection or reconstructed frame."
+      },
+      {
+        "file": "v1-full-walk-feeding-retry/sequence-5-compact-avocet-searching.png",
+        "sha256": "7c0d1a68443259fee45152b2e173a2da2231677efa8d4cead2dd5bed0db68c42",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "searching",
+        "method": "Actual composited browser pixels in public paused model-step mode; exact model state before/after; no state/time injection or reconstructed frame."
+      },
+      {
+        "file": "v1-full-walk-feeding-retry/sequence-5-compact-avocet-handling.png",
+        "sha256": "ad709898a45e089f26cd9138203a5657b225735516b4bad808067b21a9f9fd88",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "handling",
+        "method": "Actual composited browser pixels in public paused model-step mode; exact model state before/after; no state/time injection or reconstructed frame."
+      },
+      {
+        "file": "v1-full-walk-feeding-retry/sequence-5-compact-avocet-swallowing.png",
+        "sha256": "f009dc0b875e0863ed8d24c5e13c7808c2ad05b559bcfdd8435e3016c5cd062c",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "swallowing",
+        "method": "Actual composited browser pixels in public paused model-step mode; exact model state before/after; no state/time injection or reconstructed frame."
+      },
+      {
+        "file": "v1-full-walk-feeding-retry/sequence-5-compact-avocet-mouth-transfer.png",
+        "sha256": "62ffdf1a0aaf17ac84bddb2257288f3ccd66d7d2712cf37414a492c5f1fc0449",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "mouth-transfer",
+        "method": "Actual composited browser pixels in public paused model-step mode; exact model state before/after; no state/time injection or reconstructed frame."
+      },
+      {
+        "file": "v1-full-walk-feeding-retry/sequence-5-compact-avocet-departing.png",
+        "sha256": "ec89267b23b386403c4ffdd09b65180a611a0835f5c7f19265158c468e2f56be",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "departing",
+        "method": "Actual composited browser pixels in public paused model-step mode; exact model state before/after; no state/time injection or reconstructed frame."
+      },
+      {
+        "file": "v1-full-walk-feeding-retry/sequence-5-compact-avocet-after-departure.png",
+        "sha256": "409decf6051e2f857a20c7df335d108bedf452b47615e1b8c7629b8683f6fe49",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "after-departure",
+        "method": "Actual composited browser pixels in public paused model-step mode; exact model state before/after; no state/time injection or reconstructed frame."
+      }
+    ],
+    "scope": "Actual1:1nativepixel crops of current phased WebGL frames; no resizing, fabricated pose or visual acceptance claim. Own viewing required separately."
+  },
+  {
+    "file": "feeding-sheets/sequence-6-compact-redshank.png",
+    "sha256": "9cc315d7506ffc34f0a5c4ccbeade815bfb607a1a297ff72b175913d6b077320",
+    "individualId": "compact-redshank",
+    "realtime": false,
+    "preyId": "compact-juvenile-worm-3",
+    "runId": "d8a44dce-8f59-49e5-a482-51cf3bf5bb36",
+    "eventId": "ranger-compact-v2:summer:feeding:compact-redshank:compact-juvenile-worm-3:20.925000000",
+    "images": [
+      {
+        "file": "v1-full-walk-feeding-retry/sequence-6-compact-redshank-approaching.png",
+        "sha256": "58b559c38082cf46099f0a68b7e3ded85a0cc72bb524554fa09ee49360884ba5",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "approaching",
+        "method": "Actual composited browser pixels in public paused model-step mode; exact model state before/after; no state/time injection or reconstructed frame."
+      },
+      {
+        "file": "v1-full-walk-feeding-retry/sequence-6-compact-redshank-searching.png",
+        "sha256": "feb43e3fda7b989609ca084d1845b21842dcb31f4bc847500999b7406964f27f",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "searching",
+        "method": "Actual composited browser pixels in public paused model-step mode; exact model state before/after; no state/time injection or reconstructed frame."
+      },
+      {
+        "file": "v1-full-walk-feeding-retry/sequence-6-compact-redshank-handling.png",
+        "sha256": "8eb4577165842bc6a51664fe2a3d87b6989822c4c2c4a914e6211a94ce0e0773",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "handling",
+        "method": "Actual composited browser pixels in public paused model-step mode; exact model state before/after; no state/time injection or reconstructed frame."
+      },
+      {
+        "file": "v1-full-walk-feeding-retry/sequence-6-compact-redshank-swallowing.png",
+        "sha256": "6b1b6c18c1355e3a5e77087625c2f6ad9ec30b083be32c80bfb73930806f7666",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "swallowing",
+        "method": "Actual composited browser pixels in public paused model-step mode; exact model state before/after; no state/time injection or reconstructed frame."
+      },
+      {
+        "file": "v1-full-walk-feeding-retry/sequence-6-compact-redshank-mouth-transfer.png",
+        "sha256": "0fb132ee1dc29bccd1d57edc8e6dcbf29345f5b3890c66606f8923cc66ee833b",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "mouth-transfer",
+        "method": "Actual composited browser pixels in public paused model-step mode; exact model state before/after; no state/time injection or reconstructed frame."
+      },
+      {
+        "file": "v1-full-walk-feeding-retry/sequence-6-compact-redshank-departing.png",
+        "sha256": "b4769f0fd4b036ae1eb7faa9ec586d9b41f83a960fed9df4f1914c380bc41fa3",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "departing",
+        "method": "Actual composited browser pixels in public paused model-step mode; exact model state before/after; no state/time injection or reconstructed frame."
+      },
+      {
+        "file": "v1-full-walk-feeding-retry/sequence-6-compact-redshank-after-departure.png",
+        "sha256": "69c7366d4eea0c16ad916fd969dc0252660fe693ef0e7c4b81dfdccd33617bd2",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "after-departure",
+        "method": "Actual composited browser pixels in public paused model-step mode; exact model state before/after; no state/time injection or reconstructed frame."
+      }
+    ],
+    "scope": "Actual1:1nativepixel crops of current phased WebGL frames; no resizing, fabricated pose or visual acceptance claim. Own viewing required separately."
+  },
+  {
+    "file": "feeding-sheets/sequence-7-compact-spoonbill.png",
+    "sha256": "bca7c5f9180710cc206d0fb05816f8e9e04c4092418b2a169775eeb1df0a8fae",
+    "individualId": "compact-spoonbill",
+    "realtime": false,
+    "preyId": "compact-shrimp-4",
+    "runId": "0186c729-2e20-403e-9797-d2af497e8ce4",
+    "eventId": "ranger-compact-v2:summer:feeding:compact-spoonbill:compact-shrimp-4:0.025000000",
+    "images": [
+      {
+        "file": "v1-full-walk-feeding-retry/sequence-7-compact-spoonbill-approaching.png",
+        "sha256": "99276cc46c4622e9277a3b278ade36b744b8fb5e21f6a30e65c2f1044bcf55e8",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "approaching",
+        "method": "Actual composited browser pixels in public paused model-step mode; exact model state before/after; no state/time injection or reconstructed frame."
+      },
+      {
+        "file": "v1-full-walk-feeding-retry/sequence-7-compact-spoonbill-searching.png",
+        "sha256": "09faa4272373414e0e10e83ff9c3d4d4336a4ffd4a340dd05f40025e6db5cbee",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "searching",
+        "method": "Actual composited browser pixels in public paused model-step mode; exact model state before/after; no state/time injection or reconstructed frame."
+      },
+      {
+        "file": "v1-full-walk-feeding-retry/sequence-7-compact-spoonbill-handling.png",
+        "sha256": "f7c4a772e2872d0aa74c371a82a524bc4ea39a356441251006ae13d045302798",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "handling",
+        "method": "Actual composited browser pixels in public paused model-step mode; exact model state before/after; no state/time injection or reconstructed frame."
+      },
+      {
+        "file": "v1-full-walk-feeding-retry/sequence-7-compact-spoonbill-swallowing.png",
+        "sha256": "0a07d2b7a0d9a73a94992a1eea78320acf4d28ac6e79cfc98fdc93a60244fbe6",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "swallowing",
+        "method": "Actual composited browser pixels in public paused model-step mode; exact model state before/after; no state/time injection or reconstructed frame."
+      },
+      {
+        "file": "v1-full-walk-feeding-retry/sequence-7-compact-spoonbill-mouth-transfer.png",
+        "sha256": "9bd632db7e6e0c9f9c523284e316dd814b14764082d0516b9496ef1b4e45230d",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "mouth-transfer",
+        "method": "Actual composited browser pixels in public paused model-step mode; exact model state before/after; no state/time injection or reconstructed frame."
+      },
+      {
+        "file": "v1-full-walk-feeding-retry/sequence-7-compact-spoonbill-departing.png",
+        "sha256": "24f593175841b3c567bcfa5499a48441970ff9f2e438d4dffb72be1342c8d40f",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "departing",
+        "method": "Actual composited browser pixels in public paused model-step mode; exact model state before/after; no state/time injection or reconstructed frame."
+      },
+      {
+        "file": "v1-full-walk-feeding-retry/sequence-7-compact-spoonbill-after-departure.png",
+        "sha256": "665b7a1eabf1fba2da26409f08cf263402d95e9792f202819c35f7310f6d93c1",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "after-departure",
+        "method": "Actual composited browser pixels in public paused model-step mode; exact model state before/after; no state/time injection or reconstructed frame."
+      }
+    ],
+    "scope": "Actual1:1nativepixel crops of current phased WebGL frames; no resizing, fabricated pose or visual acceptance claim. Own viewing required separately."
+  },
+  {
+    "file": "feeding-sheets/sequence-8-compact-oystercatcher.png",
+    "sha256": "ae232f212e6c4e3f062b6acd901755957531882dd530f087af98e5ae4fa11696",
+    "individualId": "compact-oystercatcher",
+    "realtime": false,
+    "preyId": "compact-mussel-16",
+    "runId": "08017aed-9617-442e-a3c0-4561c6025ed2",
+    "eventId": "ranger-compact-v2:summer:feeding:compact-oystercatcher:compact-mussel-16:0.025000000",
+    "images": [
+      {
+        "file": "v1-full-walk-feeding-retry/sequence-8-compact-oystercatcher-approaching.png",
+        "sha256": "401feecd723b54e5a624a5026cfe6c8eeea2fe40d6c77d53867e83f744c6fbfa",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "approaching",
+        "method": "Actual composited browser pixels in public paused model-step mode; exact model state before/after; no state/time injection or reconstructed frame."
+      },
+      {
+        "file": "v1-full-walk-feeding-retry/sequence-8-compact-oystercatcher-searching.png",
+        "sha256": "005fb5f423d67b4db9a4bd5c4ddf9a6391476dbddc5ca1ca64da831584fbadd3",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "searching",
+        "method": "Actual composited browser pixels in public paused model-step mode; exact model state before/after; no state/time injection or reconstructed frame."
+      },
+      {
+        "file": "v1-full-walk-feeding-retry/sequence-8-compact-oystercatcher-handling.png",
+        "sha256": "975b6dfdb8f8dbac43483326564a9ca495c6bfab995be02f392cb9ed6986b9b9",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "handling",
+        "method": "Actual composited browser pixels in public paused model-step mode; exact model state before/after; no state/time injection or reconstructed frame."
+      },
+      {
+        "file": "v1-full-walk-feeding-retry/sequence-8-compact-oystercatcher-swallowing.png",
+        "sha256": "d70dcd39ae112f133fbb95cea0affc8499efb9eb8db1d59e085ed48bb6dc9816",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "swallowing",
+        "method": "Actual composited browser pixels in public paused model-step mode; exact model state before/after; no state/time injection or reconstructed frame."
+      },
+      {
+        "file": "v1-full-walk-feeding-retry/sequence-8-compact-oystercatcher-mouth-transfer.png",
+        "sha256": "fb7a48dabbf64e357166ee31b8e469e4c402ffc77a9834fd7352b78f7e019ea2",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "mouth-transfer",
+        "method": "Actual composited browser pixels in public paused model-step mode; exact model state before/after; no state/time injection or reconstructed frame."
+      },
+      {
+        "file": "v1-full-walk-feeding-retry/sequence-8-compact-oystercatcher-departing.png",
+        "sha256": "8e1f6dc707abf89d96e0163859c6615c84600c8a244cf72dc4498b3c76bebd27",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "departing",
+        "method": "Actual composited browser pixels in public paused model-step mode; exact model state before/after; no state/time injection or reconstructed frame."
+      },
+      {
+        "file": "v1-full-walk-feeding-retry/sequence-8-compact-oystercatcher-after-departure.png",
+        "sha256": "324e9972e25882490ecb957f8376848e75cf257d6b3f551ad7d6d539b30da749",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "after-departure",
+        "method": "Actual composited browser pixels in public paused model-step mode; exact model state before/after; no state/time injection or reconstructed frame."
+      }
+    ],
+    "scope": "Actual1:1nativepixel crops of current phased WebGL frames; no resizing, fabricated pose or visual acceptance claim. Own viewing required separately."
+  }
+]

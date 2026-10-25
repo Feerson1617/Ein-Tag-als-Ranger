@@ -1,0 +1,1144 @@
+Ranger Kompakt · Lehrkräftefassung mit Erwartung und
+Rückmeldung
+Gestaltetes Modell, keine Naturmessung. Freie Erklärungen fachlich besprechen; keine automatische
+Stichwortbenotung. Pro Kernfamilie 20–35 Minuten als ungeprüftes Planungsziel. Kein Gesamtsammelzwang.
+Die drei Ebenen getrennt erfassen: 1 curricular zugeordnet; 2 Lernangebot vorhanden; 3 konkrete Leistung
+erhoben/besprochen. Eine vorhandene Karte erfüllt nur Ebene 2. Ebene 3 braucht das ausgefüllte
+Arbeitsprodukt und eine fachliche Rückmeldung.
+Abgleich mit den Originalen der Fachanforderungen Biologie SH 2026 und des Leitfadens 2017; die
+Ökologieseiten 27–28 des schulinternen ETS-Plans 2025/26 wurden anhand der Original-PDF sowie
+bereitgestellter Originalseiten-Abbildungen abgeglichen. Andere Jahrgänge sind damit nicht vollständig
+geprüft. Der Leitfaden enthält einen möglichen Unterrichtsgang der Einführungsphase. Lehrplanbezug,
+Lernangebot und tatsächliche Leistung bleiben getrennt. Virtuelle Tests bescheinigen keine reale
+Geräteführung oder Exkursion.
+Mehrseitige Karten tragen auf jeder Seite dieselbe Kartenkennung im Kopf „Arbeitsblatt / Fortsetzung“
+beziehungsweise „Lehrkräftefassung / Fortsetzung“. Antworttabellen und die abschließende Rückmeldung
+gehören jeweils zusammen.
+Unterrichtspilot: noch durchzuführen
+Tatsächliches Schulgerät, installierte System- und Browserversion vor dem Pilot eintragen; keine pauschale
+iPad-/Safari-Freigabe. Ein früher genannter Gerätename ist kein geprüftes Profil. Im Pilot anonym
+Bearbeitungszeit, Hilfebedarf, Aufgabenverständnis, neue Transferantwort und Ausfälle erfassen. Keine
+Namen, Anmeldung oder Cloudübermittlung. Reale Exkursion und Gerätekompetenz gesondert prüfen.
+C01 · Ranger Kompakt Lehrkräftefassung / Fortsetzung
+Ökosysteme vergleichen
+gA/eA · Lokaler Klima-, Wasserhaushalts- und Vegetationsdatensatz
+Material / Herkunft
+Vergleich von vier terrestrischen Biomen nach dem tatsächlich gelesenen OpenStax-Kapitel. Die Werte sind
+publizierte Spannweiten einer Lehrbuchsynthese, keine Messreihe derselben Station und keine aktuellen
+deutschen Klimanormalwerte. cm Niederschlag pro Jahr werden für die Auswertung in mm/Jahr umgerechnet
+(1 cm = 10 mm).
+Niederschlag P ist nur ein Zufluss des Wasserhaushalts. Verdunstung/Transpiration ET, Abfluss und
+Änderung des Bodenwasserspeichers fehlen als Zahlen. Deshalb lässt sich hier keine vollständige Bilanz P −
+ET − Abfluss = Speicheränderung berechnen. Die qualitativen Wasserangaben erlauben begrenzte
+Hypothesen; eine hohe Niederschlagssumme garantiert keine ganzjährige Pflanzenverfügbarkeit.
+Temperaturangaben haben unterschiedliche Bezugsgrößen: Beim tropischen und gemäßigten Wald nennt die
+Quelle allgemeine Klimaspannen; bei der Wüste Tages-/Nachtwerte der Bodenoberfläche. Diese dürfen nicht
+als gleichartige Jahresmittel verglichen werden. Die Vegetationsangaben sind typische Muster, keine
+Artenliste der Spielszene.
+Abgelesene Klimawerte mit Bezugsgröße; eigene kurze Paraphrase
+Biom P (cm/Jahr) Temperatur / Saison Wasserhaushalt / Vegetation
+Tropischer
+Feuchtwald
+125–660 20–34 °C; geringe saisonale
+Temperaturschwankung
+Regen saisonal variabel; ganzjährig belaubt,
+mehrere Stockwerke
+Gemäßigter
+Laubwald
+75–150 −30 bis +30 °C; kalte Winter Regen relativ ganzjährig; saisonaler Laubfall /
+Wachstumsruhe
+Borealer Wald 40–100 lange kalte Winter, kurze kühle
+Sommer; keine Zahl in diesem
+Absatz
+viel Niederschlag als Schnee; geringe
+Verdunstung; immergrüne Nadelbäume
+dominieren
+Subtropische
+Wüste
+unter 30;
+örtlich bis nur
+2
+Bodenoberfläche tags über 60 °C,
+nachts nahe 0 °C
+in manchen Jahren Verdunstung größer als P;
+reduzierte Blätter / Wasserspeicherung oder
+kurzlebige Pflanzen nach Regen
+Auftrag
+Rechne alle Niederschlagsgrenzen in mm/Jahr um und zeichne die Waldintervalle auf derselben Achse.
+Bestimme die Überlappung von gemäßigtem und borealem Wald. Vergleiche mit der Wüstengrenze.
+Begründe zwei Zusammenhänge zwischen Klima, Wasserverfügbarkeit und Vegetation. Erkläre, warum
+weder eine eindeutige Biomzuordnung allein aus P noch eine vollständige Wasserbilanz möglich ist. Plane
+dafür eine zusätzliche Messreihe am selben Standort.
+Hilfen
+1. Ein Intervall behält nach der Umrechnung beide Grenzen; „unter 30“ ist kein Mittelwert von 30.
+2. Vergleiche die gemeinsame Spanne 75–100 cm/Jahr. Für eine Wasserbilanz müssen P, ET, Abfluss
+und Speicher dieselbe Fläche und Zeit betreffen.
+C01 · Ranger Kompakt Lehrkräftefassung / Fortsetzung
+Ökosysteme vergleichen
+Mein Arbeitsprodukt
+Biom / Quelle P in mm/Jahr / Spanne Wasserverfügbarkeit / Vegetation Vergleichsgrenze / fehlende Messung
+Gemeinsame Niederschlagsachse mit Einheit; Intervalle, Überlappung und Wüstengrenze eintragen:
+Begründung mit Herkunft, Gegenhypothese und verbleibender Unsicherheit
+C01 · Ranger Kompakt Lehrkräftefassung / Fortsetzung
+Ökosysteme vergleichen
+Erwartung, Alternativen und Rückmeldung
+Tropisch 1250–6600, gemäßigt 750–1500, boreal 400–1000 mm/Jahr; Wüste unter 300, örtlich nur 20
+mm/Jahr. Überlappung gemäßigt/boreal: 750–1000 mm/Jahr.
+Schnee/Frost und geringe Verdunstung verändern die Verfügbarkeit im borealen Wald; Laubfall
+begrenzt die aktive Jahreszeit, Wüstenmerkmale verringern Wasserverlust oder nutzen
+Regenepisoden.
+Gleiche Jahressumme kann bei anderer Temperatur/Saisonalität andere Vegetation begleiten. Wüsten-
+Bodentemperatur nicht mit Wald-Luftklima als Jahresmittel verrechnen.
+P allein liefert weder ET noch Abfluss oder Bodenspeicheränderung. Wiederholte Messung mit Einheit,
+Fläche, Zeitraum und vergleichbarem Verfahren vorschlagen.
+Intervallüberlappung 750–1000 mm/Jahr erlaubt keine eindeutige Biomzuordnung. P, ET, Abfluss und
+Speicher mit gleicher Zeit-/Flächengrenze betrachten.
+Fachlich begründete andere Formulierungen und Unsicherheit zulassen; offene Texte nicht per Stichwort
+benoten.
+Typische Fehlvorstellung: Niederschlag ist bereits pflanzenverfügbares Wasser; jede Temperaturangabe ist
+ein Jahresmittel.
+Rückmeldung: Lass Bezugsgröße und Einheit an jedem Wert markieren und einen fehlenden Wasserfluss
+als echte Messfrage formulieren.
+Grenze: Publizierte Biombereiche mit unbekannter Streuung einzelner Standorte, keine Rohdaten oder
+kalibrierte Wasserbilanz. Keine Gleichsetzung von Niederschlag, Bodenfeuchte und Salzstress; die Salzwiese
+ist hier kein fünftes Zahlenbiom.
+OpenStax Biology 2e, Terrestrial Biomes: Tropical Wet Forest (fs-idp155421824/725760), Temperate Forests (fs-idp19484864),
+Boreal Forests (fs-idp217367728), Subtropical Deserts (fs-idm67333472); publizierte Klimaspannen, keine Stationsreihe:
+https://github.com/cnx-user-books/cnxbook-biology-
+2e/blob/dc0170c088d2df398e742295f528ad1df6c86c58/modules/m66420/index.cnxml
+Leistungsnachweis: □ noch nicht erhoben □ Arbeitsprodukt vorhanden □ fachlich besprochen. Datum /
+Rückmeldung: __________
+C02 · Ranger Kompakt Lehrkräftefassung / Fortsetzung
+Biotop, Biozönose, Systemgrenze
+gA/eA · K1 Standortprotokoll
+Material / Herkunft
+Zwei feste Wald-Mikrohabitate mit relativem Modelllicht und ordinaler Feuchteklasse; Organismenbelege sind
+getrennt.
+Auftrag
+Baue eine Tabelle Faktor / Herkunft / Einfluss / mögliche Gegenhypothese.
+Mein Arbeitsprodukt
+Ort / Datum / Methode Faktor / Einheit oder Skala Wert / Zeigerzahl Wiederholung / Unsicherheit
+Begründung mit Herkunft, Gegenhypothese und verbleibender Unsicherheit
+C02 · Ranger Kompakt Lehrkräftefassung / Fortsetzung
+Biotop, Biozönose, Systemgrenze
+Erwartung, Alternativen und Rückmeldung
+Standort und Gemeinschaft trennen
+Biotische und abiotische Faktoren
+Modellwert als Modellwert kennzeichnen
+Biotop = Standortbedingungen; Biozönose = Organismengemeinschaft; die Grenze ist begründet
+wählbar.
+Fachlich begründete andere Formulierungen und Unsicherheit zulassen; offene Texte nicht per Stichwort
+benoten.
+Typische Fehlvorstellung: Ein Organismus ist kein abiotischer Faktor.
+Rückmeldung: Markiere Erhebungsebene und überprüfe eine Gegenhypothese.
+Grenze: Relative Modellhelligkeit ist kein Luxmessgerät.
+Leistungsnachweis: □ noch nicht erhoben □ Arbeitsprodukt vorhanden □ fachlich besprochen. Datum /
+Rückmeldung: __________
+C03 · Ranger Kompakt Lehrkräftefassung / Fortsetzung
+Toleranz und ökologische Potenz
+gA/eA · Auswertung: Toleranzmodell
+Material / Herkunft
+Kontrollierter synthetischer Ein-Faktor-Versuch mit 0–24 Überflutungsstunden/Modelltag; Salz, Substrat und
+Entwässerung konstant.
+Auftrag
+Vergleiche ohne/mit Konkurrenz. Begründe, weshalb Zonierung im Transekt keine experimentelle Kurve ist.
+Mein Arbeitsprodukt
+Parameter / Einheit Kontrolllauf Vergleich / Eingriff
+Achsen mit Größen und Einheiten beschriften; eigene Datenpunkte/Kurven eintragen.
+Zeit / Faktor und Einheit: __________
+Begründung mit Herkunft, Gegenhypothese und verbleibender Unsicherheit
+C03 · Ranger Kompakt Lehrkräftefassung / Fortsetzung
+Toleranz und ökologische Potenz
+Erwartung, Alternativen und Rückmeldung
+Physiologische Toleranz und Konkurrenzwirkung
+Kontrollierte Faktoren nennen
+Keine artscharfe Kalibrierung behaupten
+Ohne Konkurrent entspricht die gesetzte Wachstumskurve der kontrollierten Modellantwort; Konkurrenz
+verändert sie.
+Fachlich begründete andere Formulierungen und Unsicherheit zulassen; offene Texte nicht per Stichwort
+benoten.
+Typische Fehlvorstellung: Raumzonierung ist keine kontrollierte Langzeitkurve.
+Rückmeldung: Frage nach konstant gehaltenem Salz/Substrat und echter Wachstumsgröße.
+Grenze: Kurve ist theoretisch/didaktisch; keine lokale Salzwiesenprognose.
+Nationalpark: Salzwiesen: https://www.nationalpark-wattenmeer.de/wissensbeitrag/salzwiesen/
+Leistungsnachweis: □ noch nicht erhoben □ Arbeitsprodukt vorhanden □ fachlich besprochen. Datum /
+Rückmeldung: __________
+C04 · Ranger Kompakt Lehrkräftefassung / Fortsetzung
+Messen und Ellenbergzahlen
+gA/eA · K1 + lokale FloraWeb-Zeigerwerttabelle
+Material / Herkunft
+Lokale, abgelesene FloraWeb-Zeigerwerte (Abruf 22.10.2026, E1): L = Licht, F = Feuchte, N =
+Nährstoff-/Stickstoffverfügbarkeit. Ordinale Standortindikatoren, keine momentanen Messwerte. x bedeutet
+indifferent (breiter Toleranzbereich). Die Brennnesselquelle ist Urtica dioica s. l.; diese taxonomische
+Reichweite mitnotieren.
+Waldmeister L2 ist ein Schattenzeiger; F5 steht für frische Standorte, N5 für mäßig stickstoffreiche Standorte.
+Brennnessel F6 und N8 weisen auf frisch bis feuchte und stickstoffreiche Standorte hin; ihr Lx erlaubt keinen
+festen Lichtwert.
+Methodenvergleich: Spiel = festgelegtes relatives Licht/Feuchteklasse; real = wiederholt Licht am selben
+Gerät/gleicher Höhe/vergleichbarer Bewölkung messen, Bodenfeuchte mit definierter Tiefe/Einheit und
+Replikaten bestimmen. Zeigerwerte beschreiben langfristig typische Vorkommen; Standortgeschichte,
+Konkurrenz und mehrere Arten berücksichtigen.
+Abgelesene Zeigerwerte, keine rekonstruierte Messreihe
+Taxon / FloraWeb-ID L F N
+Galium odoratum / 2560 2 5 5
+Urtica dioica s. l. / 6145 x 6 8
+Auftrag
+Vergleiche beide Arten mit deinen zwei K1-Standortprotokollen. Formuliere eine Hypothese zu Licht und eine
+zu Nährstoffverfügbarkeit. Entwirf eine reale Messung mit Einheit, Wiederholungen und Störfaktor. Erkläre,
+warum Lx keinen Widerspruch zu einem hellen Brennnesselstandort darstellt.
+Hilfen
+1. Beginne mit Quelle → Skala → Aussagebereich. Trage x unverändert ein.
+2. Trenne typische Standortbindung von einer kausalen Ein-Faktor-Wirkung; mehrere Arten oder ein
+kontrollierter Versuch wären stärkere Belege.
+C04 · Ranger Kompakt Lehrkräftefassung / Fortsetzung
+Messen und Ellenbergzahlen
+Mein Arbeitsprodukt
+Ort / Datum / Methode Faktor / Einheit oder Skala Wert / Zeigerzahl Wiederholung / Unsicherheit
+Begründung mit Herkunft, Gegenhypothese und verbleibender Unsicherheit
+Erwartung, Alternativen und Rückmeldung
+L2 stützt Schattenbindung des Waldmeisters; für Lx keine feste Lichtprognose.
+N8 liegt über N5, ist aber weder dreifache N-Konzentration noch mg/l Nitrat.
+Messverfahren benennt Ort, Zeitpunkt, Einheit, gleiche Methode und Wiederholungen. Abweichende
+Befunde sind methodisch zu prüfen.
+Fachlich begründete andere Formulierungen und Unsicherheit zulassen; offene Texte nicht per Stichwort
+benoten.
+Typische Fehlvorstellung: x als 0 oder N8 als gemessene Nitratkonzentration behandeln.
+Rückmeldung: Lass die Skala erklären und den Satz als Standort-Hypothese statt als Messwert neu
+formulieren.
+Grenze: Webwerte sind lokal abgelesen; die Landschaftshelligkeit ist kein Luxwert. Keine natürliche Dichte
+oder Kausalität aus einem Einzelvorkommen.
+FloraWeb, Galium odoratum, Ökologie → Zeigerwerte (E1): https://www.floraweb.de/php/oekologie.php?name-use-
+id=2560#data_zeigerwerte
+FloraWeb, Urtica dioica s. l., Ökologie → Zeigerwerte (E1): https://www.floraweb.de/php/oekologie.php?name-use-
+id=6145#data_zeigerwerte
+Leistungsnachweis: □ noch nicht erhoben □ Arbeitsprodukt vorhanden □ fachlich besprochen. Datum /
+Rückmeldung: __________
+C05 · Ranger Kompakt Lehrkräftefassung / Fortsetzung
+Qualitative Erfassung und kleiner Schlüssel
+gA/eA · K1 Merkmalsbelege
+Material / Herkunft
+Aktive vergrößerte Zweig-/Pflanzenmodelle: Blattquirl, Gegenständigkeit, Sägezähne, glatte Rinde, Lappen.
+Drei Funde aus zwei Mikrohabitaten.
+Auftrag
+Wähle mindestens zwei tatsächlich erkennbare Merkmale je Fund. Nutze Gruppenbestimmung oder
+begründete Unsicherheit.
+Mein Arbeitsprodukt
+Unbekannter Fund / Ort Eigene erkennbare Merkmale Vergleichsalternative Bestimmung / Gruppe / Grenze
+Transfer: neuer unbenannter Zweig; welche Merkmale fehlen für die Feinbestimmung?
+C05 · Ranger Kompakt Lehrkräftefassung / Fortsetzung
+Qualitative Erfassung und kleiner Schlüssel
+Erwartung, Alternativen und Rückmeldung
+Name allein genügt nicht
+Unsicherheit fachlich zulassen
+Nicht sichtbare Blüten nicht erfinden
+Mindestens zwei erkannte Pflanzenmerkmale, plausible Alternative und Grenze; Eichen-Gruppe bei
+fehlenden Früchten zulassen.
+Fachlich begründete andere Formulierungen und Unsicherheit zulassen; offene Texte nicht per Stichwort
+benoten.
+Typische Fehlvorstellung: Programmname oder ein einziges Blatt reicht nicht für sichere Feinbestimmung.
+Rückmeldung: Fordere ein tatsächlich sichtbares Merkmal und einen begründeten Unsicherheitsgrund.
+Grenze: Ein stilisiertes Modell kann natürliche Feinmerkmale unzureichend darstellen.
+FloraWeb: Waldmeister: https://www.floraweb.de/php/artenhome.php?name-use-id=2560
+FloraWeb: Große Brennnessel: https://www.floraweb.de/php/artenhome.php?name-use-id=6145
+Leistungsnachweis: □ noch nicht erhoben □ Arbeitsprodukt vorhanden □ fachlich besprochen. Datum /
+Rückmeldung: __________
+C06 · Ranger Kompakt Lehrkräftefassung / Fortsetzung
+Flächenprobe und Streuung
+eA · K3 Q1/Q2/Q0
+Material / Herkunft
+Drei feste Quadrate à 0,27 m², Untersuchung bis 5 cm. Lebende Herzmuscheln nach ID einmal zählen. Q0 ist
+eine gültige Nullprobe.
+Auftrag
+Berechne Dichte je Quadrat, Mittel und Spannweite. Erläutere Stichprobenraum, Auswahlverzerrung und eine
+bessere Wiederholung.
+Mein Arbeitsprodukt
+Quadrat / Fläche / Tiefe Einmal gezählte Individuen / Null Dichte / m² Auswahlfehler / Wiederholung
+Mittel, Spannweite und begründete Stichprobenverbesserung:
+C06 · Ranger Kompakt Lehrkräftefassung / Fortsetzung
+Flächenprobe und Streuung
+Erwartung, Alternativen und Rückmeldung
+Fläche/Tiefe/Zählregel nennen
+Nullfund bleibt Messwert
+Wiederholte Sichtung nicht neues Individuum
+5 / 0,27 ≈ 18,52 Individuen/m² für Q1/Q2; Q0 = 0; Mittel ≈ 12,35, Spannweite ≈ 18,52. Nur gesetzter
+Bestand.
+Fachlich begründete andere Formulierungen und Unsicherheit zulassen; offene Texte nicht per Stichwort
+benoten.
+Typische Fehlvorstellung: Nullfund löschen oder zehn Wiederbeobachtungen als zehn neue Individuen
+zählen.
+Rückmeldung: Kontrolliere Fläche, Tiefe und eindeutige IDs vor jeder Dichteberechnung.
+Grenze: Die Anordnung ist ein didaktisch gesetzter Modellbestand, keine Naturdichte.
+Leistungsnachweis: □ noch nicht erhoben □ Arbeitsprodukt vorhanden □ fachlich besprochen. Datum /
+Rückmeldung: __________
+C07 · Ranger Kompakt Lehrkräftefassung / Fortsetzung
+Nahrungsnetz und Trophie
+gA/eA · K2/K4 Verbindungskarten
+Material / Herkunft
+Stoff-/Energiefluss zeigt von Nahrung zum Konsumenten. Eigene Ereignisse und ergänzte Fachinformation
+haben getrennte Herkunft.
+Auftrag
+Verbinde fünf begründete Beziehungen. Markiere Produzenten, Konsumenten und Destruenten; erläutere
+einen Omnivoren.
+Mein Arbeitsprodukt
+Verbindungsgefüge: Kästen mit Pool/Stoffform beschriften; gerichtete Pfeile mit Prozess, Menge/Einheit und
+Herkunft. Energiepfeile getrennt markieren.
+Pool / Bilanzgrenze Zufluss Abfluss Was bleibt offen?
+Begründung mit Herkunft, Gegenhypothese und verbleibender Unsicherheit
+C07 · Ranger Kompakt Lehrkräftefassung / Fortsetzung
+Nahrungsnetz und Trophie
+Erwartung, Alternativen und Rückmeldung
+Pfeilrichtung korrekt
+Keine starre Stufe für Omnivorie
+Belege und Quellen trennen
+Pfeile von gefressenem Material zum Konsumenten; Omnivorie verhindert starre feste Trophiestufen.
+Fachlich begründete andere Formulierungen und Unsicherheit zulassen; offene Texte nicht per Stichwort
+benoten.
+Typische Fehlvorstellung: Pfeile als Jagdrichtung oder jedes Tier auf genau eine Stufe setzen.
+Rückmeldung: Ein konkretes Blatt/Beutetier durch mehrere mögliche Wege verfolgen.
+Grenze: Es ist ein offenes Ausschnittsnetz, keine geschlossene natürliche Biozönose.
+Ammann et al. 2020: Nahrungsanalyse: https://doi.org/10.1371/journal.pone.0235054
+Birkenbach et al. 2024: Blütenbesuche: https://doi.org/10.1002/ece3.11061
+Leistungsnachweis: □ noch nicht erhoben □ Arbeitsprodukt vorhanden □ fachlich besprochen. Datum /
+Rückmeldung: __________
+C08 · Ranger Kompakt Lehrkräftefassung / Fortsetzung
+Fließgleichgewicht und Energie
+gA/eA · K4 + Kohlenstoffmodell
+Material / Herkunft
+Ein Pool kann bei gleich großen Zu-/Abflüssen konstant bleiben; die einzelnen Stoffteilchen werden trotzdem
+umgesetzt. Nutzbare Energie wird in Wärme überführt.
+Auftrag
+Finde zwei Flüsse bei konstantem Pool. Erkläre, warum das keinen Energiekreislauf zeigt.
+Mein Arbeitsprodukt
+Verbindungsgefüge: Kästen mit Pool/Stoffform beschriften; gerichtete Pfeile mit Prozess, Menge/Einheit und
+Herkunft. Energiepfeile getrennt markieren.
+Pool / Bilanzgrenze Zufluss Abfluss Was bleibt offen?
+Begründung mit Herkunft, Gegenhypothese und verbleibender Unsicherheit
+C08 · Ranger Kompakt Lehrkräftefassung / Fortsetzung
+Fließgleichgewicht und Energie
+Erwartung, Alternativen und Rückmeldung
+Bestand von Fluss unterscheiden
+Wärme/Entwertung nennen
+Keine universelle 10%-Regel
+Konstanter Pool kann gleich große Zu-/Abflüsse haben; nutzbare Energie wird als Wärme entwertet.
+Fachlich begründete andere Formulierungen und Unsicherheit zulassen; offene Texte nicht per Stichwort
+benoten.
+Typische Fehlvorstellung: Bestandskonstanz bedeutet kein Umsatz; Stoffbilanz gilt gleichermaßen für
+nutzbare Energie.
+Rückmeldung: Lass Bestand und Fluss mit unterschiedlichen Einheiten notieren.
+Grenze: Relative C-Einheiten sind keine gemessenen Energieeinheiten.
+Leistungsnachweis: □ noch nicht erhoben □ Arbeitsprodukt vorhanden □ fachlich besprochen. Datum /
+Rückmeldung: __________
+C09 · Ranger Kompakt Lehrkräftefassung / Fortsetzung
+Intraspezifische Konkurrenz
+gA/eA · K2: zwei Marienkäfer
+Material / Herkunft
+Kontrollmodell mit/ohne zweites Individuum derselben Art am gleichen begrenzten Blattlauspool.
+Auftrag
+Halte Seed, Startbestand und Zeitskala konstant. Vergleiche Ertrag und Restbestand.
+Mein Arbeitsprodukt
+Vergleichsbedingung /
+Herkunft
+Beobachtung / bereitgestellte
+Information
+Funktionshypothese Alternative / nötige
+Kontrolle
+Begründung mit Herkunft, Gegenhypothese und verbleibender Unsicherheit
+C09 · Ranger Kompakt Lehrkräftefassung / Fortsetzung
+Intraspezifische Konkurrenz
+Erwartung, Alternativen und Rückmeldung
+Gleiche Art, unterschiedliche Individuen
+Begrenzte Ressource und Wirkung
+Kontrolllauf berücksichtigen
+Kontrolle und Konkurrentenlauf halten Seed, Tide und Startpool gleich; gleicher Artbezug wichtig.
+Fachlich begründete andere Formulierungen und Unsicherheit zulassen; offene Texte nicht per Stichwort
+benoten.
+Typische Fehlvorstellung: Gemeinsames Sitzen beweist bereits Konkurrenzwirkung.
+Rückmeldung: Ertrag und Restressource mit passendem Kontrolllauf belegen.
+Grenze: Die Modellregel ist kein unabhängiger empirischer Beweis.
+Ammann et al. 2020: Nahrungsanalyse: https://doi.org/10.1371/journal.pone.0235054
+Leistungsnachweis: □ noch nicht erhoben □ Arbeitsprodukt vorhanden □ fachlich besprochen. Datum /
+Rückmeldung: __________
+C10 · Ranger Kompakt Lehrkräftefassung / Fortsetzung
+Interspezifische Konkurrenz
+gA/eA · K2: Austernfischer und Krabbe
+Material / Herkunft
+Beide nutzen erreichbare Miesmuscheln von 20–40 mm. Bedeckung verändert Zugang.
+Auftrag
+Vergleiche Austernfischer mit/ohne Krabbe bei gleicher Tide. Benenne eine alternative Erklärung bei
+wechselnder Tide.
+Mein Arbeitsprodukt
+Organismus / Beleg Nahrung / Größe Raum / Tiefe Zeit / Technik Überlappung / Unterschied
+Begründung mit Herkunft, Gegenhypothese und verbleibender Unsicherheit
+C10 · Ranger Kompakt Lehrkräftefassung / Fortsetzung
+Interspezifische Konkurrenz
+Erwartung, Alternativen und Rückmeldung
+Nahrungs-/Größenüberlappung
+Limitierung und Ertragswirkung
+Exploitative Konkurrenz ohne Kampf möglich
+Geteilte erreichbare Muschelressource und geringerer Ertrag im kontrollierten Modell sind relevant.
+Fachlich begründete andere Formulierungen und Unsicherheit zulassen; offene Texte nicht per Stichwort
+benoten.
+Typische Fehlvorstellung: Zwei Arten am Ort beweisen Konkurrenz oder notwendigerweise einen Kampf.
+Rückmeldung: Tide als alternative Zugangsursache kontrollieren.
+Grenze: Gleichzeitige Sichtung allein genügt nicht.
+Leistungsnachweis: □ noch nicht erhoben □ Arbeitsprodukt vorhanden □ fachlich besprochen. Datum /
+Rückmeldung: __________
+C11 · Ranger Kompakt Lehrkräftefassung / Fortsetzung
+Parasitismus und Symbiose
+gA/eA · Zecken-Nahmodell und Wurzelschnitt
+Material / Herkunft
+Adulte Zecke: acht Beine am konkreten Reh. Ektomykorrhiza: Zucker zum Pilz, Mineralstoffe/Wasser zur
+Wurzel; Kosten auf beiden Seiten.
+Auftrag
+Vergleiche Nutzen/Kosten und Beobachtungsebene. Ordne Zunderschwamm als Holzabbauer ein.
+Mein Arbeitsprodukt
+Vergleichsbedingung /
+Herkunft
+Beobachtung / bereitgestellte
+Information
+Funktionshypothese Alternative / nötige
+Kontrolle
+Begründung mit Herkunft, Gegenhypothese und verbleibender Unsicherheit
+C11 · Ranger Kompakt Lehrkräftefassung / Fortsetzung
+Parasitismus und Symbiose
+Erwartung, Alternativen und Rückmeldung
+Parasit nicht Räuber
+Zunderschwamm nicht Mykorrhiza
+Unterirdisches Wissen als Ergänzung ausweisen
+Parasit bezieht Nahrung vom Wirt; Mykorrhiza tauscht Ressourcen, Zunderschwamm baut Holz ab.
+Fachlich begründete andere Formulierungen und Unsicherheit zulassen; offene Texte nicht per Stichwort
+benoten.
+Typische Fehlvorstellung: Jeder Pilz am Baum ist Mykorrhiza; beide Partner profitieren immer ohne Kosten.
+Rückmeldung: Beobachtbare Ebene und bereitgestellten Bodenschnitt unterscheiden.
+Grenze: Stoffaustausch unter der Erde ist keine Fernglassichtung.
+Waldwissen: Mykorrhiza: https://www.waldwissen.net/de/lebensraum-wald/baeume-und-
+waldpflanzen/pflanzenoekologie/mykorrhiza
+Waldwissen: Totholz als Pilzlebensraum: https://www.waldwissen.net/de/lebensraum-wald/pilze-und-flechten/totholz-als-
+pilzlebensraum
+Leistungsnachweis: □ noch nicht erhoben □ Arbeitsprodukt vorhanden □ fachlich besprochen. Datum /
+Rückmeldung: __________
+C12 · Ranger Kompakt Lehrkräftefassung / Fortsetzung
+Prädation und Lotka–Volterra
+gA/eA · Dämmerungsfenster + Auswertungsmodell
+Material / Herkunft
+Jagdversuche können scheitern. Das getrennte theoretische Zweipopulationsmodell besitzt konstante
+Parameter und keine Alternativbeute.
+Auftrag
+Vergleiche Verlauf mit/ohne gleichzeitige Halbierung. Erläutere Phasenlage und Grenzen der drei Regeln.
+Mein Arbeitsprodukt
+Parameter / Einheit Kontrolllauf Vergleich / Eingriff
+Achsen mit Größen und Einheiten beschriften; eigene Datenpunkte/Kurven eintragen.
+Zeit / Faktor und Einheit: __________
+Begründung mit Herkunft, Gegenhypothese und verbleibender Unsicherheit
+C12 · Ranger Kompakt Lehrkräftefassung / Fortsetzung
+Prädation und Lotka–Volterra
+Erwartung, Alternativen und Rückmeldung
+Einzeljagd von Population trennen
+Annahmen der Regeln nennen
+Keine reale Fuchsprognose
+Phasenlage und Halbierung nur unter Modellannahmen interpretieren; alternative Beute/Seasons
+fehlen.
+Fachlich begründete andere Formulierungen und Unsicherheit zulassen; offene Texte nicht per Stichwort
+benoten.
+Typische Fehlvorstellung: Ein erfolgreicher Fuchsangriff bestätigt alle drei Populationsregeln.
+Rückmeldung: Einzelereignis und langfristige Populationsgrößen trennen.
+Grenze: Startwerte und Koeffizienten sind didaktisch; keine Nordseepopulationsdaten.
+Leistungsnachweis: □ noch nicht erhoben □ Arbeitsprodukt vorhanden □ fachlich besprochen. Datum /
+Rückmeldung: __________
+C13 · Ranger Kompakt Lehrkräftefassung / Fortsetzung
+Kommunikation
+gA/eA · Frühjahrsmodell + externer Hornvogel-Playbackfall
+Material / Herkunft
+Konkreter zwischenartlicher Fall: Diana-Meerkatzen (Cercopithecus diana) geben unterschiedliche Alarmrufe
+bei Kronenadler und Leopard. Gelbhelm-Hornvögel (Ceratogymna elata) teilen den Kronenadler als Feind,
+den Leoparden in diesem untersuchten Kontext nicht. In Playbackversuchen unterscheiden sie die
+Rufbedingungen.
+Die lokale Tabelle paraphrasiert den in der CNX-Lehrquelle beschriebenen Versuch von Rainey, Zuberbühler
+& Slater (2004), „Hornbills can distinguish between primate alarm calls“. Sie ist qualitative
+Ergebnisinformation aus dieser Sekundärdarstellung; keine erfundenen Häufigkeiten, Originalrohwerte oder
+neuen Spielorganismen.
+Informationsnutzung durch einen fremden Empfänger kann ohne Absicht des Rufenden entstehen. Eine
+Reaktion kann gelernt oder anders verursacht sein; das untersuchte Design und Kontrollen bestimmen, was
+ausgeschlossen werden kann.
+Qualitativer Vergleich der berichteten Playbackbedingungen
+Eingespielter Meerkatzenruf Gemeinsamer Feind? Berichtete Hornvogelreaktion
+Kronenadler-Alarm Ja verstärktes Antiprädatorverhalten
+Leoparden-Alarm in diesem Fall nein keine entsprechende Verstärkung
+Auftrag
+Zeichne Sender → Signal → artfremder Empfänger → Reaktion. Vergleiche die Bedingungen. Welche
+zusätzliche Kontrollwiedergabe trennt Rufbedeutung von Lautstärke/Neuheit? Begründe, warum weder
+Sprachverständnis noch absichtliche Warnung des Vogels bewiesen ist. Vergleiche mit den programmierten
+Kohlmeisenreaktionen im Spiel.
+Hilfen
+1. Der Ruf wird abgespielt: Ein gerade sichtbarer Adler muss nicht selbst die Reaktion auslösen.
+2. Schlage neutrale Rufe, normierte Lautstärke, randomisierte Reihenfolge und wiederholte unabhängige
+Gruppen vor.
+C13 · Ranger Kompakt Lehrkräftefassung / Fortsetzung
+Kommunikation
+Mein Arbeitsprodukt
+Vergleichsbedingung /
+Herkunft
+Beobachtung / bereitgestellte
+Information
+Funktionshypothese Alternative / nötige
+Kontrolle
+Begründung mit Herkunft, Gegenhypothese und verbleibender Unsicherheit
+Erwartung, Alternativen und Rückmeldung
+Zwischenartliche Informationsnutzung und selektive Reaktion auf den gemeinsamen Feind.
+Playback verringert die gemeinsame unmittelbare Feindursache; passende Kontrollen für akustische
+Merkmale bleiben nötig.
+Intentionalität, menschliche Sprache und die Naturgültigkeit einer Spielregel sind nicht aus der Folge
+allein abzuleiten.
+Fachlich begründete andere Formulierungen und Unsicherheit zulassen; offene Texte nicht per Stichwort
+benoten.
+Typische Fehlvorstellung: Jeder hörbare Ruf warnt absichtlich jede andere Art; Modellfolge gilt als
+unabhängige Naturbeobachtung.
+Rückmeldung: Frage getrennt: Was wurde eingespielt, was beobachtet, welche weitergehende Behauptung
+bräuchte einen neuen Versuch?
+Grenze: Externer qualitativer Studienfall, nicht in der Nordseelandschaft simuliert. Die primäre Publikation
+wurde hier nicht als Volltext gelesen; Fundstelle ist die gelesene Lehrdarstellung.
+CNX, Costs and benefits of non-predator eavesdropping …, Absätze id1169304544572 / id1169291009948; Wiedergabe von
+Rainey et al. (2004): https://github.com/cnx-user-books/cnxbook-mockingbird-tales-readings-in-animal-
+behavior/blob/9dca615bd6d4aa8390120a8a4510bba2074c14bc/modules/m34711/index.cnxml
+Leistungsnachweis: □ noch nicht erhoben □ Arbeitsprodukt vorhanden □ fachlich besprochen. Datum /
+Rückmeldung: __________
+C14 · Ranger Kompakt Lehrkräftefassung / Fortsetzung
+Mehrdimensionale Nische
+gA/eA · K3 + Küstenvogelvergleich
+Material / Herkunft
+Säbelschnäbler: gebogener Schnabel, sehr flach, kleine juvenile Würmer; Löffler: löffelbreit, flacher Priel,
+kleine Garnelen; Rotschenkel: Sondieren; Austernfischer: Muscheln/Öffnen.
+Auftrag
+Erstelle Nahrung × Größe × Tiefe × Technik × Tide. Nenne Überlappung und unterschiedliche Nutzung.
+Mein Arbeitsprodukt
+Organismus / Beleg Nahrung / Größe Raum / Tiefe Zeit / Technik Überlappung / Unterschied
+Begründung mit Herkunft, Gegenhypothese und verbleibender Unsicherheit
+C14 · Ranger Kompakt Lehrkräftefassung / Fortsetzung
+Mehrdimensionale Nische
+Erwartung, Alternativen und Rückmeldung
+Nische nicht bloß Wohnort
+Mehrere Dimensionen
+Beutegrößen und Zeit einbeziehen
+Mindestens Nahrung, Größe, Tiefe, Technik und Tide vergleichen; Überlappung bleibt möglich.
+Fachlich begründete andere Formulierungen und Unsicherheit zulassen; offene Texte nicht per Stichwort
+benoten.
+Typische Fehlvorstellung: Nische ist ein Wohnort oder vier Schnäbel schließen Konkurrenz aus.
+Rückmeldung: Eine Zeile mit konkreter Beute und erreichbarer Wassertiefe begründen.
+Grenze: Entwurfsausschnitt der Nahrung, keine vollständige Diät.
+Leistungsnachweis: □ noch nicht erhoben □ Arbeitsprodukt vorhanden □ fachlich besprochen. Datum /
+Rückmeldung: __________
+C15 · Ranger Kompakt Lehrkräftefassung / Fortsetzung
+Divergenz, Konvergenz, Stellenäquivalenz
+gA/eA · Fettschwalm / Nilflughund: zwei konkrete Rollen- und Lebensraumkarten
+Material / Herkunft
+Vergleichsbasis aus OpenStax: Die Vorderextremitäten von Vogel und Fledermaus besitzen einen homologen
+Wirbeltier-Grundbauplan. Insektenflügel haben einen anderen Entwicklungsursprung. Funktionsähnlichkeit
+allein belegt keine enge Verwandtschaft. Divergenz bezieht sich auf Veränderungen homologer Strukturen;
+Konvergenz auf unabhängig entstandene ähnliche Merkmale.
+Vereinfachte Verwandtschaftsordnung für diesen Vergleich: ((Mensch, Fledermaus) Säugetiere, Vogel)
+Amnioten; Insekt außerhalb der Wirbeltiere. Das ist eine gelieferte qualitative Verwandtschaftsinformation,
+kein im Spiel aus Schnäbeln geschätzter oder vollständig aufgelöster Stammbaum.
+Stellenäquivalenz wird hier an Fettschwalm (Steatornis caripensis) und Nilflughund (Rousettus aegyptiacus)
+als fliegenden, nachts aktiven Fruchtkonsumenten in verschiedenen Lebensräumen geprüft. Die zweite
+Tabelle paraphrasiert tatsächlich gelesene Originalstudien. Unterschiedliche Nahrungspflanzen, Landschaften
+und Quartiere bleiben sichtbar. Fettschwalm-Samenverbreitung wurde untersucht; die Nilflughundstudie misst
+Raumnutzung, nicht dieselbe Samenverbreitungsleistung.
+Struktur- und Funktionsvergleich nach OpenStax (eigene Paraphrase)
+Organismus Vorderextremität / Flügel Funktion im Vergleich
+Mensch Oberarm, Unterarm, Hand Greifen
+Vogel; hier Fettschwalm Wirbeltierknochen + Federtragfläche aktiver Flug
+Fledermaus; hier Nilflughund Wirbeltierknochen + verlängerte Finger/Haut aktiver Flug
+Insekt Flügel ohne diesen Knochenbauplan aktiver Flug
+Qualitative Originalbefunde: Fettschwalm Oktober 2007; Nilflughund Winter 2010, Frühjahr/Sommer 2011
+Art / untersuchter
+Lebensraum
+Nahrung Raumnutzung Aktivität / Ruhe
+Fettschwalm –
+Bergregenwald um Cueva
+del Guácharo, Nordost-
+Venezuela (Holland 2009)
+lipidreiche Früchte räumlich getrennte Frucht- und
+Ruhebäume; auch
+Höhlennutzung
+Nahrungssuche nachts; tags
+Ruhe in Höhle ODER Bäumen
+Nilflughund – Dakhla-
+Wüstenoase, Ägypten
+(Bachorec 2020)
+Früchte; untersuchtes
+Frühjahr nur Datteln,
+Winter/Sommer
+vielfältiger
+Gärten, Dattelpalmenplantagen,
+Feigen-/Mangobestände;
+getrennte Futterorte
+nächtliche Futterortnutzung;
+Tracking zwischen
+Sonnenuntergang und -
+aufgang, Tagesquartiere
+Auftrag
+Vergleiche für beide benannten Arten Nahrung, Raum und Aktivität. Begründe die begrenzte
+Stellenäquivalenz als nächtliche fliegende Fruchtkonsumenten. Warum lassen sich eine gleiche vollständige
+Nische und eine gleiche Samenverbreitungsleistung daraus nicht ableiten? Markiere Homologie/Analogie
+C15 · Ranger Kompakt Lehrkräftefassung / Fortsetzung
+Divergenz, Konvergenz, Stellenäquivalenz
+jeweils mit Bezugsmerkmal. Erkläre Divergenz der Vorderextremitäten und Konvergenz der Flugapparate
+anhand der gelieferten Verwandtschaftsordnung. Welche zusätzlichen Entwicklungs-, DNA- oder Felddaten
+wären nötig?
+Hilfen
+1. Zuerst die beiden untersuchten Lebensräume und ihre Nahrungspflanzen markieren; gemeinsame
+Aktivitätszeit beweist keine vollständige Nischenidentität.
+2. Knochenbauplan, Tragfläche und Nahrungserwerb sind verschiedene Vergleichsebenen. Ein
+gemeinsamer alter Bauplan schließt unabhängige Funktionsähnlichkeit nicht aus.
+Mein Arbeitsprodukt
+Organismus / Beleg Nahrung / Größe Raum / Tiefe Zeit / Technik Überlappung / Unterschied
+Begründung mit Herkunft, Gegenhypothese und verbleibender Unsicherheit
+C15 · Ranger Kompakt Lehrkräftefassung / Fortsetzung
+Divergenz, Konvergenz, Stellenäquivalenz
+Erwartung, Alternativen und Rückmeldung
+Beide sind in den untersuchten Lebensräumen nachts aktive fliegende Fruchtkonsumenten.
+Bergregenwald/Oase, Nahrungspflanzen und Quartiere unterscheiden sich; saisonale Dattelbindung
+nicht auf alle Jahreszeiten übertragen.
+Wirbeltier-Vorderextremitäten homolog; Feder- und Hautflugapparat als unabhängig entstandene
+Flugstrukturen analog. Insektenflügel besitzen nicht den Wirbeltier-Knochenbauplan.
+Divergenz homologer Vorderextremitäten und Konvergenz der Flugapparate mit genanntem
+Bezugsmerkmal erklären. Vogel und Fledermaus werden nicht durch Fruchtkonsum zu nahen
+Verwandten.
+Stellenäquivalenz bleibt eine begrenzte Rollenaussage. Gleich große Samenverbreitungswirkung wäre
+mit Samenart, Transport, Keimung und Stichprobe in beiden Lebensräumen separat zu prüfen.
+Fachlich begründete andere Formulierungen und Unsicherheit zulassen; offene Texte nicht per Stichwort
+benoten.
+Typische Fehlvorstellung: Gleiche Nahrung oder Flugfunktion beweist nahe Abstammung, identische
+Nische oder gleiche Samenverbreitung.
+Rückmeldung: Lass jede Aussage entweder einem konkreten ökologischen Originalbefund oder dem
+anatomischen/verwandtschaftlichen Bezugsmerkmal zuordnen.
+Grenze: Externe Artenfälle aus Venezuela und Ägypten, keine Tiere der Nordseeszene. Qualitative
+Studienparaphrasen und gelieferte Verwandtschaftsinformation; keine neuen Sequenzen, Datierungen oder
+kontrollierte gemeinsame Nischenmessung.
+OpenStax Biology 2e, Determining Evolutionary Relationships, Homologous and Analogous Structures; fs-idp56426176 / fs-
+idp88564512: https://github.com/cnx-user-books/cnxbook-biology-
+2e/blob/dc0170c088d2df398e742295f528ad1df6c86c58/modules/m66531/index.cnxml
+Holland et al. (2009), The Secret Life of Oilbirds; PLOS ONE 4:e8264, Materials and Methods, Results/Discussion: Cueva del
+Guácharo, Venezuela: https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0008264
+Bachorec et al. (2020), Spatial networks differ when food supply changes …; PLOS ONE 15:e0229110, Study site, Sampling
+and radiotracking, Results/Discussion: https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0229110
+Leistungsnachweis: □ noch nicht erhoben □ Arbeitsprodukt vorhanden □ fachlich besprochen. Datum /
+Rückmeldung: __________
+C16 · Ranger Kompakt Lehrkräftefassung / Fortsetzung
+Sukzession ist keine Raumreihe
+optional · Begleitunterricht: explizites Modellbeispiel
+Material / Herkunft
+Gleiche fiktive Fläche: Jahr 0 offener Boden, Jahr 2 Kräuter, Jahr 8 Gebüsch. Separat: oberes/unteres
+Salzrasen-Transekt an einem Tag.
+Auftrag
+Welche Darstellung erlaubt eine zeitliche Aussage? Entwirf Kontrollen gegen Störung/Standortunterschiede.
+Mein Arbeitsprodukt
+Vergleichsbedingung /
+Herkunft
+Beobachtung / bereitgestellte
+Information
+Funktionshypothese Alternative / nötige
+Kontrolle
+Begründung mit Herkunft, Gegenhypothese und verbleibender Unsicherheit
+C16 · Ranger Kompakt Lehrkräftefassung / Fortsetzung
+Sukzession ist keine Raumreihe
+Erwartung, Alternativen und Rückmeldung
+Zeit und Raum unterscheiden
+Alternative Entwicklung möglich
+Keine zwangsläufig gleiche Klimax
+Jahr 0/2/8 auf derselben fiktiven Fläche ist eine Zeitreihe; Küstentransekt nicht.
+Fachlich begründete andere Formulierungen und Unsicherheit zulassen; offene Texte nicht per Stichwort
+benoten.
+Typische Fehlvorstellung: Räumliche Nachbarschaft beweist zwingende zeitliche Abfolge.
+Rückmeldung: Wiederaufnahme desselben Ortes und Störhistorie planen.
+Grenze: Synthetisches Beispiel; keine echten Zeitreihenfotos.
+Leistungsnachweis: □ noch nicht erhoben □ Arbeitsprodukt vorhanden □ fachlich besprochen. Datum /
+Rückmeldung: __________
+C17 · Ranger Kompakt Lehrkräftefassung / Fortsetzung
+Lebensgeschichte statt starre r/K-Schubladen
+eA · Herzmuschel / Reh: quellenbezogene Lebensgeschichte und Vergleichsgrenzen
+Material / Herkunft
+Verglichen werden Herzmuschel (Cerastoderma edule) und Reh (Capreolus capreolus). Die Tabellen
+kombinieren gelesene Studien und eine gekennzeichnete Datenkompilation. Reife, Eier/Gelbkörper, Fürsorge,
+Dichteänderung und individuelles Überleben sind verschiedene Größen. r/K ist hier eine vereinfachende
+Orientierung für Merkmalsbündel, keine durch ein einzelnes Merkmal bewiesene feste Artenklasse.
+Konkreter Laichversuch (Pronker et al.): Laut dem im Abschlussreview am Original abgeglichenen
+Versuchsfall produzierten 12 tatsächlich ablaichende Weibchen unter 100 konditionierten Tieren zusammen
+3.380.000 Eier. Gesucht ist der arithmetische Mittelwert pro tatsächlich ablaichendem Weibchen dieser
+Behandlung. Dem getrennten, thermisch ausgelösten Laichversuch gingen sechs Wochen Konditionierung
+voraus (Original S.304–305). Sechs Wochen sind die Konditionierungszeit, nicht die Laichdauer; die Dauer
+dieses Laichereignisses wird hier nicht ergänzt. Der eigene aktuelle Primärzugriff ist im Quellenprotokoll
+ausgewiesen. Das ist keine natürliche Jahresfekundität.
+Getrennte Quelleninformation: MacroTraits nennt für die jährliche Fekundität der Herzmuschel die Klasse
+„10e4-10e5“ (Originalnotation), Nachwuchstyp Ei, Referenz 4056 = Kristensen 1957. Das gelesene Handbuch
+nennt log10-Skalierung, löst aber „10e“ und den Weibchenbezug nicht ausdrücklich auf. Deshalb keine
+Umrechnung in eine scheinpräzise Eierzahl pro Weibchen/Jahr. Die Klasse ist Quelleninformation, kein
+vervollständigter Primärdatensatz.
+Die Gelbkörperzählung beim Reh misst Ovulation bzw. potenzielle Wurfgröße, nicht geborene oder
+überlebende Kitze. Eischutz ist nicht dasselbe wie aktive Elternbetreuung: MacroTraits ordnet der
+Herzmuschel „Gel“ zu, aber keine gemessenen Pflegetage. Mutter-Kitz-Verbindung im ersten Lebensjahr ist
+keine Angabe ununterbrochener Säugedauer.
+Reife, Fortpflanzung und Fürsorge: Bezugsgrößen mit Quellen
+Merkmal Herzmuschel Reh
+Reife / erste Paarung Fortpflanzung im 2. Lebensjahr; Strangford Lough,
+Nordirland; fast 5 Jahre untersucht (Seed & Brown 1977,
+Abstract)
+Erste Paarung häufig 15–17
+Monate (Flajšman 2017,
+Discussion); 94,1 % von 305
+Jährlingen der slowenischen
+Stichprobe ovuliert
+Eier im Laichversuch /
+Ovulationspotenzial
+3.380.000 Eier / 12 tatsächlich ablaichende Weibchen aus
+100 konditionierten Tieren. Mittelwert pro Weibchen in
+dieser Behandlung; Sechs Wochen Konditionierung,
+danach getrennter thermisch ausgelöster Laichversuch;
+keine Jahresrate (Pronker, Original S.304–305)
+Bei fertilen Weibchen: 1 Gelbkörper
+19,9 %, 2: 75,8 %, 3: 3,8 %; 4/5
+selten. Slowenien 2013–2015
+(Flajšman 2017)
+Schutz / Fürsorge /
+Entwicklung
+Eischutzklasse Gel; planktotrophe Larvenentwicklung.
+Kompilierte Traits, keine gemessene aktive
+Betreuungsdauer (MacroTraits)
+Säugen/Laktation (Flajšman 2017);
+Mutter-Kitz-Verbindung während
+des ersten Lebensjahrs (De Marinis
+2019, Discussion)
+C17 · Ranger Kompakt Lehrkräftefassung / Fortsetzung
+Lebensgeschichte statt starre r/K-Schubladen
+Zwei unterschiedliche Endpunkte – ausdrücklich keine vergleichbaren Art-Jahresquoten
+Art / Endpunkt Berichteter Befund / Kontext Unsicherheit / fehlender Bezug
+Herzmuschel: kurzfristige
+Dichteänderung unter
+Knutt-Prädation
+232 → 50 Individuen/m²; drei Flächen je 1
+ha, zwei mit Prädation/eine Referenz
+(Bijleveld 2015, Abstract)
+Exakte Tageszahl/Region im gelesenen Abstract
+nicht ausgewiesen. Dichteverlust ist keine
+individuelle Überlebensquote.
+Reh: modelliertes
+Überleben bis 8 Monate
+ca. 50 % bei Geburt vor 12. Mai; ca. 24 %
+am 31. Mai. Trois Fontaines, Frankreich,
+1985–2011; 1095 Geburtstermine (Plard
+2014)
+Modellschätzungen für diese Population; 95-%-
+Intervalle in Abb. S1, hier nicht numerisch
+abgelesen. Kein erwachsenes Jahresüberleben.
+Auftrag
+Berechne aus dem bereitgestellten Pronker-Fall die mittlere Eizahl pro tatsächlich ablaichendem Weibchen in
+dieser Behandlung. Warum ist der Nenner 12 und nicht 100? Beschrifte Einheit und Ereignisbezug und trenne
+die sechswöchige Konditionierung vom anschließenden thermisch ausgelösten Laichereignis. Vergleiche
+Reife und Investition in Nachkommen entlang mehrerer Achsen. Trenne Eizahl, Ovulationspotenzial,
+geborene und überlebende Nachkommen. Berechne aus 232 → 50 den verbliebenen Dichteanteil und den
+Rückgang; berechne beim Reh die Differenz der Überlebensschätzungen in Prozentpunkten. Warum darf
+daraus kein direkter Artvergleich „Muschel überlebt zu x %, Reh zu y %“ werden? Formuliere einen möglichen
+Zielkonflikt und benenne die noch nötigen Daten, einschließlich der noch fehlenden Zeit- und
+Behandlungsangaben für eine natürliche Jahresrate.
+Hilfen
+1. Laichversuch: 3.380.000 Eier / 12 ablaichende Weibchen. 100 ist die Zahl konditionierter Tiere, weder
+die Zahl ablaichender Weibchen noch eine Jahreszahl. Ein Mittelwert behauptet keine identische Eizahl
+jedes Weibchens.
+2. Dichteanteil = 50 / 232; Rückgang = (232 − 50) / 232. Eine Dichte kann auch durch Ortswechsel
+verändert werden.
+3. Prozentpunkte sind eine Differenz zweier Prozentwerte. Unterschiedliche Arten, Lebensstadien, Orte
+und Zeitfenster verhindern eine gemeinsame Überlebensquote; fehlende Werte sind nicht null.
+C17 · Ranger Kompakt Lehrkräftefassung / Fortsetzung
+Lebensgeschichte statt starre r/K-Schubladen
+Mein Arbeitsprodukt
+Merkmal / Art Wert / Einheit / Stadium Ort / Zeitraum / Methode Vergleichbarkeit / Unsicherheit
+Zielkonflikt zwischen Nachkommenzahl, Investition und Überleben; zusätzlich benötigter Datensatz:
+Begründung mit Herkunft, Gegenhypothese und verbleibender Unsicherheit
+C17 · Ranger Kompakt Lehrkräftefassung / Fortsetzung
+Lebensgeschichte statt starre r/K-Schubladen
+Erwartung, Alternativen und Rückmeldung
+Verbliebene Dichte ca. 21,6 %, Rückgang ca. 78,4 %; das sind Dichteverhältnisse, keine
+nachverfolgten individuellen Jahresüberlebensraten.
+Reh: ca. 26 Prozentpunkte Differenz bis Alter 8 Monate. Keine Lebensdauer und keine allgemeingültige
+Rehquote; Unsicherheit und Geburtstermin berücksichtigen.
+Laichversuch: 3.380.000 / 12 = 281.666,7 Eier je tatsächlich ablaichendem Weibchen dieser
+Behandlung (arithmetischer Mittelwert). Nicht 33.800 je Tier und keine Eier pro Weibchen/Jahr; sechs
+Wochen Konditionierung und den getrennten thermisch ausgelösten Laichversuch nennen;
+Konditionierungszeit nicht als Laichdauer ausgeben.
+Ovulationspotenzial ist nicht realisierte Nachkommenzahl. Eischutz/Larvenentwicklung und
+Säugen/Mutter-Kitz-Bindung unterscheiden; Investitionskonflikt als begründete Hypothese, nicht allein
+durch diese Studien kausal bewiesen.
+Eine vergleichbare Kohorte braucht Individuen-/Weibchenbezug, Stadium, Zeitfenster, Ort, Methode
+und Unsicherheit. Die MacroTraits-Fekunditätsnotation und natürliche Jahresrate der Herzmuschel
+bleiben offen; der konkrete Laichversuch liefert einen begrenzten Ereignismittelwert, kein exaktes
+Muschel/Reh-Verhältnis und kein starres r/K-Etikett.
+Nachkommenzahl, Reife und Fürsorge als Zielkonflikte entlang mehrerer Achsen behandeln.
+Fachlich begründete andere Formulierungen und Unsicherheit zulassen; offene Texte nicht per Stichwort
+benoten.
+Typische Fehlvorstellung: Viele Eier beweisen automatisch r; Dichteverlust ist individuelles Überleben;
+Gelbkörper sind lebend geborene Kitze.
+Rückmeldung: Lass jeden Zahlenwert mit Einheit, Stadium, Ort/Zeit und Messmethode beschriften. Nicht
+belegte Gleichsetzungen streichen und die fehlende Messung benennen.
+C17 · Ranger Kompakt Lehrkräftefassung / Fortsetzung
+Lebensgeschichte statt starre r/K-Schubladen
+Grenze: Ereignismittelwert und sechswöchige Konditionierung gemäß Originalabschnitten S.304–305, im
+unabhängigen Abschlussreview belegt; keine natürliche Jahresfekundität. Die Versuchsdauer des getrennten
+Laichereignisses wird nicht aus der Konditionierungszeit abgeleitet. Eigene Volltextkontrolle hier nicht
+wiederholt; Herkunft im Quellenprotokoll. Literaturklasse, Laichereignis, Ovulationspotenzial, Dichte und
+Überleben haben verschiedene Bezugsgrößen; keine direkte Art-Jahresquote und kein automatischer
+Kompetenznachweis.
+Pronker et al. (2015, online 2013), Hatchery cultivation of the common cockle Cerastoderma edule, Aquaculture Research 46,
+302–312, DOI 10.1111/are.12178; Original S.304–305 im unabhängigen Abschlussreview vom24.10.2026 abgeglichen:
+https://www.vliz.be/imisdocs/publications/283880.pdf
+Seed & Brown (1977), Oecologia 30:173–188, DOI 10.1007/BF00345419; gelesen: PubMed-Abstract, Strangford Lough, fast
+fünf Jahre: https://pubmed.ncbi.nlm.nih.gov/?term=%22Cerastoderma+edule%22+maturity&format=abstract&size=50
+Beauchard & Soetaert (2026), MacroTraits; Cerastoderma edule: Traits 14/15/17/18, Referenz-IDs 4056/3393/1825; gelesene
+Datenkompilation, keine erneut gelesenen Primärmesswerte:
+https://github.com/obeauchard/fuzR/blob/4b89ff85ead0fd1474f40bab0abda22820bab35f/data/MacroTraits.rda
+MacroTraits-Handbuch, S3.1/S. 9: Fekunditätsklassen und log10-Skala; 10e-Notation nicht ausdrücklich aufgelöst:
+https://github.com/obeauchard/fuzR/blob/4b89ff85ead0fd1474f40bab0abda22820bab35f/README.pdf
+Flajšman et al. (2017), Age-related effects of body mass on fertility and litter size in roe deer; Methods, Results, Discussion;
+Slowenien 2013–2015: https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0175579
+De Marinis et al. (2019), Ecological conditions … determine mandible size in roe deer; Discussion: Mutter-Kitz-Bindung im
+ersten Lebensjahr (Literaturzusammenfassung): https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0222150
+Bijleveld et al. (2015), Natural selection by pulsed predation; Ecology 96:1943–1956, DOI 10.1890/14-1845.1; gelesen:
+PubMed-Abstract: https://pubmed.ncbi.nlm.nih.gov/?term=%22Cerastoderma+edule%22+survival&format=abstract&size=50
+Plard et al. (2014), Mismatch Between Birth Date and Vegetation Phenology …; Results: Parturition Date; Methods: Data
+Collection, Trois Fontaines 1985–2011: https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001828
+Leistungsnachweis: □ noch nicht erhoben □ Arbeitsprodukt vorhanden □ fachlich besprochen. Datum /
+Rückmeldung: __________
+C18 · Ranger Kompakt Lehrkräftefassung / Fortsetzung
+Exponentielles und logistisches Wachstum
+eA · Interaktives Zahlenmodell
+Material / Herkunft
+N₀, r pro Modelltag, K und Modelltage sind einstellbar. Beide Kurven verwenden identische Startbedingungen.
+Auftrag
+Prognostiziere eine Parameteränderung, vergleiche Kurve/Tabelle und prüfe die Tragfähigkeit der Annahmen.
+Mein Arbeitsprodukt
+Parameter / Einheit Kontrolllauf Vergleich / Eingriff
+Achsen mit Größen und Einheiten beschriften; eigene Datenpunkte/Kurven eintragen.
+Zeit / Faktor und Einheit: __________
+Begründung mit Herkunft, Gegenhypothese und verbleibender Unsicherheit
+C18 · Ranger Kompakt Lehrkräftefassung / Fortsetzung
+Exponentielles und logistisches Wachstum
+Erwartung, Alternativen und Rückmeldung
+Anfangswert und Einheit
+Ressourcengrenze erklären
+Keine negativen Populationen
+N₀ und r gleich; logistische Dichtewirkung nähert sich K, exponentiell fehlt diese Grenze.
+Fachlich begründete andere Formulierungen und Unsicherheit zulassen; offene Texte nicht per Stichwort
+benoten.
+Typische Fehlvorstellung: K ist immer eine aktuelle Naturkonstante oder die sichtbare Tierzahl.
+Rückmeldung: Parametereffekt vor Berechnung vorhersagen und danach prüfen.
+Grenze: Nicht auf die sichtbaren Begegnungstiere hochrechnen.
+Leistungsnachweis: □ noch nicht erhoben □ Arbeitsprodukt vorhanden □ fachlich besprochen. Datum /
+Rückmeldung: __________
+C19 · Ranger Kompakt Lehrkräftefassung / Fortsetzung
+Kohlenstoff bilanzieren
+gA/eA · K4 Kohlenstoffmodell
+Material / Herkunft
+Atmosphäre, Pflanze, Streu, Boden in relativen C-Einheiten; Photosynthese, Pflanzenatmung, Streufluss und
+Abbau explizit.
+Auftrag
+Prüfe die Summenbilanz. Ergänze Meer/Sediment/Verbrennung als offene globale Verbindungen.
+Mein Arbeitsprodukt
+Verbindungsgefüge: Kästen mit Pool/Stoffform beschriften; gerichtete Pfeile mit Prozess, Menge/Einheit und
+Herkunft. Energiepfeile getrennt markieren.
+Pool / Bilanzgrenze Zufluss Abfluss Was bleibt offen?
+Begründung mit Herkunft, Gegenhypothese und verbleibender Unsicherheit
+C19 · Ranger Kompakt Lehrkräftefassung / Fortsetzung
+Kohlenstoff bilanzieren
+Erwartung, Alternativen und Rückmeldung
+Pflanzenatmung
+Kreislauf und Speicherung unterscheiden
+Meer nicht immer dauerhafte Senke
+Summe aller vier C-Pools bleibt ohne Außenfluss 170; Photosynthese und Pflanzenatmung beide
+ausweisen.
+Fachlich begründete andere Formulierungen und Unsicherheit zulassen; offene Texte nicht per Stichwort
+benoten.
+Typische Fehlvorstellung: Bäume atmen nicht oder Boden speichert den gesamten Kohlenstoff für immer.
+Rückmeldung: Atmosphäre und spätere Bodenatmung als Bilanz-/Grenzenfrage behandeln.
+Grenze: Geschlossener C-Ausschnitt; kein globales Klimamodell.
+Leistungsnachweis: □ noch nicht erhoben □ Arbeitsprodukt vorhanden □ fachlich besprochen. Datum /
+Rückmeldung: __________
+C20 · Ranger Kompakt Lehrkräftefassung / Fortsetzung
+Stickstoffformen und Prozesse
+eA · Sauerstoffabhängiges N-Modell
+Material / Herkunft
+N₂, organischer N, NH₄⁺, NO₂⁻ und NO₃⁻; externe N-Zufuhr ist als Fluss ausgewiesen.
+Auftrag
+Schalte Sauerstoff um. Verfolge Fixierung, Ammonifikation, beide Nitrifikationsschritte und Denitrifikation.
+Mein Arbeitsprodukt
+Verbindungsgefüge: Kästen mit Pool/Stoffform beschriften; gerichtete Pfeile mit Prozess, Menge/Einheit und
+Herkunft. Energiepfeile getrennt markieren.
+Pool / Bilanzgrenze Zufluss Abfluss Was bleibt offen?
+Begründung mit Herkunft, Gegenhypothese und verbleibender Unsicherheit
+C20 · Ranger Kompakt Lehrkräftefassung / Fortsetzung
+Stickstoffformen und Prozesse
+Erwartung, Alternativen und Rückmeldung
+Prozesse getrennt
+Sauerstoffbezug
+Bilanz einschließlich Zufuhr
+Fixierung N₂ → NH₄⁺, Assimilation aus NH₄⁺/NO₃⁻ → organischer N; Nitrifikation aerob, Denitrifikation
+bei O₂-Mangel. Gesamt 129 + Tage × Eintrag.
+Fachlich begründete andere Formulierungen und Unsicherheit zulassen; offene Texte nicht per Stichwort
+benoten.
+Typische Fehlvorstellung: Fixierung ist direkte Bildung aller organischen Stoffe; kein O₂ bedeutet sofortiges
+Fischsterben.
+Rückmeldung: Einen Stoffweg mit fünf Pools, tatsächlichen Flüssen und externem Eintrag verfolgen.
+Grenze: Relative N-Einheiten, keine mg/l und kein vorhergesagtes Fischsterben.
+Leistungsnachweis: □ noch nicht erhoben □ Arbeitsprodukt vorhanden □ fachlich besprochen. Datum /
+Rückmeldung: __________
+C21 · Ranger Kompakt Lehrkräftefassung / Fortsetzung
+Treibhauseffekt und Küstendynamik
+gA/eA · Lokale Strahlungsbilanz + Deichblick
+Material / Herkunft
+Sonnenenergie erreicht das System überwiegend als kurzwellige Strahlung; die erwärmte Oberfläche emittiert
+langwellige Infrarotstrahlung. Treibhausgase absorbieren in bestimmten IR-Banden und emittieren in
+verschiedene Richtungen, auch zur Oberfläche. Das ist keine einfache Spiegelung und kein bloßes Schließen
+eines Glasdachs.
+Bei mehr Treibhausgas ist bei zunächst gleicher Temperatur die Abgabe ins All verändert; Erwärmung kann
+eine neue Bilanz ermöglichen. Gegenstrahlung erzeugt keine zusätzliche Energie. Die unten gesetzten
+relativen Energieeinheiten dienen nur der Bilanzübung und sind keine gemessenen globalen W/m².
+Die ältere verlinkte OpenStax-Passage benutzt auch „reflect“. Hier wird dies fachlich als Absorption/Emission
+präzisiert. Alte CO₂-Zahlen aus der Passage sind keine aktuellen Messwerte. Tide (Stunden), Wetter (Tage)
+und Klimamittel/Meeresspiegelentwicklung (Jahrzehnte) trennen.
+Vollständig gesetztes Zweischichten-Rechenbeispiel, relative Einheiten je Modellzeit
+Fluss Einheiten
+Sonne → Gesamtsystem 10
+kurzwellige Reflexion → All 3
+kurzwellige Absorption Atmosphäre 2
+kurzwellig → Oberfläche 5
+Oberfläche IR → Atmosphäre 6
+Oberfläche IR direkt → All (Fenster) 2
+Oberfläche → Atmosphäre (nichtstrahlend) 1
+Atmosphäre IR → Oberfläche 4
+Atmosphäre IR → All 5
+Auftrag
+Zeichne die neun Pfeile. Prüfe Oberfläche, Atmosphäre und Obergrenze jeweils auf Ein-/Ausgang. Erkläre
+Gegenstrahlung ohne Energieerzeugung. Leite eine qualitative Wirkungskette CO₂ → Strahlungsbilanz →
+Wärmehaushalt → Meeresspiegel/Salzwiesenraum ab und ordne Zeitskalen zu.
+Hilfen
+1. Oberfläche: 5 + 4 hinein, 6 + 2 + 1 hinaus.
+2. Atmosphäre: 2 + 6 + 1 hinein; am Systemrand zählen interne Gegenflüsse nicht noch einmal.
+C21 · Ranger Kompakt Lehrkräftefassung / Fortsetzung
+Treibhauseffekt und Küstendynamik
+Mein Arbeitsprodukt
+Verbindungsgefüge: Kästen mit Pool/Stoffform beschriften; gerichtete Pfeile mit Prozess, Menge/Einheit und
+Herkunft. Energiepfeile getrennt markieren.
+Pool / Bilanzgrenze Zufluss Abfluss Was bleibt offen?
+Begründung mit Herkunft, Gegenhypothese und verbleibender Unsicherheit
+C21 · Ranger Kompakt Lehrkräftefassung / Fortsetzung
+Treibhauseffekt und Küstendynamik
+Erwartung, Alternativen und Rückmeldung
+Oberfläche und Atmosphäre je 9 hinein/9 hinaus; Gesamtsystem 10 hinein und 3+2+5=10 hinaus.
+Spektral selektive Absorption/Emission statt IR-Spiegel; nach Störung vorübergehendes
+Ungleichgewicht möglich.
+Meeresspiegel, Sedimentzuwachs und Ausweichraum getrennt; die Modellflut ist kein Klimaexperiment.
+Fachlich begründete andere Formulierungen und Unsicherheit zulassen; offene Texte nicht per Stichwort
+benoten.
+Typische Fehlvorstellung: Gegenstrahlung verletzt Energieerhaltung; jede Hochflut ist schon Klimawandel.
+Rückmeldung: Zuerst die Systemgrenze und internen Pfeile markieren, dann Bilanz und Zeitskala prüfen.
+Grenze: Kein kalibrierter globaler Strahlungshaushalt, keine Temperatur- oder lokale Deichprognose.
+OpenStax Biology 2e, Climate and the Effects of Global Climate Change, fs-idp47789312 (Absorption/Emission); ältere
+Lehrbuchfassung: https://github.com/cnx-user-books/cnxbook-biology-
+2e/blob/dc0170c088d2df398e742295f528ad1df6c86c58/modules/m66419/index.cnxml
+Leistungsnachweis: □ noch nicht erhoben □ Arbeitsprodukt vorhanden □ fachlich besprochen. Datum /
+Rückmeldung: __________
+C22 · Ranger Kompakt Lehrkräftefassung / Fortsetzung
+Management abwägen
+gA/eA · K5 Dorfkonferenz
+Material / Herkunft
+Rangerdienst: Ruhe; lokale Nutzung: Zugang; Küstenschutz: Sicherheit. Optionen: Umleitung, saisonale
+Ruhe, erhöhter Bohlenweg. Folgen und Kosten sind qualitative Szenariokarten.
+Auftrag
+Wähle Kriterien/Gewichte, eigene Belege, Alternative, Folgeprüfung und Unsicherheit.
+Mein Arbeitsprodukt
+Kriterium / Gewicht Umleitung Saisonale Ruhe Bohlenweg Beleg / Perspektive
+Sachinformation Wert / Norm Folge / Nebenfolge Unsicherheit
+Meine Entscheidung, Alternative und Anlass zur späteren Revision:
+C22 · Ranger Kompakt Lehrkräftefassung / Fortsetzung
+Management abwägen
+Erwartung, Alternativen und Rückmeldung
+Fakten/Werte/Interessen trennen
+Mehrere Lösungen begründbar
+Schlickgras differenziert statt pauschal entfernen
+Mindestens zwei gewichtete Kriterien, passender Küstenbeleg mit erklärtem Bezug,
+Alternative/Folgen/Unsicherheit. Alle drei Optionen möglich.
+Fachlich begründete andere Formulierungen und Unsicherheit zulassen; offene Texte nicht per Stichwort
+benoten.
+Typische Fehlvorstellung: Ein Waldmeisterbeleg oder ein ausgefülltes Formular bestätigt die fachliche
+Entscheidung.
+Rückmeldung: Sachinformation, Wert und Soll-Norm markieren; offene Textqualität fachlich besprechen.
+Grenze: Keine reale Genehmigung; Schutz- und Gezeitenregeln gelten weiter.
+Nationalpark: Salzwiesen: https://www.nationalpark-wattenmeer.de/wissensbeitrag/salzwiesen/
+Granse et al. 2022: Spartina-Cytotypen: https://doi.org/10.1007/s12237-021-00985-4
+Leistungsnachweis: □ noch nicht erhoben □ Arbeitsprodukt vorhanden □ fachlich besprochen. Datum /
+Rückmeldung: __________
+C23 · Ranger Kompakt Lehrkräftefassung / Fortsetzung
+Hormonartige Stoffe: Evidenzkritik
+eA · Originalstudienauswertung Tse et al. 2013 (BPA)
+Material / Herkunft
+Gelesener Originalstudienfall: Tse et al. (2013), Zebrafisch AB-Linie, Bisphenol A (BPA). Embryonen ab 1–4-
+Zellstadium in 2 ml E3-Medium, 28 °C, 50 µM BPA; Kontrolle mit gleichem DMSO-Volumen. Untersuchte
+Stadien 8, 14, 24 Stunden nach Befruchtung (hpf), Nachbeobachtung bis 72 hpf.
+BPA kann hormonartige Wirkungen entfalten. Diese Arbeit untersucht Entwicklungs-/Genexpressionsmuster
+mit Whole-mount-in-situ-Hybridisierung; sie weist keinen einzelnen Rezeptormechanismus und keine
+Populationswirkung nach. 50 µM ist eine Versuchsbedingung, hier nicht als umweltübliche Konzentration oder
+sichere Dosis bezeichnet.
+Lokale Tabelle: berichtete Richtungen aus Originaltext/Abbildungslegenden, eigene deutsche Paraphrase.
+Fig. 2 gibt Mittel von 20 Embryonen und *P<0,05 für die Winkelvergleiche an. Einzelwinkel, Streuwerte und
+Rohzählungen stehen im gelesenen Textauszug nicht numerisch zur Verfügung; sie werden nicht erfunden.
+Kidd 2007 war hier nicht als Volltext erreichbar und ist kein Datenbeleg dieser Karte.
+Auswertbare publizierte Ergebnisrichtungen, keine synthetischen Rohdaten
+Zeitpunkt / Endpunkt BPA gegenüber DMSO-Kontrolle Genauer Beleg
+8 hpf: ventrale eve1/gata2-Expressionswinkel kleiner Fig. 2 I; Mittel 20 Embryonen; P<0,05
+8 hpf: dorsale chd/gsc-Expressionswinkel größer Fig. 2 J; Mittel 20 Embryonen; P<0,05
+14 hpf: myoD-Muster / Somiten verbreitert und diffuser Results, Somite stage; Fig. 3
+24 hpf: otx2 / Mittelhirngebiet eingeschränkt / kleiner Results, prim-5; Fig. 4
+Auftrag
+Erstelle Versuchs-/Kontrollschema mit Stoff, Konzentration, Temperatur, Start und Endpunkten. Wie viel BPA-
+Stoffmenge enthält nominell ein 2-ml-Ansatz bei 50 µM (ohne Verlust)? Werte die vier Richtungen aus.
+Welche Aussage erlauben 20 Embryonen/P<0,05, welche nicht? Entwirf Dosisreihe, unabhängige
+Gefäßreplikate und Langzeitendpunkte. Grenze Mechanismus, Individuum, Population und Übertragung auf
+die Nordsee ab.
+Hilfen
+1. 1 µM = 1 µmol/l; 2 ml = 0,002 l.
+2. Statistische Signifikanz liefert weder Effektgröße noch Umweltrelevanz; Embryonen im selben Gefäß
+sind nicht automatisch unabhängige Gefäßreplikate.
+C23 · Ranger Kompakt Lehrkräftefassung / Fortsetzung
+Hormonartige Stoffe: Evidenzkritik
+Mein Arbeitsprodukt
+Versuchs-/Kontrollbedingung Zeit / Konzentration /
+Einheit
+Endpunkt und
+Ergebnisrichtung
+Aussagegrenze / neuer
+Versuch
+Begründung mit Herkunft, Gegenhypothese und verbleibender Unsicherheit
+C23 · Ranger Kompakt Lehrkräftefassung / Fortsetzung
+Hormonartige Stoffe: Evidenzkritik
+Erwartung, Alternativen und Rückmeldung
+Nominell 0,1 µmol pro Ansatz; Kontrolle enthält Lösungsmittel ohne BPA.
+Gegenläufige ventrale/dorsale Muster und spätere Entwicklungsabweichungen auswerten, keine
+erfundenen Winkel/Anteile.
+Ein Konzentrationsniveau erlaubt keine sichere Dosis-Wirkungs-Kurve oder Schwelle.
+Rezeptorkausalität und Populationserholung bleiben offen; Süßwasserembryonen sind keine lokale
+Salzwiesenprobe.
+Fachlich begründete andere Formulierungen und Unsicherheit zulassen; offene Texte nicht per Stichwort
+benoten.
+Typische Fehlvorstellung: Jede Entwicklungswirkung beweist denselben Hormonrezeptor, Umweltübung
+oder Populationskollaps.
+Rückmeldung: Lass jede Schlussfolgerung einem tatsächlich erhobenen Endpunkt zuordnen und eine
+zusätzliche nötige Messung nennen.
+Grenze: Lokal ausgewertetes externes Studienmaterial: berichtete Originalergebnisse und Designparameter,
+keine rekonstruierte Rohmessreihe. Fremde Abbildungen/Volltexte werden nicht mitgeliefert.
+Tse et al. (2013), Early embryogenesis in zebrafish is affected by bisphenol A exposure. Biology Open 2:466–471; Methods +
+Results/Fig. 2–4; DOI 10.1242/bio.20134283: https://doi.org/10.1242/bio.20134283
+Tatsächlich gelesener öffentlicher Volltext von Tse et al., festgehaltener Forschungskorpus; Methods / Results / Fig. 2 caption:
+https://github.com/Marowalker/retrain_w2v/blob/53bfc557ec72762aff57cdeb64cb654b5d126adb/data/pmc_data/non_comm_use
+.0-9A-B_txt/Biol_Open/Biol_Open_2013_Mar_19_2(5)_466-471.txt
+Leistungsnachweis: □ noch nicht erhoben □ Arbeitsprodukt vorhanden □ fachlich besprochen. Datum /
+Rückmeldung: __________
+C24 · Ranger Kompakt Lehrkräftefassung / Fortsetzung
+Ökologischer Fußabdruck und CO₂
+eA · Historische NFA-Zeilen + getrennte Flächenbilanzübung
+Material / Herkunft
+Ökologischer Fußabdruck bilanziert beanspruchte biologisch produktive Flächen unter definierten
+Verbrauchs-/Handels- und Produktivitätsannahmen; Einheit globale Hektar (gha). Biokapazität ist die
+zugehörige Angebotsseite. Eine reine CO₂-Bilanz in kg CO₂-Äquivalenten misst etwas anderes. Artenverlust,
+Toxizität und lokale Wasserknappheit werden nicht vollständig in gha beschrieben.
+Lokale Alternative: vollständig gesetzter Rechenfall für ein fiktives Jahres-Verbrauchsbündel. Flächen A sind
+bereits als rechnerischer Anspruch abgegrenzt; Y ist hier 1. E sind nur Übungsgewichte, ausdrücklich keine
+offiziellen oder aktuellen GFN-Äquivalenzfaktoren. Formel im Modell: Summe A × Y × E. Ergebnis als „gha im
+Rechenmodell“ kennzeichnen, nicht als amtlichen oder persönlichen Fußabdruck.
+Sechs Kategorien: Acker, Weide, Fischgründe, Waldprodukte, bebaute Fläche und rechnerische CO₂-
+Aufnahmefläche. Letztere ist ein Umrechnungsanspruch und keine tatsächlich bereits gepflanzte
+Kompensationsfläche. Verbrauch, Import/Export, Jahr und Doppelzählungen müssen bei einer echten Bilanz
+definiert werden. Die GFN-Methodenwebsite war in der Cloud gesperrt. Als historischen empirischen
+Vergleich enthält die erste Tabelle tatsächlich extrahierte Zeilen einer öffentlichen NFA-2019-Datenspiegelung
+für 2016. Aktuelle Originalfaktoren oder heutige Länderwerte sind damit nicht geprüft; die Spiegelung ist kein
+erneuter Audit der GFN-Rechnung.
+Tatsächlich extrahierte historische NFA-2019-Zeilen, Jahr 2016, gha pro Person (ungerundet)
+Gebiet EFConsPerCap total BiocapPerCap total
+Deutschland 4.840599716 1.617941392
+Frankreich 4.447238005 2.377594825
+Welt 2.746619230 1.629750711
+Reines Rechenmaterial: fiktives Bündel, erfundene Übungsfaktoren
+Kategorie A (ha Anspruch im Modell) Y E (Übungsgewicht)
+Acker 0,20 1 2
+Weide 0,30 1 0,5
+Fischgründe 0,10 1 0,4
+Waldprodukte 0,20 1 1,2
+Bebaut 0,05 1 2
+CO₂-Aufnahmeanspruch 0,40 1 1,2
+C24 · Ranger Kompakt Lehrkräftefassung / Fortsetzung
+Ökologischer Fußabdruck und CO₂
+Auftrag
+Berechne zunächst für die historischen Länder den Unterschied zwischen Konsumfußabdruck und
+Biokapazität pro Person. Warum sind Länderdefizit und globale Überschreitung unterschiedlich zu deuten?
+Berechne danach getrennt die gewichtete Summe des fiktiven Bündels und vergleiche mit einer ebenfalls
+gesetzten Biokapazität von 1,10 gha im Modell. Szenario: CO₂-Aufnahmeanspruch halbiert, alles andere
+gleich. Erläutere Systemgrenze, Überschreitung und warum daraus weder persönliche Schuld noch lokale
+Kompensation folgt. Welche Originaldaten fehlen für eine reale Verbrauchsbilanz oder für einen Vergleich
+zweier Anreisen?
+Hilfen
+1. Jede Zeile separat multiplizieren; Dezimalkomma beachten.
+2. Die CO₂-Zeile wird im Modell in Fläche übersetzt; kg CO₂e und gha nicht addieren.
+Mein Arbeitsprodukt
+Kategorie / Systemgrenze Fläche × Faktoren Teilbetrag / Einheit Quelle / Jahr / Annahme
+Summe, Angebotsvergleich, Szenario und Grenzen:
+C24 · Ranger Kompakt Lehrkräftefassung / Fortsetzung
+Ökologischer Fußabdruck und CO₂
+Erwartung, Alternativen und Rückmeldung
+Historische Differenzen: Deutschland ≈3,223, Frankreich ≈2,070, Welt ≈1,117 gha/Person; Länder
+können bioproduktive Kapazität über Handel beanspruchen. Kein persönlicher Schuld- oder lokaler
+Kompensationsnachweis.
+Summe 1,41; rechnerische Überschreitung 0,31. Halbe CO₂-Fläche ergibt 1,17 und Überschreitung
+0,07.
+Jahr, Verbrauch/Handel, Produktivität und konsistente Faktoren nennen; Übungswerte nicht als
+nationale/personale Daten ausgeben.
+CO₂e-Vergleich braucht Distanz, Belegung, Verkehrsmittel, Emissionsfaktor/Jahr und Systemgrenze.
+Begrenzte Indikatoren ersetzen kein vollständiges Natur- oder Werturteil.
+Fachlich begründete andere Formulierungen und Unsicherheit zulassen; offene Texte nicht per Stichwort
+benoten.
+Typische Fehlvorstellung: gha ist ein örtlich aufgekauftes Grundstück oder lässt sich direkt zu kg CO₂e
+addieren.
+Rückmeldung: Lass physische Fläche, produktivitätsgewichteten Anspruch und Treibhausgasmasse in drei
+getrennten Spalten erklären.
+Grenze: Historische abgelesene NFA-Spiegelungswerte und getrennte synthetische Rechenalternative.
+Aktuelle GFN-Originalfaktoren und heutige Länder-/Personenwerte sind NICHT GEPRÜFT; keine aktuelle
+persönliche Bilanz.
+NFA 2019 public_data.csv, historische öffentliche Spiegelung, Jahr 2016 / country / record EFConsPerCap und BiocapPerCap;
+Einheitenbezug BiocapTotGHA: https://github.com/adefemiadeh/NFA-
+2019-/blob/ff7db8a1a99606e474cce6a219fdffb35dcfb649/NFA%202019%20public_data.csv
+Global Footprint Network: ecological footprint: https://footprintnetwork.org/our-work/ecological-footprint/
+Leistungsnachweis: □ noch nicht erhoben □ Arbeitsprodukt vorhanden □ fachlich besprochen. Datum /
+Rückmeldung: __________
+C25 · Ranger Kompakt Lehrkräftefassung / Fortsetzung
+Transfer in die reale Exkursion
+schulinterner Bezug · Vor-/Nachbereitung außerhalb des Spiels
+Material / Herkunft
+Virtuell: Regeln/Parameter lesbar; real: Messunsicherheit, Artenschutz, reale Geräteführung und örtliche
+Gezeitensicherheit.
+Auftrag
+Plane eine naturschutzgerechte reale Untersuchung, korrigiere ein Spielverfahren und dokumentiere reale
+Unsicherheit.
+Mein Arbeitsprodukt
+Ort / Datum / Methode Faktor / Einheit oder Skala Wert / Zeigerzahl Wiederholung / Unsicherheit
+Begründung mit Herkunft, Gegenhypothese und verbleibender Unsicherheit
+C25 · Ranger Kompakt Lehrkräftefassung / Fortsetzung
+Transfer in die reale Exkursion
+Erwartung, Alternativen und Rückmeldung
+Reale Durchführung getrennt
+Keine Organismenentnahme ohne Regelprüfung
+Transferfrage und methodische Korrektur
+Vergleichbare Methoden, reale Gezeitensicherheit, Artenschutz und eine neue Transferfrage planen.
+Fachlich begründete andere Formulierungen und Unsicherheit zulassen; offene Texte nicht per Stichwort
+benoten.
+Typische Fehlvorstellung: Virtueller Erfolg bescheinigt reale Geräteführung oder sichere Exkursion.
+Rückmeldung: Konkrete methodische Korrektur und noch nötige reale Einweisung benennen.
+Grenze: Keine reale Exkursion/Multimar-Teilnahme oder Gerätekompetenz durch Spielen erworben.
+Leistungsnachweis: □ noch nicht erhoben □ Arbeitsprodukt vorhanden □ fachlich besprochen. Datum /
+Rückmeldung: __________
+

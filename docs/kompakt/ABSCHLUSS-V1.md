@@ -1,11 +1,11 @@
-# Ranger Kompakt – abgeschlossener V1-Kandidat
+# Ranger Kompakt – aktueller V1-Kandidat
 
-**RC lieferbar im festgelegten Softwareumfang:** `ranger-kompakt-v1.0.0-rc.1-e9899efaa314`.
+**RC lieferbar im ausdrücklich festgelegten Softwareumfang:** ranger-kompakt-v1.0.0-rc.1-4eb186a5325a.
 
-[Abschluss mit Build-/Runtime-/HTML-Hashes, eigenen Prüfungen und einer priorisierten Restliste](../../verification/kompakt-v1/final/ABSCHLUSS.md). [Vollständige21-Punkte-Matrix](../../verification/kompakt-v1/final/PRUEFMATRIX.md), [ausgewählte aktuelle Bilder](../../verification/kompakt-v1/final/BILDBELEGE.html), [Reproduktion mit Produkt-/QA-Provenienz](../../verification/kompakt-v1/final/Reproduktion/START-REPRODUKTION.md).
+[Abschluss mit aktuellen Hashes und Prüfbelegen](../../verification/kompakt-v1/astra-final/ABSCHLUSS.md), [vollständige Matrix](../../verification/kompakt-v1/astra-final/PRUEFMATRIX.md), [Bildnachweise](../../verification/kompakt-v1/astra-final/BILDBELEGE.html), [Reproduktion](../../verification/kompakt-v1/astra-final/Reproduktion/START-REPRODUKTION.md).
 
-31 von31Prozessprüfungen bestanden; zusätzliche tatsächliche Quell-/Web-/Einzeldatei-Lernläufe und die reale Screenshot-Regression bestanden.41Node-Prüfreihen und9Python-Tests nach QA-Korrekturen erneut bestanden.20Matrixpunkte bestehen im erklärten V1-Umfang, F12 bleibt NICHT GEPRÜFT. Kein nachgewiesener offener kritischer Datenverlust-, Falschbeleg- oder Missionsblocker.
+Die Druckkorrektur besteht einschließlich ursprünglicher Zwei-Seiten-Assertions und echter Fontregression. Der CI-Ankunftstest des Produktlaufs 40162404068 bleibt FEHLGESCHLAGEN; keine Verlängerung oder Abschwächung. D3 trennt diesen Softwaregrafik-Befund vom begrenzten Softwarekandidaten. Physisches iPad/Safari und Unterrichtspilot bleiben NICHT GEPRÜFT.
 
-Historische936-Fehler bleiben unverändert dokumentiert. Die neue Original900-s-Diagnose besteht jeGehsegment; der gesamte942-s-Prozess ist kein unter900-s-Gesamtlauf. Das Cloud30FPS-Ziel bleibt verfehlt. Physisches iPad/Safari, tatsächlicheOS-/Browserversion und Unterrichtspilot bleiben offen. Ein Softwarekandidat ist keine Geräte- oder Wirkungsfreigabe.
+Der vorherige [e9899ef-Abschluss](../../verification/kompakt-v1/final/ABSCHLUSS.md) bleibt historisch erhalten. Maßgeblich für die aktuelle Lieferung sind ausschließlich die oben verknüpften neuen Nachweise.
 
-[Geräte-/Pilotblatt](GERAETE-UND-PILOT-V1.md). Keine weiteren Feature-/Ästhetikphasen; als Nächstes genau die gezielte Nutzer-/Geräteabnahme. PR#3 bleibt Draft. Kein Merge, kein Deployment, keine Veröffentlichung.
+[Geräte-/Pilotblatt](GERAETE-UND-PILOT-V1.md). PR #3 bleibt Draft. Kein Merge, Deployment oder veröffentlichtes Release; keine neue Feature- oder Gestaltungsphase.

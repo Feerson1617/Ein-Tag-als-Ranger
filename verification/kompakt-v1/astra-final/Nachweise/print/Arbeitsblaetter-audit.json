@@ -1,0 +1,586 @@
+{
+  "pdf": "/workspace/Ein-Tag-als-Ranger/outputs/Ranger-Kompakt-Lernpaket/Arbeitsblaetter.pdf",
+  "sha256": "9b74c8d17e0eb01402a8bebc2d6ed03aad5aaace39af60b921bcd4344c5b00bb",
+  "pageCount": 38,
+  "cardPages": {
+    "C01": [
+      2,
+      3
+    ],
+    "C02": [
+      4
+    ],
+    "C03": [
+      5
+    ],
+    "C04": [
+      6,
+      7
+    ],
+    "C05": [
+      8
+    ],
+    "C06": [
+      9
+    ],
+    "C07": [
+      10,
+      11
+    ],
+    "C08": [
+      12
+    ],
+    "C09": [
+      13
+    ],
+    "C10": [
+      14
+    ],
+    "C11": [
+      15
+    ],
+    "C12": [
+      16
+    ],
+    "C13": [
+      17,
+      18
+    ],
+    "C14": [
+      19
+    ],
+    "C15": [
+      20,
+      21
+    ],
+    "C16": [
+      22
+    ],
+    "C17": [
+      23,
+      24,
+      25,
+      26
+    ],
+    "C18": [
+      27
+    ],
+    "C19": [
+      28
+    ],
+    "C20": [
+      29
+    ],
+    "C21": [
+      30,
+      31
+    ],
+    "C22": [
+      32
+    ],
+    "C23": [
+      33,
+      34
+    ],
+    "C24": [
+      35,
+      36,
+      37
+    ],
+    "C25": [
+      38
+    ]
+  },
+  "pages": [
+    {
+      "page": 1,
+      "cards": [],
+      "characters": 1685,
+      "lastTextYpt": 451.48
+    },
+    {
+      "page": 2,
+      "cards": [
+        "C01"
+      ],
+      "characters": 3197,
+      "lastTextYpt": 785.23
+    },
+    {
+      "page": 3,
+      "cards": [
+        "C01"
+      ],
+      "characters": 1199,
+      "lastTextYpt": 638.23
+    },
+    {
+      "page": 4,
+      "cards": [
+        "C02"
+      ],
+      "characters": 789,
+      "lastTextYpt": 599.23
+    },
+    {
+      "page": 5,
+      "cards": [
+        "C03"
+      ],
+      "characters": 1132,
+      "lastTextYpt": 758.98
+    },
+    {
+      "page": 6,
+      "cards": [
+        "C04"
+      ],
+      "characters": 2049,
+      "lastTextYpt": 607.48
+    },
+    {
+      "page": 7,
+      "cards": [
+        "C04"
+      ],
+      "characters": 915,
+      "lastTextYpt": 530.98
+    },
+    {
+      "page": 8,
+      "cards": [
+        "C05"
+      ],
+      "characters": 1087,
+      "lastTextYpt": 658.48
+    },
+    {
+      "page": 9,
+      "cards": [
+        "C06"
+      ],
+      "characters": 851,
+      "lastTextYpt": 620.98
+    },
+    {
+      "page": 10,
+      "cards": [
+        "C07"
+      ],
+      "characters": 619,
+      "lastTextYpt": 323.23
+    },
+    {
+      "page": 11,
+      "cards": [
+        "C07"
+      ],
+      "characters": 696,
+      "lastTextYpt": 431.98
+    },
+    {
+      "page": 12,
+      "cards": [
+        "C08"
+      ],
+      "characters": 998,
+      "lastTextYpt": 761.98
+    },
+    {
+      "page": 13,
+      "cards": [
+        "C09"
+      ],
+      "characters": 977,
+      "lastTextYpt": 615.73
+    },
+    {
+      "page": 14,
+      "cards": [
+        "C10"
+      ],
+      "characters": 791,
+      "lastTextYpt": 634.48
+    },
+    {
+      "page": 15,
+      "cards": [
+        "C11"
+      ],
+      "characters": 1228,
+      "lastTextYpt": 674.98
+    },
+    {
+      "page": 16,
+      "cards": [
+        "C12"
+      ],
+      "characters": 1034,
+      "lastTextYpt": 740.23
+    },
+    {
+      "page": 17,
+      "cards": [
+        "C13"
+      ],
+      "characters": 2025,
+      "lastTextYpt": 623.23
+    },
+    {
+      "page": 18,
+      "cards": [
+        "C13"
+      ],
+      "characters": 1066,
+      "lastTextYpt": 525.73
+    },
+    {
+      "page": 19,
+      "cards": [
+        "C14"
+      ],
+      "characters": 887,
+      "lastTextYpt": 634.48
+    },
+    {
+      "page": 20,
+      "cards": [
+        "C15"
+      ],
+      "characters": 3322,
+      "lastTextYpt": 776.98
+    },
+    {
+      "page": 21,
+      "cards": [
+        "C15"
+      ],
+      "characters": 2026,
+      "lastTextYpt": 784.48
+    },
+    {
+      "page": 22,
+      "cards": [
+        "C16"
+      ],
+      "characters": 962,
+      "lastTextYpt": 612.73
+    },
+    {
+      "page": 23,
+      "cards": [
+        "C17"
+      ],
+      "characters": 3812,
+      "lastTextYpt": 757.16
+    },
+    {
+      "page": 24,
+      "cards": [
+        "C17"
+      ],
+      "characters": 2538,
+      "lastTextYpt": 586.48
+    },
+    {
+      "page": 25,
+      "cards": [
+        "C17"
+      ],
+      "characters": 463,
+      "lastTextYpt": 450.73
+    },
+    {
+      "page": 26,
+      "cards": [
+        "C17"
+      ],
+      "characters": 2766,
+      "lastTextYpt": 513.73
+    },
+    {
+      "page": 27,
+      "cards": [
+        "C18"
+      ],
+      "characters": 982,
+      "lastTextYpt": 724.48
+    },
+    {
+      "page": 28,
+      "cards": [
+        "C19"
+      ],
+      "characters": 946,
+      "lastTextYpt": 761.98
+    },
+    {
+      "page": 29,
+      "cards": [
+        "C20"
+      ],
+      "characters": 962,
+      "lastTextYpt": 746.23
+    },
+    {
+      "page": 30,
+      "cards": [
+        "C21"
+      ],
+      "characters": 2567,
+      "lastTextYpt": 749.23
+    },
+    {
+      "page": 31,
+      "cards": [
+        "C21"
+      ],
+      "characters": 1001,
+      "lastTextYpt": 659.23
+    },
+    {
+      "page": 32,
+      "cards": [
+        "C22"
+      ],
+      "characters": 1163,
+      "lastTextYpt": 744.73
+    },
+    {
+      "page": 33,
+      "cards": [
+        "C23"
+      ],
+      "characters": 2505,
+      "lastTextYpt": 688.48
+    },
+    {
+      "page": 34,
+      "cards": [
+        "C23"
+      ],
+      "characters": 1319,
+      "lastTextYpt": 557.23
+    },
+    {
+      "page": 35,
+      "cards": [
+        "C24"
+      ],
+      "characters": 2835,
+      "lastTextYpt": 717.41
+    },
+    {
+      "page": 36,
+      "cards": [
+        "C24"
+      ],
+      "characters": 938,
+      "lastTextYpt": 309.73
+    },
+    {
+      "page": 37,
+      "cards": [
+        "C24"
+      ],
+      "characters": 1085,
+      "lastTextYpt": 623.23
+    },
+    {
+      "page": 38,
+      "cards": [
+        "C25"
+      ],
+      "characters": 909,
+      "lastTextYpt": 614.98
+    }
+  ],
+  "answerTables": [
+    {
+      "card": "C01",
+      "text": "Biom / Quelle P in mm/Jahr / Spanne Wasserverfügbarkeit / Vegetation Vergleichsgrenze / fehlende Messung",
+      "pages": [
+        3
+      ]
+    },
+    {
+      "card": "C02",
+      "text": "Ort / Datum / Methode Faktor / Einheit oder Skala Wert / Zeigerzahl Wiederholung / Unsicherheit",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "card": "C03",
+      "text": "Parameter / Einheit Kontrolllauf Vergleich / Eingriff",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "card": "C04",
+      "text": "Ort / Datum / Methode Faktor / Einheit oder Skala Wert / Zeigerzahl Wiederholung / Unsicherheit",
+      "pages": [
+        7
+      ]
+    },
+    {
+      "card": "C05",
+      "text": "Unbekannter Fund / Ort Eigene erkennbare Merkmale Vergleichsalternative Bestimmung / Gruppe / Grenze",
+      "pages": [
+        8
+      ]
+    },
+    {
+      "card": "C06",
+      "text": "Quadrat / Fläche / Tiefe Einmal gezählte Individuen / Null Dichte / m² Auswahlfehler / Wiederholung",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "card": "C07",
+      "text": "Pool / Bilanzgrenze Zufluss Abfluss Was bleibt offen?",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "card": "C08",
+      "text": "Pool / Bilanzgrenze Zufluss Abfluss Was bleibt offen?",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "card": "C09",
+      "text": "Vergleichsbedingung / Herkunft Beobachtung / bereitgestellte Information Funktionshypothese Alternative / nötige Kontrolle",
+      "pages": [
+        13
+      ]
+    },
+    {
+      "card": "C10",
+      "text": "Organismus / Beleg Nahrung / Größe Raum / Tiefe Zeit / Technik Überlappung / Unterschied",
+      "pages": [
+        14
+      ]
+    },
+    {
+      "card": "C11",
+      "text": "Vergleichsbedingung / Herkunft Beobachtung / bereitgestellte Information Funktionshypothese Alternative / nötige Kontrolle",
+      "pages": [
+        15
+      ]
+    },
+    {
+      "card": "C12",
+      "text": "Parameter / Einheit Kontrolllauf Vergleich / Eingriff",
+      "pages": [
+        16
+      ]
+    },
+    {
+      "card": "C13",
+      "text": "Vergleichsbedingung / Herkunft Beobachtung / bereitgestellte Information Funktionshypothese Alternative / nötige Kontrolle",
+      "pages": [
+        18
+      ]
+    },
+    {
+      "card": "C14",
+      "text": "Organismus / Beleg Nahrung / Größe Raum / Tiefe Zeit / Technik Überlappung / Unterschied",
+      "pages": [
+        19
+      ]
+    },
+    {
+      "card": "C15",
+      "text": "Organismus / Beleg Nahrung / Größe Raum / Tiefe Zeit / Technik Überlappung / Unterschied",
+      "pages": [
+        21
+      ]
+    },
+    {
+      "card": "C16",
+      "text": "Vergleichsbedingung / Herkunft Beobachtung / bereitgestellte Information Funktionshypothese Alternative / nötige Kontrolle",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "card": "C17",
+      "text": "Merkmal / Art Wert / Einheit / Stadium Ort / Zeitraum / Methode Vergleichbarkeit / Unsicherheit",
+      "pages": [
+        25
+      ]
+    },
+    {
+      "card": "C18",
+      "text": "Parameter / Einheit Kontrolllauf Vergleich / Eingriff",
+      "pages": [
+        27
+      ]
+    },
+    {
+      "card": "C19",
+      "text": "Pool / Bilanzgrenze Zufluss Abfluss Was bleibt offen?",
+      "pages": [
+        28
+      ]
+    },
+    {
+      "card": "C20",
+      "text": "Pool / Bilanzgrenze Zufluss Abfluss Was bleibt offen?",
+      "pages": [
+        29
+      ]
+    },
+    {
+      "card": "C21",
+      "text": "Pool / Bilanzgrenze Zufluss Abfluss Was bleibt offen?",
+      "pages": [
+        31
+      ]
+    },
+    {
+      "card": "C22",
+      "text": "Kriterium / Gewicht Umleitung Saisonale Ruhe Bohlenweg Beleg / Perspektive",
+      "pages": [
+        32
+      ]
+    },
+    {
+      "card": "C22",
+      "text": "Sachinformation Wert / Norm Folge / Nebenfolge Unsicherheit",
+      "pages": [
+        32
+      ]
+    },
+    {
+      "card": "C23",
+      "text": "Versuchs-/Kontrollbedingung Zeit / Konzentration / Einheit Endpunkt und Ergebnisrichtung Aussagegrenze / neuer Versuch",
+      "pages": [
+        34
+      ]
+    },
+    {
+      "card": "C24",
+      "text": "Kategorie / Systemgrenze Fläche × Faktoren Teilbetrag / Einheit Quelle / Jahr / Annahme",
+      "pages": [
+        37
+      ]
+    },
+    {
+      "card": "C25",
+      "text": "Ort / Datum / Methode Faktor / Einheit oder Skala Wert / Zeigerzahl Wiederholung / Unsicherheit",
+      "pages": [
+        38
+      ]
+    }
+  ],
+  "checkedTextFragments": 727,
+  "missingTextFragments": [],
+  "findings": [],
+  "passed": true
+}

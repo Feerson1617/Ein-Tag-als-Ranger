@@ -1,0 +1,9 @@
+{
+  "productBefore": "e9899efaa314d052191d7d3a95b5de904f2932b6",
+  "changedRuntimeFiles": [
+    "compact/classroom-start.js",
+    "compact/learning-documents.js"
+  ],
+  "allOtherRuntimeMediaCSSFilesByteIdentical": true,
+  "scope": "Only print CSS in embedded document generators changed. Game simulation, geometry, camera, input, storage/import/evidence/mission contracts and model revision unchanged. This binding does not relabel old full-run results as new tests."
+}

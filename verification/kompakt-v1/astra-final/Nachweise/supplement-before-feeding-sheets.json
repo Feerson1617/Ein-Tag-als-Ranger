@@ -1,0 +1,27 @@
+{
+  "scope": "Declared supplemental full native-zoom captures and actual archive content audit, serialized after the complete34process plan. No runtime rebuild or edits.",
+  "checks": [
+    {
+      "name": "native-ui",
+      "exitCode": 0,
+      "passed": true,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "work/v1-abschluss/supplement-native-middle.py",
+        "--output",
+        "/workspace/Ein-Tag-als-Ranger/work/astra-abschluss-20261025/final-4eb186a/native-ui"
+      ]
+    },
+    {
+      "name": "public-content",
+      "exitCode": 0,
+      "passed": true,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "work/v1-abschluss/audit-public-content.py",
+        "--qa",
+        "/workspace/Ein-Tag-als-Ranger/work/astra-abschluss-20261025/final-4eb186a"
+      ]
+    }
+  ]
+}
