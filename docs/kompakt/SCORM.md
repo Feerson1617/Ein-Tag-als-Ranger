@@ -4,7 +4,7 @@ Diese Ausgabe verwendet die bestehende Universalvorlage aus `Feerson1617/Interak
 
 ## Ausgabe und Speicherung
 
-`tools/build-compact.py` erzeugt weiterhin die normale Webfassung und eigenständige HTML-Datei. Das SCORM-Staging verwendet genau diesen Webordner, seine lokalen Assets, Module und Fachinhalte. Lehrkräftelösungen und interne Prüfdateien werden entfernt; allgemeine Schülerarbeitsblätter und Quellen bleiben. Die Fach- und Importvalidatoren werden nicht verändert.
+`tools/build-compact.py` erzeugt weiterhin die normale Webfassung und eigenständige HTML-Datei. Das SCORM-Staging verwendet genau diesen Webordner, seine lokalen Assets, Module und Fachinhalte. Lehrkräftelösungen und interne Prüfdateien werden entfernt; allgemeine Schülerarbeitsblätter und Quellen bleiben. Die SCORM-Schülerpfade verweisen zur Sicherung auf das Arbeitsblatt; Anweisungen zum persönlichen JSON-Export werden dort ersetzt. Die Fach- und Importvalidatoren werden nicht verändert.
 
 Die Anwendung lädt `web/storage-adapter.js`. Er wählt anhand des frühen `SCORM_CONTEXT.classroomMode` vor jedem Browser-Speicherzugriff entweder den bisherigen lokalen Speicher oder einen eigenen flüchtigen Speicher. Im SCORM-Modus werden keine persistenten Speicher-APIs verwendet und keine vorhandenen Spiel-/Fremddaten eingelesen oder gelöscht. Beobachtungen, Antworten, Entwürfe, K1–K5 und lokale Modellläufe bleiben innerhalb derselben geöffneten Sitzung erhalten. Neuladen oder ein neuer Start beginnt leer. Persönlicher Dateiimport/-export ist ausschließlich in dieser Oberfläche entfernt. Keine globalen Speicherpatches im Produkt.
 

@@ -2,7 +2,7 @@
 
 Grundlage: `28284b1e1638f546b5b191cf3b9935fc09ad3ce6` plus die in `local-checks.json` gehashten Änderungen. Diese Dateien sind **keine** Behauptung eines bereits erfolgten GitHub-Artefaktrückdownloads. Maßgeblicher Liefernachweis ist der erfolgreich abgeschlossene Actions-Lauf am finalen Commit, mit `delivery.json`, `download-verified.json` und Browsernachweisen im Artefakt `Ranger-SCORM-proof`.
 
-Erfolgreiche lokale Prüfungen stehen einzeln in `local-checks.json`; unveränderte Standardtests, Paket-, Fach-, Speicher- und Druckregressionen sind durch vollständige Textprotokolle belegt. Die letzten sieben SCORM-Kernprüfungen bestanden; der zusätzlich entwickelte Interaktionstest wurde nach seinem unten beschriebenen Treiberfehler separat erfolgreich wiederholt. Der gesamte letzte lokale Acht-Test-Lauf bleibt deshalb als **FEHLGESCHLAGEN** dokumentiert; GitHub führt alle acht Fälle zusammen für Chromium und WebKit erneut aus.
+Erfolgreiche lokale Prüfungen stehen einzeln in `local-checks.json`; unveränderte Standardtests, Paket-, Fach-, Speicher- und Druckregressionen sind durch vollständige Textprotokolle belegt. Die letzten sieben SCORM-Kernprüfungen bestanden; der zusätzlich entwickelte Interaktionstest wurde nach seinem unten beschriebenen Treiberfehler separat erfolgreich wiederholt. Der unter `scorm-core-and-initial-interaction.log` gesicherte frühe Acht-Test-Lauf bleibt als **FEHLGESCHLAGEN** dokumentiert. Anschließend bestanden alle acht Prüfungen zusammen am sauberen Commit `0c5cc3e7c9a601b0ef3cb1e0dcfd5a03a8d65f48` (`scorm-complete-0c5cc3e.log`). GitHub prüft zusätzlich beide Browser.
 
 ## Ursachen und Fehlversuche
 
@@ -17,3 +17,9 @@ Erfolgreiche lokale Prüfungen stehen einzeln in `local-checks.json`; unverände
 Die Mock-API protokolliert bei Start/Beenden genau `LMSInitialize("")`, `LMSGetLastError()`, `LMSFinish("")`, `LMSGetLastError()`. Der Mock setzt anschließend selbst `completed`; kein Ranger-Statusschreibzugriff. Diese automatische LMS-Reaktion und die ausstehende echte itslearning-Abnahme stehen in [SCORM.md](../../docs/kompakt/SCORM.md).
 
 Die Landschaft und die tatsächlich gerenderte Nahrungsaufnahme wurden an unveränderten Browseraufnahmen visuell geprüft. Das bestätigt dargestellte Geometrie und Bedienbarkeit im geprüften Browser; keine Naturvalidierung, keine allgemeine didaktische oder gestalterische Endabnahme und keine reale iPad-Zertifizierung. Frühere 900-Sekunden-Cloudfehler bleiben **FEHLGESCHLAGEN**. Merge, Deployment, Release-Veröffentlichung und itslearning-Upload sind nicht erfolgt.
+
+## Schülerdokumente: abschließende Textkorrektur
+
+Bei der abschließenden Sichtung enthielten die herunterladbaren Schülerpfade noch die normale Anleitung „JSON exportieren“. Ausschließlich das SCORM-Staging ersetzt sie durch Arbeitsblattsicherung und den Hinweis auf den flüchtigen Sitzungsspeicher. Unbenutzte ursprüngliche Seitentexte werden nicht mehr in der Dokument-Metadatenkopie mitgeliefert.
+
+**BESTANDEN:** Der aktualisierte vollständige Sitzungstest erwirbt erneut K1–K5, lädt alle drei Schülerdokumente tatsächlich herunter, prüft deren Texte sowie leeren Neustart und unveränderte Fremddaten (`student-documents-browser.log`). Die heruntergeladenen Schülerpfade A/B haben weiterhin jeweils zwei A4-Seiten, der Arbeitsblattpool 38 (`scorm-student-print.json`). Direkte `file://`-Navigation war durch die Browserrichtlinie **FEHLGESCHLAGEN**; der reguläre lokale HTTP-Druckserver wurde erfolgreich verwendet, ohne Richtlinienänderung.
