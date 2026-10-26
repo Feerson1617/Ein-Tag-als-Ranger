@@ -9,7 +9,7 @@ from threading import Thread
 from playwright.sync_api import sync_playwright
 from module_graph import ModuleGraph
 from compact_runtime import audit_standalone
-import argparse,json,shutil,hashlib,subprocess,time,traceback,html
+import argparse,base64,json,shutil,hashlib,subprocess,time,traceback,html
 p=argparse.ArgumentParser();p.add_argument('--detail',action='store_true');p.add_argument('--entry',default='Ranger-Kompakt.html');p.add_argument('--site',default='outputs');p.add_argument('--output',default='work/qa-correction/feeding-browser');a=p.parse_args();root=Path(__file__).resolve().parents[1];out=root/a.output;out.mkdir(parents=True,exist_ok=True)
 # Immutable authored prey positions select sampling cadence only. They never
 # place animals, advance a hidden clock, create a resource or grant evidence.
@@ -23,6 +23,11 @@ def save():(out/'result.json').write_text(json.dumps(result,ensure_ascii=False,i
 def sample(page,id):
  d=page.locator('#world').evaluate('(c)=>({time:Number(c.dataset.simulationTime),observer:JSON.parse(c.dataset.observer),actors:JSON.parse(c.dataset.coastal),events:JSON.parse(c.dataset.coastalEvents),runId:c.dataset.runId,modelObservation:c.dataset.modelObservation,ownSeconds:Number(c.dataset.observationSeconds),renderRevision:c.dataset.renderRevision,sceneRevision:c.dataset.sceneRevision,visibility:JSON.parse(c.dataset.behaviorVisibility||"null"),detail:JSON.parse(c.dataset.feedingDetail||"null")})');d['actor']=next(a for a in d.pop('actors')if a['id']==id);return d
 def tick(page,size):page.locator('#behavior-step-size').select_option(str(size));page.locator('#behavior-step').click();page.wait_for_function('document.querySelector("#world").dataset.renderRevision===document.querySelector("#world").dataset.sceneRevision')
+def begin_video(page):
+ page.evaluate("()=>{const stream=document.querySelector('#world').captureStream(12);const v=window.__feedingVideo={stream,chunks:[]};v.rec=new MediaRecorder(stream,{mimeType:'video/webm;codecs=vp8',videoBitsPerSecond:900000});v.rec.ondataavailable=e=>{if(e.data.size)v.chunks.push(e.data)};v.rec.start(1000);}")
+def end_video(page,row):
+ encoded=page.evaluate("()=>new Promise(resolve=>{const v=window.__feedingVideo;v.rec.onstop=async()=>{const b=new Uint8Array(await new Blob(v.chunks,{type:'video/webm'}).arrayBuffer());let s='';for(let i=0;i<b.length;i+=32768)s+=String.fromCharCode(...b.subarray(i,i+32768));v.stream.getTracks().forEach(t=>t.stop());window.__feedingVideo=null;resolve(btoa(s));};v.rec.stop();})")
+ raw=base64.b64decode(encoded);assert len(raw)>3000 and raw.startswith(bytes.fromhex('1a45dfa3'));name=row['id']+'-model-steps.webm';(out/name).write_bytes(raw);row['video']={'file':name,'bytes':len(raw),'sha256':hashlib.sha256(raw).hexdigest(),'scope':'Direct MediaRecorder capture of the live WebGL canvas during the explicitly labelled public model steps. Pauses and stepped motion are retained; not an unaccelerated animation or FPS proof. No synthesized or interpolated frames.'};save()
 def capture(page,row,s,phase):
  assert s['visibility']and all(s['visibility'][k]for k in ['meshVisible','bodyClear','billClear','bodyInFrame']),(row['id'],phase,'Actual model hidden or occluded',s['visibility'])
  name=row['id']+'-'+phase+'.png';page.screenshot(path=str(out/name));row['captures'].append({'file':name,'sha256':hashlib.sha256((out/name).read_bytes()).hexdigest(),'phase':phase,'sample':s});save();print('CAPTURE',row['id'],phase,s['time'],flush=True)
@@ -39,7 +44,7 @@ with sync_playwright()as pw:
    fresh_window=sample(page,'compact-'+id);assert fresh_window['observer']==before_window['observer'];assert page.evaluate('localStorage.getItem("ranger-compact-fieldbook-v2")')==stored_before
    page.locator(f'[data-behavior="compact-{id}"]').click();page.wait_for_function('document.querySelector("#world").dataset.modelObservation!==""');
    if a.detail:page.locator('#behavior-detail').click();tick(page,.025);page.wait_for_function('JSON.parse(document.querySelector("#world").dataset.feedingDetail||"null")!==null')
-   row={'id':'compact-'+id,'captures':[],'event':None};result['sequences'].append(row);s=sample(page,row['id']);capture(page,row,s,'initial');seen=set();episode=None
+   row={'id':'compact-'+id,'captures':[],'event':None};result['sequences'].append(row);begin_video(page);s=sample(page,row['id']);capture(page,row,s,'initial');seen=set();episode=None
    row['beforeNewWindow']=before_window;row['freshWindow']=fresh_window
    # The first fine step can already be the approach. Do not silently skip that
    # phase and switch the test to a second prey while the lens keeps the first.
@@ -67,11 +72,11 @@ with sync_playwright()as pw:
     for c in row['captures']:
      if c['phase'] in ['initial','after-departure']:continue
      d=c['sample']['detail'];assert d and d['eventId']==row['event']['id'] and d['individualId']==row['id'] and d['preyId']==row['preyId'];assert d['sharedLiveSceneNodes'] and d['preyGeometryUnscaled']
-   assert page.locator('#count').inner_text()=='0';assert not result['errors'];row['passed']=True;save();ctx.close();print('PASS',id,flush=True)
+   assert page.locator('#count').inner_text()=='0';assert not result['errors'];end_video(page,row);row['passed']=True;save();ctx.close();print('PASS',id,flush=True)
   result['passed']=True;result['completedAt']=time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime());save()
   cards=[]
   for row in result['sequences']:
-   cards.append('<h2>'+html.escape(row['id'])+'</h2><div class="grid">'+''.join('<figure><img loading="lazy" src="'+html.escape(c['file'])+'"><figcaption>'+html.escape(c['phase'])+' · t='+str(c['sample']['time'])+' Modell-s</figcaption></figure>'for c in row['captures'])+'</div>')
+   cards.append('<h2>'+html.escape(row['id'])+'</h2><p>Originalvideo der sichtbaren Modellschritte: keine Echtzeit-Zertifizierung.</p><video controls preload="none" style="max-width:100%" src="'+html.escape(row['video']['file'])+'"></video><div class="grid">'+''.join('<figure><img loading="lazy" src="'+html.escape(c['file'])+'"><figcaption>'+html.escape(c['phase'])+' · t='+str(c['sample']['time'])+' Modell-s</figcaption></figure>'for c in row['captures'])+'</div>')
   (out/'index.html').write_text('<!doctype html><html lang="de"><meta charset="utf-8"><title>Tatsächliche Nahrungssuche</title><style>body{font:16px system-ui;background:#eee8d6;color:#263c32;margin:25px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:15px}figure{margin:0}img{width:100%}</style><h1>Vier tatsächliche WebGL-Bildfolgen</h1><p>Beschriftete Modellzeitschritte durch die sichtbare Oberfläche; keine Tier-, Beute- oder Beleginjektion. Originalaufnahmen unverändert. Kamera folgt dem Vogel. Dies ist keine Echtzeit-FPS-Prüfung oder biologische Endabnahme.</p>'+''.join(cards))
  except Exception:
   result['failure']=traceback.format_exc()

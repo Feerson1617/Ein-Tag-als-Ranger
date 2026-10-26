@@ -61,12 +61,12 @@ export function createOrganism(taxon,stage='adult',remaining=1){
   const curve=new THREE.CatmullRomCurve3([new THREE.Vector3(-.5,.25,0),new THREE.Vector3(-.95,.08,.12),new THREE.Vector3(-1.7,.025,.32)]);b.add(new THREE.TubeGeometry(curve,18,.025,6,false),'#ab947b');for(const side of [-1,1])for(let k=0;k<4;k++)line([.82,.33,side*.04],[.74+k*.025,.32+k*.018,side*.30],.0025,'#c5b8a1',.0008);parts.legs=4;
  }else if(['bombus_lapidarius','coccinella_septempunctata','aphidoidea','ixodes_ricinus'].includes(taxon)){
   const bee=taxon==='bombus_lapidarius',lady=taxon==='coccinella_septempunctata',tick=taxon==='ixodes_ricinus',color=bee?black:lady?'#b54535':tick?'#91634c':'#80a568';
-  ball(color,0,.35,0,.62,.32,.42);ball(bee?'#9e4435':color,-.42,.36,0,.3,.27,.35);ball(black,.56,.35,0,.24,.22,.26);const pairs=tick?4:3;
+  ball(color,0,.35,0,.62,.32,.42);if(!tick)ball(bee?'#9e4435':color,-.42,.36,0,.3,.27,.35);ball(tick?'#68513c':black,tick?.60:.56,.35,0,tick?.12:.24,tick?.08:.22,tick?.13:.26);const pairs=tick?4:3;
   for(let i=0;i<pairs;i++)for(const side of [-1,1]){const x=-.32+i*.27;line([x,.3,side*.22],[x+.12,.2,side*.65],.025,black);line([x+.12,.2,side*.65],[x-.1,0,side*.86],.02,black);}
-  parts.legs=pairs*2;for(const side of [-1,1]){eye(.7,.43,side*.18,.04);if(!tick)line([.67,.43,side*.12],[.93,.64,side*.36],.018,black);}
+  parts.legs=pairs*2;if(!tick)for(const side of [-1,1]){eye(.7,.43,side*.18,.04);line([.67,.43,side*.12],[.93,.64,side*.36],.018,black);}
   if(lady){const spots=[[-.31,-.27],[-.02,-.35],[.25,-.28],[-.31,.27],[-.02,.35],[.25,.28],[.45,0]];for(const [x,z]of spots)ball(black,x,.35+.29*Math.sqrt(Math.max(.05,1-(x/.7)**2-(z/.5)**2)),z,.075,.025,.075);line([-.6,.65,0],[.45,.65,0],.008,black);for(const side of [-1,1])ball(cream,.57,.5,side*.22,.08,.04,.05);parts.spots=7;}
   if(bee){for(let i=0;i<45;i++){const a=i*2.399,x=-.3+(i%8)*.08;line([x,.35+Math.cos(a)*.28,Math.sin(a)*.4],[x-.03,.35+Math.cos(a)*.34,Math.sin(a)*.46],.005,'#67685b');}for(const side of [-1,1]){const w=new GeometryBatch();w.add(sphere,'#c7c9ad',[0,0,side*.4],[.48,.018,.26]);const wing=w.mesh();wing.position.set(.05,.59,side*.13);root.add(wing);wings.push(wing);}}
-  if(tick){ball('#433d31',.26,.58,0,.27,.045,.27);line([.70,.32,0],[.86,.31,0],.035,'#68513c',.016);}
+  if(tick){ball('#433d31',.24,.60,0,.30,.055,.29);line([.66,.35,0],[.82,.34,0],.027,'#68513c',.013);}
   if(taxon==='aphidoidea')for(const side of [-1,1])line([-.35,.5,side*.23],[-.52,.76,side*.28],.035,'#526d43',.022);
  }else if(taxon==='aglais_io'){
   if(stage==='caterpillar'){for(let i=0;i<12;i++){ball(black,-.9+i*.15,.15,0,.12,.13,.11);for(let j=0;j<5;j++){const a=j/5*Math.PI;line([-.9+i*.15,.17+Math.sin(a)*.09,Math.cos(a)*.09],[-.94+i*.15,.17+Math.sin(a)*.22,Math.cos(a)*.22],.01,black);}for(const side of [-1,1])ball(cream,-.9+i*.15,.18,side*.108,.012,.01,.01);}for(let k=0;k<8;k++)for(const side of [-1,1]){const x=-.70+k*.18;line([x,.10,side*.06],[x+.025,.015,side*.10],.018,black,.011);}parts.stage='caterpillar';}
