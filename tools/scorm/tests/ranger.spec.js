@@ -83,3 +83,19 @@ test('Visible coastal interaction in the actual SCO retains finite prey and labe
  await info.attach('visible-coastal-model',{body:JSON.stringify({event,observations,scope:'Rendered, explicitly stepped model; no own binocular evidence fabricated.'},null,2),contentType:'application/json'});
  await f.locator('#feeding-close').click();await f.locator('#behavior-stop').click();await f.locator('#scorm-exit').click();
 });
+
+// A native press may span rendered frames. Replacing the button text during
+// that press can invalidate WebKit's click target; the dialog must still open.
+test('Study click survives rendered frames between pointer down and up',async({page},info)=>{
+ const f=await launch(page);await view(f,'nettle');const button=f.locator('#study');await expect(button).toHaveText('Ort untersuchen');
+ const box=await button.boundingBox();expect(box).toBeTruthy();await page.mouse.move(box.x+box.width/2,box.y+box.height/2);
+ await page.mouse.down();try{
+  const before=await f.locator('#world').getAttribute('data-simulation-time');
+  await expect.poll(()=>f.locator('#world').getAttribute('data-simulation-time')).not.toBe(before);
+  const second=await f.locator('#world').getAttribute('data-simulation-time');
+  await expect.poll(()=>f.locator('#world').getAttribute('data-simulation-time')).not.toBe(second);
+ }finally{await page.mouse.up();}
+ await expect(f.locator('#panel')).toHaveJSProperty('open',true);
+ await expect(f.locator('[data-inspect][data-taxon="urtica_dioica"]').first()).toBeVisible();
+ await expect(f.locator('#count')).toHaveText('0');await capture(page,info,'study-after-held-native-click');
+});
