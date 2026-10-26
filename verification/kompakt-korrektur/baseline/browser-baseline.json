@@ -1,0 +1,196 @@
+{
+  "sourceCommit": "eece965c2afdd367ab9a610e0e05d09e9c706388",
+  "scope": "Actual unchanged standalone HTML; own reconstructed cases, original archive inaccessible",
+  "captures": [
+    {
+      "file": "start.png",
+      "observer": {
+        "x": -52,
+        "z": 8,
+        "yaw": 0.9505468408120752,
+        "pitch": -0.1076920413878842
+      },
+      "simulationTime": "0.620"
+    },
+    {
+      "file": "woodruff.png",
+      "observer": {
+        "x": -54.32327704373523,
+        "z": 8.043468266353608,
+        "yaw": 0.885066815888611,
+        "pitch": -0.5203797766551117
+      },
+      "simulationTime": "1.205"
+    },
+    {
+      "file": "nettle.png",
+      "observer": {
+        "x": -40.47863381511998,
+        "z": 14.197259088003703,
+        "yaw": 0.8850668158886108,
+        "pitch": -0.4174609346054198
+      },
+      "simulationTime": "1.760"
+    },
+    {
+      "file": "wood.png",
+      "observer": {
+        "x": -60,
+        "z": -4,
+        "yaw": 2.289626326416521,
+        "pitch": -0.46001848475880475
+      },
+      "simulationTime": "2.265"
+    },
+    {
+      "file": "village.png",
+      "observer": {
+        "x": -21,
+        "z": -2,
+        "yaw": -2.3086113869153615,
+        "pitch": -0.0479423390503622
+      },
+      "simulationTime": "2.803"
+    },
+    {
+      "file": "ramp.png",
+      "observer": {
+        "x": 3,
+        "z": 16,
+        "yaw": -0.4124104415973873,
+        "pitch": -0.030735012307624418
+      },
+      "simulationTime": "3.245"
+    },
+    {
+      "file": "salt-shrub.png",
+      "observer": {
+        "x": 44.291782814811064,
+        "z": 11.857750914279078,
+        "yaw": 0.8850668158886108,
+        "pitch": -0.3944189439455479
+      },
+      "simulationTime": "3.750"
+    },
+    {
+      "file": "salt-segments.png",
+      "observer": {
+        "x": 47.06361154650879,
+        "z": -1.1226803810237544,
+        "yaw": -0.8850668158886109,
+        "pitch": -0.7030085891335317
+      },
+      "simulationTime": "4.271"
+    },
+    {
+      "file": "salt-grass.png",
+      "observer": {
+        "x": 47.84118774223577,
+        "z": -10.62627088719092,
+        "yaw": 0.8850668158886108,
+        "pitch": -0.39489897841878646
+      },
+      "simulationTime": "4.760"
+    },
+    {
+      "file": "coast.png",
+      "observer": {
+        "x": 63,
+        "z": -13,
+        "yaw": -2.3036114285814033,
+        "pitch": -0.12788807707486585
+      },
+      "simulationTime": "5.378"
+    }
+  ],
+  "checks": [
+    {
+      "file": "repro-impossible-coordinates.json",
+      "acceptedByActualHTML": true,
+      "persisted": {
+        "schemaVersion": 2,
+        "worldVersion": "ranger-compact-v2",
+        "records": [
+          {
+            "id": "baseline-woodruff",
+            "taxon": "galium_odoratum",
+            "individualId": "ranger-compact-v2:galium_odoratum:0",
+            "initialSeed": 20260825,
+            "worldVersion": "ranger-compact-v2",
+            "runId": "baseline-run",
+            "window": "summer",
+            "source": "own-observation",
+            "observationSeconds": 3,
+            "simulationTime": 0,
+            "x": 999999,
+            "z": -999999,
+            "method": "invented-method",
+            "siteId": "compact-forest-core",
+            "note": "Synthetic QA baseline."
+          }
+        ],
+        "archives": [],
+        "previousEditions": [],
+        "learning": {
+          "activeMission": null,
+          "level": "gA",
+          "answers": {},
+          "protocols": [],
+          "measurements": [],
+          "samples": [],
+          "experiments": [],
+          "drafts": {}
+        }
+      }
+    },
+    {
+      "file": "repro-invalid-top-level-features.json",
+      "acceptedByActualHTML": true,
+      "persisted": {
+        "schemaVersion": 2,
+        "worldVersion": "ranger-compact-v2",
+        "records": [
+          {
+            "id": "baseline-woodruff",
+            "taxon": "galium_odoratum",
+            "individualId": "ranger-compact-v2:galium_odoratum:0",
+            "initialSeed": 20260825,
+            "worldVersion": "ranger-compact-v2",
+            "runId": "baseline-run",
+            "window": "summer",
+            "source": "own-observation",
+            "observationSeconds": 3,
+            "simulationTime": 0,
+            "x": -58.366864902514294,
+            "z": 5.343887617279103,
+            "method": "magnified-active-model",
+            "siteId": "compact-forest-core",
+            "note": "Synthetic QA baseline."
+          }
+        ],
+        "archives": [],
+        "previousEditions": [],
+        "learning": {
+          "activeMission": null,
+          "level": "gA",
+          "answers": {},
+          "protocols": [],
+          "measurements": [],
+          "samples": [],
+          "experiments": [],
+          "drafts": {
+            "K1": {
+              "features": {
+                "invalid": true
+              }
+            }
+          }
+        }
+      },
+      "renderedError": "values.includes is not a function"
+    }
+  ],
+  "errors": [],
+  "htmlSHA256": "c52136f16c8685c0d0c819425b77666634876f8a37aa6afbb1ac26d0024a047e",
+  "completed": true
+}

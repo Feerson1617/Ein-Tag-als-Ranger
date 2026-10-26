@@ -1,0 +1,58 @@
+{
+  "sourceHashes": {
+    "learning-documents.js": "67d8fc7cf86ebab345b1d22841beac749ff75ed55131c99b55a9a86b455f80af",
+    "materials.js": "b96c109d4a29a43223aa1f3c708af65f5d8258b03d3e43d5fa6d89100a799610",
+    "lesson-resources.js": "a248d66ab19d98399135f01ac9a2cc8cf2ef4c79aa4c49e34b64adb3a9682fb4",
+    "lesson-layouts.js": "38df6da54b9615722acef34264832c757c753b2ea250f0c14fe571d7f267ba10"
+  },
+  "cards": 25,
+  "limitations": [
+    "No classroom pilot",
+    "No original school PDFs available",
+    "Free responses require human discussion"
+  ],
+  "files": {
+    "Arbeitsblaetter.html": {
+      "bytes": 69797,
+      "sha256": "9262e65b04576fc0a817db8d1ac519d235000f2704071ad88a708cb5319741cd"
+    },
+    "Lehrkraefte.html": {
+      "bytes": 89071,
+      "sha256": "3fe2ade331947910ec203d84758e2ee11617de8c305b271b207f31e062703bec"
+    },
+    "Materialkarten.json": {
+      "bytes": 38663,
+      "sha256": "2b634cf162d911e42aea377772337523b27781600d71ddadf5a1ffa5c997c197"
+    },
+    "LEHRKRAEFTE.md": {
+      "bytes": 8777,
+      "sha256": "9a44098c531241c2a1a3bd944bd08ca1f5a456861d964396935885d895f0900b"
+    },
+    "CURRICULUM-UMSETZUNG.md": {
+      "bytes": 9767,
+      "sha256": "de1c94bf47e21808ef9ab19557e29087b16297bef5b886adf6cab518e42d1ed6"
+    },
+    "MODELLGRENZEN.md": {
+      "bytes": 5862,
+      "sha256": "b26197dbd0d6c263b5bc19d3539b9382375a1c172ea6ee44e2e5d8b16c5a728e"
+    },
+    "QUELLEN-UND-RECHTE.md": {
+      "bytes": 5261,
+      "sha256": "1a846b4943323c421f6bda7e1aaa043db7f0b406dc8ad6b0390e83d9e9c8defc"
+    },
+    "MODELLPARAMETER.json": {
+      "bytes": 40343,
+      "sha256": "6495324ed2d8c825e46cf92613ea31f898c3ce8c8375578a3fa6f7f007ab3ff2"
+    },
+    "Arbeitsblaetter.pdf": {
+      "bytes": 290181,
+      "sha256": "744e4fcac579931215032ff805eefda4143301271ce4725d91b3157b88ad956a"
+    },
+    "Lehrkraefte.pdf": {
+      "bytes": 367191,
+      "sha256": "1837df479a3cdb2f01386a51dbd09085ea9530ed908a8fc43fbe625a1ef71236"
+    }
+  },
+  "sourceCommit": "f92146876f4364a4fb78d30d9e9b190bbb7dc1f4",
+  "sourceDirty": true
+}

@@ -1,0 +1,82 @@
+{
+  "sourceCommit": "4eb186a5325ae30dfa233e10dd44eb73ea710afa",
+  "htmlSHA256": "3748c6590afefb18a5e07bb3cedc2c40b0b2be1619a57cc52553a30de5869412",
+  "reviewedUTC": "2026-10-25T05:55:58.039596+00:00",
+  "passedWithinDeclaredScope": true,
+  "viewed": [
+    {
+      "file": "ui/viewport-0-1440x900-top.png",
+      "sha256": "282015c4395fb2acfe922de7734c2e473b7a06585ec8765510f1f7349ef4dea8"
+    },
+    {
+      "file": "ui/viewport-0-1440x900-bottom.png",
+      "sha256": "282015c4395fb2acfe922de7734c2e473b7a06585ec8765510f1f7349ef4dea8"
+    },
+    {
+      "file": "ui/viewport-1-1080x810-top.png",
+      "sha256": "026a399a3c90aa7c267faf7493c26fd7e9ca692672c8bafbe1b938e6aa6bd94d"
+    },
+    {
+      "file": "ui/viewport-1-1080x810-bottom.png",
+      "sha256": "026a399a3c90aa7c267faf7493c26fd7e9ca692672c8bafbe1b938e6aa6bd94d"
+    },
+    {
+      "file": "ui/viewport-2-810x1080-top.png",
+      "sha256": "877dc21adc6b1a723b34dc5d6f498907cc4c582400fc8cf141a91c06e8d65b5c"
+    },
+    {
+      "file": "ui/viewport-2-810x1080-bottom.png",
+      "sha256": "877dc21adc6b1a723b34dc5d6f498907cc4c582400fc8cf141a91c06e8d65b5c"
+    },
+    {
+      "file": "ui/viewport-3-600x375-top.png",
+      "sha256": "a353a65adad749551e60bdc0d90eb8f620d621f998601e00b3779b34eee78dfe"
+    },
+    {
+      "file": "ui/viewport-3-600x375-bottom.png",
+      "sha256": "1625e3a0704396bae2c376aa99f38e77db348ea5111c52cef7359b9bc9d081cc"
+    },
+    {
+      "file": "ui/viewport-4-1080x810-top.png",
+      "sha256": "026a399a3c90aa7c267faf7493c26fd7e9ca692672c8bafbe1b938e6aa6bd94d"
+    },
+    {
+      "file": "ui/viewport-4-1080x810-bottom.png",
+      "sha256": "026a399a3c90aa7c267faf7493c26fd7e9ca692672c8bafbe1b938e6aa6bd94d"
+    },
+    {
+      "file": "native-ui/native-zoom-full-surface.png",
+      "sha256": "00c8bc1474128abf68be4f6a23da76899c4a128c2bd7f8fca712019ad863287d"
+    },
+    {
+      "file": "native-ui/native-zoom-middle-full-surface.png",
+      "sha256": "51c82dd226cbb194fcd8a92075d802f5f9f30d4252596227024cf37e9436b679"
+    },
+    {
+      "file": "native-ui/small-600x375-middle-lens.png",
+      "sha256": "7f652a388b4fc97cbbd6a1bff71ce1b94baa1af7119bedc205b58395f4953537"
+    },
+    {
+      "file": "native-ui/detail-context-restored.png",
+      "sha256": "5263829d8ff28c90be1f0f40212e3f8c673dac25edbb0b44b16528f0c1350521"
+    },
+    {
+      "file": "native-ui/world-context-restored.png",
+      "sha256": "c62381d404d1916125ad989bb7f3b17defaf71c67e49a6d5347ddb37f32ceab7"
+    }
+  ],
+  "scope": "Own inspection of the listed actual fresh screenshots, together with separate native input/scroll/context assertions in ui/result.json and native-ui/result.json. No physical Safari or classroom validation.",
+  "findings": [
+    "1440×900, 1080×810 and 810×1080: readable paired views and explanatory text; closing reachable; returning rotation preserves the same episode. Main-view top/bottom captures were actually reviewed earlier in this same execution.",
+    "600×375: the enlarged head and beak remain visible in the independently viewed middle scroll position; left detail and right controls scroll independently. Entire explanatory text and imagery do not fit simultaneously; the sticky close control remains visible. Cropped body outside the head view is intentional focus framing, not a claim that the whole animal fits there.",
+    "Native 200%: actual complete browser content surface 1440×813 pixels inside a 1440×900 browser window, with 720×406 CSS layout and DPR2. Both top and middle scroll captures were actually viewed. Text, close control and main action buttons remain legible/reachable; middle capture shows the complete then-current overview bird. The earlier cropped capture alone is not used as full-surface proof.",
+    "After real context restoration, the paired detail image and the regular world are visibly rendered; fieldbook count4 remains visible. Underlying unchanged model/run/book assertions are recorded by the native driver, not inferred solely from the screenshot."
+  ],
+  "limits": [
+    "Cloud Chromium154; no physically tested iPad/Safari.",
+    "Actual document.hidden could not be produced in the managed browser; no injected hidden-state PASS.",
+    "Readable function and input containment do not prove aesthetic quality or classroom effectiveness."
+  ],
+  "mainUIResultSHA256": "8a85258c5aca75991a4d03f28276b210598b530abd5884527a59ff504775b805",
+  "supplementResultSHA256": "1790eef57f7fa212bc413e2bbed3c099ab9f2260c06343e3c0b35020e522fef5"
+}

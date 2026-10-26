@@ -1,0 +1,134 @@
+{
+  "commit": "4eb186a5325ae30dfa233e10dd44eb73ea710afa",
+  "sourceDirty": false,
+  "startedAt": "2026-10-25T04:56:37Z",
+  "site": "outputs/GitHub-Pages",
+  "entry": "index.html",
+  "prefix": "/Ein-Tag-als-Ranger/",
+  "viewport": [
+    800,
+    500
+  ],
+  "browser": "chromium",
+  "liveMissionSelection": "all",
+  "passed": [
+    "boot, two main entries, three mission choices, real WebGL startup",
+    "LIVE M1: three concrete focal taxa, observation button, feature comparisons and justified uncertainty",
+    "LIVE M2: real simulation event, finite shared resource, explicitly read protocol, interpretation",
+    "LIVE M3: actual existing probe, two water levels, same individual/depth, timed records and interpretation",
+    "LIVE save/load: earned mission records, answers and completion survive a real page reload; free play resumes",
+    "contradictory station import is rejected before replacement; current fieldbook preserved",
+    "versioned import requires explicit replacement, individual IDs retained",
+    "references available before determination; opening does not discover taxa",
+    "UI fixture M1: wrong/incomplete/correct/justified uncertain decisions, no complete collection",
+    "UI fixture M2: missing hypothesis and false provenance rejected; supported combinations accepted",
+    "UI fixture M3: absence overclaim rejected, controlled comparison accepted",
+    "JSON/report downloads, session cancellation preserves work, open responses remain text",
+    "free exploration: real tools, keyboard, map with eight regions, tablet viewport (emulation only)",
+    "fault injection: real WebGL context loss/restoration preserves fieldbook",
+    "fault injection: required model failure blocks startup; reload recovers",
+    "fault injection: quota failure is visible instead of a persistence promise"
+  ],
+  "failed": [],
+  "errors": [],
+  "consoleErrors": [],
+  "httpErrors": [],
+  "notTested": [
+    "physical iPad/Safari",
+    "classroom timing/learning effect",
+    "20-minute minimum-device performance"
+  ],
+  "browserVersion": "154.0.8037.57",
+  "readySeconds": 4.86,
+  "resourceTransferBytes": 26676218,
+  "navigationTransferBytes": 8666,
+  "initialTransferBytes": 26684884,
+  "liveMissionSeconds": {
+    "m1": 112.3,
+    "m2": 151.17,
+    "m3": 166.94
+  },
+  "liveStationRecords": [
+    {
+      "id": "beleg-1792904585354-5",
+      "missionId": "m3",
+      "missionVersion": 1,
+      "helpLevel": 0,
+      "certainty": null,
+      "interpretation": null,
+      "source": "model-protocol",
+      "taxon": "cerastoderma_edule",
+      "partnerIds": [
+        "wadden:138"
+      ],
+      "scene": {
+        "habitat": "wadden",
+        "seed": 1219,
+        "runId": "fc90598a-7f26-4d88-a43c-0d73fc0ffb01",
+        "scenario": null
+      },
+      "siteId": "probe-2",
+      "simulationTime": 13.623499999999956,
+      "duration": 6.143299999999948,
+      "tidePhase": 0,
+      "waterLevel": -0.9,
+      "sampleDepth": 5,
+      "present": true,
+      "observedFact": "Freigelegte Herzmuschel; Wasserstand -0.90 Modellmeter; Zustand resting",
+      "evidence": {
+        "kind": "station",
+        "activity": "resting"
+      }
+    },
+    {
+      "id": "beleg-1792904653741-6",
+      "missionId": "m3",
+      "missionVersion": 1,
+      "helpLevel": 0,
+      "certainty": null,
+      "interpretation": null,
+      "source": "model-protocol",
+      "taxon": "cerastoderma_edule",
+      "partnerIds": [
+        "wadden:138"
+      ],
+      "scene": {
+        "habitat": "wadden",
+        "seed": 1219,
+        "runId": "fc90598a-7f26-4d88-a43c-0d73fc0ffb01",
+        "scenario": null
+      },
+      "siteId": "probe-2",
+      "simulationTime": 19.76669999999996,
+      "duration": 6.1432000000000055,
+      "tidePhase": 0.5,
+      "waterLevel": 0.4,
+      "sampleDepth": 5,
+      "present": true,
+      "observedFact": "Freigelegte Herzmuschel; Wasserstand 0.40 Modellmeter; Zustand filtering",
+      "evidence": {
+        "kind": "station",
+        "activity": "filtering"
+      }
+    }
+  ],
+  "automatedLiveMissionSeconds": 430.41,
+  "faultViewport": {
+    "width": 800,
+    "height": 500
+  },
+  "renderDiagnostics": {
+    "cpuSimulationMs": "7.8",
+    "cpuRenderMs": "9.0",
+    "targetFps": "60",
+    "pixelRatio": "1.00",
+    "gpuMs": "4869.3",
+    "fps": "0",
+    "drawCalls": "275",
+    "triangles": "539958"
+  },
+  "expectedFailures": [
+    "Aborted fox model request",
+    "Synthetic quota failure"
+  ]
+}

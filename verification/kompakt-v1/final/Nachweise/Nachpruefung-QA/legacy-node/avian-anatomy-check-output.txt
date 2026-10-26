@@ -1,0 +1,7 @@
+{
+  "birdSpecies": 64,
+  "outwardTrianglesChecked": 26624,
+  "continuousSymmetricSurface": true,
+  "idle": "Individual clock, half-speed observation, planted feet remain stationary",
+  "resources": "Owned textures and specimen materials released"
+}

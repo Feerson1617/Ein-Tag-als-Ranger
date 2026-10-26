@@ -1,0 +1,24 @@
+{
+  "scope": "Recorded before changing product or driver. No fabricated CI traceback.",
+  "print": {
+    "classification": "Product print-layout portability defect",
+    "evidence": "font-probe/result.json",
+    "cause": "OS-dependent system-ui selects different font metrics. Identical source text/sizes/margins: OpenAI Sans gives2starter/39student pages; DejaVu Sans3/40; Arial resolving to Liberation Sans2/38.",
+    "change": "Explicit metric-compatible Arial/Liberation Sans family for PRINT ONLY in both existing document generators; no text deletion, smaller type, smaller writing areas, clipped overflow or assertion change."
+  },
+  "feedingDetail": {
+    "classification": "Test setup error",
+    "evidence": "feeding-detail/result.json",
+    "cause": "Initial0.343s spoonbill first shrimp4 is already selected/locked. Driver ignores initial approaching phase, samples only after advancing, then follows shrimp3 at4.593s while the lens correctly remains bound to shrimp4.",
+    "change": "Public new local observation window at zero before selection, first explicit fine model step, capture actual initial approaching phase. Preserve all identity/contact/visibility/credit assertions."
+  },
+  "arrival": {
+    "classification": "Unchanged CI software-renderer900s budget failure reported by user; local reproduction running. Exact CI machine remains inaccessible.",
+    "reportedWaypoint": 1386,
+    "reportedPosition": {
+      "x": 54.73158935811298,
+      "z": -9.557866034125013
+    },
+    "change": "None until local cause is demonstrated; never increase original900s budget or weaken route assertions."
+  }
+}

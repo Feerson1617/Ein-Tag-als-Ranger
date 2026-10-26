@@ -1,0 +1,770 @@
+[
+  {
+    "file": "sequence-1-native-pixel-contact.png",
+    "sha256": "fe9c42c30c4a093a97990276fbbcfa9c1a84ae6578f7e692ab01d052692170a8",
+    "individualId": "compact-oystercatcher",
+    "realtime": true,
+    "runId": "ad383d41-6570-4cc1-a19c-1bdbc2954719",
+    "preyId": "compact-mussel-16",
+    "eventId": "ranger-compact-v2:summer:feeding:compact-oystercatcher:compact-mussel-16:0.025000000",
+    "images": [
+      {
+        "source": "v1-full-walk-feeding/sequence-1-compact-oystercatcher-approaching.png",
+        "sha256": "c1c9b11dafc4ab31d049f2b403ae83ed6a6fa66cfbe7f6050b817754dbff7b80",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "approaching"
+      },
+      {
+        "source": "v1-full-walk-feeding/sequence-1-compact-oystercatcher-searching.png",
+        "sha256": "e9d8eb235b6e67921a5769e44cd6c6589bf996c891b692e2afd989813fb4b041",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "searching"
+      },
+      {
+        "source": "v1-full-walk-feeding/sequence-1-compact-oystercatcher-handling.png",
+        "sha256": "498efcfac084f680c6f132d64476496db271199875dfd09ac1c3b778f29aeca3",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "handling"
+      },
+      {
+        "source": "v1-full-walk-feeding/sequence-1-compact-oystercatcher-swallowing.png",
+        "sha256": "a074c52827c280c925b25a483f96647ff22a0a1745d9a5efc01ceb75a09b80c2",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "swallowing"
+      },
+      {
+        "source": "v1-full-walk-feeding/sequence-1-compact-oystercatcher-mouth-transfer.png",
+        "sha256": "12b8969e83cc52b1974159dd388959962538956a445744a52743a4a570b3e42e",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "mouth-transfer"
+      },
+      {
+        "source": "v1-full-walk-feeding/sequence-1-compact-oystercatcher-departing.png",
+        "sha256": "c737f51956f2c79fa5e92f11ed6cf842efc7dbc868558ef7ec68ef528f6db3fd",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "departing"
+      },
+      {
+        "source": "v1-full-walk-feeding/sequence-1-compact-oystercatcher-after-departure.png",
+        "sha256": "950826e2029ab540ed7ff7d87e6bd7b11f8a1dd4dae6bd3d1521d9601ec68b1a",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "after-departure"
+      }
+    ],
+    "scope": "Actual native-pixel1:1 crops of the coupled live cameras, no resizing or synthesized pose; raw atomic canvas PNGs retained. External uptake only, no inner digestion anatomy."
+  },
+  {
+    "file": "sequence-2-native-pixel-contact.png",
+    "sha256": "a786d45278851aea35cb629e91d495b4b106f74074c6669bea9d34f6a51293c5",
+    "individualId": "compact-avocet",
+    "realtime": true,
+    "runId": "9831aa9d-047f-4556-9490-7646eaa70dc1",
+    "preyId": "compact-juvenile-worm-0",
+    "eventId": "ranger-compact-v2:summer:feeding:compact-avocet:compact-juvenile-worm-0:29.319700000",
+    "images": [
+      {
+        "source": "v1-full-walk-feeding/sequence-2-compact-avocet-approaching.png",
+        "sha256": "a8ae5ceabff5e4f42414ea91ca63b43d5acaba4dd9210cb20c93e7bb9ebd8c2b",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "approaching"
+      },
+      {
+        "source": "v1-full-walk-feeding/sequence-2-compact-avocet-searching.png",
+        "sha256": "4a8a8b104dee275c2824105aac4a51d375f5ab2de1025dc94947a5a659814932",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "searching"
+      },
+      {
+        "source": "v1-full-walk-feeding/sequence-2-compact-avocet-handling.png",
+        "sha256": "c3c5694eca7355c184f4b3125b9d935b91740c0cf86b34ffe6c42f81199656bc",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "handling"
+      },
+      {
+        "source": "v1-full-walk-feeding/sequence-2-compact-avocet-swallowing.png",
+        "sha256": "300cbd4a2481f4fe70131417fba934704b28b2d7b26e2c5401e95de5b02e51bb",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "swallowing"
+      },
+      {
+        "source": "v1-full-walk-feeding/sequence-2-compact-avocet-mouth-transfer.png",
+        "sha256": "cdc12cda0a2e22d85329125bf7b12a8656c778f806fcd711d197cba75a13dba2",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "mouth-transfer"
+      },
+      {
+        "source": "v1-full-walk-feeding/sequence-2-compact-avocet-departing.png",
+        "sha256": "adf49d1412a1702aaf72a03a94aa908a9402152ef1c82da757ac183d16c1ef9e",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "departing"
+      },
+      {
+        "source": "v1-full-walk-feeding/sequence-2-compact-avocet-after-departure.png",
+        "sha256": "7dbffad03b1a7c119314eaa574efe49aadc0b254436e0ecdcd1634bcaa89aea9",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "after-departure"
+      }
+    ],
+    "scope": "Actual native-pixel1:1 crops of the coupled live cameras, no resizing or synthesized pose; raw atomic canvas PNGs retained. External uptake only, no inner digestion anatomy."
+  },
+  {
+    "file": "sequence-3-native-pixel-contact.png",
+    "sha256": "394323f6a15e30ed86c6cae7bac5550edfc60488596cbea2ea108e55ba7015a0",
+    "individualId": "compact-redshank",
+    "realtime": true,
+    "runId": "28835527-a967-4fd1-bf98-8d1b3ca169c3",
+    "preyId": "compact-juvenile-worm-3",
+    "eventId": "ranger-compact-v2:summer:feeding:compact-redshank:compact-juvenile-worm-3:20.927200000",
+    "images": [
+      {
+        "source": "v1-full-walk-feeding/sequence-3-compact-redshank-approaching.png",
+        "sha256": "07e878a93697a321b7a866e4a6d63a15d5d05a4b3b67c556d5006e53a6ceb984",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "approaching"
+      },
+      {
+        "source": "v1-full-walk-feeding/sequence-3-compact-redshank-searching.png",
+        "sha256": "72006397a63d3ea577352ad0e2e7c7f9a0a1e6fe59ee30ea28ea8ffde4d86fe4",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "searching"
+      },
+      {
+        "source": "v1-full-walk-feeding/sequence-3-compact-redshank-handling.png",
+        "sha256": "fe81c1d4353368283b039ec3b5306ba166eb9e8b8d0467f11558cbbd117dc479",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "handling"
+      },
+      {
+        "source": "v1-full-walk-feeding/sequence-3-compact-redshank-swallowing.png",
+        "sha256": "fa1c78d687a254d41a220d274db55ceae60c9f355817c16b173af5a2a1d84bf8",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "swallowing"
+      },
+      {
+        "source": "v1-full-walk-feeding/sequence-3-compact-redshank-mouth-transfer.png",
+        "sha256": "749733db5de8d65571c75a28018cdeb20cd2171a181ba50c189a46836e5fbd3c",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "mouth-transfer"
+      },
+      {
+        "source": "v1-full-walk-feeding/sequence-3-compact-redshank-departing.png",
+        "sha256": "8cb8c6acf35747dfac35d5cffd84c59c835f1b39c895774e1391d59ce919cde3",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "departing"
+      },
+      {
+        "source": "v1-full-walk-feeding/sequence-3-compact-redshank-after-departure.png",
+        "sha256": "cfb12a737ba1065ea39c670d06eeb5b6ec658e064943f5beb5c4ce290e1090d6",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "after-departure"
+      }
+    ],
+    "scope": "Actual native-pixel1:1 crops of the coupled live cameras, no resizing or synthesized pose; raw atomic canvas PNGs retained. External uptake only, no inner digestion anatomy."
+  },
+  {
+    "file": "sequence-4-native-pixel-contact.png",
+    "sha256": "8043639eed7292083f8694246ec9daafa3340f50832c2e0c7ade0a464a255642",
+    "individualId": "compact-spoonbill",
+    "realtime": true,
+    "runId": "0fbfe895-716e-4181-bb81-025c06b0db7b",
+    "preyId": "compact-shrimp-4",
+    "eventId": "ranger-compact-v2:summer:feeding:compact-spoonbill:compact-shrimp-4:0.025000000",
+    "images": [
+      {
+        "source": "v1-full-walk-feeding/sequence-4-compact-spoonbill-approaching.png",
+        "sha256": "03c54fd544af2aa04e265b2a7537f1c9d82f6d0e3e32469c6967f2f0bc6a0f0f",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "approaching"
+      },
+      {
+        "source": "v1-full-walk-feeding/sequence-4-compact-spoonbill-searching.png",
+        "sha256": "b4f0326f27dc9fba8a4b1183ebdfa1b4a7c99a2934498ce76eb8c3fa197ad44c",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "searching"
+      },
+      {
+        "source": "v1-full-walk-feeding/sequence-4-compact-spoonbill-handling.png",
+        "sha256": "2d9ccdec4a4cd532430764b1207e545d41f35668168d2e60a5304bb9aace1443",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "handling"
+      },
+      {
+        "source": "v1-full-walk-feeding/sequence-4-compact-spoonbill-swallowing.png",
+        "sha256": "3a2ecea35b532f53c544dc21941c356d163882e4299b0497b43e1e4cf3bd97c4",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "swallowing"
+      },
+      {
+        "source": "v1-full-walk-feeding/sequence-4-compact-spoonbill-mouth-transfer.png",
+        "sha256": "3d7bcbd04a91dc348a940ad529b8fc13dfc46c046c8ac41c2be3e4e62529a18a",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "mouth-transfer"
+      },
+      {
+        "source": "v1-full-walk-feeding/sequence-4-compact-spoonbill-departing.png",
+        "sha256": "e5fff185f7393574cc76844b234c1a30970f1bc9631835dcef490f808629a22d",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "departing"
+      },
+      {
+        "source": "v1-full-walk-feeding/sequence-4-compact-spoonbill-after-departure.png",
+        "sha256": "df3063ea8b5590cae7f3972ce1c3d4ffb8ab0ec71bde75e7c496671cf29bde53",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "after-departure"
+      }
+    ],
+    "scope": "Actual native-pixel1:1 crops of the coupled live cameras, no resizing or synthesized pose; raw atomic canvas PNGs retained. External uptake only, no inner digestion anatomy."
+  },
+  {
+    "file": "sequence-5-native-pixel-contact.png",
+    "sha256": "7fe6a1f723507b399066365631e7ae0bd398f93ed9dab681d01f7a9a1c54f140",
+    "individualId": "compact-avocet",
+    "realtime": false,
+    "runId": "8ff5b4e1-228d-4b93-a366-74a4bbefbae6",
+    "preyId": "compact-juvenile-worm-0",
+    "eventId": "ranger-compact-v2:summer:feeding:compact-avocet:compact-juvenile-worm-0:29.325000000",
+    "images": [
+      {
+        "source": "v1-full-walk-feeding/sequence-5-compact-avocet-approaching.png",
+        "sha256": "85b373f15c47d88251375a282b6b14b3b7e4c815c53988a6ba489c7c88f232bf",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "approaching"
+      },
+      {
+        "source": "v1-full-walk-feeding/sequence-5-compact-avocet-searching.png",
+        "sha256": "85b373f15c47d88251375a282b6b14b3b7e4c815c53988a6ba489c7c88f232bf",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "searching"
+      },
+      {
+        "source": "v1-full-walk-feeding/sequence-5-compact-avocet-handling.png",
+        "sha256": "85b373f15c47d88251375a282b6b14b3b7e4c815c53988a6ba489c7c88f232bf",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "handling"
+      },
+      {
+        "source": "v1-full-walk-feeding/sequence-5-compact-avocet-swallowing.png",
+        "sha256": "85b373f15c47d88251375a282b6b14b3b7e4c815c53988a6ba489c7c88f232bf",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "swallowing"
+      },
+      {
+        "source": "v1-full-walk-feeding/sequence-5-compact-avocet-mouth-transfer.png",
+        "sha256": "85b373f15c47d88251375a282b6b14b3b7e4c815c53988a6ba489c7c88f232bf",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "mouth-transfer"
+      },
+      {
+        "source": "v1-full-walk-feeding/sequence-5-compact-avocet-departing.png",
+        "sha256": "85b373f15c47d88251375a282b6b14b3b7e4c815c53988a6ba489c7c88f232bf",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "departing"
+      },
+      {
+        "source": "v1-full-walk-feeding/sequence-5-compact-avocet-after-departure.png",
+        "sha256": "85b373f15c47d88251375a282b6b14b3b7e4c815c53988a6ba489c7c88f232bf",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "after-departure"
+      }
+    ],
+    "scope": "Actual native-pixel1:1 crops of the coupled live cameras, no resizing or synthesized pose; raw atomic canvas PNGs retained. External uptake only, no inner digestion anatomy."
+  },
+  {
+    "file": "sequence-6-native-pixel-contact.png",
+    "sha256": "2f6d1c3600c54f5eb2b6b4ac5327801f95eac840141708e35dba814fe6e21999",
+    "individualId": "compact-redshank",
+    "realtime": false,
+    "runId": "94c2882c-820e-455c-aa43-dbf83afa62c4",
+    "preyId": "compact-juvenile-worm-3",
+    "eventId": "ranger-compact-v2:summer:feeding:compact-redshank:compact-juvenile-worm-3:20.925000000",
+    "images": [
+      {
+        "source": "v1-full-walk-feeding/sequence-6-compact-redshank-approaching.png",
+        "sha256": "85b373f15c47d88251375a282b6b14b3b7e4c815c53988a6ba489c7c88f232bf",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "approaching"
+      },
+      {
+        "source": "v1-full-walk-feeding/sequence-6-compact-redshank-searching.png",
+        "sha256": "85b373f15c47d88251375a282b6b14b3b7e4c815c53988a6ba489c7c88f232bf",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "searching"
+      },
+      {
+        "source": "v1-full-walk-feeding/sequence-6-compact-redshank-handling.png",
+        "sha256": "85b373f15c47d88251375a282b6b14b3b7e4c815c53988a6ba489c7c88f232bf",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "handling"
+      },
+      {
+        "source": "v1-full-walk-feeding/sequence-6-compact-redshank-swallowing.png",
+        "sha256": "85b373f15c47d88251375a282b6b14b3b7e4c815c53988a6ba489c7c88f232bf",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "swallowing"
+      },
+      {
+        "source": "v1-full-walk-feeding/sequence-6-compact-redshank-mouth-transfer.png",
+        "sha256": "85b373f15c47d88251375a282b6b14b3b7e4c815c53988a6ba489c7c88f232bf",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "mouth-transfer"
+      },
+      {
+        "source": "v1-full-walk-feeding/sequence-6-compact-redshank-departing.png",
+        "sha256": "85b373f15c47d88251375a282b6b14b3b7e4c815c53988a6ba489c7c88f232bf",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "departing"
+      },
+      {
+        "source": "v1-full-walk-feeding/sequence-6-compact-redshank-after-departure.png",
+        "sha256": "85b373f15c47d88251375a282b6b14b3b7e4c815c53988a6ba489c7c88f232bf",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "after-departure"
+      }
+    ],
+    "scope": "Actual native-pixel1:1 crops of the coupled live cameras, no resizing or synthesized pose; raw atomic canvas PNGs retained. External uptake only, no inner digestion anatomy."
+  },
+  {
+    "file": "sequence-7-native-pixel-contact.png",
+    "sha256": "a8b6ddc4c4b0ffe3894645e89a42005a30171f5199d18f40faff9383f66715ec",
+    "individualId": "compact-spoonbill",
+    "realtime": false,
+    "runId": "eff120c8-61f4-4fc1-9a55-ed94f514fad0",
+    "preyId": "compact-shrimp-4",
+    "eventId": "ranger-compact-v2:summer:feeding:compact-spoonbill:compact-shrimp-4:0.025000000",
+    "images": [
+      {
+        "source": "v1-full-walk-feeding/sequence-7-compact-spoonbill-approaching.png",
+        "sha256": "85b373f15c47d88251375a282b6b14b3b7e4c815c53988a6ba489c7c88f232bf",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "approaching"
+      },
+      {
+        "source": "v1-full-walk-feeding/sequence-7-compact-spoonbill-searching.png",
+        "sha256": "85b373f15c47d88251375a282b6b14b3b7e4c815c53988a6ba489c7c88f232bf",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "searching"
+      },
+      {
+        "source": "v1-full-walk-feeding/sequence-7-compact-spoonbill-handling.png",
+        "sha256": "85b373f15c47d88251375a282b6b14b3b7e4c815c53988a6ba489c7c88f232bf",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "handling"
+      },
+      {
+        "source": "v1-full-walk-feeding/sequence-7-compact-spoonbill-swallowing.png",
+        "sha256": "85b373f15c47d88251375a282b6b14b3b7e4c815c53988a6ba489c7c88f232bf",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "swallowing"
+      },
+      {
+        "source": "v1-full-walk-feeding/sequence-7-compact-spoonbill-mouth-transfer.png",
+        "sha256": "85b373f15c47d88251375a282b6b14b3b7e4c815c53988a6ba489c7c88f232bf",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "mouth-transfer"
+      },
+      {
+        "source": "v1-full-walk-feeding/sequence-7-compact-spoonbill-departing.png",
+        "sha256": "85b373f15c47d88251375a282b6b14b3b7e4c815c53988a6ba489c7c88f232bf",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "departing"
+      },
+      {
+        "source": "v1-full-walk-feeding/sequence-7-compact-spoonbill-after-departure.png",
+        "sha256": "85b373f15c47d88251375a282b6b14b3b7e4c815c53988a6ba489c7c88f232bf",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "after-departure"
+      }
+    ],
+    "scope": "Actual native-pixel1:1 crops of the coupled live cameras, no resizing or synthesized pose; raw atomic canvas PNGs retained. External uptake only, no inner digestion anatomy."
+  },
+  {
+    "file": "sequence-8-native-pixel-contact.png",
+    "sha256": "a1692576839e9f6028faf159f127d71e135de2c9398afb877e2fd98b20fc0f48",
+    "individualId": "compact-oystercatcher",
+    "realtime": false,
+    "runId": "d51ec496-3d82-4fc0-a484-ca372f2c21f5",
+    "preyId": "compact-mussel-16",
+    "eventId": "ranger-compact-v2:summer:feeding:compact-oystercatcher:compact-mussel-16:0.025000000",
+    "images": [
+      {
+        "source": "v1-full-walk-feeding/sequence-8-compact-oystercatcher-approaching.png",
+        "sha256": "85b373f15c47d88251375a282b6b14b3b7e4c815c53988a6ba489c7c88f232bf",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "approaching"
+      },
+      {
+        "source": "v1-full-walk-feeding/sequence-8-compact-oystercatcher-searching.png",
+        "sha256": "85b373f15c47d88251375a282b6b14b3b7e4c815c53988a6ba489c7c88f232bf",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "searching"
+      },
+      {
+        "source": "v1-full-walk-feeding/sequence-8-compact-oystercatcher-handling.png",
+        "sha256": "85b373f15c47d88251375a282b6b14b3b7e4c815c53988a6ba489c7c88f232bf",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "handling"
+      },
+      {
+        "source": "v1-full-walk-feeding/sequence-8-compact-oystercatcher-swallowing.png",
+        "sha256": "85b373f15c47d88251375a282b6b14b3b7e4c815c53988a6ba489c7c88f232bf",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "swallowing"
+      },
+      {
+        "source": "v1-full-walk-feeding/sequence-8-compact-oystercatcher-mouth-transfer.png",
+        "sha256": "85b373f15c47d88251375a282b6b14b3b7e4c815c53988a6ba489c7c88f232bf",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "mouth-transfer"
+      },
+      {
+        "source": "v1-full-walk-feeding/sequence-8-compact-oystercatcher-departing.png",
+        "sha256": "85b373f15c47d88251375a282b6b14b3b7e4c815c53988a6ba489c7c88f232bf",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "departing"
+      },
+      {
+        "source": "v1-full-walk-feeding/sequence-8-compact-oystercatcher-after-departure.png",
+        "sha256": "85b373f15c47d88251375a282b6b14b3b7e4c815c53988a6ba489c7c88f232bf",
+        "pixelCrop": [
+          21,
+          249,
+          638,
+          519
+        ],
+        "rescaled": false,
+        "phase": "after-departure"
+      }
+    ],
+    "scope": "Actual native-pixel1:1 crops of the coupled live cameras, no resizing or synthesized pose; raw atomic canvas PNGs retained. External uptake only, no inner digestion anatomy."
+  }
+]

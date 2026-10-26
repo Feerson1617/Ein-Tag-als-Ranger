@@ -1,0 +1,486 @@
+{
+  "scope": "Controlled font-metric diagnosis on identical source text and page rules; explicit CSS font substitution, not claimed to be the inaccessible CI machine.",
+  "browser": "systemChromium154",
+  "rows": [
+    {
+      "name": "START-IM-UNTERRICHT",
+      "diagnosticBodyFamily": null,
+      "pages": 2,
+      "actualFonts": {
+        "fonts": [
+          {
+            "familyName": "Noto Sans",
+            "postScriptName": "NotoSans-Regular",
+            "isCustomFont": false,
+            "glyphCount": 181
+          },
+          {
+            "familyName": "Noto Sans",
+            "postScriptName": "NotoSans-Bold",
+            "isCustomFont": false,
+            "glyphCount": 70
+          }
+        ]
+      },
+      "metrics": {
+        "family": "system-ui, sans-serif",
+        "sections": [
+          {
+            "height": 862.046875,
+            "bottom": 877.15625
+          },
+          {
+            "height": 951.65625,
+            "bottom": 1843.921875
+          }
+        ]
+      },
+      "pdf": "START-IM-UNTERRICHT-default.pdf",
+      "sha256": "cd163d6ce613b4c7909a086545e5df7dc18dbb2617dcabc6615a68a37c998300"
+    },
+    {
+      "name": "PFAD-A-Artenliste",
+      "diagnosticBodyFamily": null,
+      "pages": 2,
+      "actualFonts": {
+        "fonts": [
+          {
+            "familyName": "Noto Sans",
+            "postScriptName": "NotoSans-Regular",
+            "isCustomFont": false,
+            "glyphCount": 164
+          },
+          {
+            "familyName": "Noto Sans",
+            "postScriptName": "NotoSans-Bold",
+            "isCustomFont": false,
+            "glyphCount": 10
+          }
+        ]
+      },
+      "metrics": {
+        "family": "system-ui, sans-serif",
+        "sections": [
+          {
+            "height": 823.734375,
+            "bottom": 838.84375
+          },
+          {
+            "height": 824.296875,
+            "bottom": 1678.25
+          }
+        ]
+      },
+      "pdf": "PFAD-A-Artenliste-default.pdf",
+      "sha256": "6adbd3e1b59441d55da2bc4fd49560b302028ce86942f7368133ab11de12434a"
+    },
+    {
+      "name": "PFAD-B-Kuestenvoegel",
+      "diagnosticBodyFamily": null,
+      "pages": 2,
+      "actualFonts": {
+        "fonts": [
+          {
+            "familyName": "Noto Sans",
+            "postScriptName": "NotoSans-Regular",
+            "isCustomFont": false,
+            "glyphCount": 206
+          },
+          {
+            "familyName": "Noto Sans",
+            "postScriptName": "NotoSans-Bold",
+            "isCustomFont": false,
+            "glyphCount": 10
+          }
+        ]
+      },
+      "metrics": {
+        "family": "system-ui, sans-serif",
+        "sections": [
+          {
+            "height": 792.09375,
+            "bottom": 807.203125
+          },
+          {
+            "height": 934.71875,
+            "bottom": 1757.03125
+          }
+        ]
+      },
+      "pdf": "PFAD-B-Kuestenvoegel-default.pdf",
+      "sha256": "0031ca9c53c88ffca2d1c5143e9e46bd1ba90640af07f1d5129c624c56b7875b"
+    },
+    {
+      "name": "Arbeitsblaetter",
+      "diagnosticBodyFamily": null,
+      "pages": 39,
+      "actualFonts": {
+        "fonts": [
+          {
+            "familyName": "Noto Sans",
+            "postScriptName": "NotoSans-Regular",
+            "isCustomFont": false,
+            "glyphCount": 198
+          }
+        ]
+      },
+      "metrics": {
+        "family": "system-ui",
+        "sections": [
+          {
+            "height": 571.09375,
+            "bottom": 589.84375
+          }
+        ]
+      },
+      "pdf": "Arbeitsblaetter-default.pdf",
+      "sha256": "c5904bd8fe1972813213953cc7193b5c0b362bb10815a841cefef02d6f124000"
+    },
+    {
+      "name": "Lehrkraefte",
+      "diagnosticBodyFamily": null,
+      "pages": 59,
+      "actualFonts": {
+        "fonts": [
+          {
+            "familyName": "Noto Sans",
+            "postScriptName": "NotoSans-Regular",
+            "isCustomFont": false,
+            "glyphCount": 198
+          }
+        ]
+      },
+      "metrics": {
+        "family": "system-ui",
+        "sections": [
+          {
+            "height": 613.09375,
+            "bottom": 631.84375
+          }
+        ]
+      },
+      "pdf": "Lehrkraefte-default.pdf",
+      "sha256": "f5c2f7047b602a0991063079e617525f2d3784be2255f900e028f044d0b51f49"
+    },
+    {
+      "name": "START-IM-UNTERRICHT",
+      "diagnosticBodyFamily": "DejaVu Sans",
+      "pages": 3,
+      "actualFonts": {
+        "fonts": [
+          {
+            "familyName": "DejaVu Sans",
+            "postScriptName": "DejaVuSans",
+            "isCustomFont": false,
+            "glyphCount": 181
+          },
+          {
+            "familyName": "DejaVu Sans",
+            "postScriptName": "DejaVuSans-Bold",
+            "isCustomFont": false,
+            "glyphCount": 70
+          }
+        ]
+      },
+      "metrics": {
+        "family": "\"DejaVu Sans\"",
+        "sections": [
+          {
+            "height": 913.8125,
+            "bottom": 928.921875
+          },
+          {
+            "height": 1003.421875,
+            "bottom": 1947.453125
+          }
+        ]
+      },
+      "pdf": "START-IM-UNTERRICHT-DejaVu_Sans.pdf",
+      "sha256": "1c1d9e4d38234e13dccb57a7c98d33e7714832e422d9b1d6bac372cb268e71c3"
+    },
+    {
+      "name": "PFAD-A-Artenliste",
+      "diagnosticBodyFamily": "DejaVu Sans",
+      "pages": 2,
+      "actualFonts": {
+        "fonts": [
+          {
+            "familyName": "DejaVu Sans",
+            "postScriptName": "DejaVuSans",
+            "isCustomFont": false,
+            "glyphCount": 164
+          },
+          {
+            "familyName": "DejaVu Sans",
+            "postScriptName": "DejaVuSans-Bold",
+            "isCustomFont": false,
+            "glyphCount": 10
+          }
+        ]
+      },
+      "metrics": {
+        "family": "\"DejaVu Sans\"",
+        "sections": [
+          {
+            "height": 857.3125,
+            "bottom": 872.421875
+          },
+          {
+            "height": 839.6875,
+            "bottom": 1727.21875
+          }
+        ]
+      },
+      "pdf": "PFAD-A-Artenliste-DejaVu_Sans.pdf",
+      "sha256": "db673876b3f41f28c855d9abaeaf0fa6b9e1e98fa0cdb67d545c4f667bfa21da"
+    },
+    {
+      "name": "PFAD-B-Kuestenvoegel",
+      "diagnosticBodyFamily": "DejaVu Sans",
+      "pages": 2,
+      "actualFonts": {
+        "fonts": [
+          {
+            "familyName": "DejaVu Sans",
+            "postScriptName": "DejaVuSans",
+            "isCustomFont": false,
+            "glyphCount": 206
+          },
+          {
+            "familyName": "DejaVu Sans",
+            "postScriptName": "DejaVuSans-Bold",
+            "isCustomFont": false,
+            "glyphCount": 10
+          }
+        ]
+      },
+      "metrics": {
+        "family": "\"DejaVu Sans\"",
+        "sections": [
+          {
+            "height": 843.859375,
+            "bottom": 858.96875
+          },
+          {
+            "height": 968.296875,
+            "bottom": 1842.375
+          }
+        ]
+      },
+      "pdf": "PFAD-B-Kuestenvoegel-DejaVu_Sans.pdf",
+      "sha256": "8f08920d6dd1b0120d08c9af8c18f1807d408bc80c7d5bdd6e5fccf27371d88c"
+    },
+    {
+      "name": "Arbeitsblaetter",
+      "diagnosticBodyFamily": "DejaVu Sans",
+      "pages": 40,
+      "actualFonts": {
+        "fonts": [
+          {
+            "familyName": "DejaVu Sans",
+            "postScriptName": "DejaVuSans",
+            "isCustomFont": false,
+            "glyphCount": 198
+          }
+        ]
+      },
+      "metrics": {
+        "family": "\"DejaVu Sans\"",
+        "sections": [
+          {
+            "height": 571.09375,
+            "bottom": 589.84375
+          }
+        ]
+      },
+      "pdf": "Arbeitsblaetter-DejaVu_Sans.pdf",
+      "sha256": "2869c77c38a1c9922e778bf8aff70f2b969470edd28c6b58027c9572bfff372e"
+    },
+    {
+      "name": "Lehrkraefte",
+      "diagnosticBodyFamily": "DejaVu Sans",
+      "pages": 59,
+      "actualFonts": {
+        "fonts": [
+          {
+            "familyName": "DejaVu Sans",
+            "postScriptName": "DejaVuSans",
+            "isCustomFont": false,
+            "glyphCount": 198
+          }
+        ]
+      },
+      "metrics": {
+        "family": "\"DejaVu Sans\"",
+        "sections": [
+          {
+            "height": 613.09375,
+            "bottom": 631.84375
+          }
+        ]
+      },
+      "pdf": "Lehrkraefte-DejaVu_Sans.pdf",
+      "sha256": "f303ce2ed5e9b2e32072591b91f3f12fcb8ab326be60e32885cb63e4776b9fb6"
+    },
+    {
+      "name": "START-IM-UNTERRICHT",
+      "diagnosticBodyFamily": "Arial",
+      "pages": 2,
+      "actualFonts": {
+        "fonts": [
+          {
+            "familyName": "Liberation Sans",
+            "postScriptName": "LiberationSans",
+            "isCustomFont": false,
+            "glyphCount": 182
+          },
+          {
+            "familyName": "Liberation Sans",
+            "postScriptName": "LiberationSans-Bold",
+            "isCustomFont": false,
+            "glyphCount": 70
+          }
+        ]
+      },
+      "metrics": {
+        "family": "Arial",
+        "sections": [
+          {
+            "height": 862.046875,
+            "bottom": 877.15625
+          },
+          {
+            "height": 933.46875,
+            "bottom": 1825.734375
+          }
+        ]
+      },
+      "pdf": "START-IM-UNTERRICHT-Arial.pdf",
+      "sha256": "d28436aa78eeae1e18a191023740019bfd1be7af2110fe31455d0d184dea6f28"
+    },
+    {
+      "name": "PFAD-A-Artenliste",
+      "diagnosticBodyFamily": "Arial",
+      "pages": 2,
+      "actualFonts": {
+        "fonts": [
+          {
+            "familyName": "Liberation Sans",
+            "postScriptName": "LiberationSans",
+            "isCustomFont": false,
+            "glyphCount": 165
+          },
+          {
+            "familyName": "Liberation Sans",
+            "postScriptName": "LiberationSans-Bold",
+            "isCustomFont": false,
+            "glyphCount": 10
+          }
+        ]
+      },
+      "metrics": {
+        "family": "Arial",
+        "sections": [
+          {
+            "height": 823.734375,
+            "bottom": 838.84375
+          },
+          {
+            "height": 806.109375,
+            "bottom": 1660.0625
+          }
+        ]
+      },
+      "pdf": "PFAD-A-Artenliste-Arial.pdf",
+      "sha256": "6ee95e1e52052eb9cc7ba7954fda7924365a1e6bf551c29674a3f84c4cc7b638"
+    },
+    {
+      "name": "PFAD-B-Kuestenvoegel",
+      "diagnosticBodyFamily": "Arial",
+      "pages": 2,
+      "actualFonts": {
+        "fonts": [
+          {
+            "familyName": "Liberation Sans",
+            "postScriptName": "LiberationSans",
+            "isCustomFont": false,
+            "glyphCount": 208
+          },
+          {
+            "familyName": "Liberation Sans",
+            "postScriptName": "LiberationSans-Bold",
+            "isCustomFont": false,
+            "glyphCount": 10
+          }
+        ]
+      },
+      "metrics": {
+        "family": "Arial",
+        "sections": [
+          {
+            "height": 773.90625,
+            "bottom": 789.015625
+          },
+          {
+            "height": 934.71875,
+            "bottom": 1738.84375
+          }
+        ]
+      },
+      "pdf": "PFAD-B-Kuestenvoegel-Arial.pdf",
+      "sha256": "3b181f09b984e9353e3e380e481d1892f9f157b7951d52b7e5927ea3e56ec63f"
+    },
+    {
+      "name": "Arbeitsblaetter",
+      "diagnosticBodyFamily": "Arial",
+      "pages": 38,
+      "actualFonts": {
+        "fonts": [
+          {
+            "familyName": "Liberation Sans",
+            "postScriptName": "LiberationSans",
+            "isCustomFont": false,
+            "glyphCount": 198
+          }
+        ]
+      },
+      "metrics": {
+        "family": "Arial",
+        "sections": [
+          {
+            "height": 550.09375,
+            "bottom": 568.84375
+          }
+        ]
+      },
+      "pdf": "Arbeitsblaetter-Arial.pdf",
+      "sha256": "2cbb770796d5d061ddbb7b433bb6c72b737c070b11229afae1872b3e35586e8d"
+    },
+    {
+      "name": "Lehrkraefte",
+      "diagnosticBodyFamily": "Arial",
+      "pages": 59,
+      "actualFonts": {
+        "fonts": [
+          {
+            "familyName": "Liberation Sans",
+            "postScriptName": "LiberationSans",
+            "isCustomFont": false,
+            "glyphCount": 198
+          }
+        ]
+      },
+      "metrics": {
+        "family": "Arial",
+        "sections": [
+          {
+            "height": 592.09375,
+            "bottom": 610.84375
+          }
+        ]
+      },
+      "pdf": "Lehrkraefte-Arial.pdf",
+      "sha256": "03b5c86d9f722f8a7ad6efbb57c0534194c87a1b4c98584935a786546a2c627e"
+    }
+  ]
+}

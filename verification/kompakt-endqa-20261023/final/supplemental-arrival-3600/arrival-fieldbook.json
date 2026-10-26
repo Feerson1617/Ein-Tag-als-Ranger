@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 2,
+  "worldVersion": "ranger-compact-v2",
+  "records": [
+    {
+      "id": "5c6aa18a-629b-4463-91e7-0c810218354a",
+      "taxon": "haematopus_ostralegus",
+      "individualId": "compact-oystercatcher",
+      "window": "summer",
+      "modelRevision": 4,
+      "method": "binocular",
+      "siteId": "compact-wadden",
+      "events": [],
+      "worldVersion": "ranger-compact-v2",
+      "initialSeed": 20260825,
+      "runId": "a6094798-d760-4dd5-b928-24a98e66c503",
+      "sceneOrigin": {
+        "kind": "local-observation-window",
+        "previousRunId": "0b36290b-bbfa-45e3-a322-24ec850bf635",
+        "previousSimulationTime": 259.63539999999335,
+        "siteId": "outlook",
+        "x": 63.44446495992412,
+        "z": 4.065806746449154,
+        "startSimulationTime": 0
+      },
+      "source": "own-observation",
+      "observationSeconds": 18.28260000000008,
+      "simulationTime": 6.648300000000059,
+      "x": 61.1481419220527,
+      "z": -15.799385227454403,
+      "note": "Nahrungssuche am selbst erreichten Küstenort im ausdrücklich neu begonnenen Modellfenster beobachtet."
+    }
+  ],
+  "archives": [],
+  "previousEditions": [],
+  "learning": {
+    "activeMission": null,
+    "level": "gA",
+    "answers": {},
+    "protocols": [],
+    "measurements": [],
+    "samples": [],
+    "experiments": [],
+    "drafts": {}
+  },
+  "exportedAt": "2026-10-23T08:55:00.129Z"
+}

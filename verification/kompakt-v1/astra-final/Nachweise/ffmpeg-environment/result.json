@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "cause": "Playwright video encoder absent in the explicitly selected browser directory; initial main-plan process failed before opening the game page.",
+  "officialInstall": "Attempt failed HTTP403 Domain forbidden; full log preserved. No domain-policy bypass.",
+  "localRemedy": "Existing distribution FFmpeg /usr/bin/ffmpeg linked at the encoder executable path required by Playwright. This is the system encoder, not a claimed official Playwright download.",
+  "ffmpegVersion": "ffmpeg version 7.1.5-0+deb13u1 Copyright (c) 2000-2026 the FFmpeg developers",
+  "ffmpegSHA256": "e8a8d46f5225f3062cec7c07fb145d58ae73c603cb740dcd5bad34bfb54e455a",
+  "smokeVideo": {
+    "file": "ffmpeg-environment/video/page@709df3252b9ae38dd37ebac57a3f54de.webm",
+    "sha256": "15e5bd20e8dd3497ac94315b9cabc63379f47fe3f36f130aabd8d3ca80470120",
+    "codec": "vp8",
+    "width": 320,
+    "height": 240,
+    "duration": 1.16
+  },
+  "runtimeAndTestSourcesChanged": false,
+  "scope": "Only dependency readiness/actual video encoding; not a game PASS."
+}

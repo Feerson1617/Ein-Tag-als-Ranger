@@ -1,0 +1,20 @@
+{
+  "version": "0.16",
+  "routeLength": 734.6898679755535,
+  "forestPonds": 2,
+  "village": "five original life-size lots; street extends landward",
+  "exactTrailQueries": 4495,
+  "averageSegmentsPerWalkingQuery": 6.293,
+  "median10000QueriesMs": {
+    "indexed": 3.588466000000011,
+    "fullScan": 33.79800999999998
+  },
+  "speedup": 9.418511976984002,
+  "birdQueries": 1920,
+  "flightPairs": 64,
+  "mirroredVertices": 229224,
+  "wingTriangles": 152816,
+  "wingNormals": "reflected normals and reversed winding; identical plumage on both sides; positive instance matrices",
+  "wingAnimation": "one paired instance per flying bird; shadow and inset share its pose",
+  "seal": "land contact follows rendered terrain, not an older height formula"
+}

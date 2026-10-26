@@ -1,0 +1,450 @@
+{
+  "checks": [
+    {
+      "name": "boot: explicit small content/request graph",
+      "passed": true,
+      "manifest": {
+        "id": "compact",
+        "stage": 2,
+        "initialSeed": 20260825,
+        "biologicalZones": [
+          "forest",
+          "saltmarsh",
+          "wadden"
+        ],
+        "transitionZones": [
+          "village",
+          "dike"
+        ],
+        "activeTaxa": [
+          "fagus_sylvatica",
+          "quercus_robur",
+          "galium_odoratum",
+          "urtica_dioica",
+          "capreolus_capreolus",
+          "dendrocopos_major",
+          "halimione_portulacoides",
+          "salicornia_europaea",
+          "sporobolus_anglicus"
+        ],
+        "simulationInstances": [
+          "compact-reference-fauna"
+        ],
+        "metrics": {
+          "width": 160,
+          "depth": 100,
+          "areaHa": 1.6,
+          "mainMeters": 362.2102529662271,
+          "shortcutMeters": 29.145962247263665,
+          "walkSeconds": 226.3814081038919,
+          "shortcutSeconds": 18.21622640453979,
+          "maxSlope": 0.2553429469466351
+        }
+      }
+    },
+    {
+      "name": "spawn board and shared guide reachable",
+      "passed": true
+    },
+    {
+      "name": "both live tool paths render without runtime errors",
+      "passed": true
+    },
+    {
+      "name": "same real bird blocked behind solid bark and observable from its clear side",
+      "passed": true
+    },
+    {
+      "name": "actual keyboard movement",
+      "passed": true,
+      "distanceMeters": 0.8587200000000446,
+      "simulationSeconds": 0.5369999999999999,
+      "wallClockMethod": "wait for >0.5 model seconds; physics capped, no speed inference from slow GPU wall time"
+    },
+    {
+      "name": "own live plant evidence, explicit note, real JSON download",
+      "passed": true,
+      "individualId": "ranger-compact-reference-v1:galium_odoratum:15"
+    },
+    {
+      "name": "actual reload retains evidence and creates a fresh run ID",
+      "passed": true
+    },
+    {
+      "name": "invalid import rejected without replacing saved evidence",
+      "passed": true
+    },
+    {
+      "name": "out-of-core legacy records imported through actual file UI as archive only",
+      "passed": true
+    },
+    {
+      "name": "reference images: deer three views, supported bird, five plants, ramp and curve",
+      "passed": true
+    },
+    {
+      "name": "actual bird departure, flight and supported landing",
+      "passed": true
+    },
+    {
+      "name": "actual deer motion with stance feet at local terrain",
+      "passed": true
+    },
+    {
+      "name": "tablet viewport/profile preserves plants; emulation only",
+      "passed": true
+    },
+    {
+      "name": "actual WebGL context loss and restoration without fieldbook loss",
+      "passed": true
+    },
+    {
+      "name": "asset failure shows recovery message and preserves large-world storage",
+      "passed": true
+    },
+    {
+      "name": "corrupt saved data visible and preserved at actual boot",
+      "passed": true
+    },
+    {
+      "name": "quota error visible inside note dialog; old evidence unchanged",
+      "passed": true
+    },
+    {
+      "name": "actual emulated touch gesture uses the same 1.6 m/s action",
+      "passed": true,
+      "speed": 1.6,
+      "scope": "Chromium touch emulation only"
+    }
+  ],
+  "errors": [],
+  "captures": [
+    {
+      "file": "01-waldstart.png",
+      "sha256": "304c655838f572fbcbb9abddcd594bd530e729b4f915215be4a5f53119882646",
+      "bytes": 484072,
+      "renderFov": "62",
+      "renderTool": "none",
+      "renderRevision": "1",
+      "observer": "{\"x\":-52,\"z\":8,\"yaw\":1.5707963267948966,\"pitch\":-0.06}",
+      "simulationTime": "0.278",
+      "runId": "bca5ce76-9c2c-41f5-8f24-c3d61ebee7d5"
+    },
+    {
+      "file": "01a-binocular-runtime.png",
+      "sha256": "618af9153c879702f1af21ae9591b1558df3f957c4a3b968271b9a05dfae63d4",
+      "bytes": 274357,
+      "renderFov": "18",
+      "renderTool": "binocular",
+      "renderRevision": "2",
+      "observer": "{\"x\":-52,\"z\":8,\"yaw\":1.5707963267948966,\"pitch\":-0.06}",
+      "simulationTime": "0.817",
+      "runId": "bca5ce76-9c2c-41f5-8f24-c3d61ebee7d5"
+    },
+    {
+      "file": "01b-magnifier-runtime.png",
+      "sha256": "3e0752f3cca110c50a6393625e6df7da67c825b19f731e30c16816165e9f31a4",
+      "bytes": 367276,
+      "renderFov": "28",
+      "renderTool": "magnifier",
+      "renderRevision": "3",
+      "observer": "{\"x\":-52,\"z\":8,\"yaw\":1.5707963267948966,\"pitch\":-0.06}",
+      "simulationTime": "1.272",
+      "runId": "bca5ce76-9c2c-41f5-8f24-c3d61ebee7d5"
+    },
+    {
+      "file": "02-deer-side.png",
+      "sha256": "15c17348dd6dcacf81f1358becd799401f8285e588ee3642a7c16ddc1bbdc381",
+      "bytes": 397145,
+      "renderFov": "18",
+      "renderTool": "binocular",
+      "renderRevision": "3",
+      "observer": "{\"x\":-59,\"z\":-2.5,\"yaw\":-3.141592653589793,\"pitch\":-0.19303367272745017}",
+      "simulationTime": "0.802",
+      "runId": "0d5de6ca-f9f3-472b-86e7-e0e576bc2079"
+    },
+    {
+      "file": "03-deer-front.png",
+      "sha256": "f7ee1aae4a0d8eca92578130f76f3521bce2f6cf7b6d3fd1edc78a299204bb8d",
+      "bytes": 357276,
+      "renderFov": "18",
+      "renderTool": "binocular",
+      "renderRevision": "6",
+      "observer": "{\"x\":-53.5,\"z\":3,\"yaw\":1.5707963267948966,\"pitch\":-0.18985814560202113}",
+      "simulationTime": "1.308",
+      "runId": "0d5de6ca-f9f3-472b-86e7-e0e576bc2079"
+    },
+    {
+      "file": "04-deer-back.png",
+      "sha256": "0c02170dc75c2caafb652047f75f91cd6ee0b1b6cd54b92cfbcf00f7fdc70dc2",
+      "bytes": 375327,
+      "renderFov": "18",
+      "renderTool": "binocular",
+      "renderRevision": "9",
+      "observer": "{\"x\":-64.5,\"z\":3,\"yaw\":-1.5707963267948966,\"pitch\":-0.1950840473460088}",
+      "simulationTime": "1.975",
+      "runId": "0d5de6ca-f9f3-472b-86e7-e0e576bc2079"
+    },
+    {
+      "file": "05-bird.png",
+      "sha256": "0f39fc45a4e50a454b8e8a2e6b57da5157bbdf7b2c2603b2c2e2479bdb124124",
+      "bytes": 245271,
+      "renderFov": "18",
+      "renderTool": "binocular",
+      "renderRevision": "12",
+      "observer": "{\"x\":-56.65546666666667,\"z\":14.2,\"yaw\":0.45157576083555057,\"pitch\":0.007823297634087688}",
+      "simulationTime": "2.497",
+      "runId": "0d5de6ca-f9f3-472b-86e7-e0e576bc2079"
+    },
+    {
+      "file": "06-woodruff.png",
+      "sha256": "f3f1221d404383898c7315e1d045babceb2fdb9d1ef9163b410ee92fc017c109",
+      "bytes": 523476,
+      "renderFov": "28",
+      "renderTool": "magnifier",
+      "renderRevision": "15",
+      "observer": "{\"x\":-54.32327704373523,\"z\":8.043468266353608,\"yaw\":0.885066815888611,\"pitch\":-0.5203797766551117}",
+      "simulationTime": "3.035",
+      "runId": "0d5de6ca-f9f3-472b-86e7-e0e576bc2079"
+    },
+    {
+      "file": "07-nettle.png",
+      "sha256": "58f58907db28a63b26686c13a8d3ebe5fb8d8a953cb861e8474a6063ea278c4c",
+      "bytes": 349521,
+      "renderFov": "28",
+      "renderTool": "magnifier",
+      "renderRevision": "18",
+      "observer": "{\"x\":-40.47863381511998,\"z\":14.197259088003703,\"yaw\":0.8850668158886108,\"pitch\":-0.4174609346054198}",
+      "simulationTime": "3.509",
+      "runId": "0d5de6ca-f9f3-472b-86e7-e0e576bc2079"
+    },
+    {
+      "file": "08-salt-shrub.png",
+      "sha256": "4ec843ed2863c9b41df077a175bb5ba69f05e6893416873299324084b9c4b5cd",
+      "bytes": 507243,
+      "renderFov": "28",
+      "renderTool": "magnifier",
+      "renderRevision": "21",
+      "observer": "{\"x\":44.291782814811064,\"z\":11.857750914279078,\"yaw\":0.8850668158886108,\"pitch\":-0.3944189439455479}",
+      "simulationTime": "4.080",
+      "runId": "0d5de6ca-f9f3-472b-86e7-e0e576bc2079"
+    },
+    {
+      "file": "09-salt-segments.png",
+      "sha256": "17d3e491c18404e5574ef3c5c9a4f1336bde92ab22500abad165ce4a3a9f9f89",
+      "bytes": 569729,
+      "renderFov": "28",
+      "renderTool": "magnifier",
+      "renderRevision": "24",
+      "observer": "{\"x\":47.06361154650879,\"z\":-1.1226803810237544,\"yaw\":-0.8850668158886109,\"pitch\":-0.7030085891335317}",
+      "simulationTime": "4.537",
+      "runId": "0d5de6ca-f9f3-472b-86e7-e0e576bc2079"
+    },
+    {
+      "file": "10-salt-grass.png",
+      "sha256": "b8edd23315e5725858c732ae88d2231903a3b2b0477a5daf7b01132d5a650b8f",
+      "bytes": 476120,
+      "renderFov": "28",
+      "renderTool": "magnifier",
+      "renderRevision": "27",
+      "observer": "{\"x\":48.06547650969032,\"z\":-11.667965017635673,\"yaw\":0.8850668158886108,\"pitch\":-0.38814298401884406}",
+      "simulationTime": "5.043",
+      "runId": "0d5de6ca-f9f3-472b-86e7-e0e576bc2079"
+    },
+    {
+      "file": "11-ramp.png",
+      "sha256": "df0c6fb7bc9f25725614b79bd23107eb4e3969122f2f2615fb672551759771d1",
+      "bytes": 375513,
+      "renderFov": "62",
+      "renderTool": "none",
+      "renderRevision": "29",
+      "observer": "{\"x\":3,\"z\":16,\"yaw\":-0.4124104415973873,\"pitch\":-0.030735012307624418}",
+      "simulationTime": "5.402",
+      "runId": "0d5de6ca-f9f3-472b-86e7-e0e576bc2079"
+    },
+    {
+      "file": "12-coast.png",
+      "sha256": "1d3f6dda4f3639765c372aa1825b20dc8808e7135d430d4b64ac39ba359d67cb",
+      "bytes": 369442,
+      "renderFov": "62",
+      "renderTool": "none",
+      "renderRevision": "30",
+      "observer": "{\"x\":63,\"z\":-13,\"yaw\":-2.3036114285814033,\"pitch\":-0.12788807707486585}",
+      "simulationTime": "5.907",
+      "runId": "0d5de6ca-f9f3-472b-86e7-e0e576bc2079"
+    },
+    {
+      "file": "13-bird-flight.png",
+      "sha256": "1f9fb0b97c7fc834612f7f8b2c35958c87256f753ae59def2f0c160a3967f717",
+      "bytes": 399368,
+      "renderFov": "62",
+      "renderTool": "none",
+      "renderRevision": "34",
+      "observer": "{\"x\":-54,\"z\":14,\"yaw\":1.5707963267948966,\"pitch\":0.07796742453278983}",
+      "simulationTime": "7.815",
+      "runId": "0d5de6ca-f9f3-472b-86e7-e0e576bc2079"
+    },
+    {
+      "file": "14-bird-landed.png",
+      "sha256": "501e3e662f23841259f67d31d236906f63fac4cf142668054a284513811ae975",
+      "bytes": 224755,
+      "renderFov": "18",
+      "renderTool": "binocular",
+      "renderRevision": "36",
+      "observer": "{\"x\":-62.628557575757576,\"z\":19.2,\"yaw\":0.45157576083555057,\"pitch\":0.007442306078597167}",
+      "simulationTime": "11.410",
+      "runId": "0d5de6ca-f9f3-472b-86e7-e0e576bc2079"
+    },
+    {
+      "file": "15-deer-moving.png",
+      "sha256": "29049b1174261026bd90f7a6db565ea547bd80866284e3b4c4f8b130156e6fea",
+      "bytes": 527797,
+      "renderFov": "62",
+      "renderTool": "none",
+      "renderRevision": "40",
+      "observer": "{\"x\":-59,\"z\":1.2440000000000022,\"yaw\":-3.141592653589793,\"pitch\":-0.19303367272745017}",
+      "simulationTime": "14.546",
+      "runId": "0d5de6ca-f9f3-472b-86e7-e0e576bc2079"
+    },
+    {
+      "file": "16-tablet.png",
+      "sha256": "c7bd62eeb58a6d1d9468f1fe054e8fef643327e3a640bd8cf421a8b81035ff1d",
+      "bytes": 921048,
+      "renderFov": "62",
+      "renderTool": "none",
+      "renderRevision": "42",
+      "observer": "{\"x\":-59,\"z\":1.2440000000000022,\"yaw\":-3.141592653589793,\"pitch\":-0.19303367272745017}",
+      "simulationTime": "14.938",
+      "runId": "0d5de6ca-f9f3-472b-86e7-e0e576bc2079"
+    }
+  ],
+  "startedAt": "2026-10-21T20:32:18Z",
+  "site": "outputs/Ranger-Kompakt",
+  "entry": "index.html",
+  "viewport": {
+    "width": 800,
+    "height": 500
+  },
+  "hardwareScope": "Cloud Chromium; no actual iPad/Safari or minimum-device certification",
+  "sourceCommit": "2326283ab01fbb25644f82e3cada26d9a2b509ea",
+  "runtimeSourceHashes": {
+    "assets/boardwalk-wood.webp": "4d06022133e3772534374671fb73a4509ed109e1db6ca06a2d62a8c99c47ac6d",
+    "assets/compact-roe-deer.glb": "a89400df66033eb5eaa7f9bf13ccefaacfb866ab24e4576574d11965354ee619",
+    "assets/sky-panorama.webp": "46c360b491b11269d280e73ec0e71869afdfd62fb543b4250713234374a2f71d",
+    "assets/terrain-atlas.webp": "d637324d3ace6ef8e2c549e7f0a513efd1a4c06aab927f0ed1565bf77b2ced02",
+    "compact/fauna-view.js": "e15c702b5863a3fd70b61c69870ef35353c4bdcb24b448bf19497df44390f6cf",
+    "compact/geometry.js": "addb04d9851aaafa4735147b30b466cad1846eca35505e451693af2deb88623a",
+    "compact/journal.js": "35d34f975e759c3fed865294800e4188cad86266f253f08dbb5272902e971a80",
+    "compact/layout.js": "87d3ca2dd64fe13f1299d4cf876aadc8f8ca1ecb50aba66612e290d9f0496729",
+    "compact/main.js": "d11bb5ccdde86afa0ccca9253ed508cccc8acc6ac12a8811be29a1209250d90a",
+    "compact/manifest.js": "3079e2caf9bb9f0caa61de029381666a720aae7a83a5b83727bb5edeef514f99",
+    "compact/path-mesh.js": "7a41ebc390aeca96cffd1e4fcee19f3b76310413fcee3489d1533ebd599a4c82",
+    "compact/style.css": "e90fbcb9ef3fdb85fd1f64de2bf216fbc8747efbc312e69a3c46147dbceb231a",
+    "compact/taxa.js": "3e666a2ba16ccd9fa0c3b2353337e18bd75ca3b8a812b7c72d306f231845a2e0",
+    "compact/visibility.js": "50d59d44257e9d18547bfaec9277366d3339177c6ebce37d948b48c9940a86f1",
+    "compact/world-state.js": "2d3e6f01290bf2e0462350b88383488f441d43d573b036bcfc793f5b5cb126c0",
+    "compact/world-view.js": "50dd2e537fcc9b00630f9bf4f38f027ecca173782296db77a51cea909aa4429d",
+    "field-guide.js": "8ec2a5734f400da9226ea82afdf2276678214521da162e50ea6f785eaa12fd03",
+    "icon.svg": "cb8cda889f99e56d13d18e09929837b7c3630d3f9ff3219316d12d3077fc0869",
+    "kompakt.html": "a2c26a5ac69a94dbd5fd026cfe41051edf366d9719130760be9063151e941d56",
+    "observation-clock.js": "2304e6c425192967f87841caa5072873cb5dd5c7f69c38fb45b237fd22f98b03",
+    "ranger-controls.js": "081497a5f6754ecd441e61ee55805da99b5121e96215cfa900209e00e41e5eda",
+    "station-protocol.js": "2590df7d9de4c8f4afda8fcafd619d565440c2dc7e1bb6ef4574aeadf803ae57",
+    "vendor/three.core.js": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20",
+    "vendor/three.module.js": "2884e2e6f26feaec0b454fcdc1e98c27d6433ba15253e5a3e22e111df81686fa",
+    "wildlife-glb.js": "32f8f947dd002ba7b571ee627e6291fa40a951fccdd9dee644661f19de487c35"
+  },
+  "videos": [
+    {
+      "file": "bird-flight.webm",
+      "bytes": 94980,
+      "sha256": "079f852dd9e3e4613394d22208077aadada76d1be6958ce3963af144abccd89a"
+    },
+    {
+      "file": "deer-motion.webm",
+      "bytes": 83978,
+      "sha256": "62ede83f216a32d45e8e266c432bf7dc4423b4252ea13373f9cd1e05c593281f"
+    }
+  ],
+  "videoAvailable": false,
+  "browserVersion": "154.0.8037.57",
+  "buildStamp": "2326283ab01fbb25644f82e3cada26d9a2b509ea; dirty=false",
+  "requests": [
+    "http://127.0.0.1:46505/Ein-Tag-als-Ranger/index.html",
+    "http://127.0.0.1:46505/Ein-Tag-als-Ranger/web/compact-e90fbcb9ef3f.css",
+    "http://127.0.0.1:46505/Ein-Tag-als-Ranger/web/compact-main-34bebd0341ae.js",
+    "http://127.0.0.1:46505/Ein-Tag-als-Ranger/web/vendor-three.module-c4af49689bc3.js",
+    "http://127.0.0.1:46505/Ein-Tag-als-Ranger/web/observation-clock-2304e6c42519.js",
+    "http://127.0.0.1:46505/Ein-Tag-als-Ranger/web/ranger-controls-081497a5f675.js",
+    "http://127.0.0.1:46505/Ein-Tag-als-Ranger/web/field-guide-8ec2a5734f40.js",
+    "http://127.0.0.1:46505/Ein-Tag-als-Ranger/web/compact-manifest-ff4d8154b134.js",
+    "http://127.0.0.1:46505/Ein-Tag-als-Ranger/web/compact-visibility-50d59d44257e.js",
+    "http://127.0.0.1:46505/Ein-Tag-als-Ranger/web/compact-taxa-3e666a2ba16c.js",
+    "http://127.0.0.1:46505/Ein-Tag-als-Ranger/web/compact-layout-87d3ca2dd64f.js",
+    "http://127.0.0.1:46505/Ein-Tag-als-Ranger/web/compact-world-state-28ad604c1518.js",
+    "http://127.0.0.1:46505/Ein-Tag-als-Ranger/web/compact-world-view-c40b24417120.js",
+    "http://127.0.0.1:46505/Ein-Tag-als-Ranger/web/compact-fauna-view-13a72ee45fa7.js",
+    "http://127.0.0.1:46505/Ein-Tag-als-Ranger/web/compact-journal-d6a3134fe8f4.js",
+    "http://127.0.0.1:46505/Ein-Tag-als-Ranger/web/wildlife-glb-a902e52468e8.js",
+    "http://127.0.0.1:46505/Ein-Tag-als-Ranger/web/compact-geometry-121f27bd8fb6.js",
+    "http://127.0.0.1:46505/Ein-Tag-als-Ranger/web/compact-path-mesh-d704caf044d7.js",
+    "http://127.0.0.1:46505/Ein-Tag-als-Ranger/web/vendor-three.core-eb077d2417f6.js",
+    "http://127.0.0.1:46505/Ein-Tag-als-Ranger/web/station-protocol-2590df7d9de4.js",
+    "http://127.0.0.1:46505/Ein-Tag-als-Ranger/assets/terrain-atlas-d637324d3ace.webp",
+    "http://127.0.0.1:46505/Ein-Tag-als-Ranger/assets/sky-panorama-46c360b491b1.webp",
+    "http://127.0.0.1:46505/Ein-Tag-als-Ranger/assets/boardwalk-wood-4d06022133e3.webp",
+    "http://127.0.0.1:46505/Ein-Tag-als-Ranger/assets/compact-roe-deer-a89400df6603.glb",
+    "http://127.0.0.1:46505/Ein-Tag-als-Ranger/icon.svg",
+    "http://127.0.0.1:46505/Ein-Tag-als-Ranger/index.html",
+    "http://127.0.0.1:46505/Ein-Tag-als-Ranger/web/compact-e90fbcb9ef3f.css",
+    "http://127.0.0.1:46505/Ein-Tag-als-Ranger/web/compact-main-34bebd0341ae.js",
+    "http://127.0.0.1:46505/Ein-Tag-als-Ranger/web/vendor-three.module-c4af49689bc3.js",
+    "http://127.0.0.1:46505/Ein-Tag-als-Ranger/web/observation-clock-2304e6c42519.js",
+    "http://127.0.0.1:46505/Ein-Tag-als-Ranger/web/ranger-controls-081497a5f675.js",
+    "http://127.0.0.1:46505/Ein-Tag-als-Ranger/web/field-guide-8ec2a5734f40.js",
+    "http://127.0.0.1:46505/Ein-Tag-als-Ranger/web/compact-manifest-ff4d8154b134.js",
+    "http://127.0.0.1:46505/Ein-Tag-als-Ranger/web/compact-visibility-50d59d44257e.js",
+    "http://127.0.0.1:46505/Ein-Tag-als-Ranger/web/compact-taxa-3e666a2ba16c.js",
+    "http://127.0.0.1:46505/Ein-Tag-als-Ranger/web/compact-layout-87d3ca2dd64f.js",
+    "http://127.0.0.1:46505/Ein-Tag-als-Ranger/web/compact-world-state-28ad604c1518.js",
+    "http://127.0.0.1:46505/Ein-Tag-als-Ranger/web/compact-world-view-c40b24417120.js",
+    "http://127.0.0.1:46505/Ein-Tag-als-Ranger/web/compact-fauna-view-13a72ee45fa7.js",
+    "http://127.0.0.1:46505/Ein-Tag-als-Ranger/web/compact-journal-d6a3134fe8f4.js",
+    "http://127.0.0.1:46505/Ein-Tag-als-Ranger/web/vendor-three.core-eb077d2417f6.js",
+    "http://127.0.0.1:46505/Ein-Tag-als-Ranger/web/wildlife-glb-a902e52468e8.js",
+    "http://127.0.0.1:46505/Ein-Tag-als-Ranger/web/compact-geometry-121f27bd8fb6.js",
+    "http://127.0.0.1:46505/Ein-Tag-als-Ranger/web/compact-path-mesh-d704caf044d7.js",
+    "http://127.0.0.1:46505/Ein-Tag-als-Ranger/web/station-protocol-2590df7d9de4.js",
+    "http://127.0.0.1:46505/Ein-Tag-als-Ranger/assets/terrain-atlas-d637324d3ace.webp",
+    "http://127.0.0.1:46505/Ein-Tag-als-Ranger/assets/sky-panorama-46c360b491b1.webp",
+    "http://127.0.0.1:46505/Ein-Tag-als-Ranger/assets/boardwalk-wood-4d06022133e3.webp",
+    "http://127.0.0.1:46505/Ein-Tag-als-Ranger/assets/compact-roe-deer-a89400df6603.glb",
+    "http://127.0.0.1:46505/Ein-Tag-als-Ranger/icon.svg"
+  ],
+  "lastDataset": {
+    "engine": "three.js r180",
+    "sceneRevision": "44",
+    "graphicsProfile": "desktop",
+    "ready": "true",
+    "manifest": "{\"id\":\"compact\",\"stage\":2,\"initialSeed\":20260825,\"biologicalZones\":[\"forest\",\"saltmarsh\",\"wadden\"],\"transitionZones\":[\"village\",\"dike\"],\"activeTaxa\":[\"fagus_sylvatica\",\"quercus_robur\",\"galium_odoratum\",\"urtica_dioica\",\"capreolus_capreolus\",\"dendrocopos_major\",\"halimione_portulacoides\",\"salicornia_europaea\",\"sporobolus_anglicus\"],\"simulationInstances\":[\"compact-reference-fauna\"],\"metrics\":{\"width\":160,\"depth\":100,\"areaHa\":1.6,\"mainMeters\":362.2102529662271,\"shortcutMeters\":29.145962247263665,\"walkSeconds\":226.3814081038919,\"shortcutSeconds\":18.21622640453979,\"maxSlope\":0.2553429469466351}}",
+    "worldVersion": "ranger-compact-reference-v1",
+    "runId": "0d5de6ca-f9f3-472b-86e7-e0e576bc2079",
+    "focusIndividual": "",
+    "focusTaxon": "",
+    "observationSeconds": "0.000",
+    "simulationTime": "15.231",
+    "observer": "{\"x\":-59,\"z\":1.2440000000000022,\"yaw\":-3.141592653589793,\"pitch\":-0.19303367272745017}",
+    "birdSupport": "support-beech-b:trunk",
+    "birdActivity": "searching",
+    "bird": "{\"id\":\"compact-woodpecker-1\",\"taxon\":\"dendrocopos_major\",\"x\":-63.72855757575758,\"y\":1.8828353349066753,\"z\":17,\"supportId\":\"support-beech-b:trunk\",\"activity\":\"searching\",\"phase\":4.361600000000034,\"targetIndex\":1,\"flightStart\":{\"x\":-57.75546666666667,\"y\":1.89346274546396,\"z\":12},\"flightTime\":3.5464999999999978}",
+    "deer": "{\"id\":\"compact-deer-1\",\"taxon\":\"capreolus_capreolus\",\"x\":-60.36994500000002,\"z\":2.8710640000000014,\"heading\":3.141592653589793,\"activity\":\"retreating\",\"phase\":20.066500000000108,\"feet\":[{\"part\":1,\"x\":-60.5644135721654,\"z\":2.9770562066587165,\"y\":0.347837299571476,\"surface\":0.347837299571476,\"swing\":false,\"geometryGap\":-3.016586980209013e-12},{\"part\":2,\"x\":-60.53427647384869,\"z\":2.7650717933412863,\"y\":0.4070950325834046,\"surface\":0.34859965791504877,\"swing\":true,\"geometryGap\":0.05849537462951909},{\"part\":3,\"x\":-60.14389481849924,\"z\":2.9770562066587165,\"y\":0.34982870830269647,\"surface\":0.34982870830269647,\"swing\":false,\"geometryGap\":6.387890216785763e-11},{\"part\":4,\"x\":-59.983894818499245,\"z\":2.7650717933412863,\"y\":0.3511447686765091,\"surface\":0.3511447686765091,\"swing\":false,\"geometryGap\":2.399891396720477e-11}],\"supportId\":null}",
+    "plantCount": "443",
+    "frameMs": "16.6",
+    "triangles": "1101552",
+    "drawCalls": "16",
+    "renderRevision": "44",
+    "renderFov": "62",
+    "renderTool": "none",
+    "movementSpeed": "0"
+  }
+}

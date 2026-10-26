@@ -1,0 +1,60 @@
+{
+  "sourceCommit": "e9899efaa314d052191d7d3a95b5de904f2932b6",
+  "htmlSHA256": "87ff215191f543c1d91cadeef0ecf14c98012ff1f2b0c9866df0bbe2fd6494b8",
+  "reviewedUTC": "2026-10-24T12:27:42.021129+00:00",
+  "scope": "Own actual viewing of all seven listed current captures plus successful native pointer/geometry/input tests. Internal bounded panels intentionally scroll; mandatory content remains reachable. Touch viewport is emulation, not a physical device.",
+  "passedWithinCoveredScope": true,
+  "uniqueTechnicalChecks": 12,
+  "capturesActuallyViewed": [
+    {
+      "file": "ui/viewport-0-1440x900-top.png",
+      "sha256": "282015c4395fb2acfe922de7734c2e473b7a06585ec8765510f1f7349ef4dea8"
+    },
+    {
+      "file": "ui/viewport-1-1080x810-top.png",
+      "sha256": "026a399a3c90aa7c267faf7493c26fd7e9ca692672c8bafbe1b938e6aa6bd94d"
+    },
+    {
+      "file": "ui/viewport-2-810x1080-bottom.png",
+      "sha256": "877dc21adc6b1a723b34dc5d6f498907cc4c582400fc8cf141a91c06e8d65b5c"
+    },
+    {
+      "file": "ui/viewport-3-600x375-top.png",
+      "sha256": "a353a65adad749551e60bdc0d90eb8f620d621f998601e00b3779b34eee78dfe"
+    },
+    {
+      "file": "ui/viewport-3-600x375-bottom.png",
+      "sha256": "1625e3a0704396bae2c376aa99f38e77db348ea5111c52cef7359b9bc9d081cc"
+    },
+    {
+      "file": "supplement-native-zoom-1/native-zoom-full-surface.png",
+      "sha256": "00c8bc1474128abf68be4f6a23da76899c4a128c2bd7f8fca712019ad863287d"
+    },
+    {
+      "file": "supplement-native-zoom-1/small-600x375-middle-lens.png",
+      "sha256": "7f652a388b4fc97cbbd6a1bff71ce1b94baa1af7119bedc205b58395f4953537"
+    },
+    {
+      "file": "supplement-native-zoom-2/native-zoom-middle-full-surface.png",
+      "sha256": "51c82dd226cbb194fcd8a92075d802f5f9f30d4252596227024cf37e9436b679"
+    }
+  ],
+  "findings": [
+    "Four required CSS sizes and rotation remain within viewport with reachable close/back controls.",
+    "600x375 middle-scroll capture shows the entire main lens; top and bottom show reachable explanatory text/provenance.",
+    "Native Chrome Settings200% produces CSS720x406/DPR2 in a1440-wide physical window. DirectCDP full-surface1440x813 capture shows both panels and controls without overlap. No CSS zoom imitation or image rescaling."
+  ],
+  "initialNativeScreenshotLimitation": {
+    "file": "ui/native-desktop-zoom-200.png",
+    "reason": "Playwright screenshot viewport cropping at native page zoom captured only720x406physical pixels; directCDP screenshot captures the actual full1440x813 surface. Original technical assertions passed and original image retained."
+  },
+  "notChecked": [
+    {
+      "case": "actual hidden background tab",
+      "reason": "Neither actual second-tab activation nor native window minimization exposed document.hidden in this headless Chromium; no mock substituted."
+    }
+  ],
+  "additionalNativeMiddleCapture": "Actual complete1440x813 native200%-zoom middle-scroll image viewed; full lens scissor-height assertion passed. No runtime change or reconstructed image.",
+  "reviewCompletedUTC": "2026-10-24T12:51:08.029153+00:00",
+  "passedWithinDeclaredB4Scope": true
+}

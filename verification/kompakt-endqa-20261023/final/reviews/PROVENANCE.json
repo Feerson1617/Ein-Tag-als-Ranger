@@ -1,0 +1,45 @@
+{
+  "print": {
+    "sourceCommit": "f92146876f4364a4fb78d30d9e9b190bbb7dc1f4",
+    "sourceDirty": true,
+    "runtimeFreezeCommit": "3920a1d1d2692889b75403c1b0e50f5b856398aa",
+    "sameCommitAsRuntimeFreeze": false,
+    "hashScope": "Four document/material modules only",
+    "comparedSourceFiles": 4,
+    "sourceHashesMatchRuntimeFreeze": true,
+    "sourceDifferences": {},
+    "role": "Earlier own visual review; does not replace the final browser or PDF rerun."
+  },
+  "habitats": {
+    "sourceCommit": "f92146876f4364a4fb78d30d9e9b190bbb7dc1f4",
+    "sourceDirty": true,
+    "runtimeFreezeCommit": "3920a1d1d2692889b75403c1b0e50f5b856398aa",
+    "sameCommitAsRuntimeFreeze": false,
+    "hashScope": "Entire runtime recorded by the earlier habitat browser run",
+    "comparedSourceFiles": 51,
+    "sourceHashesMatchRuntimeFreeze": false,
+    "sourceDifferences": {
+      "compact/evidence.js": {
+        "review": "1fb480ca90cebdba0b3178cc5ccbb121528826552ec32230b1c3245e808aa84f",
+        "runtimeFreeze": "0a6216bca6fdd1aa0e091a62ed62f57b04e83cfc8a597e294d6e18e8db61712d"
+      },
+      "compact/learning-ui.js": {
+        "review": "f2e7d65c048474fd9f218d516a7d7f8ec864f9fc3cef56434af120ad317472c9",
+        "runtimeFreeze": "d590710b949bca8f47770bebb37d08adcc3d53ee7855eb9edf0d7d9196852e7b"
+      },
+      "compact/missions.js": {
+        "review": "cf4fb577ffaeba665ca5a35060e1352c4998cd0c71d4f12770608c4fa8da1a19",
+        "runtimeFreeze": "8f8151a6b499658b1316ee57ac6fd4d4e94a980b5baf0e943ca2678edd03bfca"
+      },
+      "compact/task-schema.js": {
+        "review": "4ce4ca8e8f6c27182b3abe36d90d956fcbc6526d240911dbc996c53b670fc418",
+        "runtimeFreeze": "e2578f580e0f018fe7903bc6486873dd6cdf050bfcd9719798d6e6e1462c2d01"
+      },
+      "field-guide.js": {
+        "review": "6ab288b2799c92c8be16fb7a77ba1217eac7c32fb7143b539fad358f8b547e1b",
+        "runtimeFreeze": "8bb0d901798611f74cabb0859b92cead469e7237c68afa67a73f352c7bfcb1bf"
+      }
+    },
+    "role": "Earlier own visual review; does not replace the final browser or PDF rerun."
+  }
+}

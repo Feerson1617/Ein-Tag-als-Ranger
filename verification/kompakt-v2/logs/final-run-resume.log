@@ -1,0 +1,2 @@
+START learning-browser
+{'name': 'learning-browser', 'command': ['/workspace/.ranger-clean-venv/bin/python', 'tools/browser-compact-learning.py', '--gallery'], 'status': 'failed', 'startedAt': '2026-10-22T06:47:09Z', 'exitCode': -15, 'seconds': 964.12}

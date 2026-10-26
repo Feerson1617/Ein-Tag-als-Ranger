@@ -1,0 +1,563 @@
+{
+  "sourceCommit": "4eb186a5325ae30dfa233e10dd44eb73ea710afa",
+  "complete": true,
+  "checks": [
+    {
+      "name": "build-web",
+      "role": "mandatory",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 0.979,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/build-web.py"
+      ],
+      "log": "logs/build-web.log",
+      "context": "contexts/build-web.json"
+    },
+    {
+      "name": "verify-web",
+      "role": "mandatory",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 0.824,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/verify-web.py"
+      ],
+      "log": "logs/verify-web.log",
+      "context": "contexts/verify-web.json"
+    },
+    {
+      "name": "build-legacy-html",
+      "role": "mandatory",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 0.822,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/build-standalone.py"
+      ],
+      "log": "logs/build-legacy-html.log",
+      "context": "contexts/build-legacy-html.json"
+    },
+    {
+      "name": "build-compact",
+      "role": "mandatory",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 0.571,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/build-compact.py"
+      ],
+      "log": "logs/build-compact.log",
+      "context": "contexts/build-compact.json"
+    },
+    {
+      "name": "verify-compact",
+      "role": "mandatory",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 0.17,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/verify-compact.py"
+      ],
+      "log": "logs/verify-compact.log",
+      "context": "contexts/verify-compact.json"
+    },
+    {
+      "name": "build-materials",
+      "role": "mandatory",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 14.508,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/print-compact-materials.py",
+        "--contact-sheets",
+        "--audit-dir",
+        "/workspace/Ein-Tag-als-Ranger/work/astra-abschluss-20261025/final-4eb186a/print"
+      ],
+      "log": "logs/build-materials.log",
+      "context": "contexts/build-materials.json"
+    },
+    {
+      "name": "print-fonts",
+      "role": "mandatory",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 4.343,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/check-compact-print-fonts.py",
+        "--output",
+        "/workspace/Ein-Tag-als-Ranger/work/astra-abschluss-20261025/final-4eb186a/print-fonts"
+      ],
+      "log": "logs/print-fonts.log",
+      "context": "contexts/print-fonts.json"
+    },
+    {
+      "name": "legacy-node",
+      "role": "mandatory",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 32.536,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/run-checks.py",
+        "--output",
+        "/workspace/Ein-Tag-als-Ranger/work/astra-abschluss-20261025/final-4eb186a/legacy-node"
+      ],
+      "log": "logs/legacy-node.log",
+      "context": "contexts/legacy-node.json"
+    },
+    {
+      "name": "compact-node",
+      "role": "mandatory",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 20.626,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/check-compact.py",
+        "--output",
+        "/workspace/Ein-Tag-als-Ranger/work/astra-abschluss-20261025/final-4eb186a/compact-node"
+      ],
+      "log": "logs/compact-node.log",
+      "context": "contexts/compact-node.json"
+    },
+    {
+      "name": "python",
+      "role": "mandatory",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 3.578,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "log": "logs/python.log",
+      "context": "contexts/python.json"
+    },
+    {
+      "name": "source-package",
+      "role": "mandatory",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 9.693,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/package-project.py"
+      ],
+      "log": "logs/source-package.log",
+      "context": "contexts/source-package.json"
+    },
+    {
+      "name": "source",
+      "role": "mandatory",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 10.113,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-source.py",
+        "--output",
+        "/workspace/Ein-Tag-als-Ranger/work/astra-abschluss-20261025/final-4eb186a/source"
+      ],
+      "log": "logs/source.log",
+      "context": "contexts/source.json"
+    },
+    {
+      "name": "reference",
+      "role": "mandatory",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 164.41,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact.py",
+        "--output",
+        "/workspace/Ein-Tag-als-Ranger/work/astra-abschluss-20261025/final-4eb186a/reference"
+      ],
+      "log": "logs/reference.log",
+      "context": "contexts/reference.json"
+    },
+    {
+      "name": "learning-source",
+      "role": "mandatory",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 200.039,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-learning.py",
+        "--site",
+        "dist",
+        "--entry",
+        "kompakt.html",
+        "--gallery",
+        "--output",
+        "/workspace/Ein-Tag-als-Ranger/work/astra-abschluss-20261025/final-4eb186a/learning-source"
+      ],
+      "log": "logs/learning-source.log",
+      "context": "contexts/learning-source.json"
+    },
+    {
+      "name": "learning-web",
+      "role": "mandatory",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 84.459,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-learning.py",
+        "--site",
+        "outputs/Ranger-Kompakt",
+        "--entry",
+        "index.html",
+        "--output",
+        "/workspace/Ein-Tag-als-Ranger/work/astra-abschluss-20261025/final-4eb186a/learning-web"
+      ],
+      "log": "logs/learning-web.log",
+      "context": "contexts/learning-web.json"
+    },
+    {
+      "name": "learning-standalone",
+      "role": "mandatory",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 87.93,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-learning.py",
+        "--site",
+        "outputs",
+        "--entry",
+        "Ranger-Kompakt.html",
+        "--output",
+        "/workspace/Ein-Tag-als-Ranger/work/astra-abschluss-20261025/final-4eb186a/learning-standalone"
+      ],
+      "log": "logs/learning-standalone.log",
+      "context": "contexts/learning-standalone.json"
+    },
+    {
+      "name": "standalone-smoke",
+      "role": "mandatory",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 47.438,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact.py",
+        "--site",
+        "outputs",
+        "--entry",
+        "Ranger-Kompakt.html",
+        "--smoke",
+        "--output",
+        "/workspace/Ein-Tag-als-Ranger/work/astra-abschluss-20261025/final-4eb186a/standalone-smoke"
+      ],
+      "log": "logs/standalone-smoke.log",
+      "context": "contexts/standalone-smoke.json"
+    },
+    {
+      "name": "feeding",
+      "role": "mandatory",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 57.539,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-feeding.py",
+        "--output",
+        "/workspace/Ein-Tag-als-Ranger/work/astra-abschluss-20261025/final-4eb186a/feeding"
+      ],
+      "log": "logs/feeding.log",
+      "context": "contexts/feeding.json"
+    },
+    {
+      "name": "feeding-detail",
+      "role": "mandatory",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 61.761,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-feeding.py",
+        "--detail",
+        "--output",
+        "/workspace/Ein-Tag-als-Ranger/work/astra-abschluss-20261025/final-4eb186a/feeding-detail"
+      ],
+      "log": "logs/feeding-detail.log",
+      "context": "contexts/feeding-detail.json"
+    },
+    {
+      "name": "paused-capture",
+      "role": "mandatory",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 15.252,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-paused-capture.py",
+        "--output",
+        "/workspace/Ein-Tag-als-Ranger/work/astra-abschluss-20261025/final-4eb186a/paused-capture"
+      ],
+      "log": "logs/paused-capture.log",
+      "context": "contexts/paused-capture.json"
+    },
+    {
+      "name": "imports",
+      "role": "mandatory",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 48.875,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-imports.py",
+        "--output",
+        "/workspace/Ein-Tag-als-Ranger/work/astra-abschluss-20261025/final-4eb186a/imports"
+      ],
+      "log": "logs/imports.log",
+      "context": "contexts/imports.json"
+    },
+    {
+      "name": "growth",
+      "role": "mandatory",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 7.358,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-growth.py",
+        "--output",
+        "/workspace/Ein-Tag-als-Ranger/work/astra-abschluss-20261025/final-4eb186a/growth"
+      ],
+      "log": "logs/growth.log",
+      "context": "contexts/growth.json"
+    },
+    {
+      "name": "habitats",
+      "role": "mandatory",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 109.519,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-habitats.py",
+        "--output",
+        "/workspace/Ein-Tag-als-Ranger/work/astra-abschluss-20261025/final-4eb186a/habitats"
+      ],
+      "log": "logs/habitats.log",
+      "context": "contexts/habitats.json"
+    },
+    {
+      "name": "habitat-revision",
+      "role": "mandatory",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 123.113,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-habitat-revision.py",
+        "--baseline",
+        "verification/kompakt-endqa-20261023/baseline/habitats",
+        "--baseline-fixed-gap",
+        "verification/kompakt-endqa-20261023/baseline/habitats/fixed-gap",
+        "--output",
+        "/workspace/Ein-Tag-als-Ranger/work/astra-abschluss-20261025/final-4eb186a/habitat-revision"
+      ],
+      "log": "logs/habitat-revision.log",
+      "context": "contexts/habitat-revision.json"
+    },
+    {
+      "name": "ui",
+      "role": "mandatory",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 47.742,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-v1-ui.py",
+        "--output",
+        "/workspace/Ein-Tag-als-Ranger/work/astra-abschluss-20261025/final-4eb186a/ui"
+      ],
+      "log": "logs/ui.log",
+      "context": "contexts/ui.json"
+    },
+    {
+      "name": "distribution",
+      "role": "mandatory",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 8.163,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-v1-distribution.py",
+        "--output",
+        "/workspace/Ein-Tag-als-Ranger/work/astra-abschluss-20261025/final-4eb186a/distribution"
+      ],
+      "log": "logs/distribution.log",
+      "context": "contexts/distribution.json"
+    },
+    {
+      "name": "detail-lod",
+      "role": "mandatory",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 19.808,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-detail-lod.py",
+        "--output",
+        "/workspace/Ein-Tag-als-Ranger/work/astra-abschluss-20261025/final-4eb186a/detail-lod"
+      ],
+      "log": "logs/detail-lod.log",
+      "context": "contexts/detail-lod.json"
+    },
+    {
+      "name": "event-integrity",
+      "role": "mandatory",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 6.03,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-event-integrity.py",
+        "--output",
+        "/workspace/Ein-Tag-als-Ranger/work/astra-abschluss-20261025/final-4eb186a/event-integrity"
+      ],
+      "log": "logs/event-integrity.log",
+      "context": "contexts/event-integrity.json"
+    },
+    {
+      "name": "forest-profile",
+      "role": "mandatory",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 124.746,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-v1-baseline.py",
+        "--compare",
+        "work/v1-abschluss/baseline/webgl/result.json",
+        "--output",
+        "/workspace/Ein-Tag-als-Ranger/work/astra-abschluss-20261025/final-4eb186a/forest-profile"
+      ],
+      "log": "logs/forest-profile.log",
+      "context": "contexts/forest-profile.json"
+    },
+    {
+      "name": "legacy-full",
+      "role": "mandatory",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 722.755,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-check.py",
+        "--live",
+        "--resilience",
+        "--width",
+        "800",
+        "--height",
+        "500",
+        "--site",
+        "outputs/GitHub-Pages",
+        "--prefix",
+        "/Ein-Tag-als-Ranger/",
+        "--output",
+        "/workspace/Ein-Tag-als-Ranger/work/astra-abschluss-20261025/final-4eb186a/legacy-full"
+      ],
+      "log": "logs/legacy-full.log",
+      "context": "contexts/legacy-full.json"
+    },
+    {
+      "name": "legacy-standalone",
+      "role": "mandatory",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 79.173,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-check.py",
+        "--smoke",
+        "--width",
+        "800",
+        "--height",
+        "500",
+        "--site",
+        "outputs",
+        "--entry",
+        "Feldbuch.html",
+        "--output",
+        "/workspace/Ein-Tag-als-Ranger/work/astra-abschluss-20261025/final-4eb186a/legacy-standalone"
+      ],
+      "log": "logs/legacy-standalone.log",
+      "context": "contexts/legacy-standalone.json"
+    },
+    {
+      "name": "stability",
+      "role": "mandatory",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 1472.13,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-stability.py",
+        "--output",
+        "/workspace/Ein-Tag-als-Ranger/work/astra-abschluss-20261025/final-4eb186a/stability"
+      ],
+      "log": "logs/stability.log",
+      "context": "contexts/stability.json"
+    },
+    {
+      "name": "arrival-original900",
+      "role": "software-diagnostic",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 956.136,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-arrival.py",
+        "--output",
+        "/workspace/Ein-Tag-als-Ranger/work/astra-abschluss-20261025/final-4eb186a/arrival-original900"
+      ],
+      "log": "logs/arrival-original900.log",
+      "context": "contexts/arrival-original900.json"
+    },
+    {
+      "name": "v1-full-walk-feeding",
+      "role": "mandatory",
+      "passed": false,
+      "exitCode": 1,
+      "seconds": 1.185,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-arrival.py",
+        "--detail-realtime",
+        "--v1-route",
+        "--walk-wall-budget",
+        "3600",
+        "--output",
+        "/workspace/Ein-Tag-als-Ranger/work/astra-abschluss-20261025/final-4eb186a/v1-full-walk-feeding"
+      ],
+      "log": "logs/v1-full-walk-feeding.log",
+      "context": "contexts/v1-full-walk-feeding.json"
+    }
+  ],
+  "softwareGatesPassed": false,
+  "allProcessesPassed": false,
+  "scope": "D3 contract fixed before implementation in docs/ABSCHLUSSVERTRAG-V1.md. A diagnosticFAIL never becomesPASS. Software eligibility is distinct from process exit and hardware/device/pilot acceptance.",
+  "hardwarePerformanceAcceptance": "NICHT GEPR\u00dcFT",
+  "physicalDeviceAndPilot": "NICHT GEPR\u00dcFT"
+}

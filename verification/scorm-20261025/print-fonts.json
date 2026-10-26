@@ -1,0 +1,220 @@
+{
+  "passed": true,
+  "scope": "Real A4 regression for generic OS font variation, with original overflow witness.\nOnly CSS's generic system-ui fallback is substituted; content, sizes, line\nheights, margins and assertions remain unchanged. The unmodified documents are\nalso printed by print-compact-materials.py. This is not a claimed macOS run.\n",
+  "profiles": [
+    {
+      "genericSystemUIFont": "DejaVu Sans",
+      "documents": [
+        {
+          "name": "Arbeitsblaetter",
+          "pages": 38,
+          "fonts": [
+            {
+              "familyName": "Liberation Sans",
+              "postScriptName": "LiberationSans",
+              "isCustomFont": false,
+              "glyphCount": 198
+            }
+          ],
+          "sha256": "60206cacc368e83d95bb17981bde0228dca05d533f356ab1467b3f51ec32e9b5",
+          "passed": true
+        },
+        {
+          "name": "Lehrkraefte",
+          "pages": 59,
+          "fonts": [
+            {
+              "familyName": "Liberation Sans",
+              "postScriptName": "LiberationSans",
+              "isCustomFont": false,
+              "glyphCount": 198
+            }
+          ],
+          "sha256": "2f67f16a905347929571e4123809fd7b92af908f59687dc93904e89c5e4a3db0",
+          "passed": true
+        },
+        {
+          "name": "START-IM-UNTERRICHT",
+          "pages": 2,
+          "fonts": [
+            {
+              "familyName": "Liberation Sans",
+              "postScriptName": "LiberationSans",
+              "isCustomFont": false,
+              "glyphCount": 182
+            },
+            {
+              "familyName": "Liberation Sans",
+              "postScriptName": "LiberationSans-Bold",
+              "isCustomFont": false,
+              "glyphCount": 70
+            }
+          ],
+          "sha256": "1fa76e04d0fc3b83dbd2407a42070c1426da037276c3810217cf1e87b35ea41b",
+          "passed": true
+        },
+        {
+          "name": "PFAD-A-Artenliste",
+          "pages": 2,
+          "fonts": [
+            {
+              "familyName": "Liberation Sans",
+              "postScriptName": "LiberationSans",
+              "isCustomFont": false,
+              "glyphCount": 165
+            },
+            {
+              "familyName": "Liberation Sans",
+              "postScriptName": "LiberationSans-Bold",
+              "isCustomFont": false,
+              "glyphCount": 10
+            }
+          ],
+          "sha256": "1028af1219d98058952b8617c97df9809575c69da047cef2d01c40d7d7df556a",
+          "passed": true
+        },
+        {
+          "name": "PFAD-B-Kuestenvoegel",
+          "pages": 2,
+          "fonts": [
+            {
+              "familyName": "Liberation Sans",
+              "postScriptName": "LiberationSans",
+              "isCustomFont": false,
+              "glyphCount": 208
+            },
+            {
+              "familyName": "Liberation Sans",
+              "postScriptName": "LiberationSans-Bold",
+              "isCustomFont": false,
+              "glyphCount": 10
+            }
+          ],
+          "sha256": "e44ba3c4d41b60a975f347d6d72d9db730ea897a2581eeebb99557e096778a25",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "genericSystemUIFont": "Arial",
+      "documents": [
+        {
+          "name": "Arbeitsblaetter",
+          "pages": 38,
+          "fonts": [
+            {
+              "familyName": "Liberation Sans",
+              "postScriptName": "LiberationSans",
+              "isCustomFont": false,
+              "glyphCount": 198
+            }
+          ],
+          "sha256": "8f170f2fe38307844f32ae2c9965df352f567f2c0f6ac27e35d047e3dbf1b94e",
+          "passed": true
+        },
+        {
+          "name": "Lehrkraefte",
+          "pages": 59,
+          "fonts": [
+            {
+              "familyName": "Liberation Sans",
+              "postScriptName": "LiberationSans",
+              "isCustomFont": false,
+              "glyphCount": 198
+            }
+          ],
+          "sha256": "f59ffad1fa0d9ca885cabdb6b8be539f425bc65b7f134d7ae0f02872ef8ff8d1",
+          "passed": true
+        },
+        {
+          "name": "START-IM-UNTERRICHT",
+          "pages": 2,
+          "fonts": [
+            {
+              "familyName": "Liberation Sans",
+              "postScriptName": "LiberationSans",
+              "isCustomFont": false,
+              "glyphCount": 182
+            },
+            {
+              "familyName": "Liberation Sans",
+              "postScriptName": "LiberationSans-Bold",
+              "isCustomFont": false,
+              "glyphCount": 70
+            }
+          ],
+          "sha256": "e30c40f1a551b61ff46e6798ef70f9408abd62be1922000c8b86ea2b1a2426d2",
+          "passed": true
+        },
+        {
+          "name": "PFAD-A-Artenliste",
+          "pages": 2,
+          "fonts": [
+            {
+              "familyName": "Liberation Sans",
+              "postScriptName": "LiberationSans",
+              "isCustomFont": false,
+              "glyphCount": 165
+            },
+            {
+              "familyName": "Liberation Sans",
+              "postScriptName": "LiberationSans-Bold",
+              "isCustomFont": false,
+              "glyphCount": 10
+            }
+          ],
+          "sha256": "aa4ee89065a9f2ec7348238133281316825eb62933465647e617239d03e907c9",
+          "passed": true
+        },
+        {
+          "name": "PFAD-B-Kuestenvoegel",
+          "pages": 2,
+          "fonts": [
+            {
+              "familyName": "Liberation Sans",
+              "postScriptName": "LiberationSans",
+              "isCustomFont": false,
+              "glyphCount": 208
+            },
+            {
+              "familyName": "Liberation Sans",
+              "postScriptName": "LiberationSans-Bold",
+              "isCustomFont": false,
+              "glyphCount": 10
+            }
+          ],
+          "sha256": "54b5a022a920ed311000a24df36378f55a1b964369a94c7d3cf94a7c64b52606",
+          "passed": true
+        }
+      ]
+    }
+  ],
+  "sourceHTMLHashes": {
+    "Arbeitsblaetter": "271b4a7b94777545774cd27816baee5c5ebf0fe6066d37a31aeeddf237aefa93",
+    "Lehrkraefte": "e95ef4cac65d5bfeca291f4489a831d38604298660f59e8a52067e529e26f4d6",
+    "START-IM-UNTERRICHT": "d0fb52764b90bd43cafa3dbf760dc640333ddb7c983f6443b438b1653703e1fe",
+    "PFAD-A-Artenliste": "a8027dfa57e725ce03ab867862ed2e737e1693338295627ba63ed84be61e564a",
+    "PFAD-B-Kuestenvoegel": "b1413c1893740f4e6243700b1fbbc5d51786e451c325ca590a89d0720f48ad35"
+  },
+  "baseline": {
+    "sha256": "4e9b8920543bf1ce61846727b3d1d75de7a5cdef0a2e9bf75d479e567b10d5ff",
+    "sourceCommit": "c5baa84f5bc5df099d9773bc7037b5a5f570a759",
+    "pages": 3,
+    "fonts": [
+      {
+        "familyName": "DejaVu Sans",
+        "postScriptName": "DejaVuSans",
+        "isCustomFont": false,
+        "glyphCount": 181
+      },
+      {
+        "familyName": "DejaVu Sans",
+        "postScriptName": "DejaVuSans-Bold",
+        "isCustomFont": false,
+        "glyphCount": 70
+      }
+    ],
+    "scope": "Known original3-page overflow, not a successful2-page document"
+  },
+  "browserVersion": "154.0.8037.57"
+}

@@ -1,0 +1,8 @@
+{
+  "currentHTMLSHA256": "b61a35456fcd6253ed6693d7fa8031f3ae5b7ca48502837d744c82b3dfc227b4",
+  "feedingHTMLSHA256": "b61a35456fcd6253ed6693d7fa8031f3ae5b7ca48502837d744c82b3dfc227b4",
+  "feedingTestCommit": "3920a1d1d2692889b75403c1b0e50f5b856398aa",
+  "cleanBuildCommit": "3920a1d1d2692889b75403c1b0e50f5b856398aa",
+  "exactSameHTML": true,
+  "scope": "Fresh complete feeding run on the clean built standalone HTML, byte-identical, no metadata normalization needed."
+}

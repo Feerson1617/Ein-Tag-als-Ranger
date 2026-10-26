@@ -1,0 +1,6 @@
+PASS F09 new data and their source/context remain available offline in both generated document variants
+PASS C01 interval calculation agrees with the teacher result, with explicit missing water-balance measurements
+PASS C15 uses two named species and study landscapes while keeping morphology and ecological role distinct
+PASS C17 distinguishes density decline, modeled juvenile survival and unresolved fecundity instead of inventing a common rate
+PASS The previous six data cases and the three separate evidence levels remain present
+{"passed":5,"checks":["F09 new data and their source/context remain available offline in both generated document variants","C01 interval calculation agrees with the teacher result, with explicit missing water-balance measurements","C15 uses two named species and study landscapes while keeping morphology and ecological role distinct","C17 distinguishes density decline, modeled juvenile survival and unresolved fecundity instead of inventing a common rate","The previous six data cases and the three separate evidence levels remain present"],"scope":"Data/context/rendering regression only; no proof of physical device skill, fieldwork or learning outcomes. C17 fecundity interpretation and ETS original access remain open."}

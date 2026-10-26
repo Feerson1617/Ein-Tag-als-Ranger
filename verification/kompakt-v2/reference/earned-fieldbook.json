@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 2,
+  "worldVersion": "ranger-compact-v2",
+  "records": [
+    {
+      "id": "c8b126b9-0e7d-41c3-89af-3d36c2b59243",
+      "taxon": "galium_odoratum",
+      "individualId": "ranger-compact-v2:galium_odoratum:16",
+      "window": "summer",
+      "method": "magnifier",
+      "siteId": "compact-forest-core",
+      "events": [],
+      "worldVersion": "ranger-compact-v2",
+      "initialSeed": 20260825,
+      "runId": "f1ea2f41-832a-4d7b-8f8c-c62017cb2858",
+      "source": "own-observation",
+      "observationSeconds": 8.299700000000012,
+      "simulationTime": 3.7182000000000053,
+      "x": -56.523277043735234,
+      "z": 6.2434682663536085,
+      "note": "Eigene Sichtung: Blattquirle; keine Blüte. <b>kein HTML</b>"
+    }
+  ],
+  "archives": [],
+  "previousEditions": [],
+  "learning": {
+    "activeMission": null,
+    "level": "gA",
+    "answers": {},
+    "protocols": [],
+    "measurements": [],
+    "samples": [],
+    "experiments": [],
+    "drafts": {}
+  },
+  "exportedAt": "2026-10-22T07:14:16.131Z"
+}

@@ -166,7 +166,8 @@ def mammal(name):
                 for j in range(5):m.tube([(nose[0]-.03,nose[1]-.018,side*.035),(nose[0]-.045-j*.006,nose[1]-.02+(j-2)*.009,side*(.10+j*.012))],[.0006,.00018],'#cfcbb8',6,headPivot,headPivot,1,segments=4)
     m.finish()
 
-names=sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else list(SIZES)
-for name in names:
-    if name not in SIZES:raise ValueError('Unknown species: '+name)
-    mammal(name)
+if __name__=='__main__':
+    names=sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else list(SIZES)
+    for name in names:
+        if name not in SIZES:raise ValueError('Unknown species: '+name)
+        mammal(name)

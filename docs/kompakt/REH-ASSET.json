@@ -1,0 +1,35 @@
+{
+  "species": "capreolus_capreolus",
+  "lengthMeters": 1.12,
+  "triangles": 9650,
+  "bytes": 510248,
+  "sha256": "a89400df66033eb5eaa7f9bf13ccefaacfb866ab24e4576574d11965354ee619",
+  "legFeet": {
+    "1": [
+      0.18646777097366524,
+      0.01034896183188644,
+      -0.10599220665871498
+    ],
+    "2": [
+      0.18646777097366524,
+      0.01034896183188644,
+      0.10599220665871498
+    ],
+    "3": [
+      -0.3140509826924888,
+      0.01034896183188644,
+      -0.10599220665871498
+    ],
+    "4": [
+      -0.3140509826924888,
+      0.01034896183188644,
+      0.10599220665871498
+    ]
+  },
+  "source": "tools/author-compact-deer.py + tools/author-wildlife-v020.py",
+  "license": "CC0-1.0",
+  "stage": "visuelle Freigabe offen",
+  "sex": "adult female",
+  "season": "late summer",
+  "dimensionsStatus": "authored, not empirically calibrated"
+}

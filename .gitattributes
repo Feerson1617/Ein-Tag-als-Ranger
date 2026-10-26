@@ -1,0 +1,5 @@
+# Preserve pinned third-party bytes (including original CRLF/trailing spaces).
+/tools/scorm-template/upstream/** -text -whitespace
+/tools/scorm-template/schemas/** -text -whitespace
+# Evidence is captured verbatim; do not normalize terminal output on checkout.
+/verification/scorm-20261025/*.log -text -whitespace

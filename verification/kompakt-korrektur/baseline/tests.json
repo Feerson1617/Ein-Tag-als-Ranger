@@ -1,0 +1,14 @@
+[
+  {
+    "name": "legacy-node",
+    "exitCode": 0
+  },
+  {
+    "name": "compact-node",
+    "exitCode": 0
+  },
+  {
+    "name": "learning-node",
+    "exitCode": 0
+  }
+]

@@ -1,0 +1,7 @@
+{
+  "job": 121076521985,
+  "exitCode": 1,
+  "bytes": 0,
+  "errorSanitized": "Get \"https://productionresultssa15.blob.core.windows.net/actions-results/43abf9da-f9b3-8ac1-81c2-c0e7799de153/workflow-job-run-a5e2dfd8-675d-5ce9-919f-7ba8c4fbbe91/logs/job/job-logs.txt\": Forbidden\n",
+  "scope": "Official job-log endpoint, no missing traceback inferred."
+}

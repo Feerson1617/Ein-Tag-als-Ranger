@@ -1,0 +1,22 @@
+{
+  "recordedAt": "2026-10-23T08:20:23Z",
+  "os": "Linux-6.18.55-x86_64-with-glibc2.41",
+  "architecture": "x86_64",
+  "python": "3.12.14",
+  "node": "v24.19.0",
+  "logicalCoresVisible": 5,
+  "cpuAffinity": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "playwrightBrowsersPath": "/workspace/.ranger-playwright",
+  "ffmpegVersion": "ffmpeg version 7.1.5-0+deb13u1 Copyright (c) 2000-2026 the FFmpeg developers",
+  "graphicsFlags": [
+    "--use-angle=swiftshader",
+    "--enable-unsafe-swiftshader"
+  ],
+  "graphicsScope": "Forced Chromium software rendering. No physical iPad/Apple GPU/Safari or classroom certification."
+}

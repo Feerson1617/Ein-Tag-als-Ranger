@@ -1,0 +1,337 @@
+{
+  "schemaVersion": 1,
+  "releaseCandidate": "ranger-kompakt-v1.0.0-rc.1",
+  "edition": "compact",
+  "stage": 6,
+  "sourceCommit": "4eb186a5325ae30dfa233e10dd44eb73ea710afa",
+  "sourceDirty": false,
+  "entry": "compact/main.js",
+  "modules": {
+    "vendor/three.core.js": "web/vendor-three.core-eb077d2417f6.js",
+    "vendor/three.module.js": "web/vendor-three.module-c4af49689bc3.js",
+    "observation-clock.js": "web/observation-clock-2304e6c42519.js",
+    "ranger-controls.js": "web/ranger-controls-081497a5f675.js",
+    "field-guide.js": "web/field-guide-696cf216e632.js",
+    "compact/taxa.js": "web/compact-taxa-97cd6f5bad16.js",
+    "compact/manifest.js": "web/compact-manifest-738fc0914860.js",
+    "compact/layout.js": "web/compact-layout-7ea7d4ddfca9.js",
+    "compact/habitats.js": "web/compact-habitats-2670eedd8ead.js",
+    "compact/world-state.js": "web/compact-world-state-5d4d1a362d69.js",
+    "compact/catalog.js": "web/compact-catalog-089d5922307e.js",
+    "compact/coastal-rig.js": "web/compact-coastal-rig-b0f96b90a158.js",
+    "compact/coastal-behaviour.js": "web/compact-coastal-behaviour-89d0281cefca.js",
+    "compact/ecology.js": "web/compact-ecology-66e336c62760.js",
+    "compact/observation-context.js": "web/compact-observation-context-4469ae370cdc.js",
+    "compact/visibility.js": "web/compact-visibility-50d59d44257e.js",
+    "wildlife-glb.js": "web/wildlife-glb-a902e52468e8.js",
+    "compact/geometry.js": "web/compact-geometry-f24042c7a286.js",
+    "compact/organism-models.js": "web/compact-organism-models-bade9777cbf7.js",
+    "compact/expanded-view.js": "web/compact-expanded-view-005f5d12b210.js",
+    "compact/classroom-start.js": "web/compact-classroom-start-a4a320aba6a2.js",
+    "compact/lesson-layouts.js": "web/compact-lesson-layouts-38df6da54b96.js",
+    "compact/lesson-resources.js": "web/compact-lesson-resources-8137b9a96296.js",
+    "compact/materials.js": "web/compact-materials-8613fa3c0c36.js",
+    "compact/learning-documents.js": "web/compact-learning-documents-bc10325b9c09.js",
+    "station-protocol.js": "web/station-protocol-2590df7d9de4.js",
+    "compact/determination.js": "web/compact-determination-1c3bc4e61307.js",
+    "compact/management.js": "web/compact-management-e6d38fbfc2c7.js",
+    "compact/village.js": "web/compact-village-65b11a41e05b.js",
+    "compact/evidence.js": "web/compact-evidence-130a328da843.js",
+    "compact/observation-schema.js": "web/compact-observation-schema-ff99d226655c.js",
+    "compact/learning-models.js": "web/compact-learning-models-ac5200d27a29.js",
+    "compact/task-schema.js": "web/compact-task-schema-cffaa7a57d3b.js",
+    "compact/missions.js": "web/compact-missions-07ebdd65c29e.js",
+    "compact/journal.js": "web/compact-journal-404c12d46cc9.js",
+    "compact/learning-ui.js": "web/compact-learning-ui-7ac2774eba1e.js",
+    "compact/inspection.js": "web/compact-inspection-2ff7ea34220f.js",
+    "compact/feeding-detail.js": "web/compact-feeding-detail-b60c348dec30.js",
+    "compact/comparison-views.js": "web/compact-comparison-views-050f629dfc0b.js",
+    "compact/path-mesh.js": "web/compact-path-mesh-492832a58f18.js",
+    "compact/vegetation-view.js": "web/compact-vegetation-view-9f3345f22c87.js",
+    "compact/village-view.js": "web/compact-village-view-36621cb337bb.js",
+    "compact/render-groups.js": "web/compact-render-groups-caffcb0c2b1e.js",
+    "compact/world-view.js": "web/compact-world-view-008ae949aa01.js",
+    "compact/fauna-view.js": "web/compact-fauna-view-cffa21701536.js",
+    "compact/main.js": "web/compact-main-eb5160c4510c.js"
+  },
+  "assets": {
+    "assets/boardwalk-wood.webp": "./assets/boardwalk-wood-4d06022133e3.webp",
+    "assets/compact-roe-deer.glb": "./assets/compact-roe-deer-a89400df6603.glb",
+    "assets/sky-panorama.webp": "./assets/sky-panorama-46c360b491b1.webp",
+    "assets/terrain-atlas.webp": "./assets/terrain-atlas-d637324d3ace.webp",
+    "assets/wildlife-fox.glb": "./assets/wildlife-fox-61a4d1b845aa.glb"
+  },
+  "files": {
+    "assets/boardwalk-wood-4d06022133e3.webp": {
+      "bytes": 2344144,
+      "sha256": "4d06022133e3772534374671fb73a4509ed109e1db6ca06a2d62a8c99c47ac6d"
+    },
+    "assets/compact-roe-deer-a89400df6603.glb": {
+      "bytes": 510248,
+      "sha256": "a89400df66033eb5eaa7f9bf13ccefaacfb866ab24e4576574d11965354ee619"
+    },
+    "assets/sky-panorama-46c360b491b1.webp": {
+      "bytes": 1089962,
+      "sha256": "46c360b491b11269d280e73ec0e71869afdfd62fb543b4250713234374a2f71d"
+    },
+    "assets/terrain-atlas-d637324d3ace.webp": {
+      "bytes": 2626900,
+      "sha256": "d637324d3ace6ef8e2c549e7f0a513efd1a4c06aab927f0ed1565bf77b2ced02"
+    },
+    "assets/wildlife-fox-61a4d1b845aa.glb": {
+      "bytes": 443236,
+      "sha256": "61a4d1b845aa406928a327648417ae1c3982510b9c4e8ce33b7c494fbc98a22f"
+    },
+    "web/vendor-three.core-eb077d2417f6.js": {
+      "bytes": 1403455,
+      "sha256": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20"
+    },
+    "web/vendor-three.module-c4af49689bc3.js": {
+      "bytes": 603239,
+      "sha256": "c4af49689bc354ba306725d8ee36940e35c538f1dcf810ac4141f599b6f76247"
+    },
+    "web/observation-clock-2304e6c42519.js": {
+      "bytes": 510,
+      "sha256": "2304e6c425192967f87841caa5072873cb5dd5c7f69c38fb45b237fd22f98b03"
+    },
+    "web/ranger-controls-081497a5f675.js": {
+      "bytes": 1760,
+      "sha256": "081497a5f6754ecd441e61ee55805da99b5121e96215cfa900209e00e41e5eda"
+    },
+    "web/field-guide-696cf216e632.js": {
+      "bytes": 6520,
+      "sha256": "696cf216e632d4ad5c1a937174a9933975fc08d0a97ebd19fcb448dbc2e01e16"
+    },
+    "web/compact-taxa-97cd6f5bad16.js": {
+      "bytes": 31968,
+      "sha256": "97cd6f5bad16208408512be876ebf63d5f9ee400dd31f94a61c8ca08e4e24fd3"
+    },
+    "web/compact-manifest-738fc0914860.js": {
+      "bytes": 1314,
+      "sha256": "738fc0914860766559fe282bf8dc434bdaacd625e48da87541e1a1352f717577"
+    },
+    "web/compact-layout-7ea7d4ddfca9.js": {
+      "bytes": 5156,
+      "sha256": "7ea7d4ddfca9d08c252dff30c9ea174ca25fb9eab14e77a733173930b5f397fe"
+    },
+    "web/compact-habitats-2670eedd8ead.js": {
+      "bytes": 6441,
+      "sha256": "2670eedd8ead9a99bc79ba7c077a210471d3cc9fb4aa67a0a31dd022d078121c"
+    },
+    "web/compact-world-state-5d4d1a362d69.js": {
+      "bytes": 4251,
+      "sha256": "5d4d1a362d6906b05648d227c2177d4fa5cb91d70509685babddf6a55c976c3e"
+    },
+    "web/compact-catalog-089d5922307e.js": {
+      "bytes": 6291,
+      "sha256": "089d5922307e47f39075fbec0a4f4659859a1693b87b282fe11b1b90f32c5554"
+    },
+    "web/compact-coastal-rig-b0f96b90a158.js": {
+      "bytes": 4308,
+      "sha256": "b0f96b90a158826d86987ad75b09c73e3d342a5a1ec7fcc51905d4b1a0aefe37"
+    },
+    "web/compact-coastal-behaviour-89d0281cefca.js": {
+      "bytes": 10502,
+      "sha256": "89d0281cefcaf0e47376b55d37fd22e01acb78de0701597eb44dbdb7a80b6d67"
+    },
+    "web/compact-ecology-66e336c62760.js": {
+      "bytes": 21572,
+      "sha256": "66e336c62760cd7906fe3281e2cc64317e170413e9b413b84e15edb74a5467b7"
+    },
+    "web/compact-observation-context-4469ae370cdc.js": {
+      "bytes": 4315,
+      "sha256": "4469ae370cdc1d60eb82c1ec805c5533ffebf1ce195a5ced727ff9d9ad920fa4"
+    },
+    "web/compact-visibility-50d59d44257e.js": {
+      "bytes": 1490,
+      "sha256": "50d59d44257e9d18547bfaec9277366d3339177c6ebce37d948b48c9940a86f1"
+    },
+    "web/wildlife-glb-a902e52468e8.js": {
+      "bytes": 3374,
+      "sha256": "a902e52468e8174f67efa53b8cec6b50dedc12737e16e39eeae1736077d42c43"
+    },
+    "web/compact-geometry-f24042c7a286.js": {
+      "bytes": 6830,
+      "sha256": "f24042c7a28689bf28ba8b131912730ffbaf766ab48367071b4a0c058b6de360"
+    },
+    "web/compact-organism-models-bade9777cbf7.js": {
+      "bytes": 16576,
+      "sha256": "bade9777cbf7cf45b85f5b38670bd813b04059a1675cfdc1590e587ac6c1278d"
+    },
+    "web/compact-expanded-view-005f5d12b210.js": {
+      "bytes": 10753,
+      "sha256": "005f5d12b210d309d16445874d42f273a4069d53cebbded43ded56f4629b0f28"
+    },
+    "web/compact-classroom-start-a4a320aba6a2.js": {
+      "bytes": 13628,
+      "sha256": "a4a320aba6a25b437a29abba666d422bd4beec5df3167230e5867c0a552dcfe5"
+    },
+    "web/compact-lesson-layouts-38df6da54b96.js": {
+      "bytes": 9787,
+      "sha256": "38df6da54b9615722acef34264832c757c753b2ea250f0c14fe571d7f267ba10"
+    },
+    "web/compact-lesson-resources-8137b9a96296.js": {
+      "bytes": 37411,
+      "sha256": "8137b9a9629677330de652ac2314b5353e23c52d5d6c41badab02cfcd21f26fe"
+    },
+    "web/compact-materials-8613fa3c0c36.js": {
+      "bytes": 16494,
+      "sha256": "8613fa3c0c3674dbe4c9819766a25036f43638b192848772829d32a847c7373b"
+    },
+    "web/compact-learning-documents-bc10325b9c09.js": {
+      "bytes": 6570,
+      "sha256": "bc10325b9c096b2024b056900a222cf01afbe0f301ce820396963d4d161d6b23"
+    },
+    "web/station-protocol-2590df7d9de4.js": {
+      "bytes": 4605,
+      "sha256": "2590df7d9de4c8f4afda8fcafd619d565440c2dc7e1bb6ef4574aeadf803ae57"
+    },
+    "web/compact-determination-1c3bc4e61307.js": {
+      "bytes": 2003,
+      "sha256": "1c3bc4e613076a1a9e6605a8840ee9b071ca27b630a816e26c33b4645ed5869d"
+    },
+    "web/compact-management-e6d38fbfc2c7.js": {
+      "bytes": 2204,
+      "sha256": "e6d38fbfc2c7e131d60ca3e38a1c740ca9ba5c49628fd3ba51ca94242d2d75a3"
+    },
+    "web/compact-village-65b11a41e05b.js": {
+      "bytes": 668,
+      "sha256": "65b11a41e05bde628be2d5d10bd70401755bbaca45ffe5c50527344c97b7273e"
+    },
+    "web/compact-evidence-130a328da843.js": {
+      "bytes": 7560,
+      "sha256": "130a328da8432799e0813264027b1a3d22e4c63c740533f8813c7d35382110fa"
+    },
+    "web/compact-observation-schema-ff99d226655c.js": {
+      "bytes": 2828,
+      "sha256": "ff99d226655c35c1bc02bcbfc6a39b0ee9dc4a4d4b31c562225ae8e2fb24f8d8"
+    },
+    "web/compact-learning-models-ac5200d27a29.js": {
+      "bytes": 8556,
+      "sha256": "ac5200d27a29dc17ab2000a90554990a2a632532e920f887026407d0cfd2c20e"
+    },
+    "web/compact-task-schema-cffaa7a57d3b.js": {
+      "bytes": 5397,
+      "sha256": "cffaa7a57d3ba7acbefc312b52d6706438fc3754a5bcc07ae685b1d87c522890"
+    },
+    "web/compact-missions-07ebdd65c29e.js": {
+      "bytes": 15037,
+      "sha256": "07ebdd65c29e47998ec108f0bc41c3fa3465bdcf906b1745b8e0fae7c48dc42f"
+    },
+    "web/compact-journal-404c12d46cc9.js": {
+      "bytes": 9016,
+      "sha256": "404c12d46cc94542ecc858c0368568ec74d60587155e62b2d5ff6c2314b27a28"
+    },
+    "web/compact-learning-ui-7ac2774eba1e.js": {
+      "bytes": 35317,
+      "sha256": "7ac2774eba1ef0697109e09472b8f939aa10176b4961d131b9700ac7fb904981"
+    },
+    "web/compact-inspection-2ff7ea34220f.js": {
+      "bytes": 3863,
+      "sha256": "2ff7ea34220f86d0357d2ea7e4dfd7aeea3ecfdea984be5a02d584e8ae7fa2d6"
+    },
+    "web/compact-feeding-detail-b60c348dec30.js": {
+      "bytes": 9269,
+      "sha256": "b60c348dec302c5897ddb1f316ec74f0a59797f553438fdda51c4e94fce428a7"
+    },
+    "web/compact-comparison-views-050f629dfc0b.js": {
+      "bytes": 1976,
+      "sha256": "050f629dfc0b3b9bac1badc0c0564cfb08cf88e92006edcba377eabc623ecf82"
+    },
+    "web/compact-path-mesh-492832a58f18.js": {
+      "bytes": 3275,
+      "sha256": "492832a58f187ec2972ae63832b70ca2973711f061554e044e57a7f3cc01e4e6"
+    },
+    "web/compact-vegetation-view-9f3345f22c87.js": {
+      "bytes": 3088,
+      "sha256": "9f3345f22c87040ad0506e013a7d25df349f38a94c459c6d18d9c3200762161b"
+    },
+    "web/compact-village-view-36621cb337bb.js": {
+      "bytes": 1672,
+      "sha256": "36621cb337bb0b70e93fdf570799bde5c66020aee127e9a7e1f7e2ef6f4f5fa2"
+    },
+    "web/compact-render-groups-caffcb0c2b1e.js": {
+      "bytes": 4695,
+      "sha256": "caffcb0c2b1e2b81d7b66bf7524cb8469df3e955933febc5715bd397a1ce22f0"
+    },
+    "web/compact-world-view-008ae949aa01.js": {
+      "bytes": 18091,
+      "sha256": "008ae949aa017b1e892790b6ef23f27fe0a9f85eb57cf81349f7521d58acd13d"
+    },
+    "web/compact-fauna-view-cffa21701536.js": {
+      "bytes": 7978,
+      "sha256": "cffa21701536b5971e1b6cb6e27d9ba007e51a1af8aa2a5f2c50bf193c57b41b"
+    },
+    "web/compact-main-eb5160c4510c.js": {
+      "bytes": 44016,
+      "sha256": "eb5160c4510cbda011ec5b730d3ca68517e58a6943b6e7814af247e2ee655028"
+    },
+    "web/compact-122258ce887a.css": {
+      "bytes": 9786,
+      "sha256": "122258ce887ae2659413bb1c837f74e7b0f270b6cf2c64839047de399b90cf47"
+    },
+    "MATERIALS.json": {
+      "bytes": 3666,
+      "sha256": "dc7d86c33c62f3738b3e02848ed390c52a7494fa65bed324ed73e5831dd04ed9"
+    },
+    "index.html": {
+      "bytes": 4391,
+      "sha256": "faec9e9a57f71c6c4a30bc6863223a59cd55d815cfb62341053ecce672e1a13c"
+    },
+    "icon.svg": {
+      "bytes": 264,
+      "sha256": "cb8cda889f99e56d13d18e09929837b7c3630d3f9ff3219316d12d3077fc0869"
+    },
+    ".nojekyll": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "THREE-LICENSE.txt": {
+      "bytes": 1081,
+      "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601"
+    },
+    "STATUS.md": {
+      "bytes": 6110,
+      "sha256": "bee75b0c52d9f2f7415aa1d18ef4622c28e7b913be1aa747753d2fd089844d64"
+    },
+    "MODELLGRENZEN.md": {
+      "bytes": 5862,
+      "sha256": "b26197dbd0d6c263b5bc19d3539b9382375a1c172ea6ee44e2e5d8b16c5a728e"
+    },
+    "QUELLEN-UND-RECHTE.md": {
+      "bytes": 5261,
+      "sha256": "1a846b4943323c421f6bda7e1aaa043db7f0b406dc8ad6b0390e83d9e9c8defc"
+    },
+    "TESTS.md": {
+      "bytes": 23152,
+      "sha256": "54e6ea610583ed5cab82cc388f62f79f4c0340d05817454ed219f81e36e741e4"
+    },
+    "QUELLEN-V1.md": {
+      "bytes": 2155,
+      "sha256": "387178054c9154dd3abcb57b8e8e83b748e16655575d4025c5aef422ef136b50"
+    },
+    "GERAETE-UND-PILOT-V1.md": {
+      "bytes": 3026,
+      "sha256": "fda839386fe45c90271dea4aa7177cd8285c16b988ad57e9ce2d163fa8175ddb"
+    },
+    "ABSCHLUSSVERTRAG-V1.md": {
+      "bytes": 5674,
+      "sha256": "d106d6da00bf8c9ff847abaa0367e9045e5ccd8faa833d55f5c34ff93bca38ce"
+    }
+  },
+  "totalBytes": 9510547,
+  "initialUpperBoundBytes": 9510547,
+  "excludedLegacyModules": [
+    "authored-wildlife.js",
+    "biodiversity.js",
+    "expedition-state.js",
+    "habitat-world.js",
+    "interaction-scenarios.js",
+    "quest-interface.js",
+    "wildlife.js"
+  ],
+  "networkOrigins": [
+    "same-origin"
+  ],
+  "status": "complete software preview; physical device and classroom validation outstanding"
+}

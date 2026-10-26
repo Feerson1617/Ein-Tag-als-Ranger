@@ -1,0 +1,5 @@
+{
+  "playwright": "1.62.0",
+  "Pillow": "12.3.0",
+  "scope": "Actual installed Python QA dependencies; system Chromium/FFmpeg versions are separately recorded. This is environment provenance, not another functional test."
+}

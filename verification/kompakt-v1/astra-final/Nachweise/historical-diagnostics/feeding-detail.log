@@ -1,0 +1,28 @@
+CAPTURE compact-avocet initial 0.392
+CAPTURE compact-avocet approaching 29.392
+CAPTURE compact-avocet searching 30.217
+CAPTURE compact-avocet handling 31.217
+CAPTURE compact-avocet swallowing 31.717
+CAPTURE compact-avocet departing 32.717
+CAPTURE compact-avocet after-departure 33.917
+PASS avocet
+CAPTURE compact-redshank initial 0.507
+CAPTURE compact-redshank approaching 21.007
+CAPTURE compact-redshank searching 21.357
+CAPTURE compact-redshank handling 22.107
+CAPTURE compact-redshank swallowing 22.857
+CAPTURE compact-redshank departing 23.857
+CAPTURE compact-redshank after-departure 24.957
+PASS redshank
+CAPTURE compact-spoonbill initial 0.343
+CAPTURE compact-spoonbill approaching 4.593
+CAPTURE compact-spoonbill searching 5.918
+CAPTURE compact-spoonbill handling 7.168
+CAPTURE compact-spoonbill swallowing 7.918
+CAPTURE compact-spoonbill departing 8.918
+CAPTURE compact-spoonbill after-departure 10.118
+Traceback (most recent call last):
+  File "/workspace/Ein-Tag-als-Ranger/tools/browser-compact-feeding.py", line 57, in <module>
+    d=c['sample']['detail'];assert d and d['eventId']==row['event']['id'] and d['individualId']==row['id'] and d['preyId']==row['preyId'];assert d['sharedLiveSceneNodes'] and d['preyGeometryUnscaled']
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

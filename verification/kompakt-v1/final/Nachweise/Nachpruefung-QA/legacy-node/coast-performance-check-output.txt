@@ -1,0 +1,75 @@
+{
+  "saltBirdSpecies": 40,
+  "persistence": "same identities and ongoing positions after leaving and returning; no replacement after predation",
+  "questEncounters": [
+    [
+      "predation",
+      8
+    ],
+    [
+      "competition",
+      8
+    ],
+    [
+      "mutualism",
+      9
+    ],
+    [
+      "herbivory",
+      8
+    ],
+    [
+      "dispersal",
+      4
+    ],
+    [
+      "deposit",
+      8
+    ],
+    [
+      "filtering",
+      6
+    ],
+    [
+      "mutation",
+      2
+    ],
+    [
+      "recombination",
+      3
+    ],
+    [
+      "selection",
+      2
+    ],
+    [
+      "drift",
+      3
+    ],
+    [
+      "geneFlow",
+      3
+    ],
+    [
+      "isolation",
+      4
+    ],
+    [
+      "bottleneck",
+      2
+    ],
+    [
+      "sexualSelection",
+      2
+    ],
+    [
+      "resourceUse",
+      196
+    ]
+  ],
+  "digging": "ten species; depth and actual tide gate existing specimen visibility; no automatic discovery",
+  "tools": "strict animal / plant separation; all salt plants searchable",
+  "rendering": "offscreen/dead instances omitted without deleting actors; compact matrix matches actual focus",
+  "boundaries": "land boundaries physically fenced through coastal ends",
+  "binocular": "maximum half simulation time; independent tide"
+}

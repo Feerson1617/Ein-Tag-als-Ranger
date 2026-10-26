@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "pageCount": 2,
+  "checkedTextFragments": 68,
+  "sha256": "9f1e6b71383c3f75cf740b9666422b98ee7f33a7c5432e9a154cdf1798109508",
+  "scope": "Exact two-page A4 and all body-text fragments; visual review separate",
+  "pageImages": [
+    {
+      "file": "START-IM-UNTERRICHT-pages/page-1.png",
+      "sha256": "afe41c9ce668628ae8a1a6467445376074b4f850abef74aece54f33b171a56f1"
+    },
+    {
+      "file": "START-IM-UNTERRICHT-pages/page-2.png",
+      "sha256": "9c04fe5ba3fd87397e33d579c3777a689422164e764c388e4e0c5154ccc90061"
+    }
+  ]
+}

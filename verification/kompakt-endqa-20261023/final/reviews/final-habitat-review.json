@@ -1,0 +1,1060 @@
+{
+  "scope": "Read-only review of the completed fresh browser output. All 26 current original PNGs and five original f921 PNGs directly viewed. All 26 PNGs structurally validated by PNG chunks/CRC and IDAT decompression and hashed. No browser, build, Node run, image manipulation or tracked-file changes.",
+  "reviewedAt": "2026-10-23T09:18:13.612806+00:00",
+  "runtimeCommit": "3920a1d1d2692889b75403c1b0e50f5b856398aa",
+  "sourceReport": "work/qa-correction/final-habitat-revision/result.json",
+  "sourceReportSHA256": "b9357a3be7639c0610ad46868aee924d617aca0940129d678bc16867a0d89d32",
+  "runtimeFreeze": "work/final-qa/runtime-freeze.json",
+  "runtimeFreezeSHA256": "76848e7e5c86e476f38831af4d4162623adfc01a8ad310c7b7ab1dc0aee0a667",
+  "htmlSHA256": "b61a35456fcd6253ed6693d7fa8031f3ae5b7ca48502837d744c82b3dfc227b4",
+  "sourceHashCount": 51,
+  "allRuntimeHashesMatchFreezeAndDisk": true,
+  "allRecordedDiagnosticImageHashesMatch": true,
+  "recordedDiagnosticImageHashCount": 8,
+  "noteAboutWorldImageHashes": "The original report did not record hashes for 18 world screenshots. This review records their hashes now; it does not claim a prior hash comparison for these images.",
+  "baselineHTMLSHA256": "d774d542d8a2984100b880ed1d771721e064299da11c8f9b3c616fc7ea844ff9",
+  "baselineReports": {
+    "comparisons": {
+      "file": "verification/kompakt-endqa-20261023/baseline/habitats/result.json",
+      "sha256": "c0e90cd6c22d66eba5a31f0c5e0d2dbe83637b30fe6f7f72439590c1a47c8249"
+    },
+    "fixedGap": {
+      "file": "verification/kompakt-endqa-20261023/baseline/habitats/fixed-gap/result.json",
+      "sha256": "c51d7783355733a04fea2ba9be2de5a010b5d191001a07255f783de183bec7a1"
+    }
+  },
+  "sameCameraComparisons": [
+    {
+      "file": "start.png",
+      "maximumPoseDifference": 0,
+      "matchedWithin": 1e-05
+    },
+    {
+      "file": "woodruff.png",
+      "maximumPoseDifference": 0.0,
+      "matchedWithin": 1e-05
+    },
+    {
+      "file": "nettle.png",
+      "maximumPoseDifference": 0.0,
+      "matchedWithin": 1e-05
+    },
+    {
+      "file": "wood.png",
+      "maximumPoseDifference": 0,
+      "matchedWithin": 1e-05
+    },
+    {
+      "file": "village.png",
+      "maximumPoseDifference": 0,
+      "matchedWithin": 1e-05
+    },
+    {
+      "file": "ramp.png",
+      "maximumPoseDifference": 0,
+      "matchedWithin": 1e-05
+    },
+    {
+      "file": "salt-shrub.png",
+      "maximumPoseDifference": 0.0,
+      "matchedWithin": 1e-05
+    },
+    {
+      "file": "salt-segments.png",
+      "maximumPoseDifference": 0.0,
+      "matchedWithin": 1e-05
+    },
+    {
+      "file": "salt-grass.png",
+      "maximumPoseDifference": 0.0,
+      "matchedWithin": 1e-05
+    },
+    {
+      "file": "coast.png",
+      "maximumPoseDifference": 0,
+      "matchedWithin": 1e-05
+    },
+    {
+      "file": "habitat-light-gap-fixed.png",
+      "maximumPoseDifference": 0,
+      "matchedWithin": 1e-05
+    },
+    {
+      "file": "habitat-nutrient-edge.png",
+      "maximumPoseDifference": 0,
+      "matchedWithin": 1e-05
+    },
+    {
+      "file": "keilm-low.png",
+      "maximumPoseDifference": 0.0,
+      "matchedWithin": 1e-05
+    },
+    {
+      "file": "keilm-high.png",
+      "maximumPoseDifference": 0.0,
+      "matchedWithin": 1e-05
+    },
+    {
+      "file": "andel-low.png",
+      "maximumPoseDifference": 0,
+      "matchedWithin": 1e-05
+    },
+    {
+      "file": "andel-high.png",
+      "maximumPoseDifference": 0,
+      "matchedWithin": 1e-05
+    }
+  ],
+  "visuallyInspectedCurrentImages": [
+    "start.png",
+    "woodruff.png",
+    "nettle.png",
+    "wood.png",
+    "village.png",
+    "ramp.png",
+    "salt-shrub.png",
+    "salt-segments.png",
+    "salt-grass.png",
+    "coast.png",
+    "forest-normal-walk.png",
+    "habitat-light-gap-fixed.png",
+    "habitat-light-gap.png",
+    "habitat-nutrient-edge.png",
+    "keilm-low.png",
+    "keilm-high.png",
+    "andel-low.png",
+    "andel-high.png",
+    "diagnostic-galium_odoratum-standard.png",
+    "diagnostic-galium_odoratum-rotated.png",
+    "diagnostic-fagus_sylvatica-standard.png",
+    "diagnostic-fagus_sylvatica-rotated.png",
+    "diagnostic-urtica_dioica-standard.png",
+    "diagnostic-urtica_dioica-rotated.png",
+    "diagnostic-quercus_robur-standard.png",
+    "diagnostic-quercus_robur-rotated.png"
+  ],
+  "visuallyInspectedBaselineImages": [
+    "start.png",
+    "fixed-gap/habitat-light-gap-fixed.png",
+    "wood.png",
+    "habitat-nutrient-edge.png",
+    "andel-high.png"
+  ],
+  "images": [
+    {
+      "file": "work/qa-correction/final-habitat-revision/start.png",
+      "sha256": "8977e4594909ed7457ead62aa2f3c0fb22f4f75bfe4e869e8bf57ccdea888daf",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngChunksAndIDATValid": true,
+      "matchesRecordedSHA256": null
+    },
+    {
+      "file": "work/qa-correction/final-habitat-revision/woodruff.png",
+      "sha256": "0ca04a70b0e600f7d3f017726c327ee3ea02e951473dbaf45360c83876218768",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngChunksAndIDATValid": true,
+      "matchesRecordedSHA256": null
+    },
+    {
+      "file": "work/qa-correction/final-habitat-revision/nettle.png",
+      "sha256": "2cbd991a803db3072154acbafddab25b5ac04fa7b938ef99ddc5a7f5995d5a3a",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngChunksAndIDATValid": true,
+      "matchesRecordedSHA256": null
+    },
+    {
+      "file": "work/qa-correction/final-habitat-revision/wood.png",
+      "sha256": "99e214dba7cce553ba907ffa4f9dcde1fe254ce2c45ac60ae17bad27bb57c783",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngChunksAndIDATValid": true,
+      "matchesRecordedSHA256": null
+    },
+    {
+      "file": "work/qa-correction/final-habitat-revision/village.png",
+      "sha256": "9a2cc5345a0850e898b03700316fabdbc406395d802a61f49c3af9920c966c93",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngChunksAndIDATValid": true,
+      "matchesRecordedSHA256": null
+    },
+    {
+      "file": "work/qa-correction/final-habitat-revision/ramp.png",
+      "sha256": "4ae0d4e909b33ea4fb4f545b40c103df9bcc978eb08c32e132551e5b3ed67c2f",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngChunksAndIDATValid": true,
+      "matchesRecordedSHA256": null
+    },
+    {
+      "file": "work/qa-correction/final-habitat-revision/salt-shrub.png",
+      "sha256": "d5dbad65f536c51f65e586bdddaa28d576fbb6f6520c87142aa77dd37cd8c447",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngChunksAndIDATValid": true,
+      "matchesRecordedSHA256": null
+    },
+    {
+      "file": "work/qa-correction/final-habitat-revision/salt-segments.png",
+      "sha256": "dcc77d9c2a3e4ef2b75c3919d5f4df51263cf0df60156824f8e889a9b01fa39c",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngChunksAndIDATValid": true,
+      "matchesRecordedSHA256": null
+    },
+    {
+      "file": "work/qa-correction/final-habitat-revision/salt-grass.png",
+      "sha256": "328b809be6139f6c270095567bc776a529d004375deb13a66f18eb8b51a013fe",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngChunksAndIDATValid": true,
+      "matchesRecordedSHA256": null
+    },
+    {
+      "file": "work/qa-correction/final-habitat-revision/coast.png",
+      "sha256": "0c1bdc72f999ff8715654839519862418fe0a28c27a9b8c8e6e9fa80186eaf95",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngChunksAndIDATValid": true,
+      "matchesRecordedSHA256": null
+    },
+    {
+      "file": "work/qa-correction/final-habitat-revision/forest-normal-walk.png",
+      "sha256": "8b90250e75d022da9466c17cad6c0f2d6358fbd0fcc53f0c415dd9b8af7ad8e4",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngChunksAndIDATValid": true,
+      "matchesRecordedSHA256": null
+    },
+    {
+      "file": "work/qa-correction/final-habitat-revision/habitat-light-gap-fixed.png",
+      "sha256": "1c6c8a35a5fcaf3da51e4b6a0128cbef3062b1d1b202cf6bedae2ae25e8ff386",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngChunksAndIDATValid": true,
+      "matchesRecordedSHA256": null
+    },
+    {
+      "file": "work/qa-correction/final-habitat-revision/habitat-light-gap.png",
+      "sha256": "37a6c8e5b0a7aa1bf09f296e33cc0971f5e8634ffab8c597ab3edc90b20d173c",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngChunksAndIDATValid": true,
+      "matchesRecordedSHA256": null
+    },
+    {
+      "file": "work/qa-correction/final-habitat-revision/habitat-nutrient-edge.png",
+      "sha256": "eb6a27871989245b7967e54a3aff127b931c645846926b2e8936e000c99e97aa",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngChunksAndIDATValid": true,
+      "matchesRecordedSHA256": null
+    },
+    {
+      "file": "work/qa-correction/final-habitat-revision/keilm-low.png",
+      "sha256": "b6501b01a02e58b15e505b2a4077059aa85f1ab39cbd1ec01a8454a6d731baa9",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngChunksAndIDATValid": true,
+      "matchesRecordedSHA256": null
+    },
+    {
+      "file": "work/qa-correction/final-habitat-revision/keilm-high.png",
+      "sha256": "b6501b01a02e58b15e505b2a4077059aa85f1ab39cbd1ec01a8454a6d731baa9",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngChunksAndIDATValid": true,
+      "matchesRecordedSHA256": null
+    },
+    {
+      "file": "work/qa-correction/final-habitat-revision/andel-low.png",
+      "sha256": "f5ffbb13d6c2186d768a266b92741ab23cb54664d001e62fdb243866ecb9b201",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngChunksAndIDATValid": true,
+      "matchesRecordedSHA256": null
+    },
+    {
+      "file": "work/qa-correction/final-habitat-revision/andel-high.png",
+      "sha256": "a050faabc5a6253a76b28752e3b2ed83972862f3d3d340d1253dcb78d03b166e",
+      "dimensions": [
+        800,
+        600
+      ],
+      "pngChunksAndIDATValid": true,
+      "matchesRecordedSHA256": null
+    },
+    {
+      "file": "work/qa-correction/final-habitat-revision/diagnostic-galium_odoratum-standard.png",
+      "sha256": "ab19f9bf1f050e4c93a7cd2dc514c3b50ff7c003b2013e1c8c0ff2cc59bbe5c6",
+      "dimensions": [
+        516,
+        258
+      ],
+      "pngChunksAndIDATValid": true,
+      "matchesRecordedSHA256": true
+    },
+    {
+      "file": "work/qa-correction/final-habitat-revision/diagnostic-galium_odoratum-rotated.png",
+      "sha256": "61e8170fb8de04778b12171806be307d2cfb26cfd6672998db27c63f9e799419",
+      "dimensions": [
+        516,
+        258
+      ],
+      "pngChunksAndIDATValid": true,
+      "matchesRecordedSHA256": true
+    },
+    {
+      "file": "work/qa-correction/final-habitat-revision/diagnostic-fagus_sylvatica-standard.png",
+      "sha256": "2001e9fd732bf0a398d9a0d6d12f1616f811bdd40b925b63f01adba9ab817755",
+      "dimensions": [
+        516,
+        258
+      ],
+      "pngChunksAndIDATValid": true,
+      "matchesRecordedSHA256": true
+    },
+    {
+      "file": "work/qa-correction/final-habitat-revision/diagnostic-fagus_sylvatica-rotated.png",
+      "sha256": "d451729309eb79ea4f7a590e515f3725bde171a6d83a23db17958a5e0301dce2",
+      "dimensions": [
+        516,
+        258
+      ],
+      "pngChunksAndIDATValid": true,
+      "matchesRecordedSHA256": true
+    },
+    {
+      "file": "work/qa-correction/final-habitat-revision/diagnostic-urtica_dioica-standard.png",
+      "sha256": "84523107f723d695616a035b0711c1e797567db34e8d629ecd255d60b54feb93",
+      "dimensions": [
+        516,
+        258
+      ],
+      "pngChunksAndIDATValid": true,
+      "matchesRecordedSHA256": true
+    },
+    {
+      "file": "work/qa-correction/final-habitat-revision/diagnostic-urtica_dioica-rotated.png",
+      "sha256": "2c57abde8b8c43a50cf114ccae9c26b524fc2c26263dd3f18176711be306c9eb",
+      "dimensions": [
+        516,
+        258
+      ],
+      "pngChunksAndIDATValid": true,
+      "matchesRecordedSHA256": true
+    },
+    {
+      "file": "work/qa-correction/final-habitat-revision/diagnostic-quercus_robur-standard.png",
+      "sha256": "09b212fe52dc14ebdb826d20598bc5168e880cb7ec2b8fbbb621d2a8a5b86791",
+      "dimensions": [
+        516,
+        258
+      ],
+      "pngChunksAndIDATValid": true,
+      "matchesRecordedSHA256": true
+    },
+    {
+      "file": "work/qa-correction/final-habitat-revision/diagnostic-quercus_robur-rotated.png",
+      "sha256": "c2355eecb8f968c0bb0943dc1eb88dbd7854947cc716544f23fff8e1b4b18b16",
+      "dimensions": [
+        516,
+        258
+      ],
+      "pngChunksAndIDATValid": true,
+      "matchesRecordedSHA256": true
+    }
+  ],
+  "currentTides": {
+    "keilm-low.png": {
+      "phase": 0.0024574999999959603,
+      "waterLevel": -1.0499523164965765,
+      "label": "Niedrigwasser"
+    },
+    "keilm-high.png": {
+      "phase": 0.5024574999999667,
+      "waterLevel": -0.25004768350342244,
+      "label": "Hochwasser"
+    },
+    "andel-low.png": {
+      "phase": 0.004081666666633291,
+      "waterLevel": -1.0498684651001733,
+      "label": "Niedrigwasser"
+    },
+    "andel-high.png": {
+      "phase": 0.5024583333334045,
+      "waterLevel": -0.25004771584702756,
+      "label": "Hochwasser"
+    }
+  },
+  "n02ModelResult": "work/compact-regressions/compact-habitat-revision/habitat-revision-result.json",
+  "n02ModelResultSHA256": "dfa2f3879a8eeb1b965bf88a3f11b997f7a3ebda3da7a80e597b13a08d7a4bf7",
+  "n02AggregateResult": "work/compact-regressions/result.json",
+  "n02AggregateResultSHA256": "f455a5e4f6b6a6d4e18d39014d8e0d6ce5745e3202574f04cc05d7f3d95dc6b4",
+  "n02AggregateSourceCommit": "3920a1d1d2692889b75403c1b0e50f5b856398aa",
+  "n02Seeds": [
+    20260825,
+    1,
+    42,
+    20261022
+  ],
+  "n02SelectedFloodingTable": [
+    {
+      "seed": 20260825,
+      "revision": 4,
+      "rows": {
+        "festuca_rubra": {
+          "count": 45,
+          "surfaceRange": [
+            0.1869372660543492,
+            0.21556154654899207
+          ],
+          "submerged": {
+            "low": {
+              "waterLevel": -1.05,
+              "count": 0,
+              "percent": 0
+            },
+            "normalHigh": {
+              "waterLevel": -0.25,
+              "count": 0,
+              "percent": 0
+            },
+            "higher": {
+              "waterLevel": 0.05,
+              "count": 0,
+              "percent": 0
+            },
+            "rare": {
+              "waterLevel": 0.3,
+              "count": 45,
+              "percent": 100
+            }
+          }
+        },
+        "halimione_portulacoides": {
+          "count": 35,
+          "surfaceRange": [
+            -0.051452326640908194,
+            0.06909409720710172
+          ],
+          "submerged": {
+            "low": {
+              "waterLevel": -1.05,
+              "count": 0,
+              "percent": 0
+            },
+            "normalHigh": {
+              "waterLevel": -0.25,
+              "count": 0,
+              "percent": 0
+            },
+            "higher": {
+              "waterLevel": 0.05,
+              "count": 20,
+              "percent": 57.14285714285714
+            },
+            "rare": {
+              "waterLevel": 0.3,
+              "count": 35,
+              "percent": 100
+            }
+          }
+        },
+        "puccinellia_maritima": {
+          "count": 55,
+          "surfaceRange": [
+            -0.2249567603425464,
+            -0.06629245405091662
+          ],
+          "submerged": {
+            "low": {
+              "waterLevel": -1.05,
+              "count": 0,
+              "percent": 0
+            },
+            "normalHigh": {
+              "waterLevel": -0.25,
+              "count": 0,
+              "percent": 0
+            },
+            "higher": {
+              "waterLevel": 0.05,
+              "count": 55,
+              "percent": 100
+            },
+            "rare": {
+              "waterLevel": 0.3,
+              "count": 55,
+              "percent": 100
+            }
+          }
+        },
+        "salicornia_europaea": {
+          "count": 47,
+          "surfaceRange": [
+            -0.7051817195239839,
+            -0.37353528662331054
+          ],
+          "submerged": {
+            "low": {
+              "waterLevel": -1.05,
+              "count": 0,
+              "percent": 0
+            },
+            "normalHigh": {
+              "waterLevel": -0.25,
+              "count": 47,
+              "percent": 100
+            },
+            "higher": {
+              "waterLevel": 0.05,
+              "count": 47,
+              "percent": 100
+            },
+            "rare": {
+              "waterLevel": 0.3,
+              "count": 47,
+              "percent": 100
+            }
+          }
+        },
+        "sporobolus_anglicus": {
+          "count": 40,
+          "surfaceRange": [
+            -0.49388129870147157,
+            -0.33954085210195784
+          ],
+          "submerged": {
+            "low": {
+              "waterLevel": -1.05,
+              "count": 0,
+              "percent": 0
+            },
+            "normalHigh": {
+              "waterLevel": -0.25,
+              "count": 40,
+              "percent": 100
+            },
+            "higher": {
+              "waterLevel": 0.05,
+              "count": 40,
+              "percent": 100
+            },
+            "rare": {
+              "waterLevel": 0.3,
+              "count": 40,
+              "percent": 100
+            }
+          }
+        }
+      }
+    },
+    {
+      "seed": 1,
+      "revision": 4,
+      "rows": {
+        "festuca_rubra": {
+          "count": 45,
+          "surfaceRange": [
+            0.1920592449977815,
+            0.222277372924387
+          ],
+          "submerged": {
+            "low": {
+              "waterLevel": -1.05,
+              "count": 0,
+              "percent": 0
+            },
+            "normalHigh": {
+              "waterLevel": -0.25,
+              "count": 0,
+              "percent": 0
+            },
+            "higher": {
+              "waterLevel": 0.05,
+              "count": 0,
+              "percent": 0
+            },
+            "rare": {
+              "waterLevel": 0.3,
+              "count": 45,
+              "percent": 100
+            }
+          }
+        },
+        "halimione_portulacoides": {
+          "count": 37,
+          "surfaceRange": [
+            -0.07296532989012587,
+            0.06794498393555454
+          ],
+          "submerged": {
+            "low": {
+              "waterLevel": -1.05,
+              "count": 0,
+              "percent": 0
+            },
+            "normalHigh": {
+              "waterLevel": -0.25,
+              "count": 0,
+              "percent": 0
+            },
+            "higher": {
+              "waterLevel": 0.05,
+              "count": 20,
+              "percent": 54.054054054054056
+            },
+            "rare": {
+              "waterLevel": 0.3,
+              "count": 37,
+              "percent": 100
+            }
+          }
+        },
+        "puccinellia_maritima": {
+          "count": 55,
+          "surfaceRange": [
+            -0.22489326655480427,
+            -0.06668630056719987
+          ],
+          "submerged": {
+            "low": {
+              "waterLevel": -1.05,
+              "count": 0,
+              "percent": 0
+            },
+            "normalHigh": {
+              "waterLevel": -0.25,
+              "count": 0,
+              "percent": 0
+            },
+            "higher": {
+              "waterLevel": 0.05,
+              "count": 55,
+              "percent": 100
+            },
+            "rare": {
+              "waterLevel": 0.3,
+              "count": 55,
+              "percent": 100
+            }
+          }
+        },
+        "salicornia_europaea": {
+          "count": 46,
+          "surfaceRange": [
+            -0.6819097330058506,
+            -0.3764365104477872
+          ],
+          "submerged": {
+            "low": {
+              "waterLevel": -1.05,
+              "count": 0,
+              "percent": 0
+            },
+            "normalHigh": {
+              "waterLevel": -0.25,
+              "count": 46,
+              "percent": 100
+            },
+            "higher": {
+              "waterLevel": 0.05,
+              "count": 46,
+              "percent": 100
+            },
+            "rare": {
+              "waterLevel": 0.3,
+              "count": 46,
+              "percent": 100
+            }
+          }
+        },
+        "sporobolus_anglicus": {
+          "count": 40,
+          "surfaceRange": [
+            -0.46987502982252705,
+            -0.33741696059981235
+          ],
+          "submerged": {
+            "low": {
+              "waterLevel": -1.05,
+              "count": 0,
+              "percent": 0
+            },
+            "normalHigh": {
+              "waterLevel": -0.25,
+              "count": 40,
+              "percent": 100
+            },
+            "higher": {
+              "waterLevel": 0.05,
+              "count": 40,
+              "percent": 100
+            },
+            "rare": {
+              "waterLevel": 0.3,
+              "count": 40,
+              "percent": 100
+            }
+          }
+        }
+      }
+    },
+    {
+      "seed": 42,
+      "revision": 4,
+      "rows": {
+        "festuca_rubra": {
+          "count": 45,
+          "surfaceRange": [
+            0.19041079923307488,
+            0.2177119393054726
+          ],
+          "submerged": {
+            "low": {
+              "waterLevel": -1.05,
+              "count": 0,
+              "percent": 0
+            },
+            "normalHigh": {
+              "waterLevel": -0.25,
+              "count": 0,
+              "percent": 0
+            },
+            "higher": {
+              "waterLevel": 0.05,
+              "count": 0,
+              "percent": 0
+            },
+            "rare": {
+              "waterLevel": 0.3,
+              "count": 45,
+              "percent": 100
+            }
+          }
+        },
+        "halimione_portulacoides": {
+          "count": 37,
+          "surfaceRange": [
+            -0.07638318095802749,
+            0.0668162757385484
+          ],
+          "submerged": {
+            "low": {
+              "waterLevel": -1.05,
+              "count": 0,
+              "percent": 0
+            },
+            "normalHigh": {
+              "waterLevel": -0.25,
+              "count": 0,
+              "percent": 0
+            },
+            "higher": {
+              "waterLevel": 0.05,
+              "count": 22,
+              "percent": 59.45945945945946
+            },
+            "rare": {
+              "waterLevel": 0.3,
+              "count": 37,
+              "percent": 100
+            }
+          }
+        },
+        "puccinellia_maritima": {
+          "count": 55,
+          "surfaceRange": [
+            -0.2246305432548876,
+            -0.06701288392867036
+          ],
+          "submerged": {
+            "low": {
+              "waterLevel": -1.05,
+              "count": 0,
+              "percent": 0
+            },
+            "normalHigh": {
+              "waterLevel": -0.25,
+              "count": 0,
+              "percent": 0
+            },
+            "higher": {
+              "waterLevel": 0.05,
+              "count": 55,
+              "percent": 100
+            },
+            "rare": {
+              "waterLevel": 0.3,
+              "count": 55,
+              "percent": 100
+            }
+          }
+        },
+        "salicornia_europaea": {
+          "count": 44,
+          "surfaceRange": [
+            -0.663156100048861,
+            -0.37039890105617296
+          ],
+          "submerged": {
+            "low": {
+              "waterLevel": -1.05,
+              "count": 0,
+              "percent": 0
+            },
+            "normalHigh": {
+              "waterLevel": -0.25,
+              "count": 44,
+              "percent": 100
+            },
+            "higher": {
+              "waterLevel": 0.05,
+              "count": 44,
+              "percent": 100
+            },
+            "rare": {
+              "waterLevel": 0.3,
+              "count": 44,
+              "percent": 100
+            }
+          }
+        },
+        "sporobolus_anglicus": {
+          "count": 40,
+          "surfaceRange": [
+            -0.4961727443367251,
+            -0.33984173209926155
+          ],
+          "submerged": {
+            "low": {
+              "waterLevel": -1.05,
+              "count": 0,
+              "percent": 0
+            },
+            "normalHigh": {
+              "waterLevel": -0.25,
+              "count": 40,
+              "percent": 100
+            },
+            "higher": {
+              "waterLevel": 0.05,
+              "count": 40,
+              "percent": 100
+            },
+            "rare": {
+              "waterLevel": 0.3,
+              "count": 40,
+              "percent": 100
+            }
+          }
+        }
+      }
+    },
+    {
+      "seed": 20261022,
+      "revision": 4,
+      "rows": {
+        "festuca_rubra": {
+          "count": 45,
+          "surfaceRange": [
+            0.18749821729979466,
+            0.21713948193419172
+          ],
+          "submerged": {
+            "low": {
+              "waterLevel": -1.05,
+              "count": 0,
+              "percent": 0
+            },
+            "normalHigh": {
+              "waterLevel": -0.25,
+              "count": 0,
+              "percent": 0
+            },
+            "higher": {
+              "waterLevel": 0.05,
+              "count": 0,
+              "percent": 0
+            },
+            "rare": {
+              "waterLevel": 0.3,
+              "count": 45,
+              "percent": 100
+            }
+          }
+        },
+        "halimione_portulacoides": {
+          "count": 36,
+          "surfaceRange": [
+            -0.0885077709251472,
+            0.06876912573110346
+          ],
+          "submerged": {
+            "low": {
+              "waterLevel": -1.05,
+              "count": 0,
+              "percent": 0
+            },
+            "normalHigh": {
+              "waterLevel": -0.25,
+              "count": 0,
+              "percent": 0
+            },
+            "higher": {
+              "waterLevel": 0.05,
+              "count": 22,
+              "percent": 61.111111111111114
+            },
+            "rare": {
+              "waterLevel": 0.3,
+              "count": 36,
+              "percent": 100
+            }
+          }
+        },
+        "puccinellia_maritima": {
+          "count": 55,
+          "surfaceRange": [
+            -0.2249629086222887,
+            -0.07085109149430445
+          ],
+          "submerged": {
+            "low": {
+              "waterLevel": -1.05,
+              "count": 0,
+              "percent": 0
+            },
+            "normalHigh": {
+              "waterLevel": -0.25,
+              "count": 0,
+              "percent": 0
+            },
+            "higher": {
+              "waterLevel": 0.05,
+              "count": 55,
+              "percent": 100
+            },
+            "rare": {
+              "waterLevel": 0.3,
+              "count": 55,
+              "percent": 100
+            }
+          }
+        },
+        "salicornia_europaea": {
+          "count": 51,
+          "surfaceRange": [
+            -0.7083549660432409,
+            -0.36900061057144795
+          ],
+          "submerged": {
+            "low": {
+              "waterLevel": -1.05,
+              "count": 0,
+              "percent": 0
+            },
+            "normalHigh": {
+              "waterLevel": -0.25,
+              "count": 51,
+              "percent": 100
+            },
+            "higher": {
+              "waterLevel": 0.05,
+              "count": 51,
+              "percent": 100
+            },
+            "rare": {
+              "waterLevel": 0.3,
+              "count": 51,
+              "percent": 100
+            }
+          }
+        },
+        "sporobolus_anglicus": {
+          "count": 40,
+          "surfaceRange": [
+            -0.49436410229329647,
+            -0.34129826673930025
+          ],
+          "submerged": {
+            "low": {
+              "waterLevel": -1.05,
+              "count": 0,
+              "percent": 0
+            },
+            "normalHigh": {
+              "waterLevel": -0.25,
+              "count": 40,
+              "percent": 100
+            },
+            "higher": {
+              "waterLevel": 0.05,
+              "count": 40,
+              "percent": 100
+            },
+            "rare": {
+              "waterLevel": 0.3,
+              "count": 40,
+              "percent": 100
+            }
+          }
+        }
+      }
+    }
+  ],
+  "n02AbsoluteModelWaterLevels": {
+    "low": -1.05,
+    "normalHigh": -0.25,
+    "higher": 0.05,
+    "rare": 0.3
+  },
+  "f05Status": "Visible targeted improvement; full visual acceptance remains open.",
+  "f05RemainingLimits": [
+    "Bare light-gap foreground and thin skeletal bramble shrubs.",
+    "Repeated polygonal crowns and straight trunks; biological age classes only partly inferable from images.",
+    "Coarse deadwood, floor and distant scenery remain stylized.",
+    "Actual slow-rendering notice covers part of the right normal-walking light-gap and nutrient-edge views; the fresh fixed-gap image has no such notice. No hidden-region approval.",
+    "No real iPad 9/Safari/iPadOS 27 check or device-performance certification."
+  ],
+  "n02Status": "Current low/high-water images support corrected Andel stand and unchanged dry Keilmelde. Four-seed height/flooding counts are from the fresh passed compact-regressions model result bound to runtime commit 3920a1d, not image counting.",
+  "completeF05VisualAcceptance": false
+}

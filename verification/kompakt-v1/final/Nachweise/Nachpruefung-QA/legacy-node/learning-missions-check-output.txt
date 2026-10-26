@@ -1,0 +1,1 @@
+{"missions":"right/wrong/incomplete/uncertain; multiple evidence combinations","persistence":"legacy migration, IDs, roundtrip, atomic rollback, quota","import":"version, duplicate, malformed, prototype rejection","report":"escaped text, provenance, rubric; no automatic open-text grading","fixtures":"explicitly synthetic UI-only"}

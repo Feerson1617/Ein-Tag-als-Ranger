@@ -1,0 +1,31 @@
+{
+  "scope": "Read-only actual terrain/deck ray reconstruction, not an additional browser screenshot or feeding event. The first straight avocet approach in the supplied frame has documented heading 0.",
+  "input": "verification/kompakt-korrektur/phase5-attempt1/feeding-occlusion.json",
+  "explicitHeadingRadians": 0,
+  "phase": "searching",
+  "eye": [
+    64.53699369020964,
+    2.13,
+    -12.417998168125381
+  ],
+  "bill": {
+    "x": 61.996172299369604,
+    "y": -0.6639865008327552,
+    "z": -7.04507643695302
+  },
+  "groundHits": [
+    {
+      "point": [
+        61.997148413761295,
+        -0.6629131272995052,
+        -7.047140567177252
+      ],
+      "distance": 6.56485256000477
+    }
+  ],
+  "deckHits": [],
+  "renderedGroundAtBill": [
+    -0.6630318913826541
+  ],
+  "analyticGroundAtBill": -0.6623037919110809
+}

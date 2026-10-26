@@ -1,0 +1,3 @@
+# Separater echter M3-Lauf600×375: FEHLGESCHLAGEN
+
+Das erste Fenster erzeugte einen echten Protokollbeleg für wadden:138 über6,1432 Modellsekunden. Das zweite Fenster erreichte bei unverändertem180-s-Limit nur5,8/6 Modellsekunden; p95-Bildabstand2933,2ms. Keine JS-/Konsolen-/HTTP-Fehler. Dieser Lauf verwendet wie der ursprüngliche Treiber bereits den vorhandenen Modus smooth. Es gibt in der großen Fassung keine getrennte Tablet-Option; eine solche Zusatzprüfung wird nicht behauptet. Beide gescheiterten Live-Profile bleiben fehlgeschlagen. Ein regulärer separater UI-/Speicher-/Resilienzlauf ohne Live-Erwerb benutzt deutlich bezeichnete Fixtures und darf keinen tatsächlichen M3-Abschluss ersetzen.

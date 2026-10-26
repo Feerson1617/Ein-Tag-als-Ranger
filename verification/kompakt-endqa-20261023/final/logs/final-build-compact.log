@@ -1,0 +1,16 @@
+{
+  "sourceCommit": "3920a1d1d2692889b75403c1b0e50f5b856398aa",
+  "sourceDirty": false,
+  "modules": 43,
+  "assets": [
+    "assets/boardwalk-wood.webp",
+    "assets/compact-roe-deer.glb",
+    "assets/sky-panorama.webp",
+    "assets/terrain-atlas.webp",
+    "assets/wildlife-fox.glb"
+  ],
+  "initialUpperBoundBytes": 9438461,
+  "zipBytes": 6876666,
+  "standaloneBytes": 11953336
+}
+{"verified": true, "modules": 43, "assets": ["assets/boardwalk-wood.webp", "assets/compact-roe-deer.glb", "assets/sky-panorama.webp", "assets/terrain-atlas.webp", "assets/wildlife-fox.glb"], "bytes": 9438461, "sourceCommit": "3920a1d1d2692889b75403c1b0e50f5b856398aa", "sourceDirty": false}
