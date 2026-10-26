@@ -20,9 +20,9 @@ function leafClusterTexture(oak){
 export function createCanopyView(scene,clusters){
  const meshes=[],plane=new THREE.PlaneGeometry(1,1),dummy=new THREE.Object3D();
  for(const oak of [false,true]){
-  const rows=clusters.filter(c=>c.oak===oak),material=new THREE.MeshStandardMaterial({map:leafClusterTexture(oak),alphaTest:.48,side:THREE.DoubleSide,roughness:1});
-  const mesh=new THREE.InstancedMesh(plane,material,rows.length*6);let i=0;
-  for(const row of rows)for(let k=0;k<6;k++){
+  const rows=clusters.filter(c=>c.oak===oak),material=new THREE.MeshLambertMaterial({map:leafClusterTexture(oak),alphaTest:.48,side:THREE.DoubleSide});
+  const mesh=new THREE.InstancedMesh(plane,material,rows.length*3);let i=0;
+  for(const row of rows)for(let k=0;k<3;k++){
    const a=row.phase+k*2.399,spread=.38;
    dummy.position.set(row.end[0]+Math.cos(a)*row.scale[0]*spread,row.end[1]+Math.sin(k*1.7)*row.scale[1]*.35,row.end[2]+Math.sin(a)*row.scale[2]*spread);
    dummy.scale.set(row.scale[0]*2.1,row.scale[1]*2.1,1);dummy.rotation.set((k%3-1)*.64,a,(k%2-.5)*.38);dummy.updateMatrix();mesh.setMatrixAt(i++,dummy.matrix);
