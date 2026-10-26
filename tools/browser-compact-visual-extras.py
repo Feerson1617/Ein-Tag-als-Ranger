@@ -2,6 +2,7 @@
 Only public controls; immutable input HTML. No simulation/evidence injection.
 """
 from pathlib import Path
+from compact_graphics_audit import observe_graphics_errors
 from functools import partial
 from http.server import SimpleHTTPRequestHandler,ThreadingHTTPServer
 from threading import Thread
@@ -14,7 +15,7 @@ class H(SimpleHTTPRequestHandler):
 s=ThreadingHTTPServer(('127.0.0.1',0),partial(H,directory=str(entry.parent)));Thread(target=s.serve_forever,daemon=True).start()
 def save():(out/'result.json').write_text(json.dumps(r,ensure_ascii=False,indent=2)+'\n')
 with sync_playwright()as pw:
- b=pw.chromium.launch(headless=True,executable_path=shutil.which('chromium'),args=['--no-sandbox','--use-angle=swiftshader','--enable-unsafe-swiftshader']);page=b.new_page(viewport={'width':1200,'height':750});page.set_default_timeout(60000);page.on('pageerror',lambda e:r['errors'].append(str(e)))
+ b=pw.chromium.launch(headless=True,executable_path=shutil.which('chromium'),args=['--no-sandbox','--use-angle=swiftshader','--enable-unsafe-swiftshader']);page=b.new_page(viewport={'width':1200,'height':750});page.set_default_timeout(60000);page.on('pageerror',lambda e:r['errors'].append(str(e)));observe_graphics_errors(page,r['errors'])
  def view(v):
   page.locator('#menu-button').click();page.get_by_text('Referenzabschnitt prüfen',exact=True).click();page.locator('[data-view="'+v+'"]').click();page.wait_for_function('document.querySelector("#world").dataset.sceneRevision===document.querySelector("#world").dataset.renderRevision')
  def data():return page.locator('#world').evaluate('(e)=>({...e.dataset})')

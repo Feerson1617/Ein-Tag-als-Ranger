@@ -3,7 +3,7 @@
 export function scenicSurface(material, kind) {
  const treatments = {
   canopy: `float fleck = surfaceNoise(surfacePoint * 7.0); float cluster = surfaceNoise(surfacePoint * 1.8); diffuseColor.rgb *= .69 + .24 * cluster + .22 * fleck;`,
-  bark: `float grain = surfaceNoise(surfacePoint * vec3(24.0, 1.4, 24.0)); float patch = surfaceNoise(surfacePoint * 3.0); diffuseColor.rgb *= .72 + .22 * grain + .18 * patch;`,
+  bark: `float grain = surfaceNoise(surfacePoint * vec3(24.0, 1.4, 24.0)); float barkPatch = surfaceNoise(surfacePoint * 3.0); diffuseColor.rgb *= .72 + .22 * grain + .18 * barkPatch;`,
   masonry: `float grain = surfaceNoise(surfacePoint * 32.0); diffuseColor.rgb *= .88 + .16 * grain;`,
   water: `float ripple = sin(surfacePoint.x * 5.0 + sin(surfacePoint.y * 2.1)) * sin(surfacePoint.y * 7.0 + surfacePoint.x * .8); diffuseColor.rgb *= .94 + .06 * ripple;`,
   fur: `float grain=surfaceNoise(surfacePoint*vec3(85.0,200.0,180.0)); diffuseColor.rgb *= .965+.07*grain;`,

@@ -1,5 +1,6 @@
 """Twenty-minute cloud stability observation; never a real iPad/Safari benchmark."""
 from pathlib import Path
+from compact_graphics_audit import observe_graphics_errors
 from functools import partial
 from http.server import SimpleHTTPRequestHandler,ThreadingHTTPServer
 from threading import Thread
@@ -19,7 +20,7 @@ server=ThreadingHTTPServer(('127.0.0.1',0),partial(Handler,directory=str(site)))
 with sync_playwright()as pw:
  opts={'headless':True}
  if shutil.which('chromium'):opts.update(executable_path=shutil.which('chromium'),args=['--no-sandbox','--use-angle=swiftshader','--enable-unsafe-swiftshader'])
- browser=pw.chromium.launch(**opts);result['browserVersion']=browser.version;ctx=browser.new_context(viewport={'width':800,'height':600},has_touch=True,is_mobile=True);page=ctx.new_page();page.set_default_timeout(45000);page.on('pageerror',lambda e:result['errors'].append(str(e)))
+ browser=pw.chromium.launch(**opts);result['browserVersion']=browser.version;ctx=browser.new_context(viewport={'width':800,'height':600},has_touch=True,is_mobile=True);page=ctx.new_page();page.set_default_timeout(45000);page.on('pageerror',lambda e:result['errors'].append(str(e)));observe_graphics_errors(page,result['errors'])
  try:
   page.goto(f'http://127.0.0.1:{server.server_port}/{a.entry}');page.wait_for_function('document.querySelector("#world").dataset.ready==="true"',timeout=120000);page.locator('#start').click();places=['woodruff','village','ramp','keilm','coast','outlook','oak','wood'];last_sim=-1;initial=None;reference_positions={}
   def pointer_click(button):

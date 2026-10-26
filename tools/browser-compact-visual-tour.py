@@ -1,5 +1,6 @@
 """Paired public viewpoints of a supplied immutable HTML, no state injection."""
 from pathlib import Path
+from compact_graphics_audit import observe_graphics_errors
 from functools import partial
 from http.server import SimpleHTTPRequestHandler,ThreadingHTTPServer
 from threading import Thread
@@ -12,7 +13,7 @@ class H(SimpleHTTPRequestHandler):
  def log_message(self,*args):pass
 s=ThreadingHTTPServer(('127.0.0.1',0),partial(H,directory=str(entry.parent)));Thread(target=s.serve_forever,daemon=True).start()
 with sync_playwright()as pw:
- b=pw.chromium.launch(headless=True,executable_path=shutil.which('chromium'),args=['--no-sandbox','--use-angle=swiftshader','--enable-unsafe-swiftshader']);c=b.new_context(viewport=r['viewport']);page=c.new_page();page.set_default_timeout(60000);page.on('pageerror',lambda e:r['errors'].append(str(e)))
+ b=pw.chromium.launch(headless=True,executable_path=shutil.which('chromium'),args=['--no-sandbox','--use-angle=swiftshader','--enable-unsafe-swiftshader']);c=b.new_context(viewport=r['viewport']);page=c.new_page();page.set_default_timeout(60000);page.on('pageerror',lambda e:r['errors'].append(str(e)));observe_graphics_errors(page,r['errors'])
  try:
   t=time.monotonic();page.goto(f'http://127.0.0.1:{s.server_port}/{entry.name}');page.wait_for_selector('#world[data-ready=true]',timeout=120000);r['loadSeconds']=time.monotonic()-t;page.screenshot(path=str(out/'welcome.png'));page.locator('#start').click()
   views=['comparison-start','comparison-woodruff','comparison-nettle','comparison-wood','comparison-village','npc-ranger','comparison-ramp','upper-marsh','lower-marsh','keilm','comparison-salt-segments','comparison-coast','outlook','comparison-salt-grass']

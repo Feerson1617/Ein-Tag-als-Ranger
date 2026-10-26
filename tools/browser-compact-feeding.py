@@ -3,6 +3,7 @@ The visible model-step controls are intentionally used; this is a labelled model
 observation, not newly earned active-sighting evidence or real-time FPS proof.
 """
 from pathlib import Path
+from compact_graphics_audit import observe_graphics_errors
 from functools import partial
 from http.server import SimpleHTTPRequestHandler,ThreadingHTTPServer
 from threading import Thread
@@ -35,7 +36,7 @@ with sync_playwright()as pw:
  b=pw.chromium.launch(headless=True,executable_path=shutil.which('chromium'),args=['--no-sandbox','--use-angle=swiftshader','--enable-unsafe-swiftshader']);result['browser']=b.version
  try:
   for id in ['avocet','redshank','spoonbill','oystercatcher']:
-   ctx=b.new_context(viewport={'width':1000,'height':700},accept_downloads=True);page=ctx.new_page();page.set_default_timeout(45000);page.on('pageerror',lambda e:result['errors'].append(str(e)));page.goto(url);page.wait_for_function('document.querySelector("#world").dataset.ready==="true"',timeout=120000);page.locator('#start').click();page.locator('#menu-button').click();page.get_by_text('Referenzabschnitt prüfen',exact=True).click();page.locator(f'[data-view="feeding-{id}"]').click();page.wait_for_function('document.querySelector("#world").dataset.renderRevision===document.querySelector("#world").dataset.sceneRevision');page.locator('#binocular').click();page.locator('#study').click()
+   ctx=b.new_context(viewport={'width':1000,'height':700},accept_downloads=True);page=ctx.new_page();page.set_default_timeout(45000);page.on('pageerror',lambda e:result['errors'].append(str(e)));observe_graphics_errors(page,result['errors']);page.goto(url);page.wait_for_function('document.querySelector("#world").dataset.ready==="true"',timeout=120000);page.locator('#start').click();page.locator('#menu-button').click();page.get_by_text('Referenzabschnitt prüfen',exact=True).click();page.locator(f'[data-view="feeding-{id}"]').click();page.wait_for_function('document.querySelector("#world").dataset.renderRevision===document.querySelector("#world").dataset.sceneRevision');page.locator('#binocular').click();page.locator('#study').click()
    # Start the complete episode via public UI before locking the lens. A busy
    # renderer may otherwise reach the first contact before setup has finished.
    before_window=sample(page,'compact-'+id);stored_before=page.evaluate('localStorage.getItem("ranger-compact-fieldbook-v2")')
