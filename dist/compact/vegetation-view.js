@@ -1,4 +1,5 @@
 import * as THREE from '../vendor/three.module.js?revision=120';
+import { scenicSurface } from './scenic-materials.js';
 import { GeometryBatch,leafGeometry,plantGeometry,stick } from './geometry.js';
 
 // Detail changes only representation. Every cell retains the same fixed rows,
@@ -12,6 +13,7 @@ function simplePlant(taxon,detail){
 }
 export function createVegetationView(scene,plants){
  const cells=new Map(),cache=new Map(),material=new THREE.MeshStandardMaterial({vertexColors:true,side:THREE.DoubleSide,roughness:.94}),dummy=new THREE.Object3D();
+ scenicSurface(material,'leaf');
  const geometry=(taxon,detail,window)=>{const key=[taxon,detail,window].join(':');if(!cache.has(key))cache.set(key,detail==='near'?plantGeometry(taxon,1,window):simplePlant(taxon,detail));return cache.get(key);};
  for(const p of plants){const key=[p.taxon,Math.floor(p.x/8),Math.floor(p.z/8)].join(':');if(!cells.has(key))cells.set(key,[]);cells.get(key).push(p);}
  const meshes=[];

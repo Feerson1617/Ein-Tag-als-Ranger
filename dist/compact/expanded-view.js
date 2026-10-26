@@ -4,6 +4,8 @@ import { createOrganism,poseCoastalBird,poseCrab } from './organism-models.js';
 import { MANIFEST } from './manifest.js';
 import { terrainHeight } from './layout.js';
 import { plantGeometry,leafGeometry } from './geometry.js';
+import { animateSecondaryMotion } from './secondary-motion.js';
+import { finishOrganism } from './organism-finish.js';
 import { CATALOG } from './catalog.js';
 import { carriedPreyPoint } from './coastal-rig.js';
 
@@ -25,7 +27,7 @@ export function attachCarriedAcorn(jay){
 }
 export async function createExpandedView(scene,state,world,reference){
  const models=new Map(),roots=[],treeSamples=[];
- const response=await fetch(MANIFEST.assets.fox);if(!response.ok)throw Error('Fuchsmodell konnte nicht geladen werden.');const foxGeometry=readWildlifeGLB(await response.arrayBuffer(),'fox'),fox=new THREE.Mesh(foxGeometry,new THREE.MeshStandardMaterial({vertexColors:true,roughness:.96}));fox.scale.setScalar(CATALOG.vulpes_vulpes.length/(foxGeometry.boundingBox.max.x-foxGeometry.boundingBox.min.x));fox.userData={taxon:'vulpes_vulpes',stage:'adult'};
+ const response=await fetch(MANIFEST.assets.fox);if(!response.ok)throw Error('Fuchsmodell konnte nicht geladen werden.');const foxGeometry=readWildlifeGLB(await response.arrayBuffer(),'fox'),fox=new THREE.Mesh(foxGeometry,new THREE.MeshStandardMaterial({vertexColors:true,roughness:.96}));fox.scale.setScalar(CATALOG.vulpes_vulpes.length/(foxGeometry.boundingBox.max.x-foxGeometry.boundingBox.min.x));fox.userData={taxon:'vulpes_vulpes',stage:'adult'};finishOrganism(fox,'vulpes_vulpes');
  for(const a of state.ecology.actors){const model=a.taxon==='vulpes_vulpes'?fox:createOrganism(a.taxon,a.stage);if(a.taxon!=='vulpes_vulpes')model.scale.multiplyScalar(a.size/(a.taxon==='aglais_io'&&a.stage==='caterpillar'?.035:CATALOG[a.taxon].length));scene.add(model);models.set(a.id,model);roots.push(model);}
  for(const type of ['beech','oak']){const t=state.trees.find(t=>t.type===type);if(!t)throw Error('Baumstruktur fehlt: '+type);const taxon=type==='beech'?'fagus_sylvatica':'quercus_robur',sample={id:t.id,individualId:t.id,taxon,x:t.x+t.r,z:t.z,y:terrainHeight(t.x,t.z)+1.1,size:.5,treeId:t.id,aimY:terrainHeight(t.x,t.z)+1.25};const model=createOrganism(taxon);model.position.set(sample.x,sample.y,sample.z);scene.add(model);models.set(t.id,model);treeSamples.push(sample);}
  state.treeSamples=treeSamples;
@@ -35,7 +37,7 @@ export async function createExpandedView(scene,state,world,reference){
  for(let i=0;i<4;i++){const seed=new THREE.Mesh(new THREE.SphereGeometry(.009,8,5),new THREE.MeshStandardMaterial({color:'#9a774a',roughness:1}));seed.scale.set(1,1.5,1);seed.position.set(-38+i*.08,terrainHeight(-38,-9)+.012,-9);scene.add(seed);acorns.push(seed);}
  for(let i=0;i<6;i++){const leaf=new THREE.Mesh(leafGeometry(.12,.07),new THREE.MeshStandardMaterial({color:'#806047',side:THREE.DoubleSide,roughness:1}));leaf.position.set(-61+i*.035,terrainHeight(-61,-2.7)+.012,-2.7);scene.add(leaf);litter.push(leaf);}
  const carriedAcorn=attachCarriedAcorn(models.get('compact-jay'));
- const affected=new Map();for(const resource of ['nettle-leaf','browse-shoot']){const r=state.ecology.resources[resource],p=state.plants.find(p=>p.id===r.id);const geometry=plantGeometry(p.taxon),mesh=new THREE.Mesh(geometry,new THREE.MeshStandardMaterial({vertexColors:true,side:THREE.DoubleSide,roughness:.9}));mesh.position.set(p.x,p.y,p.z);mesh.rotation.y=p.angle;mesh.scale.setScalar(p.size);scene.add(mesh);models.set(p.id,mesh);affected.set(resource,{p,mesh,last:1});const instanced=world.plantMeshes.find(m=>m.userData.rows.some(row=>row.id===p.id)),index=instanced.userData.rows.findIndex(row=>row.id===p.id),matrix=new THREE.Matrix4().makeScale(0,0,0);instanced.setMatrixAt(index,matrix);instanced.instanceMatrix.needsUpdate=true;}
+ const affected=new Map();for(const resource of ['nettle-leaf','browse-shoot']){const r=state.ecology.resources[resource],p=state.plants.find(p=>p.id===r.id);const geometry=plantGeometry(p.taxon),mesh=new THREE.Mesh(geometry,new THREE.MeshStandardMaterial({vertexColors:true,side:THREE.DoubleSide,roughness:.9}));mesh.position.set(p.x,p.y,p.z);mesh.rotation.y=p.angle;mesh.scale.setScalar(p.size);finishOrganism(mesh,p.taxon);scene.add(mesh);models.set(p.id,mesh);affected.set(resource,{p,mesh,last:1});const instanced=world.plantMeshes.find(m=>m.userData.rows.some(row=>row.id===p.id)),index=instanced.userData.rows.findIndex(row=>row.id===p.id),matrix=new THREE.Matrix4().makeScale(0,0,0);instanced.setMatrixAt(index,matrix);instanced.instanceMatrix.needsUpdate=true;}
  const foxShadow=reference.shadow.clone();foxShadow.geometry=new THREE.PlaneGeometry(.95,.3);foxShadow.geometry.rotateX(-Math.PI/2);scene.add(foxShadow);
  function update(observer={x:0,z:0}){
   const e=state.ecology;reference.deer.visible=e.window!=='dusk';reference.shadow.visible=e.window!=='dusk';foxShadow.visible=e.window==='dusk';const f=e.actors.find(a=>a.id==='compact-fox');foxShadow.position.set(f.x,terrainHeight(f.x,f.z)+.006,f.z);
@@ -49,7 +51,8 @@ export async function createExpandedView(scene,state,world,reference){
    if(m.birdLegs)poseCoastalBird(m,a,state.time);
    if(m.headPivot&&!m.birdLegs){const technique=a.activity;m.headPivot.rotation.z=technique==='sweeping'?-1.05:technique==='probing'?-.95+Math.sin(state.time*9)*.10:technique==='shell-opening'?-.9+Math.sin(state.time*3)*.12:0;m.headPivot.rotation.y=technique==='sweeping'?Math.sin(state.time*2)*.45:0;}
    if(a.taxon==='garrulus_glandarius'&&a.activity==='flying'){m.rotation.z=-.12;}
-   for(const [i,w]of (m.animation?.wings||[]).entries()){if(m.birdLegs||['garrulus_glandarius','parus_major'].includes(a.taxon))w.visible=a.activity==='flying';w.rotation.x=(i?1:-1)*Math.sin(state.time*(a.taxon==='bombus_lapidarius'?70:6))*(['carrying-pollen','returning-to-flower','flying'].includes(a.activity)?.8:.18);}
+   for(const [i,w]of (m.animation?.wings||[]).entries()){if(m.birdLegs||['garrulus_glandarius','parus_major'].includes(a.taxon))w.visible=a.activity==='flying';const flying=['carrying-pollen','returning-to-flower','flying'].includes(a.activity),beat=state.time*(a.taxon==='bombus_lapidarius'?70:6);w.rotation.x=(i?1:-1)*(flying?(Math.sin(beat)+.12*Math.sin(beat*2))*.75:a.taxon==='bombus_lapidarius'?.12:.18*Math.sin(beat*.25));}
+   animateSecondaryMotion(m,a,state.time);
    if(a.taxon==='lumbricidae'){m.position.x=a.homeX-Math.min(.12,(6-e.resources['leaf-litter'].amount)*.02);}
   }
   for(const a of e.actors)if(a.carriedPreyId){const prey=e.actors.find(p=>p.id===a.carriedPreyId),preyModel=models.get(prey.id),predator=models.get(a.id),anchor=predator.beakContact||predator.clawContact;predator.updateMatrixWorld(true);const contact=state.modelRevision>=5&&a.taxon!=='carcinus_maenas'?new THREE.Vector3().copy(carriedPreyPoint(a,state.time,state.modelRevision)):anchor.getWorldPosition(new THREE.Vector3());if(prey.emptyShell&&preyModel.tissue){const tissue=preyModel.tissue;if(tissue.parent!==scene)scene.attach(tissue);tissue.visible=true;tissue.position.copy(contact);}else{preyModel.visible=true;preyModel.position.copy(contact);}}
@@ -59,6 +62,6 @@ export async function createExpandedView(scene,state,world,reference){
   for(let i=0;i<litter.length;i++){litter[i].visible=i<e.resources['leaf-litter'].amount;}
   if(world.water)world.water.position.y=e.tide.waterLevel;
  }
- function modelFor(individual){if(individual===state.deer.id)return reference.deer;if(individual===state.bird.id)return reference.bird;if(models.has(individual))return models.get(individual);const p=state.plants.find(p=>p.id===individual);if(!p)return null;const model=new THREE.Mesh(plantGeometry(p.taxon,1,state.ecology.window),new THREE.MeshStandardMaterial({vertexColors:true,side:THREE.DoubleSide,roughness:.9}));model.scale.setScalar(p.size);return model;}
+ function modelFor(individual){if(individual===state.deer.id)return reference.deer;if(individual===state.bird.id)return reference.bird;if(models.has(individual))return models.get(individual);const p=state.plants.find(p=>p.id===individual);if(!p)return null;const model=new THREE.Mesh(plantGeometry(p.taxon,1,state.ecology.window),new THREE.MeshStandardMaterial({vertexColors:true,side:THREE.DoubleSide,roughness:.9}));model.scale.setScalar(p.size);return finishOrganism(model,p.taxon);}
  update();return {models,update,modelFor,fox,roots,resetContext};
 }
