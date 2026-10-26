@@ -27,6 +27,7 @@ with sync_playwright()as pw:
  try:
   page.goto(f'http://127.0.0.1:{s.server_port}/{entry.name}');page.wait_for_selector('#world[data-ready=true]',timeout=120000);page.locator('#start').click();manifest=json.loads(page.locator('#world').get_attribute('data-manifest'));seen=set()
   visits=[('summer','outlook'),('autumn','oak'),('summer','woodruff'),('summer','nettle'),('summer','flowers'),('summer','wood'),('summer','oak'),('summer','upper-marsh'),('summer','lower-marsh'),('summer','salt-shrub'),('summer','salt-segments'),('summer','salt-grass'),('summer','coast'),('summer','outlook'),('dusk','dusk')]
+  if a.only==['hediste_diversicolor']:visits=[('summer','outlook'),('summer','coast')]
   for window,location in visits:
    close();page.locator('#menu-button').click();page.locator('#season-window').select_option(window);close();view(location);page.locator('#study').click()
    if location in ['coast','outlook']:click(page.locator('#new-observation-context'))

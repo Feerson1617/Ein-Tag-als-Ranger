@@ -21,7 +21,7 @@ with sync_playwright()as pw:
  def data():return page.locator('#world').evaluate('(e)=>({...e.dataset})')
  def shot(name,exact=False):
   d=data();page.screenshot(path=str(out/(name+'.png')));row={'file':name+'.png','sha256':hashlib.sha256((out/(name+'.png')).read_bytes()).hexdigest(),'observer':json.loads(d['observer']),'modelTime':d['simulationTime'],'ecology':json.loads(d['ecology']),'actors':json.loads(d['coastal']),'modelObservation':d['modelObservation']}
-  if old:
+  if old and name!='hummel-bewegt':
    prev=next(x for x in old['captures']if x['file']==row['file']);row['sameCamera']=row['observer']==prev['observer'];assert row['sameCamera']
    if exact:assert row['modelTime']==prev['modelTime'] and row['actors']==prev['actors'] and row['ecology']==prev['ecology'];row['sameModelConditions']=True
   r['captures'].append(row);save()
@@ -34,7 +34,13 @@ with sync_playwright()as pw:
   view('feeding-oystercatcher');page.locator('#study').click();page.locator('#new-observation-context').click();page.locator('[data-behavior="compact-oystercatcher"]').click();page.locator('#behavior-step-size').select_option('1');page.locator('#behavior-step').click();page.wait_for_function('Number(document.querySelector("#world").dataset.simulationTime)===1 && document.querySelector("#world").dataset.renderRevision===document.querySelector("#world").dataset.sceneRevision');shot('nahrung-modellsekunde-1',True)
   # End the labelled episode through its real control before the live video.
   if a.bee_video:
-   page.locator('#behavior-stop').click();view('flowers');page.locator('#magnifier').click();d=data();bee=next(x for x in json.loads(d['coastal'])if x['taxon']=='bombus_lapidarius');r['beeBefore']=bee;r['videoStartModelTime']=d['simulationTime'];started=time.monotonic()
+   page.locator('#behavior-stop').click();view('flowers');origin=json.loads(data()['observer']);page.keyboard.down('w')
+   try:page.wait_for_function('(o)=>{const p=JSON.parse(document.querySelector("#world").dataset.observer);return Math.hypot(p.x-o.x,p.z-o.z)>2}',arg=origin,timeout=120000)
+   finally:page.keyboard.up('w')
+   d=data();o=json.loads(d['observer']);bee=next(x for x in json.loads(d['coastal'])if x['taxon']=='bombus_lapidarius');yaw=math.atan2(-(bee['x']-o['x']),-(bee['z']-o['z']));pitch=-.9;delta=(o['yaw']-yaw+math.pi)%(2*math.pi)-math.pi
+   while abs(delta)>1e-5:
+    turn=max(-.6,min(.6,delta));page.mouse.move(500,350);page.mouse.down();page.mouse.move(500+turn/.003,350);page.mouse.up();delta-=turn
+   o=json.loads(data()['observer']);page.mouse.move(500,350);page.mouse.down();page.mouse.move(500,350+(o['pitch']-pitch)/.0025);page.mouse.up();page.locator('#magnifier').click();d=data();bee=next(x for x in json.loads(d['coastal'])if x['taxon']=='bombus_lapidarius');r['beeBefore']=bee;r['videoStartModelTime']=d['simulationTime'];started=time.monotonic()
    page.evaluate("()=>{const stream=document.querySelector('#world').captureStream(12);const v=window.__beeVideo={stream,chunks:[]};v.rec=new MediaRecorder(stream,{mimeType:'video/webm;codecs=vp8',videoBitsPerSecond:1000000});v.rec.ondataavailable=e=>{if(e.data.size)v.chunks.push(e.data)};v.rec.start(1000);}")
    page.wait_for_function('(t)=>Number(document.querySelector("#world").dataset.simulationTime)>t+3',arg=float(d['simulationTime']),timeout=180000);shot('hummel-bewegt');after=data();r['beeAfter']=next(x for x in json.loads(after['coastal'])if x['taxon']=='bombus_lapidarius');assert any(r['beeAfter'][k]!=bee[k]for k in ['x','y','z']);r['videoEndModelTime']=after['simulationTime']
    encoded=page.evaluate("()=>new Promise(resolve=>{const v=window.__beeVideo;v.rec.onstop=async()=>{const b=new Uint8Array(await new Blob(v.chunks,{type:'video/webm'}).arrayBuffer());let text='';for(let i=0;i<b.length;i+=32768)text+=String.fromCharCode(...b.subarray(i,i+32768));v.stream.getTracks().forEach(t=>t.stop());resolve(btoa(text));};v.rec.stop();})")
