@@ -6,13 +6,14 @@ import argparse,hashlib,html,json,shutil,zipfile
 p=argparse.ArgumentParser();p.add_argument('--source',default='work/visual');a=p.parse_args();root=Path(__file__).resolve().parents[1];source=root/a.source;out=root/'outputs/Ranger-Kompakt-Grafiknachweise';
 if out.exists():shutil.rmtree(out)
 out.mkdir(parents=True,exist_ok=True)
-groups=['world-before','world-optimized','gallery-before','gallery-final','ragworm-before','extras-before','extras-final','feeding','animal-video','learning-final','imports','ui','stability','arrival','profile-before','profile-baseline-final','profile-after','profile-before-optimization','node-final','walk-supplement','fauna-world','embedded-fault','offline-final','offline-file-policy-block','offline-contrast-settling-failure']
+groups=['world-before','world-optimized','gallery-before','gallery-final','ragworm-before','extras-before','extras-final','feeding','animal-video','learning-final','imports','ui','stability','arrival','profile-before','profile-baseline-final','profile-after','profile-before-optimization','node-final','walk-supplement','fauna-world','embedded-fault','offline-final','offline-file-policy-block','offline-contrast-settling-failure','scorm-failed-context','held-click']
 for group in groups:
  src=source/group
  if not src.exists():continue
  dst=out/group;dst.mkdir(exist_ok=True)
- for f in src.iterdir():
-  if f.is_file()and f.suffix in ['.png','.webm','.json','.html']and not f.name.endswith('-cpu.json'):shutil.copy2(f,dst/f.name)
+ for f in src.rglob('*'):
+  if f.is_file()and f.suffix in ['.png','.webm','.json','.html','.md']and not f.name.endswith('-cpu.json'):
+   target=dst/f.relative_to(src);target.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(f,target)
 historical={'QA-INITIAL.json','QA-RUN.json','pr-before.json','shader-failure-before-fix.json','superseded-actions.json'}
 for f in source.iterdir():
  if f.is_file()and f.suffix in ['.json','.log']:

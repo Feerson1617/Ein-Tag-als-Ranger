@@ -35,7 +35,7 @@ Die 14 festen Weltperspektiven haben dieselben Kamerapositionen, Seed und jahres
 
 Eingebettetes defektes Modell: **BESTANDEN** (`embedded-fault/result.json`).
 
-Langzeittest: **BESTANDEN**, 1213.11 reale Sekunden nach 260.38 Sekunden Aufwärmen, 77 Messpunkte. Wiederholte Ansichten aller Bereiche, unveränderter Pflanzenbestand und Rundgang, begrenzte Renderer-Allokationen und echte Kontextwiederherstellung. Modellzeit ist wegen Softwaregrafik langsamer als Wanduhrzeit. Headless-Tab-Aktivierung ist keine verlässliche Prüfung von Safari-Hintergrundverhalten (`stability/result.json`).
+Langzeittest: **BESTANDEN**, 1213.11 reale Sekunden nach 260.38 Sekunden Aufwärmen, 77 Messpunkte. Wiederholte Ansichten aller Bereiche, unveränderter Pflanzenbestand und Rundgang, begrenzte Renderer-Allokationen und echte Kontextwiederherstellung. Modellzeit ist wegen Softwaregrafik langsamer als Wanduhrzeit. Headless-Tab-Aktivierung ist keine verlässliche Prüfung von Safari-Hintergrundverhalten (`stability/result.json`). Dieser Langzeittest liegt vor der späteren Schaltflächen-DOM-Korrektur; deren native Klickfunktion und Offlinebetrieb werden gesondert am korrigierten Neubau geprüft.
 
 **FEHLGESCHLAGEN:** unveränderter Hauptwegtest mit 900-Sekunden-Grenze im CI. Der Lauf erreichte etwa 62,5 Modellsekunden / Routenindex 490, bevor die Grenze überschritten wurde. Das ist ein Leistungsproblem unter Softwaregrafik; weder umbenannt noch grün gesetzt. Der allgemeine CI-Gesamtstatus bleibt deshalb rot, obwohl der separate SCORM-Lauf grün ist.
 
@@ -43,7 +43,7 @@ Ergänzende vollständige Begehung des 362,21-m-Hauptwegs: **BESTANDEN**, 739.03
 
 ## Leistung vor / nach
 
-Cloud-Chromium mit SwiftShader, 800×600, identischer Startkamera, je 20 Sekunden tatsächliche rAF-Messung pro Profil. Dies sind Softwaregrafikwerte, keine hardwarebeschleunigte Desktop- oder iPad-Messung. Heap ist JS-Speicher einschließlich GC, keine GPU-VRAM-Messung.
+Messstand ist der 3D-Endstand `2b26879` vor der späteren Schaltflächen-DOM-Korrektur. Deren Rendergeometrie, Materialien und Simulation sind unverändert; die UI-Aktualisierung ist nicht Bestandteil dieser Bildratenmessung. Cloud-Chromium mit SwiftShader, 800×600, identischer Startkamera, je 20 Sekunden tatsächliche rAF-Messung pro Profil. Dies sind Softwaregrafikwerte, keine hardwarebeschleunigte Desktop- oder iPad-Messung. Heap ist JS-Speicher einschließlich GC, keine GPU-VRAM-Messung.
 
 | Profil / Stand | FPS | Median ms | P95 ms | Draw Calls | Dreiecke | Geometrien | Texturen | JS-Heap MiB |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
@@ -54,7 +54,7 @@ Cloud-Chromium mit SwiftShader, 800×600, identischer Startkamera, je 20 Sekunde
 
 Start bis WebGL-bereit: vorher 4.96 s, nachher 7.20 s. Browsernavigation und Originalmessungen stehen in `profile-baseline-final/result.json` und `profile-after/result.json`.
 
-Gegenüber dem Ausgangsstand liegt die abschließende Bildrate im Desktopprofil rund 47 % und im Tabletprofil rund 32 % niedriger. Die erste Grafikfassung war unter Softwaregrafik noch langsamer. Drei statt sechs Blattkarten je Gruppe, ein einfacheres diffuses Blattmaterial und bedingte Atlaszugriffe reduzieren unnötige Arbeit. Die Messreihe vor dieser Optimierung bleibt in `profile-before-optimization/result.json`. Auch der Endstand erfüllt auf dieser Umgebung kein flüssiges 30-FPS-Ziel. Leistungsverschlechterungen gegenüber dem Ausgangsstand sind in der obigen Tabelle ausdrücklich sichtbar; keine Freigabe für Schul-iPads oder beliebige Desktopgeräte.
+Gegenüber dem Ausgangsstand liegt die in dieser Messreihe ermittelte Bildrate im Desktopprofil rund 47 % und im Tabletprofil rund 32 % niedriger. Die erste Grafikfassung war unter Softwaregrafik noch langsamer. Drei statt sechs Blattkarten je Gruppe, ein einfacheres diffuses Blattmaterial und bedingte Atlaszugriffe reduzieren unnötige Arbeit. Die Messreihe vor dieser Optimierung bleibt in `profile-before-optimization/result.json`. Auch der Endstand erfüllt auf dieser Umgebung kein flüssiges 30-FPS-Ziel. Leistungsverschlechterungen gegenüber dem Ausgangsstand sind in der obigen Tabelle ausdrücklich sichtbar; keine Freigabe für Schul-iPads oder beliebige Desktopgeräte.
 
 ## HTML und SCORM
 
