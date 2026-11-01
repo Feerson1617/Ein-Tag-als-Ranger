@@ -10,7 +10,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        check: [native, stability, visual, profiles]
+        check: [native, stability, visual, profiles, offline]
     runs-on: ubuntu-24.04
     timeout-minutes: 45
     steps:
@@ -38,6 +38,17 @@ jobs:
       - name: Full original twenty-minute stability and native context recovery
         if: matrix.check == 'stability'
         run: python tools/browser-compact-stability.py --output work/rc-final/stability
+      - name: Direct file and offline browser use of the actual standalone HTML
+        if: matrix.check == 'offline'
+        run: |
+          set +e
+          python tools/browser-compact-offline.py --direct-file
+          direct_status=$?
+          cp -a work/visual/offline-final work/rc-final/offline-direct
+          python tools/browser-compact-offline.py
+          http_status=$?
+          cp -a work/visual/offline-final work/rc-final/offline-http
+          test "$direct_status" = 0 && test "$http_status" = 0
       - name: Build the independently reviewed baseline without editing it
         if: matrix.check == 'visual' || matrix.check == 'profiles'
         run: |

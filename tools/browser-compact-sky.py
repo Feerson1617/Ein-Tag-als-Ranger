@@ -16,12 +16,17 @@ with sync_playwright()as pw:
  b=pw.chromium.launch(headless=True,executable_path=shutil.which('chromium'),args=['--no-sandbox','--use-angle=swiftshader','--enable-unsafe-swiftshader']);page=b.new_page(viewport={'width':1000,'height':700});page.on('pageerror',lambda e:r['errors'].append(str(e)));observe_graphics_errors(page,r['errors']);page.set_default_timeout(60000)
  def read():return page.locator('#world').evaluate('c=>JSON.parse(c.dataset.observer)')
  def look(yaw,pitch):
-  o=read();delta=o['yaw']-yaw
+  o=read();delta=o['yaw']-yaw;expected=o['yaw']
   while abs(delta)>.00001:
-   turn=max(-.45,min(.45,delta));page.mouse.move(500,350);page.mouse.down();page.mouse.move(500+turn/.003,350);page.mouse.up();delta-=turn
-  o=read();page.mouse.move(500,350);page.mouse.down();page.mouse.move(500,350+(o['pitch']-pitch)/.0025);page.mouse.up();page.wait_for_function('(a)=>{const o=JSON.parse(document.querySelector("#world").dataset.observer);return Math.abs(o.yaw-a.yaw)<.0001&&Math.abs(o.pitch-a.pitch)<.0001}',arg={'yaw':yaw,'pitch':pitch})
+   turn=max(-.45,min(.45,delta));page.mouse.move(500,350);page.mouse.down();page.mouse.move(500+turn/.003,350);page.mouse.up();delta-=turn;expected-=turn
+   page.wait_for_function('(yaw)=>Math.abs(JSON.parse(document.querySelector("#world").dataset.observer).yaw-yaw)<.0001',arg=expected)
+  o=read();remaining=o['pitch']-pitch;expected=o['pitch']
+  while abs(remaining)>.00001:
+   turn=max(-.35,min(.35,remaining));page.mouse.move(500,350);page.mouse.down();page.mouse.move(500,350+turn/.0025);page.mouse.up();remaining-=turn;expected-=turn
+   page.wait_for_function('(pitch)=>Math.abs(JSON.parse(document.querySelector("#world").dataset.observer).pitch-pitch)<.0001',arg=expected)
+  page.wait_for_function('(a)=>{const o=JSON.parse(document.querySelector("#world").dataset.observer);return Math.abs(o.yaw-a.yaw)<.0001&&Math.abs(o.pitch-a.pitch)<.0001}',arg={'yaw':yaw,'pitch':pitch})
  try:
-  page.goto(f'http://127.0.0.1:{server.server_port}/{entry.name}');page.wait_for_selector('#world[data-ready=true]',timeout=120000);page.locator('#start').click();page.locator('#menu-button').click();page.get_by_text('Referenzabschnitt prüfen',exact=True).click();page.locator('[data-view="upper-marsh"]').click();base=read()['yaw']
+  page.goto(f'http://127.0.0.1:{server.server_port}/{entry.name}');page.wait_for_selector('#world[data-ready=true]',timeout=120000);page.locator('#start').click();page.locator('#menu-button').click();page.get_by_text('Referenzabschnitt prüfen',exact=True).click();page.locator('[data-view="upper-marsh"]').click();page.wait_for_function('document.querySelector("#world").dataset.sceneRevision===document.querySelector("#world").dataset.renderRevision');base=read()['yaw']
   for i in range(9):
    look(base+i*math.pi/4,.7);name=f'rotation-{i*45:03d}.png';page.screenshot(path=str(out/name));page.screenshot(path=str(out/f'sky-pixels-{i}.png'),clip={'x':270,'y':180,'width':400,'height':150});r['captures'].append({'file':name,'observer':read(),'sha256':hashlib.sha256((out/name).read_bytes()).hexdigest()})
   diff=ImageChops.difference(Image.open(out/'sky-pixels-0.png').convert('RGB'),Image.open(out/'sky-pixels-8.png').convert('RGB'));r['closureMeanRGBDifference']=ImageStat.Stat(diff).mean;assert max(r['closureMeanRGBDifference'])<2,r['closureMeanRGBDifference'];assert not r['errors'];r['passed']=True
