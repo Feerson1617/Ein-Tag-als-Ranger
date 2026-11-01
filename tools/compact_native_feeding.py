@@ -31,7 +31,7 @@ def feeding_episodes(page,out,result,save,navigator):
   finally:
    encoded=page.evaluate("()=>new Promise(resolve=>{const v=window.__nativeVideo;v.rec.onstop=async()=>{const raw=new Uint8Array(await new Blob(v.chunks,{type:'video/webm'}).arrayBuffer());let text='';for(let i=0;i<raw.length;i+=32768)text+=String.fromCharCode(...raw.subarray(i,i+32768));v.stream.getTracks().forEach(t=>t.stop());resolve(btoa(text));};v.rec.stop()})")
    raw=base64.b64decode(encoded);filename=individual+'-realtime.webm';(out/filename).write_bytes(raw);row['video']={'file':filename,'bytes':len(raw),'sha256':hashlib.sha256(raw).hexdigest(),'wallSeconds':time.monotonic()-started};save()
- page.locator('#behavior-stop').click()
+ if page.locator('#behavior-stop').is_visible():page.locator('#behavior-stop').click()
  page.locator('#journal-button').click()
  page.screenshot(path=str(out/'path-b-saved-bird-records.png'))
  visible=page.locator('#panel-body').inner_text()
