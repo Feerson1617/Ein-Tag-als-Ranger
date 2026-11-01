@@ -44,7 +44,8 @@ class NativeNavigator:
  def go(self,key):
   p=self.page
   if p.locator('#panel').is_visible():p.locator('#close').click()
-  if p.locator('#brisk').get_attribute('aria-pressed')!='true':p.locator('#brisk').click()
+  for button in ['#binocular','#magnifier','#brisk']:
+   if p.locator(button).get_attribute('aria-pressed')=='true':p.locator(button).click()
   before=self.read();start=(before['observer']['x'],before['observer']['z']);target=self.targets[key];route=self.route(start,target)
   row={'destination':key,'start':before,'plannedMeters':sum(math.dist(a,b)for a,b in zip(route,route[1:])),'samples':[],'input':'W and native mouse drag only'};self.result.setdefault('nativeRoutes',[]).append(row)
   began=time.monotonic();anchor=start;last_motion=began;distance=0;last=start

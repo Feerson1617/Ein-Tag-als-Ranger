@@ -54,6 +54,7 @@ jobs:
       - run: node tests/kompakt-check.mjs
       - run: node tests/compact-learning-check.mjs
       - run: node tests/compact-release-geometry-check.mjs
+      - run: node tests/compact-frame-steps-check.mjs
       - run: node tests/compact-growth-boundary-check.mjs
       - run: node tests/compact-observation-context-check.mjs work/qa-correction/context-node
       - run: node tests/compact-event-reference-check.mjs work/qa-correction/event-reference

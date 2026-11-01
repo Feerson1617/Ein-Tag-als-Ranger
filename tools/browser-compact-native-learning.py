@@ -6,6 +6,7 @@ Technical route feasibility is not unaided learner search time or a pilot.
 from pathlib import Path
 import hashlib,sys
 from compact_native_navigation import NativeNavigator
+from compact_native_feeding import feeding_episodes
 source=Path(__file__).with_name('browser-compact-learning.py')
 text=source.read_text()
 prefix,body=text.split('with sync_playwright()as pw:',1)
@@ -29,6 +30,7 @@ def ready(page):
  page.evaluate("()=>document.addEventListener('click',e=>{if(e.target.closest('[data-view]'))window.report_reference_click()},true)")
 def view(page,id):
  close(page);navigator.go(id)
+ if id=='coast':feeding_episodes(page,out,result,save,navigator)
 '''
 ending='''
   close(page);earned=data(page);assert all(m['complete']for m in json.loads(page.locator('#world').get_attribute('data-missions')))

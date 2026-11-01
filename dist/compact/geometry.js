@@ -26,6 +26,20 @@ export function curvedStem(batch,points,r,color,tip=.003,segments=8){
  batch.add(sweptGeometry(rows,radii,7),color);
 }
 
+// Closed, fleshy blade: the thin edge remains a volume when seen obliquely.
+// Local +Z runs from the short petiole towards the rounded leaf tip.
+export function succulentLeafGeometry(length=.26,width=.12){
+ const p=[],index=[],rows=6,sides=6;
+ for(let j=0;j<=rows;j++){
+  const t=j/rows,outline=Math.sin(Math.PI*t)**.65,centre=.022*Math.sin(Math.PI*t);
+  for(let k=0;k<=sides;k++){
+   const a=k/sides*Math.PI*2;p.push(Math.cos(a)*width*.5*outline,centre+Math.sin(a)*.009*outline,length*t);
+   if(j<rows&&k<sides){const n=j*(sides+1)+k;index.push(n,n+1,n+sides+1,n+1,n+sides+2,n+sides+1);}
+  }
+ }
+ const g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.Float32BufferAttribute(p,3));g.setIndex(index);g.computeVertexNormals();return g;
+}
+
 export function plantGeometry(taxon,remaining=1,window='summer',detail='near'){const b=new GeometryBatch(),sphere=new THREE.SphereGeometry(1,8,5),near=detail==='near',middle=detail==='middle';
  if(taxon==='galium_odoratum'||taxon==='urtica_dioica'){
   const nettle=taxon==='urtica_dioica';stick(b,[0,0,0],[0,1,0],nettle?.012:.009,nettle?'#657744':'#6b7d45');
@@ -33,15 +47,17 @@ export function plantGeometry(taxon,remaining=1,window='summer',detail='near'){c
   if(!nettle&&window==='spring')for(let i=0;i<3;i++){const x=(i-1)*.08;stick(b,[0,.9,0],[x,1.05,0],.005,'#73854e');for(let k=0;k<4;k++){const a=k*Math.PI/2;b.add(sphere,'#e7e6d1',[x+Math.sin(a)*.033,1.05,Math.cos(a)*.033],[.024,.008,.024]);}}
  }else if(taxon==='halimione_portulacoides'){
   // Woody, decumbent axes with paired opposite fleshy blades, not bead trees.
-  for(let i=0;i<(near?7:middle?5:3);i++){
+  const blade=succulentLeafGeometry();
+  for(let i=0;i<(near?6:middle?4:3);i++){
    const a=i*2.399,h=.52+.19*Math.sin(i*1.7)**2,spread=.36+.14*Math.cos(i*2.1)**2;
    const points=[[0,.02,0],[Math.cos(a)*spread*.55,h*.23,Math.sin(a)*spread*.55],[Math.cos(a)*spread,h,Math.sin(a)*spread]];
    const axis=new THREE.CatmullRomCurve3(points.map(p=>new THREE.Vector3(...p)));curvedStem(b,points,.015,'#87856a',.003,near?8:4);
-   for(let j=1;j<(near?6:4);j++)for(const side of [-1,1]){
-    const t=j/(near?6:4),angle=a+side*Math.PI/2+(j%2)*.18;
-    b.add(leafGeometry(.24,.078,false,false,near?7:4),j%2?'#899c83':'#aab29a',axis.getPoint(t).toArray(),[1,1,1],[-.35,angle,0]);
+   for(let j=1;j<(near?5:4);j++)for(const side of [-1,1]){
+    const t=j/(near?5:4),angle=a+side*Math.PI/2+(j%2)*Math.PI/2,point=axis.getPoint(t),size=.76+.24*Math.sin(t*Math.PI);
+    b.add(blade,j%2?'#899c83':'#aab29a',point.toArray(),[size,size,size],[-.18-(i%3)*.14,angle,side*.16]);
    }
   }
+  blade.dispose();
  }else if(taxon==='salicornia_europaea'){
   // Continuous succulent axis with constrictions and opposite lateral shoots.
   const axis=(a,base,h,lean)=>{

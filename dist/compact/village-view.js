@@ -20,7 +20,7 @@ export function createVillageView(scene){
    curvedStem(b,[hip,knee,ankle],.081,'#4e514a',.045,9);
    b.add(sphere,'#393f36',[p.x+side*.12,y+.065,p.z-.05],[.075,.062,.13]);
    const shoulder=[p.x+side*.19,y+1.24,p.z],elbow=[p.x+side*.25,y+1.07,p.z-.035],wrist=[p.x+side*.13,y+1.00,p.z-.20];
-   b.add(sphere,p.color,shoulder,[.063,.08,.063]);curvedStem(b,[shoulder,elbow,wrist],.068,p.color,.039,8);
+   curvedStem(b,[shoulder,elbow,wrist],.068,p.color,.039,8);
    b.add(sphere,skin,[p.x+side*.13,y+.98,p.z-.20],[.04,.059,.032]);
    b.add(sphere,skin,[p.x+side*.113,y+1.52,p.z],[.023,.037,.018]);
    b.add(sphere,'#eee3d0',[p.x+side*.042,y+1.544,p.z-.095],[.017,.006,.004]);
