@@ -1,5 +1,9 @@
 name: Ranger RC browser diagnosis
-on: workflow_dispatch
+on:
+  workflow_dispatch:
+  push:
+    branches: [feature/ranger-kompakt]
+    paths: [.github/workflows/ranger-rc-diagnosis.yml]
 permissions:
   contents: read
 jobs:
