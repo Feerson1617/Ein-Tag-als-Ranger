@@ -19,19 +19,18 @@ def feeding_episodes(page,out,result,save,navigator):
     if any(e['actors'][0]==individual for e in d['witnessed']) and page.locator('#record').is_enabled():break
     actor=next(a for a in d['actors']if a['id']==individual);detail=d['detail']
     # The existing lens intentionally follows one concrete episode. Reopen it
-    # through ordinary keyboard controls for a later prey, never retarget state.
+    # through ordinary pointer controls for a later prey, never retarget state.
     if detail and detail['episodeCompleted'] and actor['phase']in['approaching','searching','handling']and actor.get('targetId')and actor['targetId']!=detail['preyId']:
-     page.locator('#feeding-close').press('Escape');page.locator('#behavior-detail').press('Enter');page.locator('#feeding-expand').press('Enter')
-     row.setdefault('lensReopens',[]).append({'time':d['time'],'previousEventId':detail['eventId'],'nextPreyId':actor['targetId'],'input':'Escape, Enter, Enter; existing one-episode lens'})
+     page.locator('#feeding-close').click();page.locator('#behavior-detail').click();page.locator('#feeding-expand').click()
+     row.setdefault('lensReopens',[]).append({'time':d['time'],'previousEventId':detail['eventId'],'nextPreyId':actor['targetId'],'input':'Mouse close, reopen, expand; existing one-episode lens'})
     elif detail and detail['phase']=='handling'and detail['preyVisible']and detail['eventId']==actor.get('feedingEventId')and not any(c['eventId']==detail['eventId']for c in row.get('contactFrames',[])):
      filename=individual+'-contact-'+str(len(row.get('contactFrames',[])))+'.png';page.screenshot(path=str(out/filename));row.setdefault('contactFrames',[]).append({'file':filename,'eventId':detail['eventId'],'preyId':detail['preyId'],'sample':detail,'scope':'Live screenshot immediately after this read-only sample; simulation continues.'})
     assert time.monotonic()-started<480,('No saveable witnessed feeding event within explicit 480s supplemental guard',individual)
     page.wait_for_timeout(100)
    row['beforeSave']=d
    row['liveDetail']=json.loads(page.locator('#world').get_attribute('data-feeding-detail')or'null');page.screenshot(path=str(out/(individual+'-event-completed.png')))
-   # Pointer interactions deliberately interrupt the active sighting. Escape
-   # closes this non-modal lens without interrupting the ongoing world focus.
-   page.locator('#feeding-close').press('Escape')
+   # Closing this visual lens by mouse must preserve the actual witness.
+   page.locator('#feeding-close').click()
    # Save during the real visible event, rather than waiting until departure.
    page.locator('#record').click();page.screenshot(path=str(out/(individual+'-record-form.png')))
    page.locator('#note').fill('Pfad B: selbst beobachteter Kontakt und Nahrungsaufnahme dieses Vogels am erreichten Ort. Modellbeleg; kein Naturbeweis.');page.locator('#save-note').click()

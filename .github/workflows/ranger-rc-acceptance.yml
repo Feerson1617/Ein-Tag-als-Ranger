@@ -10,7 +10,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        check: [native, native-gallery, ui, stability, visual, profiles, offline]
+        check: [native, native-gallery, ui, stability, visual, profiles, offline, observation-ui, tool-access]
     runs-on: ubuntu-24.04
     timeout-minutes: 45
     steps:
@@ -33,6 +33,16 @@ jobs:
           python tools/verify-compact.py
           node tests/compact-anatomy-framing-check.mjs work/rc-final/anatomy
           mkdir -p work/rc-final
+      - name: Independent old pointer counterexample and corrected ordinary UI paths
+        if: matrix.check == 'observation-ui'
+        run: |
+          git worktree add --detach work/pointer-baseline 0772ff1bca654a6670b53d896540c0129e3c7311
+          (cd work/pointer-baseline && python tools/build-compact.py)
+          xvfb-run -a python tools/browser-compact-observation-ui.py --headed --entry work/pointer-baseline/outputs/Ranger-Kompakt.html --baseline --cases mouse,touch,escape,none --output work/rc-final/pointer-before
+          xvfb-run -a python tools/browser-compact-observation-ui.py --headed --output work/rc-final/pointer-after
+      - name: Actual tool feedback and five questioned normal access paths
+        if: matrix.check == 'tool-access'
+        run: python tools/browser-compact-tool-access.py --output work/rc-final/tool-access
       - name: Native K1–K5 and four saved feeding episodes
         if: matrix.check == 'native'
         run: python tools/browser-compact-native-learning.py --site outputs --entry Ranger-Kompakt.html --output work/rc-final/native
