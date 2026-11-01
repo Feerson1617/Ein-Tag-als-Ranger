@@ -30,4 +30,16 @@ def feeding_episodes(page,out,result,save,navigator):
   finally:
    encoded=page.evaluate("()=>new Promise(resolve=>{const v=window.__nativeVideo;v.rec.onstop=async()=>{const raw=new Uint8Array(await new Blob(v.chunks,{type:'video/webm'}).arrayBuffer());let text='';for(let i=0;i<raw.length;i+=32768)text+=String.fromCharCode(...raw.subarray(i,i+32768));v.stream.getTracks().forEach(t=>t.stop());resolve(btoa(text));};v.rec.stop()})")
    raw=base64.b64decode(encoded);filename=individual+'-realtime.webm';(out/filename).write_bytes(raw);row['video']={'file':filename,'bytes':len(raw),'sha256':hashlib.sha256(raw).hexdigest(),'wallSeconds':time.monotonic()-started};save()
- page.locator('#behavior-stop').click();navigator.go('coast')
+ page.locator('#behavior-stop').click()
+ page.locator('#journal-button').click()
+ page.screenshot(path=str(out/'path-b-saved-bird-records.png'))
+ visible=page.locator('#panel-body').inner_text()
+ for row in result['pathBEpisodes']:
+  assert row['record']['id'] in visible or row['record']['individualId'] in visible,('Saved bird not available in fieldbook',row['individual'])
+ result['pathBReuse']={'scope':'Four saved fieldbook sources for the manual Path B bird comparison; this is not an automatic scientific grade.','records':[row['record']['id']for row in result['pathBEpisodes']]}
+ with page.expect_download()as transfer:page.locator('#export').click()
+ transfer.value.save_as(str(out/'path-b-four-saved-birds.json'))
+ exported=json.loads((out/'path-b-four-saved-birds.json').read_text())
+ for row in result['pathBEpisodes']:
+  assert next(r for r in exported['records']if r['id']==row['record']['id'])==row['record']
+ page.locator('#close').click();save();navigator.go('coast')
