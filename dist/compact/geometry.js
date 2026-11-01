@@ -36,10 +36,10 @@ export function plantGeometry(taxon,remaining=1,window='summer',detail='near'){c
   for(let i=0;i<(near?7:middle?5:3);i++){
    const a=i*2.399,h=.52+.19*Math.sin(i*1.7)**2,spread=.36+.14*Math.cos(i*2.1)**2;
    const points=[[0,.02,0],[Math.cos(a)*spread*.55,h*.23,Math.sin(a)*spread*.55],[Math.cos(a)*spread,h,Math.sin(a)*spread]];
-   curvedStem(b,points,.015,'#87856a',.003,near?8:4);
+   const axis=new THREE.CatmullRomCurve3(points.map(p=>new THREE.Vector3(...p)));curvedStem(b,points,.015,'#87856a',.003,near?8:4);
    for(let j=1;j<(near?6:4);j++)for(const side of [-1,1]){
     const t=j/(near?6:4),angle=a+side*Math.PI/2+(j%2)*.18;
-    b.add(leafGeometry(.24,.078,false,false,near?7:4),j%2?'#899c83':'#aab29a',[Math.cos(a)*spread*t,h*t*t,Math.sin(a)*spread*t],[1,1,1],[-.35,angle,0]);
+    b.add(leafGeometry(.24,.078,false,false,near?7:4),j%2?'#899c83':'#aab29a',axis.getPoint(t).toArray(),[1,1,1],[-.35,angle,0]);
    }
   }
  }else if(taxon==='salicornia_europaea'){

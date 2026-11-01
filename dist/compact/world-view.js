@@ -47,7 +47,7 @@ export async function createWorldView(scene,state){
     // Roots and the full human-height collision cylinder remain fixed. Above
     // it, each existing stem changes direction towards its own uneven crown.
     const dx=Math.cos(phase)*bend*2.6,dz=Math.sin(phase)*bend*2.6,base=[t.x,y+Math.min(closing?2.05+1.1*Math.sin(phase)**2:2.3,fork*.65),t.z],elbow=[t.x+dx*.4,y+fork,t.z+dz*.6],top=[t.x+dx,y+t.h*.86,t.z+dz];
-    stick(bark,[t.x,y,t.z],base,t.r,trunkColor,t.r*.84);curvedStem(bark,[base,elbow,[top[0]-dz*.25,top[1]-.8,top[2]+dx*.25],top],t.r*.84,trunkColor,.028,12);
+    curvedStem(bark,[[t.x,y,t.z],[t.x,y+1.1,t.z],base,elbow,[top[0]-dz*.25,top[1]-.8,top[2]+dx*.25],top],t.r,trunkColor,.028,18);
    }else{
     stick(bark,[t.x,y,t.z],[t.x+bend,y+fork,t.z],t.r,trunkColor,t.r*.68);
     stick(bark,[t.x+bend,y+fork,t.z],[t.x+bend*.5,y+t.h*.86,t.z+.3],t.r*.68,trunkColor,.055);
