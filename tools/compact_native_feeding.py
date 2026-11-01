@@ -5,7 +5,8 @@ def feeding_episodes(page,out,result,save,navigator):
  for individual,target in [('compact-oystercatcher',(61,-12)),('compact-avocet',(65,-12)),('compact-spoonbill',(73,2)),('compact-redshank',(63,4))]:
   if page.locator('#behavior-stop').is_visible():page.locator('#behavior-stop').click()
   navigator.targets[individual]=min(navigator.nodes,key=lambda p:math.dist(p,target));navigator.go(individual)
-  page.locator('#study').click();page.locator('#new-observation-context').click()
+  page.locator('#study').click();previousRun=page.locator('#world').get_attribute('data-run-id');page.locator('#new-observation-context').click()
+  page.wait_for_function('(old)=>{const d=document.querySelector("#world").dataset;return d.runId!==old&&Number(d.simulationTime)===0&&d.renderRevision===d.sceneRevision}',arg=previousRun)
   before=page.locator('#world').evaluate('c=>({time:Number(c.dataset.simulationTime),runId:c.dataset.runId,observer:JSON.parse(c.dataset.observer)})');started=time.monotonic()
   page.evaluate("()=>{const stream=document.querySelector('#world').captureStream(12),v=window.__nativeVideo={stream,chunks:[]};v.rec=new MediaRecorder(stream,{mimeType:'video/webm;codecs=vp8',videoBitsPerSecond:700000});v.rec.ondataavailable=e=>{if(e.data.size)v.chunks.push(e.data)};v.rec.start(1000)}")
   page.locator('[data-realtime="'+individual+'"]').click()
@@ -22,7 +23,7 @@ def feeding_episodes(page,out,result,save,navigator):
    # Save during the real visible event, rather than waiting until departure.
    page.locator('#record').click();page.screenshot(path=str(out/(individual+'-record-form.png')))
    page.locator('#note').fill('Pfad B: selbst beobachteter Kontakt und Nahrungsaufnahme dieses Vogels am erreichten Ort. Modellbeleg; kein Naturbeweis.');page.locator('#save-note').click()
-   book=page.evaluate("JSON.parse(localStorage.getItem('ranger-compact-fieldbook-v2'))");record=book['records'][-1]
+   book=page.evaluate("JSON.parse(localStorage.getItem('ranger-compact-fieldbook-v2'))");record=book['records'][-1];row['record']=record
    assert record['individualId']==individual and record['observationSeconds']>=2.5
    events=[e for e in record['events']if e['actors'][0]==individual];assert events,'Saved record must contain a witnessed feeding event'
    assert record['runId']==before['runId']
