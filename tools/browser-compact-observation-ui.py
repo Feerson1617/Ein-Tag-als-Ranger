@@ -95,8 +95,11 @@ with sync_playwright() as pw:
    if a.scorm_zip:assert 'nur während der geöffneten Sitzung' in guide and 'lokal gespeichert' not in guide
   page.locator('#start').click()
   if not a.baseline:
-   page.locator('#read-sign').click();assert guide in page.locator('#panel-body').inner_text();page.locator('#close').click()
-   page.locator('#menu-button').click();page.locator('#guide').click();assert guide in page.locator('#panel-body').inner_text()
+   # Compare the actual paragraph text on both surfaces. inner_text folds
+   # HTML whitespace, whereas text_content on the welcome paragraph does not
+   # (the classroom adaptation legitimately leaves a double space).
+   page.locator('#read-sign').click();assert guide==page.locator('#panel-body > p').first.text_content();page.locator('#close').click()
+   page.locator('#menu-button').click();page.locator('#guide').click();assert guide==page.locator('#panel-body > p').first.text_content()
    host.screenshot(path=str(out/'actual-guide.png'));page.locator('#close').click()
    result['helpConsistentOnWelcomeBoardAndMenu']=True
   page.locator('#menu-button').click();page.locator('#quality').select_option('tablet');page.locator('#resume').click()
