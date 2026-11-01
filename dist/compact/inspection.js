@@ -8,11 +8,11 @@ export function mountInspection(canvas,source,onReady){
  const scene=new THREE.Scene();scene.background=new THREE.Color('#e6e5d9');scene.add(new THREE.HemisphereLight('#fff5df','#666955',2.2));const light=new THREE.DirectionalLight('#fff5e6',2.5);light.position.set(4,6,3);scene.add(light);
  const specimen=source.clone(true);specimen.visible=true;specimen.position.set(0,0,0);specimen.rotation.set(0,0,0);specimen.traverse(o=>{if(o.isMesh){o.geometry=o.geometry.clone();o.material=Array.isArray(o.material)?o.material.map(cloneMaterial):cloneMaterial(o.material);}});const pivot=new THREE.Group();pivot.add(specimen);scene.add(pivot);scene.updateMatrixWorld(true);const bounds=new THREE.Box3().setFromObject(specimen),centre=bounds.getCenter(new THREE.Vector3()),radius=Math.max(.001,bounds.getSize(new THREE.Vector3()).length()*.55);specimen.position.sub(centre);
  const camera=new THREE.PerspectiveCamera(38,Math.max(240,canvas.clientWidth)/height,radius/100,radius*20),direction=new THREE.Vector3(1.8,1.65,2.2).normalize(),right=new THREE.Vector3().crossVectors(new THREE.Vector3(0,1,0),direction).normalize(),cameraUp=new THREE.Vector3().crossVectors(direction,right);
- // Fit the actual projected box, not its diagonal sphere. A spreading shrub
- // otherwise occupies only a tiny patch of a wide inspection canvas.
+ // Fit visible mesh vertices in camera space. Empty corners of a shrub
+ // bounding box otherwise keep its actual leaves unnecessarily small.
  function fit(){
-  pivot.updateMatrixWorld(true);const box=new THREE.Box3().setFromObject(specimen),tan=Math.tan(THREE.MathUtils.degToRad(camera.fov/2));let distance=radius*.5;
-  for(const x of[box.min.x,box.max.x])for(const y of[box.min.y,box.max.y])for(const z of[box.min.z,box.max.z]){const point=new THREE.Vector3(x,y,z);distance=Math.max(distance,point.dot(direction)+1.12*Math.max(Math.abs(point.dot(right))/(tan*camera.aspect),Math.abs(point.dot(cameraUp))/tan));}
+  pivot.updateMatrixWorld(true);const tan=Math.tan(THREE.MathUtils.degToRad(camera.fov/2)),point=new THREE.Vector3();let distance=radius*.5;
+  specimen.traverseVisible(o=>{if(!o.isMesh)return;const positions=o.geometry.attributes.position;for(let i=0;i<positions.count;i++){point.fromBufferAttribute(positions,i).applyMatrix4(o.matrixWorld);distance=Math.max(distance,point.dot(direction)+1.12*Math.max(Math.abs(point.dot(right))/(tan*camera.aspect),Math.abs(point.dot(cameraUp))/tan));}});
   camera.position.copy(direction).multiplyScalar(distance);camera.lookAt(0,0,0);
  }
  fit();const clock=new ObservationClock();let stopped=false,lost=false,raf,watch=0,pointer=null;

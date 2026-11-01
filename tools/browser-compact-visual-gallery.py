@@ -23,7 +23,22 @@ with sync_playwright()as pw:
  def click(button):
   assert button.is_visible()and button.is_enabled();button.evaluate("b=>b.scrollIntoView({block:'center',behavior:'instant'})");hit=button.evaluate('b=>{const r=b.getBoundingClientRect(),x=r.left+r.width/2,y=r.top+r.height/2,e=document.elementFromPoint(x,y);return {x,y,hit:e===b||b.contains(e)}}');assert hit['hit'];page.mouse.click(hit['x'],hit['y'])
  def capture(taxon,stage,location):
-  r['phase']='ordinary-inspection-dispose';close();r['phase']='ordinary-world';world=taxon+('-'+stage if stage in ['caterpillar','juvenile']else'')+'-world.png';page.screenshot(path=str(out/world));d=page.locator('#world').evaluate('(e)=>({...e.dataset})');page.locator('#study').click();button=page.locator('[data-inspect][data-taxon="'+taxon+'"]'+('[data-stage="'+stage+'"]'if stage else'')).first;individual=button.get_attribute('data-inspect');r['phase']='ordinary-inspection';click(button);page.wait_for_selector('#specimen-canvas[data-ready=true]');detail=world.replace('-world','-detail');page.locator('#specimen-canvas').screenshot(path=str(out/detail));row={'taxon':taxon,'stage':stage,'individual':individual,'location':location,'observer':json.loads(d['observer']),'modelTime':d['simulationTime'],'window':json.loads(d['ecology'])['window'],'world':world,'detail':detail,'sha256':{f:hashlib.sha256((out/f).read_bytes()).hexdigest()for f in [world,detail]}};r['captures'].append(row);save();close();print('TAXON',taxon,stage,flush=True)
+  r['phase']='ordinary-inspection-dispose';close();r['phase']='ordinary-world'
+  click(page.locator('#study'))
+  if location in ['coast','outlook']:
+   previous=page.locator('#world').get_attribute('data-run-id');click(page.locator('#new-observation-context'))
+   page.wait_for_function('(old)=>{const d=document.querySelector("#world").dataset;return d.runId!==old&&Number(d.simulationTime)===0&&d.renderRevision===d.sceneRevision}',arg=previous)
+   r.setdefault('explicitGalleryWindows',[]).append({'taxon':taxon,'previousRun':previous,'runId':page.locator('#world').get_attribute('data-run-id')})
+  button=page.locator('[data-inspect][data-taxon="'+taxon+'"]'+('[data-stage="'+stage+'"]'if stage else'')).first
+  individual=button.get_attribute('data-inspect');d=page.locator('#world').evaluate('(e)=>({...e.dataset})')
+  r['phase']='ordinary-inspection';click(button);page.wait_for_selector('#specimen-canvas[data-ready=true]')
+  world=taxon+('-'+stage if stage in ['caterpillar','juvenile']else'')+'-world.png';detail=world.replace('-world','-detail')
+  page.locator('#specimen-canvas').screenshot(path=str(out/detail))
+  r['phase']='ordinary-inspection-dispose';close();r['phase']='ordinary-world'
+  page.screenshot(path=str(out/world));after=page.locator('#world').evaluate('(e)=>({...e.dataset})')
+  row={'taxon':taxon,'stage':stage,'individual':individual,'location':location,'observer':json.loads(d['observer']),'modelTime':d['simulationTime'],'worldModelTime':after['simulationTime'],'window':json.loads(d['ecology'])['window'],'runId':d['runId'],'world':world,'detail':detail,'sha256':{f:hashlib.sha256((out/f).read_bytes()).hexdigest()for f in [world,detail]}}
+  r['captures'].append(row);save();print('TAXON',taxon,stage,flush=True)
+
  try:
   page.goto(f'http://127.0.0.1:{s.server_port}/{entry.name}');page.wait_for_selector('#world[data-ready=true]',timeout=120000);page.locator('#start').click();manifest=json.loads(page.locator('#world').get_attribute('data-manifest'));seen=set()
   visits=[('summer','outlook'),('autumn','oak'),('summer','woodruff'),('summer','nettle'),('summer','flowers'),('summer','wood'),('summer','oak'),('summer','upper-marsh'),('summer','lower-marsh'),('summer','salt-shrub'),('summer','salt-segments'),('summer','salt-grass'),('summer','coast'),('summer','outlook'),('dusk','dusk')]
