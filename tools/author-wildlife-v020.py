@@ -32,7 +32,8 @@ class Model:
             self.uvs.append((-1,-1) if eye else (p[0]*1.7+.5,p[1]*1.9+abs(p[2])*.23))
         self.faces.extend(tuple(offset+i for i in f.vertices) for f in mesh.polygons)
     def ellipsoid(self,p,scale,color,part=0,pivot=(0,0,0),joint=(0,0,0),knee=0,coat=None,eye=False):
-        bpy.ops.mesh.primitive_uv_sphere_add(segments=16,ring_count=10,location=xyz(p));o=bpy.context.object;o.scale=(scale[0],scale[2],scale[1]);bpy.ops.object.transform_apply(location=True,rotation=True,scale=True)
+        segments,rings=getattr(self,'small_surface_detail',(16,10))
+        bpy.ops.mesh.primitive_uv_sphere_add(segments=segments,ring_count=rings,location=xyz(p));o=bpy.context.object;o.scale=(scale[0],scale[2],scale[1]);bpy.ops.object.transform_apply(location=True,rotation=True,scale=True)
         self.add(o.data,color,part,pivot,joint,knee,coat=coat,eye=eye);bpy.data.objects.remove(o,do_unlink=True)
     def tube(self,points,radii,color,part=0,pivot=(0,0,0),joint=(0,0,0),knee=0,segments=12,coat=None,horizontal=False):
         vertices=[];faces=[]

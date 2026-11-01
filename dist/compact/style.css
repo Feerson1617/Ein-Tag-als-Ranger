@@ -9,7 +9,7 @@
 /* V1: the scene stays in WebGL; readable, shielded text stays in DOM. */
 #feeding-detail{position:fixed;left:12px;top:112px;width:min(650px,58vw);max-height:calc(100dvh - 215px);overflow:auto;overscroll-behavior:contain;touch-action:pan-y;padding:8px;background:transparent;color:var(--ink);border:1px solid #657459;border-radius:6px;font:.8rem/1.4 system-ui;z-index:3;scrollbar-gutter:stable}
 #feeding-detail[hidden]{display:none}
-#feeding-detail .feeding-title{display:flex;align-items:center;justify-content:space-between;gap:8px;position:sticky;top:-8px;z-index:1;background:var(--paper);padding:5px}
+#feeding-detail .feeding-title{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;position:sticky;top:-8px;z-index:1;background:var(--paper);padding:5px}
 #feeding-detail strong{font-size:.9rem}#feeding-close{font:.8rem system-ui;padding:5px 10px;min-height:44px}
 #feeding-detail p,#feeding-detail output,#feeding-detail details{display:block;background:var(--paper);padding:6px;margin:0;overflow-wrap:anywhere}
 #feeding-detail details:not([open]){display:block}#feeding-detail summary{cursor:pointer;min-height:44px;padding:10px 0}

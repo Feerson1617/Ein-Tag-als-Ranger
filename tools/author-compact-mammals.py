@@ -55,7 +55,7 @@ def deer():
     m.finish();return 'capreolus_capreolus','compact-roe-deer.glb','REH-ASSET.json'
 
 def fox():
-    bpy.ops.wm.read_factory_settings(use_empty=True);m=a.Model('fox');m.rig_coordinate_offset=2;head=(.29,.64,0)
+    bpy.ops.wm.read_factory_settings(use_empty=True);m=a.Model('fox');m.rig_coordinate_offset=2;m.small_surface_detail=(12,8);head=(.29,.64,0)
     sections=[(-.45,.52,0,.025,.035),(-.31,.55,0,.14,.12),(-.08,.55,0,.145,.12),(.14,.56,0,.15,.11),(.27,.61,0,.13,.095),(.36,.70,0,.095,.08),(.44,.735,0,.073,.071),(.53,.708,0,.044,.046),(.64,.689,0,.017,.022)]
     def coat(p):
         pale=max(1-a.smooth(.43,.52,p[1]),a.smooth(.28,.45,p[0])*(1-a.smooth(.68,.72,p[1])));back=a.smooth(.64,.71,p[1])*(1-a.smooth(.25,.40,p[0]));base=a.linear('#b87842');light=a.linear('#dfd4bb');dark=a.linear('#795338')

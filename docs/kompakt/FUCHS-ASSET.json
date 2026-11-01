@@ -1,9 +1,9 @@
 {
   "species": "fox",
   "lengthMeters": 1.1,
-  "triangles": 11392,
-  "bytes": 601524,
-  "sha256": "63bccb366a65332f47e1c0ecaf1147a1ff699e09298ef42416936fac0ec91b26",
+  "triangles": 8632,
+  "bytes": 458004,
+  "sha256": "610bd085ab498086229b1313adad8363f81d1d3bcaffb6a3a37bce51a161bc28",
   "legFeet": {
     "1": [
       0.54,
