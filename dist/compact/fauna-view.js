@@ -3,6 +3,7 @@ import { readWildlifeGLB } from '../wildlife-glb.js';
 import { terrainHeight } from './layout.js';
 import { GeometryBatch,stick } from './geometry.js';
 import { finishOrganism } from './organism-finish.js';
+import { profileGeometry } from './organic-geometry.js';
 import { MANIFEST } from './manifest.js';
 export async function createFaunaView(scene,state){
  const response=await fetch(MANIFEST.assets.deer);if(!response.ok)throw Error('Rehmodell konnte nicht geladen werden.');const geometry=readWildlifeGLB(await response.arrayBuffer(),'capreolus_capreolus');
@@ -11,12 +12,20 @@ export async function createFaunaView(scene,state){
  const legs=new Map();for(let part=1;part<=4;part++){let i=0;while(i<rig.count&&rig.getX(i)!==part)i++;const hip=[rig.getY(i),rig.getZ(i)],knee=[joints.getX(i),joints.getY(i)],foot=geometry.userData.legFeet[part];legs.set(part,{hip,knee,foot,upper:Math.hypot(knee[0]-hip[0],knee[1]-hip[1]),lower:Math.hypot(foot[0]-knee[0],foot[1]-knee[1])});}
  const bird=new THREE.Group(),body=new GeometryBatch(),head=new GeometryBatch(),sphere=new THREE.SphereGeometry(1,20,12);const black='#272c2b',white='#e1dfd0',red='#a1342c';
  // Adult female: no red nape. +X points away from trunk, +Y follows trunk.
- body.add(sphere,black,[.055,.12,0],[.059,.105,.047]);body.add(sphere,'#d9d4bd',[.024,.14,0],[.024,.077,.035]);
- for(const side of [-1,1]){body.add(sphere,black,[.045,.125,side*.039],[.038,.085,.017],[0,0,-.1]);body.add(sphere,white,[.047,.17,side*.051],[.028,.042,.007],[0,0,-.1]);for(let k=0;k<5;k++)body.add(sphere,white,[.04,.1-k*.012,side*.054],[.020,.003,.003]);}
- body.add(sphere,red,[.03,.035,0],[.041,.033,.028]);
- // Stiff wedge tail contacts bark below feet, providing the third support.
- const tail=new THREE.ConeGeometry(.025,.15,4);body.add(tail,black,[-.003,-.025,0],[1,1,1],[0,0,Math.PI-.12]);
- head.add(sphere,black,[.065,.255,0],[.046,.042,.039]);for(const side of [-1,1]){head.add(sphere,white,[.059,.244,side*.031],[.032,.024,.008]);head.add(sphere,'#1b1d1c',[.043,.268,side*.035],[.005,.005,.003]);}
+ const torso=profileGeometry([[.015,0,0,.006,.008],[.045,0,0,.024,.031],[.10,0,0,.042,.044],[.16,0,0,.045,.043],[.205,0,0,.028,.027],[.24,0,0,.015,.018]],{rows:38,sides:24,paint:(x,y,z)=>x<.065?'#b13b32':y>.005?'#e5e0cc':black});
+ // Loft axis becomes vertical; pale breast faces the bark, shoulders face out.
+ torso.rotateZ(Math.PI/2);torso.translate(.055,0,0);body.add(torso,'#ffffff');
+ for(const side of [-1,1]){
+  const wing=profileGeometry([[.025,0,0,.003,.003],[.075,0,0,.023,.012],[.13,0,0,.036,.014],[.18,0,0,.026,.011],[.195,0,0,0,0]],{rows:40,sides:14,paint:(x,y,z)=>x>.13&&y<.018?white:x<.12&&Math.sin(x*410)>.55?white:black});
+  wing.rotateZ(Math.PI/2);wing.translate(.074,0,side*.036);body.add(wing,'#ffffff');
+ }
+ for(let k=-2;k<=2;k++){const tail=profileGeometry([[-.10,0,k*.008,.001,.002],[-.07,0,k*.009,.003,.006],[.035,0,k*.007,.006,.008],[.065,0,k*.005,.004,.004]],{rows:14,sides:8});tail.rotateZ(Math.PI/2-.12);tail.translate(.013,0,0);body.add(tail,black);}
+ head.add(profileGeometry([[.018,.251,0,.008,.010],[.035,.257,0,.020,.023],[.060,.263,0,.031,.030],[.084,.255,0,.029,.027],[.101,.244,0,.012,.014]],{rows:26,sides:24,paint:(x,y,z)=>{
+  if(y>.276)return black;
+  if(Math.abs(z)>.018&&y>.247&&y<.267)return white;
+  return y<.245?'#dad8c9':black;
+ }}),'#ffffff');
+ for(const side of [-1,1])head.add(sphere,'#141a17',[.043,.268,side*.024],[.0032,.0032,.002]);
  // Straight chisel bill is directed into the bark; head/bill are one moving unit.
  const bill=new THREE.ConeGeometry(.010,.060,7);head.add(bill,'#646967',[.025,.255,0],[1,1,1],[0,0,Math.PI/2]);
  const headMesh=head.mesh();headMesh.geometry.translate(-.065,-.245,0);headMesh.position.set(.065,.245,0);bird.add(body.mesh(),headMesh);

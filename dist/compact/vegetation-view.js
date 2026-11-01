@@ -1,6 +1,6 @@
 import * as THREE from '../vendor/three.module.js?revision=120';
 import { scenicSurface } from './scenic-materials.js';
-import { GeometryBatch,leafGeometry,plantGeometry,stick } from './geometry.js';
+import { GeometryBatch,leafGeometry,plantGeometry,plantVariant,bendPlantGeometry,stick } from './geometry.js';
 
 // Detail changes only representation. Every cell retains the same fixed rows,
 // matrices and individual IDs, including instances hidden for browsing damage.
@@ -15,12 +15,12 @@ function simplePlant(taxon,detail,window){
 export function createVegetationView(scene,plants){
  const cells=new Map(),cache=new Map(),material=new THREE.MeshLambertMaterial({vertexColors:true,side:THREE.DoubleSide}),dummy=new THREE.Object3D();
  scenicSurface(material,'leaf');
- const geometry=(taxon,detail,window)=>{const key=[taxon,detail,window].join(':');if(!cache.has(key))cache.set(key,detail==='near'?plantGeometry(taxon,1,window):simplePlant(taxon,detail,window));return cache.get(key);};
+ const geometry=(taxon,detail,window,variant=0)=>{const key=[taxon,detail,window,variant].join(':');if(!cache.has(key))cache.set(key,detail==='near'?plantGeometry(taxon,1,window,'near',variant):bendPlantGeometry(simplePlant(taxon,detail,window),variant));return cache.get(key);};
  for(const p of plants){const key=[p.taxon,Math.floor(p.x/8),Math.floor(p.z/8)].join(':');if(!cells.has(key))cells.set(key,[]);cells.get(key).push(p);}
  const meshes=[];
  for(const rows of cells.values()){
-  const taxon=rows[0].taxon,cx=rows.reduce((s,p)=>s+p.x,0)/rows.length,cz=rows.reduce((s,p)=>s+p.z,0)/rows.length,m=new THREE.InstancedMesh(geometry(taxon,'far','summer'),material,rows.length);
-  m.userData={taxon,rows,cx,cz,detail:'far',window:'summer'};
+  const taxon=rows[0].taxon,cx=rows.reduce((s,p)=>s+p.x,0)/rows.length,cz=rows.reduce((s,p)=>s+p.z,0)/rows.length,m=new THREE.InstancedMesh(geometry(taxon,'far','summer',plantVariant(rows[0])),material,rows.length);
+  m.userData={taxon,rows,cx,cz,detail:'far',window:'summer',variant:plantVariant(rows[0])};
   for(let i=0;i<rows.length;i++){const p=rows[i];dummy.position.set(p.x,p.y,p.z);dummy.rotation.set(0,p.angle,0);dummy.scale.setScalar(p.size);dummy.updateMatrix();m.setMatrixAt(i,dummy.matrix);}
   m.computeBoundingSphere();m.castShadow=false;m.receiveShadow=true;scene.add(m);meshes.push(m);
  }
@@ -28,7 +28,7 @@ export function createVegetationView(scene,plants){
  function update(observer,window){
   if(Math.hypot(observer.x-lastX,observer.z-lastZ)<1&&window===lastWindow)return;
   lastX=observer.x;lastZ=observer.z;lastWindow=window;
-  for(const m of meshes){const d=Math.hypot(observer.x-m.userData.cx,observer.z-m.userData.cz),detail=m.userData.rows.some(p=>Math.hypot(p.x-observer.x,p.z-observer.z)<=9)?'near':vegetationDetail(d);m.visible=d<70;if(detail!==m.userData.detail||window!==m.userData.window){m.geometry=geometry(m.userData.taxon,detail,window);m.userData.detail=detail;m.userData.window=window;}}
+  for(const m of meshes){const d=Math.hypot(observer.x-m.userData.cx,observer.z-m.userData.cz),detail=m.userData.rows.some(p=>Math.hypot(p.x-observer.x,p.z-observer.z)<=9)?'near':vegetationDetail(d);m.visible=d<70;if(detail!==m.userData.detail||window!==m.userData.window){m.geometry=geometry(m.userData.taxon,detail,window,m.userData.variant);m.userData.detail=detail;m.userData.window=window;}}
  }
  return {meshes,update,dispose(){for(const g of cache.values())g.dispose();material.dispose();}};
 }

@@ -131,7 +131,17 @@ jobs:
             work/scorm/*.json
             work/scorm/*.log
             work/scorm/browser-artifacts/
-            work/scorm/normal-learning/
-            work/scorm/normal-growth/
             work/scorm/material-depth/
+          retention-days: 30
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        if: always()
+        with:
+          name: Ranger-SCORM-normal-learning
+          path: work/scorm/normal-learning/
+          retention-days: 30
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        if: always()
+        with:
+          name: Ranger-SCORM-normal-growth
+          path: work/scorm/normal-growth/
           retention-days: 30

@@ -1,0 +1,371 @@
+{
+  "date": "2026-11-01",
+  "rights": "Eigene kurze Sachparaphrasen; keine fremden Fotos oder Volltexte im Spiel. Zugriff über Browser-Suchdienst; direkte NABU-Abrufe 403 und mehrere nicht erreichbare URLs nicht als gelesen gezählt.",
+  "remainingLimits": [
+    "Festuca-Seite liefert keine verifizierte artscharfe äußere Diagnose; Andel-Seite bestätigt primär Standort.",
+    "Quellenvergleich liefert kein empirisch vermessenes 3D-Modell und keine unabhängige Schüler-Bestimmungsstudie.",
+    "36 Taxa sind nicht gleich 36 sichere Feldbestimmungen; Gruppentaxa und natürliche Verwechslungsmöglichkeiten bleiben ausdrücklich erhalten."
+  ],
+  "rows": [
+    {
+      "taxon": "aglais_io",
+      "matrixReference": "S20; saisonale Stadien explizit",
+      "naturalFeatures": "Falter: Augenflecken; Raupe: dunkel/bedornt mit hellen Punkten",
+      "designLengthMeters": 0.06,
+      "dimensionScope": "Entwurfswert; natürliche Größen nur soweit oben ausdrücklich mit Maßeinheit und Messart angegeben. Keine empirische Modellkalibrierung behauptet.",
+      "url": "https://www.wildlifetrusts.org/wildlife-explorer/invertebrates/butterflies/peacock",
+      "access": "READ_2026-11-01",
+      "observations": "Falter rotbraun mit vier Augenflecken, dunkler Unterseite, Spannweite 6,3–7,5 cm; Raupen an Brennnesseln, Stadien nicht verwechseln."
+    },
+    {
+      "taxon": "aphidoidea",
+      "matrixReference": "S53–54: Brennnessel–Microlophium carnosum–Coccinella septempunctata belegt; Feldbestimmung bleibt Blattlausgruppe, lokale Raten offen",
+      "naturalFeatures": "Kleine Kolonie mit Siphonen; keine ungesicherte Einzelartbenennung",
+      "designLengthMeters": 0.003,
+      "dimensionScope": "Entwurfswert; natürliche Größen nur soweit oben ausdrücklich mit Maßeinheit und Messart angegeben. Keine empirische Modellkalibrierung behauptet.",
+      "url": "https://www.lfl.bayern.de/ips/getreide/237079/index.php",
+      "access": "READ_2026-11-01",
+      "observations": "Gruppenvergleich: Hinterleibsröhrchen, variable grüne/rötliche Färbung und Fühlerlänge. Beschriebene Getreidearten nicht als Einzelart des Brennnesselmodells ausgegeben."
+    },
+    {
+      "taxon": "apodemus_sylvaticus",
+      "matrixReference": "S25; Samenfunktionen belegt, Studie nicht norddeutsche Dichtekalibrierung",
+      "naturalFeatures": "Große Augen/Ohren, langer Schwanz; Unterscheidung zu Gelbhalsmaus nicht allein per Silhouette",
+      "designLengthMeters": 0.095,
+      "dimensionScope": "Entwurfswert; natürliche Größen nur soweit oben ausdrücklich mit Maßeinheit und Messart angegeben. Keine empirische Modellkalibrierung behauptet.",
+      "url": "https://www.wildlifetrusts.org/wildlife-explorer/mammals/wood-mouse",
+      "access": "READ_2026-11-01",
+      "observations": "Kopf-Rumpf 8–10 cm, zusätzlich Schwanz 7–9,5 cm; braune Oberseite und helle Unterseite, relativ große Augen/Ohren. Keine sichere Abgrenzung zur Gelbhalsmaus allein nach Silhouette."
+    },
+    {
+      "taxon": "arenicola_marina",
+      "matrixReference": "S44; Detritus/Mikroorganismen statt anorganischer Sand als Energiequelle",
+      "naturalFeatures": "Kothaufen/Trichter als Spur; segmentierter Körper in Schnittansicht",
+      "designLengthMeters": 0.2,
+      "dimensionScope": "Entwurfswert; natürliche Größen nur soweit oben ausdrücklich mit Maßeinheit und Messart angegeben. Keine empirische Modellkalibrierung behauptet.",
+      "url": "https://www.schutzstation-wattenmeer.de/wissen/tiere/wuermer/wattwurm/",
+      "access": "READ_2026-11-01",
+      "observations": "Braunschwarzer gegliederter Wurm mit roten Kiemenbüscheln, dünner Hinterabschnitt, U-Gang und Kotspur."
+    },
+    {
+      "taxon": "bombus_lapidarius",
+      "matrixReference": "S19, S17–18, S51–52; genaue Flugzahlen unkalibriert",
+      "naturalFeatures": "Behaarter Körper, rotes Hinterleibsende; ähnliche Arten und Geschlechtsmerkmale beachten",
+      "designLengthMeters": 0.017,
+      "dimensionScope": "Entwurfswert; natürliche Größen nur soweit oben ausdrücklich mit Maßeinheit und Messart angegeben. Keine empirische Modellkalibrierung behauptet.",
+      "url": "https://www.wildlifetrusts.org/wildlife-explorer/invertebrates/bees-and-wasps/red-tailed-bumblebee",
+      "access": "READ_2026-11-01",
+      "observations": "Weibliche Tiere schwarz mit rotem Hinterleibsende; Arbeiterin im Modell. Größen-/Geschlechtsvariation, ähnliche Hummelarten beachten."
+    },
+    {
+      "taxon": "capreolus_capreolus",
+      "matrixReference": "S23, S22; Bestands-/Fluchtdistanzen sind keine recherchierten Zahlenparameter",
+      "naturalFeatures": "Schlanke Gliedmaßen, große Ohren, dunkle Nase, heller Spiegel, kaum sichtbarer Schwanz",
+      "designLengthMeters": 1.12,
+      "dimensionScope": "Entwurfswert; natürliche Größen nur soweit oben ausdrücklich mit Maßeinheit und Messart angegeben. Keine empirische Modellkalibrierung behauptet.",
+      "url": "https://www.deutschewildtierstiftung.de/wildtiere/reh",
+      "access": "READ_2026-11-01",
+      "observations": "Schlanke Beine, nach vorne abfallender Rumpf, heller Spiegel; Sommerfell rotbraun. Dargestellt wird weibliches Adulttier."
+    },
+    {
+      "taxon": "carcinus_maenas",
+      "matrixReference": "S39–40; kein freies Beutespektrum nur nach Ressourcentext",
+      "naturalFeatures": "Breiter Panzer, Scheren, seitliche Laufbewegung",
+      "designLengthMeters": 0.055,
+      "dimensionScope": "Entwurfswert; natürliche Größen nur soweit oben ausdrücklich mit Maßeinheit und Messart angegeben. Keine empirische Modellkalibrierung behauptet.",
+      "url": "https://www.marlin.ac.uk/species/detail/1497",
+      "access": "READ_2026-11-01",
+      "observations": "Panzer breiter als lang, bis 8 cm breit, fünf Zähne je vorderem Seitenrand, drei abgerundete Stirnlappen; erstes Beinpaar mit Scheren, variable Grün-/Braun-/Rottöne."
+    },
+    {
+      "taxon": "cerastoderma_edule",
+      "matrixReference": "S44–45; konkretes M3-Individuum/Probenkontrolle dokumentieren",
+      "naturalFeatures": "Radialrippen; zwei Schalen; lebend/eingegraben ≠ leere Schale",
+      "designLengthMeters": 0.025,
+      "dimensionScope": "Entwurfswert; natürliche Größen nur soweit oben ausdrücklich mit Maßeinheit und Messart angegeben. Keine empirische Modellkalibrierung behauptet.",
+      "url": "https://www.schutzstation-wattenmeer.de/wissen/tiere/muscheln/herzmuschel/",
+      "access": "READ_2026-11-01",
+      "observations": "Zwei radial gerippte Klappen, herzförmige Seitenansicht, flach im Sediment; leere Schale und lebendes Tier unterscheiden."
+    },
+    {
+      "taxon": "coccinella_septempunctata",
+      "matrixReference": "S21, S53–54; echte Beuteobjekte im Nahmodell; Feldstudie liefert keine örtliche Fressrate",
+      "naturalFeatures": "Rote Flügeldecken mit sieben Flecken und korrekt gestalteter Vorderkörperzeichnung",
+      "designLengthMeters": 0.007,
+      "dimensionScope": "Entwurfswert; natürliche Größen nur soweit oben ausdrücklich mit Maßeinheit und Messart angegeben. Keine empirische Modellkalibrierung behauptet.",
+      "url": "https://www.wildlifetrusts.org/wildlife-explorer/invertebrates/beetles/7-spot-ladybird",
+      "access": "READ_2026-11-01",
+      "observations": "6–8 mm; rote Flügeldecken mit sieben schwarzen Punkten und schwarzweißer Vorderkörperzeichnung."
+    },
+    {
+      "taxon": "crangon_crangon",
+      "matrixReference": "S40; nicht trocken zwischen Salzwiesenhalmen herumgehen",
+      "naturalFeatures": "Schlanker gegliederter Körper, Fühler, Schwimmbeine",
+      "designLengthMeters": 0.035,
+      "dimensionScope": "Entwurfswert; natürliche Größen nur soweit oben ausdrücklich mit Maßeinheit und Messart angegeben. Keine empirische Modellkalibrierung behauptet.",
+      "url": "https://www.schutzstation-wattenmeer.de/wissen/tiere/krebstiere/nordseegarnele/",
+      "access": "READ_2026-11-01",
+      "observations": "Bis 8 cm, sandfarben, lange Fühler, gegliederter Hinterleib und zehn Laufbeine."
+    },
+    {
+      "taxon": "dendrocopos_major",
+      "matrixReference": "S28; Fachmerkmale und Animationen benötigen Detailprüfung; keine Luftstützpunkte",
+      "naturalFeatures": "Weiße Schulterfelder, roter Unterschwanz; Alter/Geschlecht festgelegt",
+      "designLengthMeters": 0.24,
+      "dimensionScope": "Entwurfswert; natürliche Größen nur soweit oben ausdrücklich mit Maßeinheit und Messart angegeben. Keine empirische Modellkalibrierung behauptet.",
+      "url": "https://www.lbv.de/ratgeber/tipps-voegel-bestimmen/leicht-verwechselbar/spechte/",
+      "access": "READ_2026-11-01",
+      "observations": "Große weiße Schulterflächen, scharf begrenzter roter Unterschwanz; Weibchen ohne roten Nackenfleck."
+    },
+    {
+      "taxon": "fagus_sylvatica",
+      "matrixReference": "S13, S32; Morphologie belegt; lokale Bestandsdichte nicht empirisch festgelegt",
+      "naturalFeatures": "Glatte graue Rinde, elliptische weitgehend ganzrandige Blätter; Detailknospen/Früchte nur saisonal",
+      "designLengthMeters": 10,
+      "dimensionScope": "Entwurfswert; natürliche Größen nur soweit oben ausdrücklich mit Maßeinheit und Messart angegeben. Keine empirische Modellkalibrierung behauptet.",
+      "url": "https://www.floraweb.de/php/artenhome.php?suchnr=2357",
+      "access": "READ_2026-11-01",
+      "observations": "Graue glatte Rinde; eiförmige, schwach wellige Blätter, meist 4–10 cm. Baumhöhe und Blattlänge sind verschiedene Maße."
+    },
+    {
+      "taxon": "festuca_rubra",
+      "matrixReference": "S04; Unterart nicht ohne diagnostische Belege festlegen",
+      "naturalFeatures": "Feine Blätter und schmale Rispen; keine Bestimmung anhand beliebiger Grastextur",
+      "designLengthMeters": 0.55,
+      "dimensionScope": "Entwurfswert; natürliche Größen nur soweit oben ausdrücklich mit Maßeinheit und Messart angegeben. Keine empirische Modellkalibrierung behauptet.",
+      "url": "https://www.infoflora.ch/de/flora/festuca-rubra.html",
+      "access": "READ_2026-11-01",
+      "observations": "Taxonomie und Anatomieseite gelesen; keine äußere Küstenform-Diagnose aus mikroskopischen Halmangaben abgeleitet."
+    },
+    {
+      "taxon": "fomes_fomentarius",
+      "matrixReference": "S30, S31; belegt; kein makroskopisch sichtbarer Sofortabbau",
+      "naturalFeatures": "Hufförmige graue Konsole; Poren auf Unterseite",
+      "designLengthMeters": 0.22,
+      "dimensionScope": "Entwurfswert; natürliche Größen nur soweit oben ausdrücklich mit Maßeinheit und Messart angegeben. Keine empirische Modellkalibrierung behauptet.",
+      "url": "https://www.dgfm-ev.de/de/ueber-uns/news/pilz-des-jahres-1995-zunderschwamm",
+      "access": "READ_2026-11-01",
+      "observations": "Mehrjährige breite hufförmige Konsole am Holz, graubraune zonierte harte Oberseite, Porenunterseite; bis 30 cm breit, 20 cm dick."
+    },
+    {
+      "taxon": "galium_odoratum",
+      "matrixReference": "S11; Blüte Mai/Juni; bei fehlenden Unterscheidungsmerkmalen Labkraut-Gruppe zulassen",
+      "naturalFeatures": "Blattquirle; weiße vierzählige Blüten nur im passenden Frühjahrsfenster",
+      "designLengthMeters": 0.25,
+      "dimensionScope": "Entwurfswert; natürliche Größen nur soweit oben ausdrücklich mit Maßeinheit und Messart angegeben. Keine empirische Modellkalibrierung behauptet.",
+      "url": "https://www.floraweb.de/php/artenhome.php?name-use-id=2560",
+      "access": "READ_2026-11-01",
+      "observations": "5–25 cm; Quirle mit 6–8 lanzettlich-elliptischen Blättern; weiße Blüten Mai/Juni. Augustmodell ohne Blüten: Unsicherheit zulassen."
+    },
+    {
+      "taxon": "garrulus_glandarius",
+      "matrixReference": "S26, S25; Verstecken nicht mit Keimung oder garantiertem Mutualismus gleichsetzen",
+      "naturalFeatures": "Blau-schwarz gezeichnetes Flügelfeld, heller Bürzel, bräunlichrosa Körper",
+      "designLengthMeters": 0.34,
+      "dimensionScope": "Entwurfswert; natürliche Größen nur soweit oben ausdrücklich mit Maßeinheit und Messart angegeben. Keine empirische Modellkalibrierung behauptet.",
+      "url": "https://www.wildtierportal.bayern.de/wildtiere_bayern/100839/index.php",
+      "access": "READ_2026-11-01",
+      "observations": "34–35 cm; rosabraun, kräftiger Schnabel, blau-schwarzes Flügelfeld, heller Bürzel."
+    },
+    {
+      "taxon": "haematopus_ostralegus",
+      "matrixReference": "S37–38; individuelle Suchweise nicht automatisch genetische Spezialisierung",
+      "naturalFeatures": "Schwarz-weiß, kräftiger gerader orange-roter Schnabel, kräftige Beine",
+      "designLengthMeters": 0.43,
+      "dimensionScope": "Entwurfswert; natürliche Größen nur soweit oben ausdrücklich mit Maßeinheit und Messart angegeben. Keine empirische Modellkalibrierung behauptet.",
+      "url": "https://www.deutschewildtierstiftung.de/wildtiere/austernfischer",
+      "access": "READ_2026-11-01",
+      "observations": "Schwarzer Kopf/Rücken, weißer Bauch, rotorangefarbener Schnabel und Beine, rote Augenpartie."
+    },
+    {
+      "taxon": "halimione_portulacoides",
+      "matrixReference": "S05; nicht starre mittlere Höhenzone an jedem Standort",
+      "naturalFeatures": "Silbrige gegenständige fleischige Blätter, verzweigter Zwergstrauch",
+      "designLengthMeters": 0.65,
+      "dimensionScope": "Entwurfswert; natürliche Größen nur soweit oben ausdrücklich mit Maßeinheit und Messart angegeben. Keine empirische Modellkalibrierung behauptet.",
+      "url": "https://www.schutzstation-wattenmeer.de/wissen/pflanzen/salzwiese/portulak-keilmelde/",
+      "access": "READ_2026-11-01",
+      "observations": "Silbriger immergrüner Zwergstrauch, fleischige Blattflächen, niederliegender verzweigter Wuchs; vorhandene Verbesserung erhalten."
+    },
+    {
+      "taxon": "hediste_diversicolor",
+      "matrixReference": "S41; ältere Quelle Nereis diversicolor als Synonym; Einsetztiefe nicht als Naturkonstante",
+      "naturalFeatures": "Seitliche Parapodien/Borsten, Körpergliederung",
+      "designLengthMeters": 0.065,
+      "dimensionScope": "Entwurfswert; natürliche Größen nur soweit oben ausdrücklich mit Maßeinheit und Messart angegeben. Keine empirische Modellkalibrierung behauptet.",
+      "url": "https://www.schutzstation-wattenmeer.de/wissen/tiere/wuermer/seeringelwurm/",
+      "access": "READ_2026-11-01",
+      "observations": "Bis 10 cm; rötlichbraun/grünlicher Vielborster mit paarigen seitlichen Ruderanhängen, sichtbarem rotem Rückengefäß. Jugendstadium kleiner."
+    },
+    {
+      "taxon": "ixodes_ricinus",
+      "matrixReference": "S22; kein Live-Ausgraben/Anfassen realer Tiere als Arbeitsauftrag",
+      "naturalFeatures": "Adulte/Nymphen acht, Larven sechs Beine; Stufe nicht mischen",
+      "designLengthMeters": 0.004,
+      "dimensionScope": "Entwurfswert; natürliche Größen nur soweit oben ausdrücklich mit Maßeinheit und Messart angegeben. Keine empirische Modellkalibrierung behauptet.",
+      "url": "https://www.umweltbundesamt.de/schildzecken",
+      "access": "READ_2026-11-01",
+      "observations": "Adulte und Nymphen acht Beine, Larven sechs; Schild bedeckt bei Weibchen nur vorderen Körperteil. Im bisherigen Modell bereits acht Beine."
+    },
+    {
+      "taxon": "limonium_vulgare",
+      "matrixReference": "S04/S03 als Standortkontext; konkrete Salzdrüsen-/Blühmerkmale vor Detailasset zusätzlich prüfen",
+      "naturalFeatures": "Bodenrosette und locker verzweigte violette Blütenstände",
+      "designLengthMeters": 0.45,
+      "dimensionScope": "Entwurfswert; natürliche Größen nur soweit oben ausdrücklich mit Maßeinheit und Messart angegeben. Keine empirische Modellkalibrierung behauptet.",
+      "url": "https://www.floraweb.de/php/artenhome.php?suchnr=3411",
+      "access": "READ_2026-11-01",
+      "observations": "20–40 cm; grundständige Rosette, verkehrt eiförmige ganzrandige kahle Blätter bis 20 cm, verzweigte blauviolette Blütenstände August/September."
+    },
+    {
+      "taxon": "lumbricidae",
+      "matrixReference": "S55: Lumbricus terrestris zieht Streu in senkrechte Gänge; Schülerbestimmung zunächst Gruppe; keine Schweizer Kohlenstoffraten als norddeutsche Messwerte",
+      "naturalFeatures": "Segmentierter Körper; Gürtel bei adultem Modell; Gruppenbestimmung ausreichend",
+      "designLengthMeters": 0.18,
+      "dimensionScope": "Entwurfswert; natürliche Größen nur soweit oben ausdrücklich mit Maßeinheit und Messart angegeben. Keine empirische Modellkalibrierung behauptet.",
+      "url": "https://australian.museum/learn/species-identification/ask-an-expert/what-do-earthworms-look-like/",
+      "access": "READ_2026-11-01",
+      "observations": "Weicher langgestreckter segmentierter Körper ohne Beine, Augen oder Fühler; feuchte Streu/Boden. Weltweite Größenbandbreite nicht als örtliche Lumbricidae-Kalibrierung übernommen."
+    },
+    {
+      "taxon": "mytilus_edulis",
+      "matrixReference": "S44–45; kein Anspruch, vollständige heutige Mischbank inklusive aller Neozoen zu zeigen",
+      "naturalFeatures": "Dunkle längliche Schale; Byssus im Detail",
+      "designLengthMeters": 0.045,
+      "dimensionScope": "Entwurfswert; natürliche Größen nur soweit oben ausdrücklich mit Maßeinheit und Messart angegeben. Keine empirische Modellkalibrierung behauptet.",
+      "url": "https://www.schutzstation-wattenmeer.de/wissen/tiere/muscheln/miesmuschel/",
+      "access": "READ_2026-11-01",
+      "observations": "Zwei längliche dunkle Klappen; Byssusbefestigung an Oberflächen, keine Herzmuschelrippen."
+    },
+    {
+      "taxon": "parus_major",
+      "matrixReference": "S27; Höhlen-/Revieraufgaben nur mit passender Jahreszeit",
+      "naturalFeatures": "Schwarzer Kopf, weiße Wangen, gelbe Unterseite/dunkler Streifen",
+      "designLengthMeters": 0.14,
+      "dimensionScope": "Entwurfswert; natürliche Größen nur soweit oben ausdrücklich mit Maßeinheit und Messart angegeben. Keine empirische Modellkalibrierung behauptet.",
+      "url": "https://www.lbv-muenchen.de/tiere-pflanzen/voegel/details/kohlmeise/",
+      "access": "READ_2026-11-01",
+      "observations": "Gelbe Brust, schwarze Kopf-/Kehlpartie und Bauchstreif, weiße Wangen."
+    },
+    {
+      "taxon": "peringia_ulvae",
+      "matrixReference": "S42–43; Detailbestimmung und Bestandszahlen nicht aus Fernsicht",
+      "naturalFeatures": "Winziges gewundenes Gehäuse; Lupe nötig",
+      "designLengthMeters": 0.004,
+      "dimensionScope": "Entwurfswert; natürliche Größen nur soweit oben ausdrücklich mit Maßeinheit und Messart angegeben. Keine empirische Modellkalibrierung behauptet.",
+      "url": "https://www.schutzstation-wattenmeer.de/wissen/tiere/schnecken/wattschnecke/",
+      "access": "READ_2026-11-01",
+      "observations": "3–6 mm; kleine kegelige Gehäuseschnecke. Nicht künstlich groß in Welt darstellen."
+    },
+    {
+      "taxon": "platalea_leucorodia",
+      "matrixReference": "S35–36; kein reiner Muschelfresser, keine Kolonie auf Miniwiese",
+      "naturalFeatures": "Breiter Schnabelabschluss, adult dunkel mit heller Spitze; Jungvogelmerkmale nicht mischen",
+      "designLengthMeters": 0.85,
+      "dimensionScope": "Entwurfswert; natürliche Größen nur soweit oben ausdrücklich mit Maßeinheit und Messart angegeben. Keine empirische Modellkalibrierung behauptet.",
+      "url": "https://www.nationalpark-wattenmeer.de/wissensbeitrag/loeffler-september/",
+      "access": "READ_2026-11-01",
+      "observations": "Weißes Gefieder, dunkle Beine, spatelförmiger dunkler Schnabel mit heller Spitze beim Adulttier; Prachtkleid nicht pauschal in Augustszene."
+    },
+    {
+      "taxon": "puccinellia_maritima",
+      "matrixReference": "S06; Teilareal nicht durch Artlabel allein wissenschaftlich bewiesen",
+      "naturalFeatures": "Feine graugrüne Blätter/Rispen; von Schlickgras unterscheidbarer Habitus",
+      "designLengthMeters": 0.4,
+      "dimensionScope": "Entwurfswert; natürliche Größen nur soweit oben ausdrücklich mit Maßeinheit und Messart angegeben. Keine empirische Modellkalibrierung behauptet.",
+      "url": "https://www.schutzstation-wattenmeer.de/wissen/pflanzen/salzwiese/andelgras/",
+      "access": "READ_2026-11-01",
+      "observations": "Salzwiesenrasen im Überflutungsgradienten; Seite bestätigt Standort, keine neue artscharfe Blattmessung entnommen."
+    },
+    {
+      "taxon": "quercus_robur",
+      "matrixReference": "S14, S25, S26; Einzelmerkmale nötig, nicht nur generische Eichenkrone",
+      "naturalFeatures": "Gelappte Blätter, kurze Blattstiele, lang gestielte Eicheln bei Reife",
+      "designLengthMeters": 9,
+      "dimensionScope": "Entwurfswert; natürliche Größen nur soweit oben ausdrücklich mit Maßeinheit und Messart angegeben. Keine empirische Modellkalibrierung behauptet.",
+      "url": "https://www.infoflora.ch/de/flora/quercus-robur.html",
+      "access": "READ_2026-11-01",
+      "observations": "Stumpf gerundete Lappen, kurze Blattstiele unter 7 mm, geöhrter Blattgrund; Eicheln lang gestielt."
+    },
+    {
+      "taxon": "recurvirostra_avosetta",
+      "matrixReference": "S34; Beutegrößen und Wassertiefen zunächst qualitative Zustandsbedingungen",
+      "naturalFeatures": "Dünner aufgebogener Schnabel, schwarz-weißes Gefieder, lange Beine",
+      "designLengthMeters": 0.43,
+      "dimensionScope": "Entwurfswert; natürliche Größen nur soweit oben ausdrücklich mit Maßeinheit und Messart angegeben. Keine empirische Modellkalibrierung behauptet.",
+      "url": "https://www.nationalpark-wattenmeer.de/wissensbeitrag/saebelschnaebler-august/",
+      "access": "READ_2026-11-01",
+      "observations": "Schwarzweiß; schlanker im vorderen Drittel aufgebogener Schnabel, lange blaugraue Beine."
+    },
+    {
+      "taxon": "rubus_fruticosus",
+      "matrixReference": "S15, S16, S23; Aggregat absichtlich, keine Scheingenauigkeit",
+      "naturalFeatures": "Bogige bestachelte Ruten, zusammengesetzte gesägte Blätter, Sammelsteinfrüchte",
+      "designLengthMeters": 1.25,
+      "dimensionScope": "Entwurfswert; natürliche Größen nur soweit oben ausdrücklich mit Maßeinheit und Messart angegeben. Keine empirische Modellkalibrierung behauptet.",
+      "url": "https://www.infoflora.ch/de/flora/rubus-fruticosus-aggr.html",
+      "access": "READ_2026-11-01",
+      "observations": "Bogige, aufrechte oder kriechende bestachelte Ruten, zusammengesetzte 3–5(-7)-zählige Blätter, schwarze/rot-schwarze Sammelfrüchte. Bis 3 m; keine Kleinartbestimmung im Modell."
+    },
+    {
+      "taxon": "salicornia_europaea",
+      "matrixReference": "S04; Aggregat statt unsicherer Kleinart",
+      "naturalFeatures": "Gegliederte fleischige Sprosse, stark reduzierte Blätter",
+      "designLengthMeters": 0.3,
+      "dimensionScope": "Entwurfswert; natürliche Größen nur soweit oben ausdrücklich mit Maßeinheit und Messart angegeben. Keine empirische Modellkalibrierung behauptet.",
+      "url": "https://www.schutzstation-wattenmeer.de/wissen/pflanzen/salzwiese/queller/",
+      "access": "READ_2026-11-01",
+      "observations": "Einjährig, gegliederte sukkulente Sprosse statt großer Laubblätter; unauffällige Blüten, herbstliche Rotfärbung möglich."
+    },
+    {
+      "taxon": "sporobolus_anglicus",
+      "matrixReference": "S07–09; ähnliche Cytotypen, keine sichere Feldbestimmung allein aus Horstform",
+      "naturalFeatures": "Kräftige aufrechte Halme, relativ breite Blätter; Horste/Rhizomflächen",
+      "designLengthMeters": 0.95,
+      "dimensionScope": "Entwurfswert; natürliche Größen nur soweit oben ausdrücklich mit Maßeinheit und Messart angegeben. Keine empirische Modellkalibrierung behauptet.",
+      "url": "https://de.nationalparkvadehavet.dk/erleben-sie-das-wattenmeer/inseln-staedte-und-orte/strandwiesen-am-wattenmeer",
+      "access": "READ_2026-11-01",
+      "observations": "Schlickgras/Spartina: graugrüne steife zugespitzte Blätter, 50–100 cm; Küstenhorste. Keine sichere Cytotypbestimmung aus Modellhabitus."
+    },
+    {
+      "taxon": "trifolium_pratense",
+      "matrixReference": "S17, S18, S51, S52; Besuche belegt, nicht jeder Besuch bestäubt",
+      "naturalFeatures": "Dreiteilige Blätter, rötlicher Blütenkopf aus Einzelblüten",
+      "designLengthMeters": 0.3,
+      "dimensionScope": "Entwurfswert; natürliche Größen nur soweit oben ausdrücklich mit Maßeinheit und Messart angegeben. Keine empirische Modellkalibrierung behauptet.",
+      "url": "https://www.infoflora.ch/de/flora/trifolium-pratense.html",
+      "access": "READ_2026-11-01",
+      "observations": "15–40 cm; dreiteilige Blätter, eiförmige ganzrandige Teilblätter bis 3 cm, Blütenköpfe 1,5–3 cm."
+    },
+    {
+      "taxon": "tringa_totanus",
+      "matrixReference": "S33; Brut-/Warnverhalten nicht zwangsläufig in Spätsommerszene",
+      "naturalFeatures": "Rote Beine, rötliche Schnabelbasis/dunkle Spitze; Flügelzeichnung",
+      "designLengthMeters": 0.28,
+      "dimensionScope": "Entwurfswert; natürliche Größen nur soweit oben ausdrücklich mit Maßeinheit und Messart angegeben. Keine empirische Modellkalibrierung behauptet.",
+      "url": "https://www.wildlifetrusts.org/wildlife-explorer/birds/wading-birds/redshank",
+      "access": "READ_2026-11-01",
+      "observations": "27–29 cm; braune Oberseite, hellere Unterseite, rote Beine und Schnabelbasis, dunkle Schnabelspitze."
+    },
+    {
+      "taxon": "urtica_dioica",
+      "matrixReference": "S12, S20, S53–54; Microlophium carnosum als fachlicher Modellhintergrund, im Feldbuch nur belegbare Gruppenauflösung",
+      "naturalFeatures": "Gegenständige gesägte Blätter; Brennhaare/Blüten in Detailansicht",
+      "designLengthMeters": 0.9,
+      "dimensionScope": "Entwurfswert; natürliche Größen nur soweit oben ausdrücklich mit Maßeinheit und Messart angegeben. Keine empirische Modellkalibrierung behauptet.",
+      "url": "https://www.infoflora.ch/de/flora/urtica-dioica.html",
+      "access": "READ_2026-11-01",
+      "observations": "Gegenständige länglich herzförmige grob gesägte Blätter, Behaarung/Brennhaare; über 1 m möglich. Blattlänge über 5 cm."
+    },
+    {
+      "taxon": "vulpes_vulpes",
+      "matrixReference": "S24; keine autonome Vollpopulation im Kleinstareal behaupten",
+      "naturalFeatures": "Spitze Schnauze/Ohren, buschiger Schwanz, typische Proportionen",
+      "designLengthMeters": 1.1,
+      "dimensionScope": "Entwurfswert; natürliche Größen nur soweit oben ausdrücklich mit Maßeinheit und Messart angegeben. Keine empirische Modellkalibrierung behauptet.",
+      "url": "https://www.deutschewildtierstiftung.de/wildtiere/fuchs",
+      "access": "READ_2026-11-01",
+      "observations": "Schmaler Fang, spitze Ohren, langgestreckter Körper, buschige Rute; dunkle Beine/Ohrrückseiten, heller Bauch und Rutenspitze."
+    }
+  ]
+}

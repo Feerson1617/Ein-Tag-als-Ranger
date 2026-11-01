@@ -9,7 +9,19 @@ export class GeometryBatch{
  mesh(material={}){const m=new THREE.Mesh(this.geometry(),new THREE.MeshStandardMaterial({vertexColors:true,roughness:.94,...material}));m.castShadow=true;m.receiveShadow=true;return m;}
 }
 export function stick(batch,a,b,r,color,rTop=r*.7){const start=new THREE.Vector3(...a),end=new THREE.Vector3(...b),diff=end.clone().sub(start);const q=new THREE.Quaternion().setFromUnitVectors(new THREE.Vector3(0,1,0),diff.clone().normalize()),e=new THREE.Euler().setFromQuaternion(q);batch.add(new THREE.CylinderGeometry(rTop,r,diff.length(),r<.03?6:9),color,start.add(end).multiplyScalar(.5).toArray(),[1,1,1],e.toArray().slice(0,3));}
-export function leafGeometry(length=1,width=.3,serrated=false,lobed=false,steps=18){const p=[],indices=[],colors=[];for(let i=0;i<=steps;i++){const t=i/steps,w=Math.sin(Math.PI*t)**.7*width/2*(serrated?(i%2?.77:1):lobed?.7+.3*Math.cos(t*8*Math.PI):1),y=Math.sin(t*Math.PI)*length*.085;p.push(-w,y,length*t,0,y+.012*length,length*t,w,y,length*t);const edge=.76+.18*Math.sin(t*Math.PI);colors.push(edge,edge,edge,1.14,1.12,1.02,edge+.04,edge+.04,edge+.04);if(i<steps){const a=i*3;indices.push(a,a+3,a+1,a+1,a+3,a+4,a+1,a+4,a+2,a+2,a+4,a+5);}}const g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.Float32BufferAttribute(p,3));g.setIndex(indices);g.setAttribute('color',new THREE.Float32BufferAttribute(colors,3));g.computeVertexNormals();return g;}
+export function leafGeometry(length=1,width=.3,serrated=false,lobed=false,steps=18){if(lobed)return oakLeafGeometry(length,width);const p=[],indices=[],colors=[];for(let i=0;i<=steps;i++){const t=i/steps,w=Math.sin(Math.PI*t)**.7*width/2*(serrated?(i%2?.77:1):lobed?.72+.24*Math.cos((t-.07)*10*Math.PI):1),y=Math.sin(t*Math.PI)*length*.085;p.push(-w,y,length*t,0,y+.012*length,length*t,w,y,length*t);const edge=.76+.18*Math.sin(t*Math.PI);colors.push(edge,edge,edge,1.14,1.12,1.02,edge+.04,edge+.04,edge+.04);if(i<steps){const a=i*3;indices.push(a,a+3,a+1,a+1,a+3,a+4,a+1,a+4,a+2,a+2,a+4,a+5);}}const g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.Float32BufferAttribute(p,3));g.setIndex(indices);g.setAttribute('color',new THREE.Float32BufferAttribute(colors,3));g.computeVertexNormals();return g;}
+
+// Rounded oak lobes and basal auricles, drawn as curves rather than a sawtooth
+// multiplier. The short petiole is authored by the branch, outside this blade.
+function oakLeafGeometry(length,width){
+ const commands=[[[.05,0],[.32,-.035],[.38,.025]],[[.48,.08],[.27,.13],[.22,.16]],[[.36,.20],[.81,.15],[.88,.25]],[[.96,.35],[.50,.34],[.43,.39]],[[.55,.45],[1.08,.39],[1,.51]],[[.94,.62],[.51,.57],[.44,.63]],[[.53,.69],[.85,.66],[.74,.77]],[[.64,.86],[.34,.80],[.27,.88]],[[.32,.96],[.13,1.01],[0,1]]];
+ const shape=new THREE.Shape();shape.moveTo(0,0);const starts=[[0,0]];for(const c of commands){shape.bezierCurveTo(...c.flat());starts.push(c[2]);}for(let i=commands.length-1;i>=0;i--){const c=commands[i],start=starts[i];shape.bezierCurveTo(-c[1][0],c[1][1],-c[0][0],c[0][1],-start[0],start[1]);}shape.closePath();
+ const blade=new THREE.ShapeGeometry(shape,12),p=blade.attributes.position;for(let i=0;i<p.count;i++){const x=p.getX(i)*width*.5,t=p.getY(i);p.setXYZ(i,x,Math.sin(t*Math.PI)*length*.055-Math.abs(x)*.07,t*length);}blade.computeVertexNormals();
+ const batch=new GeometryBatch();batch.add(blade,'#ffffff');const mid=t=>Math.sin(t*Math.PI)*length*.055+.001;
+ curvedStem(batch,[[0,.001,0],[0,mid(.5),length*.5],[0,.001,length]],.0008,'#b6ba80',.0002,12);
+ for(const t of [.19,.36,.53,.70,.83])for(const side of [-1,1])curvedStem(batch,[[0,mid(t-.06),(t-.06)*length],[side*width*.18,mid(t)-width*.012,t*length],[side*width*.37,mid(t+.04)-width*.025,(t+.04)*length]],.00045,'#a5ad76',.0001,5);
+ return batch.geometry();
+}
 
 export function sweptGeometry(points,radii,sides=8){
  const curve=new THREE.CatmullRomCurve3(points.map(p=>new THREE.Vector3(...p))),steps=points.length-1,frames=curve.computeFrenetFrames(steps,false),p=[],index=[];
@@ -40,7 +52,11 @@ export function succulentLeafGeometry(length=.26,width=.12,rows=6,sides=6){
  const g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.Float32BufferAttribute(p,3));g.setIndex(index);g.computeVertexNormals();return g;
 }
 
-export function plantGeometry(taxon,remaining=1,window='summer',detail='near'){const b=new GeometryBatch(),sphere=new THREE.SphereGeometry(1,8,5),near=detail==='near',middle=detail==='middle';
+// Three deterministic shapes per existing forest cell; no new plants, no
+// relocation, no new randomness in the biological model. Keilmelde is untouched.
+export function plantVariant(p){return ['galium_odoratum','urtica_dioica','rubus_fruticosus','trifolium_pratense'].includes(p.taxon)?((Math.floor(p.x/8)*17+Math.floor(p.z/8)*13)%3+3)%3-1:0;}
+export function bendPlantGeometry(g,variant){if(!variant)return g;const p=g.attributes.position;for(let i=0;i<p.count;i++){const x=p.getX(i),y=p.getY(i),z=p.getZ(i);p.setXYZ(i,x+variant*.065*y*y,y,z+variant*.045*Math.sin(y*3.2)*y);}g.computeVertexNormals();return g;}
+export function plantGeometry(taxon,remaining=1,window='summer',detail='near',variant=0){const b=new GeometryBatch(),sphere=new THREE.SphereGeometry(1,8,5),near=detail==='near',middle=detail==='middle';
  if(taxon==='galium_odoratum'||taxon==='urtica_dioica'){
   const nettle=taxon==='urtica_dioica';stick(b,[0,0,0],[0,1,0],nettle?.012:.009,nettle?'#657744':'#6b7d45');
   for(let level=0;level<4;level++){const y=.25+level*.21,count=nettle?2:8;for(let i=0;i<count;i++){if(nettle&&level*2+i>=Math.ceil(8*remaining))continue;const a=i/count*Math.PI*2+(nettle?level*Math.PI/2:level*.18);b.add(leafGeometry(nettle?.37:.43,nettle?.23:.10,nettle,false,nettle?14:8),nettle?'#447037':'#5a8143',[0,y,0],[1,1,1],[-.14,a,0]);if(nettle)for(let k=1;k<4;k++)stick(b,[Math.sin(a)*.09,y,Math.cos(a)*.09],[Math.sin(a)*.09,y+.025,Math.cos(a)*.09],.001,'#c1c599',.0003);}}
@@ -95,7 +111,7 @@ export function plantGeometry(taxon,remaining=1,window='summer',detail='near'){c
  }else if(taxon==='limonium_vulgare'){
   for(let i=0;i<(near?9:5);i++)b.add(leafGeometry(.40+.10*Math.sin(i*1.7)**2,.14,false,false,near?8:4),'#647c4c',[0,.015,0],[1,1,1],[-.07-(i%3)*.07,i*2.399,0]);if(window!=='spring'){stick(b,[0,0,0],[0,.8,0],.012,'#6f8156');for(let i=0;i<9;i++){const a=i*2.399,p=[Math.cos(a)*.33,.55+i*.035,Math.sin(a)*.33];stick(b,[0,.3+i*.04,0],p,.006,'#788561');for(let j=0;j<4;j++)b.add(sphere,window==='summer'?'#a48bb8':'#8d8069',[p[0]+j*.016,p[1]+j*.012,p[2]],[.014,.017,.014]);}}
  }else if(taxon==='fagus_sylvatica'||taxon==='quercus_robur'){
-  const oak=taxon==='quercus_robur';stick(b,[0,.15,0],[.8,.3,0],.018,oak?'#76694e':'#8a8979');for(let i=0;i<7;i++)b.add(leafGeometry(.32,.2,false,oak,24),oak?'#6a7a40':'#6d8846',[.1+i*.09,.2+i*.012,0],[1,1,1],[.18,i%2?1:-1,0]);
+  const oak=taxon==='quercus_robur';curvedStem(b,[[0,.15,0],[.38,.23,.018],[.8,.3,-.015]],.014,oak?'#76694e':'#8a8979',.004,10);for(let i=0;i<7;i++){const a=(i%2?1:-1)*(1.08+.12*Math.sin(i*2)),y=.17+i*.017,x=.10+i*.09,petiole=oak?.009:.025;stick(b,[x,y,0],[x+Math.sin(a)*petiole,y,Math.cos(a)*petiole],.0025,'#8a8857',.0015);const origin=[x+Math.sin(a)*petiole,y,Math.cos(a)*petiole],rotation=[.12+.13*Math.sin(i*1.7),a,.06*Math.cos(i)];b.add(leafGeometry(.31,.18,false,oak,oak?80:28),oak?'#6a7a40':'#6d8846',origin,[1,1,1],rotation);}
  }
- return b.geometry();
+ return bendPlantGeometry(b.geometry(),variant);
 }

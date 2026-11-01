@@ -7,7 +7,7 @@ Fundstellen laut Zusammenfassung: ETS 2025/26 S.27–28; Fachanforderungen SH 20
 | Bestandteil | Herkunft / Lizenz | Änderungen / Status |
 |---|---|---|
 | Three.js | vorhandenes vendor/three.module.js; MIT, THREE-LICENSE.txt mitgeliefert | unverändert |
-| Reh-GLB | lokal mit Blender 4.3.2, tools/author-compact-deer.py, vorhandene CC0-Authoringhelfer | neuer Export; Hash, Pivot-/Rigvertrag, Füße und Maße in REH-ASSET.json; biologische/visuelle Freigabe offen |
+| Reh-GLB | lokal mit Blender 4.3.2, tools/author-compact-mammals.py, vorhandene CC0-Authoringhelfer | neuer Export; Hash, Pivot-/Rigvertrag, Füße und Maße in REH-ASSET.json; biologische/visuelle Freigabe offen |
 | Specht, übrige prozedurale Organismen, Pflanzen, Häuser, Schilder, Terrain, Weg | lokale eigene prozedurale Geometrie/Canvas-Schrift | keine externen Medien oder Providerassets; Implementierungsquellen im Projekt |
 | Boden-/Holzatlas und Panorama | vorhandene eigene generierte Projektmaterialien, Eintrag in dist/assets/attribution.json und IMAGE-PROMPTS.md | drei unveränderte WebP-Dateien; keine Natur-/Bestimmungsfotografie; Herkunft im Kompaktpaket mitgeliefert |
 | Projektcode | Eigentümerentscheidung | keine globale neue Codelizenz festgelegt |
@@ -29,3 +29,9 @@ Korrekturquellen (tatsächlich gelesene Fassungen und Fundstellen in lesson-reso
 Tse et al. 2013, DOI 10.1242/bio.20134283: Originaltext über öffentliches Forschungskorpus tatsächlich gelesen; Versuchsbedingungen und berichtete Ergebnisrichtungen mit Fundstellen lokal paraphrasiert. Keine Originalabbildung, fremder Volltext, Rohwinkel oder erfundene Häufigkeiten mitgeliefert. Der Originaltext nennt CC BY-NC-SA 3.0; hier werden bibliographische Angaben und sachliche Studieninformationen in eigener deutscher Darstellung verwendet. Kidd 2007 war durch Zugangs-/Identitätsblock nicht lesbar und wird nicht als gelesener Datenbeleg ausgegeben.
 
 C24: drei historische Wertepaare der öffentlichen Datei NFA 2019 public_data.csv für 2016, mit festgehaltener Commit- und Dateiprüfsumme. Keine vollständige Fremddatendatei, offizielle aktuelle Faktoren oder Originalgrafik übernommen. Die GFN-Methodenwebsite war gesperrt; historische Spiegelungswerte sind kein unabhängiger Audit der nationalen Rechnungen. Der zusätzliche Flächenfall ist als synthetische Übung gekennzeichnet.
+
+## Visuelle Endkorrektur vom 01.11.2026
+
+Reh und Fuchs wurden lokal mit Blender neu modelliert, nicht aus fremden Tierfotos übernommen. Reproduzierbare Quelle: `tools/author-compact-mammals.py` mit `tools/author-wildlife-v020.py`; Exportdaten und SHA-256 in REH-ASSET.json und FUCHS-ASSET.json. Beide neuen Geometrien CC0-1.0; keine Änderung der Lizenz fremder Projektbestandteile. Der Fuchs ersetzt das zuvor selektierte ältere Projektasset. Negative Gelenkkoordinaten werden beim Export verlustfrei erhalten. Das Skript benötigt Blender, keine Netzwerkdienste.
+
+Eigene Sachparaphrasen und gelesene natürliche Merkmalsquellen für alle 36 Taxa: `verification/kompakt-endkorrektur/morphology-sources.json`. Die fünf vom Nutzer beigefügten Originalgalerien und Einzelbilder wurden als Fehlerbelege gelesen; keine fremden Naturfotos in das Spiel eingebaut. Größe, Naturtreue und artscharfe Diagnose sind getrennte Prüffragen. Der verfügbare `game-dev`-Befehl war in dieser Umgebung nicht auffindbar; verwendet wurde der vorhandene lokale Blender-/Three.js-Werkzeugweg.

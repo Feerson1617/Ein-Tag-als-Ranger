@@ -9,7 +9,7 @@ def feeding_episodes(page,out,result,save,navigator):
   page.wait_for_function('(old)=>{const d=document.querySelector("#world").dataset;return d.runId!==old&&Number(d.simulationTime)===0&&d.renderRevision===d.sceneRevision}',arg=previousRun)
   before=page.locator('#world').evaluate('c=>({time:Number(c.dataset.simulationTime),runId:c.dataset.runId,observer:JSON.parse(c.dataset.observer)})');started=time.monotonic()
   page.evaluate("()=>{const stream=document.querySelector('#world').captureStream(12),v=window.__nativeVideo={stream,chunks:[]};v.rec=new MediaRecorder(stream,{mimeType:'video/webm;codecs=vp8',videoBitsPerSecond:700000});v.rec.ondataavailable=e=>{if(e.data.size)v.chunks.push(e.data)};v.rec.start(1000)}")
-  page.locator('[data-realtime="'+individual+'"]').click()
+  page.locator('[data-realtime="'+individual+'"]').click();page.locator('#behavior-detail').click();page.locator('#feeding-expand').click()
   row={'individual':individual,'before':before,'samples':[],'scope':'Normal walked-to position, explicitly new finite trial. Unaccelerated frames; no model-step button or state/clock writes. Saved event must be witnessed by actual sight/contact rules, not merely present in the simulation log.'};result.setdefault('pathBEpisodes',[]).append(row)
   try:
    while True:
@@ -20,6 +20,7 @@ def feeding_episodes(page,out,result,save,navigator):
     assert time.monotonic()-started<480,('No saveable witnessed feeding event within explicit 480s supplemental guard',individual)
     page.wait_for_timeout(100)
    row['beforeSave']=d
+   row['liveDetail']=json.loads(page.locator('#world').get_attribute('data-feeding-detail')or'null');page.screenshot(path=str(out/(individual+'-live-contact.png')));page.locator('#feeding-close').click()
    # Save during the real visible event, rather than waiting until departure.
    page.locator('#record').click();page.screenshot(path=str(out/(individual+'-record-form.png')))
    page.locator('#note').fill('Pfad B: selbst beobachteter Kontakt und Nahrungsaufnahme dieses Vogels am erreichten Ort. Modellbeleg; kein Naturbeweis.');page.locator('#save-note').click()

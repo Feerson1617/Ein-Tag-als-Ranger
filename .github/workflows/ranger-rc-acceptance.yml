@@ -10,7 +10,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        check: [native, stability, visual, profiles, offline]
+        check: [native, native-gallery, ui, stability, visual, profiles, offline]
     runs-on: ubuntu-24.04
     timeout-minutes: 45
     steps:
@@ -31,10 +31,19 @@ jobs:
           for f in dist/compact/*.js; do node --check "$f"; done
           python tools/build-compact.py
           python tools/verify-compact.py
+          node tests/compact-anatomy-framing-check.mjs work/rc-final/anatomy
           mkdir -p work/rc-final
       - name: Native K1–K5 and four saved feeding episodes
         if: matrix.check == 'native'
         run: python tools/browser-compact-native-learning.py --site outputs --entry Ranger-Kompakt.html --output work/rc-final/native
+      - name: Complete native inventory and regular tools at LMS viewport
+        if: matrix.check == 'native-gallery'
+        run: python tools/browser-compact-native-gallery.py --entry outputs/Ranger-Kompakt.html --output work/rc-final/native-gallery
+      - name: Original UI, imports, context recovery and new enlarged observation views
+        if: matrix.check == 'ui'
+        run: |
+          python tools/browser-compact-v1-ui.py --output work/rc-final/ui-original
+          python tools/browser-compact-anatomy-ui.py --output work/rc-final/ui-expanded
       - name: Full original twenty-minute stability and native context recovery
         if: matrix.check == 'stability'
         run: python tools/browser-compact-stability.py --output work/rc-final/stability
@@ -52,7 +61,7 @@ jobs:
       - name: Build the independently reviewed baseline without editing it
         if: matrix.check == 'visual' || matrix.check == 'profiles'
         run: |
-          git worktree add --detach work/rc-baseline e7b34dbadef037fee2554d41034f11116f0de81e
+          git worktree add --detach work/rc-baseline 6cd1c901365575da928d5f723ed0d68a7c9ad50f
           (cd work/rc-baseline && python tools/build-compact.py)
       - name: Exact camera and model-time comparisons, complete specimen inventory and 360-degree sky
         if: matrix.check == 'visual'

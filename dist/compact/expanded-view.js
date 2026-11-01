@@ -3,18 +3,22 @@ import { readWildlifeGLB } from '../wildlife-glb.js';
 import { createOrganism,poseCoastalBird,poseCrab } from './organism-models.js';
 import { MANIFEST } from './manifest.js';
 import { terrainHeight } from './layout.js';
-import { plantGeometry,leafGeometry } from './geometry.js';
+import { plantGeometry,leafGeometry,plantVariant } from './geometry.js';
 import { animateSecondaryMotion } from './secondary-motion.js';
 import { finishOrganism } from './organism-finish.js';
 import { CATALOG } from './catalog.js';
 import { carriedPreyPoint } from './coastal-rig.js';
 
-function quadrupedPose(mesh,a,time){
+export function quadrupedPose(mesh,a,time){
  const g=mesh.geometry,rig=g.attributes.rigData,joints=g.attributes.rigJoint,p=g.attributes.position,n=g.attributes.normal;
- if(!mesh.poseCache){const legs=new Map();for(let part=1;part<=4;part++){let i=0;while(i<rig.count&&rig.getX(i)!==part)i++;const hip=[rig.getY(i),rig.getZ(i)],knee=[joints.getX(i),joints.getY(i)],foot=g.userData.legFeet[part];legs.set(part,{hip,knee,foot,upper:Math.hypot(knee[0]-hip[0],knee[1]-hip[1]),lower:Math.hypot(foot[0]-knee[0],foot[1]-knee[1])});}mesh.poseCache={legs,rest:p.array.slice(),normals:n.array.slice()};}
- const {legs,rest,normals}=mesh.poseCache,scale=mesh.scale.x,moving=['stalking','attempting','returning'].includes(a.activity),poses=new Map(),base=terrainHeight(a.x,a.z)-.006;
+ if(!mesh.poseCache){const legs=new Map();for(let part=1;part<=4;part++){let i=0;while(i<rig.count&&rig.getX(i)!==part)i++;const hip=[rig.getY(i),rig.getZ(i)],knee=[joints.getX(i),joints.getY(i)],foot=g.userData.legFeet[part];legs.set(part,{hip,knee,foot,upper:Math.hypot(knee[0]-hip[0],knee[1]-hip[1]),lower:Math.hypot(foot[0]-knee[0],foot[1]-knee[1])});}mesh.poseCache={legs,rest:p.array.slice(),normals:n.array.slice(),x:a.x,z:a.z,time,phase:0};}
+ const cache=mesh.poseCache,{legs,rest,normals}=cache,scale=mesh.scale.x,travel=time>=cache.time?Math.hypot(a.x-cache.x,a.z-cache.z):0,moving=travel>1e-7&&['stalking','attempting','returning'].includes(a.activity),poses=new Map();cache.phase+=travel/.32;cache.x=a.x;cache.z=a.z;cache.time=time;let base=terrainHeight(a.x,a.z)-.006;
+ // Lower the pelvis just enough for every planted foot to be reachable.
+ // Clamping only the IK angle while leaving an unreachable foot target split
+ // the old lower leg from the knee on slopes. Targets stay on real ground.
+ for(const [part,l]of legs){const phase=(cache.phase+[0,.5,.75,.25][part-1])%1,swing=phase>.65?(phase-.65)/.35:0,lift=moving&&swing?.04*Math.sin(swing*Math.PI):0,offset=moving?(phase<.65?.08-.16*phase/.65:-.08+.16*swing):0,fx=l.foot[0]+offset/scale,wx=a.x+Math.cos(a.heading)*fx*scale-Math.sin(a.heading)*l.foot[2]*scale,wz=a.z+Math.sin(a.heading)*fx*scale+Math.cos(a.heading)*l.foot[2]*scale,reach=(l.upper+l.lower-.00002)*scale,dx=(fx-l.hip[0])*scale;const allowed=terrainHeight(wx,wz)+lift+l.foot[1]*scale+Math.sqrt(Math.max(.00001,reach*reach-dx*dx))-l.hip[1]*scale;base=Math.min(base,allowed);}
  mesh.position.set(a.x,base,a.z);mesh.rotation.y=-a.heading;a.feet=[];
- for(const [part,l]of legs){const phase=(time*.9+[0,.5,.75,.25][part-1])%1,swing=phase>.65?(phase-.65)/.35:0,lift=moving&&swing?.04*Math.sin(swing*Math.PI):0,offset=moving?(phase<.65?.08-.16*phase/.65:-.08+.16*swing):0,fx=l.foot[0]+offset/scale,wx=a.x+Math.cos(a.heading)*fx*scale-Math.sin(a.heading)*l.foot[2]*scale,wz=a.z+Math.sin(a.heading)*fx*scale+Math.cos(a.heading)*l.foot[2]*scale,fy=(terrainHeight(wx,wz)-base+lift)/scale+l.foot[1],dx=fx-l.hip[0],dy=fy-l.hip[1],dist=Math.min(l.upper+l.lower-.00001,Math.max(.001,Math.hypot(dx,dy))),theta=Math.atan2(dy,dx)+(part<3?-1:1)*Math.acos(Math.max(-1,Math.min(1,(l.upper*l.upper+dist*dist-l.lower*l.lower)/(2*l.upper*dist)))),kx=l.hip[0]+Math.cos(theta)*l.upper,ky=l.hip[1]+Math.sin(theta)*l.upper;
+ for(const [part,l]of legs){const phase=(cache.phase+[0,.5,.75,.25][part-1])%1,swing=phase>.65?(phase-.65)/.35:0,lift=moving&&swing?.04*Math.sin(swing*Math.PI):0,offset=moving?(phase<.65?.08-.16*phase/.65:-.08+.16*swing):0,fx=l.foot[0]+offset/scale,wx=a.x+Math.cos(a.heading)*fx*scale-Math.sin(a.heading)*l.foot[2]*scale,wz=a.z+Math.sin(a.heading)*fx*scale+Math.cos(a.heading)*l.foot[2]*scale,fy=(terrainHeight(wx,wz)-base+lift)/scale+l.foot[1],dx=fx-l.hip[0],dy=fy-l.hip[1],dist=Math.min(l.upper+l.lower-.00001,Math.max(.001,Math.hypot(dx,dy))),theta=Math.atan2(dy,dx)+(part<3?-1:1)*Math.acos(Math.max(-1,Math.min(1,(l.upper*l.upper+dist*dist-l.lower*l.lower)/(2*l.upper*dist)))),kx=l.hip[0]+Math.cos(theta)*l.upper,ky=l.hip[1]+Math.sin(theta)*l.upper;
   poses.set(part,{upper:theta-Math.atan2(l.knee[1]-l.hip[1],l.knee[0]-l.hip[0]),lower:Math.atan2(fy-ky,fx-kx)-Math.atan2(l.foot[1]-l.knee[1],l.foot[0]-l.knee[0]),kx,ky,fx,fy});a.feet.push({part,swing:lift>0,geometryGap:Infinity});}
  for(let i=0;i<p.count;i++){const part=rig.getX(i),leg=legs.get(part),pose=poses.get(part);let x=rest[i*3],y=rest[i*3+1],z=rest[i*3+2],nx=normals[i*3],ny=normals[i*3+1],nz=normals[i*3+2];if(leg){const kind=joints.getW(i);if(kind>1.5){x+=pose.fx-leg.foot[0];y+=pose.fy-leg.foot[1];}else{const angle=kind>.5?pose.lower:pose.upper,origin=kind>.5?leg.knee:leg.hip,tx=kind>.5?pose.kx:origin[0],ty=kind>.5?pose.ky:origin[1],c=Math.cos(angle),s=Math.sin(angle),vx=x-origin[0],vy=y-origin[1];x=tx+c*vx-s*vy;y=ty+s*vx+c*vy;const old=nx;nx=c*nx-s*ny;ny=s*old+c*ny;}}
   p.setXYZ(i,x,y,z);n.setXYZ(i,nx,ny,nz);if(leg&&joints.getW(i)>1.5){const wx=a.x+Math.cos(a.heading)*x*scale-Math.sin(a.heading)*z*scale,wz=a.z+Math.sin(a.heading)*x*scale+Math.cos(a.heading)*z*scale;const f=a.feet.find(f=>f.part===part);f.geometryGap=Math.min(f.geometryGap,base+y*scale-terrainHeight(wx,wz));}}
@@ -37,7 +41,7 @@ export async function createExpandedView(scene,state,world,reference){
  for(let i=0;i<4;i++){const seed=new THREE.Mesh(new THREE.SphereGeometry(.009,8,5),new THREE.MeshStandardMaterial({color:'#9a774a',roughness:1}));seed.scale.set(1,1.5,1);seed.position.set(-38+i*.08,terrainHeight(-38,-9)+.012,-9);scene.add(seed);acorns.push(seed);}
  for(let i=0;i<6;i++){const leaf=new THREE.Mesh(leafGeometry(.12,.07),new THREE.MeshStandardMaterial({color:'#806047',side:THREE.DoubleSide,roughness:1}));leaf.position.set(-61+i*.035,terrainHeight(-61,-2.7)+.012,-2.7);scene.add(leaf);litter.push(leaf);}
  const carriedAcorn=attachCarriedAcorn(models.get('compact-jay'));
- const affected=new Map();for(const resource of ['nettle-leaf','browse-shoot']){const r=state.ecology.resources[resource],p=state.plants.find(p=>p.id===r.id);const geometry=plantGeometry(p.taxon),mesh=new THREE.Mesh(geometry,new THREE.MeshStandardMaterial({vertexColors:true,side:THREE.DoubleSide,roughness:.9}));mesh.position.set(p.x,p.y,p.z);mesh.rotation.y=p.angle;mesh.scale.setScalar(p.size);finishOrganism(mesh,p.taxon);scene.add(mesh);models.set(p.id,mesh);affected.set(resource,{p,mesh,last:1});const instanced=world.plantMeshes.find(m=>m.userData.rows.some(row=>row.id===p.id)),index=instanced.userData.rows.findIndex(row=>row.id===p.id),matrix=new THREE.Matrix4().makeScale(0,0,0);instanced.setMatrixAt(index,matrix);instanced.instanceMatrix.needsUpdate=true;}
+ const affected=new Map();for(const resource of ['nettle-leaf','browse-shoot']){const r=state.ecology.resources[resource],p=state.plants.find(p=>p.id===r.id);const geometry=plantGeometry(p.taxon,1,'summer','near',plantVariant(p)),mesh=new THREE.Mesh(geometry,new THREE.MeshStandardMaterial({vertexColors:true,side:THREE.DoubleSide,roughness:.9}));mesh.position.set(p.x,p.y,p.z);mesh.rotation.y=p.angle;mesh.scale.setScalar(p.size);finishOrganism(mesh,p.taxon);scene.add(mesh);models.set(p.id,mesh);affected.set(resource,{p,mesh,last:1});const instanced=world.plantMeshes.find(m=>m.userData.rows.some(row=>row.id===p.id)),index=instanced.userData.rows.findIndex(row=>row.id===p.id),matrix=new THREE.Matrix4().makeScale(0,0,0);instanced.setMatrixAt(index,matrix);instanced.instanceMatrix.needsUpdate=true;}
  const foxShadow=reference.shadow.clone();foxShadow.geometry=new THREE.PlaneGeometry(.95,.3);foxShadow.geometry.rotateX(-Math.PI/2);scene.add(foxShadow);
  function update(observer={x:0,z:0}){
   const e=state.ecology;reference.deer.visible=e.window!=='dusk';reference.shadow.visible=e.window!=='dusk';foxShadow.visible=e.window==='dusk';const f=e.actors.find(a=>a.id==='compact-fox');foxShadow.position.set(f.x,terrainHeight(f.x,f.z)+.006,f.z);
@@ -45,7 +49,7 @@ export async function createExpandedView(scene,state,world,reference){
   for(const a of e.actors){const m=models.get(a.id);m.visible=(a.visible&&a.alive)||a.emptyShell; // render culling never edits biological state
    if(a.size<.2&&Math.hypot(a.x-observer.x,a.z-observer.z)>18)m.visible=false;
    if(a.taxon==='vulpes_vulpes'){if(m.visible)quadrupedPose(m,a,state.time);continue;}
-   m.position.set(a.x,a.y,a.z);m.rotation.set(0,-a.heading,0);
+   m.position.set(a.x,a.y-(a.taxon==='fomes_fomentarius'?.20:0),a.z+(a.taxon==='fomes_fomentarius'?.18:0));m.rotation.set(0,-a.heading,0);
    if(m.siphons)m.siphons.visible=a.alive&&a.activity==='filtering';for(const valve of m.shellValves||[])valve.rotation.x=valve.userData.side*(a.shellOpening||0);if(a.emptyShell&&m.tissue)m.tissue.visible=false;
    if(m.crabLegs)poseCrab(m,a);
    if(m.birdLegs)poseCoastalBird(m,a,state.time);
@@ -56,12 +60,12 @@ export async function createExpandedView(scene,state,world,reference){
    if(a.taxon==='lumbricidae'){m.position.x=a.homeX-Math.min(.12,(6-e.resources['leaf-litter'].amount)*.02);}
   }
   for(const a of e.actors)if(a.carriedPreyId){const prey=e.actors.find(p=>p.id===a.carriedPreyId),preyModel=models.get(prey.id),predator=models.get(a.id),anchor=predator.beakContact||predator.clawContact;predator.updateMatrixWorld(true);const contact=state.modelRevision>=5&&a.taxon!=='carcinus_maenas'?new THREE.Vector3().copy(carriedPreyPoint(a,state.time,state.modelRevision)):anchor.getWorldPosition(new THREE.Vector3());if(prey.emptyShell&&preyModel.tissue){const tissue=preyModel.tissue;if(tissue.parent!==scene)scene.attach(tissue);tissue.visible=true;tissue.position.copy(contact);}else{preyModel.visible=true;preyModel.position.copy(contact);}}
-  for(const [id,row]of affected){const r=e.resources[id],fraction=r.amount/r.initial,signature=fraction+'|'+e.window;if(signature!==row.last){row.mesh.geometry.dispose();row.mesh.geometry=plantGeometry(row.p.taxon,fraction,e.window);row.last=signature;}}
+  for(const [id,row]of affected){const r=e.resources[id],fraction=r.amount/r.initial,signature=fraction+'|'+e.window;if(signature!==row.last){row.mesh.geometry.dispose();row.mesh.geometry=plantGeometry(row.p.taxon,fraction,e.window,'near',plantVariant(row.p));row.last=signature;}}
   for(let i=0;i<acorns.length;i++)acorns[i].visible=e.window==='autumn'&&i<e.resources.acorns.amount;
   carriedAcorn.visible=e.window==='autumn'&&e.actors.find(a=>a.id==='compact-jay').carryingAcorn;
   for(let i=0;i<litter.length;i++){litter[i].visible=i<e.resources['leaf-litter'].amount;}
   if(world.water)world.water.position.y=e.tide.waterLevel;
  }
- function modelFor(individual){if(individual===state.deer.id)return reference.deer;if(individual===state.bird.id)return reference.bird;if(models.has(individual))return models.get(individual);const p=state.plants.find(p=>p.id===individual);if(!p)return null;const model=new THREE.Mesh(plantGeometry(p.taxon,1,state.ecology.window),new THREE.MeshStandardMaterial({vertexColors:true,side:THREE.DoubleSide,roughness:.9}));model.scale.setScalar(p.size);return finishOrganism(model,p.taxon);}
+ function modelFor(individual){if(individual===state.deer.id)return reference.deer;if(individual===state.bird.id)return reference.bird;if(models.has(individual))return models.get(individual);const p=state.plants.find(p=>p.id===individual);if(!p)return null;const model=new THREE.Mesh(plantGeometry(p.taxon,1,state.ecology.window,'near',plantVariant(p)),new THREE.MeshStandardMaterial({vertexColors:true,side:THREE.DoubleSide,roughness:.9}));model.scale.setScalar(p.size);return finishOrganism(model,p.taxon);}
  update();return {models,update,modelFor,fox,roots,resetContext};
 }

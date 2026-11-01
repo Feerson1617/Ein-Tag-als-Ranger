@@ -1,0 +1,1916 @@
+{
+  "baselineCommit": "6cd1c901365575da928d5f723ed0d68a7c9ad50f",
+  "packageSHA256": "15db322827d8c00eae3ba717ed7afa21bfc9c45a6b7078d27a763db5b85089b7",
+  "phase": "A before model edits",
+  "scope": "Inventory reconciled with original five contact sheets and existing baseline gallery. Group recognition is not diagnostic or naturalism certification. Historical reference-camera images are not fresh learner routes. Natural dimensions remain design values unless independently sourced.",
+  "taxa": 36,
+  "stages": 38,
+  "rows": [
+    {
+      "taxon": "tringa_totanus",
+      "name": "Rotschenkel – Tringa totanus",
+      "stage": "adult",
+      "referenceFeatures": "Rote Beine, rötliche Schnabelbasis/dunkle Spitze; Flügelzeichnung",
+      "diagnostics": [
+        "red-legs",
+        "red-bill-base",
+        "probing"
+      ],
+      "sourceRegister": "S33; Brut-/Warnverhalten nicht zwangsläufig in Spätsommerszene",
+      "habitat": "Feuchter Schlick/Prielrand, Salzwiese als Rast-/saisonal Brutgebiet",
+      "designLengthMeters": 0.28,
+      "dimensionStatus": "didactic design in metres; species size source not independently calibrated",
+      "activeModel": "organism-models.js / bird",
+      "baselineCapture": {
+        "taxon": "tringa_totanus",
+        "stage": "adult",
+        "individual": "compact-redshank",
+        "location": "outlook",
+        "observer": {
+          "x": 63,
+          "z": 4,
+          "yaw": 1.8157749899217608,
+          "pitch": -0.45750674338114333
+        },
+        "modelTime": "0.000",
+        "worldModelTime": "0.278",
+        "window": "summer",
+        "runId": "09f9019f-46ff-4d72-94b1-fb3682c70ede",
+        "world": "tringa_totanus-world.png",
+        "detail": "tringa_totanus-detail.png",
+        "sha256": {
+          "tringa_totanus-world.png": "f7d69f8028fcd1b3646aadecd2292e25271bc3dbf09ef7d6a7c107234529adaa",
+          "tringa_totanus-detail.png": "3cc7d58ec343d4a868b927c6819e2d3023c87efd26fdaa3dc16b09fd7dea4b6f"
+        }
+      },
+      "initialActor": {
+        "x": 59,
+        "y": -0.5331735119702179,
+        "z": 5,
+        "size": 0.28
+      },
+      "baselineObserverDistance": 4.123105625617661,
+      "distanceScope": "Distance to initial model position only; mobile animal capture time and actual line of sight require fresh native measurement.",
+      "groupIdentification": "TEILWEISE",
+      "diagnosticAdequacy": "TEILWEISE",
+      "naturalism": "FEHLGESCHLAGEN",
+      "nativeVisibility": "NICHT GEPRÜFT",
+      "animation": "NICHT GEPRÜFT",
+      "naturalIdentificationLimit": "model comparison; natural identification may need more characters"
+    },
+    {
+      "taxon": "platalea_leucorodia",
+      "name": "Löffler – Platalea leucorodia",
+      "stage": "adult",
+      "referenceFeatures": "Breiter Schnabelabschluss, adult dunkel mit heller Spitze; Jungvogelmerkmale nicht mischen",
+      "diagnostics": [
+        "spatulate-tip",
+        "pale-body",
+        "sweeping"
+      ],
+      "sourceRegister": "S35–36; kein reiner Muschelfresser, keine Kolonie auf Miniwiese",
+      "habitat": "Flacher Priel, Randwasser; Rast",
+      "designLengthMeters": 0.85,
+      "dimensionStatus": "didactic design in metres; species size source not independently calibrated",
+      "activeModel": "organism-models.js / bird",
+      "baselineCapture": {
+        "taxon": "platalea_leucorodia",
+        "stage": "adult",
+        "individual": "compact-spoonbill",
+        "location": "outlook",
+        "observer": {
+          "x": 63,
+          "z": 4,
+          "yaw": 1.8157749899217608,
+          "pitch": -0.45750674338114333
+        },
+        "modelTime": "0.000",
+        "worldModelTime": "0.262",
+        "window": "summer",
+        "runId": "f1960e5d-bbdd-42bb-9339-9c6ba47fe4ef",
+        "world": "platalea_leucorodia-world.png",
+        "detail": "platalea_leucorodia-detail.png",
+        "sha256": {
+          "platalea_leucorodia-world.png": "58a591d76be25c3dd11fbc8f586cb4a60ce780d8ad0fc46af56db3939a7ab4a0",
+          "platalea_leucorodia-detail.png": "6f6c7cf833aa7c34fd7c262802d05a98ccdcb91c1a6db2b4f2c61b5f49981203"
+        }
+      },
+      "initialActor": {
+        "x": 70,
+        "y": -1.1083063942848739,
+        "z": 1,
+        "size": 0.85
+      },
+      "baselineObserverDistance": 7.615773105863909,
+      "distanceScope": "Distance to initial model position only; mobile animal capture time and actual line of sight require fresh native measurement.",
+      "groupIdentification": "TEILWEISE",
+      "diagnosticAdequacy": "TEILWEISE",
+      "naturalism": "FEHLGESCHLAGEN",
+      "nativeVisibility": "NICHT GEPRÜFT",
+      "animation": "NICHT GEPRÜFT",
+      "naturalIdentificationLimit": "model comparison; natural identification may need more characters"
+    },
+    {
+      "taxon": "hediste_diversicolor",
+      "name": "Seeringelwurm – Hediste diversicolor",
+      "stage": "juvenile",
+      "referenceFeatures": "Seitliche Parapodien/Borsten, Körpergliederung",
+      "diagnostics": [
+        "paired-parapodia",
+        "segmented-body",
+        "tube"
+      ],
+      "sourceRegister": "S41; ältere Quelle Nereis diversicolor als Synonym; Einsetztiefe nicht als Naturkonstante",
+      "habitat": "Schlick-/Mischwatt, Wohnröhre",
+      "designLengthMeters": 0.065,
+      "dimensionStatus": "didactic design in metres; species size source not independently calibrated",
+      "activeModel": "organism-models.js / worm",
+      "baselineCapture": {
+        "taxon": "hediste_diversicolor",
+        "stage": "juvenile",
+        "individual": "compact-juvenile-worm-3",
+        "location": "outlook",
+        "observer": {
+          "x": 63,
+          "z": 4,
+          "yaw": 1.8157749899217608,
+          "pitch": -0.45750674338114333
+        },
+        "modelTime": "0.000",
+        "worldModelTime": "0.375",
+        "window": "summer",
+        "runId": "c5b63d58-7f92-4615-9faf-df2ae638b791",
+        "world": "hediste_diversicolor-juvenile-world.png",
+        "detail": "hediste_diversicolor-juvenile-detail.png",
+        "sha256": {
+          "hediste_diversicolor-juvenile-world.png": "938d0634849fe92722026bc3167ca0e2dfefc1eb10293acd0f40cae9af4e845a",
+          "hediste_diversicolor-juvenile-detail.png": "56ae65c9292af472a55542c6eb11601bfb2d2b04b4e63b6f6a30f7434741ad0a"
+        }
+      },
+      "initialActor": {
+        "x": 59,
+        "y": -0.5331735119702179,
+        "z": 5,
+        "size": 0.012
+      },
+      "baselineObserverDistance": 4.123105625617661,
+      "distanceScope": "Distance to initial model position only; mobile animal capture time and actual line of sight require fresh native measurement.",
+      "groupIdentification": "TEILWEISE",
+      "diagnosticAdequacy": "TEILWEISE",
+      "naturalism": "TEILWEISE",
+      "nativeVisibility": "NICHT GEPRÜFT",
+      "animation": "NICHT GEPRÜFT",
+      "naturalIdentificationLimit": "model comparison; natural identification may need more characters"
+    },
+    {
+      "taxon": "crangon_crangon",
+      "name": "Nordseegarnele – Crangon crangon",
+      "stage": "adult",
+      "referenceFeatures": "Schlanker gegliederter Körper, Fühler, Schwimmbeine",
+      "diagnostics": [
+        "long-antennae",
+        "segmented-abdomen",
+        "swimmerets"
+      ],
+      "sourceRegister": "S40; nicht trocken zwischen Salzwiesenhalmen herumgehen",
+      "habitat": "Priel/Pfützen/überflutete Wattflächen",
+      "designLengthMeters": 0.035,
+      "dimensionStatus": "didactic design in metres; species size source not independently calibrated",
+      "activeModel": "organism-models.js / crustacean",
+      "baselineCapture": {
+        "taxon": "crangon_crangon",
+        "stage": "adult",
+        "individual": "compact-shrimp-0",
+        "location": "outlook",
+        "observer": {
+          "x": 63,
+          "z": 4,
+          "yaw": 1.8157749899217608,
+          "pitch": -0.45750674338114333
+        },
+        "modelTime": "0.000",
+        "worldModelTime": "0.360",
+        "window": "summer",
+        "runId": "2459570b-1627-476e-ae37-9f3001a3c504",
+        "world": "crangon_crangon-world.png",
+        "detail": "crangon_crangon-detail.png",
+        "sha256": {
+          "crangon_crangon-world.png": "bd5f597ea4e3e57a25bd2624bee8685f33b3121c59439fa1c6ca26839d662911",
+          "crangon_crangon-detail.png": "9a0f1f92294756771e14cd921fc20a948b46d09f2ea4d81a8e84a613b27ce446"
+        }
+      },
+      "initialActor": {
+        "x": 69,
+        "y": -1.0783063942848738,
+        "z": 1,
+        "size": 0.025
+      },
+      "baselineObserverDistance": 6.708203932499369,
+      "distanceScope": "Distance to initial model position only; mobile animal capture time and actual line of sight require fresh native measurement.",
+      "groupIdentification": "TEILWEISE",
+      "diagnosticAdequacy": "TEILWEISE",
+      "naturalism": "TEILWEISE",
+      "nativeVisibility": "NICHT GEPRÜFT",
+      "animation": "NICHT GEPRÜFT",
+      "naturalIdentificationLimit": "model comparison; natural identification may need more characters"
+    },
+    {
+      "taxon": "garrulus_glandarius",
+      "name": "Eichelhäher – Garrulus glandarius",
+      "stage": "adult",
+      "referenceFeatures": "Blau-schwarz gezeichnetes Flügelfeld, heller Bürzel, bräunlichrosa Körper",
+      "diagnostics": [
+        "blue-barred-wing",
+        "pale-rump",
+        "pink-brown-body"
+      ],
+      "sourceRegister": "S26, S25; Verstecken nicht mit Keimung oder garantiertem Mutualismus gleichsetzen",
+      "habitat": "Wald/lichte Eichenstelle",
+      "designLengthMeters": 0.34,
+      "dimensionStatus": "didactic design in metres; species size source not independently calibrated",
+      "activeModel": "organism-models.js / bird",
+      "baselineCapture": {
+        "taxon": "garrulus_glandarius",
+        "stage": "adult",
+        "individual": "compact-jay",
+        "location": "oak",
+        "observer": {
+          "x": -35,
+          "z": -8,
+          "yaw": 1.0121970114513346,
+          "pitch": -0.18885303737883521
+        },
+        "modelTime": "0.835",
+        "worldModelTime": "1.080",
+        "window": "autumn",
+        "runId": "2724a6c2-bfb7-402a-a5d7-fc45e08896e7",
+        "world": "garrulus_glandarius-world.png",
+        "detail": "garrulus_glandarius-detail.png",
+        "sha256": {
+          "garrulus_glandarius-world.png": "c252f580020d0954a7218718502f83b271300f7cf929b9483ca3da8718ac1538",
+          "garrulus_glandarius-detail.png": "13af20bed6990f33c2ac9c7d57383a08dabb8f14cb73d599349675bcedad0a33"
+        }
+      },
+      "initialActor": {
+        "x": -38,
+        "y": 0.44521665130482035,
+        "z": -9,
+        "size": 0.34
+      },
+      "baselineObserverDistance": 3.1622776601683795,
+      "distanceScope": "Distance to initial model position only; mobile animal capture time and actual line of sight require fresh native measurement.",
+      "groupIdentification": "TEILWEISE",
+      "diagnosticAdequacy": "TEILWEISE",
+      "naturalism": "FEHLGESCHLAGEN",
+      "nativeVisibility": "NICHT GEPRÜFT",
+      "animation": "NICHT GEPRÜFT",
+      "naturalIdentificationLimit": "model comparison; natural identification may need more characters"
+    },
+    {
+      "taxon": "quercus_robur",
+      "name": "Stieleiche – Quercus robur",
+      "stage": "adult",
+      "referenceFeatures": "Gelappte Blätter, kurze Blattstiele, lang gestielte Eicheln bei Reife",
+      "diagnostics": [
+        "lobed-leaf",
+        "short-petiole",
+        "stalked-acorn"
+      ],
+      "sourceRegister": "S14, S25, S26; Einzelmerkmale nötig, nicht nur generische Eichenkrone",
+      "habitat": "Lichter Waldsaum; Baum",
+      "designLengthMeters": 9,
+      "dimensionStatus": "didactic design in metres; species size source not independently calibrated",
+      "activeModel": "organism-models.js / tree",
+      "baselineCapture": {
+        "taxon": "quercus_robur",
+        "stage": "adult",
+        "individual": "support-oak-c",
+        "location": "oak",
+        "observer": {
+          "x": -35,
+          "z": -8,
+          "yaw": 1.0121970114513346,
+          "pitch": -0.18885303737883521
+        },
+        "modelTime": "1.080",
+        "worldModelTime": "1.326",
+        "window": "autumn",
+        "runId": "2724a6c2-bfb7-402a-a5d7-fc45e08896e7",
+        "world": "quercus_robur-world.png",
+        "detail": "quercus_robur-detail.png",
+        "sha256": {
+          "quercus_robur-world.png": "75f7cf8703199523f4ffa3a8167440b6e730039c3809d7703f60ed4cdb1bf52b",
+          "quercus_robur-detail.png": "67ba97a4d6d289056033bf610cfd8d03eba78e7ae3fdec9b162fd0986b8c78a5"
+        }
+      },
+      "initialActor": null,
+      "baselineObserverDistance": null,
+      "distanceScope": "Distance to initial model position only; mobile animal capture time and actual line of sight require fresh native measurement.",
+      "groupIdentification": "TEILWEISE",
+      "diagnosticAdequacy": "TEILWEISE",
+      "naturalism": "TEILWEISE",
+      "nativeVisibility": "NICHT GEPRÜFT",
+      "animation": "NICHT GEPRÜFT",
+      "naturalIdentificationLimit": "model comparison; natural identification may need more characters"
+    },
+    {
+      "taxon": "galium_odoratum",
+      "name": "Waldmeister – Galium odoratum",
+      "stage": "adult",
+      "referenceFeatures": "Blattquirle; weiße vierzählige Blüten nur im passenden Frühjahrsfenster",
+      "diagnostics": [
+        "leaf-whorls",
+        "narrow-leaves",
+        "no-summer-flowers"
+      ],
+      "sourceRegister": "S11; Blüte Mai/Juni; bei fehlenden Unterscheidungsmerkmalen Labkraut-Gruppe zulassen",
+      "habitat": "Frischer schattiger Laubwaldboden; Kraut",
+      "designLengthMeters": 0.25,
+      "dimensionStatus": "didactic design in metres; species size source not independently calibrated",
+      "activeModel": "organism-models.js / plant",
+      "baselineCapture": {
+        "taxon": "galium_odoratum",
+        "stage": "adult",
+        "individual": "ranger-compact-v2:galium_odoratum:0",
+        "location": "woodruff",
+        "observer": {
+          "x": -54.32327704373523,
+          "z": 8.043468266353608,
+          "yaw": 0.885066815888611,
+          "pitch": -0.5203797766551117
+        },
+        "modelTime": "1.685",
+        "worldModelTime": "1.931",
+        "window": "summer",
+        "runId": "e90b0876-ed41-4da4-858e-e6ff41504e70",
+        "world": "galium_odoratum-world.png",
+        "detail": "galium_odoratum-detail.png",
+        "sha256": {
+          "galium_odoratum-world.png": "19cf914bbb6ffefbc78d10bd9ce36247a99ebc083ddd4faa71ab6c315fd590c5",
+          "galium_odoratum-detail.png": "3df3ec47e1b567d0b749d0b7d58d1514657cf4898c018289fa4c7ecfd879b6b2"
+        }
+      },
+      "initialActor": null,
+      "baselineObserverDistance": null,
+      "distanceScope": "Distance to initial model position only; mobile animal capture time and actual line of sight require fresh native measurement.",
+      "groupIdentification": "TEILWEISE",
+      "diagnosticAdequacy": "TEILWEISE",
+      "naturalism": "TEILWEISE",
+      "nativeVisibility": "NICHT GEPRÜFT",
+      "animation": "NICHT GEPRÜFT",
+      "naturalIdentificationLimit": "model comparison; natural identification may need more characters"
+    },
+    {
+      "taxon": "rubus_fruticosus",
+      "name": "Brombeeren – Rubus fruticosus agg.",
+      "stage": "adult",
+      "referenceFeatures": "Bogige bestachelte Ruten, zusammengesetzte gesägte Blätter, Sammelsteinfrüchte",
+      "diagnostics": [
+        "arching-prickles",
+        "compound-leaves",
+        "aggregate-fruit"
+      ],
+      "sourceRegister": "S15, S16, S23; Aggregat absichtlich, keine Scheingenauigkeit",
+      "habitat": "Lichter Waldsaum/Dorfrand; Strauch",
+      "designLengthMeters": 1.25,
+      "dimensionStatus": "didactic design in metres; species size source not independently calibrated",
+      "activeModel": "organism-models.js / plant",
+      "baselineCapture": {
+        "taxon": "rubus_fruticosus",
+        "stage": "adult",
+        "individual": "ranger-compact-v2:rubus_fruticosus:451",
+        "location": "woodruff",
+        "observer": {
+          "x": -54.32327704373523,
+          "z": 8.043468266353608,
+          "yaw": 0.885066815888611,
+          "pitch": -0.5203797766551117
+        },
+        "modelTime": "1.931",
+        "worldModelTime": "2.243",
+        "window": "summer",
+        "runId": "e90b0876-ed41-4da4-858e-e6ff41504e70",
+        "world": "rubus_fruticosus-world.png",
+        "detail": "rubus_fruticosus-detail.png",
+        "sha256": {
+          "rubus_fruticosus-world.png": "497e6ad81d60c5246232abe13ae544553479af2c6ce08bafa852336964f8556e",
+          "rubus_fruticosus-detail.png": "68653b5c5c687a37957681529bbf3181cb4a16d6180ddda44fb2ec6bcabeb0e6"
+        }
+      },
+      "initialActor": null,
+      "baselineObserverDistance": null,
+      "distanceScope": "Distance to initial model position only; mobile animal capture time and actual line of sight require fresh native measurement.",
+      "groupIdentification": "TEILWEISE",
+      "diagnosticAdequacy": "TEILWEISE",
+      "naturalism": "TEILWEISE",
+      "nativeVisibility": "NICHT GEPRÜFT",
+      "animation": "NICHT GEPRÜFT",
+      "naturalIdentificationLimit": "group-or-aggregate"
+    },
+    {
+      "taxon": "fagus_sylvatica",
+      "name": "Rotbuche – Fagus sylvatica",
+      "stage": "adult",
+      "referenceFeatures": "Glatte graue Rinde, elliptische weitgehend ganzrandige Blätter; Detailknospen/Früchte nur saisonal",
+      "diagnostics": [
+        "smooth-bark",
+        "elliptic-leaf",
+        "ectomycorrhiza"
+      ],
+      "sourceRegister": "S13, S32; Morphologie belegt; lokale Bestandsdichte nicht empirisch festgelegt",
+      "habitat": "Waldkern; Baum",
+      "designLengthMeters": 10,
+      "dimensionStatus": "didactic design in metres; species size source not independently calibrated",
+      "activeModel": "organism-models.js / tree",
+      "baselineCapture": {
+        "taxon": "fagus_sylvatica",
+        "stage": "adult",
+        "individual": "support-beech-a",
+        "location": "woodruff",
+        "observer": {
+          "x": -54.32327704373523,
+          "z": 8.043468266353608,
+          "yaw": 0.885066815888611,
+          "pitch": -0.5203797766551117
+        },
+        "modelTime": "2.243",
+        "worldModelTime": "2.570",
+        "window": "summer",
+        "runId": "e90b0876-ed41-4da4-858e-e6ff41504e70",
+        "world": "fagus_sylvatica-world.png",
+        "detail": "fagus_sylvatica-detail.png",
+        "sha256": {
+          "fagus_sylvatica-world.png": "8290ade020a1f8cbdcad3c959f627d581ac5d3e00904bd7b2e164241852ab59d",
+          "fagus_sylvatica-detail.png": "df9a66e5d3e37c853c39afc7fe384567ac0e6128dc2c5929e25f9d931e3ced8e"
+        }
+      },
+      "initialActor": null,
+      "baselineObserverDistance": null,
+      "distanceScope": "Distance to initial model position only; mobile animal capture time and actual line of sight require fresh native measurement.",
+      "groupIdentification": "TEILWEISE",
+      "diagnosticAdequacy": "TEILWEISE",
+      "naturalism": "TEILWEISE",
+      "nativeVisibility": "NICHT GEPRÜFT",
+      "animation": "NICHT GEPRÜFT",
+      "naturalIdentificationLimit": "model comparison; natural identification may need more characters"
+    },
+    {
+      "taxon": "capreolus_capreolus",
+      "name": "Reh – Capreolus capreolus",
+      "stage": "adult",
+      "referenceFeatures": "Schlanke Gliedmaßen, große Ohren, dunkle Nase, heller Spiegel, kaum sichtbarer Schwanz",
+      "diagnostics": [
+        "slender-legs",
+        "white-rump",
+        "short-tail"
+      ],
+      "sourceRegister": "S23, S22; Bestands-/Fluchtdistanzen sind keine recherchierten Zahlenparameter",
+      "habitat": "Deckungsreicher Saum; zeitweiser Besucher",
+      "designLengthMeters": 1.12,
+      "dimensionStatus": "didactic design in metres; species size source not independently calibrated",
+      "activeModel": "compact-roe-deer.glb",
+      "baselineCapture": {
+        "taxon": "capreolus_capreolus",
+        "stage": "adult",
+        "individual": "compact-deer-1",
+        "location": "woodruff",
+        "observer": {
+          "x": -54.32327704373523,
+          "z": 8.043468266353608,
+          "yaw": 0.885066815888611,
+          "pitch": -0.5203797766551117
+        },
+        "modelTime": "2.570",
+        "worldModelTime": "2.881",
+        "window": "summer",
+        "runId": "e90b0876-ed41-4da4-858e-e6ff41504e70",
+        "world": "capreolus_capreolus-world.png",
+        "detail": "capreolus_capreolus-detail.png",
+        "sha256": {
+          "capreolus_capreolus-world.png": "27106909950f187e451aba8595153495e94eb3eabe56643018e45b8396f9c7b7",
+          "capreolus_capreolus-detail.png": "d51a2d86a336d841a449199ea7729282fb54d13b52acc06c465f4a6315c9a914"
+        }
+      },
+      "initialActor": null,
+      "baselineObserverDistance": null,
+      "distanceScope": "Distance to initial model position only; mobile animal capture time and actual line of sight require fresh native measurement.",
+      "groupIdentification": "TEILWEISE",
+      "diagnosticAdequacy": "TEILWEISE",
+      "naturalism": "FEHLGESCHLAGEN",
+      "nativeVisibility": "NICHT GEPRÜFT",
+      "animation": "NICHT GEPRÜFT",
+      "naturalIdentificationLimit": "model comparison; natural identification may need more characters"
+    },
+    {
+      "taxon": "dendrocopos_major",
+      "name": "Buntspecht – Dendrocopos major",
+      "stage": "adult",
+      "referenceFeatures": "Weiße Schulterfelder, roter Unterschwanz; Alter/Geschlecht festgelegt",
+      "diagnostics": [
+        "white-shoulders",
+        "red-vent",
+        "stiff-tail"
+      ],
+      "sourceRegister": "S28; Fachmerkmale und Animationen benötigen Detailprüfung; keine Luftstützpunkte",
+      "habitat": "Stamm/Totholz und echte Äste",
+      "designLengthMeters": 0.24,
+      "dimensionStatus": "didactic design in metres; species size source not independently calibrated",
+      "activeModel": "fauna-view.js / active woodpecker",
+      "baselineCapture": {
+        "taxon": "dendrocopos_major",
+        "stage": "adult",
+        "individual": "compact-woodpecker-1",
+        "location": "woodruff",
+        "observer": {
+          "x": -54.32327704373523,
+          "z": 8.043468266353608,
+          "yaw": 0.885066815888611,
+          "pitch": -0.5203797766551117
+        },
+        "modelTime": "2.881",
+        "worldModelTime": "3.078",
+        "window": "summer",
+        "runId": "e90b0876-ed41-4da4-858e-e6ff41504e70",
+        "world": "dendrocopos_major-world.png",
+        "detail": "dendrocopos_major-detail.png",
+        "sha256": {
+          "dendrocopos_major-world.png": "dd977a2fb02ad9f0fbc3b12af7911992a8f165470dd965c66168e17ce5c327a2",
+          "dendrocopos_major-detail.png": "f7a2847729322b5b594fb0f0a61c594494a1d453dd3ba3604f8d9be12c86eadc"
+        }
+      },
+      "initialActor": null,
+      "baselineObserverDistance": null,
+      "distanceScope": "Distance to initial model position only; mobile animal capture time and actual line of sight require fresh native measurement.",
+      "groupIdentification": "TEILWEISE",
+      "diagnosticAdequacy": "TEILWEISE",
+      "naturalism": "FEHLGESCHLAGEN",
+      "nativeVisibility": "NICHT GEPRÜFT",
+      "animation": "NICHT GEPRÜFT",
+      "naturalIdentificationLimit": "model comparison; natural identification may need more characters"
+    },
+    {
+      "taxon": "parus_major",
+      "name": "Kohlmeise – Parus major",
+      "stage": "adult",
+      "referenceFeatures": "Schwarzer Kopf, weiße Wangen, gelbe Unterseite/dunkler Streifen",
+      "diagnostics": [
+        "white-cheeks",
+        "yellow-belly",
+        "black-stripe"
+      ],
+      "sourceRegister": "S27; Höhlen-/Revieraufgaben nur mit passender Jahreszeit",
+      "habitat": "Zweige/Kronen/Saum",
+      "designLengthMeters": 0.14,
+      "dimensionStatus": "didactic design in metres; species size source not independently calibrated",
+      "activeModel": "organism-models.js / bird",
+      "baselineCapture": {
+        "taxon": "parus_major",
+        "stage": "adult",
+        "individual": "compact-tit-0",
+        "location": "woodruff",
+        "observer": {
+          "x": -54.32327704373523,
+          "z": 8.043468266353608,
+          "yaw": 0.885066815888611,
+          "pitch": -0.5203797766551117
+        },
+        "modelTime": "3.078",
+        "worldModelTime": "3.438",
+        "window": "summer",
+        "runId": "e90b0876-ed41-4da4-858e-e6ff41504e70",
+        "world": "parus_major-world.png",
+        "detail": "parus_major-detail.png",
+        "sha256": {
+          "parus_major-world.png": "2be30c5e56a2ccb19553f1fb240aea3358006122ae984d11fad88f807da173a4",
+          "parus_major-detail.png": "fb66bf39a30b8ef31435194dd8ffc20a4057fd3419c3a8b8752da9353db3a96e"
+        }
+      },
+      "initialActor": {
+        "x": -56.3,
+        "y": 6.01846274546396,
+        "z": 12,
+        "size": 0.14
+      },
+      "baselineObserverDistance": 4.422847160503631,
+      "distanceScope": "Distance to initial model position only; mobile animal capture time and actual line of sight require fresh native measurement.",
+      "groupIdentification": "TEILWEISE",
+      "diagnosticAdequacy": "TEILWEISE",
+      "naturalism": "FEHLGESCHLAGEN",
+      "nativeVisibility": "NICHT GEPRÜFT",
+      "animation": "NICHT GEPRÜFT",
+      "naturalIdentificationLimit": "model comparison; natural identification may need more characters"
+    },
+    {
+      "taxon": "ixodes_ricinus",
+      "name": "Gemeiner Holzbock – Ixodes ricinus",
+      "stage": "adult-female",
+      "referenceFeatures": "Adulte/Nymphen acht, Larven sechs Beine; Stufe nicht mischen",
+      "diagnostics": [
+        "eight-legs",
+        "adult-female",
+        "attached-host"
+      ],
+      "sourceRegister": "S22; kein Live-Ausgraben/Anfassen realer Tiere als Arbeitsauftrag",
+      "habitat": "Feuchter Saum / adulte Zecke am Reh",
+      "designLengthMeters": 0.004,
+      "dimensionStatus": "didactic design in metres; species size source not independently calibrated",
+      "activeModel": "organism-models.js / arachnid",
+      "baselineCapture": {
+        "taxon": "ixodes_ricinus",
+        "stage": "adult-female",
+        "individual": "compact-tick",
+        "location": "woodruff",
+        "observer": {
+          "x": -54.32327704373523,
+          "z": 8.043468266353608,
+          "yaw": 0.885066815888611,
+          "pitch": -0.5203797766551117
+        },
+        "modelTime": "3.438",
+        "worldModelTime": "3.749",
+        "window": "summer",
+        "runId": "e90b0876-ed41-4da4-858e-e6ff41504e70",
+        "world": "ixodes_ricinus-world.png",
+        "detail": "ixodes_ricinus-detail.png",
+        "sha256": {
+          "ixodes_ricinus-world.png": "e0d434cf13c59e9bbfee4e77400d5dacd1a984f0d6625f418e277d98ff334220",
+          "ixodes_ricinus-detail.png": "f8010bab5c4cfa532ffa562605f7fb081cdef2bfe38e5dcbf9d7a4cf16fdb967"
+        }
+      },
+      "initialActor": {
+        "x": -59.07,
+        "y": 1.0135306840545941,
+        "z": 3.16,
+        "size": 0.004
+      },
+      "baselineObserverDistance": 6.810259990045436,
+      "distanceScope": "Distance to initial model position only; mobile animal capture time and actual line of sight require fresh native measurement.",
+      "groupIdentification": "TEILWEISE",
+      "diagnosticAdequacy": "TEILWEISE",
+      "naturalism": "TEILWEISE",
+      "nativeVisibility": "NICHT GEPRÜFT",
+      "animation": "NICHT GEPRÜFT",
+      "naturalIdentificationLimit": "model comparison; natural identification may need more characters"
+    },
+    {
+      "taxon": "urtica_dioica",
+      "name": "Große Brennnessel – Urtica dioica s. l.",
+      "stage": "adult",
+      "referenceFeatures": "Gegenständige gesägte Blätter; Brennhaare/Blüten in Detailansicht",
+      "diagnostics": [
+        "opposite-leaves",
+        "serrated-edge",
+        "stinging-hairs"
+      ],
+      "sourceRegister": "S12, S20, S53–54; Microlophium carnosum als fachlicher Modellhintergrund, im Feldbuch nur belegbare Gruppenauflösung",
+      "habitat": "Heller nährstoffreicher Wald-/Dorfrand",
+      "designLengthMeters": 0.9,
+      "dimensionStatus": "didactic design in metres; species size source not independently calibrated",
+      "activeModel": "organism-models.js / plant",
+      "baselineCapture": {
+        "taxon": "urtica_dioica",
+        "stage": "adult",
+        "individual": "ranger-compact-v2:urtica_dioica:252",
+        "location": "nettle",
+        "observer": {
+          "x": -40.47863381511998,
+          "z": 14.197259088003703,
+          "yaw": 0.8850668158886108,
+          "pitch": -0.4174609346054198
+        },
+        "modelTime": "4.028",
+        "worldModelTime": "4.354",
+        "window": "summer",
+        "runId": "fbc02bde-5778-4723-b433-d1d91e97362d",
+        "world": "urtica_dioica-world.png",
+        "detail": "urtica_dioica-detail.png",
+        "sha256": {
+          "urtica_dioica-world.png": "67c4e7f0e9d7e9ba9cd0be283b729297026666a8bb3e75fe2e060af004b36c35",
+          "urtica_dioica-detail.png": "113fbabdc61bd55485189f06efff652afa5646e5481675cd605217a268ce0921"
+        }
+      },
+      "initialActor": null,
+      "baselineObserverDistance": null,
+      "distanceScope": "Distance to initial model position only; mobile animal capture time and actual line of sight require fresh native measurement.",
+      "groupIdentification": "TEILWEISE",
+      "diagnosticAdequacy": "TEILWEISE",
+      "naturalism": "TEILWEISE",
+      "nativeVisibility": "NICHT GEPRÜFT",
+      "animation": "NICHT GEPRÜFT",
+      "naturalIdentificationLimit": "group-or-aggregate"
+    },
+    {
+      "taxon": "aglais_io",
+      "name": "Tagpfauenauge – Aglais io, Falter und Raupe",
+      "stage": "caterpillar",
+      "referenceFeatures": "Falter: Augenflecken; Raupe: dunkel/bedornt mit hellen Punkten",
+      "diagnostics": [
+        "four-eyespots",
+        "club-antennae",
+        "nettle-caterpillar"
+      ],
+      "sourceRegister": "S20; saisonale Stadien explizit",
+      "habitat": "Brennnessel- und Blütensaum",
+      "designLengthMeters": 0.06,
+      "dimensionStatus": "didactic design in metres; species size source not independently calibrated",
+      "activeModel": "organism-models.js / insect",
+      "baselineCapture": {
+        "taxon": "aglais_io",
+        "stage": "caterpillar",
+        "individual": "compact-caterpillar",
+        "location": "nettle",
+        "observer": {
+          "x": -40.47863381511998,
+          "z": 14.197259088003703,
+          "yaw": 0.8850668158886108,
+          "pitch": -0.4174609346054198
+        },
+        "modelTime": "4.354",
+        "worldModelTime": "4.551",
+        "window": "summer",
+        "runId": "fbc02bde-5778-4723-b433-d1d91e97362d",
+        "world": "aglais_io-caterpillar-world.png",
+        "detail": "aglais_io-caterpillar-detail.png",
+        "sha256": {
+          "aglais_io-caterpillar-world.png": "83282ac2908141c97fade8ccfbb8dcd51463a765bb622c565c1dfc7cb26468d0",
+          "aglais_io-caterpillar-detail.png": "4570e6f4f727fd38bdfb883a94c8e1aebd3a42b3887238ea10fcc8eeabc9f56f"
+        }
+      },
+      "initialActor": {
+        "x": -42.67863381511998,
+        "y": 0.7897106751957863,
+        "z": 12.397259088003702,
+        "size": 0.035
+      },
+      "baselineObserverDistance": 2.8425340807103816,
+      "distanceScope": "Distance to initial model position only; mobile animal capture time and actual line of sight require fresh native measurement.",
+      "groupIdentification": "TEILWEISE",
+      "diagnosticAdequacy": "TEILWEISE",
+      "naturalism": "TEILWEISE",
+      "nativeVisibility": "NICHT GEPRÜFT",
+      "animation": "NICHT GEPRÜFT",
+      "naturalIdentificationLimit": "model comparison; natural identification may need more characters"
+    },
+    {
+      "taxon": "coccinella_septempunctata",
+      "name": "Siebenpunkt-Marienkäfer – Coccinella septempunctata",
+      "stage": "adult",
+      "referenceFeatures": "Rote Flügeldecken mit sieben Flecken und korrekt gestalteter Vorderkörperzeichnung",
+      "diagnostics": [
+        "seven-spots",
+        "six-legs",
+        "aphid-prey"
+      ],
+      "sourceRegister": "S21, S53–54; echte Beuteobjekte im Nahmodell; Feldstudie liefert keine örtliche Fressrate",
+      "habitat": "Blattlauskolonie am Saum",
+      "designLengthMeters": 0.007,
+      "dimensionStatus": "didactic design in metres; species size source not independently calibrated",
+      "activeModel": "organism-models.js / insect",
+      "baselineCapture": {
+        "taxon": "coccinella_septempunctata",
+        "stage": "adult",
+        "individual": "compact-ladybird-0",
+        "location": "nettle",
+        "observer": {
+          "x": -40.47863381511998,
+          "z": 14.197259088003703,
+          "yaw": 0.8850668158886108,
+          "pitch": -0.4174609346054198
+        },
+        "modelTime": "4.551",
+        "worldModelTime": "4.863",
+        "window": "summer",
+        "runId": "fbc02bde-5778-4723-b433-d1d91e97362d",
+        "world": "coccinella_septempunctata-world.png",
+        "detail": "coccinella_septempunctata-detail.png",
+        "sha256": {
+          "coccinella_septempunctata-world.png": "fc8dbec5d35f1f01afcb6ec5da3d77cf88cc8046b6d30dee6e1892bc604f7526",
+          "coccinella_septempunctata-detail.png": "1450786a8f4de9ebf1c6cd91c60c70fef24695dccb4e9e20c926108fe35a678c"
+        }
+      },
+      "initialActor": {
+        "x": -42.60863381511998,
+        "y": 0.7897106751957863,
+        "z": 12.397259088003702,
+        "size": 0.007
+      },
+      "baselineObserverDistance": 2.7887093789063098,
+      "distanceScope": "Distance to initial model position only; mobile animal capture time and actual line of sight require fresh native measurement.",
+      "groupIdentification": "TEILWEISE",
+      "diagnosticAdequacy": "BESTANDEN",
+      "naturalism": "TEILWEISE",
+      "nativeVisibility": "NICHT GEPRÜFT",
+      "animation": "NICHT GEPRÜFT",
+      "naturalIdentificationLimit": "model comparison; natural identification may need more characters"
+    },
+    {
+      "taxon": "aphidoidea",
+      "name": "Blattläuse – Aphidoidea, Modellgruppe",
+      "stage": "adult",
+      "referenceFeatures": "Kleine Kolonie mit Siphonen; keine ungesicherte Einzelartbenennung",
+      "diagnostics": [
+        "siphunculi",
+        "six-legs",
+        "plant-host"
+      ],
+      "sourceRegister": "S53–54: Brennnessel–Microlophium carnosum–Coccinella septempunctata belegt; Feldbestimmung bleibt Blattlausgruppe, lokale Raten offen",
+      "habitat": "Geeignete krautige Wirtspflanze",
+      "designLengthMeters": 0.003,
+      "dimensionStatus": "didactic design in metres; species size source not independently calibrated",
+      "activeModel": "organism-models.js / insect",
+      "baselineCapture": {
+        "taxon": "aphidoidea",
+        "stage": "adult",
+        "individual": "compact-aphid-0",
+        "location": "nettle",
+        "observer": {
+          "x": -40.47863381511998,
+          "z": 14.197259088003703,
+          "yaw": 0.8850668158886108,
+          "pitch": -0.4174609346054198
+        },
+        "modelTime": "4.863",
+        "worldModelTime": "5.158",
+        "window": "summer",
+        "runId": "fbc02bde-5778-4723-b433-d1d91e97362d",
+        "world": "aphidoidea-world.png",
+        "detail": "aphidoidea-detail.png",
+        "sha256": {
+          "aphidoidea-world.png": "1345eb649815468de2f98809e812e15cefd7c2f8441921badd34f698b0d200bc",
+          "aphidoidea-detail.png": "d366dfefa7564a53e7bf493d810627b8d7e396f26d83a9f945298c58f80e322a"
+        }
+      },
+      "initialActor": {
+        "x": -42.64863381511998,
+        "y": 0.7897106751957863,
+        "z": 12.407259088003702,
+        "size": 0.003
+      },
+      "baselineObserverDistance": 2.8130055101261373,
+      "distanceScope": "Distance to initial model position only; mobile animal capture time and actual line of sight require fresh native measurement.",
+      "groupIdentification": "TEILWEISE",
+      "diagnosticAdequacy": "TEILWEISE",
+      "naturalism": "TEILWEISE",
+      "nativeVisibility": "NICHT GEPRÜFT",
+      "animation": "NICHT GEPRÜFT",
+      "naturalIdentificationLimit": "group-or-aggregate"
+    },
+    {
+      "taxon": "trifolium_pratense",
+      "name": "Rotklee – Trifolium pratense",
+      "stage": "adult",
+      "referenceFeatures": "Dreiteilige Blätter, rötlicher Blütenkopf aus Einzelblüten",
+      "diagnostics": [
+        "three-leaflets",
+        "pink-floret-head",
+        "pollen-contact"
+      ],
+      "sourceRegister": "S17, S18, S51, S52; Besuche belegt, nicht jeder Besuch bestäubt",
+      "habitat": "Kleine sonnige Fläche am Dorf; kein viertes Wiesenbiom",
+      "designLengthMeters": 0.3,
+      "dimensionStatus": "didactic design in metres; species size source not independently calibrated",
+      "activeModel": "organism-models.js / plant",
+      "baselineCapture": {
+        "taxon": "trifolium_pratense",
+        "stage": "adult",
+        "individual": "ranger-compact-v2:trifolium_pratense:454",
+        "location": "flowers",
+        "observer": {
+          "x": -28,
+          "z": 9,
+          "yaw": -1.5707963267948966,
+          "pitch": -0.45965696395168926
+        },
+        "modelTime": "5.744",
+        "worldModelTime": "5.909",
+        "window": "summer",
+        "runId": "1175bb9b-8136-457a-b08b-2c0dde30c01b",
+        "world": "trifolium_pratense-world.png",
+        "detail": "trifolium_pratense-detail.png",
+        "sha256": {
+          "trifolium_pratense-world.png": "5f87154e8bd79fe53e39fa5c9a7c5e58d99c1897fe8046a03e03b2868c689c84",
+          "trifolium_pratense-detail.png": "0353395488852613c760d5f55410e3cab1145062cfd8da6a8500ffbf420980c6"
+        }
+      },
+      "initialActor": null,
+      "baselineObserverDistance": null,
+      "distanceScope": "Distance to initial model position only; mobile animal capture time and actual line of sight require fresh native measurement.",
+      "groupIdentification": "TEILWEISE",
+      "diagnosticAdequacy": "TEILWEISE",
+      "naturalism": "TEILWEISE",
+      "nativeVisibility": "NICHT GEPRÜFT",
+      "animation": "NICHT GEPRÜFT",
+      "naturalIdentificationLimit": "model comparison; natural identification may need more characters"
+    },
+    {
+      "taxon": "bombus_lapidarius",
+      "name": "Steinhummel – Bombus lapidarius",
+      "stage": "worker",
+      "referenceFeatures": "Behaarter Körper, rotes Hinterleibsende; ähnliche Arten und Geschlechtsmerkmale beachten",
+      "diagnostics": [
+        "hairy-body",
+        "red-tail",
+        "six-legs"
+      ],
+      "sourceRegister": "S19, S17–18, S51–52; genaue Flugzahlen unkalibriert",
+      "habitat": "Sonniger Dorf-/Waldsaum mit Blüten",
+      "designLengthMeters": 0.017,
+      "dimensionStatus": "didactic design in metres; species size source not independently calibrated",
+      "activeModel": "organism-models.js / insect",
+      "baselineCapture": {
+        "taxon": "bombus_lapidarius",
+        "stage": "worker",
+        "individual": "compact-bee",
+        "location": "flowers",
+        "observer": {
+          "x": -28,
+          "z": 9,
+          "yaw": -1.5707963267948966,
+          "pitch": -0.45965696395168926
+        },
+        "modelTime": "5.909",
+        "worldModelTime": "6.204",
+        "window": "summer",
+        "runId": "1175bb9b-8136-457a-b08b-2c0dde30c01b",
+        "world": "bombus_lapidarius-world.png",
+        "detail": "bombus_lapidarius-detail.png",
+        "sha256": {
+          "bombus_lapidarius-world.png": "0ee290f7594902368265091db35b5804c11fc61bca117db95ef2d85deee8954e",
+          "bombus_lapidarius-detail.png": "7b09daf760016e786e820e6b302c097e15db2ef881ede2bdfa605dfb32f70df8"
+        }
+      },
+      "initialActor": {
+        "x": -24.8446111497758,
+        "y": 0.6164360749566014,
+        "z": 9.526615184029357,
+        "size": 0.017
+      },
+      "baselineObserverDistance": 3.19903147033121,
+      "distanceScope": "Distance to initial model position only; mobile animal capture time and actual line of sight require fresh native measurement.",
+      "groupIdentification": "TEILWEISE",
+      "diagnosticAdequacy": "TEILWEISE",
+      "naturalism": "TEILWEISE",
+      "nativeVisibility": "NICHT GEPRÜFT",
+      "animation": "NICHT GEPRÜFT",
+      "naturalIdentificationLimit": "model comparison; natural identification may need more characters"
+    },
+    {
+      "taxon": "aglais_io",
+      "name": "Tagpfauenauge – Aglais io, Falter und Raupe",
+      "stage": "adult",
+      "referenceFeatures": "Falter: Augenflecken; Raupe: dunkel/bedornt mit hellen Punkten",
+      "diagnostics": [
+        "four-eyespots",
+        "club-antennae",
+        "nettle-caterpillar"
+      ],
+      "sourceRegister": "S20; saisonale Stadien explizit",
+      "habitat": "Brennnessel- und Blütensaum",
+      "designLengthMeters": 0.06,
+      "dimensionStatus": "didactic design in metres; species size source not independently calibrated",
+      "activeModel": "organism-models.js / insect",
+      "baselineCapture": {
+        "taxon": "aglais_io",
+        "stage": "adult",
+        "individual": "compact-butterfly",
+        "location": "flowers",
+        "observer": {
+          "x": -28,
+          "z": 9,
+          "yaw": -1.5707963267948966,
+          "pitch": -0.45965696395168926
+        },
+        "modelTime": "6.204",
+        "worldModelTime": "6.499",
+        "window": "summer",
+        "runId": "1175bb9b-8136-457a-b08b-2c0dde30c01b",
+        "world": "aglais_io-world.png",
+        "detail": "aglais_io-detail.png",
+        "sha256": {
+          "aglais_io-world.png": "dfd623a890bf7357adf8d5d3c31a6bdd701e83e651060d50613ad684f44db483",
+          "aglais_io-detail.png": "c2a55860277325fb35a5e305250efd230e4753d4a5dc1ad57666adab8011118b"
+        }
+      },
+      "initialActor": {
+        "x": -26,
+        "y": 0.8017998376077886,
+        "z": 11,
+        "size": 0.06
+      },
+      "baselineObserverDistance": 2.8284271247461903,
+      "distanceScope": "Distance to initial model position only; mobile animal capture time and actual line of sight require fresh native measurement.",
+      "groupIdentification": "TEILWEISE",
+      "diagnosticAdequacy": "TEILWEISE",
+      "naturalism": "TEILWEISE",
+      "nativeVisibility": "NICHT GEPRÜFT",
+      "animation": "NICHT GEPRÜFT",
+      "naturalIdentificationLimit": "model comparison; natural identification may need more characters"
+    },
+    {
+      "taxon": "fomes_fomentarius",
+      "name": "Zunderschwamm – Fomes fomentarius",
+      "stage": "fruiting-body",
+      "referenceFeatures": "Hufförmige graue Konsole; Poren auf Unterseite",
+      "diagnostics": [
+        "hoof-bracket",
+        "grey-rings",
+        "pores-below"
+      ],
+      "sourceRegister": "S30, S31; belegt; kein makroskopisch sichtbarer Sofortabbau",
+      "habitat": "Buchen-Totholz",
+      "designLengthMeters": 0.22,
+      "dimensionStatus": "didactic design in metres; species size source not independently calibrated",
+      "activeModel": "organism-models.js / fungus",
+      "baselineCapture": {
+        "taxon": "fomes_fomentarius",
+        "stage": "fruiting-body",
+        "individual": "compact-bracket",
+        "location": "wood",
+        "observer": {
+          "x": -60,
+          "z": -4,
+          "yaw": 2.289626326416521,
+          "pitch": -0.46001848475880475
+        },
+        "modelTime": "6.858",
+        "worldModelTime": "7.136",
+        "window": "summer",
+        "runId": "a15ca455-80af-44ff-8e0f-fc3a031bf63d",
+        "world": "fomes_fomentarius-world.png",
+        "detail": "fomes_fomentarius-detail.png",
+        "sha256": {
+          "fomes_fomentarius-world.png": "8672ce6447ea0858a6496d1c7c139f0a6516d2c8609a5d1884372907b18c249b",
+          "fomes_fomentarius-detail.png": "bb965bd42a97f1465a7702b51d8795a539312c8431320846ef5b79de62151743"
+        }
+      },
+      "initialActor": {
+        "x": -62,
+        "y": 0.900378082520675,
+        "z": -2.25,
+        "size": 0.22
+      },
+      "baselineObserverDistance": 2.6575364531836625,
+      "distanceScope": "Distance to initial model position only; mobile animal capture time and actual line of sight require fresh native measurement.",
+      "groupIdentification": "TEILWEISE",
+      "diagnosticAdequacy": "TEILWEISE",
+      "naturalism": "TEILWEISE",
+      "nativeVisibility": "NICHT GEPRÜFT",
+      "animation": "NICHT GEPRÜFT",
+      "naturalIdentificationLimit": "model comparison; natural identification may need more characters"
+    },
+    {
+      "taxon": "lumbricidae",
+      "name": "Regenwurm – Lumbricus-Modell / Lumbricidae",
+      "stage": "adult",
+      "referenceFeatures": "Segmentierter Körper; Gürtel bei adultem Modell; Gruppenbestimmung ausreichend",
+      "diagnostics": [
+        "segmented-body",
+        "adult-clitellum",
+        "litter-pulling"
+      ],
+      "sourceRegister": "S55: Lumbricus terrestris zieht Streu in senkrechte Gänge; Schülerbestimmung zunächst Gruppe; keine Schweizer Kohlenstoffraten als norddeutsche Messwerte",
+      "habitat": "Feuchter Streuboden, Untersuchungsfenster",
+      "designLengthMeters": 0.18,
+      "dimensionStatus": "didactic design in metres; species size source not independently calibrated",
+      "activeModel": "organism-models.js / worm",
+      "baselineCapture": {
+        "taxon": "lumbricidae",
+        "stage": "adult",
+        "individual": "compact-earthworm",
+        "location": "wood",
+        "observer": {
+          "x": -60,
+          "z": -4,
+          "yaw": 2.289626326416521,
+          "pitch": -0.46001848475880475
+        },
+        "modelTime": "7.136",
+        "worldModelTime": "7.284",
+        "window": "summer",
+        "runId": "a15ca455-80af-44ff-8e0f-fc3a031bf63d",
+        "world": "lumbricidae-world.png",
+        "detail": "lumbricidae-detail.png",
+        "sha256": {
+          "lumbricidae-world.png": "467069deb920677f495c67628dbd2128f2601bd78ce772c246d253e9a38833af",
+          "lumbricidae-detail.png": "d6ec050597169ee5842083f1d5571a798f14a15c926cec9d1a477d57653f8e88"
+        }
+      },
+      "initialActor": {
+        "x": -61,
+        "y": 0.36119904491269395,
+        "z": -2.7,
+        "size": 0.18
+      },
+      "baselineObserverDistance": 1.6401219466856725,
+      "distanceScope": "Distance to initial model position only; mobile animal capture time and actual line of sight require fresh native measurement.",
+      "groupIdentification": "TEILWEISE",
+      "diagnosticAdequacy": "TEILWEISE",
+      "naturalism": "TEILWEISE",
+      "nativeVisibility": "NICHT GEPRÜFT",
+      "animation": "NICHT GEPRÜFT",
+      "naturalIdentificationLimit": "group-or-aggregate"
+    },
+    {
+      "taxon": "festuca_rubra",
+      "name": "Rotschwingel – Festuca rubra agg., Küstenform",
+      "stage": "adult",
+      "referenceFeatures": "Feine Blätter und schmale Rispen; keine Bestimmung anhand beliebiger Grastextur",
+      "diagnostics": [
+        "fine-rolled-leaves",
+        "narrow-panicle",
+        "upper-marsh"
+      ],
+      "sourceRegister": "S04; Unterart nicht ohne diagnostische Belege festlegen",
+      "habitat": "Obere Salzwiese",
+      "designLengthMeters": 0.55,
+      "dimensionStatus": "didactic design in metres; species size source not independently calibrated",
+      "activeModel": "organism-models.js / plant",
+      "baselineCapture": {
+        "taxon": "festuca_rubra",
+        "stage": "adult",
+        "individual": "ranger-compact-v2:festuca_rubra:497",
+        "location": "upper-marsh",
+        "observer": {
+          "x": 23,
+          "z": 20,
+          "yaw": -1.5707963267948966,
+          "pitch": -0.6007289669407488
+        },
+        "modelTime": "7.986",
+        "worldModelTime": "8.168",
+        "window": "summer",
+        "runId": "aca7bfa3-a7f8-48e6-9edb-0f82c2095df9",
+        "world": "festuca_rubra-world.png",
+        "detail": "festuca_rubra-detail.png",
+        "sha256": {
+          "festuca_rubra-world.png": "6283d31d6d3e3fcc0979a7914ba7103d5bdc1328ac1c5342097e18b0a5327086",
+          "festuca_rubra-detail.png": "dd2534d7fa34e18f25701c37765ac7e1a0cf609253246abe5281194b8c6ec5b8"
+        }
+      },
+      "initialActor": null,
+      "baselineObserverDistance": null,
+      "distanceScope": "Distance to initial model position only; mobile animal capture time and actual line of sight require fresh native measurement.",
+      "groupIdentification": "TEILWEISE",
+      "diagnosticAdequacy": "TEILWEISE",
+      "naturalism": "TEILWEISE",
+      "nativeVisibility": "NICHT GEPRÜFT",
+      "animation": "NICHT GEPRÜFT",
+      "naturalIdentificationLimit": "group-or-aggregate"
+    },
+    {
+      "taxon": "limonium_vulgare",
+      "name": "Strandflieder – Limonium vulgare",
+      "stage": "adult",
+      "referenceFeatures": "Bodenrosette und locker verzweigte violette Blütenstände",
+      "diagnostics": [
+        "basal-rosette",
+        "branched-purple-flowers",
+        "marsh"
+      ],
+      "sourceRegister": "S04/S03 als Standortkontext; konkrete Salzdrüsen-/Blühmerkmale vor Detailasset zusätzlich prüfen",
+      "habitat": "Passende Salzrasen/Prielumfeld",
+      "designLengthMeters": 0.45,
+      "dimensionStatus": "didactic design in metres; species size source not independently calibrated",
+      "activeModel": "organism-models.js / plant",
+      "baselineCapture": {
+        "taxon": "limonium_vulgare",
+        "stage": "adult",
+        "individual": "ranger-compact-v2:limonium_vulgare:606",
+        "location": "upper-marsh",
+        "observer": {
+          "x": 23,
+          "z": 20,
+          "yaw": -1.5707963267948966,
+          "pitch": -0.6007289669407488
+        },
+        "modelTime": "8.168",
+        "worldModelTime": "8.333",
+        "window": "summer",
+        "runId": "aca7bfa3-a7f8-48e6-9edb-0f82c2095df9",
+        "world": "limonium_vulgare-world.png",
+        "detail": "limonium_vulgare-detail.png",
+        "sha256": {
+          "limonium_vulgare-world.png": "c050c3ac8f20282e2544523c1fb6b96bdf9b01d8196ea38d49e2eb7770de503e",
+          "limonium_vulgare-detail.png": "172fec0aff77f606d2f3bddf887e9f7b030c1d6c713275d8c9fff3780561459d"
+        }
+      },
+      "initialActor": null,
+      "baselineObserverDistance": null,
+      "distanceScope": "Distance to initial model position only; mobile animal capture time and actual line of sight require fresh native measurement.",
+      "groupIdentification": "TEILWEISE",
+      "diagnosticAdequacy": "TEILWEISE",
+      "naturalism": "TEILWEISE",
+      "nativeVisibility": "NICHT GEPRÜFT",
+      "animation": "NICHT GEPRÜFT",
+      "naturalIdentificationLimit": "model comparison; natural identification may need more characters"
+    },
+    {
+      "taxon": "sporobolus_anglicus",
+      "name": "Englisches Schlickgras – Sporobolus anglicus (Syn. Spartina anglica)",
+      "stage": "adult",
+      "referenceFeatures": "Kräftige aufrechte Halme, relativ breite Blätter; Horste/Rhizomflächen",
+      "diagnostics": [
+        "broad-grass-leaves",
+        "upright-tuft",
+        "spike-branches"
+      ],
+      "sourceRegister": "S07–09; ähnliche Cytotypen, keine sichere Feldbestimmung allein aus Horstform",
+      "habitat": "Pionierzone und passende Übergänge",
+      "designLengthMeters": 0.95,
+      "dimensionStatus": "didactic design in metres; species size source not independently calibrated",
+      "activeModel": "organism-models.js / plant",
+      "baselineCapture": {
+        "taxon": "sporobolus_anglicus",
+        "stage": "adult",
+        "individual": "ranger-compact-v2:sporobolus_anglicus:402",
+        "location": "lower-marsh",
+        "observer": {
+          "x": 35,
+          "z": -17,
+          "yaw": -1.5707963267948966,
+          "pitch": -0.5709995531952461
+        },
+        "modelTime": "8.707",
+        "worldModelTime": "8.986",
+        "window": "summer",
+        "runId": "7390fa13-6814-44a3-bf77-eb27fe97f81a",
+        "world": "sporobolus_anglicus-world.png",
+        "detail": "sporobolus_anglicus-detail.png",
+        "sha256": {
+          "sporobolus_anglicus-world.png": "6b9e7f023d945a1d366ddd8dcbfbf057f08cee4efa401fbc851a858d928192e7",
+          "sporobolus_anglicus-detail.png": "5f982e5497d8613f32d88efab4c60850289d5bea57e11744e745f9d3696777d3"
+        }
+      },
+      "initialActor": null,
+      "baselineObserverDistance": null,
+      "distanceScope": "Distance to initial model position only; mobile animal capture time and actual line of sight require fresh native measurement.",
+      "groupIdentification": "TEILWEISE",
+      "diagnosticAdequacy": "TEILWEISE",
+      "naturalism": "TEILWEISE",
+      "nativeVisibility": "NICHT GEPRÜFT",
+      "animation": "NICHT GEPRÜFT",
+      "naturalIdentificationLimit": "model comparison; natural identification may need more characters"
+    },
+    {
+      "taxon": "puccinellia_maritima",
+      "name": "Andel – Puccinellia maritima",
+      "stage": "adult",
+      "referenceFeatures": "Feine graugrüne Blätter/Rispen; von Schlickgras unterscheidbarer Habitus",
+      "diagnostics": [
+        "fine-grey-leaves",
+        "open-panicle",
+        "lower-marsh"
+      ],
+      "sourceRegister": "S06; Teilareal nicht durch Artlabel allein wissenschaftlich bewiesen",
+      "habitat": "Untere Salzwiese",
+      "designLengthMeters": 0.4,
+      "dimensionStatus": "didactic design in metres; species size source not independently calibrated",
+      "activeModel": "organism-models.js / plant",
+      "baselineCapture": {
+        "taxon": "puccinellia_maritima",
+        "stage": "adult",
+        "individual": "ranger-compact-v2:puccinellia_maritima:542",
+        "location": "lower-marsh",
+        "observer": {
+          "x": 35,
+          "z": -17,
+          "yaw": -1.5707963267948966,
+          "pitch": -0.5709995531952461
+        },
+        "modelTime": "8.986",
+        "worldModelTime": "9.249",
+        "window": "summer",
+        "runId": "7390fa13-6814-44a3-bf77-eb27fe97f81a",
+        "world": "puccinellia_maritima-world.png",
+        "detail": "puccinellia_maritima-detail.png",
+        "sha256": {
+          "puccinellia_maritima-world.png": "803d242b99eb7eea3d6fb5966ddc9f8acd743dcd08aa8dde83b6385979d6ce32",
+          "puccinellia_maritima-detail.png": "e4905653678228db3eb8618a01374b0e6f6455776f8f257cd36a50336df0cf8f"
+        }
+      },
+      "initialActor": null,
+      "baselineObserverDistance": null,
+      "distanceScope": "Distance to initial model position only; mobile animal capture time and actual line of sight require fresh native measurement.",
+      "groupIdentification": "TEILWEISE",
+      "diagnosticAdequacy": "TEILWEISE",
+      "naturalism": "TEILWEISE",
+      "nativeVisibility": "NICHT GEPRÜFT",
+      "animation": "NICHT GEPRÜFT",
+      "naturalIdentificationLimit": "model comparison; natural identification may need more characters"
+    },
+    {
+      "taxon": "halimione_portulacoides",
+      "name": "Portulak-Keilmelde – Halimione portulacoides (Syn. Atriplex portulacoides)",
+      "stage": "adult",
+      "referenceFeatures": "Silbrige gegenständige fleischige Blätter, verzweigter Zwergstrauch",
+      "diagnostics": [
+        "fleshy-opposite-leaves",
+        "silvery-shrub",
+        "branched-wood"
+      ],
+      "sourceRegister": "S05; nicht starre mittlere Höhenzone an jedem Standort",
+      "habitat": "Gut entwässerte untere Salzwiese/Prielränder",
+      "designLengthMeters": 0.65,
+      "dimensionStatus": "didactic design in metres; species size source not independently calibrated",
+      "activeModel": "organism-models.js / plant",
+      "baselineCapture": {
+        "taxon": "halimione_portulacoides",
+        "stage": "adult",
+        "individual": "ranger-compact-v2:halimione_portulacoides:320",
+        "location": "salt-shrub",
+        "observer": {
+          "x": 39.91028266683612,
+          "z": 12.630672007805904,
+          "yaw": 0.8850668158886108,
+          "pitch": -0.38432593614202976
+        },
+        "modelTime": "9.608",
+        "worldModelTime": "9.903",
+        "window": "summer",
+        "runId": "1beaf360-3663-4965-96a6-e5e0abde127d",
+        "world": "halimione_portulacoides-world.png",
+        "detail": "halimione_portulacoides-detail.png",
+        "sha256": {
+          "halimione_portulacoides-world.png": "44335562d0cdf8cc388a77a50396e2ca6a45d813df477554859e1e0b1b7f2156",
+          "halimione_portulacoides-detail.png": "31cb6d55dfc7690d9c377152d02d96a4ae2630c91cec9a63577d79a8f2e5cb46"
+        }
+      },
+      "initialActor": null,
+      "baselineObserverDistance": null,
+      "distanceScope": "Distance to initial model position only; mobile animal capture time and actual line of sight require fresh native measurement.",
+      "groupIdentification": "TEILWEISE",
+      "diagnosticAdequacy": "BESTANDEN",
+      "naturalism": "TEILWEISE",
+      "nativeVisibility": "NICHT GEPRÜFT",
+      "animation": "NICHT GEPRÜFT",
+      "naturalIdentificationLimit": "model comparison; natural identification may need more characters"
+    },
+    {
+      "taxon": "salicornia_europaea",
+      "name": "Queller – Salicornia europaea agg.",
+      "stage": "adult",
+      "referenceFeatures": "Gegliederte fleischige Sprosse, stark reduzierte Blätter",
+      "diagnostics": [
+        "segmented-shoot",
+        "reduced-leaves",
+        "succulent"
+      ],
+      "sourceRegister": "S04; Aggregat statt unsicherer Kleinart",
+      "habitat": "Pionierzone",
+      "designLengthMeters": 0.3,
+      "dimensionStatus": "didactic design in metres; species size source not independently calibrated",
+      "activeModel": "organism-models.js / plant",
+      "baselineCapture": {
+        "taxon": "salicornia_europaea",
+        "stage": "adult",
+        "individual": "ranger-compact-v2:salicornia_europaea:355",
+        "location": "salt-segments",
+        "observer": {
+          "x": 47.06361154650879,
+          "z": -1.1226803810237544,
+          "yaw": -0.8850668158886109,
+          "pitch": -0.7030085480263402
+        },
+        "modelTime": "10.246",
+        "worldModelTime": "10.558",
+        "window": "summer",
+        "runId": "726da413-136f-48d5-a49e-96deabc7c6f8",
+        "world": "salicornia_europaea-world.png",
+        "detail": "salicornia_europaea-detail.png",
+        "sha256": {
+          "salicornia_europaea-world.png": "37d3e8ff79d4c7fc8ae212abd353f1b5aff62725d83361d0650edc3f8c0f1219",
+          "salicornia_europaea-detail.png": "cd92fe345f1d2d6760f1b69d060c45db3f7bdc8072e37175a19ea0ba01129f37"
+        }
+      },
+      "initialActor": null,
+      "baselineObserverDistance": null,
+      "distanceScope": "Distance to initial model position only; mobile animal capture time and actual line of sight require fresh native measurement.",
+      "groupIdentification": "TEILWEISE",
+      "diagnosticAdequacy": "TEILWEISE",
+      "naturalism": "TEILWEISE",
+      "nativeVisibility": "NICHT GEPRÜFT",
+      "animation": "NICHT GEPRÜFT",
+      "naturalIdentificationLimit": "group-or-aggregate"
+    },
+    {
+      "taxon": "recurvirostra_avosetta",
+      "name": "Säbelschnäbler – Recurvirostra avosetta",
+      "stage": "adult",
+      "referenceFeatures": "Dünner aufgebogener Schnabel, schwarz-weißes Gefieder, lange Beine",
+      "diagnostics": [
+        "upcurved-bill",
+        "black-white-plumage",
+        "sweeping"
+      ],
+      "sourceRegister": "S34; Beutegrößen und Wassertiefen zunächst qualitative Zustandsbedingungen",
+      "habitat": "Sehr flaches Wasser/feiner nasser Schlick; Rast höher",
+      "designLengthMeters": 0.43,
+      "dimensionStatus": "didactic design in metres; species size source not independently calibrated",
+      "activeModel": "organism-models.js / bird",
+      "baselineCapture": {
+        "taxon": "recurvirostra_avosetta",
+        "stage": "adult",
+        "individual": "compact-avocet",
+        "location": "coast",
+        "observer": {
+          "x": 63,
+          "z": -13,
+          "yaw": -2.3036114285814033,
+          "pitch": -0.12788807707486585
+        },
+        "modelTime": "0.000",
+        "worldModelTime": "0.182",
+        "window": "summer",
+        "runId": "7e066948-c778-471b-a4ba-689993e3b698",
+        "world": "recurvirostra_avosetta-world.png",
+        "detail": "recurvirostra_avosetta-detail.png",
+        "sha256": {
+          "recurvirostra_avosetta-world.png": "8782dd984603b18958e2ef3971d1217949f5bc09c2884b1c177200b93efadadb",
+          "recurvirostra_avosetta-detail.png": "1ab65bd95e0e6a682128bf4e369645e99ed3a4d8de9c28fff15f86a5c02d5d81"
+        }
+      },
+      "initialActor": {
+        "x": 62,
+        "y": -0.6644065008327552,
+        "z": -7,
+        "size": 0.43
+      },
+      "baselineObserverDistance": 6.0827625302982185,
+      "distanceScope": "Distance to initial model position only; mobile animal capture time and actual line of sight require fresh native measurement.",
+      "groupIdentification": "TEILWEISE",
+      "diagnosticAdequacy": "TEILWEISE",
+      "naturalism": "FEHLGESCHLAGEN",
+      "nativeVisibility": "NICHT GEPRÜFT",
+      "animation": "NICHT GEPRÜFT",
+      "naturalIdentificationLimit": "model comparison; natural identification may need more characters"
+    },
+    {
+      "taxon": "haematopus_ostralegus",
+      "name": "Austernfischer – Haematopus ostralegus",
+      "stage": "adult",
+      "referenceFeatures": "Schwarz-weiß, kräftiger gerader orange-roter Schnabel, kräftige Beine",
+      "diagnostics": [
+        "straight-orange-bill",
+        "black-white-body",
+        "shell-opening"
+      ],
+      "sourceRegister": "S37–38; individuelle Suchweise nicht automatisch genetische Spezialisierung",
+      "habitat": "Trockenfallende Muschel-/Wattfläche und Hochwasserrast",
+      "designLengthMeters": 0.43,
+      "dimensionStatus": "didactic design in metres; species size source not independently calibrated",
+      "activeModel": "organism-models.js / bird",
+      "baselineCapture": {
+        "taxon": "haematopus_ostralegus",
+        "stage": "adult",
+        "individual": "compact-oystercatcher",
+        "location": "coast",
+        "observer": {
+          "x": 63,
+          "z": -13,
+          "yaw": -2.3036114285814033,
+          "pitch": -0.12788807707486585
+        },
+        "modelTime": "0.000",
+        "worldModelTime": "0.278",
+        "window": "summer",
+        "runId": "c50a4ca7-2273-4b24-999a-1b285526f3f1",
+        "world": "haematopus_ostralegus-world.png",
+        "detail": "haematopus_ostralegus-detail.png",
+        "sha256": {
+          "haematopus_ostralegus-world.png": "09962cc8ac2cb06f871aaef5e57f4bef73dc40a489b65a589461d7a05d0ed345",
+          "haematopus_ostralegus-detail.png": "33becfe225146b672192105eeb5d4636ee9ab92bc2686316efcceb7d854b7698"
+        }
+      },
+      "initialActor": {
+        "x": 61,
+        "y": -0.5737224676850295,
+        "z": -15.3,
+        "size": 0.43
+      },
+      "baselineObserverDistance": 3.0479501308256345,
+      "distanceScope": "Distance to initial model position only; mobile animal capture time and actual line of sight require fresh native measurement.",
+      "groupIdentification": "TEILWEISE",
+      "diagnosticAdequacy": "TEILWEISE",
+      "naturalism": "FEHLGESCHLAGEN",
+      "nativeVisibility": "NICHT GEPRÜFT",
+      "animation": "NICHT GEPRÜFT",
+      "naturalIdentificationLimit": "model comparison; natural identification may need more characters"
+    },
+    {
+      "taxon": "mytilus_edulis",
+      "name": "Miesmuschel – Mytilus edulis",
+      "stage": "adult",
+      "referenceFeatures": "Dunkle längliche Schale; Byssus im Detail",
+      "diagnostics": [
+        "elongate-dark-shell",
+        "byssus",
+        "attached-bed"
+      ],
+      "sourceRegister": "S44–45; kein Anspruch, vollständige heutige Mischbank inklusive aller Neozoen zu zeigen",
+      "habitat": "Kleine geeignete Bank/Haftsubstrat",
+      "designLengthMeters": 0.045,
+      "dimensionStatus": "didactic design in metres; species size source not independently calibrated",
+      "activeModel": "organism-models.js / bivalve",
+      "baselineCapture": {
+        "taxon": "mytilus_edulis",
+        "stage": "adult",
+        "individual": "compact-mussel-0",
+        "location": "coast",
+        "observer": {
+          "x": 63,
+          "z": -13,
+          "yaw": -2.3036114285814033,
+          "pitch": -0.12788807707486585
+        },
+        "modelTime": "0.000",
+        "worldModelTime": "0.278",
+        "window": "summer",
+        "runId": "ea838fa2-cbc7-452b-8d5f-9e03e882fd75",
+        "world": "mytilus_edulis-world.png",
+        "detail": "mytilus_edulis-detail.png",
+        "sha256": {
+          "mytilus_edulis-world.png": "2492084e37b6c9230a88f6a92fa41defd80bdeb1e37dbcab5db2bfda2b6ce990",
+          "mytilus_edulis-detail.png": "8a15088a6ed0a1f67a4470acb47f00f4c0ec4da8e70fc434ebeb7f6c9fce2f53"
+        }
+      },
+      "initialActor": {
+        "x": 60.5,
+        "y": -0.5737425260101767,
+        "z": -15.55,
+        "size": 0.02
+      },
+      "baselineObserverDistance": 3.5710642671338193,
+      "distanceScope": "Distance to initial model position only; mobile animal capture time and actual line of sight require fresh native measurement.",
+      "groupIdentification": "TEILWEISE",
+      "diagnosticAdequacy": "TEILWEISE",
+      "naturalism": "TEILWEISE",
+      "nativeVisibility": "NICHT GEPRÜFT",
+      "animation": "NICHT GEPRÜFT",
+      "naturalIdentificationLimit": "model comparison; natural identification may need more characters"
+    },
+    {
+      "taxon": "cerastoderma_edule",
+      "name": "Herzmuschel – Cerastoderma edule",
+      "stage": "adult",
+      "referenceFeatures": "Radialrippen; zwei Schalen; lebend/eingegraben ≠ leere Schale",
+      "diagnostics": [
+        "radial-ribs",
+        "paired-valves",
+        "shallow-burial"
+      ],
+      "sourceRegister": "S44–45; konkretes M3-Individuum/Probenkontrolle dokumentieren",
+      "habitat": "Oberflächennah im Sediment",
+      "designLengthMeters": 0.025,
+      "dimensionStatus": "didactic design in metres; species size source not independently calibrated",
+      "activeModel": "organism-models.js / bivalve",
+      "baselineCapture": {
+        "taxon": "cerastoderma_edule",
+        "stage": "adult",
+        "individual": "compact-cockle-0",
+        "location": "coast",
+        "observer": {
+          "x": 63,
+          "z": -13,
+          "yaw": -2.3036114285814033,
+          "pitch": -0.12788807707486585
+        },
+        "modelTime": "0.000",
+        "worldModelTime": "0.312",
+        "window": "summer",
+        "runId": "ab2b80bd-78ce-46df-aca2-5822dbdacd41",
+        "world": "cerastoderma_edule-world.png",
+        "detail": "cerastoderma_edule-detail.png",
+        "sha256": {
+          "cerastoderma_edule-world.png": "d762e7f5b90892d23280092922cf47d48337b0b96b34a43f97eb3e6a7f49a5ee",
+          "cerastoderma_edule-detail.png": "2cb37866f2d63f837fec5ff821998156d18e3a5d58870c78124dc137f212655a"
+        }
+      },
+      "initialActor": {
+        "x": 63,
+        "y": -0.5940032866804517,
+        "z": -12,
+        "size": 0.025
+      },
+      "baselineObserverDistance": 1,
+      "distanceScope": "Distance to initial model position only; mobile animal capture time and actual line of sight require fresh native measurement.",
+      "groupIdentification": "TEILWEISE",
+      "diagnosticAdequacy": "TEILWEISE",
+      "naturalism": "TEILWEISE",
+      "nativeVisibility": "NICHT GEPRÜFT",
+      "animation": "NICHT GEPRÜFT",
+      "naturalIdentificationLimit": "model comparison; natural identification may need more characters"
+    },
+    {
+      "taxon": "arenicola_marina",
+      "name": "Wattwurm – Arenicola marina",
+      "stage": "adult",
+      "referenceFeatures": "Kothaufen/Trichter als Spur; segmentierter Körper in Schnittansicht",
+      "diagnostics": [
+        "casts-and-funnel",
+        "segmented-body",
+        "burrow-section"
+      ],
+      "sourceRegister": "S44; Detritus/Mikroorganismen statt anorganischer Sand als Energiequelle",
+      "habitat": "Geeignetes Sand-/Mischwatt",
+      "designLengthMeters": 0.2,
+      "dimensionStatus": "didactic design in metres; species size source not independently calibrated",
+      "activeModel": "organism-models.js / worm",
+      "baselineCapture": {
+        "taxon": "arenicola_marina",
+        "stage": "adult",
+        "individual": "compact-lugworm",
+        "location": "coast",
+        "observer": {
+          "x": 63,
+          "z": -13,
+          "yaw": -2.3036114285814033,
+          "pitch": -0.12788807707486585
+        },
+        "modelTime": "0.000",
+        "worldModelTime": "0.278",
+        "window": "summer",
+        "runId": "fd0c0083-fa76-42bb-85b8-348e7b2df3fc",
+        "world": "arenicola_marina-world.png",
+        "detail": "arenicola_marina-detail.png",
+        "sha256": {
+          "arenicola_marina-world.png": "2492084e37b6c9230a88f6a92fa41defd80bdeb1e37dbcab5db2bfda2b6ce990",
+          "arenicola_marina-detail.png": "fb69dfcac1688508b27368010bba89eb615e2828e529353b506c20bdacb88b24"
+        }
+      },
+      "initialActor": {
+        "x": 65,
+        "y": -0.6039990340368225,
+        "z": -9,
+        "size": 0.2
+      },
+      "baselineObserverDistance": 4.47213595499958,
+      "distanceScope": "Distance to initial model position only; mobile animal capture time and actual line of sight require fresh native measurement.",
+      "groupIdentification": "TEILWEISE",
+      "diagnosticAdequacy": "TEILWEISE",
+      "naturalism": "TEILWEISE",
+      "nativeVisibility": "NICHT GEPRÜFT",
+      "animation": "NICHT GEPRÜFT",
+      "naturalIdentificationLimit": "model comparison; natural identification may need more characters"
+    },
+    {
+      "taxon": "hediste_diversicolor",
+      "name": "Seeringelwurm – Hediste diversicolor",
+      "stage": "adult",
+      "referenceFeatures": "Seitliche Parapodien/Borsten, Körpergliederung",
+      "diagnostics": [
+        "paired-parapodia",
+        "segmented-body",
+        "tube"
+      ],
+      "sourceRegister": "S41; ältere Quelle Nereis diversicolor als Synonym; Einsetztiefe nicht als Naturkonstante",
+      "habitat": "Schlick-/Mischwatt, Wohnröhre",
+      "designLengthMeters": 0.065,
+      "dimensionStatus": "didactic design in metres; species size source not independently calibrated",
+      "activeModel": "organism-models.js / worm",
+      "baselineCapture": {
+        "taxon": "hediste_diversicolor",
+        "stage": "adult",
+        "individual": "compact-ragworm",
+        "location": "coast",
+        "observer": {
+          "x": 63,
+          "z": -13,
+          "yaw": -2.3036114285814033,
+          "pitch": -0.12788807707486585
+        },
+        "modelTime": "0.000",
+        "worldModelTime": "0.295",
+        "window": "summer",
+        "runId": "bb707f38-277b-41b5-a5fb-a5118fe43d6f",
+        "world": "hediste_diversicolor-world.png",
+        "detail": "hediste_diversicolor-detail.png",
+        "sha256": {
+          "hediste_diversicolor-world.png": "24939c24ceb0f2921187582ab2609d36a1c7979603d5c2c51cbd4be2517168e8",
+          "hediste_diversicolor-detail.png": "56ae65c9292af472a55542c6eb11601bfb2d2b04b4e63b6f6a30f7434741ad0a"
+        }
+      },
+      "initialActor": {
+        "x": 64,
+        "y": -0.6549667692774712,
+        "z": -6,
+        "size": 0.065
+      },
+      "baselineObserverDistance": 7.0710678118654755,
+      "distanceScope": "Distance to initial model position only; mobile animal capture time and actual line of sight require fresh native measurement.",
+      "groupIdentification": "TEILWEISE",
+      "diagnosticAdequacy": "TEILWEISE",
+      "naturalism": "TEILWEISE",
+      "nativeVisibility": "NICHT GEPRÜFT",
+      "animation": "NICHT GEPRÜFT",
+      "naturalIdentificationLimit": "model comparison; natural identification may need more characters"
+    },
+    {
+      "taxon": "carcinus_maenas",
+      "name": "Strandkrabbe – Carcinus maenas",
+      "stage": "adult",
+      "referenceFeatures": "Breiter Panzer, Scheren, seitliche Laufbewegung",
+      "diagnostics": [
+        "wide-carapace",
+        "two-claws",
+        "sideways-walk"
+      ],
+      "sourceRegister": "S39–40; kein freies Beutespektrum nur nach Ressourcentext",
+      "habitat": "Priel, Muschelbank, nasser Wattboden/Deckung",
+      "designLengthMeters": 0.055,
+      "dimensionStatus": "didactic design in metres; species size source not independently calibrated",
+      "activeModel": "organism-models.js / crustacean",
+      "baselineCapture": {
+        "taxon": "carcinus_maenas",
+        "stage": "adult",
+        "individual": "compact-crab",
+        "location": "coast",
+        "observer": {
+          "x": 63,
+          "z": -13,
+          "yaw": -2.3036114285814033,
+          "pitch": -0.12788807707486585
+        },
+        "modelTime": "0.000",
+        "worldModelTime": "0.295",
+        "window": "summer",
+        "runId": "5615846a-0f5e-4fc3-85a0-9fa7aab6d2e8",
+        "world": "carcinus_maenas-world.png",
+        "detail": "carcinus_maenas-detail.png",
+        "sha256": {
+          "carcinus_maenas-world.png": "8bc1a36ed2b0d10a4aed5a454dd96dcfcd31e81ab9e64e9a1650c0b68fe9887a",
+          "carcinus_maenas-detail.png": "1adea3f3bc8cb1b62cbcc75f6277e4b5f825e14f00ae39fdbb1c49ebf31fadc3"
+        }
+      },
+      "initialActor": {
+        "x": 61.7,
+        "y": -0.5749641133285366,
+        "z": -15.4,
+        "size": 0.055
+      },
+      "baselineObserverDistance": 2.729468812791235,
+      "distanceScope": "Distance to initial model position only; mobile animal capture time and actual line of sight require fresh native measurement.",
+      "groupIdentification": "TEILWEISE",
+      "diagnosticAdequacy": "TEILWEISE",
+      "naturalism": "TEILWEISE",
+      "nativeVisibility": "NICHT GEPRÜFT",
+      "animation": "NICHT GEPRÜFT",
+      "naturalIdentificationLimit": "model comparison; natural identification may need more characters"
+    },
+    {
+      "taxon": "peringia_ulvae",
+      "name": "Wattschnecke – Peringia ulvae (Syn. Hydrobia ulvae)",
+      "stage": "adult",
+      "referenceFeatures": "Winziges gewundenes Gehäuse; Lupe nötig",
+      "diagnostics": [
+        "coiled-shell",
+        "grazing-foot",
+        "small-size"
+      ],
+      "sourceRegister": "S42–43; Detailbestimmung und Bestandszahlen nicht aus Fernsicht",
+      "habitat": "Oberfläche feuchten Schlicks",
+      "designLengthMeters": 0.004,
+      "dimensionStatus": "didactic design in metres; species size source not independently calibrated",
+      "activeModel": "organism-models.js / gastropod",
+      "baselineCapture": {
+        "taxon": "peringia_ulvae",
+        "stage": "adult",
+        "individual": "compact-snail-0",
+        "location": "coast",
+        "observer": {
+          "x": 63,
+          "z": -13,
+          "yaw": -2.3036114285814033,
+          "pitch": -0.12788807707486585
+        },
+        "modelTime": "0.000",
+        "worldModelTime": "0.295",
+        "window": "summer",
+        "runId": "8cad2b9b-71fd-440b-95b5-e8974537123a",
+        "world": "peringia_ulvae-world.png",
+        "detail": "peringia_ulvae-detail.png",
+        "sha256": {
+          "peringia_ulvae-world.png": "6036bc32b80ffcc1235c0067838d3a3ae5813aa5a727e49ec5c5c52a8c96d11f",
+          "peringia_ulvae-detail.png": "5d6fbf62fa75c5a4c9eea841136fc4cd1dbea540396b9530d2eaf9852a45c402"
+        }
+      },
+      "initialActor": {
+        "x": 64,
+        "y": -0.5842475037647806,
+        "z": -12.7,
+        "size": 0.004
+      },
+      "baselineObserverDistance": 1.0440306508910553,
+      "distanceScope": "Distance to initial model position only; mobile animal capture time and actual line of sight require fresh native measurement.",
+      "groupIdentification": "TEILWEISE",
+      "diagnosticAdequacy": "TEILWEISE",
+      "naturalism": "TEILWEISE",
+      "nativeVisibility": "NICHT GEPRÜFT",
+      "animation": "NICHT GEPRÜFT",
+      "naturalIdentificationLimit": "model comparison; natural identification may need more characters"
+    },
+    {
+      "taxon": "vulpes_vulpes",
+      "name": "Rotfuchs – Vulpes vulpes",
+      "stage": "adult",
+      "referenceFeatures": "Spitze Schnauze/Ohren, buschiger Schwanz, typische Proportionen",
+      "diagnostics": [
+        "pointed-muzzle",
+        "bushy-tail",
+        "dark-legs"
+      ],
+      "sourceRegister": "S24; keine autonome Vollpopulation im Kleinstareal behaupten",
+      "habitat": "Waldsaum; optionales Dämmerungsfenster",
+      "designLengthMeters": 1.1,
+      "dimensionStatus": "didactic design in metres; species size source not independently calibrated",
+      "activeModel": "wildlife-fox.glb",
+      "baselineCapture": {
+        "taxon": "vulpes_vulpes",
+        "stage": "adult",
+        "individual": "compact-fox",
+        "location": "dusk",
+        "observer": {
+          "x": -62,
+          "z": -23,
+          "yaw": -3.141592653589793,
+          "pitch": -0.47099712257838494
+        },
+        "modelTime": "0.538",
+        "worldModelTime": "0.785",
+        "window": "dusk",
+        "runId": "fc90dbb4-5be8-4719-a794-59223db53942",
+        "world": "vulpes_vulpes-world.png",
+        "detail": "vulpes_vulpes-detail.png",
+        "sha256": {
+          "vulpes_vulpes-world.png": "557f8ae34b4071b6a5c7c6ee6bb9d5001b06ed2019510b30dcd390334d29eeae",
+          "vulpes_vulpes-detail.png": "6a52d481044366fc2f1da14d35ff91be37213fac02568f224504ec2a52df3c37"
+        }
+      },
+      "initialActor": {
+        "x": -64,
+        "y": 0.27765360720096743,
+        "z": -20,
+        "size": 1.1
+      },
+      "baselineObserverDistance": 3.6055512754639896,
+      "distanceScope": "Distance to initial model position only; mobile animal capture time and actual line of sight require fresh native measurement.",
+      "groupIdentification": "TEILWEISE",
+      "diagnosticAdequacy": "TEILWEISE",
+      "naturalism": "FEHLGESCHLAGEN",
+      "nativeVisibility": "NICHT GEPRÜFT",
+      "animation": "NICHT GEPRÜFT",
+      "naturalIdentificationLimit": "model comparison; natural identification may need more characters"
+    },
+    {
+      "taxon": "apodemus_sylvaticus",
+      "name": "Waldmaus – Apodemus sylvaticus",
+      "stage": "adult",
+      "referenceFeatures": "Große Augen/Ohren, langer Schwanz; Unterscheidung zu Gelbhalsmaus nicht allein per Silhouette",
+      "diagnostics": [
+        "large-eyes",
+        "long-tail",
+        "round-ears"
+      ],
+      "sourceRegister": "S25; Samenfunktionen belegt, Studie nicht norddeutsche Dichtekalibrierung",
+      "habitat": "Streu/Deckung und Saum",
+      "designLengthMeters": 0.095,
+      "dimensionStatus": "didactic design in metres; species size source not independently calibrated",
+      "activeModel": "organism-models.js / mammal",
+      "baselineCapture": {
+        "taxon": "apodemus_sylvaticus",
+        "stage": "adult",
+        "individual": "compact-mouse-0",
+        "location": "dusk",
+        "observer": {
+          "x": -62,
+          "z": -23,
+          "yaw": -3.141592653589793,
+          "pitch": -0.47099712257838494
+        },
+        "modelTime": "0.785",
+        "worldModelTime": "1.113",
+        "window": "dusk",
+        "runId": "fc90dbb4-5be8-4719-a794-59223db53942",
+        "world": "apodemus_sylvaticus-world.png",
+        "detail": "apodemus_sylvaticus-detail.png",
+        "sha256": {
+          "apodemus_sylvaticus-world.png": "6219a441e3ed6085aa2cb4ab94d17495fd3a40da54a0e91bd1f89dfde15a4e87",
+          "apodemus_sylvaticus-detail.png": "fc8c54d4a51e99da1f55b71e426e7e456f67dd830a16e5a050dcc65dc840ac4c"
+        }
+      },
+      "initialActor": {
+        "x": -61,
+        "y": 0.2531638090032833,
+        "z": -20,
+        "size": 0.095
+      },
+      "baselineObserverDistance": 3.1622776601683795,
+      "distanceScope": "Distance to initial model position only; mobile animal capture time and actual line of sight require fresh native measurement.",
+      "groupIdentification": "TEILWEISE",
+      "diagnosticAdequacy": "TEILWEISE",
+      "naturalism": "FEHLGESCHLAGEN",
+      "nativeVisibility": "NICHT GEPRÜFT",
+      "animation": "NICHT GEPRÜFT",
+      "naturalIdentificationLimit": "model comparison; natural identification may need more characters"
+    }
+  ]
+}

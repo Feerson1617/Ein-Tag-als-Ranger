@@ -1,35 +1,33 @@
 {
   "species": "capreolus_capreolus",
   "lengthMeters": 1.12,
-  "triangles": 9650,
-  "bytes": 510248,
-  "sha256": "a89400df66033eb5eaa7f9bf13ccefaacfb866ab24e4576574d11965354ee619",
+  "triangles": 9668,
+  "bytes": 510816,
+  "sha256": "c751f6e3bb75c99a52e2e3d2fd65f5fd41740f4134db20b3e4add1586243f82c",
   "legFeet": {
     "1": [
-      0.18646777097366524,
-      0.01034896183188644,
-      -0.10599220665871498
+      0.38,
+      0.02146000066399574,
+      -0.216
     ],
     "2": [
-      0.18646777097366524,
-      0.01034896183188644,
-      0.10599220665871498
+      0.38,
+      0.02146000066399574,
+      0.216
     ],
     "3": [
-      -0.3140509826924888,
-      0.01034896183188644,
-      -0.10599220665871498
+      -0.64,
+      0.02146000066399574,
+      -0.216
     ],
     "4": [
-      -0.3140509826924888,
-      0.01034896183188644,
-      0.10599220665871498
+      -0.64,
+      0.02146000066399574,
+      0.216
     ]
   },
-  "source": "tools/author-compact-deer.py + tools/author-wildlife-v020.py",
+  "source": "tools/author-compact-mammals.py + tools/author-wildlife-v020.py",
   "license": "CC0-1.0",
-  "stage": "visuelle Freigabe offen",
-  "sex": "adult female",
-  "season": "late summer",
+  "stage": "visual review pending",
   "dimensionsStatus": "authored, not empirically calibrated"
 }

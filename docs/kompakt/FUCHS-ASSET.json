@@ -1,0 +1,33 @@
+{
+  "species": "fox",
+  "lengthMeters": 1.1,
+  "triangles": 11392,
+  "bytes": 601524,
+  "sha256": "63bccb366a65332f47e1c0ecaf1147a1ff699e09298ef42416936fac0ec91b26",
+  "legFeet": {
+    "1": [
+      0.54,
+      0.02975999763607979,
+      -0.21
+    ],
+    "2": [
+      0.54,
+      0.02975999763607979,
+      0.21
+    ],
+    "3": [
+      -0.43000000000000005,
+      0.02975999763607979,
+      -0.21
+    ],
+    "4": [
+      -0.43000000000000005,
+      0.02975999763607979,
+      0.21
+    ]
+  },
+  "source": "tools/author-compact-mammals.py + tools/author-wildlife-v020.py",
+  "license": "CC0-1.0",
+  "stage": "visual review pending",
+  "dimensionsStatus": "authored, not empirically calibrated"
+}

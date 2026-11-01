@@ -11,9 +11,9 @@ export function createVillageView(scene){
   const torso=new THREE.LatheGeometry([new THREE.Vector2(.15,0),new THREE.Vector2(.19,.08),new THREE.Vector2(.18,.27),new THREE.Vector2(.22,.43),new THREE.Vector2(.17,.52),new THREE.Vector2(.085,.56)],20);
   b.add(torso,p.color,[p.x,y+.77,p.z],[1,1,.72]);
   stick(b,[p.x,y+1.25,p.z],[p.x,y+1.42,p.z],.065,skin,.065);
-  const head=new THREE.LatheGeometry([[.025,0],[.065,.025],[.088,.07],[.108,.13],[.112,.20],[.096,.27],[.05,.31],[0,.32]].map(([r,h])=>new THREE.Vector2(r,h)),20);b.add(head,skin,[p.x,y+1.36,p.z],[1,1,.90]);head.dispose();
-  b.add(sphere,'#625847',[p.x,y+1.64,p.z+.012],[.12,.065,.105]);
-  b.add(sphere,skin,[p.x,y+1.51,p.z-.107],[.025,.037,.028]);
+  const head=new THREE.LatheGeometry([[.025,0],[.063,.025],[.087,.065],[.100,.12],[.102,.18],[.087,.235],[.045,.27],[0,.28]].map(([r,h])=>new THREE.Vector2(r,h)),20);b.add(head,skin,[p.x,y+1.39,p.z],[1,1,.90]);head.dispose();
+  b.add(sphere,'#625847',[p.x,y+1.64,p.z+.012],[.106,.052,.095]);
+  b.add(sphere,skin,[p.x,y+1.51,p.z-.107],[.017,.028,.025]);
   stick(b,[p.x-.033,y+1.455,p.z-.091],[p.x+.033,y+1.455,p.z-.091],.004,'#8e6251',.003);
   for(const side of [-1,1]){
    const hip=[p.x+side*.095,y+.81,p.z],knee=[p.x+side*.105,y+.45,p.z+(side>0?.035:-.035)],ankle=[p.x+side*.12,y+.11,p.z+(side>0?.06:-.07)];
@@ -23,8 +23,8 @@ export function createVillageView(scene){
    curvedStem(b,[shoulder,elbow,wrist],.068,p.color,.039,8);
    b.add(sphere,skin,[p.x+side*.13,y+.98,p.z-.20],[.04,.059,.032]);
    b.add(sphere,skin,[p.x+side*.113,y+1.52,p.z],[.023,.037,.018]);
-   b.add(sphere,'#eee3d0',[p.x+side*.042,y+1.544,p.z-.095],[.017,.006,.004]);
-   b.add(sphere,'#3c4035',[p.x+side*.042,y+1.544,p.z-.102],[.006,.006,.003]);
+   b.add(sphere,'#eee3d0',[p.x+side*.042,y+1.544,p.z-.095],[.012,.004,.003]);
+   b.add(sphere,'#3c4035',[p.x+side*.042,y+1.544,p.z-.102],[.004,.004,.002]);
    stick(b,[p.x+side*.021,y+1.568,p.z-.093],[p.x+side*.064,y+1.567,p.z-.088],.005,'#625847',.004);
   }
   for(const side of [-1,1])stick(b,[p.x+side*.07,y+1.33,p.z-.07],[p.x+side*.14,y+1.22,p.z-.12],.018,'#d4d0b8',.008);

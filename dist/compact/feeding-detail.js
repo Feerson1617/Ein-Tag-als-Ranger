@@ -21,12 +21,26 @@ export function lensClip(rect,panel,width,height){
 // Fit the true head/bill/resource extents in camera coordinates. A wide lens
 // must not divide a tall approach pose by its aspect ratio and cut both ends.
 export function feedingFraming(actor,resource,resourceSize,aspect){
- const rig=coastalRig(actor.taxon),mouth=mouthPoint(actor),tip=billPoint(actor),side=new THREE.Vector3(-Math.sin(actor.heading),.22,Math.cos(actor.heading)).normalize(),right=new THREE.Vector3().crossVectors(new THREE.Vector3(0,1,0),side).normalize(),up=new THREE.Vector3().crossVectors(side,right).normalize();
+ const rig=coastalRig(actor.taxon),mouth=mouthPoint(actor),tip=billPoint(actor),side=new THREE.Vector3(-Math.sin(actor.heading),.55,Math.cos(actor.heading)).normalize(),right=new THREE.Vector3().crossVectors(new THREE.Vector3(0,1,0),side).normalize(),up=new THREE.Vector3().crossVectors(side,right).normalize();
  const entries=[[mouth,rig.scale*.28],[tip,rig.scale*.06],...(resource?[[resource,Math.max(.002,resourceSize*.8)]]:[])],minimum=[Infinity,Infinity,Infinity],maximum=[-Infinity,-Infinity,-Infinity],axes=[right,up,side];
  for(const[point,radius]of entries){const p=new THREE.Vector3().copy(point);for(let i=0;i<3;i++){const v=p.dot(axes[i]);minimum[i]=Math.min(minimum[i],v-radius);maximum[i]=Math.max(maximum[i],v+radius);}}
  const focus=new THREE.Vector3();for(let i=0;i<3;i++)focus.addScaledVector(axes[i],(minimum[i]+maximum[i])/2);
  const span=Math.max(.07,(maximum[1]-minimum[1])*1.12,(maximum[0]-minimum[0])*1.12/Math.max(.25,aspect)),depth=maximum[2]-minimum[2],distance=span/(2*Math.tan(THREE.MathUtils.degToRad(16)))+depth/2;
  return {focus,side,distance,span,points:entries.map(([p,radius])=>({point:{...p},radius}))};
+}
+// Perspective fit of visible geometry, including animated transforms. Bounding
+// corners are conservative; hidden flight wings must not shrink the overview.
+export function visibleModelCorners(root){
+ const points=[];root.updateWorldMatrix(true,true);root.traverseVisible(node=>{
+  if(!node.isMesh||!node.geometry.attributes.position)return;
+  node.geometry.computeBoundingBox();const box=node.geometry.boundingBox;
+  for(const x of [box.min.x,box.max.x])for(const y of [box.min.y,box.max.y])for(const z of [box.min.z,box.max.z])points.push(new THREE.Vector3(x,y,z).applyMatrix4(node.matrixWorld));
+ });return points;
+}
+export function frameVisiblePoints(points,side,aspect,fov=35){
+ const right=new THREE.Vector3().crossVectors(new THREE.Vector3(0,1,0),side).normalize(),up=new THREE.Vector3().crossVectors(side,right).normalize(),box=new THREE.Box3().setFromPoints(points),focus=box.getCenter(new THREE.Vector3()),tangent=Math.tan(THREE.MathUtils.degToRad(fov/2));let distance=.03;
+ for(const p of points){const delta=p.clone().sub(focus),depth=delta.dot(side);distance=Math.max(distance,depth+Math.abs(delta.dot(up))*1.16/tangent,depth+Math.abs(delta.dot(right))*1.16/(tangent*Math.max(.1,aspect)));}
+ return {focus,side,distance};
 }
 // These cameras render the same live scene nodes. No clones, geometry scaling,
 // state writes, invented prey, independent animation or observation credit.
@@ -35,8 +49,9 @@ export function createFeedingDetail({scene,renderer,state,models,element,context
  const lenses=element.querySelector('.feeding-lenses');
  let enabled=false,tagged=[],episode=null,recorded=false,lightLayersReady=false;
  const clearLayers=()=>{for(const root of tagged)root.traverse(node=>node.layers.disable(31));tagged=[];};
- function toggle(){enabled=!enabled;element.hidden=!enabled;if(!enabled){clearLayers();episode=null;recorded=false;}else{episode=null;recorded=false;element.scrollTop=0;}return enabled;}
- function hide(){enabled=false;element.hidden=true;clearLayers();episode=null;recorded=false;}
+ function collapse(){element.classList.remove('expanded');const button=element.querySelector('#feeding-expand');button.setAttribute('aria-pressed','false');button.textContent='Vergrößern';}
+ function toggle(){collapse();enabled=!enabled;element.hidden=!enabled;if(!enabled){clearLayers();episode=null;recorded=false;}else{episode=null;recorded=false;element.scrollTop=0;}return enabled;}
+ function hide(){collapse();enabled=false;element.hidden=true;clearLayers();episode=null;recorded=false;}
  function render(actor){
   if(!enabled||!actor){element.hidden=true;clearLayers();return null;}
   element.hidden=false;
@@ -72,7 +87,7 @@ export function createFeedingDetail({scene,renderer,state,models,element,context
   const views=[],panel=element.getBoundingClientRect();
   try{for(const [id,camera]of [['feeding-overview',overviewCamera],['feeding-contact',detailCamera]]){
    const rect=element.querySelector('#'+id).getBoundingClientRect(),clip=lensClip(rect,panel,size.x,size.y),w=rect.width,h=rect.height;
-   if(w>0&&h>0&&clip.width>0&&clip.height>0){camera.aspect=w/h;if(id==='feeding-contact'){framing=feedingFraming(actor,completed?null:preyPosition,prey.size,camera.aspect);span=framing.span;camera.position.copy(framing.focus).addScaledVector(framing.side,framing.distance);camera.near=Math.max(.002,framing.distance*.01);camera.far=Math.max(4,framing.distance*5);camera.lookAt(framing.focus);}camera.updateProjectionMatrix();camera.updateMatrixWorld();renderer.setViewport(rect.left,size.y-rect.bottom,w,h);renderer.setScissor(clip.x,clip.y,clip.width,clip.height);renderer.setScissorTest(true);renderer.render(scene,camera);}
+   if(w>0&&h>0&&clip.width>0&&clip.height>0){camera.aspect=w/h;const points=visibleModelCorners(id==='feeding-contact'?bird.headPivot:bird);if(!completed&&detailPreyVisible){points.push(...visibleModelCorners(preyModel));if(preyModel.tissue?.visible&&preyModel.tissue.parent!==preyModel)points.push(...visibleModelCorners(preyModel.tissue));}const fitted=frameVisiblePoints(points,side,camera.aspect,camera.fov);camera.position.copy(fitted.focus).addScaledVector(side,fitted.distance);camera.near=Math.max(.001,fitted.distance*.005);camera.far=Math.max(4,fitted.distance*5);camera.lookAt(fitted.focus);if(id==='feeding-contact'){framing={...framing,...fitted};span=2*fitted.distance*Math.tan(THREE.MathUtils.degToRad(camera.fov/2));}else body.copy(fitted.focus);camera.updateProjectionMatrix();camera.updateMatrixWorld();renderer.setViewport(rect.left,size.y-rect.bottom,w,h);renderer.setScissor(clip.x,clip.y,clip.width,clip.height);renderer.setScissorTest(true);renderer.render(scene,camera);}
    views.push({id,rect:{x:rect.left,y:rect.top,width:w,height:h},clip,fov:camera.fov,position:camera.position.toArray(),focus:id==='feeding-contact'?{x:framing.focus.x,y:framing.focus.y,z:framing.focus.z}:body.toArray()});
   }}finally{preyModel.visible=worldPreyVisible;scene.background=oldBackground;renderer.setViewport(oldViewport);renderer.setScissor(oldScissor);renderer.setScissorTest(oldScissorTest);}
   const preyNames={mytilus_edulis:'Miesmuschel',crangon_crangon:'Garnele',juvenile_worm:'kleiner Wurm'},resource=preyNames[prey.taxon]||'kleine Wurmbeute';
