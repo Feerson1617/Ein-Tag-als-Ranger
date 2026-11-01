@@ -28,8 +28,8 @@ export function curvedStem(batch,points,r,color,tip=.003,segments=8){
 
 // Closed, fleshy blade: the thin edge remains a volume when seen obliquely.
 // Local +Z runs from the short petiole towards the rounded leaf tip.
-export function succulentLeafGeometry(length=.26,width=.12){
- const p=[],index=[],rows=6,sides=6;
+export function succulentLeafGeometry(length=.26,width=.12,rows=6,sides=6){
+ const p=[],index=[];
  for(let j=0;j<=rows;j++){
   const t=j/rows,outline=Math.sin(Math.PI*t)**.65,centre=.022*Math.sin(Math.PI*t);
   for(let k=0;k<=sides;k++){
@@ -47,7 +47,7 @@ export function plantGeometry(taxon,remaining=1,window='summer',detail='near'){c
   if(!nettle&&window==='spring')for(let i=0;i<3;i++){const x=(i-1)*.08;stick(b,[0,.9,0],[x,1.05,0],.005,'#73854e');for(let k=0;k<4;k++){const a=k*Math.PI/2;b.add(sphere,'#e7e6d1',[x+Math.sin(a)*.033,1.05,Math.cos(a)*.033],[.024,.008,.024]);}}
  }else if(taxon==='halimione_portulacoides'){
   // Woody, decumbent axes with paired opposite fleshy blades, not bead trees.
-  const blade=succulentLeafGeometry();
+  const blade=succulentLeafGeometry(.26,.12,near?6:middle?3:2,near?6:4);
   for(let i=0;i<(near?6:middle?4:3);i++){
    const a=i*2.399,h=.52+.19*Math.sin(i*1.7)**2,spread=.36+.14*Math.cos(i*2.1)**2;
    const points=[[0,.02,0],[Math.cos(a)*spread*.55,h*.23,Math.sin(a)*spread*.55],[Math.cos(a)*spread,h,Math.sin(a)*spread]];
