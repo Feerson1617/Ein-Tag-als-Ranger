@@ -7,6 +7,16 @@ export const ROUTE_POINTS=[[-52,8],[-69,4],[-71,-16],[-58,-28],[-42,-26],[-33,-1
 const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
 const smooth=(a,b,v)=>{const t=clamp((v-a)/(b-a),0,1);return t*t*(3-2*t);};
 export function zoneAt(x){return x<-24?'forest':x<1?'village':x<18?'dike':x<52?'saltmarsh':'wadden';}
+// Revision 8 adds real shoulders beside the existing low teaching crossing.
+// Preserve the sampled walking corridor and every tidal habitat (x >= 18).
+// Use plan geometry only here: no recursion through height-sampled PATHS.
+const dikePlan=rounded(ROUTE_POINTS).filter(p=>p.x>-3&&p.x<21);
+function dikeShoulder(x,z){
+ if(x<=0||x>=18)return 0;
+ let distance=Infinity;
+ for(let i=1;i<dikePlan.length;i++){const a=dikePlan[i-1],b=dikePlan[i],dx=b.x-a.x,dz=b.z-a.z,t=clamp(((x-a.x)*dx+(z-a.z)*dz)/(dx*dx+dz*dz),0,1);distance=Math.min(distance,Math.hypot(x-a.x-t*dx,z-a.z-t*dz));}
+ return 1.2*smooth(0,7,x)*(1-smooth(11,18,x))*smooth(2.2,6.5,distance);
+}
 function previousTerrainHeight(x,z){
  const inland=.3+.06*Math.sin(x*.19)*Math.cos(z*.14);
  if(x<0)return inland;
@@ -25,7 +35,7 @@ export function terrainHeight(x,z,modelRevision=MODEL_REVISION){
  y+=1.3*smooth(-5,7,x)*(1-smooth(11,23,x));
  if(x>=18&&x<52)y+=.14*Math.exp(-(((x-35)/4.5)**2+((z-10)/7)**2));
  if(x>=50){const creek=.48*Math.exp(-(((z+2-6*Math.sin(x*.1))/3.6)**2)),bed=-.52-.18*smooth(52,80,x)-creek+.025*Math.sin(z*.8+x*.4);y=y*(1-smooth(50,54,x))+bed*smooth(50,54,x);}
- return y;
+ return y+(modelRevision>=8?dikeShoulder(x,z):0);
 }
 
 function rounded(points){

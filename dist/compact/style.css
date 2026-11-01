@@ -146,3 +146,9 @@ table{font:13px/1.55 var(--sans);margin:18px 0}th{font-weight:600;background:#e5
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important}}
 @media(forced-colors:active){button,dialog,.identity,nav,#focus{border:1px solid ButtonText}.ui-icon{stroke:ButtonText}}
+
+/* A keyboard can shrink the visual viewport without resizing the LMS frame. */
+body[data-keyboard=true] dialog[open]{position:fixed;top:calc(var(--visible-top,0px) + 12px);bottom:auto;margin-top:0;max-height:calc(var(--visible-height,100dvh) - 24px);scroll-padding:14px}
+@media(max-height:360px){
+ .identity .eyebrow{display:none}#joystick{width:88px;height:88px;bottom:65px}#joystick span{left:25px;top:25px}#focus{font-size:11px;padding:4px 7px}dialog{max-height:calc(100dvh - 20px);margin:10px auto;padding:18px 24px}dialog .close{margin:-8px -12px -24px 0}nav{bottom:6px}#hint{display:none}
+}

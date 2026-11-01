@@ -43,7 +43,16 @@ for(const name of Object.keys(manifest.files))if(name.startsWith('assets/')||nam
 }
 let html=readFileSync(web+'/index.html','utf8').replace('./'+manifest.modules['compact/main.js'],'./'+appPath);
 // Keep the LMS toolbar separate from the fixed game HUD at all supported sizes.
-const css=`#scorm-session{position:fixed;left:0;right:0;top:0;z-index:5;min-height:60px;font-size:12px}header{top:86px!important}#objective{top:155px}#study{top:200px}#read-sign{top:175px!important}#notice{top:250px}#performance-status{top:255px}#feeding-detail{top:175px;max-height:calc(100dvh - 280px)}@media(max-height:560px){#scorm-session{font-size:10px;gap:4px}header{top:75px!important}#feeding-detail{top:165px;max-height:calc(100dvh - 245px)}}`;
+const css=`#scorm-session{position:fixed;left:0;right:0;top:0;z-index:5;min-height:60px;font-size:12px}header{top:86px!important}#objective{top:155px}#study{top:200px}#read-sign{top:175px!important}#notice{top:250px}#performance-status{top:255px}#feeding-detail{top:175px;max-height:calc(100dvh - 280px)}@media(max-height:560px){#scorm-session{font-size:10px;gap:4px}header{top:75px!important}#feeding-detail{top:165px;max-height:calc(100dvh - 245px)}}
+@media(max-height:560px){#scorm-session{min-height:54px;padding-top:4px;padding-bottom:4px;flex-wrap:nowrap}#scorm-message{min-width:0}header{top:62px!important}#objective{top:118px}#study{top:163px}#read-sign{top:130px!important}#notice{top:214px}#performance-status{top:218px}}
+@media(max-height:340px){
+ header{top:60px!important;left:12px;right:12px;justify-content:flex-end}.identity{display:none}#journal-button{min-height:40px;padding:7px 10px}
+ #objective{top:60px;left:12px;right:auto;max-width:calc(100vw - 170px);font-size:11px;min-height:40px;padding:7px 10px}#study{top:108px;right:12px;max-width:45vw;min-height:44px}#read-sign{top:108px!important;left:12px;max-width:40vw}
+ nav{bottom:6px;right:12px;left:auto;transform:none;max-width:calc(100vw - 120px);flex-wrap:nowrap;gap:2px}nav #record{width:auto;order:0;border:0}nav .ui-icon,nav kbd{display:none}nav button{font-size:11px;padding:7px;min-height:44px}#brisk{bottom:8px;font-size:10px;padding:5px;max-width:105px}#joystick{left:16px;width:76px;height:76px;bottom:62px}#joystick span{left:19px;top:19px}
+ #performance-status{top:155px;font-size:10px;max-width:60vw;pointer-events:none}#notice{top:155px;font-size:10px;padding:5px;pointer-events:none}
+ #feeding-detail{top:64px;left:8px;width:calc(100vw - 265px);max-height:calc(100dvh - 126px)}#behavior-controls{top:64px;bottom:auto;right:8px;width:240px;max-height:calc(100dvh - 126px)}
+}
+`;
 writeFileSync(stage+'/web/scorm-layout.css',css);
 html=html.replace('</head>','<link rel="stylesheet" href="./web/scorm-layout.css"></head>');writeFileSync(stage+'/index.html',html);
 const report={sourceCommit:manifest.sourceCommit,sourceDirty:manifest.sourceDirty,status:'BESTANDEN',source:'outputs/Ranger-Kompakt',copied,app:appPath,adapter:'web/storage-adapter.js',studentCards:studentCards.length,removedFields:['expected','pitfall','feedback'],removedTeacherNotes:true,studentDocuments:['Arbeitsblaetter','path-a','path-b'],transformedModules:[...replacements].map(([path,text])=>({path:basename(path),originalSHA256:sha(readFileSync(path)),studentSHA256:sha(text)})),inputs:Object.keys(bundled.metafile.inputs)};

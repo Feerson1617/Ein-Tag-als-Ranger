@@ -1,5 +1,5 @@
 import * as THREE from '../vendor/three.module.js?revision=120';
-import { GeometryBatch,stick } from './geometry.js';
+import { GeometryBatch,stick,curvedStem } from './geometry.js';
 import { SPEAKERS,speakerApproach } from './village.js';
 import { BUILDINGS,terrainHeight } from './layout.js';
 import { scenicSurface } from './scenic-materials.js';
@@ -17,17 +17,19 @@ export function createVillageView(scene){
   b.add(sphere,skin,[p.x,y+1.51,p.z-.107],[.025,.037,.028]);
   stick(b,[p.x-.033,y+1.455,p.z-.091],[p.x+.033,y+1.455,p.z-.091],.004,'#8e6251',.003);
   for(const side of [-1,1]){
-   const hip=[p.x+side*.095,y+.81,p.z],knee=[p.x+side*.105,y+.45,p.z+.006],ankle=[p.x+side*.12,y+.11,p.z+.015];
-   stick(b,hip,knee,.081,'#4e514a',.063);stick(b,knee,ankle,.063,'#4e514a',.045);
+   const hip=[p.x+side*.095,y+.81,p.z],knee=[p.x+side*.105,y+.45,p.z+(side>0?.035:-.035)],ankle=[p.x+side*.12,y+.11,p.z+(side>0?.06:-.07)];
+   curvedStem(b,[hip,knee,ankle],.081,'#4e514a',.045,9);
    b.add(sphere,'#393f36',[p.x+side*.12,y+.065,p.z-.05],[.075,.062,.13]);
-   const shoulder=[p.x+side*.19,y+1.24,p.z],elbow=[p.x+side*.245,y+1.05,p.z-.015],wrist=[p.x+side*.26,y+.88,p.z-.045];
-   b.add(sphere,p.color,shoulder,[.077,.10,.076]);stick(b,shoulder,elbow,.068,p.color,.055);stick(b,elbow,wrist,.055,p.color,.039);
-   b.add(sphere,skin,[p.x+side*.26,y+.84,p.z-.045],[.041,.072,.037]);
+   const shoulder=[p.x+side*.19,y+1.24,p.z],elbow=[p.x+side*.25,y+1.07,p.z-.035],wrist=[p.x+side*.13,y+1.00,p.z-.20];
+   b.add(sphere,p.color,shoulder,[.077,.10,.076]);curvedStem(b,[shoulder,elbow,wrist],.068,p.color,.039,8);
+   b.add(sphere,skin,[p.x+side*.13,y+.98,p.z-.20],[.04,.059,.032]);
    b.add(sphere,skin,[p.x+side*.113,y+1.52,p.z],[.023,.037,.018]);
-   b.add(sphere,'#eee3d0',[p.x+side*.042,y+1.544,p.z-.095],[.023,.010,.008]);
-   b.add(sphere,'#3c4035',[p.x+side*.042,y+1.544,p.z-.102],[.009,.009,.004]);
+   b.add(sphere,'#eee3d0',[p.x+side*.042,y+1.544,p.z-.095],[.017,.006,.004]);
+   b.add(sphere,'#3c4035',[p.x+side*.042,y+1.544,p.z-.102],[.006,.006,.003]);
    stick(b,[p.x+side*.021,y+1.568,p.z-.093],[p.x+side*.064,y+1.567,p.z-.088],.005,'#625847',.004);
   }
+  for(const side of [-1,1])stick(b,[p.x+side*.07,y+1.33,p.z-.07],[p.x+side*.14,y+1.22,p.z-.12],.018,'#d4d0b8',.008);
+  b.add(box,'#655c44',[p.x,y+.985,p.z-.21],[.23,.024,.16]);
   stick(b,[p.x,y+.84,p.z-.135],[p.x,y+1.27,p.z-.13],.006,'#d0ceb1',.004);
   for(let k=0;k<4;k++)b.add(sphere,'#b9bc9d',[p.x,y+.94+k*.08,p.z-.14],[.012,.012,.006]);
   const approach=speakerApproach(p),angle=Math.atan2(p.x-approach.x,p.z-approach.z),cos=Math.cos(angle),sin=Math.sin(angle);
@@ -36,6 +38,7 @@ export function createVillageView(scene){
  // All facade details remain on the existing buildings, outside walking routes.
  for(const house of BUILDINGS){
   const y=terrainHeight(house.x,house.z),roofHeight=house.h*.45,roofX=house.w*.57,roofZ=house.d*.6;
+  b.add(box,'#8a806b',[house.x,y+.13,house.z],[house.w+.04,.26,house.d+.04]);
   for(const side of [-1,1]){
    const z=house.z+side*(house.d/2+.07);
    for(let row=0;row<5;row++)b.add(box,'#bba98c',[house.x,y+.3+row*.54,z],[house.w-.15,.012,.018]);
