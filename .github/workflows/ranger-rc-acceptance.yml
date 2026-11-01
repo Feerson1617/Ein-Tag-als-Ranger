@@ -59,9 +59,30 @@ jobs:
             python tools/profile-compact.py --entry outputs/Ranger-Kompakt.html --width "$width" --height "$height" --output "work/rc-final/profile-after-$width"
           done
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
-        if: always()
+        if: always() && matrix.check != 'visual'
         with:
           name: Ranger-RC-${{ matrix.check }}
           path: work/rc-final/
+          if-no-files-found: error
+          retention-days: 30
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        if: always() && matrix.check == 'visual'
+        with:
+          name: Ranger-RC-comparison
+          path: work/rc-final/visual-*
+          if-no-files-found: error
+          retention-days: 30
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        if: always() && matrix.check == 'visual'
+        with:
+          name: Ranger-RC-gallery
+          path: work/rc-final/gallery
+          if-no-files-found: error
+          retention-days: 30
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        if: always() && matrix.check == 'visual'
+        with:
+          name: Ranger-RC-sky
+          path: work/rc-final/sky
           if-no-files-found: error
           retention-days: 30
