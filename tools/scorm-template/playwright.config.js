@@ -7,7 +7,7 @@ export default defineConfig({
   reporter: [['list'], ['json', { outputFile: 'test-results/browser.json' }]],
   use: { ignoreHTTPSErrors: true, viewport: { width: 1024, height: 768 }, screenshot: 'only-on-failure', trace: 'retain-on-failure' },
   projects: [
-    { name: 'chromium', use: { browserName: 'chromium', launchOptions: { executablePath: process.env.CHROMIUM_PATH || (existsSync('/usr/bin/chromium') ? '/usr/bin/chromium' : chromium.executablePath()), args: ['--no-sandbox', '--enable-unsafe-swiftshader'] } } },
+    { name: 'chromium', use: { browserName: 'chromium', launchOptions: { executablePath: process.env.CHROMIUM_PATH || (existsSync(chromium.executablePath()) ? chromium.executablePath() : '/usr/bin/chromium'), args: ['--no-sandbox', '--enable-unsafe-swiftshader'] } } },
     ...(process.env.TEST_WEBKIT ? [{ name: 'webkit', use: { browserName: 'webkit' } }] : [])
   ],
   webServer: [

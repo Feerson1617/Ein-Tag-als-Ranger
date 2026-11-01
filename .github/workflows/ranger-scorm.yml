@@ -38,6 +38,8 @@ jobs:
       - name: Unchanged generic tests plus explicit Ranger-mode tests
         working-directory: work/scorm/reference
         run: |
+          export CHROMIUM_PATH="$(node --input-type=module -e "import {chromium} from 'playwright'; console.log(chromium.executablePath())")"
+          "$CHROMIUM_PATH" --version
           npm run prepare:example
           npm run build
           npm test
