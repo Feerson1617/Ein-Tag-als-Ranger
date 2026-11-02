@@ -7,7 +7,8 @@ getrennte Entscheidungen. Keine Veröffentlichung durch dieses Blatt.
 ## Reales Gerät
 
 Datum/prüfende Person (lokal):____________________________
-Kandidat / HTML-SHA256:__________________________________
+Kandidat / HTML- oder SCORM-ZIP-SHA256:__________________
+Ausgabe: reguläre HTML / itslearning-SCORM:______________
 Hersteller/Modell:_______________________________________
 Tatsächlich installierte Betriebssystemversion:__________
 Browser und genaue Version:_____________________________
@@ -19,7 +20,9 @@ Darstellung/Zoom/Auflösung:______________________________
 - [ ] K3: dasselbe Individuum, Stelle/Tiefe, zwei Zeitpunkte im selben Kontext.
 - [ ] Detailkamera zeigt konkrete Aufnahme und plausiblen äußeren Mundbezug.
 - [ ] Hoch-/Querformat, kleine Ansicht und200 Prozent Darstellung: Pflichttexte erreichbar, Scrollen/Schließen ohne Weltbewegung.
-- [ ] Datei exportiert, lokal gesichert, nach Reload importiert; Feldbuchbytes und Antworten korrekt.
+- [ ] Nur reguläre HTML: JSON-/Ergebnisdatei exportiert, lokal gesichert, nach Reload importiert; Feldbuchbytes und Antworten korrekt.
+- [ ] Nur SCORM: Belege/Antworten bei Dialogwechsel in der geöffneten Sitzung erhalten; kein Export oder Dateiimport. Arbeitsblatt vor Neuladen gesichert; echter Neustart leer, keine dauerhafte Speicherung.
+Nicht zutreffenden Ausgabezweig als „nicht anwendbar“ markieren, nicht als bestanden.
 - [ ] Pause; echten Hintergrundwechsel und Rückkehr geprüft, keine unsichtbare Belegzeit.
 - [ ] 20 reale zusammenhängende Minuten geprüft; Start/Ende/Fehler und Ressourcen notiert.
 - [ ] Performance am benannten Gerät gemessen:30FPS-Ziel und p95<=50ms; Messmethode und Rohdaten beigefügt.
@@ -36,7 +39,7 @@ Keine Klarnamen, Anmeldung oder Cloudübermittlung; Lernprodukte anonym halten.
 - [ ] Verständlichkeit der Leitfrage und der nächsten UI-Handlung beobachtet.
 - [ ] Suchzeit und Lesezeit getrennt erfasst; Planungszeiten mit realen Zeiten verglichen.
 - [ ] Hilfestufe und Zeitpunkt festgehalten; Unterstützung nicht als unabhängige Leistung gezählt.
-- [ ] Anonymes Erstprodukt und begründete Revision gesichert.
+- [ ] Anonymes Erstprodukt und begründete Revision auf den Arbeitsblättern festgehalten und außerhalb des Spiels abgegeben; in SCORM vor Sitzungsende/Neuladen. Nur reguläre HTML bietet zusätzlich JSON-Export und Dateiimport.
 - [ ] Fehlvorstellungen, zulässige alternative Deutungen und eigene Unsicherheit besprochen.
 - [ ] Transfer mit Naturmaterial/Fotofall durchgeführt; übertragbare Methode und Grenze notiert.
 - [ ] Struktur vollständig, freie fachliche Qualität und technische Probleme getrennt beurteilt.
