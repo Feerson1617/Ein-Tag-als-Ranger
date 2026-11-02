@@ -1,0 +1,98 @@
+{
+  "residents": 5,
+  "keeperAtHive": true,
+  "cormorantRestingSlots": 4,
+  "squirrelNests": 7,
+  "dryingFrames": 16183,
+  "climbingFrames": 7168,
+  "actualCormorantHunts": 19,
+  "persistentIndividuals": 8,
+  "activities": [
+    {
+      "species": "sciurus_vulgaris",
+      "habitat": "forest",
+      "states": [
+        "resting",
+        "walking",
+        "dispersal",
+        "treeClimbing",
+        "restingNest"
+      ]
+    },
+    {
+      "species": "sciurus_vulgaris",
+      "habitat": "forest",
+      "states": [
+        "resting",
+        "walking",
+        "dispersal",
+        "treeClimbing",
+        "restingNest"
+      ]
+    },
+    {
+      "species": "sciurus_vulgaris",
+      "habitat": "city",
+      "states": [
+        "resting",
+        "walking",
+        "treeClimbing",
+        "restingNest",
+        "dispersal"
+      ]
+    },
+    {
+      "species": "sciurus_vulgaris",
+      "habitat": "city",
+      "states": [
+        "resting",
+        "walking",
+        "dispersal",
+        "treeClimbing",
+        "restingNest"
+      ]
+    },
+    {
+      "species": "phalacrocorax_carbo",
+      "habitat": "lake",
+      "states": [
+        "flying",
+        "wingDrying",
+        "hunting",
+        "diving"
+      ]
+    },
+    {
+      "species": "phalacrocorax_carbo",
+      "habitat": "lake",
+      "states": [
+        "flying",
+        "wingDrying",
+        "hunting",
+        "diving"
+      ]
+    },
+    {
+      "species": "phalacrocorax_carbo",
+      "habitat": "beach",
+      "states": [
+        "flying",
+        "wingDrying",
+        "hunting",
+        "diving"
+      ]
+    },
+    {
+      "species": "phalacrocorax_carbo",
+      "habitat": "beach",
+      "states": [
+        "flying",
+        "wingDrying",
+        "hunting",
+        "diving"
+      ]
+    }
+  ],
+  "recordings": 3,
+  "audio": "Only actual nearby, active birds; flight calls restricted to flying gulls"
+}

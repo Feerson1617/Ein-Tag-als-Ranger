@@ -1,0 +1,123 @@
+{
+  "sourceCommit": "4eb186a5325ae30dfa233e10dd44eb73ea710afa",
+  "htmlSHA256": "3748c6590afefb18a5e07bb3cedc2c40b0b2be1619a57cc52553a30de5869412",
+  "reviewedUTC": "2026-10-25T04:37:46.708325+00:00",
+  "scope": "Eigene tatsächliche Sichtung aller103Seiten in8Kontaktbögen;6kurze Seiten dort lesbar,16zusätzliche Poolseiten einzeln lesbar. Vollständiger Text-/Tabellen-/Schreibflächencheck separat automatisiert. Keine neue externe Quellen- oder Unterrichtsabnahme.",
+  "passedWithinPrintScope": true,
+  "viewed": [
+    {
+      "file": "print/Arbeitsblaetter-contact-01.png",
+      "sha256": "a0eea245bea7ec0512d3239b32c2943d201df924a9f0317a268cec9940a59e65"
+    },
+    {
+      "file": "print/Arbeitsblaetter-contact-02.png",
+      "sha256": "6faf1b452b8ac82dba1f378fecdfa355af9a42876083c5051dcb7def75541e92"
+    },
+    {
+      "file": "print/Lehrkraefte-contact-01.png",
+      "sha256": "84edc2277055fd2370ffa09cfa836d5b827cbf98f4d2e9f4bcc7a4acb80cb581"
+    },
+    {
+      "file": "print/Lehrkraefte-contact-02.png",
+      "sha256": "c5500bbc3bcbac5d0ebc1c3cf2fb7a7e7e6809e50f7b5cf600da7cffbe127ee9"
+    },
+    {
+      "file": "print/Lehrkraefte-contact-03.png",
+      "sha256": "1d6bfa7dad986f9c52ef0165c1eb256d0012bdcf8ccb577514a3ce84cdabe88f"
+    },
+    {
+      "file": "print/START-IM-UNTERRICHT-contact.png",
+      "sha256": "42659616f2aee023a82891b9044a97ab8fd7ad82ba1f84abdd6c9c782b540820"
+    },
+    {
+      "file": "print/PFAD-A-Artenliste-contact.png",
+      "sha256": "c0584e2d2185d159b192b7e646188cbafcd4f69392378edba70b8beeb0fed9ca"
+    },
+    {
+      "file": "print/PFAD-B-Kuestenvoegel-contact.png",
+      "sha256": "b4ea5e2bf19c7580cd1ea3e36d46488415c633a896c2abd65fdd3820428a80fd"
+    },
+    {
+      "file": "print/Arbeitsblaetter-pages/page-20.png",
+      "sha256": "7a075d4336c2a3ef5bf2d4e78d662980801278a0d69a2aabe46d5707dd9e63ef"
+    },
+    {
+      "file": "print/Arbeitsblaetter-pages/page-21.png",
+      "sha256": "fe91d4c32028658d4f05457883d1292f85dba2f1522f0949afbb3eb1a54a97fc"
+    },
+    {
+      "file": "print/Arbeitsblaetter-pages/page-23.png",
+      "sha256": "9db4207f1e115e28eaf3865e02d11c8e54d0c8b9499fd10f2ba5bf2eb87f02b5"
+    },
+    {
+      "file": "print/Arbeitsblaetter-pages/page-24.png",
+      "sha256": "9ef2ef0e8a773857349e66c06c36fe340fe2fd32a9dfd352a967c3e0475e384b"
+    },
+    {
+      "file": "print/Arbeitsblaetter-pages/page-25.png",
+      "sha256": "b64ad097ba197cef6a748432cbf76758ec7d781f3ee9e8f2004aa4dbdfde3209"
+    },
+    {
+      "file": "print/Arbeitsblaetter-pages/page-26.png",
+      "sha256": "6b90656b59d95dcf95ea8005f37c32e559cf04946d0799e3296b3c95c4d127d5"
+    },
+    {
+      "file": "print/Arbeitsblaetter-pages/page-33.png",
+      "sha256": "1c2c58d3bd18bad8d241e9298d3fbd518bd0955ea470f070fd10a1f1ad9fa238"
+    },
+    {
+      "file": "print/Arbeitsblaetter-pages/page-34.png",
+      "sha256": "d9eebf893df2660f7e1915e8da251415f9ae7cc30dd89735d1504f649453d745"
+    },
+    {
+      "file": "print/Arbeitsblaetter-pages/page-35.png",
+      "sha256": "3db7ecb7ae1052b67f1af36f27ee0ad96294c20355b9aa37b14914196c47b088"
+    },
+    {
+      "file": "print/Arbeitsblaetter-pages/page-36.png",
+      "sha256": "8f34be62dcaaad5db11e11edbeec04990cf0ff66547255d9539c8036b649e750"
+    },
+    {
+      "file": "print/Arbeitsblaetter-pages/page-37.png",
+      "sha256": "958f0f343c6413e30ee1a8ffc9dc0849467827412a2bbd462d06fbb668446193"
+    },
+    {
+      "file": "print/Lehrkraefte-pages/page-33.png",
+      "sha256": "2789caed5cff74254901f6751b3ca6a2ed7d948398429e3582427ccf677e9170"
+    },
+    {
+      "file": "print/Lehrkraefte-pages/page-39.png",
+      "sha256": "6f658d5e9d15d38ee31a8b3f136b6196f7ec4095630c0721b64336159aad40c7"
+    },
+    {
+      "file": "print/Lehrkraefte-pages/page-40.png",
+      "sha256": "e66d3abe34d66daef772f6a6419f1c2c33d449de257c3a1cd0ac764d3bcba7d2"
+    },
+    {
+      "file": "print/Lehrkraefte-pages/page-54.png",
+      "sha256": "ccffa0cbe8011fda24558aa8846424882b122a199cc4fc485854ef168c150d75"
+    },
+    {
+      "file": "print/Lehrkraefte-pages/page-57.png",
+      "sha256": "2970666ff7901fcbff5fbcc67f3878b722b1c4656f3123c8647114ff47d3d647"
+    }
+  ],
+  "documents": {
+    "Arbeitsblaetter": "9b74c8d17e0eb01402a8bebc2d6ed03aad5aaace39af60b921bcd4344c5b00bb",
+    "Lehrkraefte": "15f9c8cde48204c51354399c1477d563934695dcb43f2969fe23ac68c8a3d22f",
+    "START-IM-UNTERRICHT": "9f1e6b71383c3f75cf740b9666422b98ee7f33a7c5432e9a154cdf1798109508",
+    "PFAD-A-Artenliste": "86f21d84b5e542b126de45dff1558f57ae1eff1a51badda49d60b2e22d883bc3",
+    "PFAD-B-Kuestenvoegel": "adcd3e06733043200ee9daf67eec1d312ada7c3dc976e9fe127b9ba7460a5ecf"
+  },
+  "findings": [
+    "Alle103Seiten im vollständigen Raster ohne erkennbares Clipping; Tabellenrahmen, Quellen und große Schreibfelder bleiben erhalten.",
+    "C15 in der Schülerfassung jetzt2statt3Seiten: vollständige Tabellen und Auftrag aufS20/21 lesbar, keine Textlöschung. Gesamt38Schüler-/59Lehrkräfteseiten.",
+    "START-IM-UNTERRICHT und beide Schülerpfade jeweils2Seiten mit sichtbarem Schluss und Randreserve. Alle6Seiten lesbar angesehen.",
+    "C17(Schüler23–26,Lehrkräfte39–40): sechs Wochen Konditionierung vom Laichversuch getrennt,281.666,7Eier je tatsächlich ablaichendemWeibchen, keine Jahresrate. Quellenprovenienzgrenze bleibt explizit.",
+    "C23 undC24 einschließlich Tabellen, Rechenaufträgen und Rückmeldung lesbar. BPA bleibt Quellenfall, Modell-Fußabdruck getrennt von historischen Daten.",
+    "Weiterhin bewusst nüchterne Druckgestaltung; einige Fortsetzungsseiten haben große freie Bereiche. Kein neuer Gestaltungsumbau."
+  ],
+  "fontRegression": "print-fonts/result.json",
+  "noPhysicalPrinterOrMacOSTest": true,
+  "passedWithinDeclaredScope": true
+}

@@ -1,0 +1,102 @@
+{
+  "policy": "Preserve text/JSON evidence of early failed or interrupted attempts; omit exploratory images and raw video. These are not final passing runs.",
+  "included": [
+    {
+      "source": "work/qa-2026-10-23/arrival-attempt1/browser.log",
+      "collected": "failed-attempts/arrival-attempt1/browser.log",
+      "sha256": "2a80ae9af01098f260ca2b5e1e44a02eec466cd606990f928ad60732042d652e"
+    },
+    {
+      "source": "work/qa-2026-10-23/arrival-attempt1/build.log",
+      "collected": "failed-attempts/arrival-attempt1/build.log",
+      "sha256": "7cc118c4e789fc7ea9e651adc036ffb496d70c20b901c6bd079520e690dd69ff"
+    },
+    {
+      "source": "work/qa-2026-10-23/arrival-attempt1/verify.log",
+      "collected": "failed-attempts/arrival-attempt1/verify.log",
+      "sha256": "198c12b57117e60333ea946b9d8eaa127267bb0abb804ca476315e08488ed9fe"
+    },
+    {
+      "source": "work/qa-2026-10-23/arrival-attempt2/browser/result.json",
+      "collected": "failed-attempts/arrival-attempt2/browser/result.json",
+      "sha256": "8fcaa3590449ec626b354d883f2edba144e6792dad201e9b7bdd4d51154a0a73"
+    },
+    {
+      "source": "work/qa-2026-10-23/arrival-attempt2/browser.log",
+      "collected": "failed-attempts/arrival-attempt2/browser.log",
+      "sha256": "7b84550d0f0c62d0021816497f0d5800ca4df5eabf841797975f26dbaa99cb43"
+    },
+    {
+      "source": "work/qa-2026-10-23/arrival-attempt2/build.log",
+      "collected": "failed-attempts/arrival-attempt2/build.log",
+      "sha256": "3e3d384d05e9e41b34eb6283bd3cfa420b8bac69555ec1808d04ee69e4b6f2ca"
+    },
+    {
+      "source": "work/qa-2026-10-23/arrival-attempt2/verify.log",
+      "collected": "failed-attempts/arrival-attempt2/verify.log",
+      "sha256": "97c2168f03392cd62df8af22f1b3ceef6d22ce4448e735743da95cd4be83ac0d"
+    },
+    {
+      "source": "work/qa-2026-10-23/growth/browser-attempt1-sandbox.log",
+      "collected": "failed-attempts/growth/browser-attempt1-sandbox.log",
+      "sha256": "2af3d0309b69685786b94f0e906e4eb83baaf3c073e110ac75f571a8b967e136"
+    },
+    {
+      "source": "work/qa-2026-10-23/growth/browser-attempt2-stale-standalone.log",
+      "collected": "failed-attempts/growth/browser-attempt2-stale-standalone.log",
+      "sha256": "2ab8906651df6d834ee8d2e892e0a995127e64e10ffe3cb4694ca5994e9cce9a"
+    },
+    {
+      "source": "work/qa-2026-10-23/habitats/interrupted-snapshot-browser.log",
+      "collected": "failed-attempts/habitats/interrupted-snapshot-browser.log",
+      "sha256": "d32d1c93dd79d0afa92f26e93d11e97c601f1e073c936f2060ac63e2ec1984b2"
+    },
+    {
+      "source": "work/qa-2026-10-23/habitats/interrupted-snapshot-browser/result.json",
+      "collected": "failed-attempts/habitats/interrupted-snapshot-browser/result.json",
+      "sha256": "45b5a5f695aba6d7094c8949f1fa92d7d0bc1c6aa986dc2d994ffbb7bd80461d"
+    },
+    {
+      "source": "work/qa-2026-10-23/print/NOTES.md",
+      "collected": "failed-attempts/print/NOTES.md",
+      "sha256": "e14f31a787b9c273c90772c672264d5731cb5ed87054b4aaf7a38bc8f80e6cd4"
+    },
+    {
+      "source": "work/qa-2026-10-23/print/candidate-1-print.log",
+      "collected": "failed-attempts/print/candidate-1-print.log",
+      "sha256": "d43f9b5986d8b76ba61b5fbf9580eeb2e90284a680c043a60aed7139baf54835"
+    },
+    {
+      "source": "work/qa-2026-10-23/print/candidate-1/build-info.json",
+      "collected": "failed-attempts/print/candidate-1/build-info.json",
+      "sha256": "0cfa67cb71a7f2ff1f73f7e94b20dbb7da30c3022c5c4448d77eba5526951e1a"
+    },
+    {
+      "source": "work/qa-2026-10-23/print/candidate-2-print.log",
+      "collected": "failed-attempts/print/candidate-2-print.log",
+      "sha256": "f317cda42026a01b284b62a093d51c81e8d38bd384d29d38cddcd5fc3b89f7b7"
+    },
+    {
+      "source": "work/qa-2026-10-23/print/candidate-2/build-info.json",
+      "collected": "failed-attempts/print/candidate-2/build-info.json",
+      "sha256": "d8e5dbf52c732ed36d2ded1ae09bb4a413850acfadc8366c356813e0d2534368"
+    },
+    {
+      "source": "work/qa-2026-10-23/print/candidate-3-print.log",
+      "collected": "failed-attempts/print/candidate-3-print.log",
+      "sha256": "e7033bfe9d478cfce2fec37d098567774ffeb967cc7ce6fb661e8c8e922bbeeb"
+    },
+    {
+      "source": "work/qa-2026-10-23/print/candidate-3/build-info.json",
+      "collected": "failed-attempts/print/candidate-3/build-info.json",
+      "sha256": "9f597aa03707899b825236ac706a4bef852a3aeaf477d738e44cb2b7213876e5"
+    }
+  ],
+  "omitted": [
+    {
+      "source": "work/qa-2026-10-23/arrival-attempt2/browser/raw-video/page@1801eb32bf9b02df1fb590086cc001e0.webm",
+      "bytes": 18612224,
+      "reason": "Exploratory image or raw video; original remains in the work directory."
+    }
+  ]
+}

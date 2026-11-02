@@ -1,0 +1,26 @@
+{
+  "sourceCommit": "feff86c3546f02aa398c72270c23d4db653d82fc",
+  "documents": [
+    {
+      "file": "Arbeitsblaetter.pdf",
+      "bytes": 105871,
+      "sha256": "50dd14ca8f33cb522a16570f7229ac83007012b62acebfd47eeac20deeb89ec0",
+      "pages": 26,
+      "curriculumCards": 25,
+      "teacherCriteriaBlocks": 0,
+      "passed": true
+    },
+    {
+      "file": "Lehrkraefte.pdf",
+      "bytes": 140391,
+      "sha256": "3e5c4648ad2ce7f53e749c5741de6b759e7fd91cfc7c8b89a6a20ddb21c8204e",
+      "pages": 26,
+      "curriculumCards": 25,
+      "teacherCriteriaBlocks": 25,
+      "passed": true
+    }
+  ],
+  "sourceHashesVerified": true,
+  "archiveVerified": true,
+  "passed": true
+}

@@ -1,0 +1,10 @@
+import assert from 'node:assert/strict';
+import {createJournalStorage} from '../dist/compact/storage-adapter.js';
+import {CompactJournal} from '../dist/compact/journal.js';
+const forbidden=new Proxy({SCORM_CONTEXT:{classroomMode:true}},{get:(o,k)=>{if(k==='SCORM_CONTEXT')return o[k];throw Error('Persistent access: '+String(k));}});
+const first=createJournalStorage(forbidden),journal=new CompactJournal(first.storage);
+journal.updateLearning({activeMission:'K2'});assert.equal(new CompactJournal(first.storage).data.learning.activeMission,'K2');
+assert.equal(new CompactJournal(createJournalStorage(forbidden).storage).data.learning.activeMission,null);
+const data=new Map(),localStorage={getItem:k=>data.get(k)||null,setItem:(k,v)=>data.set(k,v)};
+const normal=createJournalStorage({localStorage});assert.equal(normal.storage,localStorage);new CompactJournal(normal.storage).updateLearning({activeMission:'K3'});assert.equal(new CompactJournal(createJournalStorage({localStorage}).storage).data.learning.activeMission,'K3');
+console.log('BESTANDEN: explicit volatile selection without persistent access; fresh session empty; normal adapter preserves persistence.');

@@ -1,0 +1,45 @@
+{
+  "scope": "Reported historicalCIposition compared with actual unchanged local input-driven route, not a reconstructedCItrace. Local crossing excludes a reproduced local obstruction at that place; it cannot prove the unavailableCIrootcause.",
+  "sourceResultSHA256": "8025a09a97270563d1d1601f02eb751e37e792e7d5aef032d8ab1706aa225a62",
+  "localProduct": "e9899efaa314d052191d7d3a95b5de904f2932b6",
+  "reportedCIPosition": {
+    "x": 54.73158935811298,
+    "z": -9.557866034125013
+  },
+  "reportedCIWaypoint": 1386,
+  "closestRecordedCrossing": {
+    "distanceToSampledSegmentMeters": 0.02919436932476455,
+    "fraction": 0.17135356862072285,
+    "before": {
+      "segment": "full-main-route",
+      "index": 1382,
+      "wall": 170239.320535701,
+      "modelTime": 175.315,
+      "observer": {
+        "x": 54.04232040297674,
+        "z": -9.028308928207531,
+        "yaw": -0.9344976490351822,
+        "pitch": -0.06
+      }
+    },
+    "after": {
+      "segment": "full-main-route",
+      "index": 1406,
+      "wall": 170244.537060787,
+      "modelTime": 178.487,
+      "observer": {
+        "x": 58.16401895944577,
+        "z": -11.980229180281052,
+        "yaw": -1.0510053699824478,
+        "pitch": -0.06
+      }
+    }
+  },
+  "fullMainRoute": {
+    "actualSeconds": 667.251472783013,
+    "modelSeconds": 225.717,
+    "sampledTravelMeters": 361.0251849064769
+  },
+  "modelSecondsPerWallSecond": 0.33827875876926256,
+  "runtimeChangesSinceThisLocalRun": "Only print CSS; route, collision, simulation and controller unchanged."
+}

@@ -1,0 +1,56 @@
+{
+  "commit": "e9899efaa314d052191d7d3a95b5de904f2932b6",
+  "sourceDirty": false,
+  "startedAt": "2026-10-24T12:22:40Z",
+  "site": "outputs",
+  "entry": "Feldbuch.html",
+  "prefix": "/",
+  "viewport": [
+    800,
+    500
+  ],
+  "browser": "chromium",
+  "liveMissionSelection": null,
+  "passed": [
+    "boot, two main entries, three mission choices, real WebGL startup",
+    "standalone deferred photograph decodes and renders; most media remain deferred",
+    "free exploration: real tools, keyboard, map with eight regions, tablet viewport (emulation only)"
+  ],
+  "failed": [],
+  "errors": [],
+  "consoleErrors": [],
+  "httpErrors": [],
+  "notTested": [
+    "physical iPad/Safari",
+    "classroom timing/learning effect",
+    "20-minute minimum-device performance"
+  ],
+  "browserVersion": "154.0.8037.57",
+  "readySeconds": 4.95,
+  "resourceTransferBytes": 0,
+  "navigationTransferBytes": 48162842,
+  "initialTransferBytes": 48162842,
+  "standaloneDecodedAssets": {
+    "initial": 18,
+    "afterReferences": 33
+  },
+  "freeResumePointer": {
+    "x": 554.4296875,
+    "y": 250.34375,
+    "width": 189.640625,
+    "height": 44,
+    "inViewport": true,
+    "hit": true,
+    "visibility": "visible"
+  },
+  "renderDiagnostics": {
+    "cpuSimulationMs": "0.2",
+    "cpuRenderMs": "2.7",
+    "targetFps": "60",
+    "pixelRatio": "1.00",
+    "gpuMs": "2984.6",
+    "fps": "0",
+    "drawCalls": "257",
+    "triangles": "596876"
+  }
+}

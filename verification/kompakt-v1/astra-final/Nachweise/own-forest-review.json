@@ -1,0 +1,131 @@
+{
+  "sourceCommit": "4eb186a5325ae30dfa233e10dd44eb73ea710afa",
+  "htmlSHA256": "3748c6590afefb18a5e07bb3cedc2c40b0b2be1619a57cc52553a30de5869412",
+  "reviewedUTC": "2026-10-25T04:58:49.010770+00:00",
+  "passedWithinDeclaredScope": true,
+  "scope": "Eigene aktuelle Prüfung des bereits abgeschlossenen begrenztenD2-Entwurfs: sechs tatsächliche Festkamera-Vergleiche und drei normale Gehblicke. Kein neuer Landschaftsumbau; technische Erhaltung/Lesbarkeit und subjektiver Gestaltungseindruck getrennt.",
+  "viewed": [
+    {
+      "file": "forest-profile/start.png",
+      "sha256": "3394189414a27737a0c483f3c8c3023eccc0f14bd1a0d9cee8448ca552fd8544"
+    },
+    {
+      "file": "forest-profile/woodruff.png",
+      "sha256": "39d7481e29dd394cfd3184ff84f80ae350e379055b985e138bfd1df32917daee"
+    },
+    {
+      "file": "forest-profile/nettle.png",
+      "sha256": "6aa538ce8143b91491b71b65e758150aab134bd7d689c9702c04c2495836cfe7"
+    },
+    {
+      "file": "forest-profile/wood.png",
+      "sha256": "3c7a2676a4f69e125ef972c5f2b6f0acdba5f6e1d330e958ee18c76ba91b71fc"
+    },
+    {
+      "file": "forest-profile/village-edge.png",
+      "sha256": "1d93e1739a9a343537bd85ddb4af74d3fd8345a49025475d039326ef17f99ce2"
+    },
+    {
+      "file": "forest-profile/oak-edge.png",
+      "sha256": "284d766995bcaae99514805b75dd897c36e7b61cd32f64dc335b25c83b8cc6e2"
+    },
+    {
+      "file": "forest-profile/ordinary-walk-1.png",
+      "sha256": "24bce701d9983002eb2380a183a85aa117eb6cadbda6250ed940d2b21c845f75"
+    },
+    {
+      "file": "forest-profile/ordinary-walk-2.png",
+      "sha256": "ae70f627557057df97089114782849ec495d5f5ea5b9d01d8605a6320e0107b1"
+    },
+    {
+      "file": "forest-profile/ordinary-walk-3.png",
+      "sha256": "fbf72386915b9007992ed41a652d74bfa7c9a814d7d1931c2a0e5e172283d40a"
+    }
+  ],
+  "historicalViewed": [
+    {
+      "file": "work/v1-abschluss/baseline/webgl/start.png",
+      "sha256": "1a7095538458b194517ed69a9c269dd454a03d22e3267e5a501c6b6c16c53f83",
+      "scope": "Unveränderte historische936Baseline, kein neuer Render"
+    },
+    {
+      "file": "work/v1-abschluss/baseline/webgl/woodruff.png",
+      "sha256": "deed56614743242221f016b78d657a4f0562845ad7a10d1b4adec9fc433649fa",
+      "scope": "Unveränderte historische936Baseline, kein neuer Render"
+    },
+    {
+      "file": "work/v1-abschluss/baseline/webgl/nettle.png",
+      "sha256": "332a6befcbde30400cf6dac799625004e50f93653919f958528cba755bcc38a4",
+      "scope": "Unveränderte historische936Baseline, kein neuer Render"
+    },
+    {
+      "file": "work/v1-abschluss/baseline/webgl/wood.png",
+      "sha256": "34b55d6b29a9c17dade9deded5c10a4892e43938168a7215bb3704169a69c51f",
+      "scope": "Unveränderte historische936Baseline, kein neuer Render"
+    },
+    {
+      "file": "work/v1-abschluss/baseline/webgl/village-edge.png",
+      "sha256": "1d93e1739a9a343537bd85ddb4af74d3fd8345a49025475d039326ef17f99ce2",
+      "scope": "Unveränderte historische936Baseline, kein neuer Render"
+    },
+    {
+      "file": "work/v1-abschluss/baseline/webgl/oak-edge.png",
+      "sha256": "48eb678a32a392ebda2d8f95dc8c39c75011884fc7a131b23a11cb8d47cb437f",
+      "scope": "Unveränderte historische936Baseline, kein neuer Render"
+    }
+  ],
+  "sameActualCameras": [
+    {
+      "name": "start",
+      "beforeSHA256": "1a7095538458b194517ed69a9c269dd454a03d22e3267e5a501c6b6c16c53f83",
+      "afterSHA256": "3394189414a27737a0c483f3c8c3023eccc0f14bd1a0d9cee8448ca552fd8544",
+      "sameActualCamera": true,
+      "scope": "Same actual X/Z/yaw/pitch/FOV. Animals/model times may differ; normal walk images are not falsely fixed-position paired."
+    },
+    {
+      "name": "woodruff",
+      "beforeSHA256": "deed56614743242221f016b78d657a4f0562845ad7a10d1b4adec9fc433649fa",
+      "afterSHA256": "39d7481e29dd394cfd3184ff84f80ae350e379055b985e138bfd1df32917daee",
+      "sameActualCamera": true,
+      "scope": "Same actual X/Z/yaw/pitch/FOV. Animals/model times may differ; normal walk images are not falsely fixed-position paired."
+    },
+    {
+      "name": "nettle",
+      "beforeSHA256": "332a6befcbde30400cf6dac799625004e50f93653919f958528cba755bcc38a4",
+      "afterSHA256": "6aa538ce8143b91491b71b65e758150aab134bd7d689c9702c04c2495836cfe7",
+      "sameActualCamera": true,
+      "scope": "Same actual X/Z/yaw/pitch/FOV. Animals/model times may differ; normal walk images are not falsely fixed-position paired."
+    },
+    {
+      "name": "wood",
+      "beforeSHA256": "34b55d6b29a9c17dade9deded5c10a4892e43938168a7215bb3704169a69c51f",
+      "afterSHA256": "3c7a2676a4f69e125ef972c5f2b6f0acdba5f6e1d330e958ee18c76ba91b71fc",
+      "sameActualCamera": true,
+      "scope": "Same actual X/Z/yaw/pitch/FOV. Animals/model times may differ; normal walk images are not falsely fixed-position paired."
+    },
+    {
+      "name": "village-edge",
+      "beforeSHA256": "1d93e1739a9a343537bd85ddb4af74d3fd8345a49025475d039326ef17f99ce2",
+      "afterSHA256": "1d93e1739a9a343537bd85ddb4af74d3fd8345a49025475d039326ef17f99ce2",
+      "sameActualCamera": true,
+      "scope": "Same actual X/Z/yaw/pitch/FOV. Animals/model times may differ; normal walk images are not falsely fixed-position paired."
+    },
+    {
+      "name": "oak-edge",
+      "beforeSHA256": "48eb678a32a392ebda2d8f95dc8c39c75011884fc7a131b23a11cb8d47cb437f",
+      "afterSHA256": "284d766995bcaae99514805b75dd897c36e7b61cd32f64dc335b25c83b8cc6e2",
+      "sameActualCamera": true,
+      "scope": "Same actual X/Z/yaw/pitch/FOV. Animals/model times may differ; normal walk images are not falsely fixed-position paired."
+    }
+  ],
+  "findings": [
+    "W1: Im Vorder-/Mittelgrund unterschiedliche Stammstärken, Kronenhöhen und Gruppen/Lücken; im Hintergrund bleiben auffällig gerade, ähnliche Stämme. Kein pauschales Urteil vollständiger Natürlichkeit.",
+    "W2: Offener Buchenwaldkern mit Krautschicht, Totholz und kleineren Gruppen; dichterer Strauch-/Jungbaumeindruck am Saum. Der Übergang ist bewusst vereinfacht, nicht jede Stelle zeigt alle Schichten.",
+    "W3: Strauchvolumen sind bodengebunden und teilweise überlappend, bleiben aber sichtbar rundliche Grundkörper. Das ist eine verbleibende Stilgrenze und kein Anlass zu einer unbegrenzten neuenGestaltungsrunde.",
+    "W4: Waldmeister-/Brennnesselstellen, Eichenzweig, Reh und Totholz bleiben aus denselben Blickpunkten sichtbar; Weg und Tafel sind lesbar. Der Dorfvergleich ist unverändert und wird nicht als neuer Waldsaum ausgegeben.",
+    "W5: Sechs tatsächliche X/Z/Yaw/Pitch/FOV-Paare geprüft; historische Rekonstruktion/Anker und Wege separat numerisch und per Eingaben. Normalgehbilder haben echte unterschiedliche Positionen und sind nicht als feste Vorher/Nachherpaare etikettiert.",
+    "Die drei aktuellen Gehbilder zeigen unveränderte Zielpflanzen und einen sichtbaren Hinweis auf verlangsamte Modellzeit bei Softwaregrafik. Kein30FPS-PASS."
+  ],
+  "subjectiveUserLandscapeApproval": "OFFEN",
+  "newCriticalVisualRegressionObserved": false
+}

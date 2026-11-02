@@ -1,0 +1,48 @@
+{
+  "commit": "5be5e9b8f7394613279f5a2834741a0abf33b570",
+  "sourceDirty": false,
+  "startedAt": "2026-10-22T07:45:44Z",
+  "site": "outputs/GitHub-Pages",
+  "entry": "index.html",
+  "prefix": "/Ein-Tag-als-Ranger/",
+  "viewport": [
+    800,
+    500
+  ],
+  "browser": "chromium",
+  "passed": [
+    "boot, two main entries, three mission choices, real WebGL startup"
+  ],
+  "failed": [
+    "Locator.click: Timeout 45000ms exceeded.\nCall log:\n  - waiting for locator(\"[data-focus-taxon=\\\"fagus_sylvatica\\\"]\")\n    - locator resolved to <button class=\"action quiet\" data-focus-taxon=\"fagus_sylvatica\">Rotbuche suchen</button>\n  - attempting click action\n    - waiting for element to be visible, enabled and stable\n"
+  ],
+  "errors": [],
+  "consoleErrors": [],
+  "httpErrors": [],
+  "notTested": [
+    "physical iPad/Safari",
+    "classroom timing/learning effect",
+    "20-minute minimum-device performance"
+  ],
+  "browserVersion": "154.0.8037.57",
+  "readySeconds": 14.76,
+  "resourceTransferBytes": 26674023,
+  "navigationTransferBytes": 8666,
+  "initialTransferBytes": 26682689,
+  "failureUI": {
+    "toast": "Eigene Sichtung im bestehenden Feldbuch gesichert. Sie belegt noch keine ökologische Ursache.",
+    "focus": "Große Brennnessel",
+    "progress": "Untersuchung läuft · Belege im Feldbuch",
+    "tool": "magnifier",
+    "observation": {
+      "observationSeconds": "0",
+      "targetFps": "60",
+      "frameP95Ms": "0",
+      "fps": "0",
+      "focusTaxon": "urtica_dioica",
+      "focusIndividual": "plant:forest:urtica_dioica:-6.845648559704423:16.320030897269024:0.2204451317624856",
+      "observationDeltaSeconds": "3.433100000000006",
+      "simulationTime": "1.4151000000000051"
+    }
+  }
+}

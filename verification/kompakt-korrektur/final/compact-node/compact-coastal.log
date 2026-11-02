@@ -1,0 +1,6 @@
+PASS F02 an empty event list and the independently reconstructed missing species fail positive coverage
+PASS F02 four seeds times four timestep profiles each require all four real successful foragers
+PASS F02 contact is reproduced on the actual head/claw and prey meshes, with planted articulated feet
+PASS F03 the original 60-Hz jumps are present in the baseline and absent under physical speed bounds
+PASS F02 zero real prey cannot produce a feeding event or spend a fictional resource
+{"passed":5,"scenarios":16}

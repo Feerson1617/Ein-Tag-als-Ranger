@@ -1,0 +1,1255 @@
+{
+  "sourceCommit": "e2ca57e2cba4e35f92dfaf19cfb9b0ab8bd96eb1",
+  "htmlSHA256": "0be2e0133179c44b5b498f0acd65ccf2de1e0701ad4b8c26878d55521844cc29",
+  "runtimeSourceHashes": {
+    "assets/boardwalk-wood.webp": "4d06022133e3772534374671fb73a4509ed109e1db6ca06a2d62a8c99c47ac6d",
+    "assets/compact-roe-deer.glb": "a89400df66033eb5eaa7f9bf13ccefaacfb866ab24e4576574d11965354ee619",
+    "assets/sky-panorama.webp": "46c360b491b11269d280e73ec0e71869afdfd62fb543b4250713234374a2f71d",
+    "assets/terrain-atlas.webp": "d637324d3ace6ef8e2c549e7f0a513efd1a4c06aab927f0ed1565bf77b2ced02",
+    "assets/wildlife-fox.glb": "61a4d1b845aa406928a327648417ae1c3982510b9c4e8ce33b7c494fbc98a22f",
+    "compact/catalog.js": "6b693d4c6a0f6b880b9ff99295826f3968e61ba96f52606997a1635ddf1fe39f",
+    "compact/coastal-behaviour.js": "39b1dcb8691cd48850321c4c734eabf0b2875b91a8cd09dcd7b571758b0f0927",
+    "compact/coastal-rig.js": "92a0270abdbf3aee7467e466cf344b08b8ef8bf5af4d903d3c672f9bcd4e2513",
+    "compact/comparison-views.js": "050f629dfc0b3b9bac1badc0c0564cfb08cf88e92006edcba377eabc623ecf82",
+    "compact/determination.js": "25f8ce960dba09ebeeb4470530d38608809bf98aa91d3575716b6ff835145c6f",
+    "compact/ecology.js": "e50f25a3146e79671472e7a5e6ed1d78f007564515bf9a78bb67fac9695ef8e0",
+    "compact/evidence.js": "1fb480ca90cebdba0b3178cc5ccbb121528826552ec32230b1c3245e808aa84f",
+    "compact/expanded-view.js": "b6201ad45f5a675fdf0d1092811fd8621c644ed9732e46fef51eb48e22ddb963",
+    "compact/fauna-view.js": "985a83582ff0ffac0e8d6ef20e2edc80a09b66e88f3768dd404f746507820feb",
+    "compact/geometry.js": "ac8a5e08a56f7ed75abb7a65baa6e20aba032984d7089e3b290d4769dd4307b0",
+    "compact/habitats.js": "10aad218dd69d51e842b59ef0164d9de8c0deaf30bc52d5165fc9ce317cde6c7",
+    "compact/inspection.js": "961c8c13e8e8e58595460fa40ed7bed0668367b120081dd95961a78ca87300ea",
+    "compact/journal.js": "a3acaef22c20529012509690d456d59f2739242eea1c58d38ba43aae410bb34f",
+    "compact/layout.js": "e02558557a9c99fa0549c94f8cbfc8873e18f3c90df845155d51ee4d404209a6",
+    "compact/learning-documents.js": "6e6bdf64274109550d7cf9fff8a182d207f258a59fde0285c9363989015a9de5",
+    "compact/learning-models.js": "078199d66bff5bd360c3010646c690dff92a58a160127204ba9fe9243a9a6d2e",
+    "compact/learning-ui.js": "e245840052fb77878de3abc55b4890ebcae96a76fe589155ab1d3dce5823e825",
+    "compact/lesson-layouts.js": "eec60d3c481ccfa0bf587f4213bdbe6847d75039934e4ecad149b1bd67adf3f2",
+    "compact/lesson-resources.js": "c650d8090445596c50be8cbd7a57d636d1f71c267fabd20fb5644f083923bbf8",
+    "compact/main.js": "9ba3c88ee948ae5829a64871f348ffd3fd499f2ef603ee68ee409d75ef0b742a",
+    "compact/management.js": "e6d38fbfc2c7e131d60ca3e38a1c740ca9ba5c49628fd3ba51ca94242d2d75a3",
+    "compact/manifest.js": "bdf071c610b896ffa14c41b33f9f17c5472199b55a6eb407f853e38178344cae",
+    "compact/materials.js": "b96c109d4a29a43223aa1f3c708af65f5d8258b03d3e43d5fa6d89100a799610",
+    "compact/missions.js": "55677975084e5dd4cc674ce0890305d0c3909fd82dce2241ec2b9526bd3147ee",
+    "compact/observation-schema.js": "2f0467f9693eca83c3a5a678128d86a5956de2b74df79a342b4875454569e12c",
+    "compact/organism-models.js": "7cf080fb497a17d58ce4d1672ffc5cef12b7f2c033a336384e4aead7dfc27cb6",
+    "compact/path-mesh.js": "7a41ebc390aeca96cffd1e4fcee19f3b76310413fcee3489d1533ebd599a4c82",
+    "compact/style.css": "fa3e0391ced503e62691704482dfcd500f73e81aa43c0abb9559c0e7491b378b",
+    "compact/task-schema.js": "4ce4ca8e8f6c27182b3abe36d90d956fcbc6526d240911dbc996c53b670fc418",
+    "compact/taxa.js": "97cd6f5bad16208408512be876ebf63d5f9ee400dd31f94a61c8ca08e4e24fd3",
+    "compact/vegetation-view.js": "7e6f703c9a930a86dd2c9b202a79bf7842f4d1f41bf9a2a27d3ef24b3b22e47a",
+    "compact/village-view.js": "15d1902cbb96678503051ba0b11494d0ceea412dbc193f18bf16b0bfe9d91b03",
+    "compact/village.js": "05acf2a5ff040e4de2aaf2c3ebc3ee88daaf2edc75d12e80d49a5f54a60a3aec",
+    "compact/visibility.js": "50d59d44257e9d18547bfaec9277366d3339177c6ebce37d948b48c9940a86f1",
+    "compact/world-state.js": "360197f8bd8ab54c595386b66f2e676499630bc6ca896856034fba4910d9fd7f",
+    "compact/world-view.js": "4302cfa6e1600a6f9f2d62835c38b0d3e90ea232d9904c0559ae6936860f112a",
+    "field-guide.js": "72126f4e4560fceb95e64fbd35799de0dafefaf65683625f76a5d949d05cbe07",
+    "icon.svg": "cb8cda889f99e56d13d18e09929837b7c3630d3f9ff3219316d12d3077fc0869",
+    "kompakt.html": "210d013010327c0ee7db76c61b67d7a05560404056c0569f7361cfa064d8019d",
+    "observation-clock.js": "2304e6c425192967f87841caa5072873cb5dd5c7f69c38fb45b237fd22f98b03",
+    "ranger-controls.js": "081497a5f6754ecd441e61ee55805da99b5121e96215cfa900209e00e41e5eda",
+    "station-protocol.js": "2590df7d9de4c8f4afda8fcafd619d565440c2dc7e1bb6ef4574aeadf803ae57",
+    "vendor/three.core.js": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20",
+    "vendor/three.module.js": "2884e2e6f26feaec0b454fcdc1e98c27d6433ba15253e5a3e22e111df81686fa",
+    "wildlife-glb.js": "32f8f947dd002ba7b571ee627e6291fa40a951fccdd9dee644661f19de487c35"
+  },
+  "scope": "Actual WebGL in shipped standalone HTML; normal UI model-time steps, following camera. No state/clock/evidence injection. Not natural animation certification or FPS benchmark.",
+  "browser": "154.0.8037.57",
+  "sequences": [
+    {
+      "id": "compact-avocet",
+      "captures": [
+        {
+          "file": "compact-avocet-initial.png",
+          "sha256": "787648239fecd00254c24c2c809ef482f15130c4c45f015828ad174a3834ef75",
+          "phase": "initial",
+          "sample": {
+            "time": 0.653,
+            "observer": {
+              "x": 64.53699369020964,
+              "z": -12.417998168125381,
+              "yaw": 2.703663671111068,
+              "pitch": -0.39692644336183774
+            },
+            "events": [],
+            "runId": "1f16476b-6ac9-468d-a90b-dca29a21a39d",
+            "modelObservation": "compact-avocet",
+            "ownSeconds": 0,
+            "renderRevision": "4",
+            "sceneRevision": "4",
+            "visibility": {
+              "individualId": "compact-avocet",
+              "meshVisible": true,
+              "bodyClear": true,
+              "billClear": true,
+              "bodyInFrame": true
+            },
+            "actor": {
+              "id": "compact-avocet",
+              "taxon": "recurvirostra_avosetta",
+              "x": 62,
+              "y": -0.6644065008327552,
+              "z": -7,
+              "activity": "resting",
+              "phase": "waiting",
+              "pose": {
+                "pitch": 0,
+                "yaw": 0,
+                "crouch": 0,
+                "billPitch": 0,
+                "clawPitch": 0
+              },
+              "targetId": "compact-juvenile-worm-0"
+            }
+          }
+        },
+        {
+          "file": "compact-avocet-approaching.png",
+          "sha256": "00ac6aaa66910ba24427e48be16d7c3337d83d5f090852c38ebc2cbb6eda6c6d",
+          "phase": "approaching",
+          "sample": {
+            "time": 29.404,
+            "observer": {
+              "x": 64.53699369020964,
+              "z": -12.417998168125381,
+              "yaw": 2.698227965575791,
+              "pitch": -0.3985526276364888
+            },
+            "events": [
+              {
+                "id": "ranger-compact-v2:summer:8",
+                "interaction": "shell-competition",
+                "actors": [
+                  "compact-oystercatcher",
+                  "compact-mussel-5"
+                ],
+                "resourceId": "compact-mussel-pool",
+                "resource": "shared-mussels",
+                "startedAt": 6.353499999999992,
+                "endedAt": 10.17849999999998,
+                "before": 17,
+                "after": 16,
+                "outcome": "prey-removed",
+                "source": "model-event",
+                "window": "summer",
+                "interpretation": {
+                  "kind": "interspecific-competition",
+                  "limit": "Zugang und Ertrag am begrenzten Pool; Kontrollvergleich erforderlich",
+                  "reference": "S37,S39"
+                },
+                "contactAt": 7.253499999999989,
+                "handlingStartedAt": 7.253499999999989,
+                "preyLength": 0.04,
+                "accessible": true,
+                "technique": "shell-opening",
+                "waterDepth": -0.4125389154698841,
+                "preyWaterDepth": -0.4164294108961575,
+                "contactPoint": {
+                  "x": 61.10230642726912,
+                  "y": -0.5643838874184028,
+                  "z": -15.543335799391699
+                },
+                "preyPoint": {
+                  "x": 61.1,
+                  "y": -0.5643838874184028,
+                  "z": -15.543755641109227
+                },
+                "preyPosition": {
+                  "x": 61.1,
+                  "y": -0.5740964004733359,
+                  "z": -15.55
+                },
+                "bodyPosition": {
+                  "x": 61.14710941921536,
+                  "y": -0.5819868958996093,
+                  "z": -15.793952437499627
+                },
+                "bodyHeading": 1.7569068139363175,
+                "bodyPose": {
+                  "pitch": -1.636830393959333,
+                  "yaw": 0.012100192579701987,
+                  "crouch": 0.7,
+                  "billPitch": -0.65,
+                  "clawPitch": 0
+                },
+                "shellOpening": 0.5,
+                "contactDistance": 0.0023443280093688908,
+                "sequence": [
+                  "approach",
+                  "bill-contact",
+                  "handling",
+                  "prey-acquired"
+                ],
+                "modelRevision": 3
+              },
+              {
+                "id": "ranger-compact-v2:summer:10",
+                "interaction": "shore-feeding",
+                "actors": [
+                  "compact-spoonbill",
+                  "compact-shrimp-2"
+                ],
+                "resourceId": "compact-creek-shrimps",
+                "resource": "shrimp",
+                "startedAt": 10.12849999999998,
+                "endedAt": 13.503499999999969,
+                "before": 3,
+                "after": 2,
+                "outcome": "consumed",
+                "source": "model-event",
+                "window": "summer",
+                "interpretation": {
+                  "kind": "niche",
+                  "limit": "Mehrere Nischendimensionen; keine Erklärung allein durch Schnabelform",
+                  "reference": "S33-S40"
+                },
+                "contactAt": 12.62849999999997,
+                "handlingStartedAt": 12.62849999999997,
+                "preyLength": 0.033,
+                "accessible": true,
+                "technique": "sweeping",
+                "waterDepth": 0.1474260373018912,
+                "preyWaterDepth": 0.16855354740065076,
+                "contactPoint": {
+                  "x": 69.28000000355642,
+                  "y": -1.0759963942848738,
+                  "z": 1.1599999985328926
+                },
+                "preyPoint": {
+                  "x": 69.28,
+                  "y": -1.0759963942848738,
+                  "z": 1.16
+                },
+                "preyPosition": {
+                  "x": 69.28,
+                  "y": -1.0783063942848738,
+                  "z": 1.16
+                },
+                "bodyPosition": {
+                  "x": 69.89840357077252,
+                  "y": -1.1015408114062561,
+                  "z": 0.9048938898541206
+                },
+                "bodyHeading": 2.7503368471305705,
+                "bodyPose": {
+                  "pitch": -2.128712744661448,
+                  "yaw": 0,
+                  "crouch": 0.7,
+                  "billPitch": -0.1,
+                  "clawPitch": 0
+                },
+                "shellOpening": 0,
+                "contactDistance": 3.84714782757706e-09,
+                "sequence": [
+                  "approach",
+                  "bill-contact",
+                  "handling",
+                  "prey-acquired"
+                ],
+                "modelRevision": 3
+              },
+              {
+                "id": "ranger-compact-v2:summer:12",
+                "interaction": "shell-competition",
+                "actors": [
+                  "compact-oystercatcher",
+                  "compact-mussel-4"
+                ],
+                "resourceId": "compact-mussel-pool",
+                "resource": "shared-mussels",
+                "startedAt": 12.478499999999972,
+                "endedAt": 17.328499999999977,
+                "before": 16,
+                "after": 15,
+                "outcome": "prey-removed",
+                "source": "model-event",
+                "window": "summer",
+                "interpretation": {
+                  "kind": "interspecific-competition",
+                  "limit": "Zugang und Ertrag am begrenzten Pool; Kontrollvergleich erforderlich",
+                  "reference": "S37,S39"
+                },
+                "contactAt": 14.403499999999966,
+                "handlingStartedAt": 14.403499999999966,
+                "preyLength": 0.03,
+                "accessible": true,
+                "technique": "shell-opening",
+                "waterDepth": -0.3145992991864116,
+                "preyWaterDepth": -0.3182626637518928,
+                "contactPoint": {
+                  "x": 60.98219916978632,
+                  "y": -0.5667973033169231,
+                  "z": -15.544542646729987
+                },
+                "preyPoint": {
+                  "x": 60.98,
+                  "y": -0.5667973033169231,
+                  "z": -15.545316730831921
+                },
+                "preyPosition": {
+                  "x": 60.98,
+                  "y": -0.5740816881081229,
+                  "z": -15.55
+                },
+                "bodyPosition": {
+                  "x": 61.06562190042006,
+                  "y": -0.5817450526736041,
+                  "z": -15.783948017582984
+                },
+                "bodyHeading": 1.9152928714609927,
+                "bodyPose": {
+                  "pitch": -1.6714041396941113,
+                  "yaw": 0.012100192579701026,
+                  "crouch": 0.7,
+                  "billPitch": -0.65,
+                  "clawPitch": 0
+                },
+                "shellOpening": 0.5,
+                "contactDistance": 0.0023314274481403938,
+                "sequence": [
+                  "approach",
+                  "bill-contact",
+                  "handling",
+                  "prey-acquired"
+                ],
+                "modelRevision": 3
+              },
+              {
+                "id": "ranger-compact-v2:summer:13",
+                "interaction": "shell-competition",
+                "actors": [
+                  "compact-crab",
+                  "compact-mussel-11"
+                ],
+                "resourceId": "compact-mussel-pool",
+                "resource": "shared-mussels",
+                "startedAt": 0.025,
+                "endedAt": 18.578499999999995,
+                "before": 15,
+                "after": 14,
+                "outcome": "prey-removed",
+                "source": "model-event",
+                "window": "summer",
+                "interpretation": {
+                  "kind": "interspecific-competition",
+                  "limit": "Zugang und Ertrag am begrenzten Pool; Kontrollvergleich erforderlich",
+                  "reference": "S37,S39"
+                },
+                "contactAt": 16.378499999999963,
+                "handlingStartedAt": 16.378499999999963,
+                "preyLength": 0.04,
+                "accessible": true,
+                "technique": "opening-shell",
+                "waterDepth": -0.2999473893309411,
+                "preyWaterDepth": -0.29991097214399576,
+                "contactPoint": {
+                  "x": 61.1,
+                  "y": -0.5615821566848894,
+                  "z": -15.383755641109227
+                },
+                "preyPoint": {
+                  "x": 61.1,
+                  "y": -0.5615821536027218,
+                  "z": -15.383755641109227
+                },
+                "preyPosition": {
+                  "x": 61.1,
+                  "y": -0.5712946666576548,
+                  "z": -15.39
+                },
+                "bodyPosition": {
+                  "x": 61.14188418743315,
+                  "y": -0.5752582494707095,
+                  "z": -15.389431735409618
+                },
+                "bodyHeading": 2.56090181587511,
+                "bodyPose": {
+                  "pitch": 0,
+                  "yaw": 0,
+                  "crouch": 0,
+                  "billPitch": 0,
+                  "clawPitch": 0.17256829131816404
+                },
+                "shellOpening": 0.5,
+                "contactDistance": 3.082167632229016e-09,
+                "sequence": [
+                  "approach",
+                  "claw-contact",
+                  "handling",
+                  "prey-acquired"
+                ],
+                "modelRevision": 3
+              },
+              {
+                "id": "ranger-compact-v2:summer:14",
+                "interaction": "shore-feeding",
+                "actors": [
+                  "compact-spoonbill",
+                  "compact-shrimp-1"
+                ],
+                "resourceId": "compact-creek-shrimps",
+                "resource": "shrimp",
+                "startedAt": 15.80349999999996,
+                "endedAt": 19.178500000000003,
+                "before": 2,
+                "after": 1,
+                "outcome": "consumed",
+                "source": "model-event",
+                "window": "summer",
+                "interpretation": {
+                  "kind": "niche",
+                  "limit": "Mehrere Nischendimensionen; keine Erklärung allein durch Schnabelform",
+                  "reference": "S33-S40"
+                },
+                "contactAt": 18.32849999999999,
+                "handlingStartedAt": 18.32849999999999,
+                "preyLength": 0.029,
+                "accessible": true,
+                "technique": "sweeping",
+                "waterDepth": 0.2370658626086496,
+                "preyWaterDepth": 0.2534063405360777,
+                "contactPoint": {
+                  "x": 69.14000000624627,
+                  "y": -1.0762763942848739,
+                  "z": 1.0799999981559363
+                },
+                "preyPoint": {
+                  "x": 69.14,
+                  "y": -1.0762763942848739,
+                  "z": 1.08
+                },
+                "preyPosition": {
+                  "x": 69.14,
+                  "y": -1.0783063942848738,
+                  "z": 1.08
+                },
+                "bodyPosition": {
+                  "x": 69.78154295513556,
+                  "y": -1.101776641309425,
+                  "z": 0.8905994175733836
+                },
+                "bodyHeading": 2.854520804931665,
+                "bodyPose": {
+                  "pitch": -2.128953942137933,
+                  "yaw": 0,
+                  "crouch": 0.7,
+                  "billPitch": -0.1,
+                  "clawPitch": 0
+                },
+                "shellOpening": 0,
+                "contactDistance": 6.5127896469594455e-09,
+                "sequence": [
+                  "approach",
+                  "bill-contact",
+                  "handling",
+                  "prey-acquired"
+                ],
+                "modelRevision": 3
+              },
+              {
+                "id": "ranger-compact-v2:summer:17",
+                "interaction": "shore-feeding",
+                "actors": [
+                  "compact-redshank",
+                  "compact-juvenile-worm-3"
+                ],
+                "resourceId": "compact-small-ragworms",
+                "resource": "small-worms",
+                "startedAt": 20.928500000000028,
+                "endedAt": 22.728500000000054,
+                "before": 3,
+                "after": 2,
+                "outcome": "consumed",
+                "source": "model-event",
+                "window": "summer",
+                "interpretation": {
+                  "kind": "niche",
+                  "limit": "Mehrere Nischendimensionen; keine Erklärung allein durch Schnabelform",
+                  "reference": "S33-S40"
+                },
+                "contactAt": 22.028500000000044,
+                "handlingStartedAt": 22.028500000000044,
+                "preyLength": 0.012,
+                "accessible": true,
+                "technique": "probing",
+                "waterDepth": -0.26788895290933445,
+                "preyWaterDepth": -0.2654676072734363,
+                "contactPoint": {
+                  "x": 58.99999999996312,
+                  "y": -0.5323335119702179,
+                  "z": 5
+                },
+                "preyPoint": {
+                  "x": 59,
+                  "y": -0.5323335119702179,
+                  "z": 5
+                },
+                "preyPosition": {
+                  "x": 59,
+                  "y": -0.5331735119702179,
+                  "z": 5
+                },
+                "bodyPosition": {
+                  "x": 58.84150098891906,
+                  "y": -0.5307521663343198,
+                  "z": 5
+                },
+                "bodyHeading": 0,
+                "bodyPose": {
+                  "pitch": -1.5308781084130678,
+                  "yaw": 0,
+                  "crouch": 0.7,
+                  "billPitch": -1.35,
+                  "clawPitch": 0
+                },
+                "shellOpening": 0,
+                "contactDistance": 3.68771679859492e-11,
+                "sequence": [
+                  "approach",
+                  "bill-contact",
+                  "handling",
+                  "prey-acquired"
+                ],
+                "modelRevision": 3
+              },
+              {
+                "id": "ranger-compact-v2:summer:18",
+                "interaction": "shell-competition",
+                "actors": [
+                  "compact-oystercatcher",
+                  "compact-mussel-3"
+                ],
+                "resourceId": "compact-mussel-pool",
+                "resource": "shared-mussels",
+                "startedAt": 19.60350000000001,
+                "endedAt": 24.55350000000008,
+                "before": 14,
+                "after": 13,
+                "outcome": "prey-removed",
+                "source": "model-event",
+                "window": "summer",
+                "interpretation": {
+                  "kind": "interspecific-competition",
+                  "limit": "Zugang und Ertrag am begrenzten Pool; Kontrollvergleich erforderlich",
+                  "reference": "S37,S39"
+                },
+                "contactAt": 21.55350000000004,
+                "handlingStartedAt": 21.55350000000004,
+                "preyLength": 0.02,
+                "accessible": true,
+                "technique": "shell-opening",
+                "waterDepth": -0.1811092780330077,
+                "preyWaterDepth": -0.1844903889677687,
+                "contactPoint": {
+                  "x": 60.86139327586576,
+                  "y": -0.5691846892209605,
+                  "z": -15.546136491009007
+                },
+                "preyPoint": {
+                  "x": 60.86,
+                  "y": -0.5691846892209605,
+                  "z": -15.546877820554613
+                },
+                "preyPosition": {
+                  "x": 60.86,
+                  "y": -0.574040945748427,
+                  "z": -15.55
+                },
+                "bodyPosition": {
+                  "x": 60.97944099045283,
+                  "y": -0.581422056683188,
+                  "z": -15.7691444932699
+                },
+                "bodyHeading": 2.0638965234615596,
+                "bodyPose": {
+                  "pitch": -1.7072240615061616,
+                  "yaw": 0.008242369704832801,
+                  "crouch": 0.7,
+                  "billPitch": -0.65,
+                  "clawPitch": 0
+                },
+                "shellOpening": 0.5,
+                "contactDistance": 0.0015782227768269097,
+                "sequence": [
+                  "approach",
+                  "bill-contact",
+                  "handling",
+                  "prey-acquired"
+                ],
+                "modelRevision": 3
+              },
+              {
+                "id": "ranger-compact-v2:summer:20",
+                "interaction": "shore-feeding",
+                "actors": [
+                  "compact-redshank",
+                  "compact-juvenile-worm-4"
+                ],
+                "resourceId": "compact-small-ragworms",
+                "resource": "small-worms",
+                "startedAt": 25.003500000000088,
+                "endedAt": 27.828500000000126,
+                "before": 2,
+                "after": 1,
+                "outcome": "consumed",
+                "source": "model-event",
+                "window": "summer",
+                "interpretation": {
+                  "kind": "niche",
+                  "limit": "Mehrere Nischendimensionen; keine Erklärung allein durch Schnabelform",
+                  "reference": "S33-S40"
+                },
+                "contactAt": 27.128500000000116,
+                "handlingStartedAt": 27.128500000000116,
+                "preyLength": 0.012,
+                "accessible": true,
+                "technique": "probing",
+                "waterDepth": -0.16308220268866913,
+                "preyWaterDepth": -0.1604962879061579,
+                "contactPoint": {
+                  "x": 59.08000000007421,
+                  "y": -0.534045574531263,
+                  "z": 5.030000000003234
+                },
+                "preyPoint": {
+                  "x": 59.08,
+                  "y": -0.534045574531263,
+                  "z": 5.03
+                },
+                "preyPosition": {
+                  "x": 59.08,
+                  "y": -0.534885574531263,
+                  "z": 5.03
+                },
+                "bodyPosition": {
+                  "x": 58.92167207315185,
+                  "y": -0.5322996597487517,
+                  "z": 5.023101169748979
+                },
+                "bodyHeading": 0.04354550262523344,
+                "bodyPose": {
+                  "pitch": -1.5325095198915633,
+                  "yaw": 0,
+                  "crouch": 0.7,
+                  "billPitch": -1.35,
+                  "clawPitch": 0
+                },
+                "shellOpening": 0,
+                "contactDistance": 7.427951186399985e-11,
+                "sequence": [
+                  "approach",
+                  "bill-contact",
+                  "handling",
+                  "prey-acquired"
+                ],
+                "modelRevision": 3
+              }
+            ],
+            "runId": "1f16476b-6ac9-468d-a90b-dca29a21a39d",
+            "modelObservation": "compact-avocet",
+            "ownSeconds": 0,
+            "renderRevision": "25",
+            "sceneRevision": "25",
+            "visibility": {
+              "individualId": "compact-avocet",
+              "meshVisible": true,
+              "bodyClear": true,
+              "billClear": true,
+              "bodyInFrame": true
+            },
+            "actor": {
+              "id": "compact-avocet",
+              "taxon": "recurvirostra_avosetta",
+              "x": 61.964,
+              "y": -0.6659373077023958,
+              "z": -7,
+              "activity": "approaching",
+              "phase": "approaching",
+              "pose": {
+                "pitch": -0.21999999999999997,
+                "yaw": 0,
+                "crouch": 0.07999999999999999,
+                "billPitch": -0.21999999999999997,
+                "clawPitch": 0
+              },
+              "targetId": "compact-juvenile-worm-0"
+            }
+          }
+        }
+      ],
+      "event": null,
+      "lastSample": {
+        "time": 30.404,
+        "observer": {
+          "x": 64.53699369020964,
+          "z": -12.417998168125381,
+          "yaw": 2.6550679894917413,
+          "pitch": -0.4102373329747309
+        },
+        "events": [
+          {
+            "id": "ranger-compact-v2:summer:8",
+            "interaction": "shell-competition",
+            "actors": [
+              "compact-oystercatcher",
+              "compact-mussel-5"
+            ],
+            "resourceId": "compact-mussel-pool",
+            "resource": "shared-mussels",
+            "startedAt": 6.353499999999992,
+            "endedAt": 10.17849999999998,
+            "before": 17,
+            "after": 16,
+            "outcome": "prey-removed",
+            "source": "model-event",
+            "window": "summer",
+            "interpretation": {
+              "kind": "interspecific-competition",
+              "limit": "Zugang und Ertrag am begrenzten Pool; Kontrollvergleich erforderlich",
+              "reference": "S37,S39"
+            },
+            "contactAt": 7.253499999999989,
+            "handlingStartedAt": 7.253499999999989,
+            "preyLength": 0.04,
+            "accessible": true,
+            "technique": "shell-opening",
+            "waterDepth": -0.4125389154698841,
+            "preyWaterDepth": -0.4164294108961575,
+            "contactPoint": {
+              "x": 61.10230642726912,
+              "y": -0.5643838874184028,
+              "z": -15.543335799391699
+            },
+            "preyPoint": {
+              "x": 61.1,
+              "y": -0.5643838874184028,
+              "z": -15.543755641109227
+            },
+            "preyPosition": {
+              "x": 61.1,
+              "y": -0.5740964004733359,
+              "z": -15.55
+            },
+            "bodyPosition": {
+              "x": 61.14710941921536,
+              "y": -0.5819868958996093,
+              "z": -15.793952437499627
+            },
+            "bodyHeading": 1.7569068139363175,
+            "bodyPose": {
+              "pitch": -1.636830393959333,
+              "yaw": 0.012100192579701987,
+              "crouch": 0.7,
+              "billPitch": -0.65,
+              "clawPitch": 0
+            },
+            "shellOpening": 0.5,
+            "contactDistance": 0.0023443280093688908,
+            "sequence": [
+              "approach",
+              "bill-contact",
+              "handling",
+              "prey-acquired"
+            ],
+            "modelRevision": 3
+          },
+          {
+            "id": "ranger-compact-v2:summer:10",
+            "interaction": "shore-feeding",
+            "actors": [
+              "compact-spoonbill",
+              "compact-shrimp-2"
+            ],
+            "resourceId": "compact-creek-shrimps",
+            "resource": "shrimp",
+            "startedAt": 10.12849999999998,
+            "endedAt": 13.503499999999969,
+            "before": 3,
+            "after": 2,
+            "outcome": "consumed",
+            "source": "model-event",
+            "window": "summer",
+            "interpretation": {
+              "kind": "niche",
+              "limit": "Mehrere Nischendimensionen; keine Erklärung allein durch Schnabelform",
+              "reference": "S33-S40"
+            },
+            "contactAt": 12.62849999999997,
+            "handlingStartedAt": 12.62849999999997,
+            "preyLength": 0.033,
+            "accessible": true,
+            "technique": "sweeping",
+            "waterDepth": 0.1474260373018912,
+            "preyWaterDepth": 0.16855354740065076,
+            "contactPoint": {
+              "x": 69.28000000355642,
+              "y": -1.0759963942848738,
+              "z": 1.1599999985328926
+            },
+            "preyPoint": {
+              "x": 69.28,
+              "y": -1.0759963942848738,
+              "z": 1.16
+            },
+            "preyPosition": {
+              "x": 69.28,
+              "y": -1.0783063942848738,
+              "z": 1.16
+            },
+            "bodyPosition": {
+              "x": 69.89840357077252,
+              "y": -1.1015408114062561,
+              "z": 0.9048938898541206
+            },
+            "bodyHeading": 2.7503368471305705,
+            "bodyPose": {
+              "pitch": -2.128712744661448,
+              "yaw": 0,
+              "crouch": 0.7,
+              "billPitch": -0.1,
+              "clawPitch": 0
+            },
+            "shellOpening": 0,
+            "contactDistance": 3.84714782757706e-09,
+            "sequence": [
+              "approach",
+              "bill-contact",
+              "handling",
+              "prey-acquired"
+            ],
+            "modelRevision": 3
+          },
+          {
+            "id": "ranger-compact-v2:summer:12",
+            "interaction": "shell-competition",
+            "actors": [
+              "compact-oystercatcher",
+              "compact-mussel-4"
+            ],
+            "resourceId": "compact-mussel-pool",
+            "resource": "shared-mussels",
+            "startedAt": 12.478499999999972,
+            "endedAt": 17.328499999999977,
+            "before": 16,
+            "after": 15,
+            "outcome": "prey-removed",
+            "source": "model-event",
+            "window": "summer",
+            "interpretation": {
+              "kind": "interspecific-competition",
+              "limit": "Zugang und Ertrag am begrenzten Pool; Kontrollvergleich erforderlich",
+              "reference": "S37,S39"
+            },
+            "contactAt": 14.403499999999966,
+            "handlingStartedAt": 14.403499999999966,
+            "preyLength": 0.03,
+            "accessible": true,
+            "technique": "shell-opening",
+            "waterDepth": -0.3145992991864116,
+            "preyWaterDepth": -0.3182626637518928,
+            "contactPoint": {
+              "x": 60.98219916978632,
+              "y": -0.5667973033169231,
+              "z": -15.544542646729987
+            },
+            "preyPoint": {
+              "x": 60.98,
+              "y": -0.5667973033169231,
+              "z": -15.545316730831921
+            },
+            "preyPosition": {
+              "x": 60.98,
+              "y": -0.5740816881081229,
+              "z": -15.55
+            },
+            "bodyPosition": {
+              "x": 61.06562190042006,
+              "y": -0.5817450526736041,
+              "z": -15.783948017582984
+            },
+            "bodyHeading": 1.9152928714609927,
+            "bodyPose": {
+              "pitch": -1.6714041396941113,
+              "yaw": 0.012100192579701026,
+              "crouch": 0.7,
+              "billPitch": -0.65,
+              "clawPitch": 0
+            },
+            "shellOpening": 0.5,
+            "contactDistance": 0.0023314274481403938,
+            "sequence": [
+              "approach",
+              "bill-contact",
+              "handling",
+              "prey-acquired"
+            ],
+            "modelRevision": 3
+          },
+          {
+            "id": "ranger-compact-v2:summer:13",
+            "interaction": "shell-competition",
+            "actors": [
+              "compact-crab",
+              "compact-mussel-11"
+            ],
+            "resourceId": "compact-mussel-pool",
+            "resource": "shared-mussels",
+            "startedAt": 0.025,
+            "endedAt": 18.578499999999995,
+            "before": 15,
+            "after": 14,
+            "outcome": "prey-removed",
+            "source": "model-event",
+            "window": "summer",
+            "interpretation": {
+              "kind": "interspecific-competition",
+              "limit": "Zugang und Ertrag am begrenzten Pool; Kontrollvergleich erforderlich",
+              "reference": "S37,S39"
+            },
+            "contactAt": 16.378499999999963,
+            "handlingStartedAt": 16.378499999999963,
+            "preyLength": 0.04,
+            "accessible": true,
+            "technique": "opening-shell",
+            "waterDepth": -0.2999473893309411,
+            "preyWaterDepth": -0.29991097214399576,
+            "contactPoint": {
+              "x": 61.1,
+              "y": -0.5615821566848894,
+              "z": -15.383755641109227
+            },
+            "preyPoint": {
+              "x": 61.1,
+              "y": -0.5615821536027218,
+              "z": -15.383755641109227
+            },
+            "preyPosition": {
+              "x": 61.1,
+              "y": -0.5712946666576548,
+              "z": -15.39
+            },
+            "bodyPosition": {
+              "x": 61.14188418743315,
+              "y": -0.5752582494707095,
+              "z": -15.389431735409618
+            },
+            "bodyHeading": 2.56090181587511,
+            "bodyPose": {
+              "pitch": 0,
+              "yaw": 0,
+              "crouch": 0,
+              "billPitch": 0,
+              "clawPitch": 0.17256829131816404
+            },
+            "shellOpening": 0.5,
+            "contactDistance": 3.082167632229016e-09,
+            "sequence": [
+              "approach",
+              "claw-contact",
+              "handling",
+              "prey-acquired"
+            ],
+            "modelRevision": 3
+          },
+          {
+            "id": "ranger-compact-v2:summer:14",
+            "interaction": "shore-feeding",
+            "actors": [
+              "compact-spoonbill",
+              "compact-shrimp-1"
+            ],
+            "resourceId": "compact-creek-shrimps",
+            "resource": "shrimp",
+            "startedAt": 15.80349999999996,
+            "endedAt": 19.178500000000003,
+            "before": 2,
+            "after": 1,
+            "outcome": "consumed",
+            "source": "model-event",
+            "window": "summer",
+            "interpretation": {
+              "kind": "niche",
+              "limit": "Mehrere Nischendimensionen; keine Erklärung allein durch Schnabelform",
+              "reference": "S33-S40"
+            },
+            "contactAt": 18.32849999999999,
+            "handlingStartedAt": 18.32849999999999,
+            "preyLength": 0.029,
+            "accessible": true,
+            "technique": "sweeping",
+            "waterDepth": 0.2370658626086496,
+            "preyWaterDepth": 0.2534063405360777,
+            "contactPoint": {
+              "x": 69.14000000624627,
+              "y": -1.0762763942848739,
+              "z": 1.0799999981559363
+            },
+            "preyPoint": {
+              "x": 69.14,
+              "y": -1.0762763942848739,
+              "z": 1.08
+            },
+            "preyPosition": {
+              "x": 69.14,
+              "y": -1.0783063942848738,
+              "z": 1.08
+            },
+            "bodyPosition": {
+              "x": 69.78154295513556,
+              "y": -1.101776641309425,
+              "z": 0.8905994175733836
+            },
+            "bodyHeading": 2.854520804931665,
+            "bodyPose": {
+              "pitch": -2.128953942137933,
+              "yaw": 0,
+              "crouch": 0.7,
+              "billPitch": -0.1,
+              "clawPitch": 0
+            },
+            "shellOpening": 0,
+            "contactDistance": 6.5127896469594455e-09,
+            "sequence": [
+              "approach",
+              "bill-contact",
+              "handling",
+              "prey-acquired"
+            ],
+            "modelRevision": 3
+          },
+          {
+            "id": "ranger-compact-v2:summer:17",
+            "interaction": "shore-feeding",
+            "actors": [
+              "compact-redshank",
+              "compact-juvenile-worm-3"
+            ],
+            "resourceId": "compact-small-ragworms",
+            "resource": "small-worms",
+            "startedAt": 20.928500000000028,
+            "endedAt": 22.728500000000054,
+            "before": 3,
+            "after": 2,
+            "outcome": "consumed",
+            "source": "model-event",
+            "window": "summer",
+            "interpretation": {
+              "kind": "niche",
+              "limit": "Mehrere Nischendimensionen; keine Erklärung allein durch Schnabelform",
+              "reference": "S33-S40"
+            },
+            "contactAt": 22.028500000000044,
+            "handlingStartedAt": 22.028500000000044,
+            "preyLength": 0.012,
+            "accessible": true,
+            "technique": "probing",
+            "waterDepth": -0.26788895290933445,
+            "preyWaterDepth": -0.2654676072734363,
+            "contactPoint": {
+              "x": 58.99999999996312,
+              "y": -0.5323335119702179,
+              "z": 5
+            },
+            "preyPoint": {
+              "x": 59,
+              "y": -0.5323335119702179,
+              "z": 5
+            },
+            "preyPosition": {
+              "x": 59,
+              "y": -0.5331735119702179,
+              "z": 5
+            },
+            "bodyPosition": {
+              "x": 58.84150098891906,
+              "y": -0.5307521663343198,
+              "z": 5
+            },
+            "bodyHeading": 0,
+            "bodyPose": {
+              "pitch": -1.5308781084130678,
+              "yaw": 0,
+              "crouch": 0.7,
+              "billPitch": -1.35,
+              "clawPitch": 0
+            },
+            "shellOpening": 0,
+            "contactDistance": 3.68771679859492e-11,
+            "sequence": [
+              "approach",
+              "bill-contact",
+              "handling",
+              "prey-acquired"
+            ],
+            "modelRevision": 3
+          },
+          {
+            "id": "ranger-compact-v2:summer:18",
+            "interaction": "shell-competition",
+            "actors": [
+              "compact-oystercatcher",
+              "compact-mussel-3"
+            ],
+            "resourceId": "compact-mussel-pool",
+            "resource": "shared-mussels",
+            "startedAt": 19.60350000000001,
+            "endedAt": 24.55350000000008,
+            "before": 14,
+            "after": 13,
+            "outcome": "prey-removed",
+            "source": "model-event",
+            "window": "summer",
+            "interpretation": {
+              "kind": "interspecific-competition",
+              "limit": "Zugang und Ertrag am begrenzten Pool; Kontrollvergleich erforderlich",
+              "reference": "S37,S39"
+            },
+            "contactAt": 21.55350000000004,
+            "handlingStartedAt": 21.55350000000004,
+            "preyLength": 0.02,
+            "accessible": true,
+            "technique": "shell-opening",
+            "waterDepth": -0.1811092780330077,
+            "preyWaterDepth": -0.1844903889677687,
+            "contactPoint": {
+              "x": 60.86139327586576,
+              "y": -0.5691846892209605,
+              "z": -15.546136491009007
+            },
+            "preyPoint": {
+              "x": 60.86,
+              "y": -0.5691846892209605,
+              "z": -15.546877820554613
+            },
+            "preyPosition": {
+              "x": 60.86,
+              "y": -0.574040945748427,
+              "z": -15.55
+            },
+            "bodyPosition": {
+              "x": 60.97944099045283,
+              "y": -0.581422056683188,
+              "z": -15.7691444932699
+            },
+            "bodyHeading": 2.0638965234615596,
+            "bodyPose": {
+              "pitch": -1.7072240615061616,
+              "yaw": 0.008242369704832801,
+              "crouch": 0.7,
+              "billPitch": -0.65,
+              "clawPitch": 0
+            },
+            "shellOpening": 0.5,
+            "contactDistance": 0.0015782227768269097,
+            "sequence": [
+              "approach",
+              "bill-contact",
+              "handling",
+              "prey-acquired"
+            ],
+            "modelRevision": 3
+          },
+          {
+            "id": "ranger-compact-v2:summer:20",
+            "interaction": "shore-feeding",
+            "actors": [
+              "compact-redshank",
+              "compact-juvenile-worm-4"
+            ],
+            "resourceId": "compact-small-ragworms",
+            "resource": "small-worms",
+            "startedAt": 25.003500000000088,
+            "endedAt": 27.828500000000126,
+            "before": 2,
+            "after": 1,
+            "outcome": "consumed",
+            "source": "model-event",
+            "window": "summer",
+            "interpretation": {
+              "kind": "niche",
+              "limit": "Mehrere Nischendimensionen; keine Erklärung allein durch Schnabelform",
+              "reference": "S33-S40"
+            },
+            "contactAt": 27.128500000000116,
+            "handlingStartedAt": 27.128500000000116,
+            "preyLength": 0.012,
+            "accessible": true,
+            "technique": "probing",
+            "waterDepth": -0.16308220268866913,
+            "preyWaterDepth": -0.1604962879061579,
+            "contactPoint": {
+              "x": 59.08000000007421,
+              "y": -0.534045574531263,
+              "z": 5.030000000003234
+            },
+            "preyPoint": {
+              "x": 59.08,
+              "y": -0.534045574531263,
+              "z": 5.03
+            },
+            "preyPosition": {
+              "x": 59.08,
+              "y": -0.534885574531263,
+              "z": 5.03
+            },
+            "bodyPosition": {
+              "x": 58.92167207315185,
+              "y": -0.5322996597487517,
+              "z": 5.023101169748979
+            },
+            "bodyHeading": 0.04354550262523344,
+            "bodyPose": {
+              "pitch": -1.5325095198915633,
+              "yaw": 0,
+              "crouch": 0.7,
+              "billPitch": -1.35,
+              "clawPitch": 0
+            },
+            "shellOpening": 0,
+            "contactDistance": 7.427951186399985e-11,
+            "sequence": [
+              "approach",
+              "bill-contact",
+              "handling",
+              "prey-acquired"
+            ],
+            "modelRevision": 3
+          }
+        ],
+        "runId": "1f16476b-6ac9-468d-a90b-dca29a21a39d",
+        "modelObservation": "compact-avocet",
+        "ownSeconds": 0,
+        "renderRevision": "29",
+        "sceneRevision": "29",
+        "visibility": {
+          "individualId": "compact-avocet",
+          "meshVisible": true,
+          "bodyClear": true,
+          "billClear": false,
+          "bodyInFrame": true
+        },
+        "actor": {
+          "id": "compact-avocet",
+          "taxon": "recurvirostra_avosetta",
+          "x": 61.671239406816866,
+          "y": -0.6790101895028341,
+          "z": -7,
+          "activity": "sweeping",
+          "phase": "searching",
+          "pose": {
+            "pitch": -2.0071908030990984,
+            "yaw": 0.16942531974162067,
+            "crouch": 0.7,
+            "billPitch": -0.5,
+            "clawPitch": 0
+          },
+          "targetId": "compact-juvenile-worm-0"
+        }
+      },
+      "preyId": "compact-juvenile-worm-0"
+    }
+  ],
+  "errors": [],
+  "passed": false,
+  "failure": "Traceback (most recent call last):\n  File \"/workspace/Ein-Tag-als-Ranger/tools/browser-compact-feeding.py\", line 43, in <module>\n    if s['actor'].get('targetId')==episode and phase not in seen:seen.add(phase);capture(page,row,s,phase)\n                                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/Ein-Tag-als-Ranger/tools/browser-compact-feeding.py\", line 23, in capture\n    assert s['visibility']and all(s['visibility'][k]for k in ['meshVisible','bodyClear','billClear','bodyInFrame']),(row['id'],phase,'Actual model hidden or occluded',s['visibility'])\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: ('compact-avocet', 'searching', 'Actual model hidden or occluded', {'individualId': 'compact-avocet', 'meshVisible': True, 'bodyClear': True, 'billClear': False, 'bodyInFrame': True})\n"
+}

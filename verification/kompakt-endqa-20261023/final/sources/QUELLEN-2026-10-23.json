@@ -1,0 +1,270 @@
+{
+  "date": "2026-10-23",
+  "scope": "Bibliographic metadata and short factual extractions only. No third-party full texts or images included. Software checks do not attest learning, physical equipment skills, excursions or iPad operation.",
+  "status": {
+    "C01": "IMPLEMENTED_WITH_SOURCE_RANGES",
+    "C15": "IMPLEMENTED_WITH_TWO_ORIGINAL_STUDY_CASES",
+    "C17": "PARTIAL_FECUNDITY_DEFINITION_OPEN",
+    "ETS_original": "NOT_CHECKED_NETWORK_BLOCKED"
+  },
+  "sources": [
+    {
+      "id": "fa2026",
+      "url": "https://fachportal.lernnetz.de/index.php/sh/faecher/biologie/fachanforderungen.html?file=files/Fachanforderungen%20und%20Leitf%C3%A4den/Sekundarstufe/Fachanforderungen/Fachanforderungen%20Biologie%20Sekundarstufe%20%282026%29.pdf&cid=17928",
+      "status": "ORIGINAL_PAGES_READ",
+      "httpStatus": 200,
+      "sha256": "840be6a3e8859bd41fd5bd48803011123d42b87dc49101a559da1c2771a563f6",
+      "readPrintedPages": [
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        58,
+        62,
+        72,
+        73,
+        75
+      ],
+      "readPdfPages": [
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        58,
+        62,
+        72,
+        73,
+        75
+      ],
+      "visuallyCheckedPdfPages": [
+        62
+      ]
+    },
+    {
+      "id": "leitfaden2017",
+      "url": "https://fachportal.lernnetz.de/index.php/sh/faecher/biologie/fachanforderungen.html?file=files/Fachanforderungen%20und%20Leitf%C3%A4den/Sekundarstufe/Leitf%C3%A4den/Leitfaden%20Biologie%20Sekundarstufe%20%282017%29.pdf&cid=29948",
+      "status": "ORIGINAL_PAGES_READ",
+      "httpStatus": 200,
+      "sha256": "0f1c812fefd9d4c3c39c1f91af7d4cb54a2864afcda416a91423b3ddcdf3fd5d",
+      "readPrintedPages": [
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "readPdfPages": [
+        46,
+        47,
+        48,
+        49,
+        50,
+        51
+      ],
+      "visuallyCheckedPdfPages": [
+        49,
+        50,
+        51
+      ]
+    },
+    {
+      "id": "ets2025_26",
+      "url": "https://ets-toenning.de/wp-content/uploads/2025/07/Schulinternes-Fachcurriculum-Biologie-SJ-2025-26.pdf",
+      "status": "NOT_CHECKED",
+      "proxyStatus": 403,
+      "sha256": null,
+      "requestedPrintedPages": [
+        27,
+        28
+      ],
+      "reason": "Domain not allowed by configured network policy; no local original available."
+    },
+    {
+      "id": "C01-biomes",
+      "url": "https://github.com/cnx-user-books/cnxbook-biology-2e/blob/dc0170c088d2df398e742295f528ad1df6c86c58/modules/m66420/index.cnxml",
+      "status": "SOURCE_MODULE_READ",
+      "httpStatus": 200,
+      "sha256": "ef011a203b5bff3b4330d29160f9cac958e2045ccad19d934cbf0018149b0d25",
+      "readSections": [
+        "Tropical Wet Forest",
+        "Temperate Forests",
+        "Boreal Forests",
+        "Subtropical Deserts"
+      ],
+      "facts": {
+        "annualPrecipitationCm": {
+          "tropicalWetForest": [
+            125,
+            660
+          ],
+          "temperateForest": [
+            75,
+            150
+          ],
+          "borealForest": [
+            40,
+            100
+          ],
+          "subtropicalDesert": "<30; some sites 2"
+        },
+        "waterBalance": "ET, runoff and storage change unavailable as numbers; no computed complete balance",
+        "provenance": "published biome ranges, not station raw measurements"
+      }
+    },
+    {
+      "id": "C15-oilbird",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0008264",
+      "status": "ORIGINAL_TEXT_READ",
+      "httpStatus": 200,
+      "sha256": "9e4fd0fc6fb60a100fb14258eb0f9399ff63629f5709d235916ceaf022a22b78",
+      "readSections": [
+        "Abstract",
+        "Introduction",
+        "Methods: site and tracking",
+        "Results",
+        "Discussion"
+      ]
+    },
+    {
+      "id": "C15-fruitbat",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0229110",
+      "status": "ORIGINAL_TEXT_READ",
+      "httpStatus": 200,
+      "sha256": "48242ce3ecfafb3ff5fb456614f6c5f71b975c64f5853c9c8e900f236941fff8",
+      "readSections": [
+        "Abstract",
+        "Introduction",
+        "Methods: site and tracking",
+        "Results",
+        "Discussion"
+      ]
+    },
+    {
+      "id": "C17-cockle-maturity",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/?term=%22Cerastoderma+edule%22+maturity&format=abstract&size=50",
+      "status": "ABSTRACT_READ",
+      "httpStatus": 200,
+      "sha256": "dbbeec36eec7cb4a4aa6313dc65e59f4cc34693183ff1c0cd4315a4e2e20de1a",
+      "readSections": [
+        "Seed & Brown 1977: complete PubMed abstract"
+      ],
+      "facts": {
+        "reproduction": "second year of life",
+        "context": "Strangford Lough; almost five years; no exact universal month threshold"
+      }
+    },
+    {
+      "id": "C17-roe-reproduction",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0175579",
+      "status": "ORIGINAL_TEXT_READ",
+      "httpStatus": 200,
+      "sha256": "a1973becd3fda2aadd94f567c30f2579e6390eb379c14321bcf5cb28bed02ea6",
+      "readSections": [
+        "Introduction",
+        "Sampling methods and data collection",
+        "Results",
+        "Discussion"
+      ],
+      "facts": {
+        "firstMatingMonths": [
+          15,
+          17
+        ],
+        "ovulatedYearlingsPercent": 94.1,
+        "yearlingsN": 305,
+        "corporaLuteaDistributionPercent": {
+          "1": 19.9,
+          "2": 75.8,
+          "3": 3.8
+        },
+        "context": "Slovenia 2013–2015; ovulation potential, not born fawns"
+      }
+    },
+    {
+      "id": "C17-roe-care",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0222150",
+      "status": "ORIGINAL_TEXT_READ",
+      "httpStatus": 200,
+      "sha256": "64fbde2b8184de46605e196e0828229c425646622a99daf625b50fdb25672b44",
+      "readSections": [
+        "Discussion: Roe deer is a highly selective feeder"
+      ],
+      "facts": {
+        "motherOffspringAssociation": "first year of life; literature summary, not continuous suckling duration"
+      }
+    },
+    {
+      "id": "C17-cockle-density",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/?term=%22Cerastoderma%20edule%22%20survival&format=abstract&size=50",
+      "status": "ABSTRACT_READ",
+      "httpStatus": 200,
+      "sha256": "03037c5f2eaf74aee801e055843c978554a22a67185ba9b261494642f4156c8c",
+      "readSections": [
+        "Bijleveld et al. 2015: complete PubMed abstract"
+      ],
+      "facts": {
+        "densityIndividualsPerM2": [
+          232,
+          50
+        ],
+        "plots": {
+          "number": 3,
+          "areaHaEach": 1
+        },
+        "context": "predation pulse; duration and region not explicit in read abstract; density decline is not individual annual survival"
+      }
+    },
+    {
+      "id": "C17-roe-survival",
+      "url": "https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001828",
+      "status": "ORIGINAL_TEXT_READ",
+      "httpStatus": 200,
+      "sha256": "8d1828fd262010b10a71858483b4732929f9ede07a7e466f65567f578a301678",
+      "readSections": [
+        "Results: Parturition Date, a Trait Under Strong Selection Pressure",
+        "Methods: Data Collection"
+      ],
+      "facts": {
+        "survivalToEightMonthsPercentApprox": [
+          50,
+          24
+        ],
+        "birthDateGroups": [
+          "before May12",
+          "May31"
+        ],
+        "birthDatesN": 1095,
+        "context": "Trois Fontaines 1985–2011; model estimates; confidence bounds not numerically extracted"
+      }
+    },
+    {
+      "id": "C17-MacroTraits",
+      "url": "https://github.com/obeauchard/fuzR/blob/4b89ff85ead0fd1474f40bab0abda22820bab35f/data/MacroTraits.rda",
+      "status": "DATA_READ",
+      "httpStatus": 200,
+      "sha256": "c80e262904d03230c4d4c5e45ae36ce8b5de561796c78efece63842aff3d635e",
+      "readSections": [
+        "taxonomy/traits/labels/references joined by species and IDs; Cerastoderma edule traits14,15,17,18"
+      ],
+      "limits": "Annual fecundity class 10e4-10e5 preserved verbatim; exponent convention and per-female denominator unresolved. No exact eggs/female/year claimed. Egg protection Gel; planktotrophic development; no measured care days."
+    },
+    {
+      "id": "C17-MacroTraits-methods",
+      "url": "https://github.com/obeauchard/fuzR/blob/4b89ff85ead0fd1474f40bab0abda22820bab35f/README.pdf",
+      "status": "METHODS_READ",
+      "httpStatus": 200,
+      "sha256": "6ce3274f26234afbc99e2fb91b36b76e2f80f907a223716435d307d4fe1ccac1",
+      "readSections": [
+        "S3.1, PDF page9; table of fecundity class labels"
+      ],
+      "limits": "Annual fecundity class 10e4-10e5 preserved verbatim; exponent convention and per-female denominator unresolved. No exact eggs/female/year claimed. Egg protection Gel; planktotrophic development; no measured care days."
+    }
+  ]
+}

@@ -1,0 +1,178 @@
+[
+  {
+    "name": "Waldstart",
+    "area": "wald",
+    "file": "comparison-start.png",
+    "beforeGroup": "world-before",
+    "afterGroup": "world-optimized",
+    "status": "BESTANDEN",
+    "assessment": "Feiner aufgelöste Kronenränder, kleinere sichtbare Blätter und ruhigeres HUD. Der Einstieg bleibt erreichbar.",
+    "limits": "Gerade Stammgrundformen und wiederholte Kronencluster bleiben sichtbar.",
+    "scope": "Finales Originalbild visuell mit der ursprünglichen Ansicht verglichen: beschriebene Teilverbesserung sichtbar, vorhandener Standort erhalten. Kein vollständiger Realismusnachweis."
+  },
+  {
+    "name": "Buchenwald / Waldmeister",
+    "area": "wald",
+    "file": "comparison-woodruff.png",
+    "beforeGroup": "world-before",
+    "afterGroup": "world-optimized",
+    "status": "BESTANDEN",
+    "assessment": "Kleinere Kronenkerne mit Blattgruppen; graue Stämme und Unterwuchs sind räumlich besser getrennt.",
+    "limits": "Kein individueller Neuaufbau der Verzweigung; Licht-/Standortmodell erhalten.",
+    "scope": "Finales Originalbild visuell mit der ursprünglichen Ansicht verglichen: beschriebene Teilverbesserung sichtbar, vorhandener Standort erhalten. Kein vollständiger Realismusnachweis."
+  },
+  {
+    "name": "Waldsaum / Brennnessel",
+    "area": "wald",
+    "file": "comparison-nettle.png",
+    "beforeGroup": "world-before",
+    "afterGroup": "world-optimized",
+    "status": "BESTANDEN",
+    "assessment": "Feinere Blattkanten und differenzierte Bäume am Übergang zum offenen Bereich.",
+    "limits": "Wiederholung der Pflanzenmodule bleibt erkennbar.",
+    "scope": "Finales Originalbild visuell mit der ursprünglichen Ansicht verglichen: beschriebene Teilverbesserung sichtbar, vorhandener Standort erhalten. Kein vollständiger Realismusnachweis."
+  },
+  {
+    "name": "Totholzbereich",
+    "area": "wald",
+    "file": "comparison-wood.png",
+    "beforeGroup": "world-before",
+    "afterGroup": "world-optimized",
+    "status": "BESTANDEN",
+    "assessment": "Rindenstruktur und feinere Vegetation; vorhandenes Totholz und Pilzstandort bleiben erhalten.",
+    "limits": "Totholzkörper und Pilzkonsole wurden nicht anatomisch neu modelliert.",
+    "scope": "Finales Originalbild visuell mit der ursprünglichen Ansicht verglichen: beschriebene Teilverbesserung sichtbar, vorhandener Standort erhalten. Kein vollständiger Realismusnachweis."
+  },
+  {
+    "name": "Dorfstraße",
+    "area": "dorf",
+    "file": "comparison-village.png",
+    "beforeGroup": "world-before",
+    "afterGroup": "world-optimized",
+    "status": "BESTANDEN",
+    "assessment": "Fensterkreuze, Laibungen, Dachkurse und Entwässerungsdetails gliedern die bisher einfachen Gebäude.",
+    "limits": "Hausgrundkörper und Fassadentextur bleiben einfach; kein fotorealistisches Dorf.",
+    "scope": "Finales Originalbild visuell mit der ursprünglichen Ansicht verglichen: beschriebene Teilverbesserung sichtbar, vorhandener Standort erhalten. Kein vollständiger Realismusnachweis."
+  },
+  {
+    "name": "Dorf mit Gesprächsperson",
+    "area": "dorf",
+    "file": "npc-ranger.png",
+    "beforeGroup": "world-before",
+    "afterGroup": "world-optimized",
+    "status": "BESTANDEN",
+    "assessment": "Figur mit geformtem Oberkörper, Gelenken, Gesicht und Kleidung; besser lesbarer Dialog.",
+    "limits": "Gesicht und Hände bleiben geometrisch; keine gescannte menschliche Figur.",
+    "scope": "Finales Originalbild visuell mit der ursprünglichen Ansicht verglichen: beschriebene Teilverbesserung sichtbar, vorhandener Standort erhalten. Kein vollständiger Realismusnachweis."
+  },
+  {
+    "name": "Deich von der Landseite",
+    "area": "deich",
+    "file": "comparison-ramp.png",
+    "beforeGroup": "world-before",
+    "afterGroup": "world-optimized",
+    "status": "BESTANDEN",
+    "assessment": "Feiner gegliederte Bodenoberfläche und weichere Übergänge; Dorf und Wald bilden einen einheitlicheren Hintergrund.",
+    "limits": "Böschung und Krone bleiben dieselbe flache didaktische Modellform; kein neuer Deichquerschnitt. Der sichtbare Gewinn ist hier überwiegend eine Detail-/Materialverfeinerung, keine grundlegende Neugestaltung des Raums.",
+    "scope": "Finales Originalbild visuell mit der ursprünglichen Ansicht verglichen: beschriebene Teilverbesserung sichtbar, vorhandener Standort erhalten. Kein vollständiger Realismusnachweis."
+  },
+  {
+    "name": "Obere Salzwiese",
+    "area": "salzwiese",
+    "file": "upper-marsh.png",
+    "beforeGroup": "world-before",
+    "afterGroup": "world-optimized",
+    "status": "BESTANDEN",
+    "assessment": "Verfeinerte Pflanzenoberflächen und zusammenhängendere Materialübergänge.",
+    "limits": "Verteilung und Grundwuchs der Halophyten bleiben schematisch; Höhen unverändert. Der sichtbare Gewinn ist hier überwiegend eine Detail-/Materialverfeinerung, keine grundlegende Neugestaltung des Raums.",
+    "scope": "Finales Originalbild visuell mit der ursprünglichen Ansicht verglichen: beschriebene Teilverbesserung sichtbar, vorhandener Standort erhalten. Kein vollständiger Realismusnachweis."
+  },
+  {
+    "name": "Untere Salzwiese",
+    "area": "salzwiese",
+    "file": "lower-marsh.png",
+    "beforeGroup": "world-before",
+    "afterGroup": "world-optimized",
+    "status": "BESTANDEN",
+    "assessment": "Unterschiedliche bestehende Wuchsformen bleiben erhalten; Oberflächen und Übergänge verfeinert.",
+    "limits": "Keine neue flächendeckende Vegetationsrekonstruktion. Der sichtbare Gewinn ist hier überwiegend eine Detail-/Materialverfeinerung, keine grundlegende Neugestaltung des Raums.",
+    "scope": "Finales Originalbild visuell mit der ursprünglichen Ansicht verglichen: beschriebene Teilverbesserung sichtbar, vorhandener Standort erhalten. Kein vollständiger Realismusnachweis."
+  },
+  {
+    "name": "Keilmeldenzone",
+    "area": "salzwiese",
+    "file": "keilm.png",
+    "beforeGroup": "world-before",
+    "afterGroup": "world-optimized",
+    "status": "BESTANDEN",
+    "assessment": "Fleischige gegenständige Blattgruppen haben feinere Rundung und Oberflächen.",
+    "limits": "Strauchaufbau bleibt stark wiederholt; Materialdetail ist in normaler Entfernung subtil. Der sichtbare Gewinn ist hier überwiegend eine Detail-/Materialverfeinerung, keine grundlegende Neugestaltung des Raums.",
+    "scope": "Finales Originalbild visuell mit der ursprünglichen Ansicht verglichen: beschriebene Teilverbesserung sichtbar, vorhandener Standort erhalten. Kein vollständiger Realismusnachweis."
+  },
+  {
+    "name": "Quellerzone / Übergang zum Watt",
+    "area": "salzwiese",
+    "file": "comparison-salt-segments.png",
+    "beforeGroup": "world-before",
+    "afterGroup": "world-optimized",
+    "status": "BESTANDEN",
+    "assessment": "Gegliederte Sprosse bleiben von Blattsträuchern unterscheidbar; feinere Oberflächen am Sedimentübergang.",
+    "limits": "Kapselartige Sprossgrundform und Standortmuster erhalten. Der sichtbare Gewinn ist hier überwiegend eine Detail-/Materialverfeinerung, keine grundlegende Neugestaltung des Raums.",
+    "scope": "Finales Originalbild visuell mit der ursprünglichen Ansicht verglichen: beschriebene Teilverbesserung sichtbar, vorhandener Standort erhalten. Kein vollständiger Realismusnachweis."
+  },
+  {
+    "name": "Watt mit Priel",
+    "area": "watt",
+    "file": "comparison-coast.png",
+    "beforeGroup": "world-before",
+    "afterGroup": "world-optimized",
+    "status": "BESTANDEN",
+    "assessment": "Wasser und Sediment erhalten Rippelzeichnung und an der tatsächlichen Wasserhöhe orientierte Feuchteabdunklung.",
+    "limits": "Sehr flache Geometrie, bestehende Texturwiederholung; keine neuen Spiegelungs- oder Reliefmodelle. Der sichtbare Gewinn ist hier überwiegend eine Detail-/Materialverfeinerung, keine grundlegende Neugestaltung des Raums.",
+    "scope": "Finales Originalbild visuell mit der ursprünglichen Ansicht verglichen: beschriebene Teilverbesserung sichtbar, vorhandener Standort erhalten. Kein vollständiger Realismusnachweis."
+  },
+  {
+    "name": "Küstenausblick zum Hinterland",
+    "area": "watt",
+    "file": "outlook.png",
+    "beforeGroup": "world-before",
+    "afterGroup": "world-optimized",
+    "status": "BESTANDEN",
+    "assessment": "Wald, Dorf, Salzwiese und Sediment mit gemeinsamer Materialwirkung; der bestehende Steg bleibt begehbar.",
+    "limits": "Große offene Flächen bleiben schematisch; keine photogrammetrische Landschaft. Der sichtbare Gewinn ist hier überwiegend eine Detail-/Materialverfeinerung, keine grundlegende Neugestaltung des Raums.",
+    "scope": "Finales Originalbild visuell mit der ursprünglichen Ansicht verglichen: beschriebene Teilverbesserung sichtbar, vorhandener Standort erhalten. Kein vollständiger Realismusnachweis."
+  },
+  {
+    "name": "Gräser der Salzwiese",
+    "area": "salzwiese",
+    "file": "comparison-salt-grass.png",
+    "beforeGroup": "world-before",
+    "afterGroup": "world-optimized",
+    "status": "BESTANDEN",
+    "assessment": "Feine Halm-/Rispenoberflächen und unterscheidbare vorhandene Graswuchsformen.",
+    "limits": "Merkmale im Weltmaßstab klein; botanische Feinbestimmung erfordert Nahansicht. Der sichtbare Gewinn ist hier überwiegend eine Detail-/Materialverfeinerung, keine grundlegende Neugestaltung des Raums.",
+    "scope": "Finales Originalbild visuell mit der ursprünglichen Ansicht verglichen: beschriebene Teilverbesserung sichtbar, vorhandener Standort erhalten. Kein vollständiger Realismusnachweis."
+  },
+  {
+    "name": "Deich von der Seeseite",
+    "area": "deich",
+    "file": "deich-seeseite.png",
+    "beforeGroup": "extras-before",
+    "afterGroup": "extras-final",
+    "status": "FEHLGESCHLAGEN",
+    "assessment": "Dorf-/Walddetails und Bodenmaterial sind verfeinert. Die Böschung bleibt sehr flach, die Perspektive himmellastig; eine senkrechte Naht des vorhandenen Himmelpanoramas ist deutlich sichtbar.",
+    "limits": "Sehr flache Modellböschung und viel Himmel; kein Anspruch auf reale Schutzwirkung. Der sichtbare Gewinn ist hier überwiegend eine Detail-/Materialverfeinerung, keine grundlegende Neugestaltung des Raums. Sichtbare Himmelnaht; diese Ansicht erhält keine vollständige grafische Freigabe.",
+    "scope": "Teilverbesserungen sichtbar, das angestrebte überzeugende Gesamtbild dieser Perspektive nicht erreicht."
+  },
+  {
+    "name": "Küstenvogel im tatsächlichen Nahrungskontext",
+    "area": "watt",
+    "file": "nahrung-modellsekunde-1.png",
+    "beforeGroup": "extras-before",
+    "afterGroup": "extras-final",
+    "status": "BESTANDEN",
+    "assessment": "Material und Vogelgestalt im originalen Weltmaßstab; Identität, Kamera, Modellzeit und Ökologie für dieses Vergleichspaar exakt gleich.",
+    "limits": "Der Vogel ist hier klein. Kontakt und konkrete Aufnahme werden zusätzlich in den tatsächlichen Detailsequenzen geprüft. Der sichtbare Gewinn ist hier überwiegend eine Detail-/Materialverfeinerung, keine grundlegende Neugestaltung des Raums.",
+    "scope": "Finales Originalbild geprüft; gleiche Kamera, Modellsekunde 1 und identischer Tier-/Ökologiezustand ausdrücklich bestätigt. Weltmaßstab, keine künstlich versetzte Beute."
+  }
+]

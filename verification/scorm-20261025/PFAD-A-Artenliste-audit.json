@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "pageCount": 2,
+  "checkedTextFragments": 36,
+  "sha256": "bd2a68b48817091a8d9c972d539325c6e677c5d01bf2af3c1467da5adcd57613",
+  "scope": "Exact two-page A4 and all body-text fragments; visual review separate",
+  "pageImages": [
+    {
+      "file": "PFAD-A-Artenliste-pages/page-1.png",
+      "sha256": "76176faf1696eb31dbeaed68b5f71c4364c43d0db227fe6bff34aa68ad15b43b"
+    },
+    {
+      "file": "PFAD-A-Artenliste-pages/page-2.png",
+      "sha256": "b05814fe029098dfeb7f084fdaf61786218f4570a4ca559b18ed7102ae7b3a20"
+    }
+  ]
+}

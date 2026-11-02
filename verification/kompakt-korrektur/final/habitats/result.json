@@ -1,0 +1,468 @@
+{
+  "passed": true,
+  "checks": [
+    "Ten same-own-XZ/yaw/pitch/viewport before/after pairs; eye height follows changed terrain, including old Keilmelde position",
+    "Normal keyboard walking in dense forest",
+    "Additional normal keyboard segments in village, dike, upper/lower marsh and wadden; full route continuity checked separately in model tests",
+    "Additional light-gap and nutrient-edge habitat images reached with normal look/walk input; not independent original cameras",
+    "All three real proximal world speakers, persisted model-dialogue context, no observation credit or remote interaction",
+    "Same new concrete Keilmelde stand rendered at low/high model water; no position changes"
+  ],
+  "captures": [
+    {
+      "file": "start.png",
+      "observer": {
+        "x": -52,
+        "z": 8,
+        "yaw": 0.9505468408120752,
+        "pitch": -0.1076920413878842
+      },
+      "simulationTime": "0.540",
+      "triangles": "1232379",
+      "frameMs": "16.7"
+    },
+    {
+      "file": "woodruff.png",
+      "observer": {
+        "x": -54.32327704373523,
+        "z": 8.043468266353608,
+        "yaw": 0.885066815888611,
+        "pitch": -0.5203797766551117
+      },
+      "simulationTime": "0.982",
+      "triangles": "1230415",
+      "frameMs": "1266.7"
+    },
+    {
+      "file": "nettle.png",
+      "observer": {
+        "x": -40.47863381511998,
+        "z": 14.197259088003703,
+        "yaw": 0.8850668158886108,
+        "pitch": -0.4174609346054198
+      },
+      "simulationTime": "1.519",
+      "triangles": "1243329",
+      "frameMs": "1500.0"
+    },
+    {
+      "file": "wood.png",
+      "observer": {
+        "x": -60,
+        "z": -4,
+        "yaw": 2.289626326416521,
+        "pitch": -0.46001848475880475
+      },
+      "simulationTime": "1.894",
+      "triangles": "1142869",
+      "frameMs": "2200.0"
+    },
+    {
+      "file": "village.png",
+      "observer": {
+        "x": -21,
+        "z": -2,
+        "yaw": -2.3086113869153615,
+        "pitch": -0.0479423390503622
+      },
+      "simulationTime": "2.415",
+      "triangles": "921455",
+      "frameMs": "850.0"
+    },
+    {
+      "file": "ramp.png",
+      "observer": {
+        "x": 3,
+        "z": 16,
+        "yaw": -0.4124104415973873,
+        "pitch": -0.030735012307624418
+      },
+      "simulationTime": "2.742",
+      "triangles": "478631",
+      "frameMs": "1733.2"
+    },
+    {
+      "file": "salt-shrub.png",
+      "observer": {
+        "x": 44.291782814811064,
+        "z": 11.857750914279078,
+        "yaw": 0.8850668158886108,
+        "pitch": -0.3944189439455479
+      },
+      "simulationTime": "3.215",
+      "triangles": "1107237",
+      "frameMs": "1633.3"
+    },
+    {
+      "file": "salt-segments.png",
+      "observer": {
+        "x": 47.06361154650879,
+        "z": -1.1226803810237544,
+        "yaw": -0.8850668158886109,
+        "pitch": -0.7030085891335317
+      },
+      "simulationTime": "3.640",
+      "triangles": "448727",
+      "frameMs": "1600.0"
+    },
+    {
+      "file": "salt-grass.png",
+      "observer": {
+        "x": 47.84118774223577,
+        "z": -10.62627088719092,
+        "yaw": 0.8850668158886108,
+        "pitch": -0.39489897841878646
+      },
+      "simulationTime": "3.952",
+      "triangles": "1335223",
+      "frameMs": "5983.1"
+    },
+    {
+      "file": "coast.png",
+      "observer": {
+        "x": 63,
+        "z": -13,
+        "yaw": -2.3036114285814033,
+        "pitch": -0.12788807707486585
+      },
+      "simulationTime": "4.376",
+      "triangles": "116675",
+      "frameMs": "333.3"
+    },
+    {
+      "file": "forest-normal-walk.png",
+      "observer": {
+        "x": -52.93091109106058,
+        "z": 7.335063506385348,
+        "yaw": 0.9505468408120752,
+        "pitch": -0.1076920413878842
+      },
+      "simulationTime": "5.532",
+      "triangles": "1230947",
+      "frameMs": "1500.0"
+    },
+    {
+      "file": "walk-village.png",
+      "observer": {
+        "x": -20.131724720274306,
+        "z": -1.2106588366130056,
+        "yaw": -2.3086113869153615,
+        "pitch": -0.0479423390503622
+      },
+      "simulationTime": "6.690",
+      "triangles": "921443",
+      "frameMs": "1666.6"
+    },
+    {
+      "file": "walk-ramp.png",
+      "observer": {
+        "x": 3.4692466253635406,
+        "z": 14.927436284883319,
+        "yaw": -0.4124104415973873,
+        "pitch": -0.06606182493717917
+      },
+      "simulationTime": "7.782",
+      "triangles": "476739",
+      "frameMs": "550.1"
+    },
+    {
+      "file": "walk-upper-marsh.png",
+      "observer": {
+        "x": 24.22399999999999,
+        "z": 20,
+        "yaw": -1.5707963267948966,
+        "pitch": -0.6007289669407488
+      },
+      "simulationTime": "8.972",
+      "triangles": "508527",
+      "frameMs": "733.3"
+    },
+    {
+      "file": "walk-lower-marsh.png",
+      "observer": {
+        "x": 36.14399999999999,
+        "z": -17,
+        "yaw": -1.5707963267948966,
+        "pitch": -0.5709995531952461
+      },
+      "simulationTime": "10.047",
+      "triangles": "532927",
+      "frameMs": "1100.0"
+    },
+    {
+      "file": "walk-coast.png",
+      "observer": {
+        "x": 63.83439227681112,
+        "z": -12.24904695086995,
+        "yaw": -2.3036114285814033,
+        "pitch": -0.12788807707486585
+      },
+      "simulationTime": "11.237",
+      "triangles": "97411",
+      "frameMs": "433.3"
+    },
+    {
+      "file": "habitat-light-gap.png",
+      "observer": {
+        "x": -35.74325543972827,
+        "z": -12.831160869947809,
+        "yaw": 0.1526493124767252,
+        "pitch": -0.11999996425871802
+      },
+      "simulationTime": "15.074",
+      "triangles": "1067985",
+      "frameMs": "16.7"
+    },
+    {
+      "file": "habitat-nutrient-edge.png",
+      "observer": {
+        "x": -28,
+        "z": 9,
+        "yaw": 0.24497866710158775,
+        "pitch": -0.11999998152981423
+      },
+      "simulationTime": "16.117",
+      "triangles": "1129003",
+      "frameMs": "1266.6"
+    },
+    {
+      "file": "npc-ranger.png",
+      "observer": {
+        "x": -22.297890806036296,
+        "z": 1.7879810981791544,
+        "yaw": 0.835192599122531,
+        "pitch": -0.19611200174449575
+      },
+      "simulationTime": "16.475",
+      "triangles": "1028851",
+      "frameMs": "1549.9"
+    },
+    {
+      "file": "dialogue-ranger.png",
+      "observer": {
+        "x": -22.297890806036296,
+        "z": 1.7879810981791544,
+        "yaw": 0.835192599122531,
+        "pitch": -0.19611200174449575
+      },
+      "simulationTime": "16.605",
+      "triangles": "1028851",
+      "frameMs": "16.7"
+    },
+    {
+      "file": "npc-local.png",
+      "observer": {
+        "x": -13.915771299503223,
+        "z": -5.622195640273663,
+        "yaw": 0.05015963194513811,
+        "pitch": -0.2306524050764279
+      },
+      "simulationTime": "16.997",
+      "triangles": "901143",
+      "frameMs": "949.9"
+    },
+    {
+      "file": "dialogue-local.png",
+      "observer": {
+        "x": -13.915771299503223,
+        "z": -5.622195640273663,
+        "yaw": 0.05015963194513811,
+        "pitch": -0.2306524050764279
+      },
+      "simulationTime": "17.127",
+      "triangles": "901143",
+      "frameMs": "16.7"
+    },
+    {
+      "file": "npc-coastal.png",
+      "observer": {
+        "x": -3.328583567115688,
+        "z": 17.974945751920576,
+        "yaw": -0.1374813526340483,
+        "pitch": -0.12146823597177095
+      },
+      "simulationTime": "17.568",
+      "triangles": "909531",
+      "frameMs": "2799.8"
+    },
+    {
+      "file": "dialogue-coastal.png",
+      "observer": {
+        "x": -3.328583567115688,
+        "z": 17.974945751920576,
+        "yaw": -0.1374813526340483,
+        "pitch": -0.12146823597177095
+      },
+      "simulationTime": "17.698",
+      "triangles": "909531",
+      "frameMs": "16.7"
+    },
+    {
+      "file": "keilm-low.png",
+      "observer": {
+        "x": 36.291782814811064,
+        "z": 11.857750914279078,
+        "yaw": 0.8850668158886108,
+        "pitch": -0.4009695945801292
+      },
+      "simulationTime": "120.360",
+      "triangles": "1114789",
+      "frameMs": "6633.0"
+    },
+    {
+      "file": "keilm-high.png",
+      "observer": {
+        "x": 36.291782814811064,
+        "z": 11.857750914279078,
+        "yaw": 0.8850668158886108,
+        "pitch": -0.4009695945801292
+      },
+      "simulationTime": "180.343",
+      "triangles": "1114717",
+      "frameMs": "3533.2"
+    }
+  ],
+  "errors": [],
+  "scope": "Own reconstruction, baseline cameras from own eece965 captures; original review camera data unavailable. Actual standalone WebGL, no physical iPad check.",
+  "htmlSHA256": "8e7fd1f784af9aa25c4764a4dc038e4c9b40fee21ce815f4487292a9d4e761fb",
+  "runtimeSourceHashes": {
+    "assets/boardwalk-wood.webp": "4d06022133e3772534374671fb73a4509ed109e1db6ca06a2d62a8c99c47ac6d",
+    "assets/compact-roe-deer.glb": "a89400df66033eb5eaa7f9bf13ccefaacfb866ab24e4576574d11965354ee619",
+    "assets/sky-panorama.webp": "46c360b491b11269d280e73ec0e71869afdfd62fb543b4250713234374a2f71d",
+    "assets/terrain-atlas.webp": "d637324d3ace6ef8e2c549e7f0a513efd1a4c06aab927f0ed1565bf77b2ced02",
+    "assets/wildlife-fox.glb": "61a4d1b845aa406928a327648417ae1c3982510b9c4e8ce33b7c494fbc98a22f",
+    "compact/catalog.js": "6b693d4c6a0f6b880b9ff99295826f3968e61ba96f52606997a1635ddf1fe39f",
+    "compact/coastal-behaviour.js": "39b1dcb8691cd48850321c4c734eabf0b2875b91a8cd09dcd7b571758b0f0927",
+    "compact/coastal-rig.js": "92a0270abdbf3aee7467e466cf344b08b8ef8bf5af4d903d3c672f9bcd4e2513",
+    "compact/comparison-views.js": "050f629dfc0b3b9bac1badc0c0564cfb08cf88e92006edcba377eabc623ecf82",
+    "compact/determination.js": "25f8ce960dba09ebeeb4470530d38608809bf98aa91d3575716b6ff835145c6f",
+    "compact/ecology.js": "e50f25a3146e79671472e7a5e6ed1d78f007564515bf9a78bb67fac9695ef8e0",
+    "compact/evidence.js": "1fb480ca90cebdba0b3178cc5ccbb121528826552ec32230b1c3245e808aa84f",
+    "compact/expanded-view.js": "b6201ad45f5a675fdf0d1092811fd8621c644ed9732e46fef51eb48e22ddb963",
+    "compact/fauna-view.js": "985a83582ff0ffac0e8d6ef20e2edc80a09b66e88f3768dd404f746507820feb",
+    "compact/geometry.js": "ac8a5e08a56f7ed75abb7a65baa6e20aba032984d7089e3b290d4769dd4307b0",
+    "compact/habitats.js": "10aad218dd69d51e842b59ef0164d9de8c0deaf30bc52d5165fc9ce317cde6c7",
+    "compact/inspection.js": "961c8c13e8e8e58595460fa40ed7bed0668367b120081dd95961a78ca87300ea",
+    "compact/journal.js": "a3acaef22c20529012509690d456d59f2739242eea1c58d38ba43aae410bb34f",
+    "compact/layout.js": "e02558557a9c99fa0549c94f8cbfc8873e18f3c90df845155d51ee4d404209a6",
+    "compact/learning-documents.js": "6e6bdf64274109550d7cf9fff8a182d207f258a59fde0285c9363989015a9de5",
+    "compact/learning-models.js": "078199d66bff5bd360c3010646c690dff92a58a160127204ba9fe9243a9a6d2e",
+    "compact/learning-ui.js": "e245840052fb77878de3abc55b4890ebcae96a76fe589155ab1d3dce5823e825",
+    "compact/lesson-layouts.js": "eec60d3c481ccfa0bf587f4213bdbe6847d75039934e4ecad149b1bd67adf3f2",
+    "compact/lesson-resources.js": "c650d8090445596c50be8cbd7a57d636d1f71c267fabd20fb5644f083923bbf8",
+    "compact/main.js": "9ba3c88ee948ae5829a64871f348ffd3fd499f2ef603ee68ee409d75ef0b742a",
+    "compact/management.js": "e6d38fbfc2c7e131d60ca3e38a1c740ca9ba5c49628fd3ba51ca94242d2d75a3",
+    "compact/manifest.js": "bdf071c610b896ffa14c41b33f9f17c5472199b55a6eb407f853e38178344cae",
+    "compact/materials.js": "b96c109d4a29a43223aa1f3c708af65f5d8258b03d3e43d5fa6d89100a799610",
+    "compact/missions.js": "55677975084e5dd4cc674ce0890305d0c3909fd82dce2241ec2b9526bd3147ee",
+    "compact/observation-schema.js": "962aecc5413eb0706a4000623af5b7f07742106bce51aacedcd3cb126195a5cd",
+    "compact/organism-models.js": "7cf080fb497a17d58ce4d1672ffc5cef12b7f2c033a336384e4aead7dfc27cb6",
+    "compact/path-mesh.js": "7a41ebc390aeca96cffd1e4fcee19f3b76310413fcee3489d1533ebd599a4c82",
+    "compact/style.css": "fa3e0391ced503e62691704482dfcd500f73e81aa43c0abb9559c0e7491b378b",
+    "compact/task-schema.js": "4ce4ca8e8f6c27182b3abe36d90d956fcbc6526d240911dbc996c53b670fc418",
+    "compact/taxa.js": "97cd6f5bad16208408512be876ebf63d5f9ee400dd31f94a61c8ca08e4e24fd3",
+    "compact/vegetation-view.js": "7e6f703c9a930a86dd2c9b202a79bf7842f4d1f41bf9a2a27d3ef24b3b22e47a",
+    "compact/village-view.js": "15d1902cbb96678503051ba0b11494d0ceea412dbc193f18bf16b0bfe9d91b03",
+    "compact/village.js": "05acf2a5ff040e4de2aaf2c3ebc3ee88daaf2edc75d12e80d49a5f54a60a3aec",
+    "compact/visibility.js": "50d59d44257e9d18547bfaec9277366d3339177c6ebce37d948b48c9940a86f1",
+    "compact/world-state.js": "360197f8bd8ab54c595386b66f2e676499630bc6ca896856034fba4910d9fd7f",
+    "compact/world-view.js": "4302cfa6e1600a6f9f2d62835c38b0d3e90ea232d9904c0559ae6936860f112a",
+    "field-guide.js": "72126f4e4560fceb95e64fbd35799de0dafefaf65683625f76a5d949d05cbe07",
+    "icon.svg": "cb8cda889f99e56d13d18e09929837b7c3630d3f9ff3219316d12d3077fc0869",
+    "kompakt.html": "781393f0611a24e8ce757e87124a6347c28f21c1132689c6e198cf421ccd6aa4",
+    "observation-clock.js": "2304e6c425192967f87841caa5072873cb5dd5c7f69c38fb45b237fd22f98b03",
+    "ranger-controls.js": "081497a5f6754ecd441e61ee55805da99b5121e96215cfa900209e00e41e5eda",
+    "station-protocol.js": "2590df7d9de4c8f4afda8fcafd619d565440c2dc7e1bb6ef4574aeadf803ae57",
+    "vendor/three.core.js": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20",
+    "vendor/three.module.js": "2884e2e6f26feaec0b454fcdc1e98c27d6433ba15253e5a3e22e111df81686fa",
+    "wildlife-glb.js": "32f8f947dd002ba7b571ee627e6291fa40a951fccdd9dee644661f19de487c35"
+  },
+  "browser": "154.0.8037.57",
+  "walks": [
+    {
+      "location": "village",
+      "before": {
+        "x": -21,
+        "z": -2,
+        "yaw": -2.3086113869153615,
+        "pitch": -0.0479423390503622
+      },
+      "after": {
+        "x": -20.131724720274306,
+        "z": -1.2106588366130056,
+        "yaw": -2.3086113869153615,
+        "pitch": -0.0479423390503622
+      },
+      "distanceMeters": 1.1734399999999428,
+      "modelSeconds": 0.7329999999999997
+    },
+    {
+      "location": "ramp",
+      "before": {
+        "x": 3,
+        "z": 16,
+        "yaw": -0.4124104415973873,
+        "pitch": -0.06606182493717917
+      },
+      "after": {
+        "x": 3.4692466253635406,
+        "z": 14.927436284883319,
+        "yaw": -0.4124104415973873,
+        "pitch": -0.06606182493717917
+      },
+      "distanceMeters": 1.1707199999999864,
+      "modelSeconds": 0.7309999999999999
+    },
+    {
+      "location": "upper-marsh",
+      "before": {
+        "x": 23,
+        "z": 20,
+        "yaw": -1.5707963267948966,
+        "pitch": -0.6007289669407488
+      },
+      "after": {
+        "x": 24.22399999999999,
+        "z": 20,
+        "yaw": -1.5707963267948966,
+        "pitch": -0.6007289669407488
+      },
+      "distanceMeters": 1.2239999999999895,
+      "modelSeconds": 0.7649999999999997
+    },
+    {
+      "location": "lower-marsh",
+      "before": {
+        "x": 35,
+        "z": -17,
+        "yaw": -1.5707963267948966,
+        "pitch": -0.5709995531952461
+      },
+      "after": {
+        "x": 36.14399999999999,
+        "z": -17,
+        "yaw": -1.5707963267948966,
+        "pitch": -0.5709995531952461
+      },
+      "distanceMeters": 1.1439999999999912,
+      "modelSeconds": 0.7150000000000016
+    },
+    {
+      "location": "coast",
+      "before": {
+        "x": 63,
+        "z": -13,
+        "yaw": -2.3036114285814033,
+        "pitch": -0.12788807707486585
+      },
+      "after": {
+        "x": 63.83439227681112,
+        "z": -12.24904695086995,
+        "yaw": -2.3036114285814033,
+        "pitch": -0.12788807707486585
+      },
+      "distanceMeters": 1.122559999999897,
+      "modelSeconds": 0.7009999999999987
+    }
+  ]
+}

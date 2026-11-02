@@ -1,0 +1,725 @@
+{
+  "passed": true,
+  "sourceCommit": "4eb186a5325ae30dfa233e10dd44eb73ea710afa",
+  "htmlAudit": {
+    "modules": 46,
+    "assets": 5,
+    "htmlSHA256": "3748c6590afefb18a5e07bb3cedc2c40b0b2be1619a57cc52553a30de5869412",
+    "exactRuntimeClosure": true
+  },
+  "driverSHA256": "371a525ca9045a5f5c1ca4f321eae09f057691e7910a48a95ef8fd17846ac0db",
+  "scope": "Real WebGL regression for discarded idle readback versus paused compositor.\nNative public model controls only. Uses the production QA capture function,\nnot a fake canvas, model clock, render hook or injected observation flag.\n",
+  "errors": [],
+  "directReadbackExtrema": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "discardedReadbackReproduced": true,
+  "preserveDrawingBuffer": false,
+  "sample": {
+    "time": 1.2,
+    "observer": {
+      "x": 63,
+      "z": 4,
+      "yaw": 0.09980534750435958,
+      "pitch": -0.13030399759139988
+    },
+    "actors": [
+      {
+        "id": "compact-bee",
+        "taxon": "bombus_lapidarius",
+        "x": -24.8446111497758,
+        "y": 0.6164360749566014,
+        "z": 9.526615184029357,
+        "activity": "anther-contact",
+        "phase": "waiting"
+      },
+      {
+        "id": "compact-avocet",
+        "taxon": "recurvirostra_avosetta",
+        "x": 62,
+        "y": -0.6644065008327552,
+        "z": -7,
+        "activity": "resting",
+        "phase": "waiting",
+        "pose": {
+          "pitch": 0,
+          "yaw": 0,
+          "crouch": 0,
+          "billPitch": 0,
+          "clawPitch": 0
+        },
+        "targetId": "compact-juvenile-worm-0"
+      },
+      {
+        "id": "compact-spoonbill",
+        "taxon": "platalea_leucorodia",
+        "x": 70.10077517860756,
+        "y": -1.100654010568476,
+        "z": 0.9267089610126569,
+        "activity": "sweeping",
+        "phase": "searching",
+        "pose": {
+          "pitch": -2.1304985080689702,
+          "yaw": 0.23980030686515424,
+          "crouch": 0.7,
+          "billPitch": -0.1,
+          "clawPitch": 0
+        },
+        "targetId": "compact-shrimp-4",
+        "feedingEventId": "ranger-compact-v2:summer:feeding:compact-spoonbill:compact-shrimp-4:0.025000000",
+        "feedingPreyId": "compact-shrimp-4"
+      },
+      {
+        "id": "compact-redshank",
+        "taxon": "tringa_totanus",
+        "x": 59,
+        "y": -0.5331735119702179,
+        "z": 5,
+        "activity": "resting",
+        "phase": "waiting",
+        "pose": {
+          "pitch": 0,
+          "yaw": 0,
+          "crouch": 0,
+          "billPitch": 0,
+          "clawPitch": 0
+        },
+        "targetId": "compact-juvenile-worm-3"
+      },
+      {
+        "id": "compact-oystercatcher",
+        "taxon": "haematopus_ostralegus",
+        "x": 61.04986020543497,
+        "y": -0.5768117383181569,
+        "z": -15.474510686145313,
+        "activity": "shell-opening",
+        "phase": "handling",
+        "pose": {
+          "pitch": -1.643189475398981,
+          "yaw": 0.00446212724263492,
+          "crouch": 0.7,
+          "billPitch": -0.65,
+          "clawPitch": 0
+        },
+        "targetId": "compact-mussel-16",
+        "feedingEventId": "ranger-compact-v2:summer:feeding:compact-oystercatcher:compact-mussel-16:0.025000000",
+        "feedingPreyId": "compact-mussel-16"
+      },
+      {
+        "id": "compact-crab",
+        "taxon": "carcinus_maenas",
+        "x": 61.65800583211838,
+        "y": -0.5749944756765067,
+        "z": -15.399300097201968,
+        "activity": "approaching",
+        "phase": "approaching",
+        "pose": {
+          "pitch": 0,
+          "yaw": 0,
+          "crouch": 0,
+          "billPitch": 0,
+          "clawPitch": 0.23784212938266602
+        },
+        "targetId": "compact-mussel-11",
+        "feedingEventId": "ranger-compact-v2:summer:feeding:compact-crab:compact-mussel-11:0.025000000",
+        "feedingPreyId": "compact-mussel-11"
+      }
+    ],
+    "events": [],
+    "ecology": {
+      "window": "summer",
+      "actors": 82,
+      "alive": [
+        "compact-bracket",
+        "compact-fox",
+        "compact-mouse-0",
+        "compact-mouse-1",
+        "compact-mouse-2",
+        "compact-jay",
+        "compact-tit-0",
+        "compact-tit-1",
+        "compact-bee",
+        "compact-butterfly",
+        "compact-caterpillar",
+        "compact-ladybird-0",
+        "compact-ladybird-1",
+        "compact-aphid-0",
+        "compact-aphid-1",
+        "compact-aphid-2",
+        "compact-aphid-3",
+        "compact-aphid-4",
+        "compact-aphid-5",
+        "compact-aphid-6",
+        "compact-aphid-7",
+        "compact-aphid-8",
+        "compact-earthworm",
+        "compact-tick",
+        "compact-avocet",
+        "compact-spoonbill",
+        "compact-redshank",
+        "compact-oystercatcher",
+        "compact-mussel-0",
+        "compact-mussel-1",
+        "compact-mussel-2",
+        "compact-mussel-3",
+        "compact-mussel-4",
+        "compact-mussel-5",
+        "compact-mussel-6",
+        "compact-mussel-7",
+        "compact-mussel-8",
+        "compact-mussel-9",
+        "compact-mussel-10",
+        "compact-mussel-11",
+        "compact-mussel-12",
+        "compact-mussel-13",
+        "compact-mussel-14",
+        "compact-mussel-15",
+        "compact-mussel-16",
+        "compact-mussel-17",
+        "compact-cockle-0",
+        "compact-cockle-1",
+        "compact-cockle-2",
+        "compact-cockle-3",
+        "compact-cockle-4",
+        "compact-cockle-5",
+        "compact-cockle-6",
+        "compact-cockle-7",
+        "compact-cockle-8",
+        "compact-cockle-9",
+        "compact-lugworm",
+        "compact-ragworm",
+        "compact-juvenile-worm-0",
+        "compact-juvenile-worm-1",
+        "compact-juvenile-worm-2",
+        "compact-juvenile-worm-3",
+        "compact-juvenile-worm-4",
+        "compact-juvenile-worm-5",
+        "compact-shrimp-0",
+        "compact-shrimp-1",
+        "compact-shrimp-2",
+        "compact-shrimp-3",
+        "compact-shrimp-4",
+        "compact-crab",
+        "compact-snail-0",
+        "compact-snail-1",
+        "compact-snail-2",
+        "compact-snail-3",
+        "compact-snail-4",
+        "compact-snail-5",
+        "compact-snail-6",
+        "compact-snail-7",
+        "compact-snail-8",
+        "compact-snail-9",
+        "compact-snail-10",
+        "compact-snail-11"
+      ],
+      "events": 0,
+      "tide": {
+        "phase": 0.010000000000000024,
+        "waterLevel": -1.0492106913713086,
+        "label": "Niedrigwasser"
+      },
+      "resources": {
+        "aphid-colony": 9,
+        "shared-mussels": 18,
+        "clover-pollen": 6,
+        "browse-shoot": 5,
+        "nettle-leaf": 8,
+        "leaf-litter": 6,
+        "dead-wood": 100,
+        "acorns": 4,
+        "wood-mice": 3,
+        "wood-larvae": 8,
+        "small-juveniles": 3,
+        "small-worms": 3,
+        "shrimp": 5,
+        "deer-host": 1,
+        "phytoplankton": 100,
+        "benthic-diatoms": 30
+      }
+    },
+    "runId": "3197e117-0bc4-48f6-bdd7-d09612d9e435",
+    "origin": {
+      "kind": "local-observation-window",
+      "previousRunId": "d917c3e7-94c4-442b-90df-1432c7b1c908",
+      "previousSimulationTime": 0.34340000000000054,
+      "siteId": "outlook",
+      "x": 63,
+      "z": 4,
+      "startSimulationTime": 0
+    },
+    "mode": "compact-oystercatcher",
+    "realtime": false,
+    "ownSeconds": 0,
+    "focus": "",
+    "visibility": {
+      "individualId": "compact-oystercatcher",
+      "meshVisible": true,
+      "bodyClear": true,
+      "billClear": true,
+      "bodyInFrame": true
+    },
+    "detail": {
+      "runId": "3197e117-0bc4-48f6-bdd7-d09612d9e435",
+      "eventId": "ranger-compact-v2:summer:feeding:compact-oystercatcher:compact-mussel-16:0.025000000",
+      "eventRecorded": false,
+      "individualId": "compact-oystercatcher",
+      "preyId": "compact-mussel-16",
+      "phase": "handling",
+      "episodeCompleted": false,
+      "simulationTime": 1.2,
+      "observer": {
+        "x": 63,
+        "z": 4
+      },
+      "didacticMagnification": true,
+      "sharedLiveSceneNodes": true,
+      "preyGeometryUnscaled": true,
+      "freestandingView": true,
+      "preyVisible": true,
+      "worldPreyVisible": false,
+      "distanceLODOverride": true,
+      "tissueVisible": true,
+      "tip": {
+        "x": 60.98083105733994,
+        "y": -0.5596998477787894,
+        "z": -15.229651184014035
+      },
+      "mouth": {
+        "x": 61.01230022750964,
+        "y": -0.4648280481846337,
+        "z": -15.341736224544666
+      },
+      "carried": {
+        "x": 60.98083105733994,
+        "y": -0.5596998477787894,
+        "z": -15.229651184014035
+      },
+      "span": 0.19997720573006406,
+      "views": [
+        {
+          "id": "feeding-overview",
+          "rect": {
+            "x": 21,
+            "y": 248.71875,
+            "width": 153,
+            "height": 270
+          },
+          "clip": {
+            "x": 21,
+            "y": 231.28125,
+            "width": 153,
+            "height": 270
+          },
+          "fov": 35,
+          "position": [
+            60.153348377770975,
+            -0.1688637411780815,
+            -15.730537867929925
+          ],
+          "focus": [
+            61.04986020543497,
+            -0.3739815496389116,
+            -15.474510686145313
+          ]
+        },
+        {
+          "id": "feeding-contact",
+          "rect": {
+            "x": 179,
+            "y": 248.71875,
+            "width": 459,
+            "height": 270
+          },
+          "clip": {
+            "x": 179,
+            "y": 231.28125,
+            "width": 459,
+            "height": 270
+          },
+          "fov": 32,
+          "position": [
+            60.613322444050596,
+            -0.40942727776353155,
+            -15.412248342670507
+          ],
+          "focus": {
+            "x": 60.99412199216932,
+            "y": -0.4965524738432219,
+            "z": -15.303499041075982
+          }
+        }
+      ]
+    }
+  },
+  "capture": {
+    "after": {
+      "time": 1.2,
+      "observer": {
+        "x": 63,
+        "z": 4,
+        "yaw": 0.09980534750435958,
+        "pitch": -0.13030399759139988
+      },
+      "actors": [
+        {
+          "id": "compact-bee",
+          "taxon": "bombus_lapidarius",
+          "x": -24.8446111497758,
+          "y": 0.6164360749566014,
+          "z": 9.526615184029357,
+          "activity": "anther-contact",
+          "phase": "waiting"
+        },
+        {
+          "id": "compact-avocet",
+          "taxon": "recurvirostra_avosetta",
+          "x": 62,
+          "y": -0.6644065008327552,
+          "z": -7,
+          "activity": "resting",
+          "phase": "waiting",
+          "pose": {
+            "pitch": 0,
+            "yaw": 0,
+            "crouch": 0,
+            "billPitch": 0,
+            "clawPitch": 0
+          },
+          "targetId": "compact-juvenile-worm-0"
+        },
+        {
+          "id": "compact-spoonbill",
+          "taxon": "platalea_leucorodia",
+          "x": 70.10077517860756,
+          "y": -1.100654010568476,
+          "z": 0.9267089610126569,
+          "activity": "sweeping",
+          "phase": "searching",
+          "pose": {
+            "pitch": -2.1304985080689702,
+            "yaw": 0.23980030686515424,
+            "crouch": 0.7,
+            "billPitch": -0.1,
+            "clawPitch": 0
+          },
+          "targetId": "compact-shrimp-4",
+          "feedingEventId": "ranger-compact-v2:summer:feeding:compact-spoonbill:compact-shrimp-4:0.025000000",
+          "feedingPreyId": "compact-shrimp-4"
+        },
+        {
+          "id": "compact-redshank",
+          "taxon": "tringa_totanus",
+          "x": 59,
+          "y": -0.5331735119702179,
+          "z": 5,
+          "activity": "resting",
+          "phase": "waiting",
+          "pose": {
+            "pitch": 0,
+            "yaw": 0,
+            "crouch": 0,
+            "billPitch": 0,
+            "clawPitch": 0
+          },
+          "targetId": "compact-juvenile-worm-3"
+        },
+        {
+          "id": "compact-oystercatcher",
+          "taxon": "haematopus_ostralegus",
+          "x": 61.04986020543497,
+          "y": -0.5768117383181569,
+          "z": -15.474510686145313,
+          "activity": "shell-opening",
+          "phase": "handling",
+          "pose": {
+            "pitch": -1.643189475398981,
+            "yaw": 0.00446212724263492,
+            "crouch": 0.7,
+            "billPitch": -0.65,
+            "clawPitch": 0
+          },
+          "targetId": "compact-mussel-16",
+          "feedingEventId": "ranger-compact-v2:summer:feeding:compact-oystercatcher:compact-mussel-16:0.025000000",
+          "feedingPreyId": "compact-mussel-16"
+        },
+        {
+          "id": "compact-crab",
+          "taxon": "carcinus_maenas",
+          "x": 61.65800583211838,
+          "y": -0.5749944756765067,
+          "z": -15.399300097201968,
+          "activity": "approaching",
+          "phase": "approaching",
+          "pose": {
+            "pitch": 0,
+            "yaw": 0,
+            "crouch": 0,
+            "billPitch": 0,
+            "clawPitch": 0.23784212938266602
+          },
+          "targetId": "compact-mussel-11",
+          "feedingEventId": "ranger-compact-v2:summer:feeding:compact-crab:compact-mussel-11:0.025000000",
+          "feedingPreyId": "compact-mussel-11"
+        }
+      ],
+      "events": [],
+      "ecology": {
+        "window": "summer",
+        "actors": 82,
+        "alive": [
+          "compact-bracket",
+          "compact-fox",
+          "compact-mouse-0",
+          "compact-mouse-1",
+          "compact-mouse-2",
+          "compact-jay",
+          "compact-tit-0",
+          "compact-tit-1",
+          "compact-bee",
+          "compact-butterfly",
+          "compact-caterpillar",
+          "compact-ladybird-0",
+          "compact-ladybird-1",
+          "compact-aphid-0",
+          "compact-aphid-1",
+          "compact-aphid-2",
+          "compact-aphid-3",
+          "compact-aphid-4",
+          "compact-aphid-5",
+          "compact-aphid-6",
+          "compact-aphid-7",
+          "compact-aphid-8",
+          "compact-earthworm",
+          "compact-tick",
+          "compact-avocet",
+          "compact-spoonbill",
+          "compact-redshank",
+          "compact-oystercatcher",
+          "compact-mussel-0",
+          "compact-mussel-1",
+          "compact-mussel-2",
+          "compact-mussel-3",
+          "compact-mussel-4",
+          "compact-mussel-5",
+          "compact-mussel-6",
+          "compact-mussel-7",
+          "compact-mussel-8",
+          "compact-mussel-9",
+          "compact-mussel-10",
+          "compact-mussel-11",
+          "compact-mussel-12",
+          "compact-mussel-13",
+          "compact-mussel-14",
+          "compact-mussel-15",
+          "compact-mussel-16",
+          "compact-mussel-17",
+          "compact-cockle-0",
+          "compact-cockle-1",
+          "compact-cockle-2",
+          "compact-cockle-3",
+          "compact-cockle-4",
+          "compact-cockle-5",
+          "compact-cockle-6",
+          "compact-cockle-7",
+          "compact-cockle-8",
+          "compact-cockle-9",
+          "compact-lugworm",
+          "compact-ragworm",
+          "compact-juvenile-worm-0",
+          "compact-juvenile-worm-1",
+          "compact-juvenile-worm-2",
+          "compact-juvenile-worm-3",
+          "compact-juvenile-worm-4",
+          "compact-juvenile-worm-5",
+          "compact-shrimp-0",
+          "compact-shrimp-1",
+          "compact-shrimp-2",
+          "compact-shrimp-3",
+          "compact-shrimp-4",
+          "compact-crab",
+          "compact-snail-0",
+          "compact-snail-1",
+          "compact-snail-2",
+          "compact-snail-3",
+          "compact-snail-4",
+          "compact-snail-5",
+          "compact-snail-6",
+          "compact-snail-7",
+          "compact-snail-8",
+          "compact-snail-9",
+          "compact-snail-10",
+          "compact-snail-11"
+        ],
+        "events": 0,
+        "tide": {
+          "phase": 0.010000000000000024,
+          "waterLevel": -1.0492106913713086,
+          "label": "Niedrigwasser"
+        },
+        "resources": {
+          "aphid-colony": 9,
+          "shared-mussels": 18,
+          "clover-pollen": 6,
+          "browse-shoot": 5,
+          "nettle-leaf": 8,
+          "leaf-litter": 6,
+          "dead-wood": 100,
+          "acorns": 4,
+          "wood-mice": 3,
+          "wood-larvae": 8,
+          "small-juveniles": 3,
+          "small-worms": 3,
+          "shrimp": 5,
+          "deer-host": 1,
+          "phytoplankton": 100,
+          "benthic-diatoms": 30
+        }
+      },
+      "runId": "3197e117-0bc4-48f6-bdd7-d09612d9e435",
+      "origin": {
+        "kind": "local-observation-window",
+        "previousRunId": "d917c3e7-94c4-442b-90df-1432c7b1c908",
+        "previousSimulationTime": 0.34340000000000054,
+        "siteId": "outlook",
+        "x": 63,
+        "z": 4,
+        "startSimulationTime": 0
+      },
+      "mode": "compact-oystercatcher",
+      "realtime": false,
+      "ownSeconds": 0,
+      "focus": "",
+      "visibility": {
+        "individualId": "compact-oystercatcher",
+        "meshVisible": true,
+        "bodyClear": true,
+        "billClear": true,
+        "bodyInFrame": true
+      },
+      "detail": {
+        "runId": "3197e117-0bc4-48f6-bdd7-d09612d9e435",
+        "eventId": "ranger-compact-v2:summer:feeding:compact-oystercatcher:compact-mussel-16:0.025000000",
+        "eventRecorded": false,
+        "individualId": "compact-oystercatcher",
+        "preyId": "compact-mussel-16",
+        "phase": "handling",
+        "episodeCompleted": false,
+        "simulationTime": 1.2,
+        "observer": {
+          "x": 63,
+          "z": 4
+        },
+        "didacticMagnification": true,
+        "sharedLiveSceneNodes": true,
+        "preyGeometryUnscaled": true,
+        "freestandingView": true,
+        "preyVisible": true,
+        "worldPreyVisible": false,
+        "distanceLODOverride": true,
+        "tissueVisible": true,
+        "tip": {
+          "x": 60.98083105733994,
+          "y": -0.5596998477787894,
+          "z": -15.229651184014035
+        },
+        "mouth": {
+          "x": 61.01230022750964,
+          "y": -0.4648280481846337,
+          "z": -15.341736224544666
+        },
+        "carried": {
+          "x": 60.98083105733994,
+          "y": -0.5596998477787894,
+          "z": -15.229651184014035
+        },
+        "span": 0.19997720573006406,
+        "views": [
+          {
+            "id": "feeding-overview",
+            "rect": {
+              "x": 21,
+              "y": 248.71875,
+              "width": 153,
+              "height": 270
+            },
+            "clip": {
+              "x": 21,
+              "y": 231.28125,
+              "width": 153,
+              "height": 270
+            },
+            "fov": 35,
+            "position": [
+              60.153348377770975,
+              -0.1688637411780815,
+              -15.730537867929925
+            ],
+            "focus": [
+              61.04986020543497,
+              -0.3739815496389116,
+              -15.474510686145313
+            ]
+          },
+          {
+            "id": "feeding-contact",
+            "rect": {
+              "x": 179,
+              "y": 248.71875,
+              "width": 459,
+              "height": 270
+            },
+            "clip": {
+              "x": 179,
+              "y": 231.28125,
+              "width": 459,
+              "height": 270
+            },
+            "fov": 32,
+            "position": [
+              60.613322444050596,
+              -0.40942727776353155,
+              -15.412248342670507
+            ],
+            "focus": {
+              "x": 60.99412199216932,
+              "y": -0.4965524738432219,
+              "z": -15.303499041075982
+            }
+          }
+        ]
+      }
+    },
+    "renderRevision": "56",
+    "sceneRevision": "56",
+    "afterRenderRevision": "56",
+    "afterSceneRevision": "56",
+    "method": "Actual composited browser pixels in public paused model-step mode; exact model state before/after; no state/time injection or reconstructed frame."
+  },
+  "actualImageSHA256": "9e7633f19648a83d5832dec38563f0ad3475e75feea456e93720f101b44f7a3c",
+  "compositedExtrema": [
+    [
+      0,
+      250
+    ],
+    [
+      0,
+      245
+    ],
+    [
+      0,
+      231
+    ]
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "version": "1.0.0-rc.1",
+  "sourceCommit": "55c2ecd184ea79b8b829a2a6486114cc964d497a",
+  "sourceDirty": false,
+  "totalBytes": 36712759,
+  "initialUpperBoundBytes": 26658644,
+  "deferredPhotographs": 168,
+  "largestFileBytes": 2661512
+}
+{
+  "version": "1.0.0-rc.1",
+  "sourceCommit": "55c2ecd184ea79b8b829a2a6486114cc964d497a",
+  "sourceDirty": false,
+  "totalBytes": 36712759,
+  "initialUpperBoundBytes": 26658644,
+  "deferredPhotographs": 168,
+  "deferredBirdRecordings": 3,
+  "largestFileBytes": 2661512,
+  "modules": 61,
+  "assets": 189,
+  "exactSourceAndAssets": true,
+  "zipVerified": true,
+  "identicalTexturePixels": true,
+  "referenceClosure": true
+}
+{"output": "/workspace/Ein-Tag-als-Ranger/outputs/Feldbuch.html", "bytes": 48160902, "modules": 61}

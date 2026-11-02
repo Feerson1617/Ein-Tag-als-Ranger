@@ -1,0 +1,265 @@
+{
+  "sourceCommit": "5be5e9b8f7394613279f5a2834741a0abf33b570",
+  "startedAt": "2026-10-22T07:09:06Z",
+  "steps": [
+    {
+      "name": "legacy-node",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/run-checks.py"
+      ],
+      "status": "passed",
+      "startedAt": "2026-10-22T07:09:06Z",
+      "exitCode": 0,
+      "seconds": 109.8
+    },
+    {
+      "name": "compact-node",
+      "command": [
+        "node",
+        "tests/kompakt-check.mjs"
+      ],
+      "status": "passed",
+      "startedAt": "2026-10-22T07:10:55Z",
+      "exitCode": 0,
+      "seconds": 0.93
+    },
+    {
+      "name": "learning-node",
+      "command": [
+        "node",
+        "tests/compact-learning-check.mjs"
+      ],
+      "status": "passed",
+      "startedAt": "2026-10-22T07:10:56Z",
+      "exitCode": 0,
+      "seconds": 3.25
+    },
+    {
+      "name": "web-build",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/build-web.py"
+      ],
+      "status": "passed",
+      "startedAt": "2026-10-22T07:11:00Z",
+      "exitCode": 0,
+      "seconds": 2.73
+    },
+    {
+      "name": "web-verify",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/verify-web.py"
+      ],
+      "status": "passed",
+      "startedAt": "2026-10-22T07:11:02Z",
+      "exitCode": 0,
+      "seconds": 2.52
+    },
+    {
+      "name": "standalone-build",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/build-standalone.py"
+      ],
+      "status": "passed",
+      "startedAt": "2026-10-22T07:11:05Z",
+      "exitCode": 0,
+      "seconds": 1.64
+    },
+    {
+      "name": "compact-build",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/build-compact.py"
+      ],
+      "status": "passed",
+      "startedAt": "2026-10-22T07:11:06Z",
+      "exitCode": 0,
+      "seconds": 1.32
+    },
+    {
+      "name": "compact-verify",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/verify-compact.py"
+      ],
+      "status": "passed",
+      "startedAt": "2026-10-22T07:11:08Z",
+      "exitCode": 0,
+      "seconds": 0.36
+    },
+    {
+      "name": "python-packages",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "status": "passed",
+      "startedAt": "2026-10-22T07:11:08Z",
+      "exitCode": 0,
+      "seconds": 9.26
+    },
+    {
+      "name": "source-package",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/package-project.py"
+      ],
+      "status": "passed",
+      "startedAt": "2026-10-22T07:11:17Z",
+      "exitCode": 0,
+      "seconds": 5.52
+    },
+    {
+      "name": "compact-browser",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact.py"
+      ],
+      "status": "passed",
+      "startedAt": "2026-10-22T07:11:23Z",
+      "exitCode": 0,
+      "seconds": 835.91
+    },
+    {
+      "name": "compact-standalone-browser",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact.py",
+        "--site",
+        "outputs",
+        "--entry",
+        "Ranger-Kompakt.html",
+        "--smoke"
+      ],
+      "status": "passed",
+      "startedAt": "2026-10-22T07:25:19Z",
+      "exitCode": 0,
+      "seconds": 246.48
+    },
+    {
+      "name": "learning-browser",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-learning.py",
+        "--gallery"
+      ],
+      "status": "passed",
+      "startedAt": "2026-10-22T07:29:25Z",
+      "exitCode": 0,
+      "seconds": 977.94
+    },
+    {
+      "name": "legacy-browser",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-check.py",
+        "--live",
+        "--resilience",
+        "--width",
+        "600",
+        "--height",
+        "375",
+        "--site",
+        "outputs/GitHub-Pages",
+        "--prefix",
+        "/Ein-Tag-als-Ranger/",
+        "--live-mission",
+        "m3"
+      ],
+      "status": "passed",
+      "startedAt": "2026-10-22T08:48:36Z",
+      "exitCode": 0,
+      "seconds": 1032.15
+    },
+    {
+      "name": "legacy-standalone-browser",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-check.py",
+        "--smoke",
+        "--width",
+        "800",
+        "--height",
+        "500",
+        "--site",
+        "outputs",
+        "--entry",
+        "Feldbuch.html"
+      ],
+      "status": "passed",
+      "startedAt": "2026-10-22T09:05:48Z",
+      "exitCode": 0,
+      "seconds": 194.9
+    },
+    {
+      "name": "learning-pdfs",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/print-compact-materials.py"
+      ],
+      "status": "passed",
+      "startedAt": "2026-10-22T09:09:03Z",
+      "exitCode": 0,
+      "seconds": 5.25
+    },
+    {
+      "name": "cloud-stability",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-stability.py"
+      ],
+      "status": "passed",
+      "startedAt": "2026-10-22T09:21:00Z",
+      "exitCode": 0,
+      "seconds": 1612.86
+    },
+    {
+      "name": "review-package",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/package-compact-review.py"
+      ],
+      "status": "passed",
+      "startedAt": "2026-10-22T09:47:52Z",
+      "exitCode": 0,
+      "seconds": 4.02
+    }
+  ],
+  "resumptions": [
+    {
+      "from": "legacy-browser",
+      "at": "2026-10-22T07:59:56Z",
+      "driverCommit": "1eeafdb9a572cca5dd56cb829bb88218d86dd602",
+      "scope": "Only test-driver/gallery timing and packaging tools changed; app runtime sources remain identical to runtime-freeze.json."
+    },
+    {
+      "from": "legacy-browser",
+      "at": "2026-10-22T08:25:41Z",
+      "driverCommit": "20bfc5c4631f82518ddfef11c9d9d2b6ee80f30c",
+      "scope": "Only QA drivers/profiles and packaging tools changed; app runtime sources remain identical to runtime-freeze.json."
+    },
+    {
+      "from": "legacy-browser",
+      "at": "2026-10-22T08:48:36Z",
+      "driverCommit": "feff86c3546f02aa398c72270c23d4db653d82fc",
+      "scope": "Only QA drivers/profiles and packaging tools changed; app runtime sources remain identical to runtime-freeze.json."
+    },
+    {
+      "from": "cloud-stability",
+      "at": "2026-10-22T09:21:00Z",
+      "driverCommit": "c26b5ead63cc16d2f1b904a2f7cb62383ffd404f",
+      "scope": "Only QA drivers/profiles and packaging tools changed; app runtime sources remain identical to runtime-freeze.json."
+    }
+  ],
+  "completedAt": "2026-10-22T09:47:56Z"
+}

@@ -1,0 +1,509 @@
+{
+  "scope": "Failed black direct-WebGL exports retained and excluded as visual evidence. Paused-phase compositor screenshots independently checked against exactly equal before/after actual model state and actual image pixels.",
+  "frames": [
+    {
+      "sequence": 1,
+      "phase": "approaching",
+      "canvasNonblack": true,
+      "contextNonblack": true,
+      "contextPhaseStable": false,
+      "contextExactlySameModelState": false,
+      "contextFile": "sequence-1-compact-oystercatcher-approaching-context.png"
+    },
+    {
+      "sequence": 1,
+      "phase": "searching",
+      "canvasNonblack": true,
+      "contextNonblack": true,
+      "contextPhaseStable": true,
+      "contextExactlySameModelState": false,
+      "contextFile": "sequence-1-compact-oystercatcher-searching-context.png"
+    },
+    {
+      "sequence": 1,
+      "phase": "handling",
+      "canvasNonblack": true,
+      "contextNonblack": true,
+      "contextPhaseStable": true,
+      "contextExactlySameModelState": false,
+      "contextFile": "sequence-1-compact-oystercatcher-handling-context.png"
+    },
+    {
+      "sequence": 1,
+      "phase": "swallowing",
+      "canvasNonblack": true,
+      "contextNonblack": true,
+      "contextPhaseStable": true,
+      "contextExactlySameModelState": false,
+      "contextFile": "sequence-1-compact-oystercatcher-swallowing-context.png"
+    },
+    {
+      "sequence": 1,
+      "phase": "mouth-transfer",
+      "canvasNonblack": true,
+      "contextNonblack": true,
+      "contextPhaseStable": false,
+      "contextExactlySameModelState": false,
+      "contextFile": "sequence-1-compact-oystercatcher-mouth-transfer-context.png"
+    },
+    {
+      "sequence": 1,
+      "phase": "departing",
+      "canvasNonblack": true,
+      "contextNonblack": true,
+      "contextPhaseStable": true,
+      "contextExactlySameModelState": false,
+      "contextFile": "sequence-1-compact-oystercatcher-departing-context.png"
+    },
+    {
+      "sequence": 1,
+      "phase": "after-departure",
+      "canvasNonblack": true,
+      "contextNonblack": true,
+      "contextPhaseStable": false,
+      "contextExactlySameModelState": false,
+      "contextFile": "sequence-1-compact-oystercatcher-after-departure-context.png"
+    },
+    {
+      "sequence": 2,
+      "phase": "approaching",
+      "canvasNonblack": true,
+      "contextNonblack": true,
+      "contextPhaseStable": true,
+      "contextExactlySameModelState": false,
+      "contextFile": "sequence-2-compact-avocet-approaching-context.png"
+    },
+    {
+      "sequence": 2,
+      "phase": "searching",
+      "canvasNonblack": true,
+      "contextNonblack": true,
+      "contextPhaseStable": true,
+      "contextExactlySameModelState": false,
+      "contextFile": "sequence-2-compact-avocet-searching-context.png"
+    },
+    {
+      "sequence": 2,
+      "phase": "handling",
+      "canvasNonblack": true,
+      "contextNonblack": true,
+      "contextPhaseStable": true,
+      "contextExactlySameModelState": false,
+      "contextFile": "sequence-2-compact-avocet-handling-context.png"
+    },
+    {
+      "sequence": 2,
+      "phase": "swallowing",
+      "canvasNonblack": true,
+      "contextNonblack": true,
+      "contextPhaseStable": true,
+      "contextExactlySameModelState": false,
+      "contextFile": "sequence-2-compact-avocet-swallowing-context.png"
+    },
+    {
+      "sequence": 2,
+      "phase": "mouth-transfer",
+      "canvasNonblack": true,
+      "contextNonblack": true,
+      "contextPhaseStable": false,
+      "contextExactlySameModelState": false,
+      "contextFile": "sequence-2-compact-avocet-mouth-transfer-context.png"
+    },
+    {
+      "sequence": 2,
+      "phase": "departing",
+      "canvasNonblack": true,
+      "contextNonblack": true,
+      "contextPhaseStable": true,
+      "contextExactlySameModelState": false,
+      "contextFile": "sequence-2-compact-avocet-departing-context.png"
+    },
+    {
+      "sequence": 2,
+      "phase": "after-departure",
+      "canvasNonblack": true,
+      "contextNonblack": true,
+      "contextPhaseStable": true,
+      "contextExactlySameModelState": false,
+      "contextFile": "sequence-2-compact-avocet-after-departure-context.png"
+    },
+    {
+      "sequence": 3,
+      "phase": "approaching",
+      "canvasNonblack": true,
+      "contextNonblack": true,
+      "contextPhaseStable": true,
+      "contextExactlySameModelState": false,
+      "contextFile": "sequence-3-compact-redshank-approaching-context.png"
+    },
+    {
+      "sequence": 3,
+      "phase": "searching",
+      "canvasNonblack": true,
+      "contextNonblack": true,
+      "contextPhaseStable": true,
+      "contextExactlySameModelState": false,
+      "contextFile": "sequence-3-compact-redshank-searching-context.png"
+    },
+    {
+      "sequence": 3,
+      "phase": "handling",
+      "canvasNonblack": true,
+      "contextNonblack": true,
+      "contextPhaseStable": true,
+      "contextExactlySameModelState": false,
+      "contextFile": "sequence-3-compact-redshank-handling-context.png"
+    },
+    {
+      "sequence": 3,
+      "phase": "swallowing",
+      "canvasNonblack": true,
+      "contextNonblack": true,
+      "contextPhaseStable": true,
+      "contextExactlySameModelState": false,
+      "contextFile": "sequence-3-compact-redshank-swallowing-context.png"
+    },
+    {
+      "sequence": 3,
+      "phase": "mouth-transfer",
+      "canvasNonblack": true,
+      "contextNonblack": true,
+      "contextPhaseStable": false,
+      "contextExactlySameModelState": false,
+      "contextFile": "sequence-3-compact-redshank-mouth-transfer-context.png"
+    },
+    {
+      "sequence": 3,
+      "phase": "departing",
+      "canvasNonblack": true,
+      "contextNonblack": true,
+      "contextPhaseStable": true,
+      "contextExactlySameModelState": false,
+      "contextFile": "sequence-3-compact-redshank-departing-context.png"
+    },
+    {
+      "sequence": 3,
+      "phase": "after-departure",
+      "canvasNonblack": true,
+      "contextNonblack": true,
+      "contextPhaseStable": true,
+      "contextExactlySameModelState": false,
+      "contextFile": "sequence-3-compact-redshank-after-departure-context.png"
+    },
+    {
+      "sequence": 4,
+      "phase": "approaching",
+      "canvasNonblack": true,
+      "contextNonblack": true,
+      "contextPhaseStable": false,
+      "contextExactlySameModelState": false,
+      "contextFile": "sequence-4-compact-spoonbill-approaching-context.png"
+    },
+    {
+      "sequence": 4,
+      "phase": "searching",
+      "canvasNonblack": true,
+      "contextNonblack": true,
+      "contextPhaseStable": true,
+      "contextExactlySameModelState": false,
+      "contextFile": "sequence-4-compact-spoonbill-searching-context.png"
+    },
+    {
+      "sequence": 4,
+      "phase": "handling",
+      "canvasNonblack": true,
+      "contextNonblack": true,
+      "contextPhaseStable": true,
+      "contextExactlySameModelState": false,
+      "contextFile": "sequence-4-compact-spoonbill-handling-context.png"
+    },
+    {
+      "sequence": 4,
+      "phase": "swallowing",
+      "canvasNonblack": true,
+      "contextNonblack": true,
+      "contextPhaseStable": true,
+      "contextExactlySameModelState": false,
+      "contextFile": "sequence-4-compact-spoonbill-swallowing-context.png"
+    },
+    {
+      "sequence": 4,
+      "phase": "mouth-transfer",
+      "canvasNonblack": true,
+      "contextNonblack": true,
+      "contextPhaseStable": false,
+      "contextExactlySameModelState": false,
+      "contextFile": "sequence-4-compact-spoonbill-mouth-transfer-context.png"
+    },
+    {
+      "sequence": 4,
+      "phase": "departing",
+      "canvasNonblack": true,
+      "contextNonblack": true,
+      "contextPhaseStable": true,
+      "contextExactlySameModelState": false,
+      "contextFile": "sequence-4-compact-spoonbill-departing-context.png"
+    },
+    {
+      "sequence": 4,
+      "phase": "after-departure",
+      "canvasNonblack": true,
+      "contextNonblack": true,
+      "contextPhaseStable": true,
+      "contextExactlySameModelState": false,
+      "contextFile": "sequence-4-compact-spoonbill-after-departure-context.png"
+    },
+    {
+      "sequence": 5,
+      "phase": "approaching",
+      "canvasNonblack": false,
+      "contextNonblack": true,
+      "contextPhaseStable": true,
+      "contextExactlySameModelState": true,
+      "contextFile": "sequence-5-compact-avocet-approaching-context.png"
+    },
+    {
+      "sequence": 5,
+      "phase": "searching",
+      "canvasNonblack": false,
+      "contextNonblack": true,
+      "contextPhaseStable": true,
+      "contextExactlySameModelState": true,
+      "contextFile": "sequence-5-compact-avocet-searching-context.png"
+    },
+    {
+      "sequence": 5,
+      "phase": "handling",
+      "canvasNonblack": false,
+      "contextNonblack": true,
+      "contextPhaseStable": true,
+      "contextExactlySameModelState": true,
+      "contextFile": "sequence-5-compact-avocet-handling-context.png"
+    },
+    {
+      "sequence": 5,
+      "phase": "swallowing",
+      "canvasNonblack": false,
+      "contextNonblack": true,
+      "contextPhaseStable": true,
+      "contextExactlySameModelState": true,
+      "contextFile": "sequence-5-compact-avocet-swallowing-context.png"
+    },
+    {
+      "sequence": 5,
+      "phase": "mouth-transfer",
+      "canvasNonblack": false,
+      "contextNonblack": true,
+      "contextPhaseStable": true,
+      "contextExactlySameModelState": true,
+      "contextFile": "sequence-5-compact-avocet-mouth-transfer-context.png"
+    },
+    {
+      "sequence": 5,
+      "phase": "departing",
+      "canvasNonblack": false,
+      "contextNonblack": true,
+      "contextPhaseStable": true,
+      "contextExactlySameModelState": true,
+      "contextFile": "sequence-5-compact-avocet-departing-context.png"
+    },
+    {
+      "sequence": 5,
+      "phase": "after-departure",
+      "canvasNonblack": false,
+      "contextNonblack": true,
+      "contextPhaseStable": true,
+      "contextExactlySameModelState": true,
+      "contextFile": "sequence-5-compact-avocet-after-departure-context.png"
+    },
+    {
+      "sequence": 6,
+      "phase": "approaching",
+      "canvasNonblack": false,
+      "contextNonblack": true,
+      "contextPhaseStable": true,
+      "contextExactlySameModelState": true,
+      "contextFile": "sequence-6-compact-redshank-approaching-context.png"
+    },
+    {
+      "sequence": 6,
+      "phase": "searching",
+      "canvasNonblack": false,
+      "contextNonblack": true,
+      "contextPhaseStable": true,
+      "contextExactlySameModelState": true,
+      "contextFile": "sequence-6-compact-redshank-searching-context.png"
+    },
+    {
+      "sequence": 6,
+      "phase": "handling",
+      "canvasNonblack": false,
+      "contextNonblack": true,
+      "contextPhaseStable": true,
+      "contextExactlySameModelState": true,
+      "contextFile": "sequence-6-compact-redshank-handling-context.png"
+    },
+    {
+      "sequence": 6,
+      "phase": "swallowing",
+      "canvasNonblack": false,
+      "contextNonblack": true,
+      "contextPhaseStable": true,
+      "contextExactlySameModelState": true,
+      "contextFile": "sequence-6-compact-redshank-swallowing-context.png"
+    },
+    {
+      "sequence": 6,
+      "phase": "mouth-transfer",
+      "canvasNonblack": false,
+      "contextNonblack": true,
+      "contextPhaseStable": true,
+      "contextExactlySameModelState": true,
+      "contextFile": "sequence-6-compact-redshank-mouth-transfer-context.png"
+    },
+    {
+      "sequence": 6,
+      "phase": "departing",
+      "canvasNonblack": false,
+      "contextNonblack": true,
+      "contextPhaseStable": true,
+      "contextExactlySameModelState": true,
+      "contextFile": "sequence-6-compact-redshank-departing-context.png"
+    },
+    {
+      "sequence": 6,
+      "phase": "after-departure",
+      "canvasNonblack": false,
+      "contextNonblack": true,
+      "contextPhaseStable": true,
+      "contextExactlySameModelState": true,
+      "contextFile": "sequence-6-compact-redshank-after-departure-context.png"
+    },
+    {
+      "sequence": 7,
+      "phase": "approaching",
+      "canvasNonblack": false,
+      "contextNonblack": true,
+      "contextPhaseStable": true,
+      "contextExactlySameModelState": true,
+      "contextFile": "sequence-7-compact-spoonbill-approaching-context.png"
+    },
+    {
+      "sequence": 7,
+      "phase": "searching",
+      "canvasNonblack": false,
+      "contextNonblack": true,
+      "contextPhaseStable": true,
+      "contextExactlySameModelState": true,
+      "contextFile": "sequence-7-compact-spoonbill-searching-context.png"
+    },
+    {
+      "sequence": 7,
+      "phase": "handling",
+      "canvasNonblack": false,
+      "contextNonblack": true,
+      "contextPhaseStable": true,
+      "contextExactlySameModelState": true,
+      "contextFile": "sequence-7-compact-spoonbill-handling-context.png"
+    },
+    {
+      "sequence": 7,
+      "phase": "swallowing",
+      "canvasNonblack": false,
+      "contextNonblack": true,
+      "contextPhaseStable": true,
+      "contextExactlySameModelState": true,
+      "contextFile": "sequence-7-compact-spoonbill-swallowing-context.png"
+    },
+    {
+      "sequence": 7,
+      "phase": "mouth-transfer",
+      "canvasNonblack": false,
+      "contextNonblack": true,
+      "contextPhaseStable": true,
+      "contextExactlySameModelState": true,
+      "contextFile": "sequence-7-compact-spoonbill-mouth-transfer-context.png"
+    },
+    {
+      "sequence": 7,
+      "phase": "departing",
+      "canvasNonblack": false,
+      "contextNonblack": true,
+      "contextPhaseStable": true,
+      "contextExactlySameModelState": true,
+      "contextFile": "sequence-7-compact-spoonbill-departing-context.png"
+    },
+    {
+      "sequence": 7,
+      "phase": "after-departure",
+      "canvasNonblack": false,
+      "contextNonblack": true,
+      "contextPhaseStable": true,
+      "contextExactlySameModelState": true,
+      "contextFile": "sequence-7-compact-spoonbill-after-departure-context.png"
+    },
+    {
+      "sequence": 8,
+      "phase": "approaching",
+      "canvasNonblack": false,
+      "contextNonblack": true,
+      "contextPhaseStable": true,
+      "contextExactlySameModelState": true,
+      "contextFile": "sequence-8-compact-oystercatcher-approaching-context.png"
+    },
+    {
+      "sequence": 8,
+      "phase": "searching",
+      "canvasNonblack": false,
+      "contextNonblack": true,
+      "contextPhaseStable": true,
+      "contextExactlySameModelState": true,
+      "contextFile": "sequence-8-compact-oystercatcher-searching-context.png"
+    },
+    {
+      "sequence": 8,
+      "phase": "handling",
+      "canvasNonblack": false,
+      "contextNonblack": true,
+      "contextPhaseStable": true,
+      "contextExactlySameModelState": true,
+      "contextFile": "sequence-8-compact-oystercatcher-handling-context.png"
+    },
+    {
+      "sequence": 8,
+      "phase": "swallowing",
+      "canvasNonblack": false,
+      "contextNonblack": true,
+      "contextPhaseStable": true,
+      "contextExactlySameModelState": true,
+      "contextFile": "sequence-8-compact-oystercatcher-swallowing-context.png"
+    },
+    {
+      "sequence": 8,
+      "phase": "mouth-transfer",
+      "canvasNonblack": false,
+      "contextNonblack": true,
+      "contextPhaseStable": true,
+      "contextExactlySameModelState": true,
+      "contextFile": "sequence-8-compact-oystercatcher-mouth-transfer-context.png"
+    },
+    {
+      "sequence": 8,
+      "phase": "departing",
+      "canvasNonblack": false,
+      "contextNonblack": true,
+      "contextPhaseStable": true,
+      "contextExactlySameModelState": true,
+      "contextFile": "sequence-8-compact-oystercatcher-departing-context.png"
+    },
+    {
+      "sequence": 8,
+      "phase": "after-departure",
+      "canvasNonblack": false,
+      "contextNonblack": true,
+      "contextPhaseStable": true,
+      "contextExactlySameModelState": true,
+      "contextFile": "sequence-8-compact-oystercatcher-after-departure-context.png"
+    }
+  ]
+}

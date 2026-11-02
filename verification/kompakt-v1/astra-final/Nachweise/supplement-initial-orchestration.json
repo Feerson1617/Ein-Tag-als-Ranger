@@ -1,0 +1,18 @@
+{
+  "orchestrator": "run-final-supplement.py",
+  "initialExitCode": 1,
+  "completedChecks": [
+    {
+      "name": "native-ui",
+      "exitCode": 0
+    },
+    {
+      "name": "public-content",
+      "exitCode": 0
+    }
+  ],
+  "failureStage": "Contact-sheet assembly attempted to read the absent first video-walk result.",
+  "actualException": "FileNotFoundError: [Errno 2] No such file or directory: /workspace/Ein-Tag-als-Ranger/work/astra-abschluss-20261025/final-4eb186a/v1-full-walk-feeding/result.json",
+  "provenance": "Captured unified execution output; this is a scoped exception summary, not an invented complete traceback.",
+  "relation": "Missing input was caused by the separately preserved FFmpeg startup failure. Resume assembly after the new genuine retry result exists; preserve successful UI/audit results without reclassification."
+}

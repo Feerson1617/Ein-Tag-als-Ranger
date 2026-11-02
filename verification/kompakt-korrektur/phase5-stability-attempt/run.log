@@ -1,0 +1,52 @@
+{"runId": "1726d4de-6cba-4b1e-92d1-e8cc2c7d311a", "simulationTime": "20.007", "plantCount": "1292", "frameMs": "1366.6", "geometries": "97", "textures": "9", "heapBytes": "87089207", "triangles": "1227479", "drawCalls": "41", "elapsedSeconds": 24.91, "place": "woodruff"}
+{"runId": "1726d4de-6cba-4b1e-92d1-e8cc2c7d311a", "simulationTime": "21.195", "plantCount": "1292", "frameMs": "899.9", "geometries": "97", "textures": "9", "heapBytes": "87262651", "triangles": "921455", "drawCalls": "30", "elapsedSeconds": 48.03, "place": "village"}
+{"runId": "1726d4de-6cba-4b1e-92d1-e8cc2c7d311a", "simulationTime": "22.108", "plantCount": "1292", "frameMs": "33.3", "geometries": "97", "textures": "9", "heapBytes": "84677365", "triangles": "478631", "drawCalls": "31", "elapsedSeconds": 68.44, "place": "ramp"}
+{"runId": "1726d4de-6cba-4b1e-92d1-e8cc2c7d311a", "simulationTime": "22.550", "plantCount": "1292", "frameMs": "33.3", "geometries": "97", "textures": "9", "heapBytes": "85203533", "triangles": "1115077", "drawCalls": "36", "elapsedSeconds": 89.34, "place": "keilm"}
+{"runId": "1726d4de-6cba-4b1e-92d1-e8cc2c7d311a", "simulationTime": "25.250", "plantCount": "1292", "frameMs": "300.0", "geometries": "97", "textures": "9", "heapBytes": "84970275", "triangles": "109283", "drawCalls": "17", "elapsedSeconds": 128.79, "place": "coast"}
+{"runId": "1726d4de-6cba-4b1e-92d1-e8cc2c7d311a", "simulationTime": "25.853", "plantCount": "1292", "frameMs": "2249.9", "geometries": "97", "textures": "9", "heapBytes": "85541855", "triangles": "1135691", "drawCalls": "60", "elapsedSeconds": 145.22, "place": "outlook"}
+{"runId": "1726d4de-6cba-4b1e-92d1-e8cc2c7d311a", "simulationTime": "26.635", "plantCount": "1292", "frameMs": "1699.9", "geometries": "97", "textures": "9", "heapBytes": "86054813", "triangles": "1115825", "drawCalls": "38", "elapsedSeconds": 170.99, "place": "oak"}
+{"runId": "1726d4de-6cba-4b1e-92d1-e8cc2c7d311a", "simulationTime": "27.515", "plantCount": "1292", "frameMs": "1166.7", "geometries": "97", "textures": "9", "heapBytes": "85870663", "triangles": "1153751", "drawCalls": "35", "elapsedSeconds": 193.88, "place": "wood"}
+{"runId": "1726d4de-6cba-4b1e-92d1-e8cc2c7d311a", "simulationTime": "28.395", "plantCount": "1292", "frameMs": "1399.9", "geometries": "97", "textures": "9", "heapBytes": "86884314", "triangles": "1227479", "drawCalls": "41", "elapsedSeconds": 214.35, "place": "woodruff"}
+{"runId": "1726d4de-6cba-4b1e-92d1-e8cc2c7d311a", "simulationTime": "29.585", "plantCount": "1292", "frameMs": "916.6", "geometries": "97", "textures": "9", "heapBytes": "87282798", "triangles": "921455", "drawCalls": "30", "elapsedSeconds": 236.02, "place": "village"}
+{"runId": "1726d4de-6cba-4b1e-92d1-e8cc2c7d311a", "simulationTime": "30.886", "plantCount": "1292", "frameMs": "950.0", "geometries": "96", "textures": "9", "heapBytes": "85188066", "triangles": "478631", "drawCalls": "31", "elapsedSeconds": 256.15, "place": "ramp"}
+{"runId": "1726d4de-6cba-4b1e-92d1-e8cc2c7d311a", "simulationTime": "31.489", "plantCount": "1292", "frameMs": "1833.3", "geometries": "96", "textures": "9", "heapBytes": "85023395", "triangles": "1115077", "drawCalls": "36", "elapsedSeconds": 277.48, "place": "keilm"}
+{"runId": "1726d4de-6cba-4b1e-92d1-e8cc2c7d311a", "simulationTime": "34.857", "plantCount": "1292", "frameMs": "283.4", "geometries": "96", "textures": "9", "heapBytes": "85974657", "triangles": "107575", "drawCalls": "8", "elapsedSeconds": 300.85, "place": "coast"}
+{"runId": "1726d4de-6cba-4b1e-92d1-e8cc2c7d311a", "simulationTime": "35.411", "plantCount": "1292", "frameMs": "3716.6", "geometries": "99", "textures": "9", "heapBytes": "86178257", "triangles": "1116339", "drawCalls": "68", "elapsedSeconds": 317.43, "place": "outlook"}
+{"runId": "1726d4de-6cba-4b1e-92d1-e8cc2c7d311a", "simulationTime": "36.176", "plantCount": "1292", "frameMs": "1566.6", "geometries": "99", "textures": "9", "heapBytes": "85990715", "triangles": "1111653", "drawCalls": "34", "elapsedSeconds": 344.28, "place": "oak"}
+{"runId": "1726d4de-6cba-4b1e-92d1-e8cc2c7d311a", "simulationTime": "37.071", "plantCount": "1292", "frameMs": "1283.3", "geometries": "99", "textures": "9", "heapBytes": "86091642", "triangles": "1153679", "drawCalls": "34", "elapsedSeconds": 368.17, "place": "wood"}
+{"runId": "1726d4de-6cba-4b1e-92d1-e8cc2c7d311a", "simulationTime": "37.966", "plantCount": "1292", "frameMs": "1166.7", "geometries": "99", "textures": "9", "heapBytes": "86928473", "triangles": "1227407", "drawCalls": "40", "elapsedSeconds": 393.25, "place": "woodruff"}
+{"runId": "1726d4de-6cba-4b1e-92d1-e8cc2c7d311a", "simulationTime": "38.814", "plantCount": "1292", "frameMs": "1933.3", "geometries": "99", "textures": "9", "heapBytes": "87332203", "triangles": "923499", "drawCalls": "41", "elapsedSeconds": 415.15, "place": "village"}
+{"runId": "1726d4de-6cba-4b1e-92d1-e8cc2c7d311a", "simulationTime": "40.181", "plantCount": "1292", "frameMs": "700.0", "geometries": "101", "textures": "9", "heapBytes": "84606217", "triangles": "478967", "drawCalls": "33", "elapsedSeconds": 434.54, "place": "ramp"}
+{"runId": "1726d4de-6cba-4b1e-92d1-e8cc2c7d311a", "simulationTime": "40.948", "plantCount": "1292", "frameMs": "1866.6", "geometries": "101", "textures": "9", "heapBytes": "84735415", "triangles": "1115005", "drawCalls": "35", "elapsedSeconds": 451.99, "place": "keilm"}
+{"runId": "1726d4de-6cba-4b1e-92d1-e8cc2c7d311a", "simulationTime": "44.429", "plantCount": "1292", "frameMs": "250.0", "geometries": "101", "textures": "9", "heapBytes": "85824127", "triangles": "107575", "drawCalls": "8", "elapsedSeconds": 476.58, "place": "coast"}
+{"runId": "1726d4de-6cba-4b1e-92d1-e8cc2c7d311a", "simulationTime": "45.064", "plantCount": "1292", "frameMs": "1983.2", "geometries": "107", "textures": "9", "heapBytes": "85993067", "triangles": "1118407", "drawCalls": "90", "elapsedSeconds": 492.96, "place": "outlook"}
+{"runId": "1726d4de-6cba-4b1e-92d1-e8cc2c7d311a", "simulationTime": "45.747", "plantCount": "1292", "frameMs": "1583.3", "geometries": "107", "textures": "9", "heapBytes": "86253644", "triangles": "1115825", "drawCalls": "38", "elapsedSeconds": 517.51, "place": "oak"}
+Traceback (most recent call last):
+  File "/workspace/Ein-Tag-als-Ranger/tools/browser-compact-stability.py", line 43, in <module>
+    place=places[len(result['samples'])%len(places)];d=visit(place);sample={**d,'elapsedSeconds':round(time.monotonic()-start,2),'place':place};result['lastAttempt']=sample;save();assert float(d['simulationTime'])>last_sim;last_sim=float(d['simulationTime'])
+                                                       ^^^^^^^^^^^^
+  File "/workspace/Ein-Tag-als-Ranger/tools/browser-compact-stability.py", line 26, in visit
+    page.locator('#menu-button').click();page.get_by_text('Referenzabschnitt prüfen',exact=True).click();page.locator('[data-view="'+place+'"]').click();page.wait_for_function('document.querySelector("#world").dataset.renderRevision===document.querySelector("#world").dataset.sceneRevision')
+                                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.ranger-clean-venv/lib/python3.12/site-packages/playwright/sync_api/_generated.py", line 17876, in click
+    self._sync(
+  File "/workspace/.ranger-clean-venv/lib/python3.12/site-packages/playwright/_impl/_sync_base.py", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File "/workspace/.ranger-clean-venv/lib/python3.12/site-packages/playwright/_impl/_locator.py", line 165, in click
+    return await self._frame._click(self._selector, strict=True, **params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.ranger-clean-venv/lib/python3.12/site-packages/playwright/_impl/_frame.py", line 593, in _click
+    await self._channel.send("click", self._timeout, locals_to_params(locals()))
+  File "/workspace/.ranger-clean-venv/lib/python3.12/site-packages/playwright/_impl/_connection.py", line 76, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.ranger-clean-venv/lib/python3.12/site-packages/playwright/_impl/_connection.py", line 632, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.click: Timeout 45000ms exceeded.
+Call log:
+  - waiting for locator("[data-view=\"wood\"]")
+    - locator resolved to <button data-view="wood">Totholz · Pilz und Streu</button>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+

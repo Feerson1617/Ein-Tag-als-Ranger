@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/workspace/Ein-Tag-als-Ranger/tools/browser-compact-growth.py", line 20, in <module>
+    runtime=audit_standalone(root,site/a.entry)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/Ein-Tag-als-Ranger/tools/compact_runtime.py", line 10, in audit_standalone
+    for name in g.modules:assert sources[name]==g.rewrite(name,lambda r:('module://'if r.target in g.modules else'asset://')+r.target),'Stale standalone module: '+name
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Stale standalone module: compact/lesson-resources.js

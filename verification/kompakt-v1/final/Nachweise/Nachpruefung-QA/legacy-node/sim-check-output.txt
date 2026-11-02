@@ -1,0 +1,47 @@
+{
+  "result": "PASS",
+  "trials": [
+    {
+      "seed": 1,
+      "hares": 64,
+      "foxes": 8,
+      "grass": 0.772,
+      "births": 98,
+      "hunts": 70
+    },
+    {
+      "seed": 2,
+      "hares": 47,
+      "foxes": 7,
+      "grass": 0.823,
+      "births": 80,
+      "hunts": 68
+    },
+    {
+      "seed": 3,
+      "hares": 70,
+      "foxes": 9,
+      "grass": 0.741,
+      "births": 117,
+      "hunts": 81
+    },
+    {
+      "seed": 47,
+      "hares": 55,
+      "foxes": 6,
+      "grass": 0.816,
+      "births": 76,
+      "hunts": 58
+    },
+    {
+      "seed": 84721,
+      "hares": 53,
+      "foxes": 7,
+      "grass": 0.818,
+      "births": 77,
+      "hunts": 64
+    }
+  ],
+  "mutationBirths": 28,
+  "maximumAnimals": 160
+}

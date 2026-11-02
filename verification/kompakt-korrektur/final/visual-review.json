@@ -1,0 +1,326 @@
+{
+  "reviewedAt": "2026-10-22T19:51:39.637868+00:00",
+  "runtimeCommit": "55c2ecd184ea79b8b829a2a6486114cc964d497a",
+  "reviewer": "Codex own inspection of the actual images; not independent biological final acceptance",
+  "files": [
+    {
+      "file": "work/qa-correction/final-feeding/compact-avocet-after-departure.png",
+      "sha256": "74f9e3a6934293ec7602d7ab044e86a5053ebd3e9db8be7b0bf10a9da70ab1ba"
+    },
+    {
+      "file": "work/qa-correction/final-feeding/compact-avocet-approaching.png",
+      "sha256": "2fe407d535fdb7dc6e93e5e11a32e1cd2d4212d96e09686e7391659fc3dbbbd5"
+    },
+    {
+      "file": "work/qa-correction/final-feeding/compact-avocet-departing.png",
+      "sha256": "410ec2072dd9ee0c74c4da7b5a431f4ca6dbcdb2b7468a625643c95e9f760b62"
+    },
+    {
+      "file": "work/qa-correction/final-feeding/compact-avocet-handling.png",
+      "sha256": "f7d3dcc5080aa8769f89f57d92186181ffd2e9213ad7c3cb8caadc346a8973c2"
+    },
+    {
+      "file": "work/qa-correction/final-feeding/compact-avocet-initial.png",
+      "sha256": "fbc192155e9969de639f2237ba79f657f15f6ae118e6c57f74330988d165e13c"
+    },
+    {
+      "file": "work/qa-correction/final-feeding/compact-avocet-searching.png",
+      "sha256": "e792a08f6a5ad425cc2d37484208d6309dc39a8d3aac2a91fd17d626a52973c5"
+    },
+    {
+      "file": "work/qa-correction/final-feeding/compact-avocet-swallowing.png",
+      "sha256": "6e04bb8e77567785756b3c9b2e28abc937ebebfac43219d9b4f6a597c6202994"
+    },
+    {
+      "file": "work/qa-correction/final-feeding/compact-redshank-after-departure.png",
+      "sha256": "6357b2c8e5ec7b5674f37f24d3953a3aef557457f681c350d40d869c4e85658b"
+    },
+    {
+      "file": "work/qa-correction/final-feeding/compact-redshank-approaching.png",
+      "sha256": "cc9051f75fcc7b7ca57c0974872863f4ea8b0044298dd679eea2980ba10d2fd4"
+    },
+    {
+      "file": "work/qa-correction/final-feeding/compact-redshank-departing.png",
+      "sha256": "f1df49f52b15583848786a0c9d5b477deb8adc1f98c8aa2cfd8fbbb0a78acfcc"
+    },
+    {
+      "file": "work/qa-correction/final-feeding/compact-redshank-handling.png",
+      "sha256": "ebb03e3969d4edfdc853ea613964a6c0ab8ff9922d883d4c206f616e346314d6"
+    },
+    {
+      "file": "work/qa-correction/final-feeding/compact-redshank-initial.png",
+      "sha256": "0383b30f91046508749006d3983886b511ef3c023c181b231b1dc0b0eebba545"
+    },
+    {
+      "file": "work/qa-correction/final-feeding/compact-redshank-searching.png",
+      "sha256": "8e9cb186baa79c45303d6a07a4117c3933adbe56d5a158e5e9c3ddd4870408da"
+    },
+    {
+      "file": "work/qa-correction/final-feeding/compact-redshank-swallowing.png",
+      "sha256": "e6efaf41ab74c441403e94e82f39c19c6f4f521a7a714873635427b612f77aa3"
+    },
+    {
+      "file": "work/qa-correction/final-feeding/compact-spoonbill-after-departure.png",
+      "sha256": "75a0d6e2f374efeca7f83761c2cd9b2e892d20645cfd3cc9669425ccd89e8f32"
+    },
+    {
+      "file": "work/qa-correction/final-feeding/compact-spoonbill-approaching.png",
+      "sha256": "0676ce90500a8534613f12c0a44c3e60f0e096594f2316eea532c88b0a821ac0"
+    },
+    {
+      "file": "work/qa-correction/final-feeding/compact-spoonbill-departing.png",
+      "sha256": "81a7b262a97cd5d15ce9e130374145c6c7cabaecf8124f2911e5e601c5564e30"
+    },
+    {
+      "file": "work/qa-correction/final-feeding/compact-spoonbill-handling.png",
+      "sha256": "152a377de555126652d8520099c8553f15a22218e89428416ba3c4b771d9c818"
+    },
+    {
+      "file": "work/qa-correction/final-feeding/compact-spoonbill-initial.png",
+      "sha256": "8b117e9b9191d330d93fb88ea5d40f54b849673c77326e00429bd91febbb45c7"
+    },
+    {
+      "file": "work/qa-correction/final-feeding/compact-spoonbill-searching.png",
+      "sha256": "3ba3adaf0314d3a2dd80fb0a16e197a5a96caed7a69d7458ae7658e00f7b2b39"
+    },
+    {
+      "file": "work/qa-correction/final-feeding/compact-spoonbill-swallowing.png",
+      "sha256": "febfe25c0d0e02ea11a65fe351f2afdc85318c2011136f603b41d7d6b078652a"
+    },
+    {
+      "file": "work/qa-correction/final-feeding/compact-oystercatcher-after-departure.png",
+      "sha256": "62dcdc4bfdf83c5ad95d4d66700c43c8b3ef9e6cb11b4c19ef3f4ec502c897e9"
+    },
+    {
+      "file": "work/qa-correction/final-feeding/compact-oystercatcher-approaching.png",
+      "sha256": "49b549a16f5438173c231d5b796ea1215b1148cb2975c65c94390917822ea85d"
+    },
+    {
+      "file": "work/qa-correction/final-feeding/compact-oystercatcher-departing.png",
+      "sha256": "7d5778c47309af332f30721ddc2a70b57ca375249ea3580fee55e460b76307a1"
+    },
+    {
+      "file": "work/qa-correction/final-feeding/compact-oystercatcher-handling.png",
+      "sha256": "453ffdbf989bc3d7fe27d509636050f45c978fb964a44a764afc30219953d425"
+    },
+    {
+      "file": "work/qa-correction/final-feeding/compact-oystercatcher-initial.png",
+      "sha256": "f6c0686837c162106cfdcb50493d49f3eef9f5471ebe10cfe8c0f8a099336a78"
+    },
+    {
+      "file": "work/qa-correction/final-feeding/compact-oystercatcher-searching.png",
+      "sha256": "5157d5de1c0a1abf61595511e00bf22933a9a9e8a4bbf08a1a4190268450ef04"
+    },
+    {
+      "file": "work/qa-correction/final-feeding/compact-oystercatcher-swallowing.png",
+      "sha256": "ebf19f552249abd76c5a67d81930205d2fb86e01f1dd5cadca37acffd52a5ba7"
+    },
+    {
+      "file": "work/compact-learning/model-capreolus_capreolus.png",
+      "sha256": "f933779df27009ca65e3355edea7b996ac883c0233289e1f66e08ec6e9aa4bbc"
+    },
+    {
+      "file": "work/compact-learning/model-dendrocopos_major.png",
+      "sha256": "afdaa34d009445c41b7711eaf340fe777658142f62fa1ce09cdc770e03cfd96b"
+    },
+    {
+      "file": "work/compact-browser/02-deer-side.png",
+      "sha256": "bd9b3d5e74a539737124a841f21102853055bea399c97c543177fb625c77bc92"
+    },
+    {
+      "file": "work/compact-browser/03-deer-front.png",
+      "sha256": "87bbb02e0477f223e92393a1f7db8e25fe26d69bb216afcaccf77091863b7718"
+    },
+    {
+      "file": "work/compact-browser/04-deer-back.png",
+      "sha256": "f3c51a3aad3f32aeeda08a478d0e149d97fdbab7ac61ade98ad0632448cc2aeb"
+    },
+    {
+      "file": "work/compact-browser/05-bird.png",
+      "sha256": "811990d7df97a0e0c156f66f0a98412007718606c5aaa08e07b18cc13d97c7d6"
+    },
+    {
+      "file": "work/compact-browser/13-bird-flight.png",
+      "sha256": "61d8e37def445fcae096dc443b26ef0c2e4e973c8f8cee5b05c474aa4d98778b"
+    },
+    {
+      "file": "work/compact-browser/14-bird-landed.png",
+      "sha256": "0c36b1f0958e57fb6309cdb0b759d053eb8d67928888299d35577a35afbbb4aa"
+    },
+    {
+      "file": "work/compact-browser/15-deer-moving.png",
+      "sha256": "614c6ef516a2d5bae2c5b2d40db8b7c3b9dbd3f52c951e4f7217bb41494d4134"
+    },
+    {
+      "file": "verification/kompakt-korrektur/baseline/start.png",
+      "sha256": "54a888a92e6ef12bc83c578a71da4fd89f0007d8a1ccfdae889d6aafc47c7880"
+    },
+    {
+      "file": "verification/kompakt-korrektur/baseline/woodruff.png",
+      "sha256": "eb8f47b603a9f4b071c0e1e3186093e89312ada0eac3df25752a7e4b656a7a9e"
+    },
+    {
+      "file": "verification/kompakt-korrektur/baseline/nettle.png",
+      "sha256": "3eee77cf83bf53186f3b92769206c452da51cbad604b84f9294560dd84d9a5cd"
+    },
+    {
+      "file": "verification/kompakt-korrektur/baseline/wood.png",
+      "sha256": "2fb710a64169f23d91a099b0fcab36c72a75f08a02ce6d51a5564008d84874c5"
+    },
+    {
+      "file": "verification/kompakt-korrektur/baseline/village.png",
+      "sha256": "c0651be843e5c762354173757d3c475b6542d1ff4315e7bc5d2fb9cd4b87d9b8"
+    },
+    {
+      "file": "verification/kompakt-korrektur/baseline/ramp.png",
+      "sha256": "42706f777ca29447daae998b247a150c1a1463d5452bb7fc373c7a3250c96029"
+    },
+    {
+      "file": "verification/kompakt-korrektur/baseline/salt-shrub.png",
+      "sha256": "3b30df2f1cd03549ed64b6afdd11179a4ee6d23a076e6094c90bd9f66f062f61"
+    },
+    {
+      "file": "verification/kompakt-korrektur/baseline/salt-segments.png",
+      "sha256": "f5d05d149bd327198c1b8eeba85ebbbc24ad543d064c894b974ae4e4b926a4e6"
+    },
+    {
+      "file": "verification/kompakt-korrektur/baseline/salt-grass.png",
+      "sha256": "89d5863284ef9b4050985b4a6b886938c1e10a566954e3b6bb6a3a3486e85d60"
+    },
+    {
+      "file": "verification/kompakt-korrektur/baseline/coast.png",
+      "sha256": "42fa0daeeebd8b3a2ea513ce7c71284d9e037d16b0960d5ad413c6600f8fe20b"
+    },
+    {
+      "file": "work/qa-correction/final-habitats/start.png",
+      "sha256": "c6086b0242038d5be5b2a4d83a29b0b403e845a3599344eac835869272c0a326"
+    },
+    {
+      "file": "work/qa-correction/final-habitats/woodruff.png",
+      "sha256": "fd9202365c7fd699876b84fce7a586c8d9c08fa65e1686805815b0bcc10b7aea"
+    },
+    {
+      "file": "work/qa-correction/final-habitats/nettle.png",
+      "sha256": "75f968247a462ddcf9a815b4236fbd7252cfd92104ae34b92b4be767ba1cab7f"
+    },
+    {
+      "file": "work/qa-correction/final-habitats/wood.png",
+      "sha256": "bb016ba9ad65d8185add46fa818ce7dc58ec3aa5b2e707f156d76d20619588a0"
+    },
+    {
+      "file": "work/qa-correction/final-habitats/village.png",
+      "sha256": "3a673896388265a6ad3eec447273ccea83385b712a85c150b11470af1fdf3e42"
+    },
+    {
+      "file": "work/qa-correction/final-habitats/ramp.png",
+      "sha256": "bc0f55298fd5ba444eb5d2529df40ba2966e81fdb3731ee330a9b74ffb633f17"
+    },
+    {
+      "file": "work/qa-correction/final-habitats/salt-shrub.png",
+      "sha256": "835c7e2b53947e54af890c8b6b1d75159183e7e1f1062b3f64f07960c3595ca5"
+    },
+    {
+      "file": "work/qa-correction/final-habitats/salt-segments.png",
+      "sha256": "751feb969a352257dfb3eaac8fcdb79c1f13e38dbf73bf53cdea433d6de44285"
+    },
+    {
+      "file": "work/qa-correction/final-habitats/salt-grass.png",
+      "sha256": "485337e249f6b1c88ffbb6666ca06e26cba026cccb4453513830b9d8bd4a6bec"
+    },
+    {
+      "file": "work/qa-correction/final-habitats/coast.png",
+      "sha256": "c04a053cc2740cf8ea508b5706b6ed9d300c8db34426f30ed9990ed7cba66dce"
+    },
+    {
+      "file": "work/qa-correction/final-habitats/forest-normal-walk.png",
+      "sha256": "6ea3fe8140ca5f829ba7e692b5140333161b3a481200b21b150023e5c7b82e17"
+    },
+    {
+      "file": "work/qa-correction/final-habitats/habitat-light-gap.png",
+      "sha256": "890a2b8a4f1be6cbefb04a6579d06421a383e6a63265270fe145edc3cdba49ec"
+    },
+    {
+      "file": "work/qa-correction/final-habitats/habitat-nutrient-edge.png",
+      "sha256": "4207ebd4c6382591d96d701a4b85bc633d384ce6451b9d0c759319287d09ad9c"
+    },
+    {
+      "file": "work/qa-correction/final-habitats/keilm-low.png",
+      "sha256": "59114733e0c63b19a79e17d95b13e8a9aed98cad27796f625220d454a22ad3bf"
+    },
+    {
+      "file": "work/qa-correction/final-habitats/keilm-high.png",
+      "sha256": "59114733e0c63b19a79e17d95b13e8a9aed98cad27796f625220d454a22ad3bf"
+    },
+    {
+      "file": "work/qa-correction/final-habitats/npc-ranger.png",
+      "sha256": "512b1cbe5701dd00cc36c4f3326a16162117d5244c1531aea821caa67d11792e"
+    },
+    {
+      "file": "work/qa-correction/final-habitats/npc-local.png",
+      "sha256": "0f2d8ced1681f87be2e18b709a97fc0ed4fdff500a94ffc27a94fef25d3a2987"
+    },
+    {
+      "file": "work/qa-correction/final-habitats/npc-coastal.png",
+      "sha256": "e18aa00d49270e60d32c505612b0b35e91ef18a36b14859fc029593f22b7b851"
+    },
+    {
+      "file": "work/compact-stability/final.png",
+      "sha256": "b6b8be7eb60abc3066746753c4e339270c3728ca9f3408f08f9c1426d128e712"
+    }
+  ],
+  "observations": [
+    "Both complete seven-frame avocet/redshank sequences viewed: visibly different approach/search/contact/departure poses, continuous world paths need accompanying numeric records because camera follows the bird.",
+    "Small prey under water/sediment is visually subtle. A phase caption alone is not the feeding proof; finite prey identity/contact/consumption assertions and scene geometry remain necessary.",
+    "Simplified polygonal bodies and sharply bent neck poses remain, especially during searching/handling. Natural gait/anatomy and real-time fluidity are not certified.",
+    "All 28 raw feeding captures personally viewed in order. Spoonbill sweep/broad bill and oystercatcher mussel handling differ from avocet sweep and redshank probing. All are visibly simplified, with conspicuous neck hinges and subtle tiny prey. No claim of naturalistic final animation or photographic anatomy.",
+    "New runtime gallery deer and woodpecker images viewed. Deer has more articulated detail than the simplified birds/forest; woodpecker is recognizable by bill, black/white/red markings and feet, but strongly stylized. Gallery is isolated active geometry, not independent proof of world support or gait/flight; reference world images/videos and contact checks are separate.",
+    "World-rendered deer side/front/back and supported woodpecker viewed at the new source freeze. Deer legs contact the ground in the selected stills; side coloration and slender legs are stylized. Woodpecker sits on the bark with the supported pose, rather than floating in the isolated gallery. These are selected views, not full anatomical certification.",
+    "All ten own before/after views personally compared on the fresh runtime. XZ/yaw/pitch/viewport match by driver assertions; eye height follows new terrain. These are own cameras, not unavailable independent-review cameras.",
+    "Floor atlas is less washed out, understory and crown-age differences are visible, but repeated simplified crowns and large open floor areas remain. Full F05 artistic target FAILED in own review; independent end acceptance remains not checked.",
+    "Village shows actual speaker/path/facade details but remains sparse and stylized. Dike banks/crown are broader; model geometry is explicitly compressed and does not certify a real protection structure.",
+    "Old Keilmelde camera now looks at its original ground position, with the new higher stand in the distance. It must not be mislabelled as the same individual before/after movement. Separate new low/high images will compare the same current stand.",
+    "Coast water now allows submerged ground to show through. Shoreline, plants and boardwalk remain conspicuously simplified model geometry.",
+    "Latest normal forest walk and extra light-gap/nutrient-edge views personally inspected: herb/shrub distinctions present but full naturalistic visual target remains unmet.",
+    "All three proximal speaker images viewed with the corresponding active talk control. Human models are deliberately simple blocks, not realistic NPC anatomy.",
+    "Same current Keilmelde close view at actual UI low/high water both shows dry plants. The sea waterline is outside this close camera, so these images alone do not visibly measure the tide difference; report times and full flood statistics supply that context.",
+    "Final image after the successful full duration and native restoration personally inspected: actual world geometry is present, no blank loading state. Native context/model progress and same run ID are independently recorded; image alone is not the identity proof."
+  ],
+  "notChecked": [
+    "Physical Apple iPad 9 / Safari / iPadOS 27",
+    "Independent biological and artistic acceptance",
+    "Classroom learning effect"
+  ],
+  "videos": [
+    {
+      "file": "work/compact-browser/bird-flight.webm",
+      "sha256": "52a4c122dcdcb7f4530372d9b91638a9843e0b5d0d8073e11c6b81ffa6eede37",
+      "decodedNativeFrameIndicesReviewed": [
+        10,
+        25,
+        40
+      ],
+      "method": "ffmpeg select on original frames, no crop/composite/retiming. Derived PNGs for inspection only; original WebM is delivered unchanged.",
+      "finding": "Flight-state/landing assertions passed, but the fixed wide camera leaves the bird very small or behind trees. Selected decoded frames are inadequate as convincing close visual proof of natural flight."
+    },
+    {
+      "file": "work/compact-browser/deer-motion.webm",
+      "sha256": "e5e1d961c15d4eebc1f64218e0d8248291198e2a22ab8066ece1f5a211dc0d74",
+      "decodedNativeFrameIndicesReviewed": [
+        0,
+        10,
+        20
+      ],
+      "method": "ffmpeg select on original frames, no crop/composite/retiming. Derived PNGs for inspection only; original WebM is delivered unchanged.",
+      "finding": "Selected frames show the deer and changing observer position, with some legs occluded by Rubus. Foot/gait contracts are separately measured; this low-rate software recording does not certify smooth or natural movement."
+    }
+  ],
+  "documentsViewed": [
+    {
+      "file": "outputs/Ranger-Kompakt-Lernpaket/Arbeitsblaetter.pdf",
+      "sha256": "beca5c789e8b791a236eac140c55d77683219ac05ac09771febb369e58242fdf",
+      "page": 36,
+      "method": "Native PDF page rendered with pdftoppm for inspection, not a game screenshot.",
+      "finding": "C23 original-study design, direction table and differentiated help are readable without observed overflow on the sampled page. All other pages are covered by generation/text checks, not claimed individually visually inspected."
+    }
+  ]
+}

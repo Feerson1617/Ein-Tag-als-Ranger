@@ -1,0 +1,27 @@
+{
+  "scope": "Latest explicitly authorized assignment and START read. Earlier prompts are context, not added feature scope. Uploaded instructions distinguished from own executed evidence. No attached fulltext copied into the public runtime.",
+  "readInputs": [
+    {
+      "file": "START-HIER.txt",
+      "bytes": 2121,
+      "sha256": "128b99c92a33923b236e00eff9d8a27cce06784d0052c337f32da001205ee367"
+    },
+    {
+      "file": "Codex-Abschlussauftrag-Ranger-Kompakt.txt",
+      "bytes": 24504,
+      "sha256": "1365b9c1458b31ca54839913fd3ba366517374ecd1493889f144c1d0995d619e"
+    },
+    {
+      "file": "Abschlussreview-Ranger-Kompakt.html",
+      "bytes": 164509,
+      "sha256": "b2c80ef8041111609d6b6cc07f5da575c926cfb3394abb095ab77e46ce84f5ad"
+    }
+  ],
+  "missingMentionedInputs": [
+    "full/small Abschlussset ZIPs",
+    "baseline files supplied within those ZIPs",
+    "pruefung/run-independent-checks.py and results",
+    "Q1 Ranger-Kompakt-End-QA-2026-10-24 and full evidence archive"
+  ],
+  "missingScope": "No claims of executing the absent independent14-group driver or receiving the newly mentioned full/small QA ZIPs; own actual repository tests and original tracked fixtures used."
+}

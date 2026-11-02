@@ -1,0 +1,29 @@
+{
+  "routeLength": 734.6898679755535,
+  "grade": 0.120000000000001,
+  "minDeckGroundClearance": 0.14861749500144317,
+  "minVisibleTerrainClearance": 0.1482763234273885,
+  "minPilingEmbed": 0.2705415791355503,
+  "minCurbDistanceFromCenter": 1.2934001123922958,
+  "supports": 936,
+  "earlyMovingBirds": 303,
+  "birdPairChecks": 55665,
+  "minBirdSpacingRatio": 1.001271468112185,
+  "flightBirdSpecies": 64,
+  "perchedBird": "feet at branch elevation, no airborne pose",
+  "binocular": {
+    "journeys": [
+      {
+        "x": 6.799999999999998,
+        "age": 2.0000000000000027,
+        "cycle": 71.59753486531262
+      },
+      {
+        "x": 3.399999999999999,
+        "age": 1.0000000000000013,
+        "cycle": 35.79876743265631
+      }
+    ],
+    "acquisition": "at least twice former angular aperture, stays inside visible field"
+  }
+}

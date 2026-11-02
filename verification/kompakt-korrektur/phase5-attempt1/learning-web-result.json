@@ -1,0 +1,165 @@
+{
+  "entry": "index.html",
+  "htmlSHA256": "c41d99d05311a507a3af1d6c4f3ba944d6cea16e44ad89e4d0a26e57446fd4e0",
+  "sourceCommit": "3fb7b756e41f34dbdf00bdec9e52115a005027ae",
+  "sourceDirty": false,
+  "runtimeSourceHashes": {
+    "assets/boardwalk-wood.webp": "4d06022133e3772534374671fb73a4509ed109e1db6ca06a2d62a8c99c47ac6d",
+    "assets/compact-roe-deer.glb": "a89400df66033eb5eaa7f9bf13ccefaacfb866ab24e4576574d11965354ee619",
+    "assets/sky-panorama.webp": "46c360b491b11269d280e73ec0e71869afdfd62fb543b4250713234374a2f71d",
+    "assets/terrain-atlas.webp": "d637324d3ace6ef8e2c549e7f0a513efd1a4c06aab927f0ed1565bf77b2ced02",
+    "assets/wildlife-fox.glb": "61a4d1b845aa406928a327648417ae1c3982510b9c4e8ce33b7c494fbc98a22f",
+    "compact/catalog.js": "6b693d4c6a0f6b880b9ff99295826f3968e61ba96f52606997a1635ddf1fe39f",
+    "compact/coastal-behaviour.js": "39b1dcb8691cd48850321c4c734eabf0b2875b91a8cd09dcd7b571758b0f0927",
+    "compact/coastal-rig.js": "92a0270abdbf3aee7467e466cf344b08b8ef8bf5af4d903d3c672f9bcd4e2513",
+    "compact/comparison-views.js": "050f629dfc0b3b9bac1badc0c0564cfb08cf88e92006edcba377eabc623ecf82",
+    "compact/determination.js": "25f8ce960dba09ebeeb4470530d38608809bf98aa91d3575716b6ff835145c6f",
+    "compact/ecology.js": "e50f25a3146e79671472e7a5e6ed1d78f007564515bf9a78bb67fac9695ef8e0",
+    "compact/evidence.js": "1fb480ca90cebdba0b3178cc5ccbb121528826552ec32230b1c3245e808aa84f",
+    "compact/expanded-view.js": "b6201ad45f5a675fdf0d1092811fd8621c644ed9732e46fef51eb48e22ddb963",
+    "compact/fauna-view.js": "985a83582ff0ffac0e8d6ef20e2edc80a09b66e88f3768dd404f746507820feb",
+    "compact/geometry.js": "ac8a5e08a56f7ed75abb7a65baa6e20aba032984d7089e3b290d4769dd4307b0",
+    "compact/habitats.js": "10aad218dd69d51e842b59ef0164d9de8c0deaf30bc52d5165fc9ce317cde6c7",
+    "compact/inspection.js": "961c8c13e8e8e58595460fa40ed7bed0668367b120081dd95961a78ca87300ea",
+    "compact/journal.js": "a3acaef22c20529012509690d456d59f2739242eea1c58d38ba43aae410bb34f",
+    "compact/layout.js": "e02558557a9c99fa0549c94f8cbfc8873e18f3c90df845155d51ee4d404209a6",
+    "compact/learning-documents.js": "6e6bdf64274109550d7cf9fff8a182d207f258a59fde0285c9363989015a9de5",
+    "compact/learning-models.js": "078199d66bff5bd360c3010646c690dff92a58a160127204ba9fe9243a9a6d2e",
+    "compact/learning-ui.js": "e245840052fb77878de3abc55b4890ebcae96a76fe589155ab1d3dce5823e825",
+    "compact/lesson-layouts.js": "eec60d3c481ccfa0bf587f4213bdbe6847d75039934e4ecad149b1bd67adf3f2",
+    "compact/lesson-resources.js": "c650d8090445596c50be8cbd7a57d636d1f71c267fabd20fb5644f083923bbf8",
+    "compact/main.js": "9ba3c88ee948ae5829a64871f348ffd3fd499f2ef603ee68ee409d75ef0b742a",
+    "compact/management.js": "e6d38fbfc2c7e131d60ca3e38a1c740ca9ba5c49628fd3ba51ca94242d2d75a3",
+    "compact/manifest.js": "bdf071c610b896ffa14c41b33f9f17c5472199b55a6eb407f853e38178344cae",
+    "compact/materials.js": "b96c109d4a29a43223aa1f3c708af65f5d8258b03d3e43d5fa6d89100a799610",
+    "compact/missions.js": "55677975084e5dd4cc674ce0890305d0c3909fd82dce2241ec2b9526bd3147ee",
+    "compact/observation-schema.js": "2f0467f9693eca83c3a5a678128d86a5956de2b74df79a342b4875454569e12c",
+    "compact/organism-models.js": "7cf080fb497a17d58ce4d1672ffc5cef12b7f2c033a336384e4aead7dfc27cb6",
+    "compact/path-mesh.js": "7a41ebc390aeca96cffd1e4fcee19f3b76310413fcee3489d1533ebd599a4c82",
+    "compact/style.css": "fa3e0391ced503e62691704482dfcd500f73e81aa43c0abb9559c0e7491b378b",
+    "compact/task-schema.js": "4ce4ca8e8f6c27182b3abe36d90d956fcbc6526d240911dbc996c53b670fc418",
+    "compact/taxa.js": "97cd6f5bad16208408512be876ebf63d5f9ee400dd31f94a61c8ca08e4e24fd3",
+    "compact/vegetation-view.js": "7e6f703c9a930a86dd2c9b202a79bf7842f4d1f41bf9a2a27d3ef24b3b22e47a",
+    "compact/village-view.js": "15d1902cbb96678503051ba0b11494d0ceea412dbc193f18bf16b0bfe9d91b03",
+    "compact/village.js": "05acf2a5ff040e4de2aaf2c3ebc3ee88daaf2edc75d12e80d49a5f54a60a3aec",
+    "compact/visibility.js": "50d59d44257e9d18547bfaec9277366d3339177c6ebce37d948b48c9940a86f1",
+    "compact/world-state.js": "360197f8bd8ab54c595386b66f2e676499630bc6ca896856034fba4910d9fd7f",
+    "compact/world-view.js": "4302cfa6e1600a6f9f2d62835c38b0d3e90ea232d9904c0559ae6936860f112a",
+    "field-guide.js": "72126f4e4560fceb95e64fbd35799de0dafefaf65683625f76a5d949d05cbe07",
+    "icon.svg": "cb8cda889f99e56d13d18e09929837b7c3630d3f9ff3219316d12d3077fc0869",
+    "kompakt.html": "210d013010327c0ee7db76c61b67d7a05560404056c0569f7361cfa064d8019d",
+    "observation-clock.js": "2304e6c425192967f87841caa5072873cb5dd5c7f69c38fb45b237fd22f98b03",
+    "ranger-controls.js": "081497a5f6754ecd441e61ee55805da99b5121e96215cfa900209e00e41e5eda",
+    "station-protocol.js": "2590df7d9de4c8f4afda8fcafd619d565440c2dc7e1bb6ef4574aeadf803ae57",
+    "vendor/three.core.js": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20",
+    "vendor/three.module.js": "2884e2e6f26feaec0b454fcdc1e98c27d6433ba15253e5a3e22e111df81686fa",
+    "wildlife-glb.js": "32f8f947dd002ba7b571ee627e6291fa40a951fccdd9dee644661f19de487c35"
+  },
+  "startedAt": "2026-10-22T15:17:58Z",
+  "checks": [
+    {
+      "name": "36 active entries; five optional families initially incomplete, free play remains available",
+      "passed": true
+    },
+    {
+      "name": "K1 earned from three different actual model observations, justified uncertainty and two same-method sites",
+      "passed": true
+    },
+    {
+      "name": "K1 blind labels, plausible wrong choice rejected, uncertainty retained and actual unseen oak transfer earned as justified group",
+      "passed": true
+    },
+    {
+      "name": "K2 real control/competitor runs; co-presence answer rejected, controlled resource explanation accepted",
+      "passed": true
+    },
+    {
+      "name": "K3 earned with same individual after negative different-individual attempt; eA Q1/Q2/Q0 and true zero recorded",
+      "passed": true
+    },
+    {
+      "name": "K4 own fungus observation plus explicit section-model edges; false energy cycle rejected",
+      "passed": true
+    },
+    {
+      "name": "K5 rejects forest-only evidence and accepts a real coastal-plant link with weights, separate fact/value/norm/consequence, three local dialogues and ungraded argument",
+      "passed": true
+    },
+    {
+      "name": "visible slow-render warning keeps objective and study controls unobscured",
+      "passed": true,
+      "warningVisible": false,
+      "computedLayout": {
+        "warningTop": 196,
+        "controlBottom": 179
+      }
+    },
+    {
+      "name": "real reload preserves all acquired answers/evidence and recomputes five statuses; actual JSON and readable report downloads",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "captures": [
+    {
+      "file": "K1-earned.png",
+      "sha256": "fd700a7f1c98b5e4754d10100171e5a9e57236c979787ed1fd0b8fd08940ae2d",
+      "bytes": 243621,
+      "source": "actual browser screenshot"
+    },
+    {
+      "file": "K1-transfer.png",
+      "sha256": "88484efbf93e6e3a956d7572fcda156692c2e0d9203ba9e4c43b3ffc6d88bd21",
+      "bytes": 243851,
+      "source": "actual browser screenshot"
+    },
+    {
+      "file": "K2-earned.png",
+      "sha256": "1e16c9c46b5aaa5d6521f6bce5bbd9955d41957fe31496fa6581a5ed897c0ffa",
+      "bytes": 231330,
+      "source": "actual browser screenshot"
+    },
+    {
+      "file": "K3-earned.png",
+      "sha256": "bbbe9d317d6dc9afd91deaca388d2dda5ee7766aad7b8a483ca6161cc8ceccc6",
+      "bytes": 217609,
+      "source": "actual browser screenshot"
+    },
+    {
+      "file": "K4-earned.png",
+      "sha256": "6f93773ed4a4d13ae1274775d9cba30188961e044eec90afb50d3ec6c60bb178",
+      "bytes": 227776,
+      "source": "actual browser screenshot"
+    },
+    {
+      "file": "K5-forest-rejected.png",
+      "sha256": "73da084771b55abbece18370b3760c4576ef18927a84902f0399e39f9b1e6235",
+      "bytes": 208737,
+      "source": "actual browser screenshot"
+    },
+    {
+      "file": "K5-earned.png",
+      "sha256": "15999f83d53f5c20725f0208954c9047d6369a5f5a6d562d866ad284aadadf16",
+      "bytes": 226557,
+      "source": "actual browser screenshot"
+    },
+    {
+      "file": "failure.png",
+      "sha256": "9861f8097b5316950eb76ee8557839d6700928bebb5ebba5813f625c80a6bfc4",
+      "bytes": 225996,
+      "source": "actual browser screenshot"
+    }
+  ],
+  "hardwareScope": "Cloud Chromium, software graphics; no actual Safari/iPad/Mac or classroom pilot",
+  "browserVersion": "154.0.8037.57",
+  "boots": [
+    {
+      "readyMilliseconds": 4009.2000000029802,
+      "transferBytes": 9383348,
+      "encodedBodyBytes": 9368348,
+      "resourceCount": 49
+    }
+  ],
+  "failure": "",
+  "traceback": "Traceback (most recent call last):\n  File \"/workspace/Ein-Tag-als-Ranger/tools/browser-compact-learning.py\", line 105, in <module>\n    before=page.evaluate(\"localStorage.getItem('ranger-compact-fieldbook-v2')\");bad=json.loads(before);bad['learning']['protocols'][1]['initialSeed']+=1;page.locator('#import').set_input_files({'name':'contradictory.json','mimeType':'application/json','buffer':json.dumps(bad).encode()});assert 'Szenenkontext'in page.locator('#import-preview').inner_text();assert page.evaluate(\"localStorage.getItem('ranger-compact-fieldbook-v2')\")==before;ok('contradictory imported scene protocol rejected by real file input without replacing saved work')\n                                                                                                                                                                                                                                                                                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+}

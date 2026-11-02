@@ -1,0 +1,3 @@
+# Großer vollständiger 800×500-Lauf: FEHLGESCHLAGEN
+
+M1 und M2 wurden tatsächlich vollständig erworben. Das erste M3-Fenster erreichte im unveränderten 180-s-Limit nur 4,5/6 Modellsekunden; p95-Bildabstand 3499,9 ms, keine JS-/Konsolen-/HTTP-Fehler. Ein frisches Bild und das tatsächlich erworbene Feldbuch sind erhalten. Keine Beobachtungsbedingung oder Zeitgrenze wird abgesenkt/angehoben. Ein separater frischer M3-Lauf mit dem vorhandenen CLI-Profil 600×375 prüft dieselben sechs Modellsekunden/180 s und anschließend UI/Speicher/Resilienz; er macht den 800×500-Gesamtfehler nicht nachträglich erfolgreich. Cloud-Softwaregrafik ist kein iPad-Benchmark.

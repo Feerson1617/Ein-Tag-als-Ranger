@@ -1,0 +1,36 @@
+START final-legacy-node 17:15:32
+PASS final-legacy-node
+START final-compact-node 17:17:33
+PASS final-compact-node
+START final-build-legacy 17:18:01
+PASS final-build-legacy
+START final-build-compact 17:18:08
+PASS final-build-compact
+START final-python 17:18:09
+PASS final-python
+START final-source-package 17:18:20
+PASS final-source-package
+START feeding 17:18:29
+{"name": "feeding", "command": ["/workspace/.ranger-clean-venv/bin/python", "tools/browser-compact-feeding.py", "--output", "work/qa-correction/final-feeding"], "exitCode": 0, "passed": true, "seconds": 269.49, "log": "feeding.log"}
+START learning-web 17:22:58
+{"name": "learning-web", "command": ["/workspace/.ranger-clean-venv/bin/python", "tools/browser-compact-learning.py", "--gallery"], "exitCode": 0, "passed": true, "seconds": 779.29, "log": "learning-web.log"}
+START source 17:35:58
+{"name": "source", "command": ["/workspace/.ranger-clean-venv/bin/python", "tools/browser-compact-source.py"], "exitCode": 0, "passed": true, "seconds": 36.98, "log": "source.log"}
+START reference 17:36:35
+{"name": "reference", "command": ["/workspace/.ranger-clean-venv/bin/python", "tools/browser-compact.py"], "exitCode": 0, "passed": true, "seconds": 702.78, "log": "reference.log"}
+START standalone-smoke 17:48:17
+{"name": "standalone-smoke", "command": ["/workspace/.ranger-clean-venv/bin/python", "tools/browser-compact.py", "--site", "outputs", "--entry", "Ranger-Kompakt.html", "--smoke"], "exitCode": 0, "passed": true, "seconds": 189.17, "log": "standalone-smoke.log"}
+START learning-standalone 17:51:27
+{"name": "learning-standalone", "command": ["/workspace/.ranger-clean-venv/bin/python", "tools/browser-compact-learning.py", "--site", "outputs", "--entry", "Ranger-Kompakt.html", "--output", "work/compact-learning-standalone"], "exitCode": 0, "passed": true, "seconds": 335.97, "log": "learning-standalone.log"}
+START imports 17:57:02
+{"name": "imports", "command": ["/workspace/.ranger-clean-venv/bin/python", "tools/browser-compact-imports.py", "--output", "work/qa-correction/final-imports"], "exitCode": 0, "passed": true, "seconds": 96.39, "log": "imports.log"}
+START habitats 17:58:39
+{"name": "habitats", "command": ["/workspace/.ranger-clean-venv/bin/python", "tools/browser-compact-habitats.py", "--output", "work/qa-correction/final-habitats"], "exitCode": 0, "passed": true, "seconds": 461.84, "log": "habitats.log"}
+START materials 18:06:21
+{"name": "materials", "command": ["/workspace/.ranger-clean-venv/bin/python", "tools/print-compact-materials.py"], "exitCode": 0, "passed": true, "seconds": 3.79, "log": "materials.log"}
+START stability 18:06:25
+{"name": "stability", "command": ["/workspace/.ranger-clean-venv/bin/python", "tools/browser-compact-stability.py"], "exitCode": 1, "passed": false, "seconds": 951.54, "log": "stability.log"}
+START legacy-full 18:22:16
+{"name": "legacy-full", "command": ["/workspace/.ranger-clean-venv/bin/python", "tools/browser-check.py", "--live", "--resilience", "--width", "800", "--height", "500", "--site", "outputs/GitHub-Pages", "--prefix", "/Ein-Tag-als-Ranger/"], "exitCode": 1, "passed": false, "seconds": 1291.97, "log": "legacy-full.log"}
+START legacy-standalone 18:43:48
+{"name": "legacy-standalone", "command": ["/workspace/.ranger-clean-venv/bin/python", "tools/browser-check.py", "--smoke", "--width", "800", "--height", "500", "--site", "outputs", "--entry", "Feldbuch.html"], "exitCode": 1, "passed": false, "seconds": 186.47, "log": "legacy-standalone.log"}

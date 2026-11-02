@@ -1,0 +1,1061 @@
+{
+  "schemaVersion": 2,
+  "worldVersion": "ranger-compact-v2",
+  "records": [
+    {
+      "id": "8535ec0d-7d59-48e5-b1c3-ec1a5df31193",
+      "taxon": "galium_odoratum",
+      "individualId": "ranger-compact-v2:galium_odoratum:0",
+      "window": "summer",
+      "modelRevision": 3,
+      "method": "magnified-active-model",
+      "siteId": "compact-forest-core",
+      "events": [],
+      "worldVersion": "ranger-compact-v2",
+      "initialSeed": 20260825,
+      "runId": "f0d17395-ead6-4d7d-8c2b-bdc1f9e17cda",
+      "source": "own-observation",
+      "observationSeconds": 2.766600000000005,
+      "simulationTime": 41.622099999999975,
+      "x": -58.366864902514294,
+      "z": 5.343887617279103,
+      "note": "Eigene aktuelle Modellbeobachtung; Erkennungsmerkmale und Unsicherheit separat prüfen."
+    },
+    {
+      "id": "54043f42-d4ab-498f-b5a1-0c5fb9c707e2",
+      "taxon": "fagus_sylvatica",
+      "individualId": "support-beech-a",
+      "window": "summer",
+      "modelRevision": 3,
+      "method": "magnified-active-model",
+      "siteId": "compact-forest-core",
+      "events": [],
+      "worldVersion": "ranger-compact-v2",
+      "initialSeed": 20260825,
+      "runId": "f0d17395-ead6-4d7d-8c2b-bdc1f9e17cda",
+      "source": "own-observation",
+      "observationSeconds": 2.766600000000004,
+      "simulationTime": 41.90499999999999,
+      "x": -57.76,
+      "z": 12,
+      "note": "Eigene aktuelle Modellbeobachtung; Erkennungsmerkmale und Unsicherheit separat prüfen."
+    },
+    {
+      "id": "787e0aa2-5c3b-45c9-bfc3-89121f452d15",
+      "taxon": "urtica_dioica",
+      "individualId": "ranger-compact-v2:urtica_dioica:252",
+      "window": "summer",
+      "modelRevision": 3,
+      "method": "magnified-active-model",
+      "siteId": "compact-forest-edge",
+      "events": [],
+      "worldVersion": "ranger-compact-v2",
+      "initialSeed": 20260825,
+      "runId": "f0d17395-ead6-4d7d-8c2b-bdc1f9e17cda",
+      "source": "own-observation",
+      "observationSeconds": 2.783300000000016,
+      "simulationTime": 42.40490000000005,
+      "x": -44.49082550211709,
+      "z": 13.41751062811116,
+      "note": "Eigene aktuelle Modellbeobachtung; Erkennungsmerkmale und Unsicherheit separat prüfen."
+    },
+    {
+      "id": "dfb22633-8cc9-4ebb-876e-dc94b3a10c3f",
+      "taxon": "quercus_robur",
+      "individualId": "support-oak-c",
+      "window": "summer",
+      "modelRevision": 3,
+      "method": "magnified-active-model",
+      "siteId": "compact-forest-edge",
+      "events": [],
+      "worldVersion": "ranger-compact-v2",
+      "initialSeed": 20260825,
+      "runId": "f0d17395-ead6-4d7d-8c2b-bdc1f9e17cda",
+      "source": "own-observation",
+      "observationSeconds": 2.7664999999999993,
+      "simulationTime": 42.97120000000013,
+      "x": -36.69,
+      "z": -9,
+      "note": "Eigene aktuelle Modellbeobachtung; Erkennungsmerkmale und Unsicherheit separat prüfen."
+    },
+    {
+      "id": "3f293c30-0253-411b-b1a6-e827e5a10984",
+      "taxon": "fomes_fomentarius",
+      "individualId": "compact-bracket",
+      "window": "summer",
+      "modelRevision": 3,
+      "method": "magnified-active-model",
+      "siteId": "compact-forest-core",
+      "events": [],
+      "worldVersion": "ranger-compact-v2",
+      "initialSeed": 20260825,
+      "runId": "f0d17395-ead6-4d7d-8c2b-bdc1f9e17cda",
+      "source": "own-observation",
+      "observationSeconds": 3.1665999999999737,
+      "simulationTime": 192.59819999999306,
+      "x": -62,
+      "z": -2.25,
+      "note": "Eigene aktuelle Modellbeobachtung; Erkennungsmerkmale und Unsicherheit separat prüfen."
+    },
+    {
+      "id": "541b6779-ccd5-4ae6-a2a3-636b1c24eac9",
+      "taxon": "halimione_portulacoides",
+      "individualId": "ranger-compact-v2:halimione_portulacoides:320",
+      "window": "summer",
+      "modelRevision": 3,
+      "method": "magnified-active-model",
+      "siteId": "compact-saltmarsh",
+      "events": [],
+      "worldVersion": "ranger-compact-v2",
+      "initialSeed": 20260825,
+      "runId": "f0d17395-ead6-4d7d-8c2b-bdc1f9e17cda",
+      "source": "own-observation",
+      "observationSeconds": 3.0833000000000164,
+      "simulationTime": 193.62729999999317,
+      "x": 33.34154303774828,
+      "z": 9.767397883373295,
+      "note": "Eigene aktuelle Modellbeobachtung; Erkennungsmerkmale und Unsicherheit separat prüfen."
+    }
+  ],
+  "archives": [],
+  "previousEditions": [],
+  "learning": {
+    "activeMission": "K5",
+    "level": "eA",
+    "answers": {
+      "K1": {
+        "reasoning": "Der neue Zweig hat gelappte Blätter und kurze Stiele. Ohne Früchte bestimme ich begründet nur die Eichengruppe.",
+        "recordId": "dfb22633-8cc9-4ebb-876e-dc94b3a10c3f",
+        "features": [
+          "lobed-leaf",
+          "short-petiole"
+        ],
+        "choice": "oak-group",
+        "limit": "no-fruit",
+        "determinations": [
+          {
+            "recordId": "8535ec0d-7d59-48e5-b1c3-ec1a5df31193",
+            "features": [
+              "leaf-whorls",
+              "narrow-leaves"
+            ],
+            "choice": "uncertain",
+            "limit": "no-flowers"
+          },
+          {
+            "recordId": "54043f42-d4ab-498f-b5a1-0c5fb9c707e2",
+            "features": [
+              "smooth-bark",
+              "elliptic-leaf"
+            ],
+            "choice": "fagus_sylvatica",
+            "limit": ""
+          },
+          {
+            "recordId": "787e0aa2-5c3b-45c9-bfc3-89121f452d15",
+            "features": [
+              "opposite-leaves",
+              "serrated-edge"
+            ],
+            "choice": "urtica_dioica",
+            "limit": ""
+          },
+          {
+            "recordId": "dfb22633-8cc9-4ebb-876e-dc94b3a10c3f",
+            "features": [
+              "lobed-leaf",
+              "short-petiole"
+            ],
+            "choice": "oak-group",
+            "limit": "no-fruit"
+          }
+        ]
+      },
+      "K2": {
+        "reasoning": "Mitnutzer wird verändert, Startpool und Tide bleiben gleich. Der Ertrag zeigt die programmierte Konkurrenzregel, keine validierte Naturwirkung.",
+        "caseId": "same-species-competition",
+        "experimentTide": "exposed",
+        "controlId": "6019d827-cf2e-42bb-824c-94b954497be2",
+        "competitorId": "4e949480-3ecc-4643-99a0-953fbf2780ca",
+        "eventIds": [],
+        "claim": "resource-limits-yield",
+        "alternative": "tide-controlled"
+      },
+      "K3": {
+        "reasoning": "Dasselbe Individuum bei gleicher Probenstelle und 5 cm Tiefe; sechs Modellsekunden je stabilem Fenster. Nullfund ist kein Aussterben.",
+        "lowId": "0c7c4410-8002-46d4-b0b5-04619f47ca6d",
+        "highId": "d0eac0e6-9782-4220-886f-cec125f9f179",
+        "filtration": "covered",
+        "access": "exposed",
+        "absence": "not-detected",
+        "depth": "different-space"
+      },
+      "K4": {
+        "reasoning": "Eigener Pilzfund plus bereitgestelltes Bodenschnittmodell. Mikroorganismen mineralisieren; nutzbare Energie fließt und wird entwertet.",
+        "edges": [
+          [
+            "leaf-litter",
+            "earthworm"
+          ],
+          [
+            "earthworm",
+            "saprotrophs"
+          ],
+          [
+            "saprotrophs",
+            "CO2"
+          ],
+          [
+            "CO2",
+            "plant"
+          ]
+        ],
+        "energy": "heat-not-cycle",
+        "mineralization": "microbes-not-worm-alone"
+      },
+      "K5": {
+        "reasoning": "Ich gewichte Anpassungsraum höher als Zugang; reale Baukosten und Wirksamkeit müssen extern geprüft werden.",
+        "weights": {
+          "access": 3,
+          "disturbance": 0,
+          "cost": 0,
+          "coastal-safety": 7
+        },
+        "evidenceLinks": [
+          {
+            "recordId": "541b6779-ccd5-4ae6-a2a3-636b1c24eac9",
+            "criterion": "coastal-safety",
+            "meaning": "Die Keilmelde zeigt den höher liegenden Salzwiesenstandort. Anpassungsraum bei Wegeplanung berücksichtigen; keine reale Schutzleistung aus dem Modell ableitbar."
+          }
+        ],
+        "fact": "Der Pflanzenfund ist eine eigene Modellbeobachtung.",
+        "value": "Zugang und Lebensräume sind mir wichtig.",
+        "norm": "Planung soll Anpassungsraum schützen.",
+        "consequence": "Bündelung könnte Störung begrenzen, Bau kann Boden schädigen.",
+        "option": "raised-boardwalk",
+        "criteria": [
+          "access",
+          "coastal-safety"
+        ],
+        "evidenceIds": [
+          "8535ec0d-7d59-48e5-b1c3-ec1a5df31193",
+          "541b6779-ccd5-4ae6-a2a3-636b1c24eac9"
+        ],
+        "alternative": "seasonal-rest",
+        "uncertainty": "limited-model",
+        "factValue": "facts-and-values-separated"
+      }
+    },
+    "protocols": [
+      {
+        "individualId": "compact-cockle-0",
+        "taxon": "cerastoderma_edule",
+        "siteId": "compact-cockle-probe",
+        "sampleDepth": 5,
+        "present": true,
+        "tidePhase": 0.04999999999997371,
+        "waterLevel": -1.030422606518082,
+        "activity": "resting",
+        "sedimentSurface": -0.5790032866804516,
+        "id": "0c7c4410-8002-46d4-b0b5-04619f47ca6d",
+        "runId": "f0d17395-ead6-4d7d-8c2b-bdc1f9e17cda",
+        "modelRevision": 3,
+        "initialSeed": 20260825,
+        "worldVersion": "ranger-compact-v2",
+        "simulationTime": 125.99999999999685,
+        "window": "summer",
+        "duration": 6,
+        "stableState": true,
+        "source": "model-protocol"
+      },
+      {
+        "individualId": "compact-cockle-1",
+        "taxon": "cerastoderma_edule",
+        "siteId": "compact-cockle-probe",
+        "sampleDepth": 5,
+        "present": true,
+        "tidePhase": 0.5499999999999453,
+        "waterLevel": -0.26957739348189613,
+        "activity": "filtering",
+        "sedimentSurface": -0.5824304687479,
+        "id": "7df53311-403c-44f9-a25e-5f7d2f23e1ab",
+        "runId": "f0d17395-ead6-4d7d-8c2b-bdc1f9e17cda",
+        "modelRevision": 3,
+        "initialSeed": 20260825,
+        "worldVersion": "ranger-compact-v2",
+        "simulationTime": 185.99999999999343,
+        "window": "summer",
+        "duration": 6,
+        "stableState": true,
+        "source": "model-protocol"
+      },
+      {
+        "individualId": "compact-cockle-0",
+        "taxon": "cerastoderma_edule",
+        "siteId": "compact-cockle-probe",
+        "sampleDepth": 5,
+        "present": true,
+        "tidePhase": 0.5999999999999425,
+        "waterLevel": -0.32639320224993607,
+        "activity": "filtering",
+        "sedimentSurface": -0.5790032866804516,
+        "id": "d0eac0e6-9782-4220-886f-cec125f9f179",
+        "runId": "f0d17395-ead6-4d7d-8c2b-bdc1f9e17cda",
+        "modelRevision": 3,
+        "initialSeed": 20260825,
+        "worldVersion": "ranger-compact-v2",
+        "simulationTime": 191.9999999999931,
+        "window": "summer",
+        "duration": 6,
+        "stableState": true,
+        "source": "model-protocol"
+      }
+    ],
+    "measurements": [
+      {
+        "siteId": "compact-forest-core",
+        "x": -54.32327704373523,
+        "z": 8.043468266353608,
+        "relativeLight": 0.18,
+        "moistureClass": "fresh",
+        "plantPatchIds": [
+          "ranger-compact-v2:galium_odoratum:4",
+          "ranger-compact-v2:galium_odoratum:9",
+          "ranger-compact-v2:galium_odoratum:12",
+          "ranger-compact-v2:galium_odoratum:13",
+          "ranger-compact-v2:galium_odoratum:16",
+          "ranger-compact-v2:galium_odoratum:18",
+          "ranger-compact-v2:galium_odoratum:19",
+          "ranger-compact-v2:galium_odoratum:20",
+          "ranger-compact-v2:galium_odoratum:26",
+          "ranger-compact-v2:galium_odoratum:27",
+          "ranger-compact-v2:galium_odoratum:30",
+          "ranger-compact-v2:galium_odoratum:32",
+          "ranger-compact-v2:galium_odoratum:36",
+          "ranger-compact-v2:galium_odoratum:37",
+          "ranger-compact-v2:galium_odoratum:45",
+          "ranger-compact-v2:galium_odoratum:48",
+          "ranger-compact-v2:galium_odoratum:50",
+          "ranger-compact-v2:galium_odoratum:understory-core-bridge-8",
+          "ranger-compact-v2:galium_odoratum:understory-core-bridge-52",
+          "ranger-compact-v2:galium_odoratum:understory-shade-central-22",
+          "ranger-compact-v2:galium_odoratum:understory-shade-central-127",
+          "ranger-compact-v2:galium_odoratum:understory-shade-central-137"
+        ],
+        "source": "model-protocol",
+        "units": {
+          "relativeLight": "fraction of open model light; not lux",
+          "moistureClass": "ordinal; not water concentration"
+        },
+        "id": "54dfb376-b03c-42ef-a171-139fe9543223",
+        "instrument": "relative-light-and-moisture",
+        "runId": "f0d17395-ead6-4d7d-8c2b-bdc1f9e17cda",
+        "modelRevision": 3,
+        "initialSeed": 20260825,
+        "worldVersion": "ranger-compact-v2",
+        "simulationTime": 42.1549,
+        "window": "summer"
+      },
+      {
+        "siteId": "compact-forest-edge",
+        "x": -40.47863381511998,
+        "z": 14.197259088003703,
+        "relativeLight": 0.72,
+        "moistureClass": "fresh-to-moist",
+        "plantPatchIds": [
+          "ranger-compact-v2:urtica_dioica:253",
+          "ranger-compact-v2:urtica_dioica:254",
+          "ranger-compact-v2:urtica_dioica:255",
+          "ranger-compact-v2:urtica_dioica:259",
+          "ranger-compact-v2:urtica_dioica:262",
+          "ranger-compact-v2:urtica_dioica:263",
+          "ranger-compact-v2:urtica_dioica:265",
+          "ranger-compact-v2:urtica_dioica:268",
+          "ranger-compact-v2:urtica_dioica:271",
+          "ranger-compact-v2:urtica_dioica:274",
+          "ranger-compact-v2:urtica_dioica:277",
+          "ranger-compact-v2:urtica_dioica:281"
+        ],
+        "source": "model-protocol",
+        "units": {
+          "relativeLight": "fraction of open model light; not lux",
+          "moistureClass": "ordinal; not water concentration"
+        },
+        "id": "a6007e8f-0d13-4db0-a44c-f0153b8d33f0",
+        "instrument": "relative-light-and-moisture",
+        "runId": "f0d17395-ead6-4d7d-8c2b-bdc1f9e17cda",
+        "modelRevision": 3,
+        "initialSeed": 20260825,
+        "worldVersion": "ranger-compact-v2",
+        "simulationTime": 42.653700000000086,
+        "window": "summer"
+      }
+    ],
+    "samples": [
+      {
+        "id": "39f7dde8-1832-4636-90f4-d4939930db7c",
+        "x": 63,
+        "z": -12,
+        "width": 0.9,
+        "depth": 0.3,
+        "areaM2": 0.27,
+        "sedimentDepthCm": 5,
+        "rule": "present living cockles; same ID counted once",
+        "individualIds": [
+          "compact-cockle-0",
+          "compact-cockle-1",
+          "compact-cockle-2",
+          "compact-cockle-3",
+          "compact-cockle-4"
+        ],
+        "count": 5,
+        "initialSeed": 20260825,
+        "worldVersion": "ranger-compact-v2",
+        "simulationTime": 192.2828999999931,
+        "source": "model-protocol",
+        "window": "summer",
+        "quadratId": "Q1",
+        "runId": "f0d17395-ead6-4d7d-8c2b-bdc1f9e17cda",
+        "modelRevision": 3
+      },
+      {
+        "id": "c6b9b767-2476-473e-bb4a-7452e7bbd7e3",
+        "x": 63,
+        "z": -11.7,
+        "width": 0.9,
+        "depth": 0.3,
+        "areaM2": 0.27,
+        "sedimentDepthCm": 5,
+        "rule": "present living cockles; same ID counted once",
+        "individualIds": [
+          "compact-cockle-5",
+          "compact-cockle-6",
+          "compact-cockle-7",
+          "compact-cockle-8",
+          "compact-cockle-9"
+        ],
+        "count": 5,
+        "initialSeed": 20260825,
+        "worldVersion": "ranger-compact-v2",
+        "simulationTime": 192.2828999999931,
+        "source": "model-protocol",
+        "window": "summer",
+        "quadratId": "Q2",
+        "runId": "f0d17395-ead6-4d7d-8c2b-bdc1f9e17cda",
+        "modelRevision": 3
+      },
+      {
+        "id": "2768b6fd-5f93-4b3b-9759-b934b6ec46ac",
+        "x": 66,
+        "z": -12,
+        "width": 0.9,
+        "depth": 0.3,
+        "areaM2": 0.27,
+        "sedimentDepthCm": 5,
+        "rule": "same method; valid zero find",
+        "individualIds": [],
+        "count": 0,
+        "initialSeed": 20260825,
+        "worldVersion": "ranger-compact-v2",
+        "simulationTime": 192.2828999999931,
+        "source": "model-protocol",
+        "window": "summer",
+        "quadratId": "Q0",
+        "runId": "f0d17395-ead6-4d7d-8c2b-bdc1f9e17cda",
+        "modelRevision": 3
+      }
+    ],
+    "experiments": [
+      {
+        "id": "8b22a72e-1af5-4b78-8b67-9817c371f84d",
+        "source": "controlled-model",
+        "parameters": {
+          "competitor": false,
+          "intraspecific": false,
+          "tide": "exposed",
+          "seed": 20260825,
+          "initial": 12
+        },
+        "result": {
+          "source": "controlled-model",
+          "seed": 20260825,
+          "initial": 12,
+          "competitor": false,
+          "intraspecific": false,
+          "tide": "exposed",
+          "resource": "shared-mussels",
+          "resourceSizes": "20–40 mm mussels",
+          "units": "one encounter step; synthetic count",
+          "rows": [
+            {
+              "t": 0,
+              "remaining": 11,
+              "focal": 1,
+              "other": 0
+            },
+            {
+              "t": 1,
+              "remaining": 10,
+              "focal": 2,
+              "other": 0
+            },
+            {
+              "t": 2,
+              "remaining": 9,
+              "focal": 3,
+              "other": 0
+            },
+            {
+              "t": 3,
+              "remaining": 8,
+              "focal": 4,
+              "other": 0
+            },
+            {
+              "t": 4,
+              "remaining": 7,
+              "focal": 5,
+              "other": 0
+            },
+            {
+              "t": 5,
+              "remaining": 6,
+              "focal": 6,
+              "other": 0
+            },
+            {
+              "t": 6,
+              "remaining": 5,
+              "focal": 7,
+              "other": 0
+            },
+            {
+              "t": 7,
+              "remaining": 4,
+              "focal": 8,
+              "other": 0
+            },
+            {
+              "t": 8,
+              "remaining": 3,
+              "focal": 9,
+              "other": 0
+            },
+            {
+              "t": 9,
+              "remaining": 2,
+              "focal": 10,
+              "other": 0
+            },
+            {
+              "t": 10,
+              "remaining": 1,
+              "focal": 11,
+              "other": 0
+            },
+            {
+              "t": 11,
+              "remaining": 0,
+              "focal": 12,
+              "other": 0
+            }
+          ],
+          "yield": 12,
+          "competitorYield": 0,
+          "remaining": 0,
+          "limit": "Designed exploitative-competition rule; not empirical validation or a local rate estimate"
+        },
+        "runId": "f0d17395-ead6-4d7d-8c2b-bdc1f9e17cda",
+        "modelRevision": 3,
+        "initialSeed": 20260825,
+        "worldVersion": "ranger-compact-v2",
+        "simulationTime": 43.05460000000016,
+        "window": "summer"
+      },
+      {
+        "id": "c244426b-2c43-4cad-8e9d-aab460c48ad5",
+        "source": "controlled-model",
+        "parameters": {
+          "competitor": true,
+          "intraspecific": false,
+          "tide": "exposed",
+          "seed": 20260825,
+          "initial": 12
+        },
+        "result": {
+          "source": "controlled-model",
+          "seed": 20260825,
+          "initial": 12,
+          "competitor": true,
+          "intraspecific": false,
+          "tide": "exposed",
+          "resource": "shared-mussels",
+          "resourceSizes": "20–40 mm mussels",
+          "units": "one encounter step; synthetic count",
+          "rows": [
+            {
+              "t": 0,
+              "remaining": 10,
+              "focal": 1,
+              "other": 1
+            },
+            {
+              "t": 1,
+              "remaining": 8,
+              "focal": 2,
+              "other": 2
+            },
+            {
+              "t": 2,
+              "remaining": 6,
+              "focal": 3,
+              "other": 3
+            },
+            {
+              "t": 3,
+              "remaining": 4,
+              "focal": 4,
+              "other": 4
+            },
+            {
+              "t": 4,
+              "remaining": 2,
+              "focal": 5,
+              "other": 5
+            },
+            {
+              "t": 5,
+              "remaining": 0,
+              "focal": 6,
+              "other": 6
+            },
+            {
+              "t": 6,
+              "remaining": 0,
+              "focal": 6,
+              "other": 6
+            },
+            {
+              "t": 7,
+              "remaining": 0,
+              "focal": 6,
+              "other": 6
+            },
+            {
+              "t": 8,
+              "remaining": 0,
+              "focal": 6,
+              "other": 6
+            },
+            {
+              "t": 9,
+              "remaining": 0,
+              "focal": 6,
+              "other": 6
+            },
+            {
+              "t": 10,
+              "remaining": 0,
+              "focal": 6,
+              "other": 6
+            },
+            {
+              "t": 11,
+              "remaining": 0,
+              "focal": 6,
+              "other": 6
+            }
+          ],
+          "yield": 6,
+          "competitorYield": 6,
+          "remaining": 0,
+          "limit": "Designed exploitative-competition rule; not empirical validation or a local rate estimate"
+        },
+        "runId": "f0d17395-ead6-4d7d-8c2b-bdc1f9e17cda",
+        "modelRevision": 3,
+        "initialSeed": 20260825,
+        "worldVersion": "ranger-compact-v2",
+        "simulationTime": 43.05460000000016,
+        "window": "summer"
+      },
+      {
+        "id": "6019d827-cf2e-42bb-824c-94b954497be2",
+        "source": "controlled-model",
+        "parameters": {
+          "competitor": false,
+          "intraspecific": true,
+          "tide": "exposed",
+          "seed": 20260825,
+          "initial": 12
+        },
+        "result": {
+          "source": "controlled-model",
+          "seed": 20260825,
+          "initial": 12,
+          "competitor": false,
+          "intraspecific": true,
+          "tide": "exposed",
+          "resource": "aphid-colony",
+          "resourceSizes": "model aphids",
+          "units": "one encounter step; synthetic count",
+          "rows": [
+            {
+              "t": 0,
+              "remaining": 11,
+              "focal": 1,
+              "other": 0
+            },
+            {
+              "t": 1,
+              "remaining": 10,
+              "focal": 2,
+              "other": 0
+            },
+            {
+              "t": 2,
+              "remaining": 9,
+              "focal": 3,
+              "other": 0
+            },
+            {
+              "t": 3,
+              "remaining": 8,
+              "focal": 4,
+              "other": 0
+            },
+            {
+              "t": 4,
+              "remaining": 7,
+              "focal": 5,
+              "other": 0
+            },
+            {
+              "t": 5,
+              "remaining": 6,
+              "focal": 6,
+              "other": 0
+            },
+            {
+              "t": 6,
+              "remaining": 5,
+              "focal": 7,
+              "other": 0
+            },
+            {
+              "t": 7,
+              "remaining": 4,
+              "focal": 8,
+              "other": 0
+            },
+            {
+              "t": 8,
+              "remaining": 3,
+              "focal": 9,
+              "other": 0
+            },
+            {
+              "t": 9,
+              "remaining": 2,
+              "focal": 10,
+              "other": 0
+            },
+            {
+              "t": 10,
+              "remaining": 1,
+              "focal": 11,
+              "other": 0
+            },
+            {
+              "t": 11,
+              "remaining": 0,
+              "focal": 12,
+              "other": 0
+            }
+          ],
+          "yield": 12,
+          "competitorYield": 0,
+          "remaining": 0,
+          "limit": "Designed exploitative-competition rule; not empirical validation or a local rate estimate"
+        },
+        "runId": "f0d17395-ead6-4d7d-8c2b-bdc1f9e17cda",
+        "modelRevision": 3,
+        "initialSeed": 20260825,
+        "worldVersion": "ranger-compact-v2",
+        "simulationTime": 43.08800000000016,
+        "window": "summer"
+      },
+      {
+        "id": "4e949480-3ecc-4643-99a0-953fbf2780ca",
+        "source": "controlled-model",
+        "parameters": {
+          "competitor": true,
+          "intraspecific": true,
+          "tide": "exposed",
+          "seed": 20260825,
+          "initial": 12
+        },
+        "result": {
+          "source": "controlled-model",
+          "seed": 20260825,
+          "initial": 12,
+          "competitor": true,
+          "intraspecific": true,
+          "tide": "exposed",
+          "resource": "aphid-colony",
+          "resourceSizes": "model aphids",
+          "units": "one encounter step; synthetic count",
+          "rows": [
+            {
+              "t": 0,
+              "remaining": 10,
+              "focal": 1,
+              "other": 1
+            },
+            {
+              "t": 1,
+              "remaining": 8,
+              "focal": 2,
+              "other": 2
+            },
+            {
+              "t": 2,
+              "remaining": 6,
+              "focal": 3,
+              "other": 3
+            },
+            {
+              "t": 3,
+              "remaining": 4,
+              "focal": 4,
+              "other": 4
+            },
+            {
+              "t": 4,
+              "remaining": 2,
+              "focal": 5,
+              "other": 5
+            },
+            {
+              "t": 5,
+              "remaining": 0,
+              "focal": 6,
+              "other": 6
+            },
+            {
+              "t": 6,
+              "remaining": 0,
+              "focal": 6,
+              "other": 6
+            },
+            {
+              "t": 7,
+              "remaining": 0,
+              "focal": 6,
+              "other": 6
+            },
+            {
+              "t": 8,
+              "remaining": 0,
+              "focal": 6,
+              "other": 6
+            },
+            {
+              "t": 9,
+              "remaining": 0,
+              "focal": 6,
+              "other": 6
+            },
+            {
+              "t": 10,
+              "remaining": 0,
+              "focal": 6,
+              "other": 6
+            },
+            {
+              "t": 11,
+              "remaining": 0,
+              "focal": 6,
+              "other": 6
+            }
+          ],
+          "yield": 6,
+          "competitorYield": 6,
+          "remaining": 0,
+          "limit": "Designed exploitative-competition rule; not empirical validation or a local rate estimate"
+        },
+        "runId": "f0d17395-ead6-4d7d-8c2b-bdc1f9e17cda",
+        "modelRevision": 3,
+        "initialSeed": 20260825,
+        "worldVersion": "ranger-compact-v2",
+        "simulationTime": 43.08800000000016,
+        "window": "summer"
+      }
+    ],
+    "drafts": {
+      "K1": {
+        "reasoning": "Der neue Zweig hat gelappte Blätter und kurze Stiele. Ohne Früchte bestimme ich begründet nur die Eichengruppe.",
+        "recordId": "dfb22633-8cc9-4ebb-876e-dc94b3a10c3f",
+        "features": [
+          "lobed-leaf",
+          "short-petiole"
+        ],
+        "choice": "oak-group",
+        "limit": "no-fruit",
+        "determinations": [
+          {
+            "recordId": "8535ec0d-7d59-48e5-b1c3-ec1a5df31193",
+            "features": [
+              "leaf-whorls",
+              "narrow-leaves"
+            ],
+            "choice": "uncertain",
+            "limit": "no-flowers"
+          },
+          {
+            "recordId": "54043f42-d4ab-498f-b5a1-0c5fb9c707e2",
+            "features": [
+              "smooth-bark",
+              "elliptic-leaf"
+            ],
+            "choice": "fagus_sylvatica",
+            "limit": ""
+          },
+          {
+            "recordId": "787e0aa2-5c3b-45c9-bfc3-89121f452d15",
+            "features": [
+              "opposite-leaves",
+              "serrated-edge"
+            ],
+            "choice": "urtica_dioica",
+            "limit": ""
+          },
+          {
+            "recordId": "dfb22633-8cc9-4ebb-876e-dc94b3a10c3f",
+            "features": [
+              "lobed-leaf",
+              "short-petiole"
+            ],
+            "choice": "oak-group",
+            "limit": "no-fruit"
+          }
+        ]
+      },
+      "K2": {
+        "reasoning": "Mitnutzer wird verändert, Startpool und Tide bleiben gleich. Der Ertrag zeigt die programmierte Konkurrenzregel, keine validierte Naturwirkung.",
+        "caseId": "same-species-competition",
+        "experimentTide": "exposed",
+        "controlId": "6019d827-cf2e-42bb-824c-94b954497be2",
+        "competitorId": "4e949480-3ecc-4643-99a0-953fbf2780ca",
+        "eventIds": [],
+        "claim": "resource-limits-yield",
+        "alternative": "tide-controlled"
+      },
+      "K3": {
+        "reasoning": "Dasselbe Individuum bei gleicher Probenstelle und 5 cm Tiefe; sechs Modellsekunden je stabilem Fenster. Nullfund ist kein Aussterben.",
+        "lowId": "0c7c4410-8002-46d4-b0b5-04619f47ca6d",
+        "highId": "d0eac0e6-9782-4220-886f-cec125f9f179",
+        "filtration": "covered",
+        "access": "exposed",
+        "absence": "not-detected",
+        "depth": "different-space"
+      },
+      "K4": {
+        "reasoning": "Eigener Pilzfund plus bereitgestelltes Bodenschnittmodell. Mikroorganismen mineralisieren; nutzbare Energie fließt und wird entwertet.",
+        "edges": [
+          [
+            "leaf-litter",
+            "earthworm"
+          ],
+          [
+            "earthworm",
+            "saprotrophs"
+          ],
+          [
+            "saprotrophs",
+            "CO2"
+          ],
+          [
+            "CO2",
+            "plant"
+          ]
+        ],
+        "energy": "heat-not-cycle",
+        "mineralization": "microbes-not-worm-alone"
+      },
+      "K5": {
+        "reasoning": "Ich gewichte Anpassungsraum höher als Zugang; reale Baukosten und Wirksamkeit müssen extern geprüft werden.",
+        "weights": {
+          "access": 3,
+          "disturbance": 0,
+          "cost": 0,
+          "coastal-safety": 7
+        },
+        "evidenceLinks": [
+          {
+            "recordId": "541b6779-ccd5-4ae6-a2a3-636b1c24eac9",
+            "criterion": "coastal-safety",
+            "meaning": "Die Keilmelde zeigt den höher liegenden Salzwiesenstandort. Anpassungsraum bei Wegeplanung berücksichtigen; keine reale Schutzleistung aus dem Modell ableitbar."
+          }
+        ],
+        "fact": "Der Pflanzenfund ist eine eigene Modellbeobachtung.",
+        "value": "Zugang und Lebensräume sind mir wichtig.",
+        "norm": "Planung soll Anpassungsraum schützen.",
+        "consequence": "Bündelung könnte Störung begrenzen, Bau kann Boden schädigen.",
+        "option": "raised-boardwalk",
+        "criteria": [
+          "access",
+          "coastal-safety"
+        ],
+        "evidenceIds": [
+          "8535ec0d-7d59-48e5-b1c3-ec1a5df31193",
+          "541b6779-ccd5-4ae6-a2a3-636b1c24eac9"
+        ],
+        "alternative": "seasonal-rest",
+        "uncertainty": "limited-model",
+        "factValue": "facts-and-values-separated"
+      }
+    },
+    "perspectives": [
+      {
+        "id": "d3705eed-c867-46d3-8df1-967c2e786962",
+        "speakerId": "ranger",
+        "source": "model-dialogue",
+        "x": -22.297890806036296,
+        "z": 1.7879810981791544,
+        "runId": "f0d17395-ead6-4d7d-8c2b-bdc1f9e17cda",
+        "modelRevision": 3,
+        "initialSeed": 20260825,
+        "worldVersion": "ranger-compact-v2",
+        "simulationTime": 192.87979999999308,
+        "window": "summer"
+      },
+      {
+        "id": "3586841c-4cdd-41db-9f6f-fab82f00bd29",
+        "speakerId": "local",
+        "source": "model-dialogue",
+        "x": -13.915771299503223,
+        "z": -5.622195640273663,
+        "runId": "f0d17395-ead6-4d7d-8c2b-bdc1f9e17cda",
+        "modelRevision": 3,
+        "initialSeed": 20260825,
+        "worldVersion": "ranger-compact-v2",
+        "simulationTime": 193.1288999999931,
+        "window": "summer"
+      },
+      {
+        "id": "31d62ee4-4584-4738-89ef-4393041f239c",
+        "speakerId": "coastal",
+        "source": "model-dialogue",
+        "x": -3.328583567115688,
+        "z": 17.974945751920576,
+        "runId": "f0d17395-ead6-4d7d-8c2b-bdc1f9e17cda",
+        "modelRevision": 3,
+        "initialSeed": 20260825,
+        "worldVersion": "ranger-compact-v2",
+        "simulationTime": 193.37899999999317,
+        "window": "summer"
+      }
+    ]
+  },
+  "exportedAt": "2026-10-23T05:15:35.471Z"
+}

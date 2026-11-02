@@ -1,0 +1,15 @@
+PASS 36 explicit contracts; 36 active curated entries, three biological zones
+PASS short direct route; all main/shortcut stations walkable with continuous shared height
+PASS no overlapping deck faces, including the two actual shortcut junctions
+PASS actual render deck has finite UVs, valid triangle indices/areas and upward normals
+PASS keyboard/touch share normal/brisk/observing action speeds without changing old defaults
+PASS real observation clock: sparse frames, target/run changes and interruptions
+PASS fixed plants across seeds and graphics; no unsupported resting/landing after support removal
+PASS atomic saves, invalid imports and quota leave old compact and legacy keys intact
+PASS corrupt/blocked storage never silently overwrites historical data
+PASS out-of-core archive data/answers/IDs survive, no new mission credit
+PASS new active GLB obeys metre/rig contract, four independent feet and floor origin
+PASS archived M3 uses the same strict comparison; contradictions reject atomically, short data remain
+PASS solid trunks and buildings block evidence, including targets immediately behind bark
+PASS actual animated mesh: four stance contacts, flight bill points forward and landing returns feet to bark
+{"passed":14,"metrics":{"width":160,"depth":100,"areaHa":1.6,"mainMeters":362.2102529662271,"shortcutMeters":29.145962247263665,"outlookMeters":10.045360768162785,"walkSeconds":226.3814081038919,"shortcutSeconds":18.21622640453979,"maxSlope":0.15203972178347044}}

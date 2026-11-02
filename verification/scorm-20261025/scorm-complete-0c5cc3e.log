@@ -1,0 +1,19 @@
+[2m[WebServer] [22m(node:220264) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[2m[WebServer] [22m(Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 8 tests using 1 worker
+
+(node:220281) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:220281) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [chromium] › tools/scorm/tests/ranger.spec.js:15:79 › http embedded: real ZIP, API discovery, resources, finish (7.5s)
+  ✓  2 [chromium] › tools/scorm/tests/ranger.spec.js:15:79 › http popup: real ZIP, API discovery, resources, finish (6.9s)
+  ✓  3 [chromium] › tools/scorm/tests/ranger.spec.js:15:79 › https embedded: real ZIP, API discovery, resources, finish (7.0s)
+  ✓  4 [chromium] › tools/scorm/tests/ranger.spec.js:15:79 › https popup: real ZIP, API discovery, resources, finish (6.9s)
+  ✓  5 [chromium] › tools/scorm/tests/ranger.spec.js:23:1 › Missing API leaves actual Ranger usable (7.4s)
+  ✓  6 [chromium] › tools/scorm/tests/ranger.spec.js:25:1 › Volatile K1–K5, model memory, no persistent access; reload/restart empty (1.8m)
+  ✓  7 [chromium] › tools/scorm/tests/ranger.spec.js:65:1 › Tablet touch, rotation, scroll and actual landscape (17.8s)
+  ✓  8 [chromium] › tools/scorm/tests/ranger.spec.js:70:1 › Visible coastal interaction in the actual SCO retains finite prey and labelled model time (13.6s)
+
+  8 passed (2.9m)

@@ -1,0 +1,33 @@
+{
+  "scope": "Native extension restoration and a separate public retry-button restoration in the same run, using actual browser context-loss behavior; no extension mocks or game-state injection.",
+  "before": {
+    "runId": "1bc308fe-821a-4468-8615-1f375c5fb3b6",
+    "count": "1",
+    "savedFieldbookBytes": 910,
+    "savedFieldbookSHA256": "d016aabc3d16f54e68d21847803d3694320b58102edc038a2c2b70c9f4622fdb"
+  },
+  "nativeRestore": {
+    "passed": true,
+    "runId": "1bc308fe-821a-4468-8615-1f375c5fb3b6",
+    "count": "1",
+    "storedBytesUnchanged": true,
+    "image": "17-native-context-restored.png"
+  },
+  "uiRestore": {
+    "passed": true,
+    "beforeRunId": "1bc308fe-821a-4468-8615-1f375c5fb3b6",
+    "lostContext": {
+      "contextLost": true,
+      "retryExtensionAvailable": false
+    },
+    "afterRunId": "1bc308fe-821a-4468-8615-1f375c5fb3b6",
+    "count": "1",
+    "storedBytesUnchanged": true,
+    "beforeTimeOrigin": 1792903018798.1,
+    "afterNavigation": {
+      "timeOrigin": 1792903018798.1,
+      "navigationType": "reload"
+    },
+    "image": "19-ui-retry-restored.png"
+  }
+}

@@ -1,0 +1,820 @@
+[
+  {
+    "taxon": "fagus_sylvatica",
+    "name": "Rotbuche – Fagus sylvatica",
+    "stage": "adult / vorhandenes Katalogstadium",
+    "before": "Geschlossene polygonale Kronenkörper, einfache elliptische Nahblätter.",
+    "implemented": "Aufgelöste Blattgruppen mit eigenen elliptischen Blattkarten; kleinere Kronenkerne, Blattrippe, Rindenzeichnung.",
+    "diagnostics": "Glatte graue Rinde, elliptische weitgehend ganzrandige Blätter; Detailknospen/Früchte nur saisonal",
+    "changed": "Blatt-/Kronengeometrie; Rinde/Blattmaterial",
+    "animation": "Unverändert; keine zusätzliche Windbiologie.",
+    "limits": "Gerade Stammgrundformen und wiederholte Kronengruppen bleiben erkennbar.",
+    "status": "BESTANDEN",
+    "statusScope": "Tatsächlich gerenderte Nahansicht visuell geprüft: beschriebene Änderung sichtbar, vorhandene diagnostische Grundmerkmale erhalten. Weltkontext aufgenommen; kleine oder verdeckte Individuen dort nicht pauschal als erkennbar abgenommen. Keine vollständige Realismus-/Animationsfreigabe.",
+    "screenshot": {
+      "world": "gallery-final/fagus_sylvatica-world.png",
+      "detail": "gallery-final/fagus_sylvatica-detail.png",
+      "individual": "support-beech-a",
+      "stage": "adult",
+      "modelTime": "4.978"
+    },
+    "realismGoal": "TEILWEISE ERREICHT – siehe konkrete Grenzen; Materialüberarbeitung ist kein anatomischer Neubau."
+  },
+  {
+    "taxon": "quercus_robur",
+    "name": "Stieleiche – Quercus robur",
+    "stage": "adult / vorhandenes Katalogstadium",
+    "before": "Polygonkrone und einfache gelappte Nahblätter.",
+    "implemented": "Eigene gelappte Blattkarten, feinere organische Kronenränder; Mittelrippen der Nahblätter.",
+    "diagnostics": "Gelappte Blätter, kurze Blattstiele, lang gestielte Eicheln bei Reife",
+    "changed": "Blatt-/Kronengeometrie; Rinde/Blattmaterial",
+    "animation": "Herbstfenster unverändert.",
+    "limits": "Verzweigung bleibt vereinfacht; keine vollständige Einzelbaumrekonstruktion.",
+    "status": "BESTANDEN",
+    "statusScope": "Tatsächlich gerenderte Nahansicht visuell geprüft: beschriebene Änderung sichtbar, vorhandene diagnostische Grundmerkmale erhalten. Weltkontext aufgenommen; kleine oder verdeckte Individuen dort nicht pauschal als erkennbar abgenommen. Keine vollständige Realismus-/Animationsfreigabe.",
+    "screenshot": {
+      "world": "gallery-final/quercus_robur-world.png",
+      "detail": "gallery-final/quercus_robur-detail.png",
+      "individual": "support-oak-c",
+      "stage": "adult",
+      "modelTime": "3.312"
+    },
+    "realismGoal": "TEILWEISE ERREICHT – siehe konkrete Grenzen; Materialüberarbeitung ist kein anatomischer Neubau."
+  },
+  {
+    "taxon": "galium_odoratum",
+    "name": "Waldmeister – Galium odoratum",
+    "stage": "adult / vorhandenes Katalogstadium",
+    "before": "Flache einfache Quirlblätter.",
+    "implemented": "Feiner gegliederte, gewölbte Quirlblätter mit Mittelrippe und feinem Oberflächenkorn.",
+    "diagnostics": "Blattquirle; weiße vierzählige Blüten nur im passenden Frühjahrsfenster",
+    "changed": "Blattgeometrie und Material",
+    "animation": "Unverändert.",
+    "limits": "Niedrige Polygonzahl; keine sichere natürliche Labkraut-Feinbestimmung.",
+    "status": "BESTANDEN",
+    "statusScope": "Tatsächlich gerenderte Nahansicht visuell geprüft: beschriebene Änderung sichtbar, vorhandene diagnostische Grundmerkmale erhalten. Weltkontext aufgenommen; kleine oder verdeckte Individuen dort nicht pauschal als erkennbar abgenommen. Keine vollständige Realismus-/Animationsfreigabe.",
+    "screenshot": {
+      "world": "gallery-final/galium_odoratum-world.png",
+      "detail": "gallery-final/galium_odoratum-detail.png",
+      "individual": "ranger-compact-v2:galium_odoratum:0",
+      "stage": "adult",
+      "modelTime": "4.096"
+    },
+    "realismGoal": "TEILWEISE ERREICHT – siehe konkrete Grenzen; Materialüberarbeitung ist kein anatomischer Neubau."
+  },
+  {
+    "taxon": "urtica_dioica",
+    "name": "Große Brennnessel – Urtica dioica s. l.",
+    "stage": "adult / vorhandenes Katalogstadium",
+    "before": "Gegenständige gezähnte Modellblätter.",
+    "implemented": "Feiner gegliederter gesägter Rand, gewölbte Fläche, Mittelrippe; tatsächlicher Fraß erhalten.",
+    "diagnostics": "Gegenständige gesägte Blätter; Brennhaare/Blüten in Detailansicht",
+    "changed": "Blattgeometrie und Material",
+    "animation": "Fraßzustand unverändert.",
+    "limits": "Brennhaare bleiben nur vereinfachte Nahmerkmale; Sammelauflösung bleibt.",
+    "status": "BESTANDEN",
+    "statusScope": "Tatsächlich gerenderte Nahansicht visuell geprüft: beschriebene Änderung sichtbar, vorhandene diagnostische Grundmerkmale erhalten. Weltkontext aufgenommen; kleine oder verdeckte Individuen dort nicht pauschal als erkennbar abgenommen. Keine vollständige Realismus-/Animationsfreigabe.",
+    "screenshot": {
+      "world": "gallery-final/urtica_dioica-world.png",
+      "detail": "gallery-final/urtica_dioica-detail.png",
+      "individual": "ranger-compact-v2:urtica_dioica:252",
+      "stage": "adult",
+      "modelTime": "7.296"
+    },
+    "realismGoal": "TEILWEISE ERREICHT – siehe konkrete Grenzen; Materialüberarbeitung ist kein anatomischer Neubau."
+  },
+  {
+    "taxon": "rubus_fruticosus",
+    "name": "Brombeeren – Rubus fruticosus agg.",
+    "stage": "adult / vorhandenes Katalogstadium",
+    "before": "Bogige Ruten mit einfachen zusammengesetzten Blättern/Fruchtkugeln.",
+    "implemented": "Gewölbte Blätter mit Mittelrippe, glattere Fruchtteile und eigene Blattoberfläche.",
+    "diagnostics": "Bogige bestachelte Ruten, zusammengesetzte gesägte Blätter, Sammelsteinfrüchte",
+    "changed": "Gemeinsame Blatt-/Fruchtgeometrie und Material",
+    "animation": "Saison-/Ressourcenzustände unverändert.",
+    "limits": "Ruten sind weiter Segmente; keine Kleinartenbestimmung.",
+    "status": "BESTANDEN",
+    "statusScope": "Tatsächlich gerenderte Nahansicht visuell geprüft: beschriebene Änderung sichtbar, vorhandene diagnostische Grundmerkmale erhalten. Weltkontext aufgenommen; kleine oder verdeckte Individuen dort nicht pauschal als erkennbar abgenommen. Keine vollständige Realismus-/Animationsfreigabe.",
+    "screenshot": {
+      "world": "gallery-final/rubus_fruticosus-world.png",
+      "detail": "gallery-final/rubus_fruticosus-detail.png",
+      "individual": "ranger-compact-v2:rubus_fruticosus:451",
+      "stage": "adult",
+      "modelTime": "4.488"
+    },
+    "realismGoal": "TEILWEISE ERREICHT – siehe konkrete Grenzen; Materialüberarbeitung ist kein anatomischer Neubau."
+  },
+  {
+    "taxon": "trifolium_pratense",
+    "name": "Rotklee – Trifolium pratense",
+    "stage": "adult / vorhandenes Katalogstadium",
+    "before": "Drei einfache Blättchen, geometrischer Blütenkopf.",
+    "implemented": "Gewölbte Blättchen mit Mittelrippe, glattere Einzelblüten, feine Oberfläche.",
+    "diagnostics": "Dreiteilige Blätter, rötlicher Blütenkopf aus Einzelblüten",
+    "changed": "Gemeinsame Blatt-/Blütengeometrie und Material",
+    "animation": "Bestäubungskontakte unverändert.",
+    "limits": "Blütenkrone bleibt stilisiert; keine fotorealistische Blütenstandsrekonstruktion.",
+    "status": "BESTANDEN",
+    "statusScope": "Tatsächlich gerenderte Nahansicht visuell geprüft: beschriebene Änderung sichtbar, vorhandene diagnostische Grundmerkmale erhalten. Weltkontext aufgenommen; kleine oder verdeckte Individuen dort nicht pauschal als erkennbar abgenommen. Keine vollständige Realismus-/Animationsfreigabe.",
+    "screenshot": {
+      "world": "gallery-final/trifolium_pratense-world.png",
+      "detail": "gallery-final/trifolium_pratense-detail.png",
+      "individual": "ranger-compact-v2:trifolium_pratense:454",
+      "stage": "adult",
+      "modelTime": "9.209"
+    },
+    "realismGoal": "TEILWEISE ERREICHT – siehe konkrete Grenzen; Materialüberarbeitung ist kein anatomischer Neubau."
+  },
+  {
+    "taxon": "fomes_fomentarius",
+    "name": "Zunderschwamm – Fomes fomentarius",
+    "stage": "adult / vorhandenes Katalogstadium",
+    "before": "Halbkörper mit sieben Wülsten und Porenpunkten.",
+    "implemented": "Feine Oberflächenzeichnung und abgestimmte Rauheit auf vorhandener Konsolenform.",
+    "diagnostics": "Hufförmige graue Konsole; Poren auf Unterseite",
+    "changed": "Material; Grundgeometrie unverändert",
+    "animation": "Unverändert.",
+    "limits": "Ansatz und Konsolenform bleiben einfach; kein neues Pilzmodell behauptet.",
+    "status": "BESTANDEN",
+    "statusScope": "Tatsächlich gerenderte Nahansicht visuell geprüft: beschriebene Änderung sichtbar, vorhandene diagnostische Grundmerkmale erhalten. Weltkontext aufgenommen; kleine oder verdeckte Individuen dort nicht pauschal als erkennbar abgenommen. Keine vollständige Realismus-/Animationsfreigabe.",
+    "screenshot": {
+      "world": "gallery-final/fomes_fomentarius-world.png",
+      "detail": "gallery-final/fomes_fomentarius-detail.png",
+      "individual": "compact-bracket",
+      "stage": "fruiting-body",
+      "modelTime": "11.216"
+    },
+    "realismGoal": "TEILWEISE ERREICHT – siehe konkrete Grenzen; Materialüberarbeitung ist kein anatomischer Neubau."
+  },
+  {
+    "taxon": "capreolus_capreolus",
+    "name": "Reh – Capreolus capreolus",
+    "stage": "adult / vorhandenes Katalogstadium",
+    "before": "Vorhandenes spezielles Reh-GLB mit IK.",
+    "implemented": "Dasselbe GLB mit feiner Fellzeichnung und abgestimmter Rauheit.",
+    "diagnostics": "Schlanke Gliedmaßen, große Ohren, dunkle Nase, heller Spiegel, kaum sichtbarer Schwanz",
+    "changed": "Fellmaterial; bestehendes GLB erhalten",
+    "animation": "Bestehender Gang, Stützfüße, Rückzug erhalten.",
+    "limits": "Kein neues Skelett, keine einzelnen Fellhaare; Biomechanik bleibt Entwurfsmodell.",
+    "status": "BESTANDEN",
+    "statusScope": "Tatsächlich gerenderte Nahansicht visuell geprüft: beschriebene Änderung sichtbar, vorhandene diagnostische Grundmerkmale erhalten. Weltkontext aufgenommen; kleine oder verdeckte Individuen dort nicht pauschal als erkennbar abgenommen. Keine vollständige Realismus-/Animationsfreigabe.",
+    "screenshot": {
+      "world": "gallery-final/capreolus_capreolus-world.png",
+      "detail": "gallery-final/capreolus_capreolus-detail.png",
+      "individual": "compact-deer-1",
+      "stage": "adult",
+      "modelTime": "5.273"
+    },
+    "realismGoal": "TEILWEISE ERREICHT – siehe konkrete Grenzen; Materialüberarbeitung ist kein anatomischer Neubau."
+  },
+  {
+    "taxon": "vulpes_vulpes",
+    "name": "Rotfuchs – Vulpes vulpes",
+    "stage": "adult / vorhandenes Katalogstadium",
+    "before": "Vorhandenes spezielles Fuchs-GLB.",
+    "implemented": "Dasselbe GLB mit Felloberfläche und natürlicherer Materialrauheit.",
+    "diagnostics": "Spitze Schnauze/Ohren, buschiger Schwanz, typische Proportionen",
+    "changed": "Fellmaterial; bestehendes GLB erhalten",
+    "animation": "Bestehende Dämmerungs-/Jagdlogik erhalten.",
+    "limits": "Bestehende Gliedmaßenbewegung nicht grundlegend erneuert. Das Weltkontextbild ist teilweise vom HUD beschnitten; keine separate freie Gangsequenz abgenommen. Gerichtete neue Weltansicht zeigt den vollständigen Fuchs im tatsächlichen Weltmaßstab.",
+    "status": "BESTANDEN",
+    "statusScope": "Tatsächlich gerenderte Nahansicht visuell geprüft: beschriebene Änderung sichtbar, vorhandene diagnostische Grundmerkmale erhalten. Weltkontext aufgenommen; kleine oder verdeckte Individuen dort nicht pauschal als erkennbar abgenommen. Keine vollständige Realismus-/Animationsfreigabe.",
+    "screenshot": {
+      "world": "gallery-final/vulpes_vulpes-world.png",
+      "detail": "gallery-final/vulpes_vulpes-detail.png",
+      "individual": "compact-fox",
+      "stage": "adult",
+      "modelTime": "0.588"
+    },
+    "realismGoal": "TEILWEISE ERREICHT – siehe konkrete Grenzen; Materialüberarbeitung ist kein anatomischer Neubau.",
+    "additionalWorld": {
+      "file": "fauna-world/vulpes_vulpes-world.png",
+      "status": "BESTANDEN",
+      "assessment": "Gerichtete neue Weltansicht zeigt den vollständigen Fuchs im tatsächlichen Weltmaßstab."
+    }
+  },
+  {
+    "taxon": "apodemus_sylvaticus",
+    "name": "Waldmaus – Apodemus sylvaticus",
+    "stage": "adult / vorhandenes Katalogstadium",
+    "before": "Zusammengesetzte Körperellipsoide mit langem Schwanz.",
+    "implemented": "Glattere Körperteile, Schnurrhaare, Felloberfläche; kleine Fußhebungen bei tatsächlicher Ortsänderung.",
+    "diagnostics": "Große Augen/Ohren, langer Schwanz; Unterscheidung zu Gelbhalsmaus nicht allein per Silhouette",
+    "changed": "Geometrie, Material und sekundäre Gangbewegung",
+    "animation": "Wegstreckenabhängige Fußhebung; im Stand keine Gehbewegung.",
+    "limits": "Gliedmaßen nicht vollständig gelenkig; kein biologisch kalibriertes Gangmodell. Keine freie natürliche Detailerkennbarkeit abgenommen: In der gerichteten Weltansicht bleibt die kleine Maus in der Krautschicht verdeckt. Die echte Nahansicht wurde geprüft.",
+    "status": "BESTANDEN",
+    "statusScope": "Tatsächlich gerenderte Nahansicht visuell geprüft: beschriebene Änderung sichtbar, vorhandene diagnostische Grundmerkmale erhalten. Weltkontext aufgenommen; kleine oder verdeckte Individuen dort nicht pauschal als erkennbar abgenommen. Keine vollständige Realismus-/Animationsfreigabe.",
+    "screenshot": {
+      "world": "gallery-final/apodemus_sylvaticus-world.png",
+      "detail": "gallery-final/apodemus_sylvaticus-detail.png",
+      "individual": "compact-mouse-0",
+      "stage": "adult",
+      "modelTime": "0.997"
+    },
+    "realismGoal": "TEILWEISE ERREICHT – siehe konkrete Grenzen; Materialüberarbeitung ist kein anatomischer Neubau.",
+    "additionalWorld": {
+      "file": "fauna-world/apodemus_sylvaticus-world.png",
+      "status": "NICHT GEPRÜFT",
+      "assessment": "Keine freie natürliche Detailerkennbarkeit abgenommen: In der gerichteten Weltansicht bleibt die kleine Maus in der Krautschicht verdeckt. Die echte Nahansicht wurde geprüft."
+    }
+  },
+  {
+    "taxon": "dendrocopos_major",
+    "name": "Buntspecht – Dendrocopos major",
+    "stage": "adult / vorhandenes Katalogstadium",
+    "before": "Eigenes Spechtmodell an realen Stützen.",
+    "implemented": "Glattere Körperteile und feinere Gefiederoberfläche bei erhaltener Schulter-/Steißzeichnung.",
+    "diagnostics": "Weiße Schulterfelder, roter Unterschwanz; Alter/Geschlecht festgelegt",
+    "changed": "Körperunterteilung und Material",
+    "animation": "Bestehende Stütz-, Flug- und Landeanimation erhalten.",
+    "limits": "Feder-/Flügelkontur bleibt vereinfacht; keine vollständige Flügelfedermechanik. Die Katalog-Weltaufnahme allein ist kein Sichtbarkeitsbeleg; dafür die gesonderte Spechtsequenz verwenden.",
+    "status": "BESTANDEN",
+    "statusScope": "Tatsächlich gerenderte Nahansicht visuell geprüft: beschriebene Änderung sichtbar, vorhandene diagnostische Grundmerkmale erhalten. Weltkontext aufgenommen; kleine oder verdeckte Individuen dort nicht pauschal als erkennbar abgenommen. Keine vollständige Realismus-/Animationsfreigabe.",
+    "screenshot": {
+      "world": "gallery-final/dendrocopos_major-world.png",
+      "detail": "gallery-final/dendrocopos_major-detail.png",
+      "individual": "compact-woodpecker-1",
+      "stage": "adult",
+      "modelTime": "5.696"
+    },
+    "realismGoal": "TEILWEISE ERREICHT – siehe konkrete Grenzen; Materialüberarbeitung ist kein anatomischer Neubau."
+  },
+  {
+    "taxon": "garrulus_glandarius",
+    "name": "Eichelhäher – Garrulus glandarius",
+    "stage": "adult / vorhandenes Katalogstadium",
+    "before": "Ellipsoidkörper, blau gebänderte Flügelflächen.",
+    "implemented": "Kontinuierlich verjüngter Rumpf, geschichtete Schwungfedern, gefächerter Schwanz, Gefiederoberfläche.",
+    "diagnostics": "Blau-schwarz gezeichnetes Flügelfeld, heller Bürzel, bräunlichrosa Körper",
+    "changed": "Körper-/Federgeometrie und Material",
+    "animation": "Bestehendes Herbstverhalten erhalten.",
+    "limits": "Flugflügel sind weiter vereinfachte Flächen; Federzeichnung keine Naturreferenz. Nur teilweise am Stammrand sichtbar; keine freie natürliche Gesamtansicht abgenommen. Die echte Nahansicht wurde geprüft.",
+    "status": "BESTANDEN",
+    "statusScope": "Tatsächlich gerenderte Nahansicht visuell geprüft: beschriebene Änderung sichtbar, vorhandene diagnostische Grundmerkmale erhalten. Weltkontext aufgenommen; kleine oder verdeckte Individuen dort nicht pauschal als erkennbar abgenommen. Keine vollständige Realismus-/Animationsfreigabe.",
+    "screenshot": {
+      "world": "gallery-final/garrulus_glandarius-world.png",
+      "detail": "gallery-final/garrulus_glandarius-detail.png",
+      "individual": "compact-jay",
+      "stage": "adult",
+      "modelTime": "2.823"
+    },
+    "realismGoal": "TEILWEISE ERREICHT – siehe konkrete Grenzen; Materialüberarbeitung ist kein anatomischer Neubau.",
+    "additionalWorld": {
+      "file": "fauna-world/garrulus_glandarius-world.png",
+      "status": "NICHT GEPRÜFT",
+      "assessment": "Nur teilweise am Stammrand sichtbar; keine freie natürliche Gesamtansicht abgenommen. Die echte Nahansicht wurde geprüft."
+    }
+  },
+  {
+    "taxon": "parus_major",
+    "name": "Kohlmeise – Parus major",
+    "stage": "adult / vorhandenes Katalogstadium",
+    "before": "Ellipsoidkörper mit Wange, Bauch und schwarzem Streifen.",
+    "implemented": "Verjüngter Rumpf, geschichtete Flügel-/Schwanzfedern und feinere Gefiederoberfläche.",
+    "diagnostics": "Schwarzer Kopf, weiße Wangen, gelbe Unterseite/dunkler Streifen",
+    "changed": "Körper-/Federgeometrie und Material",
+    "animation": "Bestehende Bewegung erhalten.",
+    "limits": "Kopf und Brust bleiben vereinfachte Körper; Fernmerkmale können klein sein. In der gerichteten Weltansicht durch Kronenblätter verdeckt; keine freie natürliche Gesamtansicht abgenommen. Die echte Nahansicht wurde geprüft.",
+    "status": "BESTANDEN",
+    "statusScope": "Tatsächlich gerenderte Nahansicht visuell geprüft: beschriebene Änderung sichtbar, vorhandene diagnostische Grundmerkmale erhalten. Weltkontext aufgenommen; kleine oder verdeckte Individuen dort nicht pauschal als erkennbar abgenommen. Keine vollständige Realismus-/Animationsfreigabe.",
+    "screenshot": {
+      "world": "gallery-final/parus_major-world.png",
+      "detail": "gallery-final/parus_major-detail.png",
+      "individual": "compact-tit-0",
+      "stage": "adult",
+      "modelTime": "6.120"
+    },
+    "realismGoal": "TEILWEISE ERREICHT – siehe konkrete Grenzen; Materialüberarbeitung ist kein anatomischer Neubau.",
+    "additionalWorld": {
+      "file": "fauna-world/parus_major-world.png",
+      "status": "NICHT GEPRÜFT",
+      "assessment": "In der gerichteten Weltansicht durch Kronenblätter verdeckt; keine freie natürliche Gesamtansicht abgenommen. Die echte Nahansicht wurde geprüft."
+    }
+  },
+  {
+    "taxon": "bombus_lapidarius",
+    "name": "Steinhummel – Bombus lapidarius",
+    "stage": "adult / vorhandenes Katalogstadium",
+    "before": "Kugelbasierter behaarter Körper, rote Hinterleibsspitze.",
+    "implemented": "Glattere Körperteile, Oberflächenkorn; weniger gleichförmiger Flügelschlag und ruhige tatsächliche Blütenkontakte.",
+    "diagnostics": "Behaarter Körper, rotes Hinterleibsende; ähnliche Arten und Geschlechtsmerkmale beachten",
+    "changed": "Körperunterteilung, Material und Flügelbewegung",
+    "animation": "Flügelschlagkurve, Kontaktphase an echten Blütenzustand gebunden.",
+    "limits": "Behaarung und Flügeladern weiterhin stark vereinfacht.",
+    "status": "BESTANDEN",
+    "statusScope": "Tatsächlich gerenderte Nahansicht visuell geprüft: beschriebene Änderung sichtbar, vorhandene diagnostische Grundmerkmale erhalten. Weltkontext aufgenommen; kleine oder verdeckte Individuen dort nicht pauschal als erkennbar abgenommen. Keine vollständige Realismus-/Animationsfreigabe.",
+    "screenshot": {
+      "world": "gallery-final/bombus_lapidarius-world.png",
+      "detail": "gallery-final/bombus_lapidarius-detail.png",
+      "individual": "compact-bee",
+      "stage": "worker",
+      "modelTime": "9.699"
+    },
+    "realismGoal": "TEILWEISE ERREICHT – siehe konkrete Grenzen; Materialüberarbeitung ist kein anatomischer Neubau."
+  },
+  {
+    "taxon": "aglais_io",
+    "name": "Tagpfauenauge · Falter – Aglais io",
+    "stage": "adult / vorhandenes Katalogstadium",
+    "before": "Elliptische Flügelflächen mit vier Augenflecken.",
+    "implemented": "Geschwungene Vorder-/Hinterflügel mit Adern und vier erhaltenen Augenflecken; Oberflächenkorn.",
+    "diagnostics": "Falter: Augenflecken; Raupe: dunkel/bedornt mit hellen Punkten",
+    "changed": "Flügelgeometrie, Material und Flügelkurve",
+    "animation": "Gekrümmte Flügelschlagkurve; Verhalten unverändert.",
+    "limits": "Keine vollständig artscharfe Flügelschuppenzeichnung.",
+    "status": "BESTANDEN",
+    "statusScope": "Tatsächlich gerenderte Nahansicht visuell geprüft: beschriebene Änderung sichtbar, vorhandene diagnostische Grundmerkmale erhalten. Weltkontext aufgenommen; kleine oder verdeckte Individuen dort nicht pauschal als erkennbar abgenommen. Keine vollständige Realismus-/Animationsfreigabe.",
+    "screenshot": {
+      "world": "gallery-final/aglais_io-world.png",
+      "detail": "gallery-final/aglais_io-detail.png",
+      "individual": "compact-butterfly",
+      "stage": "adult",
+      "modelTime": "10.221"
+    },
+    "realismGoal": "TEILWEISE ERREICHT – siehe konkrete Grenzen; Materialüberarbeitung ist kein anatomischer Neubau."
+  },
+  {
+    "taxon": "coccinella_septempunctata",
+    "name": "Siebenpunkt-Marienkäfer – Coccinella septempunctata",
+    "stage": "adult / vorhandenes Katalogstadium",
+    "before": "Einfacher gewölbter Körper, sieben Punkte.",
+    "implemented": "Glattere Flügeldecken mit Cuticulaoberfläche und kleinen Wegstrecken-Fußhebungen.",
+    "diagnostics": "Rote Flügeldecken mit sieben Flecken und korrekt gestalteter Vorderkörperzeichnung",
+    "changed": "Körperunterteilung, Material und Fußbewegung",
+    "animation": "Bewegt sich nur mit tatsächlicher Ortsänderung.",
+    "limits": "Beine bleiben Segmentformen; sieben Punkte sind weiter vereinfachte Markierungen.",
+    "status": "BESTANDEN",
+    "statusScope": "Tatsächlich gerenderte Nahansicht visuell geprüft: beschriebene Änderung sichtbar, vorhandene diagnostische Grundmerkmale erhalten. Weltkontext aufgenommen; kleine oder verdeckte Individuen dort nicht pauschal als erkennbar abgenommen. Keine vollständige Realismus-/Animationsfreigabe.",
+    "screenshot": {
+      "world": "gallery-final/coccinella_septempunctata-world.png",
+      "detail": "gallery-final/coccinella_septempunctata-detail.png",
+      "individual": "compact-ladybird-0",
+      "stage": "adult",
+      "modelTime": "8.130"
+    },
+    "realismGoal": "TEILWEISE ERREICHT – siehe konkrete Grenzen; Materialüberarbeitung ist kein anatomischer Neubau."
+  },
+  {
+    "taxon": "aphidoidea",
+    "name": "Blattläuse – Aphidoidea, Modellgruppe",
+    "stage": "adult / vorhandenes Katalogstadium",
+    "before": "Einfacher Körper mit sechs Beinen und Siphunculi.",
+    "implemented": "Glattere Körperkontur, Cuticulaoberfläche und kleine Fußhebungen.",
+    "diagnostics": "Kleine Kolonie mit Siphonen; keine ungesicherte Einzelartbenennung",
+    "changed": "Körperunterteilung, Material und Fußbewegung",
+    "animation": "An tatsächliche Ortsänderung gebunden.",
+    "limits": "Artengruppe; keine behauptete Bestimmung einer konkreten Blattlausart.",
+    "status": "BESTANDEN",
+    "statusScope": "Tatsächlich gerenderte Nahansicht visuell geprüft: beschriebene Änderung sichtbar, vorhandene diagnostische Grundmerkmale erhalten. Weltkontext aufgenommen; kleine oder verdeckte Individuen dort nicht pauschal als erkennbar abgenommen. Keine vollständige Realismus-/Animationsfreigabe.",
+    "screenshot": {
+      "world": "gallery-final/aphidoidea-world.png",
+      "detail": "gallery-final/aphidoidea-detail.png",
+      "individual": "compact-aphid-0",
+      "stage": "adult",
+      "modelTime": "8.506"
+    },
+    "realismGoal": "TEILWEISE ERREICHT – siehe konkrete Grenzen; Materialüberarbeitung ist kein anatomischer Neubau."
+  },
+  {
+    "taxon": "lumbricidae",
+    "name": "Regenwurm – Lumbricus-Modell / Lumbricidae",
+    "stage": "adult / vorhandenes Katalogstadium",
+    "before": "Kette einfacher Körpersegmente mit Gürtel.",
+    "implemented": "Glatter unterteilte Segmente und feine Hautoberfläche.",
+    "diagnostics": "Segmentierter Körper; Gürtel bei adultem Modell; Gruppenbestimmung ausreichend",
+    "changed": "Körperunterteilung und Material",
+    "animation": "Bestehende Bewegung und Streueinzug erhalten.",
+    "limits": "Segmentkette bleibt erkennbar; keine neue Peristaltik oder Artbestimmung.",
+    "status": "BESTANDEN",
+    "statusScope": "Tatsächlich gerenderte Nahansicht visuell geprüft: beschriebene Änderung sichtbar, vorhandene diagnostische Grundmerkmale erhalten. Weltkontext aufgenommen; kleine oder verdeckte Individuen dort nicht pauschal als erkennbar abgenommen. Keine vollständige Realismus-/Animationsfreigabe.",
+    "screenshot": {
+      "world": "gallery-final/lumbricidae-world.png",
+      "detail": "gallery-final/lumbricidae-detail.png",
+      "individual": "compact-earthworm",
+      "stage": "adult",
+      "modelTime": "11.704"
+    },
+    "realismGoal": "NICHT ERREICHT: weiterhin deutlich geometrische Grundform; Feinmaterial ersetzt keine organische Neuformung."
+  },
+  {
+    "taxon": "ixodes_ricinus",
+    "name": "Gemeiner Holzbock – Ixodes ricinus",
+    "stage": "adult / vorhandenes Katalogstadium",
+    "before": "Einfacher ovaler Körper mit acht Beinen.",
+    "implemented": "Dorsalschild, kleineres angeschlossenes Capitulum mit Mundwerkzeug; insektenähnliche Kopfkugel und unzutreffende Augen entfernt; feine Cuticulaoberfläche.",
+    "diagnostics": "Adulte/Nymphen acht, Larven sechs Beine; Stufe nicht mischen",
+    "changed": "Geometrie und Material",
+    "animation": "Bestehender Wirtskontakt erhalten.",
+    "limits": "Adultes Weibchen; Feinbestimmung der Mundteile bleibt vereinfacht.",
+    "status": "BESTANDEN",
+    "statusScope": "Tatsächlich gerenderte Nahansicht visuell geprüft: beschriebene Änderung sichtbar, vorhandene diagnostische Grundmerkmale erhalten. Weltkontext aufgenommen; kleine oder verdeckte Individuen dort nicht pauschal als erkennbar abgenommen. Keine vollständige Realismus-/Animationsfreigabe.",
+    "screenshot": {
+      "world": "gallery-final/ixodes_ricinus-world.png",
+      "detail": "gallery-final/ixodes_ricinus-detail.png",
+      "individual": "compact-tick",
+      "stage": "adult-female",
+      "modelTime": "6.560"
+    },
+    "realismGoal": "TEILWEISE ERREICHT – siehe konkrete Grenzen; Materialüberarbeitung ist kein anatomischer Neubau."
+  },
+  {
+    "taxon": "halimione_portulacoides",
+    "name": "Portulak-Keilmelde – Halimione portulacoides (Syn. Atriplex portulacoides)",
+    "stage": "adult / vorhandenes Katalogstadium",
+    "before": "Verzweigter Strauch mit gegenständigen Modellblättern.",
+    "implemented": "Glatter unterteilte fleischige Blätter und feinere Oberfläche auf erhaltenem gegenständigem Strauchwuchs.",
+    "diagnostics": "Silbrige gegenständige fleischige Blätter, verzweigter Zwergstrauch",
+    "changed": "Gemeinsame Blattgeometrie und Material",
+    "animation": "Unverändert.",
+    "limits": "Straucharchitektur bleibt vereinfacht; Überflutungsstandort unverändert.",
+    "status": "BESTANDEN",
+    "statusScope": "Tatsächlich gerenderte Nahansicht visuell geprüft: beschriebene Änderung sichtbar, vorhandene diagnostische Grundmerkmale erhalten. Weltkontext aufgenommen; kleine oder verdeckte Individuen dort nicht pauschal als erkennbar abgenommen. Keine vollständige Realismus-/Animationsfreigabe.",
+    "screenshot": {
+      "world": "gallery-final/halimione_portulacoides-world.png",
+      "detail": "gallery-final/halimione_portulacoides-detail.png",
+      "individual": "ranger-compact-v2:halimione_portulacoides:320",
+      "stage": "adult",
+      "modelTime": "15.252"
+    },
+    "realismGoal": "TEILWEISE ERREICHT – siehe konkrete Grenzen; Materialüberarbeitung ist kein anatomischer Neubau."
+  },
+  {
+    "taxon": "salicornia_europaea",
+    "name": "Queller – Salicornia europaea agg.",
+    "stage": "adult / vorhandenes Katalogstadium",
+    "before": "Gegliederte fleischige Sprosssegmente.",
+    "implemented": "Glattere Segmente und feines Oberflächenkorn bei erhaltener Gliederung.",
+    "diagnostics": "Gegliederte fleischige Sprosse, stark reduzierte Blätter",
+    "changed": "Material und gemeinsame kleine Verbindungsknoten; Kapselgrundform erhalten.",
+    "animation": "Unverändert.",
+    "limits": "Aggregat; keine vollständige jahreszeitliche Rotfärbungsmodellierung.",
+    "status": "BESTANDEN",
+    "statusScope": "Tatsächlich gerenderte Nahansicht visuell geprüft: beschriebene Änderung sichtbar, vorhandene diagnostische Grundmerkmale erhalten. Weltkontext aufgenommen; kleine oder verdeckte Individuen dort nicht pauschal als erkennbar abgenommen. Keine vollständige Realismus-/Animationsfreigabe.",
+    "screenshot": {
+      "world": "gallery-final/salicornia_europaea-world.png",
+      "detail": "gallery-final/salicornia_europaea-detail.png",
+      "individual": "ranger-compact-v2:salicornia_europaea:355",
+      "stage": "adult",
+      "modelTime": "16.116"
+    },
+    "realismGoal": "TEILWEISE ERREICHT – siehe konkrete Grenzen; Materialüberarbeitung ist kein anatomischer Neubau."
+  },
+  {
+    "taxon": "festuca_rubra",
+    "name": "Rotschwingel – Festuca rubra agg., Küstenform",
+    "stage": "adult / vorhandenes Katalogstadium",
+    "before": "Feine Halme und modellierte Rispe.",
+    "implemented": "Feinere Flächenzeichnung und verfeinerte kleine Rispen-/Sprossteile.",
+    "diagnostics": "Feine Blätter und schmale Rispen; keine Bestimmung anhand beliebiger Grastextur",
+    "changed": "Gemeinsame Detailgeometrie und Material",
+    "animation": "Unverändert.",
+    "limits": "Gras-Feinbestimmung weiterhin eingeschränkt; Grundwuchs nicht neu modelliert.",
+    "status": "BESTANDEN",
+    "statusScope": "Tatsächlich gerenderte Nahansicht visuell geprüft: beschriebene Änderung sichtbar, vorhandene diagnostische Grundmerkmale erhalten. Weltkontext aufgenommen; kleine oder verdeckte Individuen dort nicht pauschal als erkennbar abgenommen. Keine vollständige Realismus-/Animationsfreigabe.",
+    "screenshot": {
+      "world": "gallery-final/festuca_rubra-world.png",
+      "detail": "gallery-final/festuca_rubra-detail.png",
+      "individual": "ranger-compact-v2:festuca_rubra:497",
+      "stage": "adult",
+      "modelTime": "12.847"
+    },
+    "realismGoal": "TEILWEISE ERREICHT – siehe konkrete Grenzen; Materialüberarbeitung ist kein anatomischer Neubau."
+  },
+  {
+    "taxon": "sporobolus_anglicus",
+    "name": "Englisches Schlickgras – Sporobolus anglicus (Syn. Spartina anglica)",
+    "stage": "adult / vorhandenes Katalogstadium",
+    "before": "Aufrechter Horst mit breiteren Blättern/Ährenästen.",
+    "implemented": "Verfeinerte Blattflächen mit Mittelrippe und feinem Materialkorn.",
+    "diagnostics": "Kräftige aufrechte Halme, relativ breite Blätter; Horste/Rhizomflächen",
+    "changed": "Gemeinsame Blattgeometrie und Material",
+    "animation": "Unverändert.",
+    "limits": "Horst bleibt schematisch; kein neuer artspezifischer Windmechanismus.",
+    "status": "BESTANDEN",
+    "statusScope": "Tatsächlich gerenderte Nahansicht visuell geprüft: beschriebene Änderung sichtbar, vorhandene diagnostische Grundmerkmale erhalten. Weltkontext aufgenommen; kleine oder verdeckte Individuen dort nicht pauschal als erkennbar abgenommen. Keine vollständige Realismus-/Animationsfreigabe.",
+    "screenshot": {
+      "world": "gallery-final/sporobolus_anglicus-world.png",
+      "detail": "gallery-final/sporobolus_anglicus-detail.png",
+      "individual": "ranger-compact-v2:sporobolus_anglicus:402",
+      "stage": "adult",
+      "modelTime": "14.108"
+    },
+    "realismGoal": "TEILWEISE ERREICHT – siehe konkrete Grenzen; Materialüberarbeitung ist kein anatomischer Neubau."
+  },
+  {
+    "taxon": "puccinellia_maritima",
+    "name": "Andel – Puccinellia maritima",
+    "stage": "adult / vorhandenes Katalogstadium",
+    "before": "Feinblättriges Gras mit offener Rispe.",
+    "implemented": "Verfeinerte Blatt-/Rispensurfaces bei erhaltenem offenen Wuchs.",
+    "diagnostics": "Feine graugrüne Blätter/Rispen; von Schlickgras unterscheidbarer Habitus",
+    "changed": "Gemeinsame Detailgeometrie und Material",
+    "animation": "Unverändert.",
+    "limits": "Kleine Bestimmungsmerkmale benötigen weiter Nahansicht; keine neue Grasarchitektur.",
+    "status": "BESTANDEN",
+    "statusScope": "Tatsächlich gerenderte Nahansicht visuell geprüft: beschriebene Änderung sichtbar, vorhandene diagnostische Grundmerkmale erhalten. Weltkontext aufgenommen; kleine oder verdeckte Individuen dort nicht pauschal als erkennbar abgenommen. Keine vollständige Realismus-/Animationsfreigabe.",
+    "screenshot": {
+      "world": "gallery-final/puccinellia_maritima-world.png",
+      "detail": "gallery-final/puccinellia_maritima-detail.png",
+      "individual": "ranger-compact-v2:puccinellia_maritima:542",
+      "stage": "adult",
+      "modelTime": "14.564"
+    },
+    "realismGoal": "TEILWEISE ERREICHT – siehe konkrete Grenzen; Materialüberarbeitung ist kein anatomischer Neubau."
+  },
+  {
+    "taxon": "limonium_vulgare",
+    "name": "Strandflieder – Limonium vulgare",
+    "stage": "adult / vorhandenes Katalogstadium",
+    "before": "Blattrosette und verzweigte violette Blütenstände.",
+    "implemented": "Gewölbte Rosettenblätter mit Mittelrippe, glattere Blütenteile und Blattmaterial.",
+    "diagnostics": "Bodenrosette und locker verzweigte violette Blütenstände",
+    "changed": "Gemeinsame Blatt-/Blütengeometrie und Material",
+    "animation": "Unverändert.",
+    "limits": "Einzelblüten bleiben schematisch; keine ungesicherte Blüte ergänzt.",
+    "status": "BESTANDEN",
+    "statusScope": "Tatsächlich gerenderte Nahansicht visuell geprüft: beschriebene Änderung sichtbar, vorhandene diagnostische Grundmerkmale erhalten. Weltkontext aufgenommen; kleine oder verdeckte Individuen dort nicht pauschal als erkennbar abgenommen. Keine vollständige Realismus-/Animationsfreigabe.",
+    "screenshot": {
+      "world": "gallery-final/limonium_vulgare-world.png",
+      "detail": "gallery-final/limonium_vulgare-detail.png",
+      "individual": "ranger-compact-v2:limonium_vulgare:606",
+      "stage": "adult",
+      "modelTime": "13.257"
+    },
+    "realismGoal": "TEILWEISE ERREICHT – siehe konkrete Grenzen; Materialüberarbeitung ist kein anatomischer Neubau."
+  },
+  {
+    "taxon": "recurvirostra_avosetta",
+    "name": "Säbelschnäbler – Recurvirostra avosetta",
+    "stage": "adult / vorhandenes Katalogstadium",
+    "before": "Ellipsoidkörper, gerader Segmenthals, aufgebogener Schnabel.",
+    "implemented": "Verjüngter Rumpf, gekrümmter Hals, geschichtete Federn und Gefiedermaterial.",
+    "diagnostics": "Dünner aufgebogener Schnabel, schwarz-weißes Gefieder, lange Beine",
+    "changed": "Körper-/Hals-/Federgeometrie und Material",
+    "animation": "Geschützte Beinkinematik, Such-, Kontakt- und Aufnahmeanker unverändert.",
+    "limits": "Körper noch vereinfacht; Naturschnabel und Federn nicht gescannt.",
+    "status": "BESTANDEN",
+    "statusScope": "Tatsächlich gerenderte Nahansicht visuell geprüft: beschriebene Änderung sichtbar, vorhandene diagnostische Grundmerkmale erhalten. Weltkontext aufgenommen; kleine oder verdeckte Individuen dort nicht pauschal als erkennbar abgenommen. Keine vollständige Realismus-/Animationsfreigabe.",
+    "screenshot": {
+      "world": "gallery-final/recurvirostra_avosetta-world.png",
+      "detail": "gallery-final/recurvirostra_avosetta-detail.png",
+      "individual": "compact-avocet",
+      "stage": "adult",
+      "modelTime": "0.228"
+    },
+    "realismGoal": "TEILWEISE ERREICHT – siehe konkrete Grenzen; Materialüberarbeitung ist kein anatomischer Neubau."
+  },
+  {
+    "taxon": "platalea_leucorodia",
+    "name": "Löffler – Platalea leucorodia",
+    "stage": "adult / vorhandenes Katalogstadium",
+    "before": "Ellipsoidkörper mit Segmenthals und Löffelspitze.",
+    "implemented": "Verjüngter heller Körper, gebogener Hals, feinere Flügel-/Schwanzteile und Gefiedermaterial.",
+    "diagnostics": "Breiter Schnabelabschluss, adult dunkel mit heller Spitze; Jungvogelmerkmale nicht mischen",
+    "changed": "Körper-/Hals-/Federgeometrie und Material",
+    "animation": "Echte Beuteaufnahme und Schnabelkontakt unverändert.",
+    "limits": "Hals-/Kopfverbindung bleibt sichtbar vereinfacht; keine neue Biomechanik.",
+    "status": "BESTANDEN",
+    "statusScope": "Tatsächlich gerenderte Nahansicht visuell geprüft: beschriebene Änderung sichtbar, vorhandene diagnostische Grundmerkmale erhalten. Weltkontext aufgenommen; kleine oder verdeckte Individuen dort nicht pauschal als erkennbar abgenommen. Keine vollständige Realismus-/Animationsfreigabe.",
+    "screenshot": {
+      "world": "gallery-final/platalea_leucorodia-world.png",
+      "detail": "gallery-final/platalea_leucorodia-detail.png",
+      "individual": "compact-spoonbill",
+      "stage": "adult",
+      "modelTime": "0.963"
+    },
+    "realismGoal": "TEILWEISE ERREICHT – siehe konkrete Grenzen; Materialüberarbeitung ist kein anatomischer Neubau."
+  },
+  {
+    "taxon": "tringa_totanus",
+    "name": "Rotschenkel – Tringa totanus",
+    "stage": "adult / vorhandenes Katalogstadium",
+    "before": "Einfarbiger Ellipsoidkörper mit roten Beinen/Schnabelbasis.",
+    "implemented": "Verjüngter Rumpf, feine Brustfleckung, gebogener Hals, geschichtete Federn.",
+    "diagnostics": "Rote Beine, rötliche Schnabelbasis/dunkle Spitze; Flügelzeichnung",
+    "changed": "Körper-/Hals-/Zeichnungsgeometrie und Material",
+    "animation": "Echte Such-/Stochervorgänge und Beuteidentität unverändert.",
+    "limits": "Federfleckung schematisch; rotbraune Farbtöne abhängig von Beleuchtung.",
+    "status": "BESTANDEN",
+    "statusScope": "Tatsächlich gerenderte Nahansicht visuell geprüft: beschriebene Änderung sichtbar, vorhandene diagnostische Grundmerkmale erhalten. Weltkontext aufgenommen; kleine oder verdeckte Individuen dort nicht pauschal als erkennbar abgenommen. Keine vollständige Realismus-/Animationsfreigabe.",
+    "screenshot": {
+      "world": "gallery-final/tringa_totanus-world.png",
+      "detail": "gallery-final/tringa_totanus-detail.png",
+      "individual": "compact-redshank",
+      "stage": "adult",
+      "modelTime": "0.442"
+    },
+    "realismGoal": "TEILWEISE ERREICHT – siehe konkrete Grenzen; Materialüberarbeitung ist kein anatomischer Neubau."
+  },
+  {
+    "taxon": "haematopus_ostralegus",
+    "name": "Austernfischer – Haematopus ostralegus",
+    "stage": "adult / vorhandenes Katalogstadium",
+    "before": "Schwarzweißer Ellipsoidkörper, orangefarbener Schnabel.",
+    "implemented": "Verjüngter Rumpf, geschichtete Flügel-/Schwanzfedern und Gefiederoberfläche.",
+    "diagnostics": "Schwarz-weiß, kräftiger gerader orange-roter Schnabel, kräftige Beine",
+    "changed": "Körper-/Federgeometrie und Material",
+    "animation": "Geschützte Muschel-/Schnabelkontakte erhalten.",
+    "limits": "Kopf und Hals weiterhin einfach; keine weich verformte Federhaut.",
+    "status": "BESTANDEN",
+    "statusScope": "Tatsächlich gerenderte Nahansicht visuell geprüft: beschriebene Änderung sichtbar, vorhandene diagnostische Grundmerkmale erhalten. Weltkontext aufgenommen; kleine oder verdeckte Individuen dort nicht pauschal als erkennbar abgenommen. Keine vollständige Realismus-/Animationsfreigabe.",
+    "screenshot": {
+      "world": "gallery-final/haematopus_ostralegus-world.png",
+      "detail": "gallery-final/haematopus_ostralegus-detail.png",
+      "individual": "compact-oystercatcher",
+      "stage": "adult",
+      "modelTime": "0.588"
+    },
+    "realismGoal": "TEILWEISE ERREICHT – siehe konkrete Grenzen; Materialüberarbeitung ist kein anatomischer Neubau."
+  },
+  {
+    "taxon": "cerastoderma_edule",
+    "name": "Herzmuschel – Cerastoderma edule",
+    "stage": "adult / vorhandenes Katalogstadium",
+    "before": "Zwei einfache Schalen mit radialen Rippen.",
+    "implemented": "Glattere gewölbte Schalen, feine Oberflächenringe und abgestimmte Rauheit.",
+    "diagnostics": "Radialrippen; zwei Schalen; lebend/eingegraben ≠ leere Schale",
+    "changed": "Körperunterteilung und Material",
+    "animation": "Vorhandene Siphon-/Überflutungszustände erhalten.",
+    "limits": "Rippen nicht vollständig anatomisch ausmodelliert; keine neue Muschelspezifikation.",
+    "status": "BESTANDEN",
+    "statusScope": "Tatsächlich gerenderte Nahansicht visuell geprüft: beschriebene Änderung sichtbar, vorhandene diagnostische Grundmerkmale erhalten. Weltkontext aufgenommen; kleine oder verdeckte Individuen dort nicht pauschal als erkennbar abgenommen. Keine vollständige Realismus-/Animationsfreigabe.",
+    "screenshot": {
+      "world": "gallery-final/cerastoderma_edule-world.png",
+      "detail": "gallery-final/cerastoderma_edule-detail.png",
+      "individual": "compact-cockle-0",
+      "stage": "adult",
+      "modelTime": "1.503"
+    },
+    "realismGoal": "NICHT ERREICHT: weiterhin deutlich geometrische Grundform; Feinmaterial ersetzt keine organische Neuformung."
+  },
+  {
+    "taxon": "mytilus_edulis",
+    "name": "Miesmuschel – Mytilus edulis",
+    "stage": "adult / vorhandenes Katalogstadium",
+    "before": "Dunkle gepaarte Ventile mit Innenfläche und Byssus.",
+    "implemented": "Feine Schalenzeichnung/Rauheit; ursprünglicher Innenflächen-Shader bewusst erhalten.",
+    "diagnostics": "Dunkle längliche Schale; Byssus im Detail",
+    "changed": "Material; Ventilgrundform unverändert",
+    "animation": "Echte Öffnung/Gewebeentnahme und Ressourcenidentität erhalten.",
+    "limits": "Schalenprofil weiterhin grob; keine neu behauptete GLB-Muschel.",
+    "status": "BESTANDEN",
+    "statusScope": "Tatsächlich gerenderte Nahansicht visuell geprüft: beschriebene Änderung sichtbar, vorhandene diagnostische Grundmerkmale erhalten. Weltkontext aufgenommen; kleine oder verdeckte Individuen dort nicht pauschal als erkennbar abgenommen. Keine vollständige Realismus-/Animationsfreigabe.",
+    "screenshot": {
+      "world": "gallery-final/mytilus_edulis-world.png",
+      "detail": "gallery-final/mytilus_edulis-detail.png",
+      "individual": "compact-mussel-0",
+      "stage": "adult",
+      "modelTime": "1.013"
+    },
+    "realismGoal": "TEILWEISE ERREICHT – siehe konkrete Grenzen; Materialüberarbeitung ist kein anatomischer Neubau."
+  },
+  {
+    "taxon": "arenicola_marina",
+    "name": "Wattwurm – Arenicola marina",
+    "stage": "adult / vorhandenes Katalogstadium",
+    "before": "Segmentkörper und bestehende Wohn-/Kotspurmodelle.",
+    "implemented": "Glattere Segmente, zusätzliche seitliche Kiemenbüschel und Hautoberfläche.",
+    "diagnostics": "Kothaufen/Trichter als Spur; segmentierter Körper in Schnittansicht",
+    "changed": "Geometrie und Material",
+    "animation": "Bestehende Zustände/Spuren erhalten.",
+    "limits": "Kiemenbüschel schematisch; im normalen Watt keine erfundenen dauerhaften Sichtungen.",
+    "status": "BESTANDEN",
+    "statusScope": "Tatsächlich gerenderte Nahansicht visuell geprüft: beschriebene Änderung sichtbar, vorhandene diagnostische Grundmerkmale erhalten. Weltkontext aufgenommen; kleine oder verdeckte Individuen dort nicht pauschal als erkennbar abgenommen. Keine vollständige Realismus-/Animationsfreigabe.",
+    "screenshot": {
+      "world": "gallery-final/arenicola_marina-world.png",
+      "detail": "gallery-final/arenicola_marina-detail.png",
+      "individual": "compact-lugworm",
+      "stage": "adult",
+      "modelTime": "1.962"
+    },
+    "realismGoal": "NICHT ERREICHT: weiterhin deutlich geometrische Grundform; Feinmaterial ersetzt keine organische Neuformung."
+  },
+  {
+    "taxon": "hediste_diversicolor",
+    "name": "Seeringelwurm – Hediste diversicolor",
+    "stage": "adult",
+    "before": "Segmentkette mit Parapodien und Borsten.",
+    "implemented": "Glattere Segmente und feines Hautmaterial, Parapodien erhalten.",
+    "diagnostics": "Seitliche Parapodien/Borsten, Körpergliederung",
+    "changed": "Körperunterteilung und Material",
+    "animation": "Bestehendes Beute-/Rückzugsmodell erhalten.",
+    "limits": "Segmentkette und Borsten bleiben einfach; erwachsene/junge Darstellung gleiche Grundform.",
+    "status": "BESTANDEN",
+    "statusScope": "Tatsächlich gerenderte Nahansicht visuell geprüft: beschriebene Änderung sichtbar, vorhandene diagnostische Grundmerkmale erhalten. Weltkontext aufgenommen; kleine oder verdeckte Individuen dort nicht pauschal als erkennbar abgenommen. Keine vollständige Realismus-/Animationsfreigabe.",
+    "screenshot": {
+      "world": "gallery-final/hediste_diversicolor-world.png",
+      "detail": "gallery-final/hediste_diversicolor-detail.png",
+      "individual": "compact-ragworm",
+      "stage": "adult",
+      "modelTime": "2.485"
+    },
+    "realismGoal": "NICHT ERREICHT: weiterhin deutlich geometrische Grundform; Feinmaterial ersetzt keine organische Neuformung."
+  },
+  {
+    "taxon": "crangon_crangon",
+    "name": "Nordseegarnele – Crangon crangon",
+    "stage": "adult / vorhandenes Katalogstadium",
+    "before": "Segmentierter Körper mit Fühlern und Schwimmbeinen.",
+    "implemented": "Rostrum und Schwanzfächer ergänzt, glattere Körpersegmente, Cuticulaoberfläche.",
+    "diagnostics": "Schlanker gegliederter Körper, Fühler, Schwimmbeine",
+    "changed": "Geometrie und Material",
+    "animation": "Bestehende Wasser-/Beutezustände erhalten.",
+    "limits": "Keine echte durchscheinende Gewebeoptik; Schwimmbeine weiter vereinfacht.",
+    "status": "BESTANDEN",
+    "statusScope": "Tatsächlich gerenderte Nahansicht visuell geprüft: beschriebene Änderung sichtbar, vorhandene diagnostische Grundmerkmale erhalten. Weltkontext aufgenommen; kleine oder verdeckte Individuen dort nicht pauschal als erkennbar abgenommen. Keine vollständige Realismus-/Animationsfreigabe.",
+    "screenshot": {
+      "world": "gallery-final/crangon_crangon-world.png",
+      "detail": "gallery-final/crangon_crangon-detail.png",
+      "individual": "compact-shrimp-0",
+      "stage": "adult",
+      "modelTime": "1.990"
+    },
+    "realismGoal": "TEILWEISE ERREICHT – siehe konkrete Grenzen; Materialüberarbeitung ist kein anatomischer Neubau."
+  },
+  {
+    "taxon": "carcinus_maenas",
+    "name": "Strandkrabbe – Carcinus maenas",
+    "stage": "adult / vorhandenes Katalogstadium",
+    "before": "Einfacher breiter Panzer mit Scheren und acht Laufbeinen.",
+    "implemented": "Seitliche Panzerzähne ergänzt, glatterer Panzer, Cuticulaoberfläche.",
+    "diagnostics": "Breiter Panzer, Scheren, seitliche Laufbewegung",
+    "changed": "Geometrie und Material",
+    "animation": "Seitengang, Scherenkontakt und endliche Muschelressource erhalten.",
+    "limits": "Scheren/Beine weiterhin Segmente; keine gescannte Panzerform.",
+    "status": "BESTANDEN",
+    "statusScope": "Tatsächlich gerenderte Nahansicht visuell geprüft: beschriebene Änderung sichtbar, vorhandene diagnostische Grundmerkmale erhalten. Weltkontext aufgenommen; kleine oder verdeckte Individuen dort nicht pauschal als erkennbar abgenommen. Keine vollständige Realismus-/Animationsfreigabe.",
+    "screenshot": {
+      "world": "gallery-final/carcinus_maenas-world.png",
+      "detail": "gallery-final/carcinus_maenas-detail.png",
+      "individual": "compact-crab",
+      "stage": "adult",
+      "modelTime": "2.877"
+    },
+    "realismGoal": "TEILWEISE ERREICHT – siehe konkrete Grenzen; Materialüberarbeitung ist kein anatomischer Neubau."
+  },
+  {
+    "taxon": "peringia_ulvae",
+    "name": "Wattschnecke – Peringia ulvae (Syn. Hydrobia ulvae)",
+    "stage": "adult / vorhandenes Katalogstadium",
+    "before": "Gewundene Röhrengeometrie als Gehäuse, einfacher Kriechfuß.",
+    "implemented": "Feine Schalenzeichnung und abgestimmte Rauheit; glatterer Fuß.",
+    "diagnostics": "Winziges gewundenes Gehäuse; Lupe nötig",
+    "changed": "Material und gemeinsame Körperunterteilung",
+    "animation": "Bestehendes Abweiden erhalten.",
+    "limits": "Spiralgehäuse bleibt deutlich schematisch; unter Pixelgröße in normaler Weltansicht.",
+    "status": "BESTANDEN",
+    "statusScope": "Tatsächlich gerenderte Nahansicht visuell geprüft: beschriebene Änderung sichtbar, vorhandene diagnostische Grundmerkmale erhalten. Weltkontext aufgenommen; kleine oder verdeckte Individuen dort nicht pauschal als erkennbar abgenommen. Keine vollständige Realismus-/Animationsfreigabe.",
+    "screenshot": {
+      "world": "gallery-final/peringia_ulvae-world.png",
+      "detail": "gallery-final/peringia_ulvae-detail.png",
+      "individual": "compact-snail-0",
+      "stage": "adult",
+      "modelTime": "3.335"
+    },
+    "realismGoal": "NICHT ERREICHT: weiterhin deutlich geometrische Grundform; Feinmaterial ersetzt keine organische Neuformung."
+  },
+  {
+    "taxon": "aglais_io",
+    "name": "Tagpfauenauge · Raupe",
+    "stage": "caterpillar",
+    "before": "Schwarze Segmentkette mit Dornen und hellen Punkten.",
+    "implemented": "Glattere Segmente, zusätzliche Bauchfüße, feine Cuticulaoberfläche; geringe Fußhebung bei echter Ortsänderung.",
+    "diagnostics": "Schwarze bedornte Raupe auf Brennnessel; kein Falterkörper als Raupenersatz.",
+    "changed": "Geometrie, Material und sekundäre Fußbewegung",
+    "animation": "Nur bei tatsächlicher Ortsänderung.",
+    "limits": "Segmentkette bleibt erkennbar; Fußfolge und Raupenperistaltik nicht biologisch kalibriert.",
+    "status": "BESTANDEN",
+    "statusScope": "Tatsächlich gerenderte Nahansicht visuell geprüft: beschriebene Änderung sichtbar, vorhandene diagnostische Grundmerkmale erhalten. Weltkontext aufgenommen; kleine oder verdeckte Individuen dort nicht pauschal als erkennbar abgenommen. Keine vollständige Realismus-/Animationsfreigabe.",
+    "screenshot": {
+      "world": "gallery-final/aglais_io-caterpillar-world.png",
+      "detail": "gallery-final/aglais_io-caterpillar-detail.png",
+      "individual": "compact-caterpillar",
+      "stage": "caterpillar",
+      "modelTime": "7.738"
+    },
+    "realismGoal": "TEILWEISE ERREICHT – siehe konkrete Grenzen; Materialüberarbeitung ist kein anatomischer Neubau."
+  },
+  {
+    "taxon": "hediste_diversicolor",
+    "name": "Seeringelwurm · juveniles Beutestadium",
+    "stage": "juvenile",
+    "before": "Segmentkette mit Parapodien und Borsten.",
+    "implemented": "Glattere Segmente und feines Hautmaterial, Parapodien erhalten.",
+    "diagnostics": "Seitliche Parapodien/Borsten, Körpergliederung",
+    "changed": "Körperunterteilung und Material",
+    "animation": "Bestehendes Beute-/Rückzugsmodell erhalten.",
+    "limits": "Verkleinerte bestehende Grundform; keine artspezifisch neue Larvenmorphologie. Im Watt ohne Lupe zu klein für eine sichere Einzelbestimmung.",
+    "status": "BESTANDEN",
+    "statusScope": "Tatsächlich gerenderte Nahansicht visuell geprüft: beschriebene Änderung sichtbar, vorhandene diagnostische Grundmerkmale erhalten. Weltkontext aufgenommen; kleine oder verdeckte Individuen dort nicht pauschal als erkennbar abgenommen. Keine vollständige Realismus-/Animationsfreigabe.",
+    "screenshot": {
+      "world": "gallery-final/hediste_diversicolor-juvenile-world.png",
+      "detail": "gallery-final/hediste_diversicolor-juvenile-detail.png",
+      "individual": "compact-juvenile-worm-3",
+      "stage": "juvenile",
+      "modelTime": "1.533"
+    },
+    "realismGoal": "NICHT ERREICHT: weiterhin deutlich geometrische Grundform; Feinmaterial ersetzt keine organische Neuformung."
+  }
+]

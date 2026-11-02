@@ -1,0 +1,42 @@
+{
+  "commit": "f92146876f4364a4fb78d30d9e9b190bbb7dc1f4",
+  "provenance": "Exact git show bytes from immutable old commit, recursively closed pure model modules. Not regenerated from current runtime.",
+  "files": {
+    "dist/compact/world-state.js": {
+      "sha256": "360197f8bd8ab54c595386b66f2e676499630bc6ca896856034fba4910d9fd7f",
+      "gitBlob": "5e42e016b001221223765df4e43da0db63b76c38"
+    },
+    "dist/compact/habitats.js": {
+      "sha256": "10aad218dd69d51e842b59ef0164d9de8c0deaf30bc52d5165fc9ce317cde6c7",
+      "gitBlob": "d947b04fc82a398c0ce1355ac501dbaaa653cea9"
+    },
+    "dist/compact/layout.js": {
+      "sha256": "e02558557a9c99fa0549c94f8cbfc8873e18f3c90df845155d51ee4d404209a6",
+      "gitBlob": "fa21c95a99078c884ee62af2f2e192150e7a833c"
+    },
+    "dist/compact/manifest.js": {
+      "sha256": "bdf071c610b896ffa14c41b33f9f17c5472199b55a6eb407f853e38178344cae",
+      "gitBlob": "6fc3ccd6a24d46729994deb9b4cd37e846759a23"
+    },
+    "dist/compact/taxa.js": {
+      "sha256": "97cd6f5bad16208408512be876ebf63d5f9ee400dd31f94a61c8ca08e4e24fd3",
+      "gitBlob": "9fd7e96df8a947997f4daf54313f3075fc840ea4"
+    },
+    "dist/compact/ecology.js": {
+      "sha256": "e50f25a3146e79671472e7a5e6ed1d78f007564515bf9a78bb67fac9695ef8e0",
+      "gitBlob": "644a22c43dee65d728c4edc6a803ba7163308e2c"
+    },
+    "dist/compact/coastal-behaviour.js": {
+      "sha256": "39b1dcb8691cd48850321c4c734eabf0b2875b91a8cd09dcd7b571758b0f0927",
+      "gitBlob": "0cfba1b5de9023f8756d155196317fd43a1c3d74"
+    },
+    "dist/compact/coastal-rig.js": {
+      "sha256": "92a0270abdbf3aee7467e466cf344b08b8ef8bf5af4d903d3c672f9bcd4e2513",
+      "gitBlob": "78cd6f4d5353b07859578296397dfecae3b230de"
+    },
+    "dist/compact/catalog.js": {
+      "sha256": "6b693d4c6a0f6b880b9ff99295826f3968e61ba96f52606997a1635ddf1fe39f",
+      "gitBlob": "8ce1dca0e9ede5fd69a1f8dc57d6fd219977fd9b"
+    }
+  }
+}

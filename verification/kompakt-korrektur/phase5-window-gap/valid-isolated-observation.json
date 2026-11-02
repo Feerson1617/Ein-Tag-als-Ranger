@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 2,
+  "worldVersion": "ranger-compact-v2",
+  "records": [
+    {
+      "id": "fc77bbd2-be58-41fa-ae59-1210b242a1cb",
+      "taxon": "galium_odoratum",
+      "individualId": "ranger-compact-v2:galium_odoratum:0",
+      "window": "summer",
+      "modelRevision": 3,
+      "method": "magnified-active-model",
+      "siteId": "compact-forest-core",
+      "events": [],
+      "worldVersion": "ranger-compact-v2",
+      "initialSeed": 20260825,
+      "runId": "1d21cb4a-7b71-4594-a35c-b793d2251eab",
+      "source": "own-observation",
+      "observationSeconds": 4.049900000000002,
+      "simulationTime": 0.4749000000000032,
+      "x": -58.366864902514294,
+      "z": 5.343887617279103,
+      "note": "Eigene Modellbeobachtung: erkennbare Merkmale notiert; natürliche Feinbestimmung bleibt begrenzt."
+    }
+  ],
+  "archives": [],
+  "previousEditions": [],
+  "learning": {
+    "activeMission": null,
+    "level": "gA",
+    "answers": {},
+    "protocols": [],
+    "measurements": [],
+    "samples": [],
+    "experiments": [],
+    "drafts": {}
+  },
+  "exportedAt": "2026-10-22T16:29:46.699Z"
+}

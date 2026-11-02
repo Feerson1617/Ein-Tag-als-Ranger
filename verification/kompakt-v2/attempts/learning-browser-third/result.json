@@ -1,0 +1,129 @@
+{
+  "sourceCommit": "afe6e884583e96efa8cded05424fbdf33eb2dc50",
+  "sourceDirty": true,
+  "runtimeSourceHashes": {
+    "assets/boardwalk-wood.webp": "4d06022133e3772534374671fb73a4509ed109e1db6ca06a2d62a8c99c47ac6d",
+    "assets/compact-roe-deer.glb": "a89400df66033eb5eaa7f9bf13ccefaacfb866ab24e4576574d11965354ee619",
+    "assets/sky-panorama.webp": "46c360b491b11269d280e73ec0e71869afdfd62fb543b4250713234374a2f71d",
+    "assets/terrain-atlas.webp": "d637324d3ace6ef8e2c549e7f0a513efd1a4c06aab927f0ed1565bf77b2ced02",
+    "assets/wildlife-fox.glb": "61a4d1b845aa406928a327648417ae1c3982510b9c4e8ce33b7c494fbc98a22f",
+    "compact/catalog.js": "8e373f46194c392f1ec9bf43c9c95e4312a64ea29a9ac90ddc5e87e8a7fda16c",
+    "compact/ecology.js": "5287cfd0430e926f81bb2ad2b2903e62d302728c341e592d3cee91f37a52c0c7",
+    "compact/evidence.js": "971d70710721d81f48b428dfa849bcc2fbfa811ce6148c30ddc90104f35f3534",
+    "compact/expanded-view.js": "0abb20e848064f818091e3a5f8870ec32d181a58882e30fa060f5020b0c94ac7",
+    "compact/fauna-view.js": "985a83582ff0ffac0e8d6ef20e2edc80a09b66e88f3768dd404f746507820feb",
+    "compact/geometry.js": "a6f52cd0fc8f75db3d102d7d6f6f7ec3acbeaf65123f95710f9aa502399c4e26",
+    "compact/inspection.js": "601d56c3335dc1d80b89aeb5f0a564e0859b9dade60d624dc54d1dff0e465c41",
+    "compact/journal.js": "51d9c9dc19a8fe63c7bd2639d9fdc19e0a8753861f94f230fe41a497d0b722f4",
+    "compact/layout.js": "889a7ca15fd622d8d145f4fff86225c747bf9bee0433dce6ee8f810e714dd578",
+    "compact/learning-documents.js": "f02e0316bc3b8173bfd0380e3e7b803d13dd22a47fb946dc08e0ce9927f6be0c",
+    "compact/learning-models.js": "e58605a045c82f544703a130b87849c271a23e6ce5c45a48a1d7a83cd301e202",
+    "compact/learning-ui.js": "266de88fd07e6630d15c0ab3476ebd0db2149cd51f97cccd20659609d905e43b",
+    "compact/main.js": "33652eadd039328dbedb18e3bfa9c3bed04dac4866462be462e621e520b73dcf",
+    "compact/manifest.js": "0a968302d33f9f65b04246391692510e9daff3f64d250c74794aa6cec6d9aaa0",
+    "compact/materials.js": "a28bb5a761656249272a1c42968f61779046c6c03389bd19a007f5da33a41910",
+    "compact/missions.js": "2ab3c10ec3dc6e3318ada9ab5bdece9f50fbc2d06f4d6b9934ed7bea08e8d3e1",
+    "compact/organism-models.js": "281a65b7e6e539f9d3ddbaaf2991e2a0d10aa00c794e8df6363d023eadf955bf",
+    "compact/path-mesh.js": "7a41ebc390aeca96cffd1e4fcee19f3b76310413fcee3489d1533ebd599a4c82",
+    "compact/style.css": "11625d255794d34ee4930da768d3ccfd8efad740be2a4a7b85ca940f408b40d7",
+    "compact/taxa.js": "97cd6f5bad16208408512be876ebf63d5f9ee400dd31f94a61c8ca08e4e24fd3",
+    "compact/visibility.js": "50d59d44257e9d18547bfaec9277366d3339177c6ebce37d948b48c9940a86f1",
+    "compact/world-state.js": "0ff225752d99f62a14207aa60baf5550b10517697e0e0af62bab55b0153a4cde",
+    "compact/world-view.js": "53a2d5e9f3ff3926e88c3acedc73f8a4b599fe9cc2059897f6afd62e4e71c7db",
+    "field-guide.js": "22fedb8d555efd8ed7efda64f0dee729d6a12f1d532f0d14c07117af930be69a",
+    "icon.svg": "cb8cda889f99e56d13d18e09929837b7c3630d3f9ff3219316d12d3077fc0869",
+    "kompakt.html": "a5fe7ded5db65e02f2e9714757704dfac6e544b9d8f05d0003804084035377c2",
+    "observation-clock.js": "2304e6c425192967f87841caa5072873cb5dd5c7f69c38fb45b237fd22f98b03",
+    "ranger-controls.js": "081497a5f6754ecd441e61ee55805da99b5121e96215cfa900209e00e41e5eda",
+    "station-protocol.js": "2590df7d9de4c8f4afda8fcafd619d565440c2dc7e1bb6ef4574aeadf803ae57",
+    "vendor/three.core.js": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20",
+    "vendor/three.module.js": "2884e2e6f26feaec0b454fcdc1e98c27d6433ba15253e5a3e22e111df81686fa",
+    "wildlife-glb.js": "32f8f947dd002ba7b571ee627e6291fa40a951fccdd9dee644661f19de487c35"
+  },
+  "startedAt": "2026-10-22T05:30:18Z",
+  "checks": [
+    {
+      "name": "36 active entries; five optional families initially incomplete, free play remains available",
+      "passed": true
+    },
+    {
+      "name": "K1 earned from three different actual model observations, justified uncertainty and two same-method sites",
+      "passed": true
+    },
+    {
+      "name": "K2 real control/competitor runs; co-presence answer rejected, controlled resource explanation accepted",
+      "passed": true
+    },
+    {
+      "name": "K3 earned with same individual after negative different-individual attempt; eA Q1/Q2/Q0 and true zero recorded",
+      "passed": true
+    },
+    {
+      "name": "K4 own fungus observation plus explicit section-model edges; false energy cycle rejected",
+      "passed": true
+    },
+    {
+      "name": "K5 open decision documented with criteria, own evidence, alternative, uncertainty and ungraded reasoning",
+      "passed": true
+    },
+    {
+      "name": "real reload preserves all acquired answers/evidence and recomputes five statuses; actual JSON and readable report downloads",
+      "passed": true
+    },
+    {
+      "name": "contradictory imported scene protocol rejected by real file input without replacing saved work",
+      "passed": true
+    },
+    {
+      "name": "quota during real answer editing leaves old storage intact and exports current uncommitted work",
+      "passed": true
+    },
+    {
+      "name": "all 25 student/teacher cards download and five actual numeric models produce plots, full tables and provenance downloads",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "captures": [
+    {
+      "file": "K1-earned.png",
+      "sha256": "a07d5d3bf91310c366da41efff3c1e9ccf6cd90a7e093ad8820f5f02c1f74ced",
+      "bytes": 227665,
+      "source": "actual browser screenshot"
+    },
+    {
+      "file": "K2-earned.png",
+      "sha256": "a42dc911642a8b495c0765a3f78065165f4258e69024f59377820699a6c6c07f",
+      "bytes": 210631,
+      "source": "actual browser screenshot"
+    },
+    {
+      "file": "K3-earned.png",
+      "sha256": "f23b82d8e390331783abc041fe1f912103f9f9b3dbe05982aa82b0d9cd76ac79",
+      "bytes": 142967,
+      "source": "actual browser screenshot"
+    },
+    {
+      "file": "K4-earned.png",
+      "sha256": "5671b1a958a5d966b3e10684d1fd875ab11e943260dff01ae142892c7b8fdc40",
+      "bytes": 188334,
+      "source": "actual browser screenshot"
+    },
+    {
+      "file": "K5-earned.png",
+      "sha256": "fd1103077c0cac035c0d7f2a27a7160371a06d28510a3aa1624d64cd55e2a58b",
+      "bytes": 187802,
+      "source": "actual browser screenshot"
+    },
+    {
+      "file": "failure.png",
+      "sha256": "a011a8e8b7897322ed94368d5d13af24538138eadcea71005a57eb214b5e6e1b",
+      "bytes": 268087,
+      "source": "actual browser screenshot"
+    }
+  ],
+  "hardwareScope": "Cloud Chromium, software graphics; no actual Safari/iPad/Mac or classroom pilot",
+  "browserVersion": "154.0.8037.57",
+  "failure": "",
+  "traceback": "Traceback (most recent call last):\n  File \"/workspace/Ein-Tag-als-Ranger/tools/browser-compact-learning.py\", line 94, in <module>\n    close(page);view(page,'woodruff');page.locator('#study').click();page.locator('[data-taxon=\"galium_odoratum\"]').first.click();page.wait_for_function('!document.querySelector(\"#inspection-record\").disabled');page.locator('#specimen-canvas').evaluate(\"c=>{const gl=c.getContext('webgl2');gl.getExtension('WEBGL_lose_context').loseContext();}\");page.wait_for_function('document.querySelector(\"#inspection-record\").disabled');assert 'unterbrochen'in page.locator('#inspection-clock').inner_text();close(page);ok('actual WebGL loss in magnified view cancels evidence; closing releases the inspection context')\n                                                                                                                                                                                                                                                                                                                                                                                                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+}

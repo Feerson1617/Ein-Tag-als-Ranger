@@ -1,0 +1,35 @@
+PASS 36 active entries all have own geometry or explicitly selected GLB/reference builders
+PASS all procedural active meshes have finite positive geometry, units and diagnostic forms
+PASS all seeds retain fixed sampling/plant identities through time and independent windows
+PASS finite resources really remove prey/leaf material and never become negative
+PASS every emitted event has real matching actors, resource, stage and sequence
+PASS pollen transfer requires two distinct real clover plants and actual sequence
+PASS fox visits are separate from deer and include successful and failed attempts
+PASS bird support loss never leaves a tit resting in air; jay caches in dated window
+PASS upper marsh is not flooded by every normal high tide; feeding has distinct prey sizes
+PASS K1 accepts justified uncertainty but needs three distinct individuals in two habitats
+PASS K2 inter/intraspecific competition needs actual yield effect and matching controls
+PASS K2 names and co-discovery alone never become interaction evidence
+PASS controlled experiments reject tampered rows and contradictory imported totals
+PASS K3 same real individual, scene and chronology completes with stable six-second windows
+PASS K3 rejects different individuals, seeds, runs, world versions and reversed chronology
+PASS short or transitional K3 data are retained without false completion
+PASS K3 import rejects overlap, duplicate IDs, contradictory tide/activity/context/cache flags
+PASS eA fixed quadrats require three independent positions including a real zero, not repeats
+PASS K4 needs actual own trace, correct source-to-recipient edges and separate microbial process
+PASS K5 allows every justified management option and distinguishes values from facts
+PASS all five incomplete/incorrect families remain incomplete despite arbitrary nonempty prose
+PASS v1 compact and big-world archives preserve original IDs, notes and answers without new credit
+PASS invalid IDs/partner events and quota cannot overwrite existing v2 evidence or draft
+PASS restarts/windows cannot fabricate continuity from reused numeric/plant IDs
+PASS 25 curriculum cards have usable tasks, evidence provenance, criteria and explicit limits
+PASS growth gives analytic start/capacity limits, finite nonnegative values and rejects bad units/ranges
+PASS Lotka-Volterra uses a bounded positive solver and transparent population disturbance
+PASS tolerance distinguishes long-term controlled synthetic response from transect zoning
+PASS carbon and nitrogen conserve declared matter and distinguish external input and oxygen
+PASS valid imported model tables ignore object key order but reject numeric tampering and cross-run controls
+PASS eA rejects quadrats from a different observation run and forged area dimensions
+PASS controlled experiment imports cannot contradict the seed or an existing run context
+PASS malformed imported answers and drafts are rejected before a renderer can consume them
+PASS carried acorn touches the actual jay bill mesh through body and head motion
+{"passed":34,"activeTaxa":36,"curriculumCards":25}

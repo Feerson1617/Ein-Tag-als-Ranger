@@ -1,0 +1,37 @@
+{
+  "scope": "In-memory model/import fixture, not real browser sighting evidence",
+  "root": "/workspace/Ein-Tag-als-Ranger",
+  "before": {
+    "complete": false,
+    "message": "Ein selbst gesicherter Vorgangsbeleg mit Ressource/Partner und eine passende Aussagegrenze erforderlich. Paarentdeckung ist kein Interaktionsbeleg.",
+    "reviewNeeded": true,
+    "scope": "structured evidence check; free text and biological judgment require discussion"
+  },
+  "after": {
+    "complete": true,
+    "message": "Ein selbst gesicherter Vorgangsbeleg mit Ressource/Partner und eine passende Aussagegrenze erforderlich. Paarentdeckung ist kein Interaktionsbeleg.",
+    "reviewNeeded": true,
+    "scope": "structured evidence check; free text and biological judgment require discussion"
+  },
+  "answerUnchanged": true,
+  "oldEvent": {
+    "id": "ranger-compact-v2:summer:9",
+    "interaction": "tick-deer"
+  },
+  "newEvent": {
+    "id": "ranger-compact-v2:summer:9",
+    "interaction": "worm-litter"
+  },
+  "selected": [
+    {
+      "record": "old-record",
+      "runId": "prior-run",
+      "interaction": "tick-deer"
+    },
+    {
+      "record": "new-record",
+      "runId": "local-run",
+      "interaction": "worm-litter"
+    }
+  ]
+}

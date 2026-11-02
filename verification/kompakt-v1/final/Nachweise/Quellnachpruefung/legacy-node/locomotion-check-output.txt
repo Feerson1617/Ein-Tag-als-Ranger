@@ -1,0 +1,59 @@
+{
+  "jointedSpecies": 84,
+  "groundSupport": "World-space foot contact on slopes and turns, < 0.002 mm drift per frame",
+  "maximumMeasuredDriftM": 2.905835343477293e-8,
+  "range": "normal walking plus 3.4 m/s robustness stress; targets stay within leg reach",
+  "rendering": "same pose in colour, joint normals and depth shader; at most 16 attributes including colour",
+  "preview": "actual selected individual drives animated detail view",
+  "identity": "stop, re-entry, teleport and new identity verified",
+  "selected": [
+    {
+      "id": "parus_major",
+      "speed": 0.1305,
+      "contacts": 92,
+      "drift": 1.028887788393232e-9,
+      "lift": 0.008551468760812413,
+      "reach": 0.9125374006592648
+    },
+    {
+      "id": "hare",
+      "speed": 0.45,
+      "contacts": 110,
+      "drift": 1.3147985687333084e-8,
+      "lift": 0.0514612169845057,
+      "reach": 0.9950000118555032
+    },
+    {
+      "id": "fox",
+      "speed": 0.45,
+      "contacts": 391,
+      "drift": 1.515694264025802e-8,
+      "lift": 0.033791849558152315,
+      "reach": 0.934112082786817
+    },
+    {
+      "id": "capreolus_capreolus",
+      "speed": 0.45,
+      "contacts": 429,
+      "drift": 2.905835343477293e-8,
+      "lift": 0.09057095188762829,
+      "reach": 0.9491406766558552
+    },
+    {
+      "id": "carcinus_maenas",
+      "speed": 0.06300000000000001,
+      "contacts": 163,
+      "drift": 3.49428904881469e-9,
+      "lift": 0.004607510645758911,
+      "reach": 0.9950000698699879
+    },
+    {
+      "id": "rana_temporaria",
+      "speed": 0.0675,
+      "contacts": 108,
+      "drift": 1.6880656463057072e-9,
+      "lift": 0.011161055509899065,
+      "reach": 0.99500008107909
+    }
+  ]
+}

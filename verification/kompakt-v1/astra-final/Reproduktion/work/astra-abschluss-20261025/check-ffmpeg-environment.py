@@ -1,0 +1,10 @@
+from pathlib import Path
+import hashlib,json,subprocess,shutil
+from playwright.sync_api import sync_playwright
+base=Path(__file__).resolve().parent;q=base/'final-4eb186a';out=q/'ffmpeg-environment';out.mkdir()
+with sync_playwright()as pw:
+ b=pw.chromium.launch(headless=True,executable_path=shutil.which('chromium'),args=['--no-sandbox']);ctx=b.new_context(viewport={'width':320,'height':240},record_video_dir=str(out/'video'));page=ctx.new_page();page.set_content('<body style="background:#196840;color:white">Actual local FFmpeg recording</body>');page.wait_for_timeout(1200);video=page.video;ctx.close();path=Path(video.path());b.close()
+probe=json.loads(subprocess.check_output(['ffprobe','-v','error','-show_streams','-show_format','-of','json',str(path)],text=True));stream=next(s for s in probe['streams']if s['codec_type']=='video');assert stream['codec_name']=='vp8';assert stream['width']>0 and float(probe['format']['duration'])>0
+version=subprocess.check_output(['ffmpeg','-version'],text=True).splitlines()[0]
+r={'passed':True,'cause':'Playwright video encoder absent in the explicitly selected browser directory; initial main-plan process failed before opening the game page.','officialInstall':'Attempt failed HTTP403 Domain forbidden; full log preserved. No domain-policy bypass.','localRemedy':'Existing distribution FFmpeg /usr/bin/ffmpeg linked at the encoder executable path required by Playwright. This is the system encoder, not a claimed official Playwright download.','ffmpegVersion':version,'ffmpegSHA256':hashlib.sha256(Path('/usr/bin/ffmpeg').read_bytes()).hexdigest(),'smokeVideo':{'file':str(path.relative_to(q)),'sha256':hashlib.sha256(path.read_bytes()).hexdigest(),'codec':stream['codec_name'],'width':stream['width'],'height':stream['height'],'duration':float(probe['format']['duration'])},'runtimeAndTestSourcesChanged':False,'scope':'Only dependency readiness/actual video encoding; not a game PASS.'}
+(out/'result.json').write_text(json.dumps(r,ensure_ascii=False,indent=2)+'\n');print(json.dumps(r))

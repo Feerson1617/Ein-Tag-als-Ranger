@@ -1,0 +1,22 @@
+{
+  "boards": 36,
+  "platforms": 36,
+  "startGuide": "within reading distance at spawn",
+  "route": "entire centerline walkable at half-meter intervals",
+  "vegetation": "platform centers kept clear",
+  "boundaries": "city and farmland walkable; houses and outer edge blocked",
+  "animals": "no sign intersections during 30 seconds in each actual habitat",
+  "plants": 30549,
+  "routeLength": 734.6898679755535,
+  "regionalPlants": {
+    "forest": 9127,
+    "meadow": 7195,
+    "city": 2955,
+    "lake": 1484,
+    "beach": 1290,
+    "wadden": 1826,
+    "farmland": 4299,
+    "saltmarsh": 2373
+  },
+  "wheat": 2365
+}

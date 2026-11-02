@@ -1,0 +1,32 @@
+{
+  "sourceCommit": "e9899efaa314d052191d7d3a95b5de904f2932b6",
+  "htmlSHA256": "87ff215191f543c1d91cadeef0ecf14c98012ff1f2b0c9866df0bbe2fd6494b8",
+  "passed": true,
+  "budgetSecondsPerWalkedSegment": 900,
+  "entireProcessSeconds": 942.252,
+  "segments": [
+    {
+      "name": "full-main-route",
+      "actualSeconds": 667.4160906150064,
+      "sampledTravelMeters": 360.7827071843818,
+      "modelSeconds": 225.514
+    },
+    {
+      "name": "return-to-study-spur",
+      "actualSeconds": 125.06940173399926,
+      "sampledTravelMeters": 41.80746349847625,
+      "modelSeconds": 26.53800000000001
+    },
+    {
+      "name": "study-spur",
+      "actualSeconds": 35.35561112500727,
+      "sampledTravelMeters": 9.782367259279281,
+      "modelSeconds": 6.1299999999999955
+    }
+  ],
+  "feedingSequences": 8,
+  "scope": "Original unchanged default driver. The900s guard applies to EACHwalked segment, not the entire process. Full-main667s fits the original guard; entire942s process includesreturn/spur/eightobservations/export. No total-process<900s or physical30FPS claim. Historical936FAILs remainFAIL.",
+  "historical936Status": "FEHLGESCHLAGEN",
+  "newActualStatus": "BESTANDEN",
+  "physicalDeviceAndPilot": "NICHT GEPRÜFT"
+}

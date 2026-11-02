@@ -1,0 +1,294 @@
+{
+  "entry": "Ranger-Kompakt.html",
+  "htmlSHA256": "b61a35456fcd6253ed6693d7fa8031f3ae5b7ca48502837d744c82b3dfc227b4",
+  "sourceCommit": "3920a1d1d2692889b75403c1b0e50f5b856398aa",
+  "sourceDirty": false,
+  "runtimeSourceHashes": {
+    "assets/boardwalk-wood.webp": "4d06022133e3772534374671fb73a4509ed109e1db6ca06a2d62a8c99c47ac6d",
+    "assets/compact-roe-deer.glb": "a89400df66033eb5eaa7f9bf13ccefaacfb866ab24e4576574d11965354ee619",
+    "assets/sky-panorama.webp": "46c360b491b11269d280e73ec0e71869afdfd62fb543b4250713234374a2f71d",
+    "assets/terrain-atlas.webp": "d637324d3ace6ef8e2c549e7f0a513efd1a4c06aab927f0ed1565bf77b2ced02",
+    "assets/wildlife-fox.glb": "61a4d1b845aa406928a327648417ae1c3982510b9c4e8ce33b7c494fbc98a22f",
+    "compact/catalog.js": "6b693d4c6a0f6b880b9ff99295826f3968e61ba96f52606997a1635ddf1fe39f",
+    "compact/coastal-behaviour.js": "39b1dcb8691cd48850321c4c734eabf0b2875b91a8cd09dcd7b571758b0f0927",
+    "compact/coastal-rig.js": "92a0270abdbf3aee7467e466cf344b08b8ef8bf5af4d903d3c672f9bcd4e2513",
+    "compact/comparison-views.js": "050f629dfc0b3b9bac1badc0c0564cfb08cf88e92006edcba377eabc623ecf82",
+    "compact/determination.js": "25f8ce960dba09ebeeb4470530d38608809bf98aa91d3575716b6ff835145c6f",
+    "compact/ecology.js": "e50f25a3146e79671472e7a5e6ed1d78f007564515bf9a78bb67fac9695ef8e0",
+    "compact/evidence.js": "0a6216bca6fdd1aa0e091a62ed62f57b04e83cfc8a597e294d6e18e8db61712d",
+    "compact/expanded-view.js": "74590c5e35ac021217b32ff5f2c5091da29ab78eaa38a43c460318dd8e6d6382",
+    "compact/fauna-view.js": "6d968276c131fb16ad2ecf073debb6f00b853f3742113e80ae35fe0b04c5b4f0",
+    "compact/geometry.js": "ac8a5e08a56f7ed75abb7a65baa6e20aba032984d7089e3b290d4769dd4307b0",
+    "compact/habitats.js": "e5448a68391c3b8f5c99219a39e3b79762ae651343cd870f0c99c4ac3a8b0e16",
+    "compact/inspection.js": "961c8c13e8e8e58595460fa40ed7bed0668367b120081dd95961a78ca87300ea",
+    "compact/journal.js": "e0c991989742c5ad3326ca63a7ba7ba033e89a5f23b74b648858ab10b67f1812",
+    "compact/layout.js": "e02558557a9c99fa0549c94f8cbfc8873e18f3c90df845155d51ee4d404209a6",
+    "compact/learning-documents.js": "53a2c78930b1a164c618bdfb91a49701076bf94fe22a8f990afca70402bc0173",
+    "compact/learning-models.js": "ac5200d27a29dc17ab2000a90554990a2a632532e920f887026407d0cfd2c20e",
+    "compact/learning-ui.js": "d590710b949bca8f47770bebb37d08adcc3d53ee7855eb9edf0d7d9196852e7b",
+    "compact/lesson-layouts.js": "38df6da54b9615722acef34264832c757c753b2ea250f0c14fe571d7f267ba10",
+    "compact/lesson-resources.js": "44b2f2ac295e374f6ba8e1351ca19dc01b10099bf0e3faba791c957bfae18f7b",
+    "compact/main.js": "17d0a0f69b37911606def302eff5c188098e49f4133893e15557b4dfd0c37714",
+    "compact/management.js": "e6d38fbfc2c7e131d60ca3e38a1c740ca9ba5c49628fd3ba51ca94242d2d75a3",
+    "compact/manifest.js": "c89f2dd2635407d111a195a806b7ea3f40101054883d65197175c748e3f652e6",
+    "compact/materials.js": "81b0144dd99d1392599406840614c613a9e81427382b8f628d6a5aa950f71b74",
+    "compact/missions.js": "8f8151a6b499658b1316ee57ac6fd4d4e94a980b5baf0e943ca2678edd03bfca",
+    "compact/observation-context.js": "eb320373daffbdefa9e99e2a59fdb1421d2b21c8ced15ab5f88fc567f9428080",
+    "compact/observation-schema.js": "1ab043f3d6f7b61ea00eea1510da71b897f0e6dcc52a934d4acae9c17d3e773e",
+    "compact/organism-models.js": "7cf080fb497a17d58ce4d1672ffc5cef12b7f2c033a336384e4aead7dfc27cb6",
+    "compact/path-mesh.js": "7a41ebc390aeca96cffd1e4fcee19f3b76310413fcee3489d1533ebd599a4c82",
+    "compact/style.css": "fa3e0391ced503e62691704482dfcd500f73e81aa43c0abb9559c0e7491b378b",
+    "compact/task-schema.js": "e2578f580e0f018fe7903bc6486873dd6cdf050bfcd9719798d6e6e1462c2d01",
+    "compact/taxa.js": "97cd6f5bad16208408512be876ebf63d5f9ee400dd31f94a61c8ca08e4e24fd3",
+    "compact/vegetation-view.js": "7e6f703c9a930a86dd2c9b202a79bf7842f4d1f41bf9a2a27d3ef24b3b22e47a",
+    "compact/village-view.js": "15d1902cbb96678503051ba0b11494d0ceea412dbc193f18bf16b0bfe9d91b03",
+    "compact/village.js": "05acf2a5ff040e4de2aaf2c3ebc3ee88daaf2edc75d12e80d49a5f54a60a3aec",
+    "compact/visibility.js": "50d59d44257e9d18547bfaec9277366d3339177c6ebce37d948b48c9940a86f1",
+    "compact/world-state.js": "360197f8bd8ab54c595386b66f2e676499630bc6ca896856034fba4910d9fd7f",
+    "compact/world-view.js": "024ef8803fcf0b8995caa6a72ca52468a4562d01194e8f2f678e4ed537b24a06",
+    "field-guide.js": "8bb0d901798611f74cabb0859b92cead469e7237c68afa67a73f352c7bfcb1bf",
+    "icon.svg": "cb8cda889f99e56d13d18e09929837b7c3630d3f9ff3219316d12d3077fc0869",
+    "kompakt.html": "781393f0611a24e8ce757e87124a6347c28f21c1132689c6e198cf421ccd6aa4",
+    "observation-clock.js": "2304e6c425192967f87841caa5072873cb5dd5c7f69c38fb45b237fd22f98b03",
+    "ranger-controls.js": "081497a5f6754ecd441e61ee55805da99b5121e96215cfa900209e00e41e5eda",
+    "station-protocol.js": "2590df7d9de4c8f4afda8fcafd619d565440c2dc7e1bb6ef4574aeadf803ae57",
+    "vendor/three.core.js": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20",
+    "vendor/three.module.js": "2884e2e6f26feaec0b454fcdc1e98c27d6433ba15253e5a3e22e111df81686fa",
+    "wildlife-glb.js": "32f8f947dd002ba7b571ee627e6291fa40a951fccdd9dee644661f19de487c35"
+  },
+  "startedAt": "2026-10-23T09:04:59Z",
+  "checks": [
+    {
+      "name": "36 active entries; five optional families initially incomplete, free play remains available",
+      "passed": true
+    },
+    {
+      "name": "K1 earned from three different actual model observations, justified uncertainty and two same-method sites",
+      "passed": true
+    },
+    {
+      "name": "K1 blind labels, plausible wrong choice rejected, uncertainty retained and actual unseen oak transfer earned as justified group",
+      "passed": true
+    },
+    {
+      "name": "K2 real control/competitor runs; co-presence answer rejected, controlled resource explanation accepted",
+      "passed": true
+    },
+    {
+      "name": "K3 earned with same individual after negative different-individual attempt; eA Q1/Q2/Q0 and true zero recorded",
+      "passed": true
+    },
+    {
+      "name": "K4 own fungus observation plus explicit section-model edges; false energy cycle rejected",
+      "passed": true
+    },
+    {
+      "name": "K5 rejects forest-only evidence and accepts a real coastal-plant link with weights, separate fact/value/norm/consequence, three local dialogues and ungraded argument",
+      "passed": true
+    },
+    {
+      "name": "visible slow-render warning keeps objective and study controls unobscured",
+      "passed": true,
+      "warningVisible": false,
+      "computedLayout": {
+        "warningTop": 196,
+        "controlBottom": 179
+      }
+    },
+    {
+      "name": "real reload preserves all acquired answers/evidence and recomputes five statuses; actual JSON and readable report downloads",
+      "passed": true
+    },
+    {
+      "name": "contradictory imported scene protocol rejected by real file input without replacing saved work",
+      "passed": true
+    },
+    {
+      "name": "controlled experiment with contradictory initial seed rejected by actual import without altering old work",
+      "passed": true
+    },
+    {
+      "name": "malformed nested task answer rejected atomically before it can break mission rendering",
+      "passed": true
+    },
+    {
+      "name": "quota during real answer editing leaves old storage intact and exports current uncommitted work",
+      "passed": true
+    },
+    {
+      "name": "all 25 student/teacher cards download and five actual numeric models produce plots, full tables and provenance downloads",
+      "passed": true
+    },
+    {
+      "name": "actual WebGL loss in magnified view cancels evidence; closing releases the inspection context",
+      "passed": true
+    },
+    {
+      "name": "actual v1 boot migration preserves original compact file and large-world key without new observations/credit",
+      "passed": true
+    },
+    {
+      "name": "requested iPad 9 viewport approximation: touch movement, automatic tablet pixel cap, portrait/landscape, dialogs and acquired evidence",
+      "passed": true,
+      "scope": "Chromium touch emulation, 1080x810 and 810x1080, DPR2; no actual Apple hardware, Safari or iPadOS 27 certification"
+    }
+  ],
+  "errors": [],
+  "captures": [
+    {
+      "file": "K1-earned.png",
+      "sha256": "34b299713e70f340743fe237b69444dca3ab3273b20ad42fd2a80b6aa436217a",
+      "bytes": 233164,
+      "source": "actual browser screenshot"
+    },
+    {
+      "file": "K1-transfer.png",
+      "sha256": "7f417d862c57644e78c489bb33ac085e981f2093b3a78fa8db6068d4d10526cf",
+      "bytes": 235852,
+      "source": "actual browser screenshot"
+    },
+    {
+      "file": "K2-earned.png",
+      "sha256": "b2670dfb4558c02bf4e1365dca664409931744a4631adeb9b467c0a92ac61b0b",
+      "bytes": 222692,
+      "source": "actual browser screenshot"
+    },
+    {
+      "file": "K3-earned.png",
+      "sha256": "66311571db3bc26dafcb1c846876ddb95123bc6d3f2e5d932ea9698a71136e95",
+      "bytes": 217614,
+      "source": "actual browser screenshot"
+    },
+    {
+      "file": "K4-earned.png",
+      "sha256": "b8769d913c2edb96dfb267341b3143b40ef7f8dbd4de27d827f28d5aeb154610",
+      "bytes": 208141,
+      "source": "actual browser screenshot"
+    },
+    {
+      "file": "K5-forest-rejected.png",
+      "sha256": "d4ce6fd66fc79e3159a01514220737871556d5d53f154a848384940e5ca70eaf",
+      "bytes": 206996,
+      "source": "actual browser screenshot"
+    },
+    {
+      "file": "K5-earned.png",
+      "sha256": "9d2d9783619ea313fa9ef02d521a41ae013a882ef97e3692df6a6c9cb2816bc7",
+      "bytes": 224797,
+      "source": "actual browser screenshot"
+    },
+    {
+      "file": "tablet-landscape.png",
+      "sha256": "56705d00f75df383f7f084ccdf273db351c39d37b1064371932e5fbe757b9596",
+      "bytes": 2427885,
+      "source": "actual browser screenshot"
+    },
+    {
+      "file": "tablet-portrait.png",
+      "sha256": "d317b983a47a5cf8bed504620e4507a37f658699de1a2fd6914aaf044e2a7b3c",
+      "bytes": 1140862,
+      "source": "actual browser screenshot"
+    }
+  ],
+  "hardwareScope": "Cloud Chromium, software graphics; no actual Safari/iPad/Mac or classroom pilot",
+  "browserVersion": "154.0.8037.57",
+  "boots": [
+    {
+      "readyMilliseconds": 1677.699999999255,
+      "transferBytes": 11953636,
+      "encodedBodyBytes": 11953336,
+      "resourceCount": 0
+    },
+    {
+      "readyMilliseconds": 1441.4000000003725,
+      "transferBytes": 11953636,
+      "encodedBodyBytes": 11953336,
+      "resourceCount": 0
+    },
+    {
+      "readyMilliseconds": 1403,
+      "transferBytes": 11953636,
+      "encodedBodyBytes": 11953336,
+      "resourceCount": 0
+    },
+    {
+      "readyMilliseconds": 1535.300000000745,
+      "transferBytes": 11953636,
+      "encodedBodyBytes": 11953336,
+      "resourceCount": 0
+    }
+  ],
+  "inspectionPointerChecks": [
+    {
+      "x": 262.9765625,
+      "y": 267.890625,
+      "width": 309.953125,
+      "height": 44,
+      "inViewport": true,
+      "hit": true,
+      "visibility": "visible",
+      "focused": true
+    },
+    {
+      "x": 262.1015625,
+      "y": 317.890625,
+      "width": 308.203125,
+      "height": 44,
+      "inViewport": true,
+      "hit": true,
+      "visibility": "visible",
+      "focused": true
+    },
+    {
+      "x": 262.09375,
+      "y": 318.4375,
+      "width": 308.1875,
+      "height": 44,
+      "inViewport": true,
+      "hit": true,
+      "visibility": "visible",
+      "focused": true
+    },
+    {
+      "x": 298.015625,
+      "y": 365.9375,
+      "width": 310.84375,
+      "height": 44,
+      "inViewport": true,
+      "hit": true,
+      "visibility": "visible",
+      "focused": true
+    },
+    {
+      "x": 367.953125,
+      "y": 365.9375,
+      "width": 225.5,
+      "height": 44,
+      "inViewport": true,
+      "hit": true,
+      "visibility": "visible",
+      "focused": true
+    },
+    {
+      "x": 259.1328125,
+      "y": 365.9375,
+      "width": 240.609375,
+      "height": 44,
+      "inViewport": true,
+      "hit": true,
+      "visibility": "visible",
+      "focused": true
+    },
+    {
+      "x": 267.9765625,
+      "y": 507.4375,
+      "width": 309.953125,
+      "height": 44,
+      "inViewport": true,
+      "hit": true,
+      "visibility": "visible",
+      "focused": true
+    }
+  ],
+  "completedAt": "2026-10-23T09:06:45Z"
+}

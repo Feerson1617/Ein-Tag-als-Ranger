@@ -1,0 +1,14 @@
+{
+  "passed": 8,
+  "tests": [
+    "F08 four plants remain opaque until a valid own determination; wrong/uncertain/group decisions never disclose species",
+    "F08 unseen oak transfer supports a justified group while rejecting a plausible wrong species/feature",
+    "F10 every option remains possible with relevant evidence; forest-only, unrelated links and incomplete weighing fail",
+    "F01 new management and determination inputs reject malformed imports while legitimate wrong answers stay editable",
+    "F11 fixation first creates mineral ammonium; assimilation is a separate bounded material flow",
+    "F11 balance, oxygen, all-zero substrate and independently disabled fluxes remain consistent",
+    "F09 six local resources contain actual information/data, exact sources, tasks, differentiated help and expectations",
+    "F13 all 25 worksheets offer appropriate product forms and teacher feedback without external requests"
+  ],
+  "scope": "Model, validation and HTML-source checks only. No classroom learning-effect or physical iPad claim."
+}

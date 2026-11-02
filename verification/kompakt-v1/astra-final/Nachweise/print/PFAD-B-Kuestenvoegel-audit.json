@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "pageCount": 2,
+  "checkedTextFragments": 32,
+  "sha256": "adcd3e06733043200ee9daf67eec1d312ada7c3dc976e9fe127b9ba7460a5ecf",
+  "scope": "Exact two-page A4 and all body-text fragments; visual review separate",
+  "pageImages": [
+    {
+      "file": "PFAD-B-Kuestenvoegel-pages/page-1.png",
+      "sha256": "2c9f910d8593bd9bd28f9353d669fbda96b1da060ad1f31acdfc9a38b3dc466e"
+    },
+    {
+      "file": "PFAD-B-Kuestenvoegel-pages/page-2.png",
+      "sha256": "37925fde91da0616c14a20dfa8ea908c6cea9b10f667dd57b64c99577199b4fe"
+    }
+  ]
+}

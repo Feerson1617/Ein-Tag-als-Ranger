@@ -1,0 +1,5 @@
+PASS all four valid zero-population boundary cases produce finite zero curves, full tables and native JSON exports
+PASS positive numerical overflow is rejected and removes the preceding zero result
+PASS a subsequent valid zero calculation clears the previous overflow message
+PASS native form validation rejects negative, fractional and missing input; theoretical calculations do not alter the saved fieldbook
+{"passed": true, "checks": 4, "captures": 5}

@@ -1,0 +1,16 @@
+{
+  "version": "0.14",
+  "cottages": 5,
+  "gardenPlants": 420,
+  "boards": 36,
+  "sealMinimumBodyGap": 0.13000550525222604,
+  "sealIdentity": "unchanged after five minutes",
+  "bees": {
+    "workers": 8,
+    "deliveries": 306,
+    "foodStock": 33.759600000000034,
+    "pollenTransfers": 580
+  },
+  "focusing": "unknown priority, stable identity, enlarged visible capture",
+  "journal": "all 168 species have descriptive profiles, actual bee sighting unlocks the entry"
+}

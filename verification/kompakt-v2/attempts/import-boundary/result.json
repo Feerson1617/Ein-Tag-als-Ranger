@@ -1,0 +1,22 @@
+{
+  "scope": "Read-only reproduction against a locally copied, actually UI-earned fieldbook; no game state or storage mutation.",
+  "cases": [
+    {
+      "beforeCommit": "de156fb",
+      "mutation": "learning.experiments[1].initialSeed += 1",
+      "observed": {
+        "contradictionAccepted": true,
+        "K2Complete": true
+      },
+      "fix": "Validate parameters.seed against initialSeed and include experiments in the shared run-context validator."
+    },
+    {
+      "beforeCommit": "6f8465e",
+      "mutation": "learning.answers.K1.determinations = 1",
+      "observed": "MALFORMED_ACCEPTED; TypeError: (a.determinations || []).filter is not a function",
+      "fix": "Validate known nested answer/draft collections and text types before storing or rendering; preserve valid incomplete answers."
+    }
+  ],
+  "afterCommit": "6a8745b",
+  "regressions": "tests/compact-learning-check.mjs final three groups and actual file-input negative checks in tools/browser-compact-learning.py"
+}

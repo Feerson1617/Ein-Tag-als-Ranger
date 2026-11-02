@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 2,
+  "worldVersion": "ranger-compact-v2",
+  "records": [
+    {
+      "id": "audit-old",
+      "runId": "run-A",
+      "taxon": "ixodes_ricinus",
+      "individualId": "compact-tick",
+      "worldVersion": "ranger-compact-v2",
+      "initialSeed": 20260825,
+      "modelRevision": 4,
+      "window": "summer",
+      "source": "own-observation",
+      "observationSeconds": 3,
+      "simulationTime": 30.000000000000156,
+      "x": -65.25699999999973,
+      "z": 2.1839999999999993,
+      "siteId": "compact-forest-core",
+      "method": "magnified-active-model",
+      "note": "Explizite Import-Konsistenzfixture aus realen Modellereignissen; keine echte Sichtung.",
+      "events": [
+        {
+          "id": "ranger-compact-v2:summer:9",
+          "interaction": "tick-deer",
+          "actors": [
+            "compact-tick",
+            "compact-deer-1"
+          ],
+          "resourceId": "compact-deer-1",
+          "resource": "deer-host",
+          "startedAt": 12.299999999999965,
+          "endedAt": 14.299999999999965,
+          "before": 1,
+          "after": 1,
+          "outcome": "attached-feeding",
+          "source": "model-event",
+          "window": "summer",
+          "interpretation": {
+            "kind": "parasitism",
+            "limit": "Adulte Zecke am konkreten Wirt; relative Kosten nur Ergänzungsmodell",
+            "reference": "S22"
+          },
+          "cost": "qualitative; not a calibrated blood-loss rate"
+        }
+      ]
+    },
+    {
+      "id": "audit-new",
+      "runId": "run-A",
+      "taxon": "lumbricidae",
+      "individualId": "compact-earthworm",
+      "worldVersion": "ranger-compact-v2",
+      "initialSeed": 20260825,
+      "modelRevision": 4,
+      "window": "summer",
+      "source": "own-observation",
+      "observationSeconds": 3,
+      "simulationTime": 30.000000000000156,
+      "x": -61,
+      "z": -2.7,
+      "siteId": "compact-forest-core",
+      "method": "magnified-active-model",
+      "note": "Explizite Import-Konsistenzfixture aus realen Modellereignissen; keine echte Sichtung.",
+      "events": [
+        {
+          "id": "ranger-compact-v2:summer:9",
+          "interaction": "worm-litter",
+          "actors": [
+            "compact-earthworm"
+          ],
+          "resourceId": "compact-leaf-litter",
+          "resource": "leaf-litter",
+          "startedAt": 8.19999999999998,
+          "endedAt": 10.19999999999998,
+          "before": 6,
+          "after": 5,
+          "outcome": "pulled-into-soil",
+          "source": "model-event",
+          "window": "summer",
+          "interpretation": {
+            "kind": "detritus",
+            "limit": "Streueinzug; vollständige Mineralisierung ist ein anderer Prozess",
+            "reference": "S55"
+          },
+          "mineralized": false
+        }
+      ]
+    }
+  ],
+  "archives": [],
+  "previousEditions": [],
+  "learning": {
+    "activeMission": null,
+    "level": "gA",
+    "answers": {
+      "K2": {
+        "caseId": "worm-litter",
+        "claim": "event-with-resource",
+        "alternative": "not-full-mineralization",
+        "reasoning": "An dieser Stelle ein bewusst falscher Altbezug, danach gezielter Korrekturfall.",
+        "eventIds": [
+          "ranger-compact-v2:summer:9"
+        ]
+      }
+    },
+    "protocols": [],
+    "measurements": [],
+    "samples": [],
+    "experiments": [],
+    "drafts": {
+      "K2": {
+        "caseId": "worm-litter",
+        "claim": "event-with-resource",
+        "alternative": "not-full-mineralization",
+        "reasoning": "An dieser Stelle ein bewusst falscher Altbezug, danach gezielter Korrekturfall.",
+        "eventIds": [
+          "ranger-compact-v2:summer:9"
+        ]
+      }
+    }
+  }
+}

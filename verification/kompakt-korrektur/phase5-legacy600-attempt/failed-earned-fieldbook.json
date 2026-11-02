@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 3,
+  "entries": {},
+  "interactions": [],
+  "learning": {
+    "version": 1,
+    "activeMission": "m3",
+    "missions": {
+      "m3": {
+        "version": 1,
+        "startedAt": 1792696406871,
+        "hypothesis": "Wasserbedeckung verändert mögliche Filtration und Erreichbarkeit.",
+        "reflection": "",
+        "answers": {},
+        "determinations": [],
+        "helpLevel": 0,
+        "complete": false
+      }
+    },
+    "observations": [
+      {
+        "id": "beleg-1792696646328-1",
+        "missionId": "m3",
+        "missionVersion": 1,
+        "helpLevel": 0,
+        "certainty": null,
+        "interpretation": null,
+        "source": "model-protocol",
+        "taxon": "cerastoderma_edule",
+        "partnerIds": [
+          "wadden:138"
+        ],
+        "scene": {
+          "habitat": "wadden",
+          "seed": 1219,
+          "runId": "59df7536-1496-4ce5-a07e-1bc601085fbe",
+          "scenario": null
+        },
+        "siteId": "probe-2",
+        "simulationTime": 6.468199999999995,
+        "duration": 6.143199999999995,
+        "tidePhase": 0,
+        "waterLevel": -0.9,
+        "sampleDepth": 5,
+        "present": true,
+        "observedFact": "Freigelegte Herzmuschel; Wasserstand -0.90 Modellmeter; Zustand resting",
+        "evidence": {
+          "kind": "station",
+          "activity": "resting"
+        }
+      }
+    ]
+  }
+}

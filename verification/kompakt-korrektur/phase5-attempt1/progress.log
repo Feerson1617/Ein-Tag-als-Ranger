@@ -1,0 +1,15 @@
+START source 14:59:16
+{"name": "source", "command": ["/workspace/.ranger-clean-venv/bin/python", "tools/browser-compact-source.py"], "exitCode": 0, "passed": true, "seconds": 93.99, "log": "source.log"}
+START reference 15:00:50
+{"name": "reference", "command": ["/workspace/.ranger-clean-venv/bin/python", "tools/browser-compact.py"], "exitCode": 0, "passed": true, "seconds": 755.01, "log": "reference.log"}
+START standalone-smoke 15:13:25
+{"name": "standalone-smoke", "command": ["/workspace/.ranger-clean-venv/bin/python", "tools/browser-compact.py", "--site", "outputs", "--entry", "Ranger-Kompakt.html", "--smoke"], "exitCode": 0, "passed": true, "seconds": 272.56, "log": "standalone-smoke.log"}
+START learning-web 15:17:57
+{"name": "learning-web", "command": ["/workspace/.ranger-clean-venv/bin/python", "tools/browser-compact-learning.py", "--gallery"], "exitCode": 1, "passed": false, "seconds": 261.01, "log": "learning-web.log"}
+START learning-standalone 15:22:18
+{"name": "learning-standalone", "command": ["/workspace/.ranger-clean-venv/bin/python", "tools/browser-compact-learning.py", "--site", "outputs", "--entry", "Ranger-Kompakt.html", "--output", "work/compact-learning-standalone"], "exitCode": 0, "passed": true, "seconds": 400.74, "log": "learning-standalone.log"}
+START imports 15:28:59
+{"name": "imports", "command": ["/workspace/.ranger-clean-venv/bin/python", "tools/browser-compact-imports.py", "--output", "work/qa-correction/final-imports"], "exitCode": 0, "passed": true, "seconds": 89.7, "log": "imports.log"}
+START feeding 15:30:29
+{"name": "feeding", "command": ["/workspace/.ranger-clean-venv/bin/python", "tools/browser-compact-feeding.py", "--output", "work/qa-correction/final-feeding"], "exitCode": 1, "passed": false, "seconds": 50.7, "log": "feeding.log"}
+START habitats 15:31:20

@@ -1,0 +1,10 @@
+PASS F01 rejects the exact reconstructed top-level features-object import
+PASS F01 every UI-consumed scalar/list and nested determination rejects wrong types
+PASS F01 invalid enum choices and dangling references cannot enter persisted forms
+PASS F01 rejected imports preserve old storage bytes and every valid observation
+PASS F01 damaged persisted draft offers explicit recovery, keeping original bytes and valid fields
+PASS F01 quota during explicit recovery leaves the original damaged storage untouched
+PASS F04 rejects impossible coordinates, unknown methods/windows/sites and wrong fixed plants
+PASS F04 isolated observations reject falsy/prototype window names and explicit invalid revisions; omitted older fields remain readable
+PASS F04 actually acquired older v2 fieldbook and all five mission answers remain readable
+{"passed":9}

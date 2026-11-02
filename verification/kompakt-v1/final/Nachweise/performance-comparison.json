@@ -1,0 +1,87 @@
+{
+  "sourceCommit": "e9899efaa314d052191d7d3a95b5de904f2932b6",
+  "htmlSHA256": "87ff215191f543c1d91cadeef0ecf14c98012ff1f2b0c9866df0bbe2fd6494b8",
+  "scope": "Bounded before/current profile under actual Cloud Chromium software graphics. Historical red900s contract and future real-hardware30FPS/p95<=50ms remain separate; successful measurement is not a performance PASS. Baseline lacks newly added CPU/raycast instrumentation, explicitly null.",
+  "hardwarePerformanceAcceptance": "NICHT GEPRÜFT",
+  "software30FPSTargetMet": false,
+  "rows": [
+    {
+      "state": "forest",
+      "before936": {
+        "fps": 1.4760873843728453,
+        "frameP95ms": 1500,
+        "wallSeconds": 15.022875360009493,
+        "modelSeconds": 0.9950000000000001,
+        "trianglesAtEnd": "927227",
+        "callsAtEnd": "36",
+        "raycastAndSubmissionTimings": null
+      },
+      "current": {
+        "fps": 1.7362966128853008,
+        "frameP95ms": 633.3000000000029,
+        "wallSeconds": 15.001283233999857,
+        "modelSeconds": 1.5940000000000003,
+        "trianglesAtEnd": "562922",
+        "callsAtEnd": "127",
+        "medianWorldSubmissionWallMs": 1.3000000044703484,
+        "medianDetailSubmissionWallMs": 0.0,
+        "medianRaycasts": 0.0,
+        "medianRaycastWallMs": 0.0,
+        "samples": 26
+      },
+      "scope": "Sequential15s software-graphics sample. Model progress and display workload differ where the camera fix intentionally changes the actual view. CPU submission wall intervals can include driver blocking; no GPU timer or real-device speed claim."
+    },
+    {
+      "state": "coast",
+      "before936": {
+        "fps": 1.4450369860660113,
+        "frameP95ms": 1533.2000000000116,
+        "wallSeconds": 15.00366532499902,
+        "modelSeconds": 1.0909999999999993,
+        "trianglesAtEnd": "817195",
+        "callsAtEnd": "62",
+        "raycastAndSubmissionTimings": null
+      },
+      "current": {
+        "fps": 1.4144462106312468,
+        "frameP95ms": 1383.300000000003,
+        "wallSeconds": 15.003884908001055,
+        "modelSeconds": 1.2379999999999995,
+        "trianglesAtEnd": "782173",
+        "callsAtEnd": "362",
+        "medianWorldSubmissionWallMs": 2,
+        "medianDetailSubmissionWallMs": 0,
+        "medianRaycasts": 0,
+        "medianRaycastWallMs": 0,
+        "samples": 21
+      },
+      "scope": "Sequential15s software-graphics sample. Model progress and display workload differ where the camera fix intentionally changes the actual view. CPU submission wall intervals can include driver blocking; no GPU timer or real-device speed claim."
+    },
+    {
+      "state": "detail",
+      "before936": {
+        "fps": 4.976630014459127,
+        "frameP95ms": 400,
+        "wallSeconds": 15.002026261994615,
+        "modelSeconds": 4.457,
+        "trianglesAtEnd": "179823",
+        "callsAtEnd": "66",
+        "raycastAndSubmissionTimings": null
+      },
+      "current": {
+        "fps": 5.1377175189474595,
+        "frameP95ms": 266.6000000000058,
+        "wallSeconds": 15.003615237001213,
+        "modelSeconds": 4.716,
+        "trianglesAtEnd": "103913",
+        "callsAtEnd": "86",
+        "medianWorldSubmissionWallMs": 1.0999999940395355,
+        "medianDetailSubmissionWallMs": 1.4000000059604645,
+        "medianRaycasts": 3,
+        "medianRaycastWallMs": 0.4000000059604645,
+        "samples": 77
+      },
+      "scope": "Sequential15s software-graphics sample. Model progress and display workload differ where the camera fix intentionally changes the actual view. CPU submission wall intervals can include driver blocking; no GPU timer or real-device speed claim."
+    }
+  ]
+}

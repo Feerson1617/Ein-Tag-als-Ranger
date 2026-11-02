@@ -1,0 +1,349 @@
+{
+  "schemaVersion": 3,
+  "entries": {
+    "galium_odoratum": {
+      "found": 1792748289764,
+      "habitat": "forest",
+      "individualId": "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896",
+      "status": "discovered",
+      "method": "program-information",
+      "behaviors": [],
+      "determination": {
+        "status": "feature-based",
+        "recordId": "beleg-1792748295239-1",
+        "features": [
+          "galium_odoratum:0",
+          "galium_odoratum:1"
+        ]
+      }
+    },
+    "urtica_dioica": {
+      "found": 1792748307561,
+      "habitat": "forest",
+      "individualId": "plant:forest:urtica_dioica:-6.845648559704423:16.320030897269024:0.2204451317624856",
+      "status": "discovered",
+      "method": "program-information",
+      "behaviors": [],
+      "determination": {
+        "status": "feature-based",
+        "recordId": "beleg-1792748312544-2",
+        "features": [
+          "urtica_dioica:0",
+          "urtica_dioica:1"
+        ]
+      }
+    },
+    "fagus_sylvatica": {
+      "found": 1792748326442,
+      "habitat": "forest",
+      "individualId": "plant:forest:fagus_sylvatica:-8.603866083323956:9.19744166530203:0.006750873364684044",
+      "status": "discovered",
+      "method": "program-information",
+      "behaviors": [],
+      "determination": {
+        "status": "uncertain-group",
+        "recordId": "beleg-1792748337409-3",
+        "features": []
+      }
+    }
+  },
+  "interactions": [],
+  "learning": {
+    "version": 1,
+    "activeMission": null,
+    "missions": {
+      "m1": {
+        "version": 1,
+        "startedAt": 1792748267309,
+        "hypothesis": "",
+        "reflection": "",
+        "answers": {},
+        "determinations": [
+          {
+            "recordId": "beleg-1792748295239-1",
+            "answer": {
+              "taxon": "galium_odoratum",
+              "features": [
+                "galium_odoratum:0",
+                "galium_odoratum:1"
+              ],
+              "certainty": "certain",
+              "group": "",
+              "reason": ""
+            },
+            "result": {
+              "ok": true,
+              "uncertain": false,
+              "message": "Zwei passende Merkmale dokumentiert. Die Referenzzuordnung ersetzt keine allgemeine Artvalidierung."
+            },
+            "time": 1792748354465
+          },
+          {
+            "recordId": "beleg-1792748312544-2",
+            "answer": {
+              "taxon": "urtica_dioica",
+              "features": [
+                "urtica_dioica:0",
+                "urtica_dioica:1"
+              ],
+              "certainty": "certain",
+              "group": "",
+              "reason": ""
+            },
+            "result": {
+              "ok": true,
+              "uncertain": false,
+              "message": "Zwei passende Merkmale dokumentiert. Die Referenzzuordnung ersetzt keine allgemeine Artvalidierung."
+            },
+            "time": 1792748365549
+          },
+          {
+            "recordId": "beleg-1792748337409-3",
+            "answer": {
+              "taxon": "fagus_sylvatica",
+              "features": [],
+              "certainty": "uncertain",
+              "group": "Buchen",
+              "reason": "model-limited"
+            },
+            "result": {
+              "ok": true,
+              "uncertain": true,
+              "message": "Begründete unsichere Gruppenbestimmung dokumentiert."
+            },
+            "time": 1792748369239
+          }
+        ],
+        "helpLevel": 0,
+        "complete": true,
+        "completedAt": 1792748372914
+      },
+      "m2": {
+        "version": 1,
+        "startedAt": 1792748380258,
+        "hypothesis": "Ich vermute, dass beide dieselbe begrenzte Nahrung nutzen.",
+        "reflection": "",
+        "answers": {
+          "recordId": "beleg-1792748515722-4",
+          "provenance": "model-protocol",
+          "counterexample": "insufficient",
+          "relation": "inter",
+          "claims": [
+            "same-resource",
+            "finite",
+            "effect"
+          ]
+        },
+        "determinations": [],
+        "helpLevel": 0,
+        "complete": true,
+        "completedAt": 1792748527551
+      },
+      "m3": {
+        "version": 1,
+        "startedAt": 1792748533394,
+        "hypothesis": "Wasserbedeckung verändert mögliche Filtration und Erreichbarkeit.",
+        "reflection": "",
+        "answers": {
+          "lowId": "beleg-1792748625021-5",
+          "highId": "beleg-1792748694720-6",
+          "filtration": "covered",
+          "access": "exposed",
+          "absence": "not-detected",
+          "depth": "different-space"
+        },
+        "determinations": [],
+        "helpLevel": 0,
+        "complete": true,
+        "completedAt": 1792748695937
+      }
+    },
+    "observations": [
+      {
+        "id": "beleg-1792748295239-1",
+        "missionId": "m1",
+        "missionVersion": 1,
+        "helpLevel": 0,
+        "certainty": null,
+        "interpretation": null,
+        "source": "own-observation",
+        "taxon": "galium_odoratum",
+        "partnerIds": [
+          "plant:forest:galium_odoratum:-4.422551316609606:22.61859329720959:0.22108193926566896"
+        ],
+        "scene": {
+          "habitat": "forest",
+          "seed": 1479398496,
+          "scenario": null
+        },
+        "simulationTime": 0.6516999999999971,
+        "duration": 0.43999999999999995,
+        "durationClock": "simulation",
+        "observationSeconds": 9.133000000000001,
+        "observedFact": "Konkrete Pflanze im Blickfeld",
+        "evidence": {
+          "kind": "sighting"
+        },
+        "siteId": "forest-entry-30m"
+      },
+      {
+        "id": "beleg-1792748312544-2",
+        "missionId": "m1",
+        "missionVersion": 1,
+        "helpLevel": 0,
+        "certainty": null,
+        "interpretation": null,
+        "source": "own-observation",
+        "taxon": "urtica_dioica",
+        "partnerIds": [
+          "plant:forest:urtica_dioica:-6.845648559704423:16.320030897269024:0.2204451317624856"
+        ],
+        "scene": {
+          "habitat": "forest",
+          "seed": 3266055139,
+          "scenario": null
+        },
+        "simulationTime": 1.2050999999999907,
+        "duration": 0.35839999999999383,
+        "durationClock": "simulation",
+        "observationSeconds": 8.5829,
+        "observedFact": "Konkrete Pflanze im Blickfeld",
+        "evidence": {
+          "kind": "sighting"
+        },
+        "siteId": "forest-entry-30m"
+      },
+      {
+        "id": "beleg-1792748337409-3",
+        "missionId": "m1",
+        "missionVersion": 1,
+        "helpLevel": 0,
+        "certainty": null,
+        "interpretation": null,
+        "source": "own-observation",
+        "taxon": "fagus_sylvatica",
+        "partnerIds": [
+          "plant:forest:fagus_sylvatica:-8.603866083323956:9.19744166530203:0.006750873364684044"
+        ],
+        "scene": {
+          "habitat": "forest",
+          "seed": 1763819528,
+          "scenario": null
+        },
+        "simulationTime": 1.9200999999999901,
+        "duration": 0.5199999999999996,
+        "durationClock": "simulation",
+        "observationSeconds": 15.432800000000006,
+        "observedFact": "Konkrete Pflanze im Blickfeld",
+        "evidence": {
+          "kind": "sighting"
+        },
+        "siteId": "forest-entry-30m"
+      },
+      {
+        "id": "beleg-1792748515722-4",
+        "missionId": "m2",
+        "missionVersion": 1,
+        "helpLevel": 0,
+        "certainty": null,
+        "interpretation": null,
+        "source": "model-protocol",
+        "taxon": "oryctolagus_cuniculus",
+        "taxa": [
+          "hare",
+          "oryctolagus_cuniculus"
+        ],
+        "partnerIds": [
+          "meadow:262",
+          "meadow:263"
+        ],
+        "scene": {
+          "habitat": "meadow",
+          "seed": 1889021836,
+          "scenario": "competition"
+        },
+        "simulationTime": 7.071700000000013,
+        "duration": 0,
+        "observedFact": "Protokollierte Nutzung/Wirkung an einer endlichen gemeinsamen Ressource",
+        "evidence": {
+          "id": "meadow-263-7-competition",
+          "time": 7.071700000000013,
+          "age": 5.021600000000009,
+          "actor": 263,
+          "species": "oryctolagus_cuniculus",
+          "kind": "competition",
+          "otherId": 262,
+          "other": "hare",
+          "resourceId": "plant:meadow:poa_pratensis:-9.906418851008638:75.78141296384223:1.9469851632098998",
+          "resourceStock": 0.46185420000000077,
+          "pollenFrom": null,
+          "seedSource": null,
+          "parasiteIntake": 0,
+          "parasiteCost": 0
+        }
+      },
+      {
+        "id": "beleg-1792748625021-5",
+        "missionId": "m3",
+        "missionVersion": 1,
+        "helpLevel": 0,
+        "certainty": null,
+        "interpretation": null,
+        "source": "model-protocol",
+        "taxon": "cerastoderma_edule",
+        "partnerIds": [
+          "wadden:138"
+        ],
+        "scene": {
+          "habitat": "wadden",
+          "seed": 1219,
+          "runId": "06056a4f-7d8e-45a7-8da0-91a6a47f0637",
+          "scenario": null
+        },
+        "siteId": "probe-2",
+        "simulationTime": 13.588199999999977,
+        "duration": 6.191499999999962,
+        "tidePhase": 0,
+        "waterLevel": -0.9,
+        "sampleDepth": 5,
+        "present": true,
+        "observedFact": "Freigelegte Herzmuschel; Wasserstand -0.90 Modellmeter; Zustand resting",
+        "evidence": {
+          "kind": "station",
+          "activity": "resting"
+        }
+      },
+      {
+        "id": "beleg-1792748694720-6",
+        "missionId": "m3",
+        "missionVersion": 1,
+        "helpLevel": 0,
+        "certainty": null,
+        "interpretation": null,
+        "source": "model-protocol",
+        "taxon": "cerastoderma_edule",
+        "partnerIds": [
+          "wadden:138"
+        ],
+        "scene": {
+          "habitat": "wadden",
+          "seed": 1219,
+          "runId": "06056a4f-7d8e-45a7-8da0-91a6a47f0637",
+          "scenario": null
+        },
+        "siteId": "probe-2",
+        "simulationTime": 19.73320000000003,
+        "duration": 6.145000000000051,
+        "tidePhase": 0.5,
+        "waterLevel": 0.4,
+        "sampleDepth": 5,
+        "present": true,
+        "observedFact": "Freigelegte Herzmuschel; Wasserstand 0.40 Modellmeter; Zustand filtering",
+        "evidence": {
+          "kind": "station",
+          "activity": "filtering"
+        }
+      }
+    ]
+  }
+}

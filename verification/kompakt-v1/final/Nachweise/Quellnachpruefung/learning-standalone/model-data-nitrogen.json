@@ -1,0 +1,451 @@
+{
+  "kind": "nitrogen",
+  "source": "didactic-model",
+  "units": {
+    "t": "model days",
+    "pools": "relative N units; not mg/l",
+    "flows": "relative N units per model day"
+  },
+  "parameters": {
+    "oxygen": true,
+    "days": 20,
+    "input": 0,
+    "initialPools": {
+      "n2": 100,
+      "organic": 20,
+      "ammonium": 4,
+      "nitrite": 0,
+      "nitrate": 5
+    },
+    "rates": {
+      "fixation": 0.4,
+      "ammonification": 0.6,
+      "assimilationNH4": 0.15,
+      "assimilationNO3": 0.3,
+      "nitrification1": 0.5,
+      "nitrification2": 0.4,
+      "denitrification": 0.35
+    }
+  },
+  "rows": [
+    {
+      "t": 0,
+      "n2": 100,
+      "organic": 20,
+      "ammonium": 4,
+      "nitrite": 0,
+      "nitrate": 5,
+      "total": 129
+    },
+    {
+      "t": 1,
+      "n2": 99.6,
+      "organic": 19.849999999999998,
+      "ammonium": 4.35,
+      "nitrite": 0.09999999999999998,
+      "nitrate": 5.1000000000000005,
+      "total": 128.99999999999997
+    },
+    {
+      "t": 2,
+      "n2": 99.19999999999999,
+      "organic": 19.699999999999996,
+      "ammonium": 4.699999999999999,
+      "nitrite": 0.19999999999999996,
+      "nitrate": 5.200000000000001,
+      "total": 128.99999999999997
+    },
+    {
+      "t": 3,
+      "n2": 98.79999999999998,
+      "organic": 19.549999999999994,
+      "ammonium": 5.049999999999999,
+      "nitrite": 0.29999999999999993,
+      "nitrate": 5.300000000000002,
+      "total": 128.99999999999997
+    },
+    {
+      "t": 4,
+      "n2": 98.39999999999998,
+      "organic": 19.39999999999999,
+      "ammonium": 5.399999999999999,
+      "nitrite": 0.3999999999999999,
+      "nitrate": 5.400000000000002,
+      "total": 128.99999999999997
+    },
+    {
+      "t": 5,
+      "n2": 97.99999999999997,
+      "organic": 19.24999999999999,
+      "ammonium": 5.749999999999998,
+      "nitrite": 0.4999999999999999,
+      "nitrate": 5.500000000000003,
+      "total": 128.99999999999997
+    },
+    {
+      "t": 6,
+      "n2": 97.59999999999997,
+      "organic": 19.099999999999987,
+      "ammonium": 6.099999999999998,
+      "nitrite": 0.5999999999999999,
+      "nitrate": 5.600000000000003,
+      "total": 128.99999999999994
+    },
+    {
+      "t": 7,
+      "n2": 97.19999999999996,
+      "organic": 18.949999999999985,
+      "ammonium": 6.4499999999999975,
+      "nitrite": 0.6999999999999998,
+      "nitrate": 5.700000000000004,
+      "total": 128.99999999999997
+    },
+    {
+      "t": 8,
+      "n2": 96.79999999999995,
+      "organic": 18.799999999999983,
+      "ammonium": 6.799999999999997,
+      "nitrite": 0.7999999999999997,
+      "nitrate": 5.800000000000004,
+      "total": 128.99999999999994
+    },
+    {
+      "t": 9,
+      "n2": 96.39999999999995,
+      "organic": 18.64999999999998,
+      "ammonium": 7.149999999999997,
+      "nitrite": 0.8999999999999998,
+      "nitrate": 5.900000000000005,
+      "total": 128.99999999999991
+    },
+    {
+      "t": 10,
+      "n2": 95.99999999999994,
+      "organic": 18.49999999999998,
+      "ammonium": 7.4999999999999964,
+      "nitrite": 0.9999999999999999,
+      "nitrate": 6.000000000000005,
+      "total": 128.99999999999991
+    },
+    {
+      "t": 11,
+      "n2": 95.59999999999994,
+      "organic": 18.349999999999977,
+      "ammonium": 7.849999999999996,
+      "nitrite": 1.1,
+      "nitrate": 6.100000000000006,
+      "total": 128.99999999999991
+    },
+    {
+      "t": 12,
+      "n2": 95.19999999999993,
+      "organic": 18.199999999999974,
+      "ammonium": 8.199999999999996,
+      "nitrite": 1.2000000000000002,
+      "nitrate": 6.200000000000006,
+      "total": 128.99999999999991
+    },
+    {
+      "t": 13,
+      "n2": 94.79999999999993,
+      "organic": 18.049999999999972,
+      "ammonium": 8.549999999999995,
+      "nitrite": 1.3000000000000003,
+      "nitrate": 6.300000000000007,
+      "total": 128.9999999999999
+    },
+    {
+      "t": 14,
+      "n2": 94.39999999999992,
+      "organic": 17.89999999999997,
+      "ammonium": 8.899999999999995,
+      "nitrite": 1.4000000000000004,
+      "nitrate": 6.4000000000000075,
+      "total": 128.99999999999991
+    },
+    {
+      "t": 15,
+      "n2": 93.99999999999991,
+      "organic": 17.749999999999968,
+      "ammonium": 9.249999999999995,
+      "nitrite": 1.5000000000000004,
+      "nitrate": 6.500000000000008,
+      "total": 128.9999999999999
+    },
+    {
+      "t": 16,
+      "n2": 93.59999999999991,
+      "organic": 17.599999999999966,
+      "ammonium": 9.599999999999994,
+      "nitrite": 1.6000000000000005,
+      "nitrate": 6.6000000000000085,
+      "total": 128.9999999999999
+    },
+    {
+      "t": 17,
+      "n2": 93.1999999999999,
+      "organic": 17.449999999999964,
+      "ammonium": 9.949999999999994,
+      "nitrite": 1.7000000000000006,
+      "nitrate": 6.700000000000009,
+      "total": 128.99999999999986
+    },
+    {
+      "t": 18,
+      "n2": 92.7999999999999,
+      "organic": 17.29999999999996,
+      "ammonium": 10.299999999999994,
+      "nitrite": 1.8000000000000007,
+      "nitrate": 6.80000000000001,
+      "total": 128.99999999999986
+    },
+    {
+      "t": 19,
+      "n2": 92.39999999999989,
+      "organic": 17.14999999999996,
+      "ammonium": 10.649999999999993,
+      "nitrite": 1.9000000000000008,
+      "nitrate": 6.90000000000001,
+      "total": 128.99999999999986
+    },
+    {
+      "t": 20,
+      "n2": 91.99999999999989,
+      "organic": 16.999999999999957,
+      "ammonium": 10.999999999999993,
+      "nitrite": 2.000000000000001,
+      "nitrate": 7.000000000000011,
+      "total": 128.99999999999983
+    }
+  ],
+  "fluxes": [
+    {
+      "t": 0,
+      "externalInput": 0,
+      "fixation": 0.4,
+      "ammonification": 0.6,
+      "assimilationNH4": 0.15,
+      "nitrification1": 0.5,
+      "nitrification2": 0.4,
+      "denitrification": 0,
+      "assimilationNO3": 0.3
+    },
+    {
+      "t": 1,
+      "externalInput": 0,
+      "fixation": 0.4,
+      "ammonification": 0.6,
+      "assimilationNH4": 0.15,
+      "nitrification1": 0.5,
+      "nitrification2": 0.4,
+      "denitrification": 0,
+      "assimilationNO3": 0.3
+    },
+    {
+      "t": 2,
+      "externalInput": 0,
+      "fixation": 0.4,
+      "ammonification": 0.6,
+      "assimilationNH4": 0.15,
+      "nitrification1": 0.5,
+      "nitrification2": 0.4,
+      "denitrification": 0,
+      "assimilationNO3": 0.3
+    },
+    {
+      "t": 3,
+      "externalInput": 0,
+      "fixation": 0.4,
+      "ammonification": 0.6,
+      "assimilationNH4": 0.15,
+      "nitrification1": 0.5,
+      "nitrification2": 0.4,
+      "denitrification": 0,
+      "assimilationNO3": 0.3
+    },
+    {
+      "t": 4,
+      "externalInput": 0,
+      "fixation": 0.4,
+      "ammonification": 0.6,
+      "assimilationNH4": 0.15,
+      "nitrification1": 0.5,
+      "nitrification2": 0.4,
+      "denitrification": 0,
+      "assimilationNO3": 0.3
+    },
+    {
+      "t": 5,
+      "externalInput": 0,
+      "fixation": 0.4,
+      "ammonification": 0.6,
+      "assimilationNH4": 0.15,
+      "nitrification1": 0.5,
+      "nitrification2": 0.4,
+      "denitrification": 0,
+      "assimilationNO3": 0.3
+    },
+    {
+      "t": 6,
+      "externalInput": 0,
+      "fixation": 0.4,
+      "ammonification": 0.6,
+      "assimilationNH4": 0.15,
+      "nitrification1": 0.5,
+      "nitrification2": 0.4,
+      "denitrification": 0,
+      "assimilationNO3": 0.3
+    },
+    {
+      "t": 7,
+      "externalInput": 0,
+      "fixation": 0.4,
+      "ammonification": 0.6,
+      "assimilationNH4": 0.15,
+      "nitrification1": 0.5,
+      "nitrification2": 0.4,
+      "denitrification": 0,
+      "assimilationNO3": 0.3
+    },
+    {
+      "t": 8,
+      "externalInput": 0,
+      "fixation": 0.4,
+      "ammonification": 0.6,
+      "assimilationNH4": 0.15,
+      "nitrification1": 0.5,
+      "nitrification2": 0.4,
+      "denitrification": 0,
+      "assimilationNO3": 0.3
+    },
+    {
+      "t": 9,
+      "externalInput": 0,
+      "fixation": 0.4,
+      "ammonification": 0.6,
+      "assimilationNH4": 0.15,
+      "nitrification1": 0.5,
+      "nitrification2": 0.4,
+      "denitrification": 0,
+      "assimilationNO3": 0.3
+    },
+    {
+      "t": 10,
+      "externalInput": 0,
+      "fixation": 0.4,
+      "ammonification": 0.6,
+      "assimilationNH4": 0.15,
+      "nitrification1": 0.5,
+      "nitrification2": 0.4,
+      "denitrification": 0,
+      "assimilationNO3": 0.3
+    },
+    {
+      "t": 11,
+      "externalInput": 0,
+      "fixation": 0.4,
+      "ammonification": 0.6,
+      "assimilationNH4": 0.15,
+      "nitrification1": 0.5,
+      "nitrification2": 0.4,
+      "denitrification": 0,
+      "assimilationNO3": 0.3
+    },
+    {
+      "t": 12,
+      "externalInput": 0,
+      "fixation": 0.4,
+      "ammonification": 0.6,
+      "assimilationNH4": 0.15,
+      "nitrification1": 0.5,
+      "nitrification2": 0.4,
+      "denitrification": 0,
+      "assimilationNO3": 0.3
+    },
+    {
+      "t": 13,
+      "externalInput": 0,
+      "fixation": 0.4,
+      "ammonification": 0.6,
+      "assimilationNH4": 0.15,
+      "nitrification1": 0.5,
+      "nitrification2": 0.4,
+      "denitrification": 0,
+      "assimilationNO3": 0.3
+    },
+    {
+      "t": 14,
+      "externalInput": 0,
+      "fixation": 0.4,
+      "ammonification": 0.6,
+      "assimilationNH4": 0.15,
+      "nitrification1": 0.5,
+      "nitrification2": 0.4,
+      "denitrification": 0,
+      "assimilationNO3": 0.3
+    },
+    {
+      "t": 15,
+      "externalInput": 0,
+      "fixation": 0.4,
+      "ammonification": 0.6,
+      "assimilationNH4": 0.15,
+      "nitrification1": 0.5,
+      "nitrification2": 0.4,
+      "denitrification": 0,
+      "assimilationNO3": 0.3
+    },
+    {
+      "t": 16,
+      "externalInput": 0,
+      "fixation": 0.4,
+      "ammonification": 0.6,
+      "assimilationNH4": 0.15,
+      "nitrification1": 0.5,
+      "nitrification2": 0.4,
+      "denitrification": 0,
+      "assimilationNO3": 0.3
+    },
+    {
+      "t": 17,
+      "externalInput": 0,
+      "fixation": 0.4,
+      "ammonification": 0.6,
+      "assimilationNH4": 0.15,
+      "nitrification1": 0.5,
+      "nitrification2": 0.4,
+      "denitrification": 0,
+      "assimilationNO3": 0.3
+    },
+    {
+      "t": 18,
+      "externalInput": 0,
+      "fixation": 0.4,
+      "ammonification": 0.6,
+      "assimilationNH4": 0.15,
+      "nitrification1": 0.5,
+      "nitrification2": 0.4,
+      "denitrification": 0,
+      "assimilationNO3": 0.3
+    },
+    {
+      "t": 19,
+      "externalInput": 0,
+      "fixation": 0.4,
+      "ammonification": 0.6,
+      "assimilationNH4": 0.15,
+      "nitrification1": 0.5,
+      "nitrification2": 0.4,
+      "denitrification": 0,
+      "assimilationNO3": 0.3
+    }
+  ],
+  "processes": [
+    "N₂ → NH₄⁺: fixation (energy demand not simulated)",
+    "organic N → NH₄⁺: ammonification",
+    "NH₄⁺ / NO₃⁻ → organic N: assimilation",
+    "NH₄⁺ → NO₂⁻ → NO₃⁻: two aerobic nitrification steps",
+    "NO₃⁻ → N₂: oxygen-limited denitrification"
+  ],
+  "assumptions": "Sequential one-day fluxes in the listed code order, bounded by the available source pool; rates are designed teaching values, not natural kinetic constants. Input enters NH₄⁺. Fixation represents protected microbial sites; ambient oxygen switch controls nitrification/denitrification, not all nitrogenase regulation. No quantitative water-quality forecast, energy budget or instantaneous visible die-off."
+}

@@ -1,0 +1,7 @@
+PASS N01 all four birds acquire concrete finite prey for four seeds at 60 Hz and 100 ms
+PASS N01 an explicit reached-site context starts a separate finite run after 240 or 1200 actual model seconds
+PASS N01 remote sites, missing sites and reused current run IDs cannot reset a context
+PASS N01 old provenance-free evidence and explicit new contexts roundtrip without losing notes or K3 validity
+PASS N01 K3 cannot cross a local context reset even when concrete individual IDs are identical
+PASS N01 contradictory own-run, site, backwards-time, missing-origin and cyclic imports are rejected
+{"suite":"compact-observation-context","passed":6,"scenarios":8,"negativeImports":7}

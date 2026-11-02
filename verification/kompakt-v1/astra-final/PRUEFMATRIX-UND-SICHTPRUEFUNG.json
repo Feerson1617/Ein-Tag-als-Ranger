@@ -1,0 +1,1543 @@
+{
+  "status": "RC lieferbar",
+  "candidate": "ranger-kompakt-v1.0.0-rc.1-4eb186a5325a",
+  "sourceCommit": "4eb186a5325ae30dfa233e10dd44eb73ea710afa",
+  "htmlSHA256": "3748c6590afefb18a5e07bb3cedc2c40b0b2be1619a57cc52553a30de5869412",
+  "runtimeTreeSHA256": "c0de642ab378548f7422dd5e0206ff54af70562d6eec7e7c5c4b7ceccf922bc1",
+  "reviewedUTC": "2026-10-25T06:30:05.715216+00:00",
+  "matrix": [
+    {
+      "id": "F01",
+      "title": "Fehltypisierte K1-Entwürfe",
+      "scope": "Typisierte K1-Entwürfe und native atomare Importablehnung; kein Datenverlust und defekte Rohdaten weiter exportierbar.",
+      "historical": {
+        "sourceCommit": "936e69dc2bd91ab4ab59bc1c63f7c66696085e1d",
+        "status": "BESTANDEN",
+        "finding": "51 aktuelle native Importfälle bestanden, darunter bytegleiche unabhängige Originalfixture für fehltypisierte K1-Felder. Ablehnung vor Übernahme, alte Speicherbytes und echte Belege erhalten; defekte Altentwürfe bleiben exportierbar.",
+        "scope": "Unveränderter damaliger eigener Bericht; neue Bewertung folgt dem vor Änderungen festgelegten V1-Vertrag. Kein historisches Ergebnis wird überschrieben."
+      },
+      "originalIssueTitle": "Fehltypisierte K1-Entwürfe",
+      "previousV1": {
+        "sourceCommit": "e9899efaa314d052191d7d3a95b5de904f2932b6",
+        "status": "BESTANDEN",
+        "finding": "Die native51-Fälle-Importsuite besteht einschließlich Original-F01, Typfehlern, atomarer Ablehnung und erhaltenen positiven Daten. Defekte Rohdaten bleiben exportierbar.",
+        "dateUTC": "2026-10-24T14:03:23.350936+00:00"
+      },
+      "sourceCommit": "4eb186a5325ae30dfa233e10dd44eb73ea710afa",
+      "dateUTC": "2026-10-25T06:30:05.715216+00:00",
+      "evidenceKind": "Eigene neue reale Modul-/Browser-/PDF-Ausführung plus gesondert bezeichnete GitHub-Metadaten; Sichtung separat dokumentiert.",
+      "finding": "Originale fehltypisierte K1-Entwürfe und weitere negative Imports im neuen nativen Importlauf atomar abgewiesen; positive Altbestände, Originalexport und gespeicherte Bytes erhalten.",
+      "status": "BESTANDEN",
+      "evidence": [
+        {
+          "path": "Nachweise/imports/result.json",
+          "sha256": "a5a8076df2e3a5e0ebf6aaa3545609bbe4fc77085750ea217466035069d4a9ec"
+        },
+        {
+          "path": "Nachweise/compact-node/compact-learning.log",
+          "sha256": "201efe802e92d9eb8bbd2bea4dde7a5957c4e1a62131b059f31472005c1b395f"
+        }
+      ]
+    },
+    {
+      "id": "F02",
+      "title": "Sichtbare konkrete Nahrungsfolge aller vier Watvögel",
+      "scope": "D1/B1–B5: äußere Nahrungssuche, konkrete Beute, Kontakt, Transport/Mundübergang und Verhalten aller vier Arten nach normalem Fußweg; keine innere Verdauungssimulation oder künstliche Eigenbelege.",
+      "historical": {
+        "sourceCommit": "936e69dc2bd91ab4ab59bc1c63f7c66696085e1d",
+        "status": "FEHLGESCHLAGEN",
+        "finding": "Gekoppelte, ausdrücklich didaktische Detailansicht nutzt dieselben echten Modellknoten für Vogel und konkrete Beute. Neuer sauberer936-Fußweglauf zeigt alle6 Austernfischerphasen mit gleichem Beute-/Ereignis-/Run-Bezug; konkrete Muschel am Kontakt und aufgenommenes Gewebe am Schnabel sichtbar. Säbelschnäblerfolge scheitert während Suche bei30,289 Modell-s an unveränderter billClear-Prüfung: tatsächlicher Geländedreiecks-Treffer1,027424mm vor Schnabel. Damit fehlen im vollständigen Echtzeit-Fußweglauf restliche Arten und spätere Wiederholung. Positive Nahrungserwerbsereignisse aller4 Arten in separaten technischen Tests bleiben bestätigt; kein Nullereignis-Rückfall und kein vollständiger visuellerPASS. Ergänzende saubere936-Referenzdiagnose besteht alle8 technischen Folgen, aber ohne Fußweg. Eigene Kontaktbögen zeigen konkrete Beute aller4 Arten; acht Stichproben des tatsächlichen Fußweg-Austernfischervideos zeigen Öffnung/Gewebe, späte Nahbilder teilweise vom Kopf verdeckt. Vollständiger sichtbarer Schluckweg aller4 Arten bleibt nicht abgenommen.",
+        "scope": "Unveränderter damaliger eigener Bericht; neue Bewertung folgt dem vor Änderungen festgelegten V1-Vertrag. Kein historisches Ergebnis wird überschrieben."
+      },
+      "originalIssueTitle": "Sichtbare konkrete Nahrungsfolge aller vier Watvögel",
+      "previousV1": {
+        "sourceCommit": "e9899efaa314d052191d7d3a95b5de904f2932b6",
+        "status": "BESTANDEN",
+        "finding": "Acht tatsächliche Sieben-Phasen-Folgen nach komplettem nativen Fußweg numerisch und selbst visuell geprüft: vier unbeschleunigte, vier nach1200 expliziten Modellsekunden. Derselbe Kopf/Schnabel, konkrete Ressource, Kontakt, äußere Aufnahme und Mundbezug bleiben gekoppelt.28schwarze pausierte Direktexporte ausdrücklich ausgeschlossen;28zustandsgleiche unabhängige Compositorbilder belegen die Spätfolge, neuer echter Capture-Regressionstest bestanden. Kein innerer Schluck-/Verdauungsanspruch.",
+        "dateUTC": "2026-10-24T14:03:23.350936+00:00"
+      },
+      "sourceCommit": "4eb186a5325ae30dfa233e10dd44eb73ea710afa",
+      "dateUTC": "2026-10-25T06:30:05.715216+00:00",
+      "evidenceKind": "Eigene neue reale Modul-/Browser-/PDF-Ausführung plus gesondert bezeichnete GitHub-Metadaten; Sichtung separat dokumentiert.",
+      "finding": "Acht neue Folgen nach vollständigem Fußweg, vier unbeschleunigt und vier nach ausdrücklich 1.200 Modellsekunden, numerisch und anhand aller 56 Phasen selbst gesichtet. Kopf/Schnabel, konkrete Beute und äußerer Mundbezug bleiben gekoppelt. Zusätzlich korrigierter Detailtreiber für vier Arten bestanden. Keine innere Verdauungsanatomie oder eigene Beobachtung durch Modellschritte behauptet.",
+      "status": "BESTANDEN",
+      "evidence": [
+        {
+          "path": "Nachweise/own-feeding-review.json",
+          "sha256": "a03a41b7475fcb1a26f3637ce08761001e9584049e8d622bc6a4bc870033ec06"
+        },
+        {
+          "path": "Nachweise/v1-full-walk-feeding-retry/result.json",
+          "sha256": "1266390973123041f5571cfccd75c84b1afbd38ac206cf8bacddc1822b521954"
+        },
+        {
+          "path": "Nachweise/feeding-detail/result.json",
+          "sha256": "1d0d751a4e7f6c7b0322609460c3231bba7584a6aa4483a5791abd887810ce14"
+        }
+      ]
+    },
+    {
+      "id": "F03",
+      "title": "Positionssprünge",
+      "scope": "Begrenzte tatsächliche Positionsgeschwindigkeit, positive Erwerbsereignisse, Kontakt und unveränderte historische Revisionen; keine natürliche Gesamtbiomechanik-Abnahme.",
+      "historical": {
+        "sourceCommit": "936e69dc2bd91ab4ab59bc1c63f7c66696085e1d",
+        "status": "BESTANDEN",
+        "finding": "Aktuelle 112 Kompakt-Prüfgruppen einschließlich Küstenkontinuität, Füßen/Kontakt, begrenzten Ressourcen und alter Revisionen bestanden. Vier technische Browser-Phasenfolgen bestanden. Keine vollständige natürliche Biomechanik-/Anatomieabnahme.",
+        "scope": "Unveränderter damaliger eigener Bericht; neue Bewertung folgt dem vor Änderungen festgelegten V1-Vertrag. Kein historisches Ergebnis wird überschrieben."
+      },
+      "originalIssueTitle": "Positionssprünge",
+      "previousV1": {
+        "sourceCommit": "e9899efaa314d052191d7d3a95b5de904f2932b6",
+        "status": "BESTANDEN",
+        "finding": "Alle41Node-Suiten bestehen. Küstenerwerb verlangt positive Ereignisse aller vier Arten über16Seed/Zeitschritt-Szenarien mit je600Modellsekunden; reale Meshkontakte, Geschwindigkeiten und historische Revisionen werden geprüft.",
+        "dateUTC": "2026-10-24T14:03:23.350936+00:00"
+      },
+      "sourceCommit": "4eb186a5325ae30dfa233e10dd44eb73ea710afa",
+      "dateUTC": "2026-10-25T06:30:05.715216+00:00",
+      "evidenceKind": "Eigene neue reale Modul-/Browser-/PDF-Ausführung plus gesondert bezeichnete GitHub-Metadaten; Sichtung separat dokumentiert.",
+      "finding": "Erneute Küstenkontinuität-/Kontakt- und Browserprüfungen mit positiven Erwerbsereignissen bestanden. Kein neuer Animations- oder Weltmaßstabseingriff; keine Vollanatomieabnahme.",
+      "status": "BESTANDEN",
+      "evidence": [
+        {
+          "path": "Nachweise/reference/result.json",
+          "sha256": "fd9b10b7d757ee5db7793c3fdbaa7bd2b4defe9a42ad1728595df087828e9705"
+        },
+        {
+          "path": "Nachweise/compact-node/compact-coastal/result.json",
+          "sha256": "e61244bf384f951899fb201f3f0dbb6106834d338b792f0bf6124b7382789130"
+        }
+      ]
+    },
+    {
+      "id": "F04",
+      "title": "Unmögliche Importkoordinaten und Methoden",
+      "scope": "Originale unmögliche Koordinaten/Methoden und zusätzliche Manipulationen ablehnen, positive Altbestände erhalten.",
+      "historical": {
+        "sourceCommit": "936e69dc2bd91ab4ab59bc1c63f7c66696085e1d",
+        "status": "BESTANDEN",
+        "finding": "Bytegleiche originale Negativfixture für unmögliche Koordinaten/Methode und zusätzliche Einzelmanipulationen im aktuellen 51-Fälle-Importlauf abgewiesen. Keine teilweise Übernahme; positive alte Revision-3-Belege und qualifizierte Auswahl erhalten.",
+        "scope": "Unveränderter damaliger eigener Bericht; neue Bewertung folgt dem vor Änderungen festgelegten V1-Vertrag. Kein historisches Ergebnis wird überschrieben."
+      },
+      "originalIssueTitle": "Unmögliche Importkoordinaten und Methoden",
+      "previousV1": {
+        "sourceCommit": "e9899efaa314d052191d7d3a95b5de904f2932b6",
+        "status": "BESTANDEN",
+        "finding": "Original-F04 und zusätzliche unmögliche Orts-/Methodenkombinationen werden nativ vor Ersetzung abgewiesen. Positive alte Feldbücher bleiben erhalten.",
+        "dateUTC": "2026-10-24T14:03:23.350936+00:00"
+      },
+      "sourceCommit": "4eb186a5325ae30dfa233e10dd44eb73ea710afa",
+      "dateUTC": "2026-10-25T06:30:05.715216+00:00",
+      "evidenceKind": "Eigene neue reale Modul-/Browser-/PDF-Ausführung plus gesondert bezeichnete GitHub-Metadaten; Sichtung separat dokumentiert.",
+      "finding": "Unmögliche Koordinaten/Methoden und widersprüchliche importierte Kontexte abgewiesen; atomarer Speichervertrag und positive alte Belege erhalten.",
+      "status": "BESTANDEN",
+      "evidence": [
+        {
+          "path": "Nachweise/imports/result.json",
+          "sha256": "a5a8076df2e3a5e0ebf6aaa3545609bbe4fc77085750ea217466035069d4a9ec"
+        }
+      ]
+    },
+    {
+      "id": "F05",
+      "title": "Waldschichtung und räumliche Glaubwürdigkeit",
+      "scope": "D2/W1–W5: ein begrenzter zusammenhängender Walddurchgang, sechs tatsächliche Festblicke und normale Begehung, erhaltene Individuen/Pflanzen/Wege. Subjektives Stilurteil bleibt gezielte Nutzerabnahme.",
+      "historical": {
+        "sourceCommit": "936e69dc2bd91ab4ab59bc1c63f7c66696085e1d",
+        "status": "FEHLGESCHLAGEN",
+        "finding": "Eigene frische936-Sichtprüfung von5 exakt identischen Festblickpaaren gegen eigenehistorische1b51-Baseline sowieje3 regulärenGehbildern: deutlich räumlichere/asymmetrischeKronen, Pflanzen/Anker/Pfad/Totholz erhalten. Regelmäßig geradeuntereStämme undisolierte rundlicheStrauchvolumen bleiben; naturnahezusammenhängendeSchichtung nurteilweiseerfüllt. TechnischerWaldtest/alteRevisionen/Pfadprüfungen bestehen; keinevollevisuelle/anatomischeAbnahme.",
+        "scope": "Unveränderter damaliger eigener Bericht; neue Bewertung folgt dem vor Änderungen festgelegten V1-Vertrag. Kein historisches Ergebnis wird überschrieben."
+      },
+      "originalIssueTitle": "Waldschichtung und räumliche Glaubwürdigkeit",
+      "previousV1": {
+        "sourceCommit": "e9899efaa314d052191d7d3a95b5de904f2932b6",
+        "status": "BESTANDEN",
+        "finding": "Sechs tatsächlich gleiche Festkameras und reguläre Gehbilder aktuell gesichtet. Unterschiedliche Stamm-/Kronenformen, Gruppen/Lücken und bodengebundene Strauchgruppen vorhanden; Diagnosepflanzen, Anker, Wege und Sichtfenster erhalten. BegrenzterD2-Durchgang bestanden; illustrativer Stil bleibt gezielte Nutzerentscheidung.",
+        "dateUTC": "2026-10-24T14:03:23.350936+00:00"
+      },
+      "sourceCommit": "4eb186a5325ae30dfa233e10dd44eb73ea710afa",
+      "dateUTC": "2026-10-25T06:30:05.715216+00:00",
+      "evidenceKind": "Eigene neue reale Modul-/Browser-/PDF-Ausführung plus gesondert bezeichnete GitHub-Metadaten; Sichtung separat dokumentiert.",
+      "finding": "Aktuelle sechs identische Festkameras und drei normale Gehblicke selbst gesichtet. Der begrenzte D2-Entwurf bleibt unverändert: erhaltene Beobachtungsfenster und Pflanzen, Gruppen/Lücken und bodengebundene Schichtung; geometrische Kronen, teils regelmäßige Stämme und runde Strauchformen bleiben erkennbare Stilgrenzen. Keine neue Gestaltungsphase oder pauschale Naturnähebehauptung; Nutzerurteil offen.",
+      "status": "BESTANDEN",
+      "evidence": [
+        {
+          "path": "Nachweise/own-forest-review.json",
+          "sha256": "bdb6028f0414edfa47f0cc5bf7f0ebc969d889ec75e755156ede5195c2d25a0a"
+        },
+        {
+          "path": "Nachweise/own-organism-review.json",
+          "sha256": "6236eecf80b0830e07cd73496a5bec2a6ba92f38207098253a7ac7dfbe14aac4"
+        },
+        {
+          "path": "Nachweise/forest-profile/result.json",
+          "sha256": "60a3fca10951e51cd48ac63af9384f8c49a2b925e655917502af1ef16c340d84"
+        }
+      ]
+    },
+    {
+      "id": "F06",
+      "title": "Dorf-NPCs und Deichprofil",
+      "scope": "Alle drei proximalen Dorfgespräche, gespeicherter Kontext und reguläre Dorf-/Deichbegehung; keine reale bauliche Barrierefreiheits- oder Schutzleistungsbehauptung.",
+      "historical": {
+        "sourceCommit": "936e69dc2bd91ab4ab59bc1c63f7c66696085e1d",
+        "status": "BESTANDEN",
+        "finding": "Aktuelle Habitatprüfung: alle drei proximalen NPC-Dialoge mit gespeichertem Kontext, Dorf/Deich/Küsten-Wegabschnitte durch normale Tastatur geprüft. Gradient-/Pfadtests bestehen auch in allen vier Portabilitätsjobs. Keine Aussage zu realer Deichschutzleistung oder baulicher Barrierefreiheit; volle Gehweg-/Leistungsgrenze separat N07.",
+        "scope": "Unveränderter damaliger eigener Bericht; neue Bewertung folgt dem vor Änderungen festgelegten V1-Vertrag. Kein historisches Ergebnis wird überschrieben."
+      },
+      "originalIssueTitle": "Dorf-NPCs und Deichprofil",
+      "previousV1": {
+        "sourceCommit": "e9899efaa314d052191d7d3a95b5de904f2932b6",
+        "status": "BESTANDEN",
+        "finding": "Alle drei real proximalen Dorfgespräche mit gespeichertem Modellkontext und reguläre Dorf-/Deichgehabschnitte bestehen. Keine neue Beobachtung allein durch Dialog.",
+        "dateUTC": "2026-10-24T14:03:23.350936+00:00"
+      },
+      "sourceCommit": "4eb186a5325ae30dfa233e10dd44eb73ea710afa",
+      "dateUTC": "2026-10-25T06:30:05.715216+00:00",
+      "evidenceKind": "Eigene neue reale Modul-/Browser-/PDF-Ausführung plus gesondert bezeichnete GitHub-Metadaten; Sichtung separat dokumentiert.",
+      "finding": "Drei proximale Dorfgespräche und gespeicherte Kontexte sowie Hauptweg/Abzweig/Abkürzung erneut geprüft. Kein realer baulicher Schutz- oder Barrierefreiheitsnachweis.",
+      "status": "BESTANDEN",
+      "evidence": [
+        {
+          "path": "Nachweise/habitats/result.json",
+          "sha256": "10c77fb696012b2f2bb548cd0d753fee0ad9f60b681cb065879eb72511778e79"
+        },
+        {
+          "path": "Nachweise/v1-full-walk-feeding-retry/result.json",
+          "sha256": "1266390973123041f5571cfccd75c84b1afbd38ac206cf8bacddc1822b521954"
+        }
+      ]
+    },
+    {
+      "id": "F07",
+      "title": "Keilmelde bei Normalhochwasser",
+      "scope": "Dieselbe konkrete Keilmelde-Stelle bei Modellniedrig-/hochwasser sichtbar; keine Jahresüberflutungshäufigkeit.",
+      "historical": {
+        "sourceCommit": "936e69dc2bd91ab4ab59bc1c63f7c66696085e1d",
+        "status": "BESTANDEN",
+        "finding": "Aktuelle Keilmelde-/Andelhöhen und Bildpaare derselben konkreten Stände bei normalem Modellniedrig-/hochwasser geprüft; ursprüngliche Überflutung bei Normalhochwasser nicht zurückgekehrt. Keine kalibrierte jährliche Fluthäufigkeit.",
+        "scope": "Unveränderter damaliger eigener Bericht; neue Bewertung folgt dem vor Änderungen festgelegten V1-Vertrag. Kein historisches Ergebnis wird überschrieben."
+      },
+      "originalIssueTitle": "Keilmelde bei Normalhochwasser",
+      "previousV1": {
+        "sourceCommit": "e9899efaa314d052191d7d3a95b5de904f2932b6",
+        "status": "BESTANDEN",
+        "finding": "Dieselbe konkrete Keilmelde-Stelle ist bei Modellniedrig-/hochwasser aktuell gerendert; die frühere Überflutung bei normalem Hochwasser ist nicht zurückgekehrt.",
+        "dateUTC": "2026-10-24T14:03:23.350936+00:00"
+      },
+      "sourceCommit": "4eb186a5325ae30dfa233e10dd44eb73ea710afa",
+      "dateUTC": "2026-10-25T06:30:05.715216+00:00",
+      "evidenceKind": "Eigene neue reale Modul-/Browser-/PDF-Ausführung plus gesondert bezeichnete GitHub-Metadaten; Sichtung separat dokumentiert.",
+      "finding": "Konkrete Keilmelde- und Andelstellen bei Modellniedrig-/hochwasser erneut geprüft; keine Jahresüberflutungshäufigkeit abgeleitet.",
+      "status": "BESTANDEN",
+      "evidence": [
+        {
+          "path": "Nachweise/habitat-revision/result.json",
+          "sha256": "054e348fa599ac115bd3c0ab81ad00f556ec972674e7bb54129a05c52fdefe0b"
+        }
+      ]
+    },
+    {
+      "id": "F08",
+      "title": "Bestimmen ohne Namensvorwegnahme; Transferablauf",
+      "scope": "K1–K5 an Quelle/Web/Einzeldatei: anonyme Bestimmung, falsche/unsichere/unvollständige Antworten, eigener Beleg, Revision/Transfer und Speicherung; keine Lernwirksamkeitsbehauptung.",
+      "historical": {
+        "sourceCommit": "936e69dc2bd91ab4ab59bc1c63f7c66696085e1d",
+        "status": "BESTANDEN",
+        "finding": "Aktuelle Web-/Standalone-Lerndurchgänge K1–K5 bestanden: anonyme Auswahl, drei echte Nahbeobachtungen, falsche Wahl, begründete Unsicherheit, zwei Standorte und Eichen-Gruppentransfer. Modellschritte vergeben keine eigene Sichtungszeit. Keine Aussage zur unabhängigen Lernendenleistung.",
+        "scope": "Unveränderter damaliger eigener Bericht; neue Bewertung folgt dem vor Änderungen festgelegten V1-Vertrag. Kein historisches Ergebnis wird überschrieben."
+      },
+      "originalIssueTitle": "Bestimmen ohne Namensvorwegnahme; Transferablauf",
+      "previousV1": {
+        "sourceCommit": "e9899efaa314d052191d7d3a95b5de904f2932b6",
+        "status": "BESTANDEN",
+        "finding": "Tatsächlicher Quelleinstieg dist/kompakt.html mit18UI-Gruppen+Galerie sowie Webpaket17 und Einzel-HTML17 neu bestanden. K1 ohne Vorwegnahme, falsche/unvollständige/unsichere/richtige Antworten, Eichen-Transfer, aktive Zeit und Reload/Export/Import erhalten. Früher falsch benannter Weblauf bleibt als Weblauf dokumentiert; bd859-QA-Korrektur ohne Runtimeänderung.",
+        "dateUTC": "2026-10-24T14:03:23.350936+00:00"
+      },
+      "sourceCommit": "4eb186a5325ae30dfa233e10dd44eb73ea710afa",
+      "dateUTC": "2026-10-25T06:30:05.715216+00:00",
+      "evidenceKind": "Eigene neue reale Modul-/Browser-/PDF-Ausführung plus gesondert bezeichnete GitHub-Metadaten; Sichtung separat dokumentiert.",
+      "finding": "K1–K5 über tatsächliches dist/kompakt.html, Website und ausgelieferte Einzel-HTML neu bestanden. Anonyme Bestimmung, Fehler/Unsicherheit, Eichen-Transfer, eigene aktive Beobachtung und Speicherung erhalten. Galeriedurchlauf ist keine anatomische Vollfreigabe.",
+      "status": "BESTANDEN",
+      "evidence": [
+        {
+          "path": "Nachweise/learning-source/result.json",
+          "sha256": "e5632911e9504e880892ea58236982405b9564456b73a98fe81299d13f4a84a6"
+        },
+        {
+          "path": "Nachweise/learning-web/result.json",
+          "sha256": "c54671d3868efa55fa5cbcdf126348757c33fe8c5d86c0a95f925b5bc6eefc88"
+        },
+        {
+          "path": "Nachweise/learning-standalone/result.json",
+          "sha256": "1cc18e8e89d8a7eee8b29c7008895fa13b26f8fa3c13f86c4c9e67648b299790"
+        }
+      ]
+    },
+    {
+      "id": "F09",
+      "title": "Curricular vollständig vorbereitetes Begleitpaket",
+      "scope": "Zwei kurze90-Minuten-Planungsbeispiele plus bestehender25-Karten-Pool; C17 nur6Wochen Konditionierung und getrennter thermischer Laichversuch gemäß geliefertem Primärabgleich. Eigener GET403 bleibt offengelegt.",
+      "historical": {
+        "sourceCommit": "936e69dc2bd91ab4ab59bc1c63f7c66696085e1d",
+        "status": "FEHLGESCHLAGEN",
+        "finding": "Vorbereitete C17-Lücke rechnerisch geschlossen: 3.380.000/12 = 281.666,7 Eier je tatsächlich ablaichendem Weibchen dieser Behandlung; nicht 100 Weibchen, keine natürliche Jahresrate. Aufgaben/Lösungen/Einheiten und alle 25 Curriculumkarten abgeglichen; ETS27–28 aus eigener aktueller Primär-PDF gelesen, FA62/Kompetenzen50–55 berücksichtigt. Die ausdrücklich gewünschte eigene Primärkontrolle der Pronker-Quelle ist nicht erfolgt: normaler DOI-/Verlagszugriff scheitert an403, nur bereitgestelltes Abstract-Exzerpt verwendet; Dauer/Konditionierung offen. Daher keine vollständige F09-Quellenabnahme.",
+        "scope": "Unveränderter damaliger eigener Bericht; neue Bewertung folgt dem vor Änderungen festgelegten V1-Vertrag. Kein historisches Ergebnis wird überschrieben."
+      },
+      "originalIssueTitle": "Curricular vollständig vorbereitetes Begleitpaket",
+      "previousV1": {
+        "sourceCommit": "e9899efaa314d052191d7d3a95b5de904f2932b6",
+        "status": "BESTANDEN",
+        "finding": "Drei kurze Einstiegsdokumente und vollständiger25-Karten-Pool konsistent aus denselben Quellen. Runtime-Downloads bytegleich. C17: sechs Wochen Konditionierung, getrennter thermischer Laichversuch,12tatsächlich laichende Weibchen unter100Tieren,281666,7Eier/Ereignisweibchen. Gelieferter Primärabgleich ausdrücklich zugeschrieben, eigenerGET403offen; nach neuemV1-Vertrag kein erneuter Materialblocker.",
+        "dateUTC": "2026-10-24T14:03:23.350936+00:00"
+      },
+      "sourceCommit": "4eb186a5325ae30dfa233e10dd44eb73ea710afa",
+      "dateUTC": "2026-10-25T06:30:05.715216+00:00",
+      "evidenceKind": "Eigene neue reale Modul-/Browser-/PDF-Ausführung plus gesondert bezeichnete GitHub-Metadaten; Sichtung separat dokumentiert.",
+      "finding": "25 Karten sowie zwei kurze 90-Minuten-Planungsbeispiele vollständig erhalten. C17-Provenienz und Rechnungen unverändert im festgelegten Umfang; eigener neuer Primärvolltextzugriff weiterhin nicht behauptet. Frische Drucke technisch und gezielt lesbar geprüft; keine Unterrichtswirkung gemessen.",
+      "status": "BESTANDEN",
+      "evidence": [
+        {
+          "path": "Nachweise/own-print-review.json",
+          "sha256": "b03001ce9ef917b05e9039a5af81e99aeac1918eaa4d5f637117d7414b954d69"
+        },
+        {
+          "path": "Nachweise/compact-node/compact-material-depth/material-depth-result.json",
+          "sha256": "b09d0faa26941c1647a6cae8d6d0a19d7e2a4d9a3c2797b04bf0af95f8855c0c"
+        }
+      ]
+    },
+    {
+      "id": "F10",
+      "title": "K5 sachlich passende Belege",
+      "scope": "K5 sachfremde Belege ablehnen und passende Belege mit Kriterien/Werten trennen; Argumentationsqualität bleibt menschliche Aufgabe.",
+      "historical": {
+        "sourceCommit": "936e69dc2bd91ab4ab59bc1c63f7c66696085e1d",
+        "status": "BESTANDEN",
+        "finding": "K5 weist im aktuellen echten UI-Durchgang sachfremde Waldbelege ab und akzeptiert einen passenden Küstenbeleg mit gewichteten Kriterien/getrennten Fakten und Werten. Freie Argumentationsqualität bleibt menschlich zu prüfen.",
+        "scope": "Unveränderter damaliger eigener Bericht; neue Bewertung folgt dem vor Änderungen festgelegten V1-Vertrag. Kein historisches Ergebnis wird überschrieben."
+      },
+      "originalIssueTitle": "K5 sachlich passende Belege",
+      "previousV1": {
+        "sourceCommit": "e9899efaa314d052191d7d3a95b5de904f2932b6",
+        "status": "BESTANDEN",
+        "finding": "K5 weist sachfremde Waldbelege in den drei aktuellen UI-Läufen ab und akzeptiert passende Belege mit Kriterien und Trennung von Fakten/Werten. Freie Argumentationsqualität bleibt menschlich.",
+        "dateUTC": "2026-10-24T14:03:23.350936+00:00"
+      },
+      "sourceCommit": "4eb186a5325ae30dfa233e10dd44eb73ea710afa",
+      "dateUTC": "2026-10-25T06:30:05.715216+00:00",
+      "evidenceKind": "Eigene neue reale Modul-/Browser-/PDF-Ausführung plus gesondert bezeichnete GitHub-Metadaten; Sichtung separat dokumentiert.",
+      "finding": "K5 weist sachfremde Belege in allen drei aktuellen Einstiegen ab und akzeptiert sachlich passende Belege; Fakten/Werte/Normen und menschliche Argumentationsbewertung bleiben getrennt.",
+      "status": "BESTANDEN",
+      "evidence": [
+        {
+          "path": "Nachweise/learning-source/result.json",
+          "sha256": "e5632911e9504e880892ea58236982405b9564456b73a98fe81299d13f4a84a6"
+        },
+        {
+          "path": "Nachweise/learning-web/result.json",
+          "sha256": "c54671d3868efa55fa5cbcdf126348757c33fe8c5d86c0a95f925b5bc6eefc88"
+        },
+        {
+          "path": "Nachweise/learning-standalone/result.json",
+          "sha256": "1cc18e8e89d8a7eee8b29c7008895fa13b26f8fa3c13f86c4c9e67648b299790"
+        }
+      ]
+    },
+    {
+      "id": "F11",
+      "title": "Stickstofffixierung und Assimilation",
+      "scope": "Stickstofffixierung, Assimilation und übrige Umwandlungen/Stoffbilanzen bleiben unterschieden; Material-/Logikregression, keine unabhängige Fachgesamtfreigabe.",
+      "historical": {
+        "sourceCommit": "936e69dc2bd91ab4ab59bc1c63f7c66696085e1d",
+        "status": "BESTANDEN",
+        "finding": "Aktuelle Lern-/Pädagogikprüfungen und Materialprüfungen bestanden; Stickstofffixierung, Assimilation und weitere N-Umwandlungen bleiben getrennt. Keine vollständige unabhängige biologische Fachabnahme.",
+        "scope": "Unveränderter damaliger eigener Bericht; neue Bewertung folgt dem vor Änderungen festgelegten V1-Vertrag. Kein historisches Ergebnis wird überschrieben."
+      },
+      "originalIssueTitle": "Stickstofffixierung und Assimilation",
+      "previousV1": {
+        "sourceCommit": "e9899efaa314d052191d7d3a95b5de904f2932b6",
+        "status": "BESTANDEN",
+        "finding": "Aktuelle Pädagogik-, Material- und Logikprüfungen erhalten getrennte Stickstofffixierung/Assimilation und weitere Umwandlungen. Stoffflüsse/Atmung werden nicht pauschal als Nahrungskanten erklärt.",
+        "dateUTC": "2026-10-24T14:03:23.350936+00:00"
+      },
+      "sourceCommit": "4eb186a5325ae30dfa233e10dd44eb73ea710afa",
+      "dateUTC": "2026-10-25T06:30:05.715216+00:00",
+      "evidenceKind": "Eigene neue reale Modul-/Browser-/PDF-Ausführung plus gesondert bezeichnete GitHub-Metadaten; Sichtung separat dokumentiert.",
+      "finding": "Erneute Material-/Logikprüfung bestätigt Stickstofffixierung, Assimilation und Stoffbilanztrennung; keine fachliche Gesamtfreigabe aus einer einzelnen Assertion abgeleitet.",
+      "status": "BESTANDEN",
+      "evidence": [
+        {
+          "path": "Nachweise/compact-node/compact-pedagogy/pedagogy-result.json",
+          "sha256": "e9ada42a190a45a771a07c61675e5ddc2de4417178c30138d59f26ae77c04c0c"
+        }
+      ]
+    },
+    {
+      "id": "F12",
+      "title": "Physisches iPad/Safari und Unterrichtspilot",
+      "scope": "Tatsächliches Schulgerät mit installierter System-/Browserversion, echte Safari-/Datei-/Hintergrundfälle und Unterrichtspilot; keine Emulation als Gerät/Pilot werten.",
+      "historical": {
+        "sourceCommit": "936e69dc2bd91ab4ab59bc1c63f7c66696085e1d",
+        "status": "NICHT GEPRÜFT",
+        "finding": "Kein physisches Apple iPad 9, Safari/iPadOS 27 und keine Lerngruppe verfügbar. Chromium-Touchemulation ist separat bestanden, kein Ersatz. Konkreter Geräte-/Unterrichtspilotplan mit Zeit, Hilfen, anonymen Produkten, Fehlvorstellungen und Naturtransfer vorbereitet; keine Ergebnisse erfunden.",
+        "scope": "Unveränderter damaliger eigener Bericht; neue Bewertung folgt dem vor Änderungen festgelegten V1-Vertrag. Kein historisches Ergebnis wird überschrieben."
+      },
+      "originalIssueTitle": "Physisches iPad/Safari und Unterrichtspilot",
+      "previousV1": {
+        "sourceCommit": "e9899efaa314d052191d7d3a95b5de904f2932b6",
+        "status": "NICHT GEPRÜFT",
+        "finding": "Kein physisches Schulgerät, keine tatsächlich geprüfte Safari-/Systemversion und keine Lerngruppe verfügbar. Gewünschtes Modell bleibt AppleiPad9; die frühere Versionskombination ist kein verifizierter Test. Ausfüllbares Geräte-/Pilotblatt liegt vor.",
+        "dateUTC": "2026-10-24T14:03:23.350936+00:00"
+      },
+      "sourceCommit": "4eb186a5325ae30dfa233e10dd44eb73ea710afa",
+      "dateUTC": "2026-10-25T06:30:05.715216+00:00",
+      "evidenceKind": "Keine reale Geräte-/Unterrichtsausführung verfügbar.",
+      "finding": "Kein physisches iPad/Safari und keine Lerngruppe verfügbar. Nutzerangabe iPad 9/iPadOS 27 bleibt unverifiziert. Abhakblatt vorhanden; kein Geräte-, 30-FPS- oder Wirksamkeits-PASS.",
+      "status": "NICHT GEPRÜFT",
+      "evidence": []
+    },
+    {
+      "id": "F13",
+      "title": "Arbeitsfelder und frischer A4-Druck",
+      "scope": "Fünf frische A4-Dokumente mit 103 Seiten; vollständiges Raster und 22 Seiten lesbar; tatsächliche Unterrichts-/Druckerprobe offen.",
+      "historical": {
+        "sourceCommit": "936e69dc2bd91ab4ab59bc1c63f7c66696085e1d",
+        "status": "BESTANDEN",
+        "finding": "Beide aktuellen A4-Fassungen frisch gerendert: 39 Schüler- und 59 Lehrkräfteseiten. Alle 98 Seiten in Kontaktbögen selbst angesehen, sämtliche neun C17-Seiten zusätzlich lesbar. Keine abgeschnittenen Tabellen oder isolierten Rückmeldezeilen; automatisierter PDF-Audit bestanden. Tatsächlicher Schreibraum in Lerngruppe ungeprüft.",
+        "scope": "Unveränderter damaliger eigener Bericht; neue Bewertung folgt dem vor Änderungen festgelegten V1-Vertrag. Kein historisches Ergebnis wird überschrieben."
+      },
+      "originalIssueTitle": "Arbeitsfelder und frischer A4-Druck",
+      "previousV1": {
+        "sourceCommit": "e9899efaa314d052191d7d3a95b5de904f2932b6",
+        "status": "BESTANDEN",
+        "finding": "Fünf frischePDFs mit104Seiten bestehen alle Text-/Layoutaudits. Alle112Raster sind bytegleich mit den tatsächlich gesichteten8Kontaktbögen/19lesbaren Detailseiten; aktuellePDF-Hashes separat gebunden. Keine beobachteten abgeschnittenen Tabellen oder isolierten Rückmeldezeilen.",
+        "dateUTC": "2026-10-24T14:03:23.350936+00:00"
+      },
+      "sourceCommit": "4eb186a5325ae30dfa233e10dd44eb73ea710afa",
+      "dateUTC": "2026-10-25T06:30:05.715216+00:00",
+      "evidenceKind": "Eigene neue reale Modul-/Browser-/PDF-Ausführung plus gesondert bezeichnete GitHub-Metadaten; Sichtung separat dokumentiert.",
+      "finding": "Alle fünf aktuellen PDFs: 38 Schüler-/59 Lehrkräfteseiten, drei kurze Dokumente jeweils 2 Seiten. Alle 103 Seiten im Raster und 22 Seiten lesbar geprüft; Text-/Tabellen-/Schreibflächenassertions bestanden. Der echte 3-Seiten-Altfehler mit DejaVu Sans bleibt als negativer Regressionsbeleg erhalten.",
+      "status": "BESTANDEN",
+      "evidence": [
+        {
+          "path": "Nachweise/own-print-review.json",
+          "sha256": "b03001ce9ef917b05e9039a5af81e99aeac1918eaa4d5f637117d7414b954d69"
+        },
+        {
+          "path": "Nachweise/print-fonts/result.json",
+          "sha256": "791c343835da18dbeed85ac5445ec88cc8effc3f18cb988c94b009f3463340dd"
+        }
+      ]
+    },
+    {
+      "id": "N01",
+      "title": "Neues lokales Beobachtungsfenster nach regulärem Fußweg",
+      "scope": "Endliche Ressourcen nach tatsächlichem Hauptweg/Abkürzung, expliziter neuer lokaler Versuch mit neuer Run-ID/Herkunft am erreichten Ort, acht Erwerbsfolgen mit1200 expliziten Modellsekunden; kein realer Wiederbelebungsanspruch.",
+      "historical": {
+        "sourceCommit": "936e69dc2bd91ab4ab59bc1c63f7c66696085e1d",
+        "status": "FEHLGESCHLAGEN",
+        "finding": "Alle3 regulären Gehsegmente im getrennten längeren Lauf vollständig: Hauptweg1324,423s/360,680 abgetasteteMeter, Rückweg179,556s, Abzweig56,776s. Danach tatsächlich erschöpfte endliche Ressourcen, über öffentliche UI neues lokales Fenster mit neuer Run-ID/Herkunft bei exakt unverändertem Standort; Austernfischer erwirbt konkrete Muschel und erster eigener Vogelbeleg wird nativ gespeichert. Zweites neues Fenster bleibt korrekt. Der Gesamtnachtest endet am Säbelschnäbler-Sichtfehler; Vier-Arten-Wiederholung nach1200 expliziten Modellsekunden in diesem vollständigen aktuellen Fußweglauf nicht erreicht. Zugang funktioniert nachgewiesen, vollständiger N01-Abnahmelauf bleibt fehlgeschlagen. Die ergänzende aktuelle Referenzdiagnose besteht8/8 Folgen samt1200-Modellsekunden-Wartezeit und explizitem Moduswechsel bei gleicher Run-ID/Position und bytegleichem Feldbuch; sie ersetzt den fehlgeschlagenen normalen Fußweglauf nicht.",
+        "scope": "Unveränderter damaliger eigener Bericht; neue Bewertung folgt dem vor Änderungen festgelegten V1-Vertrag. Kein historisches Ergebnis wird überschrieben."
+      },
+      "originalIssueTitle": "Neues lokales Beobachtungsfenster nach regulärem Fußweg",
+      "previousV1": {
+        "sourceCommit": "e9899efaa314d052191d7d3a95b5de904f2932b6",
+        "status": "BESTANDEN",
+        "finding": "Vollständiger normaler Hauptweg plus Rückweg/Abzweig und Dorfabkürzung durch Eingaben bestanden. Endliche Ankunftsressourcen erschöpft; explizite lokale Neufenster erhalten Ort und Altbelege, ändern Run-ID/Herkunft. Vier unbeschleunigte und vier späte Vogelbeutefolgen bestehen;1200öffentlicheModellsekunden geben keinen eigenen Zeitkredit. Native Speicherung eines tatsächlich gesehenen Belegs geprüft.",
+        "dateUTC": "2026-10-24T14:03:23.350936+00:00"
+      },
+      "sourceCommit": "4eb186a5325ae30dfa233e10dd44eb73ea710afa",
+      "dateUTC": "2026-10-25T06:30:05.715216+00:00",
+      "evidenceKind": "Eigene neue reale Modul-/Browser-/PDF-Ausführung plus gesondert bezeichnete GitHub-Metadaten; Sichtung separat dokumentiert.",
+      "finding": "Neuer vollständiger Hauptweg, Rückweg, Abzweig und Dorfabkürzung über Eingaben. Erschöpfte Ressourcen, explizite lokale Neufenster, Ort/Run-/Belegschutz und acht vollständige Nahrungsfolgen erneut geprüft; Modellschritte erzeugen keine eigene Sichtzeit.",
+      "status": "BESTANDEN",
+      "evidence": [
+        {
+          "path": "Nachweise/v1-full-walk-feeding-retry/result.json",
+          "sha256": "1266390973123041f5571cfccd75c84b1afbd38ac206cf8bacddc1822b521954"
+        },
+        {
+          "path": "Nachweise/own-feeding-review.json",
+          "sha256": "a03a41b7475fcb1a26f3637ce08761001e9584049e8d622bc6a4bc870033ec06"
+        }
+      ]
+    },
+    {
+      "id": "N02",
+      "title": "Andel-Zonierung korrigiert",
+      "scope": "Andel-/Salzwiesenzonierung und konkrete Modellhöhen erhalten; keine kalibrierte natürliche Jahresstatistik.",
+      "historical": {
+        "sourceCommit": "936e69dc2bd91ab4ab59bc1c63f7c66696085e1d",
+        "status": "BESTANDEN",
+        "finding": "Aktuelle Gradient-/Höhentests und identische Andel-Blickpunkte bei normalem Niedrig-/Hochwasser bestanden. Keine erneute Verlagerung unter Normalhochwasser; alte Revisionen bleiben erhalten.",
+        "scope": "Unveränderter damaliger eigener Bericht; neue Bewertung folgt dem vor Änderungen festgelegten V1-Vertrag. Kein historisches Ergebnis wird überschrieben."
+      },
+      "originalIssueTitle": "Andel-Zonierung korrigiert",
+      "previousV1": {
+        "sourceCommit": "e9899efaa314d052191d7d3a95b5de904f2932b6",
+        "status": "BESTANDEN",
+        "finding": "Aktuelle Habitat-/Revisionsprüfungen und gleiche konkrete Andel-Blicke bei Niedrig-/Hochwasser bestehen; keine jährliche Fluthäufigkeit aus Tidenpegeln abgeleitet.",
+        "dateUTC": "2026-10-24T14:03:23.350936+00:00"
+      },
+      "sourceCommit": "4eb186a5325ae30dfa233e10dd44eb73ea710afa",
+      "dateUTC": "2026-10-25T06:30:05.715216+00:00",
+      "evidenceKind": "Eigene neue reale Modul-/Browser-/PDF-Ausführung plus gesondert bezeichnete GitHub-Metadaten; Sichtung separat dokumentiert.",
+      "finding": "Neue Gradienten-/Höhentests und Browserbilder erhalten die Andelzonierung und historischen Revisionen; keine neuen ökologischen Standorte eingeführt.",
+      "status": "BESTANDEN",
+      "evidence": [
+        {
+          "path": "Nachweise/habitat-revision/result.json",
+          "sha256": "054e348fa599ac115bd3c0ab81ad00f556ec972674e7bb54129a05c52fdefe0b"
+        }
+      ]
+    },
+    {
+      "id": "N03",
+      "title": "Nullpopulation korrigiert",
+      "scope": "Nullpopulation bleibt in Kurve/Tabelle/Export null; gleiche Anfangsbedingungen und Zahlenmodellgrenzen.",
+      "historical": {
+        "sourceCommit": "936e69dc2bd91ab4ab59bc1c63f7c66696085e1d",
+        "status": "BESTANDEN",
+        "finding": "Aktuelle Wachstums-Node- und native Browserprüfung bestanden: Nullpopulation bleibt bei r=0 und positivem r null; positive unrepresentierbare Überläufe begründet zurückgewiesen. Exportierbare Daten und Kurven erhalten.",
+        "scope": "Unveränderter damaliger eigener Bericht; neue Bewertung folgt dem vor Änderungen festgelegten V1-Vertrag. Kein historisches Ergebnis wird überschrieben."
+      },
+      "originalIssueTitle": "Nullpopulation korrigiert",
+      "previousV1": {
+        "sourceCommit": "e9899efaa314d052191d7d3a95b5de904f2932b6",
+        "status": "BESTANDEN",
+        "finding": "Nullpopulation bleibt im aktuellen Browser-Zahlenmodell, Diagramm, vollständiger Tabelle und Export null; die vier gezielten Wachstumsprüfungen bestehen.",
+        "dateUTC": "2026-10-24T14:03:23.350936+00:00"
+      },
+      "sourceCommit": "4eb186a5325ae30dfa233e10dd44eb73ea710afa",
+      "dateUTC": "2026-10-25T06:30:05.715216+00:00",
+      "evidenceKind": "Eigene neue reale Modul-/Browser-/PDF-Ausführung plus gesondert bezeichnete GitHub-Metadaten; Sichtung separat dokumentiert.",
+      "finding": "Nullpopulation bei Null- und positivem Wachstum bleibt in Modell, Kurve und Export null; Überläufe werden begründet zurückgewiesen.",
+      "status": "BESTANDEN",
+      "evidence": [
+        {
+          "path": "Nachweise/growth/result.json",
+          "sha256": "423964d67a77ccf7d24250c508cedde57dbd7788f67783215ab3e298324d347b"
+        },
+        {
+          "path": "Nachweise/compact-node/compact-growth-boundary.log",
+          "sha256": "8827a5e7767d32acdceeafee22cb391ce10fb95e4703c539a983d1348ad04812"
+        }
+      ]
+    },
+    {
+      "id": "N04",
+      "title": "Verwaiste Druck-Rückmeldezeilen korrigiert",
+      "scope": "Keine isolierten Rückmeldezeilen oder abgeschnittenen Arbeitsfelder im frischen A4-Druck; reale Nutzbarkeit nicht als Pilot geprüft.",
+      "historical": {
+        "sourceCommit": "936e69dc2bd91ab4ab59bc1c63f7c66696085e1d",
+        "status": "BESTANDEN",
+        "finding": "Alle 98 neu gerenderten A4-Seiten im Überblick selbst geprüft; keine frühere alleinstehende Rückmeldezeile. Kartenkennungen, Tabellen und Arbeitsfelder bleiben zusammenhängend.",
+        "scope": "Unveränderter damaliger eigener Bericht; neue Bewertung folgt dem vor Änderungen festgelegten V1-Vertrag. Kein historisches Ergebnis wird überschrieben."
+      },
+      "originalIssueTitle": "Verwaiste Druck-Rückmeldezeilen korrigiert",
+      "previousV1": {
+        "sourceCommit": "e9899efaa314d052191d7d3a95b5de904f2932b6",
+        "status": "BESTANDEN",
+        "finding": "FrischerA4-Druck, vollständige Rasterübersicht und lesbare betroffene/angrenzende Seiten zeigen keine isolierten Rückmeldezeilen. Die ursprünglichen Schreibraum-/Zeilenhöhenassertions bleiben unverändert.",
+        "dateUTC": "2026-10-24T14:03:23.350936+00:00"
+      },
+      "sourceCommit": "4eb186a5325ae30dfa233e10dd44eb73ea710afa",
+      "dateUTC": "2026-10-25T06:30:05.715216+00:00",
+      "evidenceKind": "Eigene neue reale Modul-/Browser-/PDF-Ausführung plus gesondert bezeichnete GitHub-Metadaten; Sichtung separat dokumentiert.",
+      "finding": "Keine isolierten früheren Rückmeldezeilen oder abgeschnittenen Tabellen im frischen Gesamt-Raster; alle Textfragmente erhalten. Print-only Arial/Liberation Sans ersetzt den plattformabhängigen Systemfont, ohne Größen oder Schreibfelder zu reduzieren.",
+      "status": "BESTANDEN",
+      "evidence": [
+        {
+          "path": "Nachweise/own-print-review.json",
+          "sha256": "b03001ce9ef917b05e9039a5af81e99aeac1918eaa4d5f637117d7414b954d69"
+        },
+        {
+          "path": "Nachweise/print-fonts/result.json",
+          "sha256": "791c343835da18dbeed85ac5445ec88cc8effc3f18cb988c94b009f3463340dd"
+        }
+      ]
+    },
+    {
+      "id": "N05",
+      "title": "Widersprüchliche Ereigniskopien atomar abweisen",
+      "scope": "N05-Original und identische Ereigniskopien/Altbücher prüfen; widersprüchliche Kopien im selben Run atomar ablehnen.",
+      "historical": {
+        "sourceCommit": "936e69dc2bd91ab4ab59bc1c63f7c66696085e1d",
+        "status": "BESTANDEN",
+        "finding": "Originalfixture mit gleichem Rundgang/Ereignis und widersprüchlicher Interaktion wird im aktuellen nativen 51-Fälle-Importlauf vor Speicherübernahme abgewiesen. 12 Node-Gruppen prüfen vollständigen Szenenkontext und alle unveränderlichen Payloadfelder. Identische Kopien, verschiedene echte Ereignisse, alte Belege und ausdrücklich qualifizierte Mehr-Rundgang-Auswahl bleiben zulässig. Interne Konsistenz, kein kryptografischer Herkunftsschutz. Auch derzusätzlicheisolierte936-N05-Einzeltest istbestanden: keineÜbernahmeoption, alteSpeicherbytes sowieBelege/Antworten/Drafts imExport identisch. GeschützterpositiveAltbestand ausdrücklichimportiertes historischesFixture, keinneuerEigenbeleg diesesNegativtests.",
+        "scope": "Unveränderter damaliger eigener Bericht; neue Bewertung folgt dem vor Änderungen festgelegten V1-Vertrag. Kein historisches Ergebnis wird überschrieben."
+      },
+      "originalIssueTitle": "Widersprüchliche Ereigniskopien innerhalb einer Run-ID werden akzeptiert",
+      "previousV1": {
+        "sourceCommit": "e9899efaa314d052191d7d3a95b5de904f2932b6",
+        "status": "BESTANDEN",
+        "finding": "Original-N05, widersprüchliche Ereigniskopien, identische Kopien und positive Altbestände in der aktuellen51-Fälle-Importsuite geprüft. Widersprüche werden atomar abgewiesen; gleiche Kopien nicht fälschlich verworfen.",
+        "dateUTC": "2026-10-24T14:03:23.350936+00:00"
+      },
+      "sourceCommit": "4eb186a5325ae30dfa233e10dd44eb73ea710afa",
+      "dateUTC": "2026-10-25T06:30:05.715216+00:00",
+      "evidenceKind": "Eigene neue reale Modul-/Browser-/PDF-Ausführung plus gesondert bezeichnete GitHub-Metadaten; Sichtung separat dokumentiert.",
+      "finding": "Originalfixture widersprüchlicher Ereigniskopien wird im neuen 51-Fälle-Browserlauf atomar abgewiesen. Identische Kopien, gültige Altbücher und unterschiedliche tatsächliche Ereignisse bleiben zulässig. Keine kryptografische Authentizität behauptet.",
+      "status": "BESTANDEN",
+      "evidence": [
+        {
+          "path": "Nachweise/imports/result.json",
+          "sha256": "a5a8076df2e3a5e0ebf6aaa3545609bbe4fc77085750ea217466035069d4a9ec"
+        },
+        {
+          "path": "Nachweise/compact-node/compact-event-reference/result.json",
+          "sha256": "7818c4d3b2d7ab9504b26978df01ac98e542a2bf9ca48af95318299692f93090"
+        }
+      ]
+    },
+    {
+      "id": "N06",
+      "title": "Historische Habitat-Revisionen portabel prüfen",
+      "scope": "Unveränderte tatsächliche Git-Module im selben Prozess vergleichen, diskrete Werte exakt und dokumentierte numerische Toleranz; kein neu gespeicherter Sollhash.",
+      "historical": {
+        "sourceCommit": "936e69dc2bd91ab4ab59bc1c63f7c66696085e1d",
+        "status": "BESTANDEN",
+        "finding": "Unveränderte historische Git-Quellen f921468 werden gegen aktuell im selben Prozess verglichen: diskrete Werte exakt, begründete numerische Toleranz 1e-10 + 4 EPS relativ. Alle vier aktuellen CI-Jobs auf Linux/macOS und Node 24.19/24.21 einschließlich folgender Gradient-/Pfadprüfungen bestanden. Genaue Ursache jedes früheren plattformspezifischen Binärhashunterschieds nicht abschließend bewiesen; kein bloß neu gespeicherter Sollhash.",
+        "scope": "Unveränderter damaliger eigener Bericht; neue Bewertung folgt dem vor Änderungen festgelegten V1-Vertrag. Kein historisches Ergebnis wird überschrieben."
+      },
+      "originalIssueTitle": "Eigener Lauf der neuen Habitat-Revisionssuite scheitert am Sollhash",
+      "previousV1": {
+        "sourceCommit": "e9899efaa314d052191d7d3a95b5de904f2932b6",
+        "status": "BESTANDEN",
+        "finding": "Unveränderte echteGit-Snapshots f921und936 werden im selben Prozess mit aktuellem Code verglichen. Diskrete Werte bleiben exakt, begründete numerische Toleranz erhalten; bei936Revision1–6 aktuell maximale numerische Abweichung0. Keine neue Sollhash-Speicherung als Ersatz.",
+        "dateUTC": "2026-10-24T14:03:23.350936+00:00"
+      },
+      "sourceCommit": "4eb186a5325ae30dfa233e10dd44eb73ea710afa",
+      "dateUTC": "2026-10-25T06:30:05.715216+00:00",
+      "evidenceKind": "Eigene neue reale Modul-/Browser-/PDF-Ausführung plus gesondert bezeichnete GitHub-Metadaten; Sichtung separat dokumentiert.",
+      "finding": "Echte historische Git-Module im selben Prozess mit unveränderten diskreten Werten und festgelegter numerischer Toleranz erneut verglichen. Aktuelle Linux/macOS-Node-CI-Ergebnisse separat belegt; kein Sollhash neu gesetzt.",
+      "status": "BESTANDEN",
+      "evidence": [
+        {
+          "path": "Nachweise/compact-node/compact-habitat-revision/habitat-revision-result.json",
+          "sha256": "a9cbc61befafe83283b07a4f445fb33418a8d8335ea68b22368150c95076e9d5"
+        },
+        {
+          "path": "Nachweise/ci-product.json",
+          "sha256": "b62e70bc29de244ac745caa8827ff2c5c2036fd4d8a1892d1b1ceac1a014b92a"
+        }
+      ]
+    },
+    {
+      "id": "N07",
+      "title": "Unverändertes 900-s-Budget im GitHub-Ankunftslauf",
+      "scope": "Original900-s-Vertrag unverändert separat von längerem Funktionsweg und benannter Hardware30FPS/p95<=50ms; tatsächliche Softwareprofile und verlangsamte Modellzeit offen.",
+      "historical": {
+        "sourceCommit": "936e69dc2bd91ab4ab59bc1c63f7c66696085e1d",
+        "status": "FEHLGESCHLAGEN",
+        "finding": "Originaler900s-Vertrag unverändert: aktueller lokaler Lauf scheitert nach903,43s bei Wegpunkt1382. Längerer Funktionsweg separat erfolgreich, kein900s-PASS. Isoliertes aktuelles Chromium154.0.8037.57/SwiftShader-Profil am Start: Desktop1,912FPS (15,145 reale/1,465 Modell-s), Tablet1,862FPS (15,061 reale/1,675 Modell-s); Grafikprozess verbraucht59,93/59,50 CPU-s in diesen15s, JS-ScriptDuration nur0,078/0,094s. Cloudlimit4CPU-Kerne/32GiB; Software-Grafikprozess nahezu CPU-quota-auslastend,30FPS klar verfehlt. Das Profil erklärt den langsamen Software-Grafikpfad, beweist keine genaue nativeGPU-/Treiberursache oder Leistung eines echten iPads. Aktueller CI-Ankunftsschritt fehlgeschlagen; aktueller CI-Rohlogzugriff aufAzure10 blockiert, daher konkreteCIursache nicht erfunden. Neuer CI-Druck trotzdem bestanden.",
+        "scope": "Unveränderter damaliger eigener Bericht; neue Bewertung folgt dem vor Änderungen festgelegten V1-Vertrag. Kein historisches Ergebnis wird überschrieben."
+      },
+      "originalIssueTitle": "GitHub-Ankunftslauf überschreitet 900-s-Budget",
+      "previousV1": {
+        "sourceCommit": "e9899efaa314d052191d7d3a95b5de904f2932b6",
+        "status": "BESTANDEN",
+        "finding": "Der ursprüngliche unveränderte Treiber besteht aktuell vollständig mit8Folgen. Hauptweg667,42s unter900s jeGehsegment, Rückweg125,07s, Abzweig35,36s; gesamterProzess942,252s einschließlich Beobachtungen/Export. KeinGesamtprozess-900s-Pass behauptet. Historischer936FAIL bleibtFAIL. Cloud-Softwaregrafik weiterhin unter30FPS; keine neue reale Hardwarefreigabe.",
+        "dateUTC": "2026-10-24T14:03:23.350936+00:00"
+      },
+      "sourceCommit": "4eb186a5325ae30dfa233e10dd44eb73ea710afa",
+      "dateUTC": "2026-10-25T06:30:05.715216+00:00",
+      "evidenceKind": "Eigene neue reale Modul-/Browser-/PDF-Ausführung plus gesondert bezeichnete GitHub-Metadaten; Sichtung separat dokumentiert.",
+      "finding": "Original 900-s-Treiber unverändert: lokal BESTANDEN, neuer CI-Ankunftsschritt failure. Vorheriger CI-Lauf 40101598733 bleibt FEHLGESCHLAGEN; lokal war dessen Hauptweg mit 667,25 s erfolgreich. Keine bewiesene genaue Ursache des abweichenden CI-Rechnerverhaltens; blockierte Original-Logs nicht erfunden. Neue Softwaregrafikprofile separat, keine 30-FPS-Hardwarefreigabe; D3 trennt Softwarekandidat und Diagnose.",
+      "status": "FEHLGESCHLAGEN",
+      "evidence": [
+        {
+          "path": "Nachweise/arrival-original900/result.json",
+          "sha256": "3e0fb7def3fb1d7741fa88dba2921311cd6f2c787834ae954957483c49766330"
+        },
+        {
+          "path": "Nachweise/arrival-position-diagnosis.json",
+          "sha256": "e5603d6629f3c0b40a5c09e0185ca5fa23b34a724776deabdebde63f8caa77db"
+        },
+        {
+          "path": "Nachweise/arrival-current-position-diagnosis.json",
+          "sha256": "ec445a1b60e912130288d8a6c0afead04a9a43ac6637751c73c2924a0e53cea0"
+        },
+        {
+          "path": "Nachweise/forest-profile/result.json",
+          "sha256": "60a3fca10951e51cd48ac63af9384f8c49a2b925e655917502af1ef16c340d84"
+        },
+        {
+          "path": "Nachweise/ci-product.json",
+          "sha256": "b62e70bc29de244ac745caa8827ff2c5c2036fd4d8a1892d1b1ceac1a014b92a"
+        }
+      ]
+    },
+    {
+      "id": "N08",
+      "title": "Kleine Ansicht, Rotation, Zoom und Eingabeabschirmung",
+      "scope": "Vier Pflichtviewports, Rotation, nativer200%-Zoom, erreichbare Texte/Schließen, Scroll-/Tastaturabschirmung und tatsächliche Kontextwiederherstellung; physisches Safari separatF12.",
+      "historical": {
+        "sourceCommit": "936e69dc2bd91ab4ab59bc1c63f7c66696085e1d",
+        "status": "FEHLGESCHLAGEN",
+        "finding": "Eigene unveränderte936-Baseline reproduziert abgeschnittene Detailfläche bei600×375; aktueller Benutzerauftrag ergänzt N08 ausdrücklich.",
+        "scope": "Unveränderter damaliger eigener Bericht; neue Bewertung folgt dem vor Änderungen festgelegten V1-Vertrag. Kein historisches Ergebnis wird überschrieben."
+      },
+      "originalIssueTitle": "Kleine Ansicht, Rotation, Zoom und Eingabeabschirmung",
+      "previousV1": {
+        "sourceCommit": "e9899efaa314d052191d7d3a95b5de904f2932b6",
+        "status": "BESTANDEN",
+        "finding": "Zwölf aktuelle UI-Prüfgruppen bestehen: vier Pflichtgrößen, Rotation, Eingabeabschirmung, Schließen und Grafikverlust/Restore. Zusätzliche echte native200%-Aufnahmen mit1440×813physischenPixeln samt ganzer gescrollter Linse tatsächlich gesichtet. Der ursprüngliche kleinere Screenshot war ein Treiber-Ausschnitt, kein fingierter CSS-Zoom. Physisches Safari sowie nicht herstellbarer echter Hintergrundzustand bleiben separat ungeprüft.",
+        "dateUTC": "2026-10-24T14:03:23.350936+00:00"
+      },
+      "sourceCommit": "4eb186a5325ae30dfa233e10dd44eb73ea710afa",
+      "dateUTC": "2026-10-25T06:30:05.715216+00:00",
+      "evidenceKind": "Eigene neue reale Modul-/Browser-/PDF-Ausführung plus gesondert bezeichnete GitHub-Metadaten; Sichtung separat dokumentiert.",
+      "finding": "Aktuelle vier Pflichtviewports, Rotation, native 200 %-Vergrößerung, Scroll-/Tastaturabschirmung und echte WebGL-Wiederherstellung geprüft und selbst gesichtet. Physisches Safari sowie nicht erreichbares document.hidden bleiben getrennt offen.",
+      "status": "BESTANDEN",
+      "evidence": [
+        {
+          "path": "Nachweise/ui/result.json",
+          "sha256": "8a85258c5aca75991a4d03f28276b210598b530abd5884527a59ff504775b805"
+        },
+        {
+          "path": "Nachweise/own-ui-review.json",
+          "sha256": "1a787f86c128c454e355215d0a63163d48b6a5ff42b44d9775afd54c21b4a758"
+        },
+        {
+          "path": "Nachweise/native-ui/result.json",
+          "sha256": "1790eef57f7fa212bc413e2bbed3c099ab9f2260c06343e3c0b35020e522fef5"
+        }
+      ]
+    }
+  ],
+  "selectedEvidence": [
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/print/Arbeitsblaetter-contact-01.png",
+      "target": "Bilder/print/Arbeitsblaetter-contact-01.png",
+      "sha256": "a0eea245bea7ec0512d3239b32c2943d201df924a9f0317a268cec9940a59e65",
+      "caption": "print: aktuelle eigene Sichtung; Umfang siehe Nachweise/own-print-review.json"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/print/Arbeitsblaetter-contact-02.png",
+      "target": "Bilder/print/Arbeitsblaetter-contact-02.png",
+      "sha256": "6faf1b452b8ac82dba1f378fecdfa355af9a42876083c5051dcb7def75541e92",
+      "caption": "print: aktuelle eigene Sichtung; Umfang siehe Nachweise/own-print-review.json"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/print/Lehrkraefte-contact-01.png",
+      "target": "Bilder/print/Lehrkraefte-contact-01.png",
+      "sha256": "84edc2277055fd2370ffa09cfa836d5b827cbf98f4d2e9f4bcc7a4acb80cb581",
+      "caption": "print: aktuelle eigene Sichtung; Umfang siehe Nachweise/own-print-review.json"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/print/Lehrkraefte-contact-02.png",
+      "target": "Bilder/print/Lehrkraefte-contact-02.png",
+      "sha256": "c5500bbc3bcbac5d0ebc1c3cf2fb7a7e7e6809e50f7b5cf600da7cffbe127ee9",
+      "caption": "print: aktuelle eigene Sichtung; Umfang siehe Nachweise/own-print-review.json"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/print/Lehrkraefte-contact-03.png",
+      "target": "Bilder/print/Lehrkraefte-contact-03.png",
+      "sha256": "1d6bfa7dad986f9c52ef0165c1eb256d0012bdcf8ccb577514a3ce84cdabe88f",
+      "caption": "print: aktuelle eigene Sichtung; Umfang siehe Nachweise/own-print-review.json"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/print/START-IM-UNTERRICHT-contact.png",
+      "target": "Bilder/print/START-IM-UNTERRICHT-contact.png",
+      "sha256": "42659616f2aee023a82891b9044a97ab8fd7ad82ba1f84abdd6c9c782b540820",
+      "caption": "print: aktuelle eigene Sichtung; Umfang siehe Nachweise/own-print-review.json"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/print/PFAD-A-Artenliste-contact.png",
+      "target": "Bilder/print/PFAD-A-Artenliste-contact.png",
+      "sha256": "c0584e2d2185d159b192b7e646188cbafcd4f69392378edba70b8beeb0fed9ca",
+      "caption": "print: aktuelle eigene Sichtung; Umfang siehe Nachweise/own-print-review.json"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/print/PFAD-B-Kuestenvoegel-contact.png",
+      "target": "Bilder/print/PFAD-B-Kuestenvoegel-contact.png",
+      "sha256": "b4ea5e2bf19c7580cd1ea3e36d46488415c633a896c2abd65fdd3820428a80fd",
+      "caption": "print: aktuelle eigene Sichtung; Umfang siehe Nachweise/own-print-review.json"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/print/Arbeitsblaetter-pages/page-20.png",
+      "target": "Bilder/print/Arbeitsblaetter-pages/page-20.png",
+      "sha256": "7a075d4336c2a3ef5bf2d4e78d662980801278a0d69a2aabe46d5707dd9e63ef",
+      "caption": "print: aktuelle eigene Sichtung; Umfang siehe Nachweise/own-print-review.json"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/print/Arbeitsblaetter-pages/page-21.png",
+      "target": "Bilder/print/Arbeitsblaetter-pages/page-21.png",
+      "sha256": "fe91d4c32028658d4f05457883d1292f85dba2f1522f0949afbb3eb1a54a97fc",
+      "caption": "print: aktuelle eigene Sichtung; Umfang siehe Nachweise/own-print-review.json"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/print/Arbeitsblaetter-pages/page-23.png",
+      "target": "Bilder/print/Arbeitsblaetter-pages/page-23.png",
+      "sha256": "9db4207f1e115e28eaf3865e02d11c8e54d0c8b9499fd10f2ba5bf2eb87f02b5",
+      "caption": "print: aktuelle eigene Sichtung; Umfang siehe Nachweise/own-print-review.json"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/print/Arbeitsblaetter-pages/page-24.png",
+      "target": "Bilder/print/Arbeitsblaetter-pages/page-24.png",
+      "sha256": "9ef2ef0e8a773857349e66c06c36fe340fe2fd32a9dfd352a967c3e0475e384b",
+      "caption": "print: aktuelle eigene Sichtung; Umfang siehe Nachweise/own-print-review.json"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/print/Arbeitsblaetter-pages/page-25.png",
+      "target": "Bilder/print/Arbeitsblaetter-pages/page-25.png",
+      "sha256": "b64ad097ba197cef6a748432cbf76758ec7d781f3ee9e8f2004aa4dbdfde3209",
+      "caption": "print: aktuelle eigene Sichtung; Umfang siehe Nachweise/own-print-review.json"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/print/Arbeitsblaetter-pages/page-26.png",
+      "target": "Bilder/print/Arbeitsblaetter-pages/page-26.png",
+      "sha256": "6b90656b59d95dcf95ea8005f37c32e559cf04946d0799e3296b3c95c4d127d5",
+      "caption": "print: aktuelle eigene Sichtung; Umfang siehe Nachweise/own-print-review.json"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/print/Arbeitsblaetter-pages/page-33.png",
+      "target": "Bilder/print/Arbeitsblaetter-pages/page-33.png",
+      "sha256": "1c2c58d3bd18bad8d241e9298d3fbd518bd0955ea470f070fd10a1f1ad9fa238",
+      "caption": "print: aktuelle eigene Sichtung; Umfang siehe Nachweise/own-print-review.json"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/print/Arbeitsblaetter-pages/page-34.png",
+      "target": "Bilder/print/Arbeitsblaetter-pages/page-34.png",
+      "sha256": "d9eebf893df2660f7e1915e8da251415f9ae7cc30dd89735d1504f649453d745",
+      "caption": "print: aktuelle eigene Sichtung; Umfang siehe Nachweise/own-print-review.json"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/print/Arbeitsblaetter-pages/page-35.png",
+      "target": "Bilder/print/Arbeitsblaetter-pages/page-35.png",
+      "sha256": "3db7ecb7ae1052b67f1af36f27ee0ad96294c20355b9aa37b14914196c47b088",
+      "caption": "print: aktuelle eigene Sichtung; Umfang siehe Nachweise/own-print-review.json"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/print/Arbeitsblaetter-pages/page-36.png",
+      "target": "Bilder/print/Arbeitsblaetter-pages/page-36.png",
+      "sha256": "8f34be62dcaaad5db11e11edbeec04990cf0ff66547255d9539c8036b649e750",
+      "caption": "print: aktuelle eigene Sichtung; Umfang siehe Nachweise/own-print-review.json"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/print/Arbeitsblaetter-pages/page-37.png",
+      "target": "Bilder/print/Arbeitsblaetter-pages/page-37.png",
+      "sha256": "958f0f343c6413e30ee1a8ffc9dc0849467827412a2bbd462d06fbb668446193",
+      "caption": "print: aktuelle eigene Sichtung; Umfang siehe Nachweise/own-print-review.json"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/print/Lehrkraefte-pages/page-33.png",
+      "target": "Bilder/print/Lehrkraefte-pages/page-33.png",
+      "sha256": "2789caed5cff74254901f6751b3ca6a2ed7d948398429e3582427ccf677e9170",
+      "caption": "print: aktuelle eigene Sichtung; Umfang siehe Nachweise/own-print-review.json"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/print/Lehrkraefte-pages/page-39.png",
+      "target": "Bilder/print/Lehrkraefte-pages/page-39.png",
+      "sha256": "6f658d5e9d15d38ee31a8b3f136b6196f7ec4095630c0721b64336159aad40c7",
+      "caption": "print: aktuelle eigene Sichtung; Umfang siehe Nachweise/own-print-review.json"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/print/Lehrkraefte-pages/page-40.png",
+      "target": "Bilder/print/Lehrkraefte-pages/page-40.png",
+      "sha256": "e66d3abe34d66daef772f6a6419f1c2c33d449de257c3a1cd0ac764d3bcba7d2",
+      "caption": "print: aktuelle eigene Sichtung; Umfang siehe Nachweise/own-print-review.json"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/print/Lehrkraefte-pages/page-54.png",
+      "target": "Bilder/print/Lehrkraefte-pages/page-54.png",
+      "sha256": "ccffa0cbe8011fda24558aa8846424882b122a199cc4fc485854ef168c150d75",
+      "caption": "print: aktuelle eigene Sichtung; Umfang siehe Nachweise/own-print-review.json"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/print/Lehrkraefte-pages/page-57.png",
+      "target": "Bilder/print/Lehrkraefte-pages/page-57.png",
+      "sha256": "2970666ff7901fcbff5fbcc67f3878b722b1c4656f3123c8647114ff47d3d647",
+      "caption": "print: aktuelle eigene Sichtung; Umfang siehe Nachweise/own-print-review.json"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/feeding-sheets/sequence-1-compact-oystercatcher.png",
+      "target": "Bilder/feeding-sheets/sequence-1-compact-oystercatcher.png",
+      "sha256": "53f7213ac2683790c50266132f714ccab0f338dbee8e5bd370ae36824ba8287f",
+      "caption": "feeding: aktuelle eigene Sichtung; Umfang siehe Nachweise/own-feeding-review.json"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/feeding-sheets/sequence-2-compact-avocet.png",
+      "target": "Bilder/feeding-sheets/sequence-2-compact-avocet.png",
+      "sha256": "1ebed4a41c800d2437f20eae2f75faf307a06ac64f9f3e3184b690919881b9e7",
+      "caption": "feeding: aktuelle eigene Sichtung; Umfang siehe Nachweise/own-feeding-review.json"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/feeding-sheets/sequence-3-compact-redshank.png",
+      "target": "Bilder/feeding-sheets/sequence-3-compact-redshank.png",
+      "sha256": "209d569540c6f3c96817887589ddd8997ad187546c271a812a56322c5011ed65",
+      "caption": "feeding: aktuelle eigene Sichtung; Umfang siehe Nachweise/own-feeding-review.json"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/feeding-sheets/sequence-4-compact-spoonbill.png",
+      "target": "Bilder/feeding-sheets/sequence-4-compact-spoonbill.png",
+      "sha256": "bd8f09b2bc9cd4d3d16f87b904a72bb98cf8cfbe4c9f52dd63b15f00edbe7787",
+      "caption": "feeding: aktuelle eigene Sichtung; Umfang siehe Nachweise/own-feeding-review.json"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/feeding-sheets/sequence-5-compact-avocet.png",
+      "target": "Bilder/feeding-sheets/sequence-5-compact-avocet.png",
+      "sha256": "ae257249b1fd6d67a5f07d1dfb7fedc2a2356afce6bd1920930f3471ad37f21e",
+      "caption": "feeding: aktuelle eigene Sichtung; Umfang siehe Nachweise/own-feeding-review.json"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/feeding-sheets/sequence-6-compact-redshank.png",
+      "target": "Bilder/feeding-sheets/sequence-6-compact-redshank.png",
+      "sha256": "9cc315d7506ffc34f0a5c4ccbeade815bfb607a1a297ff72b175913d6b077320",
+      "caption": "feeding: aktuelle eigene Sichtung; Umfang siehe Nachweise/own-feeding-review.json"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/feeding-sheets/sequence-7-compact-spoonbill.png",
+      "target": "Bilder/feeding-sheets/sequence-7-compact-spoonbill.png",
+      "sha256": "bca7c5f9180710cc206d0fb05816f8e9e04c4092418b2a169775eeb1df0a8fae",
+      "caption": "feeding: aktuelle eigene Sichtung; Umfang siehe Nachweise/own-feeding-review.json"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/feeding-sheets/sequence-8-compact-oystercatcher.png",
+      "target": "Bilder/feeding-sheets/sequence-8-compact-oystercatcher.png",
+      "sha256": "ae232f212e6c4e3f062b6acd901755957531882dd530f087af98e5ae4fa11696",
+      "caption": "feeding: aktuelle eigene Sichtung; Umfang siehe Nachweise/own-feeding-review.json"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/forest-profile/start.png",
+      "target": "Bilder/forest-profile/start.png",
+      "sha256": "3394189414a27737a0c483f3c8c3023eccc0f14bd1a0d9cee8448ca552fd8544",
+      "caption": "forest: aktuelle eigene Sichtung; Umfang siehe Nachweise/own-forest-review.json"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/forest-profile/woodruff.png",
+      "target": "Bilder/forest-profile/woodruff.png",
+      "sha256": "39d7481e29dd394cfd3184ff84f80ae350e379055b985e138bfd1df32917daee",
+      "caption": "forest: aktuelle eigene Sichtung; Umfang siehe Nachweise/own-forest-review.json"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/forest-profile/nettle.png",
+      "target": "Bilder/forest-profile/nettle.png",
+      "sha256": "6aa538ce8143b91491b71b65e758150aab134bd7d689c9702c04c2495836cfe7",
+      "caption": "forest: aktuelle eigene Sichtung; Umfang siehe Nachweise/own-forest-review.json"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/forest-profile/wood.png",
+      "target": "Bilder/forest-profile/wood.png",
+      "sha256": "3c7a2676a4f69e125ef972c5f2b6f0acdba5f6e1d330e958ee18c76ba91b71fc",
+      "caption": "forest: aktuelle eigene Sichtung; Umfang siehe Nachweise/own-forest-review.json"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/forest-profile/village-edge.png",
+      "target": "Bilder/forest-profile/village-edge.png",
+      "sha256": "1d93e1739a9a343537bd85ddb4af74d3fd8345a49025475d039326ef17f99ce2",
+      "caption": "forest: aktuelle eigene Sichtung; Umfang siehe Nachweise/own-forest-review.json"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/forest-profile/oak-edge.png",
+      "target": "Bilder/forest-profile/oak-edge.png",
+      "sha256": "284d766995bcaae99514805b75dd897c36e7b61cd32f64dc335b25c83b8cc6e2",
+      "caption": "forest: aktuelle eigene Sichtung; Umfang siehe Nachweise/own-forest-review.json"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/forest-profile/ordinary-walk-1.png",
+      "target": "Bilder/forest-profile/ordinary-walk-1.png",
+      "sha256": "24bce701d9983002eb2380a183a85aa117eb6cadbda6250ed940d2b21c845f75",
+      "caption": "forest: aktuelle eigene Sichtung; Umfang siehe Nachweise/own-forest-review.json"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/forest-profile/ordinary-walk-2.png",
+      "target": "Bilder/forest-profile/ordinary-walk-2.png",
+      "sha256": "ae70f627557057df97089114782849ec495d5f5ea5b9d01d8605a6320e0107b1",
+      "caption": "forest: aktuelle eigene Sichtung; Umfang siehe Nachweise/own-forest-review.json"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/forest-profile/ordinary-walk-3.png",
+      "target": "Bilder/forest-profile/ordinary-walk-3.png",
+      "sha256": "fbf72386915b9007992ed41a652d74bfa7c9a814d7d1931c2a0e5e172283d40a",
+      "caption": "forest: aktuelle eigene Sichtung; Umfang siehe Nachweise/own-forest-review.json"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/ui/viewport-0-1440x900-top.png",
+      "target": "Bilder/ui/viewport-0-1440x900-top.png",
+      "sha256": "282015c4395fb2acfe922de7734c2e473b7a06585ec8765510f1f7349ef4dea8",
+      "caption": "ui: aktuelle eigene Sichtung; Umfang siehe Nachweise/own-ui-review.json"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/ui/viewport-0-1440x900-bottom.png",
+      "target": "Bilder/ui/viewport-0-1440x900-bottom.png",
+      "sha256": "282015c4395fb2acfe922de7734c2e473b7a06585ec8765510f1f7349ef4dea8",
+      "caption": "ui: aktuelle eigene Sichtung; Umfang siehe Nachweise/own-ui-review.json"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/ui/viewport-1-1080x810-top.png",
+      "target": "Bilder/ui/viewport-1-1080x810-top.png",
+      "sha256": "026a399a3c90aa7c267faf7493c26fd7e9ca692672c8bafbe1b938e6aa6bd94d",
+      "caption": "ui: aktuelle eigene Sichtung; Umfang siehe Nachweise/own-ui-review.json"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/ui/viewport-1-1080x810-bottom.png",
+      "target": "Bilder/ui/viewport-1-1080x810-bottom.png",
+      "sha256": "026a399a3c90aa7c267faf7493c26fd7e9ca692672c8bafbe1b938e6aa6bd94d",
+      "caption": "ui: aktuelle eigene Sichtung; Umfang siehe Nachweise/own-ui-review.json"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/ui/viewport-2-810x1080-top.png",
+      "target": "Bilder/ui/viewport-2-810x1080-top.png",
+      "sha256": "877dc21adc6b1a723b34dc5d6f498907cc4c582400fc8cf141a91c06e8d65b5c",
+      "caption": "ui: aktuelle eigene Sichtung; Umfang siehe Nachweise/own-ui-review.json"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/ui/viewport-2-810x1080-bottom.png",
+      "target": "Bilder/ui/viewport-2-810x1080-bottom.png",
+      "sha256": "877dc21adc6b1a723b34dc5d6f498907cc4c582400fc8cf141a91c06e8d65b5c",
+      "caption": "ui: aktuelle eigene Sichtung; Umfang siehe Nachweise/own-ui-review.json"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/ui/viewport-3-600x375-top.png",
+      "target": "Bilder/ui/viewport-3-600x375-top.png",
+      "sha256": "a353a65adad749551e60bdc0d90eb8f620d621f998601e00b3779b34eee78dfe",
+      "caption": "ui: aktuelle eigene Sichtung; Umfang siehe Nachweise/own-ui-review.json"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/ui/viewport-3-600x375-bottom.png",
+      "target": "Bilder/ui/viewport-3-600x375-bottom.png",
+      "sha256": "1625e3a0704396bae2c376aa99f38e77db348ea5111c52cef7359b9bc9d081cc",
+      "caption": "ui: aktuelle eigene Sichtung; Umfang siehe Nachweise/own-ui-review.json"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/ui/viewport-4-1080x810-top.png",
+      "target": "Bilder/ui/viewport-4-1080x810-top.png",
+      "sha256": "026a399a3c90aa7c267faf7493c26fd7e9ca692672c8bafbe1b938e6aa6bd94d",
+      "caption": "ui: aktuelle eigene Sichtung; Umfang siehe Nachweise/own-ui-review.json"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/ui/viewport-4-1080x810-bottom.png",
+      "target": "Bilder/ui/viewport-4-1080x810-bottom.png",
+      "sha256": "026a399a3c90aa7c267faf7493c26fd7e9ca692672c8bafbe1b938e6aa6bd94d",
+      "caption": "ui: aktuelle eigene Sichtung; Umfang siehe Nachweise/own-ui-review.json"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/native-ui/native-zoom-full-surface.png",
+      "target": "Bilder/native-ui/native-zoom-full-surface.png",
+      "sha256": "00c8bc1474128abf68be4f6a23da76899c4a128c2bd7f8fca712019ad863287d",
+      "caption": "ui: aktuelle eigene Sichtung; Umfang siehe Nachweise/own-ui-review.json"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/native-ui/native-zoom-middle-full-surface.png",
+      "target": "Bilder/native-ui/native-zoom-middle-full-surface.png",
+      "sha256": "51c82dd226cbb194fcd8a92075d802f5f9f30d4252596227024cf37e9436b679",
+      "caption": "ui: aktuelle eigene Sichtung; Umfang siehe Nachweise/own-ui-review.json"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/native-ui/small-600x375-middle-lens.png",
+      "target": "Bilder/native-ui/small-600x375-middle-lens.png",
+      "sha256": "7f652a388b4fc97cbbd6a1bff71ce1b94baa1af7119bedc205b58395f4953537",
+      "caption": "ui: aktuelle eigene Sichtung; Umfang siehe Nachweise/own-ui-review.json"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/native-ui/detail-context-restored.png",
+      "target": "Bilder/native-ui/detail-context-restored.png",
+      "sha256": "5263829d8ff28c90be1f0f40212e3f8c673dac25edbb0b44b16528f0c1350521",
+      "caption": "ui: aktuelle eigene Sichtung; Umfang siehe Nachweise/own-ui-review.json"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/native-ui/world-context-restored.png",
+      "target": "Bilder/native-ui/world-context-restored.png",
+      "sha256": "c62381d404d1916125ad989bb7f3b17defaf71c67e49a6d5347ddb37f32ceab7",
+      "caption": "ui: aktuelle eigene Sichtung; Umfang siehe Nachweise/own-ui-review.json"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/learning-source/model-capreolus_capreolus.png",
+      "target": "Bilder/learning-source/model-capreolus_capreolus.png",
+      "sha256": "df393bc9475a632d04923738028eace0adfcedc82dd60c9944a5d34490f6e376",
+      "caption": "organism: aktuelle eigene Sichtung; Umfang siehe Nachweise/own-organism-review.json"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/learning-source/model-dendrocopos_major.png",
+      "target": "Bilder/learning-source/model-dendrocopos_major.png",
+      "sha256": "e89e5c84b27c0e785cc35216b06ddada4fdd045633cc489797ffa1a7a8cd641f",
+      "caption": "organism: aktuelle eigene Sichtung; Umfang siehe Nachweise/own-organism-review.json"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/learning-source/model-galium_odoratum.png",
+      "target": "Bilder/learning-source/model-galium_odoratum.png",
+      "sha256": "ab19f9bf1f050e4c93a7cd2dc514c3b50ff7c003b2013e1c8c0ff2cc59bbe5c6",
+      "caption": "organism: aktuelle eigene Sichtung; Umfang siehe Nachweise/own-organism-review.json"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/learning-source/model-urtica_dioica.png",
+      "target": "Bilder/learning-source/model-urtica_dioica.png",
+      "sha256": "84523107f723d695616a035b0711c1e797567db34e8d629ecd255d60b54feb93",
+      "caption": "organism: aktuelle eigene Sichtung; Umfang siehe Nachweise/own-organism-review.json"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/learning-source/model-quercus_robur.png",
+      "target": "Bilder/learning-source/model-quercus_robur.png",
+      "sha256": "09b212fe52dc14ebdb826d20598bc5168e880cb7ec2b8fbbb621d2a8a5b86791",
+      "caption": "organism: aktuelle eigene Sichtung; Umfang siehe Nachweise/own-organism-review.json"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/learning-source/model-trifolium_pratense.png",
+      "target": "Bilder/learning-source/model-trifolium_pratense.png",
+      "sha256": "313e57ecd65a97aa641e1c2665649887ab3a55df5396221b8313af1232488175",
+      "caption": "organism: aktuelle eigene Sichtung; Umfang siehe Nachweise/own-organism-review.json"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/learning-standalone/K1-earned.png",
+      "target": "Bilder/learning-standalone/K1-earned.png",
+      "sha256": "4cc8f319d3d7ace5f328813ecbfb0a117423960ca1c962288ecae99119b74984",
+      "caption": "organism: aktuelle eigene Sichtung; Umfang siehe Nachweise/own-organism-review.json"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/learning-standalone/K3-earned.png",
+      "target": "Bilder/learning-standalone/K3-earned.png",
+      "sha256": "66311571db3bc26dafcb1c846876ddb95123bc6d3f2e5d932ea9698a71136e95",
+      "caption": "organism: aktuelle eigene Sichtung; Umfang siehe Nachweise/own-organism-review.json"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/v1-full-walk-feeding-retry/sequence-1-compact-oystercatcher-approaching.png",
+      "target": "Bilder/Original/v1-full-walk-feeding-retry/sequence-1-compact-oystercatcher-approaching.png",
+      "sha256": "49ec633590c5eb12ba4e365b1ccb908a1affc9d80a6b2d749269299d1bcde3aa",
+      "caption": "Unveränderter aktueller Phasenbeleg, Identität/Zeit in Nahrungsfolgenbericht"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/v1-full-walk-feeding-retry/sequence-1-compact-oystercatcher-searching.png",
+      "target": "Bilder/Original/v1-full-walk-feeding-retry/sequence-1-compact-oystercatcher-searching.png",
+      "sha256": "a340f41beca38443b773bb3168a3aa14477781ffde61eef8dfc5fcc6c1d6b3ed",
+      "caption": "Unveränderter aktueller Phasenbeleg, Identität/Zeit in Nahrungsfolgenbericht"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/v1-full-walk-feeding-retry/sequence-1-compact-oystercatcher-handling.png",
+      "target": "Bilder/Original/v1-full-walk-feeding-retry/sequence-1-compact-oystercatcher-handling.png",
+      "sha256": "ee0d1ac570468361a4f9a122743cb9908504742c319f36fc860e5b9959f3d012",
+      "caption": "Unveränderter aktueller Phasenbeleg, Identität/Zeit in Nahrungsfolgenbericht"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/v1-full-walk-feeding-retry/sequence-1-compact-oystercatcher-swallowing.png",
+      "target": "Bilder/Original/v1-full-walk-feeding-retry/sequence-1-compact-oystercatcher-swallowing.png",
+      "sha256": "bb1ae3e6884052f6f73ed0f7e5371907f261af07775539042bdd1a4e35ac3d34",
+      "caption": "Unveränderter aktueller Phasenbeleg, Identität/Zeit in Nahrungsfolgenbericht"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/v1-full-walk-feeding-retry/sequence-1-compact-oystercatcher-mouth-transfer.png",
+      "target": "Bilder/Original/v1-full-walk-feeding-retry/sequence-1-compact-oystercatcher-mouth-transfer.png",
+      "sha256": "136b34fd8dfe6468b3351f31400bf11134718459fd3de427a19a2fd732ca8575",
+      "caption": "Unveränderter aktueller Phasenbeleg, Identität/Zeit in Nahrungsfolgenbericht"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/v1-full-walk-feeding-retry/sequence-1-compact-oystercatcher-departing.png",
+      "target": "Bilder/Original/v1-full-walk-feeding-retry/sequence-1-compact-oystercatcher-departing.png",
+      "sha256": "1a667f8df8cd536679cf3818a4cfec2a4103c864a8bdef6387b3738babfe7d97",
+      "caption": "Unveränderter aktueller Phasenbeleg, Identität/Zeit in Nahrungsfolgenbericht"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/v1-full-walk-feeding-retry/sequence-1-compact-oystercatcher-after-departure.png",
+      "target": "Bilder/Original/v1-full-walk-feeding-retry/sequence-1-compact-oystercatcher-after-departure.png",
+      "sha256": "0f3c8465ea26ee480e1e04a82a366d6a863481ccba0341aedce974c5da55239d",
+      "caption": "Unveränderter aktueller Phasenbeleg, Identität/Zeit in Nahrungsfolgenbericht"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/v1-full-walk-feeding-retry/sequence-2-compact-avocet-approaching.png",
+      "target": "Bilder/Original/v1-full-walk-feeding-retry/sequence-2-compact-avocet-approaching.png",
+      "sha256": "6d241fac147307c31638b77242ed57ac77beeab1ba9c0a15c40d8d5cd7043e31",
+      "caption": "Unveränderter aktueller Phasenbeleg, Identität/Zeit in Nahrungsfolgenbericht"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/v1-full-walk-feeding-retry/sequence-2-compact-avocet-searching.png",
+      "target": "Bilder/Original/v1-full-walk-feeding-retry/sequence-2-compact-avocet-searching.png",
+      "sha256": "f93490a23a8c28895c51a95d2869048aec9614f9efc61dc7d02a23b4fce6f560",
+      "caption": "Unveränderter aktueller Phasenbeleg, Identität/Zeit in Nahrungsfolgenbericht"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/v1-full-walk-feeding-retry/sequence-2-compact-avocet-handling.png",
+      "target": "Bilder/Original/v1-full-walk-feeding-retry/sequence-2-compact-avocet-handling.png",
+      "sha256": "10db9998a910b245cd8e3d5f6fc37e6fdc469361f56d2a8c5cffdad1656b76dc",
+      "caption": "Unveränderter aktueller Phasenbeleg, Identität/Zeit in Nahrungsfolgenbericht"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/v1-full-walk-feeding-retry/sequence-2-compact-avocet-swallowing.png",
+      "target": "Bilder/Original/v1-full-walk-feeding-retry/sequence-2-compact-avocet-swallowing.png",
+      "sha256": "3493b2470bb27c507795d79670627a38ea18a97a4f6c15365d2877041a158d39",
+      "caption": "Unveränderter aktueller Phasenbeleg, Identität/Zeit in Nahrungsfolgenbericht"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/v1-full-walk-feeding-retry/sequence-2-compact-avocet-mouth-transfer.png",
+      "target": "Bilder/Original/v1-full-walk-feeding-retry/sequence-2-compact-avocet-mouth-transfer.png",
+      "sha256": "fe6ec111b6f398246109feda3f6a1257dce4e55b02b8eef90d696175a489928a",
+      "caption": "Unveränderter aktueller Phasenbeleg, Identität/Zeit in Nahrungsfolgenbericht"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/v1-full-walk-feeding-retry/sequence-2-compact-avocet-departing.png",
+      "target": "Bilder/Original/v1-full-walk-feeding-retry/sequence-2-compact-avocet-departing.png",
+      "sha256": "e420392d256d7fe6aa9aad8e8de9816fe9ed03714fc8c6baa87866019aab30e5",
+      "caption": "Unveränderter aktueller Phasenbeleg, Identität/Zeit in Nahrungsfolgenbericht"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/v1-full-walk-feeding-retry/sequence-2-compact-avocet-after-departure.png",
+      "target": "Bilder/Original/v1-full-walk-feeding-retry/sequence-2-compact-avocet-after-departure.png",
+      "sha256": "239f2f330319e7f71e10f5cbf23f198a1fd400e55a95ea6d182e1117bc19a26e",
+      "caption": "Unveränderter aktueller Phasenbeleg, Identität/Zeit in Nahrungsfolgenbericht"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/v1-full-walk-feeding-retry/sequence-3-compact-redshank-approaching.png",
+      "target": "Bilder/Original/v1-full-walk-feeding-retry/sequence-3-compact-redshank-approaching.png",
+      "sha256": "b96df731058f41422c7eb84ffce0731e3f7a41fc255a6aaee12a734004d5b4eb",
+      "caption": "Unveränderter aktueller Phasenbeleg, Identität/Zeit in Nahrungsfolgenbericht"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/v1-full-walk-feeding-retry/sequence-3-compact-redshank-searching.png",
+      "target": "Bilder/Original/v1-full-walk-feeding-retry/sequence-3-compact-redshank-searching.png",
+      "sha256": "0f77340e8bb8b7f0622b6d93ae3bce771b8be7c3b6a40ce6cf907f823b24f9d2",
+      "caption": "Unveränderter aktueller Phasenbeleg, Identität/Zeit in Nahrungsfolgenbericht"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/v1-full-walk-feeding-retry/sequence-3-compact-redshank-handling.png",
+      "target": "Bilder/Original/v1-full-walk-feeding-retry/sequence-3-compact-redshank-handling.png",
+      "sha256": "79aa5e81ac1279b2d79dc927f07f07af340ec12283c38a20865d539ddeba4830",
+      "caption": "Unveränderter aktueller Phasenbeleg, Identität/Zeit in Nahrungsfolgenbericht"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/v1-full-walk-feeding-retry/sequence-3-compact-redshank-swallowing.png",
+      "target": "Bilder/Original/v1-full-walk-feeding-retry/sequence-3-compact-redshank-swallowing.png",
+      "sha256": "b481dc880e5228e23e8634ec57f8821d0f4864daf8434cb1fb95dbd1852ea079",
+      "caption": "Unveränderter aktueller Phasenbeleg, Identität/Zeit in Nahrungsfolgenbericht"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/v1-full-walk-feeding-retry/sequence-3-compact-redshank-mouth-transfer.png",
+      "target": "Bilder/Original/v1-full-walk-feeding-retry/sequence-3-compact-redshank-mouth-transfer.png",
+      "sha256": "15786c7827722eeca8152f47f16099d0b392f4dc5df25d365025ce6da5d8ef4a",
+      "caption": "Unveränderter aktueller Phasenbeleg, Identität/Zeit in Nahrungsfolgenbericht"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/v1-full-walk-feeding-retry/sequence-3-compact-redshank-departing.png",
+      "target": "Bilder/Original/v1-full-walk-feeding-retry/sequence-3-compact-redshank-departing.png",
+      "sha256": "f518046c63865308bdeb67c3071fb9374a289862146b75936ba56e36730f4010",
+      "caption": "Unveränderter aktueller Phasenbeleg, Identität/Zeit in Nahrungsfolgenbericht"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/v1-full-walk-feeding-retry/sequence-3-compact-redshank-after-departure.png",
+      "target": "Bilder/Original/v1-full-walk-feeding-retry/sequence-3-compact-redshank-after-departure.png",
+      "sha256": "febfe608cd003dcaac20d76f9c306d6d09c42361404ca9fa1a96ad4a2cc08b21",
+      "caption": "Unveränderter aktueller Phasenbeleg, Identität/Zeit in Nahrungsfolgenbericht"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/v1-full-walk-feeding-retry/sequence-4-compact-spoonbill-approaching.png",
+      "target": "Bilder/Original/v1-full-walk-feeding-retry/sequence-4-compact-spoonbill-approaching.png",
+      "sha256": "87323c618535f5641a443e3bc944402fb302c0ac1dbb766358772833ecf3f267",
+      "caption": "Unveränderter aktueller Phasenbeleg, Identität/Zeit in Nahrungsfolgenbericht"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/v1-full-walk-feeding-retry/sequence-4-compact-spoonbill-searching.png",
+      "target": "Bilder/Original/v1-full-walk-feeding-retry/sequence-4-compact-spoonbill-searching.png",
+      "sha256": "7f7e1075c03e07b3f7b4720f2fa867e088916bf9a5578fe3146b569163343849",
+      "caption": "Unveränderter aktueller Phasenbeleg, Identität/Zeit in Nahrungsfolgenbericht"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/v1-full-walk-feeding-retry/sequence-4-compact-spoonbill-handling.png",
+      "target": "Bilder/Original/v1-full-walk-feeding-retry/sequence-4-compact-spoonbill-handling.png",
+      "sha256": "f5c4a54fa58a43b04658af255826e51bfa56f3e9276791a41c2c629feb88bd8e",
+      "caption": "Unveränderter aktueller Phasenbeleg, Identität/Zeit in Nahrungsfolgenbericht"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/v1-full-walk-feeding-retry/sequence-4-compact-spoonbill-swallowing.png",
+      "target": "Bilder/Original/v1-full-walk-feeding-retry/sequence-4-compact-spoonbill-swallowing.png",
+      "sha256": "fbf1ea0a4a2f8aa931c9651b45492588a13b3915bb1584061dbca441f58ad800",
+      "caption": "Unveränderter aktueller Phasenbeleg, Identität/Zeit in Nahrungsfolgenbericht"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/v1-full-walk-feeding-retry/sequence-4-compact-spoonbill-mouth-transfer.png",
+      "target": "Bilder/Original/v1-full-walk-feeding-retry/sequence-4-compact-spoonbill-mouth-transfer.png",
+      "sha256": "e1162be2edb5dbfb4c61134672d98de92f07a5f7ad64131d88ccf26a6c00bfda",
+      "caption": "Unveränderter aktueller Phasenbeleg, Identität/Zeit in Nahrungsfolgenbericht"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/v1-full-walk-feeding-retry/sequence-4-compact-spoonbill-departing.png",
+      "target": "Bilder/Original/v1-full-walk-feeding-retry/sequence-4-compact-spoonbill-departing.png",
+      "sha256": "488c3bab2cbf2af14be511862ce8c1d9992fe9a2a81ed3330b414d1f793916b4",
+      "caption": "Unveränderter aktueller Phasenbeleg, Identität/Zeit in Nahrungsfolgenbericht"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/v1-full-walk-feeding-retry/sequence-4-compact-spoonbill-after-departure.png",
+      "target": "Bilder/Original/v1-full-walk-feeding-retry/sequence-4-compact-spoonbill-after-departure.png",
+      "sha256": "f34a1b94b3a872d9120973bb32ea9fea91d232d89ef9505e99a42f70f6fbda45",
+      "caption": "Unveränderter aktueller Phasenbeleg, Identität/Zeit in Nahrungsfolgenbericht"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/v1-full-walk-feeding-retry/sequence-5-compact-avocet-approaching.png",
+      "target": "Bilder/Original/v1-full-walk-feeding-retry/sequence-5-compact-avocet-approaching.png",
+      "sha256": "24302c7a719325f2ee7007b822cfc325caa08aeb82d9a9ea6fd2837d01813d99",
+      "caption": "Unveränderter aktueller Phasenbeleg, Identität/Zeit in Nahrungsfolgenbericht"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/v1-full-walk-feeding-retry/sequence-5-compact-avocet-searching.png",
+      "target": "Bilder/Original/v1-full-walk-feeding-retry/sequence-5-compact-avocet-searching.png",
+      "sha256": "7c0d1a68443259fee45152b2e173a2da2231677efa8d4cead2dd5bed0db68c42",
+      "caption": "Unveränderter aktueller Phasenbeleg, Identität/Zeit in Nahrungsfolgenbericht"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/v1-full-walk-feeding-retry/sequence-5-compact-avocet-handling.png",
+      "target": "Bilder/Original/v1-full-walk-feeding-retry/sequence-5-compact-avocet-handling.png",
+      "sha256": "ad709898a45e089f26cd9138203a5657b225735516b4bad808067b21a9f9fd88",
+      "caption": "Unveränderter aktueller Phasenbeleg, Identität/Zeit in Nahrungsfolgenbericht"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/v1-full-walk-feeding-retry/sequence-5-compact-avocet-swallowing.png",
+      "target": "Bilder/Original/v1-full-walk-feeding-retry/sequence-5-compact-avocet-swallowing.png",
+      "sha256": "f009dc0b875e0863ed8d24c5e13c7808c2ad05b559bcfdd8435e3016c5cd062c",
+      "caption": "Unveränderter aktueller Phasenbeleg, Identität/Zeit in Nahrungsfolgenbericht"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/v1-full-walk-feeding-retry/sequence-5-compact-avocet-mouth-transfer.png",
+      "target": "Bilder/Original/v1-full-walk-feeding-retry/sequence-5-compact-avocet-mouth-transfer.png",
+      "sha256": "62ffdf1a0aaf17ac84bddb2257288f3ccd66d7d2712cf37414a492c5f1fc0449",
+      "caption": "Unveränderter aktueller Phasenbeleg, Identität/Zeit in Nahrungsfolgenbericht"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/v1-full-walk-feeding-retry/sequence-5-compact-avocet-departing.png",
+      "target": "Bilder/Original/v1-full-walk-feeding-retry/sequence-5-compact-avocet-departing.png",
+      "sha256": "ec89267b23b386403c4ffdd09b65180a611a0835f5c7f19265158c468e2f56be",
+      "caption": "Unveränderter aktueller Phasenbeleg, Identität/Zeit in Nahrungsfolgenbericht"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/v1-full-walk-feeding-retry/sequence-5-compact-avocet-after-departure.png",
+      "target": "Bilder/Original/v1-full-walk-feeding-retry/sequence-5-compact-avocet-after-departure.png",
+      "sha256": "409decf6051e2f857a20c7df335d108bedf452b47615e1b8c7629b8683f6fe49",
+      "caption": "Unveränderter aktueller Phasenbeleg, Identität/Zeit in Nahrungsfolgenbericht"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/v1-full-walk-feeding-retry/sequence-6-compact-redshank-approaching.png",
+      "target": "Bilder/Original/v1-full-walk-feeding-retry/sequence-6-compact-redshank-approaching.png",
+      "sha256": "58b559c38082cf46099f0a68b7e3ded85a0cc72bb524554fa09ee49360884ba5",
+      "caption": "Unveränderter aktueller Phasenbeleg, Identität/Zeit in Nahrungsfolgenbericht"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/v1-full-walk-feeding-retry/sequence-6-compact-redshank-searching.png",
+      "target": "Bilder/Original/v1-full-walk-feeding-retry/sequence-6-compact-redshank-searching.png",
+      "sha256": "feb43e3fda7b989609ca084d1845b21842dcb31f4bc847500999b7406964f27f",
+      "caption": "Unveränderter aktueller Phasenbeleg, Identität/Zeit in Nahrungsfolgenbericht"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/v1-full-walk-feeding-retry/sequence-6-compact-redshank-handling.png",
+      "target": "Bilder/Original/v1-full-walk-feeding-retry/sequence-6-compact-redshank-handling.png",
+      "sha256": "8eb4577165842bc6a51664fe2a3d87b6989822c4c2c4a914e6211a94ce0e0773",
+      "caption": "Unveränderter aktueller Phasenbeleg, Identität/Zeit in Nahrungsfolgenbericht"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/v1-full-walk-feeding-retry/sequence-6-compact-redshank-swallowing.png",
+      "target": "Bilder/Original/v1-full-walk-feeding-retry/sequence-6-compact-redshank-swallowing.png",
+      "sha256": "6b1b6c18c1355e3a5e77087625c2f6ad9ec30b083be32c80bfb73930806f7666",
+      "caption": "Unveränderter aktueller Phasenbeleg, Identität/Zeit in Nahrungsfolgenbericht"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/v1-full-walk-feeding-retry/sequence-6-compact-redshank-mouth-transfer.png",
+      "target": "Bilder/Original/v1-full-walk-feeding-retry/sequence-6-compact-redshank-mouth-transfer.png",
+      "sha256": "0fb132ee1dc29bccd1d57edc8e6dcbf29345f5b3890c66606f8923cc66ee833b",
+      "caption": "Unveränderter aktueller Phasenbeleg, Identität/Zeit in Nahrungsfolgenbericht"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/v1-full-walk-feeding-retry/sequence-6-compact-redshank-departing.png",
+      "target": "Bilder/Original/v1-full-walk-feeding-retry/sequence-6-compact-redshank-departing.png",
+      "sha256": "b4769f0fd4b036ae1eb7faa9ec586d9b41f83a960fed9df4f1914c380bc41fa3",
+      "caption": "Unveränderter aktueller Phasenbeleg, Identität/Zeit in Nahrungsfolgenbericht"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/v1-full-walk-feeding-retry/sequence-6-compact-redshank-after-departure.png",
+      "target": "Bilder/Original/v1-full-walk-feeding-retry/sequence-6-compact-redshank-after-departure.png",
+      "sha256": "69c7366d4eea0c16ad916fd969dc0252660fe693ef0e7c4b81dfdccd33617bd2",
+      "caption": "Unveränderter aktueller Phasenbeleg, Identität/Zeit in Nahrungsfolgenbericht"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/v1-full-walk-feeding-retry/sequence-7-compact-spoonbill-approaching.png",
+      "target": "Bilder/Original/v1-full-walk-feeding-retry/sequence-7-compact-spoonbill-approaching.png",
+      "sha256": "99276cc46c4622e9277a3b278ade36b744b8fb5e21f6a30e65c2f1044bcf55e8",
+      "caption": "Unveränderter aktueller Phasenbeleg, Identität/Zeit in Nahrungsfolgenbericht"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/v1-full-walk-feeding-retry/sequence-7-compact-spoonbill-searching.png",
+      "target": "Bilder/Original/v1-full-walk-feeding-retry/sequence-7-compact-spoonbill-searching.png",
+      "sha256": "09faa4272373414e0e10e83ff9c3d4d4336a4ffd4a340dd05f40025e6db5cbee",
+      "caption": "Unveränderter aktueller Phasenbeleg, Identität/Zeit in Nahrungsfolgenbericht"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/v1-full-walk-feeding-retry/sequence-7-compact-spoonbill-handling.png",
+      "target": "Bilder/Original/v1-full-walk-feeding-retry/sequence-7-compact-spoonbill-handling.png",
+      "sha256": "f7c4a772e2872d0aa74c371a82a524bc4ea39a356441251006ae13d045302798",
+      "caption": "Unveränderter aktueller Phasenbeleg, Identität/Zeit in Nahrungsfolgenbericht"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/v1-full-walk-feeding-retry/sequence-7-compact-spoonbill-swallowing.png",
+      "target": "Bilder/Original/v1-full-walk-feeding-retry/sequence-7-compact-spoonbill-swallowing.png",
+      "sha256": "0a07d2b7a0d9a73a94992a1eea78320acf4d28ac6e79cfc98fdc93a60244fbe6",
+      "caption": "Unveränderter aktueller Phasenbeleg, Identität/Zeit in Nahrungsfolgenbericht"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/v1-full-walk-feeding-retry/sequence-7-compact-spoonbill-mouth-transfer.png",
+      "target": "Bilder/Original/v1-full-walk-feeding-retry/sequence-7-compact-spoonbill-mouth-transfer.png",
+      "sha256": "9bd632db7e6e0c9f9c523284e316dd814b14764082d0516b9496ef1b4e45230d",
+      "caption": "Unveränderter aktueller Phasenbeleg, Identität/Zeit in Nahrungsfolgenbericht"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/v1-full-walk-feeding-retry/sequence-7-compact-spoonbill-departing.png",
+      "target": "Bilder/Original/v1-full-walk-feeding-retry/sequence-7-compact-spoonbill-departing.png",
+      "sha256": "24f593175841b3c567bcfa5499a48441970ff9f2e438d4dffb72be1342c8d40f",
+      "caption": "Unveränderter aktueller Phasenbeleg, Identität/Zeit in Nahrungsfolgenbericht"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/v1-full-walk-feeding-retry/sequence-7-compact-spoonbill-after-departure.png",
+      "target": "Bilder/Original/v1-full-walk-feeding-retry/sequence-7-compact-spoonbill-after-departure.png",
+      "sha256": "665b7a1eabf1fba2da26409f08cf263402d95e9792f202819c35f7310f6d93c1",
+      "caption": "Unveränderter aktueller Phasenbeleg, Identität/Zeit in Nahrungsfolgenbericht"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/v1-full-walk-feeding-retry/sequence-8-compact-oystercatcher-approaching.png",
+      "target": "Bilder/Original/v1-full-walk-feeding-retry/sequence-8-compact-oystercatcher-approaching.png",
+      "sha256": "401feecd723b54e5a624a5026cfe6c8eeea2fe40d6c77d53867e83f744c6fbfa",
+      "caption": "Unveränderter aktueller Phasenbeleg, Identität/Zeit in Nahrungsfolgenbericht"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/v1-full-walk-feeding-retry/sequence-8-compact-oystercatcher-searching.png",
+      "target": "Bilder/Original/v1-full-walk-feeding-retry/sequence-8-compact-oystercatcher-searching.png",
+      "sha256": "005fb5f423d67b4db9a4bd5c4ddf9a6391476dbddc5ca1ca64da831584fbadd3",
+      "caption": "Unveränderter aktueller Phasenbeleg, Identität/Zeit in Nahrungsfolgenbericht"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/v1-full-walk-feeding-retry/sequence-8-compact-oystercatcher-handling.png",
+      "target": "Bilder/Original/v1-full-walk-feeding-retry/sequence-8-compact-oystercatcher-handling.png",
+      "sha256": "975b6dfdb8f8dbac43483326564a9ca495c6bfab995be02f392cb9ed6986b9b9",
+      "caption": "Unveränderter aktueller Phasenbeleg, Identität/Zeit in Nahrungsfolgenbericht"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/v1-full-walk-feeding-retry/sequence-8-compact-oystercatcher-swallowing.png",
+      "target": "Bilder/Original/v1-full-walk-feeding-retry/sequence-8-compact-oystercatcher-swallowing.png",
+      "sha256": "d70dcd39ae112f133fbb95cea0affc8499efb9eb8db1d59e085ed48bb6dc9816",
+      "caption": "Unveränderter aktueller Phasenbeleg, Identität/Zeit in Nahrungsfolgenbericht"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/v1-full-walk-feeding-retry/sequence-8-compact-oystercatcher-mouth-transfer.png",
+      "target": "Bilder/Original/v1-full-walk-feeding-retry/sequence-8-compact-oystercatcher-mouth-transfer.png",
+      "sha256": "fb7a48dabbf64e357166ee31b8e469e4c402ffc77a9834fd7352b78f7e019ea2",
+      "caption": "Unveränderter aktueller Phasenbeleg, Identität/Zeit in Nahrungsfolgenbericht"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/v1-full-walk-feeding-retry/sequence-8-compact-oystercatcher-departing.png",
+      "target": "Bilder/Original/v1-full-walk-feeding-retry/sequence-8-compact-oystercatcher-departing.png",
+      "sha256": "8e1f6dc707abf89d96e0163859c6615c84600c8a244cf72dc4498b3c76bebd27",
+      "caption": "Unveränderter aktueller Phasenbeleg, Identität/Zeit in Nahrungsfolgenbericht"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/v1-full-walk-feeding-retry/sequence-8-compact-oystercatcher-after-departure.png",
+      "target": "Bilder/Original/v1-full-walk-feeding-retry/sequence-8-compact-oystercatcher-after-departure.png",
+      "sha256": "324e9972e25882490ecb957f8376848e75cf257d6b3f551ad7d6d539b30da749",
+      "caption": "Unveränderter aktueller Phasenbeleg, Identität/Zeit in Nahrungsfolgenbericht"
+    },
+    {
+      "source": "work/v1-abschluss/baseline/webgl/start.png",
+      "target": "Historische-Vorpruefungen/Baseline936/webgl/start.png",
+      "sha256": "1a7095538458b194517ed69a9c269dd454a03d22e3267e5a501c6b6c16c53f83",
+      "caption": "Historisches936-Vorherbild, kein neuer aktueller Render"
+    },
+    {
+      "source": "work/v1-abschluss/baseline/webgl/woodruff.png",
+      "target": "Historische-Vorpruefungen/Baseline936/webgl/woodruff.png",
+      "sha256": "deed56614743242221f016b78d657a4f0562845ad7a10d1b4adec9fc433649fa",
+      "caption": "Historisches936-Vorherbild, kein neuer aktueller Render"
+    },
+    {
+      "source": "work/v1-abschluss/baseline/webgl/nettle.png",
+      "target": "Historische-Vorpruefungen/Baseline936/webgl/nettle.png",
+      "sha256": "332a6befcbde30400cf6dac799625004e50f93653919f958528cba755bcc38a4",
+      "caption": "Historisches936-Vorherbild, kein neuer aktueller Render"
+    },
+    {
+      "source": "work/v1-abschluss/baseline/webgl/wood.png",
+      "target": "Historische-Vorpruefungen/Baseline936/webgl/wood.png",
+      "sha256": "34b55d6b29a9c17dade9deded5c10a4892e43938168a7215bb3704169a69c51f",
+      "caption": "Historisches936-Vorherbild, kein neuer aktueller Render"
+    },
+    {
+      "source": "work/v1-abschluss/baseline/webgl/village-edge.png",
+      "target": "Historische-Vorpruefungen/Baseline936/webgl/village-edge.png",
+      "sha256": "1d93e1739a9a343537bd85ddb4af74d3fd8345a49025475d039326ef17f99ce2",
+      "caption": "Historisches936-Vorherbild, kein neuer aktueller Render"
+    },
+    {
+      "source": "work/v1-abschluss/baseline/webgl/oak-edge.png",
+      "target": "Historische-Vorpruefungen/Baseline936/webgl/oak-edge.png",
+      "sha256": "48eb678a32a392ebda2d8f95dc8c39c75011884fc7a131b23a11cb8d47cb437f",
+      "caption": "Historisches936-Vorherbild, kein neuer aktueller Render"
+    },
+    {
+      "source": "work/v1-abschluss/baseline/webgl/result.json",
+      "target": "Reproduktion/work/v1-abschluss/baseline/webgl/result.json",
+      "sha256": "52cd04e70473ff74b94e08decf3244a9926744c05400bc67cf980e6fc37d44d0",
+      "caption": "Unveränderte originale Kamerabaseline für den portablen vollständigen Plan"
+    },
+    {
+      "source": "work/v1-abschluss/supplement-native-middle.py",
+      "target": "Reproduktion/work/v1-abschluss/supplement-native-middle.py",
+      "sha256": "e34f75b881be4162e854e54ddb83f0551ada40b0be188072825c9930f41960ea",
+      "caption": "Tatsächlich erneut ausgeführter vollständiger nativer Zoom-/Linsentreiber"
+    },
+    {
+      "source": "work/v1-abschluss/audit-public-content.py",
+      "target": "Reproduktion/work/v1-abschluss/audit-public-content.py",
+      "sha256": "28f50abea97270f97832d809505353377e701dac47b44a1fe7e8b4cd89f96a87",
+      "caption": "Tatsächlich ausgeführter öffentlicher Inventar-/Quell-ZIP-Audit"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/run-native-retry.py",
+      "target": "Reproduktion/work/astra-abschluss-20261025/run-native-retry.py",
+      "sha256": "f34b6ed1564fd40e6e88ba2a6a2283166c4294c3c47137903ca27c613ae8a853",
+      "caption": "Tatsächlich verwendeter lokaler Umgebungs-/Wiederholungs- beziehungsweise Auswertetreiber; benötigt die dokumentierten Eingabedaten."
+    },
+    {
+      "source": "work/astra-abschluss-20261025/check-ffmpeg-environment.py",
+      "target": "Reproduktion/work/astra-abschluss-20261025/check-ffmpeg-environment.py",
+      "sha256": "dc13cad5d1747e2c6743fc79a9a321c0ed903e43ddffd019d3605baf4e7c9a9c",
+      "caption": "Tatsächlich verwendeter lokaler Umgebungs-/Wiederholungs- beziehungsweise Auswertetreiber; benötigt die dokumentierten Eingabedaten."
+    },
+    {
+      "source": "work/astra-abschluss-20261025/finish-supplement-sheets.py",
+      "target": "Reproduktion/work/astra-abschluss-20261025/finish-supplement-sheets.py",
+      "sha256": "9a320065a22450f3cfdc5899435764ed3f4481b72db1b7a0686ac535095eb953",
+      "caption": "Tatsächlich verwendeter lokaler Umgebungs-/Wiederholungs- beziehungsweise Auswertetreiber; benötigt die dokumentierten Eingabedaten."
+    },
+    {
+      "source": "work/astra-abschluss-20261025/diagnose-current-arrival.py",
+      "target": "Reproduktion/work/astra-abschluss-20261025/diagnose-current-arrival.py",
+      "sha256": "98cdaf8acd559c40cbb514903cb3be1e00bbe88fadcda8ec31b68cfdd5851c60",
+      "caption": "Tatsächlich verwendeter lokaler Umgebungs-/Wiederholungs- beziehungsweise Auswertetreiber; benötigt die dokumentierten Eingabedaten."
+    },
+    {
+      "source": "work/astra-abschluss-20261025/final-4eb186a/ffmpeg-environment/video/page@709df3252b9ae38dd37ebac57a3f54de.webm",
+      "target": "Nachweise/ffmpeg-environment/video/page@709df3252b9ae38dd37ebac57a3f54de.webm",
+      "sha256": "15e5bd20e8dd3497ac94315b9cabc63379f47fe3f36f130aabd8d3ca80470120",
+      "caption": "Echte kurze FFmpeg-Abhängigkeitsprobe; kein Spiel- oder Sichtungs-PASS."
+    },
+    {
+      "source": "work/astra-abschluss-20261025/START-REPRODUKTION.md",
+      "target": "Reproduktion/START-REPRODUKTION.md",
+      "sha256": "f39a28ba92752b106d924f85016c2bdd2adf602302508b2e39edc378373c3fc7",
+      "caption": "Portable Befehle und exakte Artefaktbindung"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/PRUEFMATRIX.md",
+      "target": "PRUEFMATRIX.md",
+      "sha256": "46fe000a8da317caf924c79a4e5ed4f7d5d175c5dba48d66045f0d7449d67e43",
+      "caption": "Alle 21 aktuellen Bewertungen; Geschichte in JSON"
+    },
+    {
+      "source": "work/astra-abschluss-20261025/BILDBELEGE.html",
+      "target": "BILDBELEGE.html",
+      "sha256": "042be290255d7122419a6bf9b6e33f37797422a2f3eee85824ef5982e63479df",
+      "caption": "Lokaler Nachweisindex"
+    }
+  ],
+  "softwareGatesPassed": true,
+  "allLocalProcessesPassed": false,
+  "physicalDeviceAndPilot": "NICHT GEPRÜFT",
+  "ciProductConclusion": "failure",
+  "counts": {
+    "BESTANDEN": 19,
+    "FEHLGESCHLAGEN": 1,
+    "NICHT GEPRÜFT": 1
+  }
+}

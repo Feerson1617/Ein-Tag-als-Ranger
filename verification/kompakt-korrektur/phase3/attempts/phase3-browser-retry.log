@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/workspace/Ein-Tag-als-Ranger/tools/browser-compact-habitats.py", line 31, in <module>
+    shot(page,id);assert all(abs(old['observer'][k]-r['captures'][-1]['observer'][k])<1e-5 for k in ['x','z','yaw','pitch']),id
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: salt-shrub

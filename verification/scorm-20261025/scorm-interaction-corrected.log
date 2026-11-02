@@ -1,0 +1,12 @@
+[2m[WebServer] [22m(node:219746) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[2m[WebServer] [22m(Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:219763) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:219763) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [chromium] › tools/scorm/tests/ranger.spec.js:70:1 › Visible coastal interaction in the actual SCO retains finite prey and labelled model time (13.4s)
+
+  1 passed (15.3s)

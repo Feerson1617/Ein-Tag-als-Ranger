@@ -1,0 +1,102 @@
+{
+  "scope": "Real model steps and actual createLearningUI study HTML, with minimal document binding stubs; no browser, position mutation or runtime edits.",
+  "dt": 0.016666666666666666,
+  "samples": [
+    {
+      "time": 0,
+      "x": 70,
+      "z": 1,
+      "coastDistance": 14.7648230602334,
+      "coastStudyListsBird": false,
+      "outlookDistance": 7.615773105863909,
+      "outlookStudyListsBird": true,
+      "alive": true,
+      "visible": true
+    },
+    {
+      "time": 8.5,
+      "phase": "swallowing",
+      "x": 70.0052190977465,
+      "z": 0.9162362293683641,
+      "coastDistance": 14.693612657895954,
+      "coastStudyListsBird": false,
+      "outlookDistance": 7.6539332111335145,
+      "outlookStudyListsBird": true,
+      "alive": true,
+      "visible": true
+    },
+    {
+      "time": 9.8,
+      "phase": "departing",
+      "x": 70.3097253140334,
+      "z": 0.7477726895668004,
+      "coastDistance": 14.694821969370228,
+      "coastStudyListsBird": false,
+      "outlookDistance": 8.000566645266337,
+      "outlookStudyListsBird": false,
+      "alive": true,
+      "visible": true
+    },
+    {
+      "time": 10.1,
+      "phase": "approaching",
+      "x": 70.39343055072435,
+      "z": 0.7006835428764188,
+      "coastDistance": 14.695923848628095,
+      "coastStudyListsBird": false,
+      "outlookDistance": 8.09619073346414,
+      "outlookStudyListsBird": false,
+      "alive": true,
+      "visible": true
+    },
+    {
+      "time": 10.2,
+      "phase": "approaching",
+      "x": 70.360151038779,
+      "z": 0.7144121292813818,
+      "coastDistance": 14.691089105537989,
+      "coastStudyListsBird": false,
+      "outlookDistance": 8.060205392535156,
+      "outlookStudyListsBird": false,
+      "alive": true,
+      "visible": true
+    },
+    {
+      "time": 10.357,
+      "phase": "approaching",
+      "x": 70.30790220502479,
+      "z": 0.7359660099371736,
+      "coastDistance": 14.68367341112166,
+      "coastStudyListsBird": false,
+      "outlookDistance": 8.00370867326464,
+      "outlookStudyListsBird": false,
+      "alive": true,
+      "visible": true
+    },
+    {
+      "time": 11.505,
+      "phase": "approaching",
+      "x": 69.92585340789216,
+      "z": 0.8935701818661353,
+      "coastDistance": 14.635969303818555,
+      "coastStudyListsBird": false,
+      "outlookDistance": 7.590609438154665,
+      "outlookStudyListsBird": true,
+      "alive": true,
+      "visible": true
+    }
+  ],
+  "afterExplicitLocalWindow": {
+    "time": 0,
+    "origin": {
+      "kind": "local-observation-window",
+      "previousRunId": "gallery-run",
+      "previousSimulationTime": 11.505,
+      "siteId": "outlook",
+      "x": 63,
+      "z": 4,
+      "startSimulationTime": 0
+    },
+    "outlookStudyListsBird": true
+  }
+}

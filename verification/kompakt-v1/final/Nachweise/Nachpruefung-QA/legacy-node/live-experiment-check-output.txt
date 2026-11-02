@@ -1,0 +1,88 @@
+{
+  "fullHabitatEvolution": [
+    {
+      "factor": "mutation",
+      "generation": 5,
+      "kinds": [
+        "birth",
+        "mutation",
+        "generation"
+      ],
+      "alive": 12
+    },
+    {
+      "factor": "recombination",
+      "generation": 5,
+      "kinds": [
+        "birth",
+        "recombination",
+        "generation"
+      ],
+      "alive": 7
+    },
+    {
+      "factor": "selection",
+      "generation": 4,
+      "kinds": [
+        "birth",
+        "selection",
+        "generation",
+        "selectivePredation",
+        "noOffspring"
+      ],
+      "alive": 2
+    },
+    {
+      "factor": "drift",
+      "generation": 5,
+      "kinds": [
+        "birth",
+        "generation",
+        "drift",
+        "noOffspring"
+      ],
+      "alive": 3
+    },
+    {
+      "factor": "geneFlow",
+      "generation": 3,
+      "kinds": [
+        "migration",
+        "birth",
+        "geneFlow",
+        "generation"
+      ],
+      "alive": 24
+    },
+    {
+      "factor": "isolation",
+      "generation": 3,
+      "kinds": [
+        "isolation",
+        "birth",
+        "generation"
+      ],
+      "alive": 21
+    },
+    {
+      "factor": "bottleneck",
+      "generation": 5,
+      "kinds": [
+        "bottleneck",
+        "birth",
+        "generation"
+      ],
+      "alive": 3
+    },
+    {
+      "factor": "sexualSelection",
+      "generation": 5,
+      "kinds": [
+        "birth",
+        "sexualSelection",
+        "generation"
+      ],
+      "alive": 2
+    }
+  ]
+}

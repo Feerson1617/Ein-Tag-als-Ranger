@@ -1,0 +1,139 @@
+{
+  "schemaVersion": 2,
+  "worldVersion": "ranger-compact-v2",
+  "records": [
+    {
+      "id": "qa-old-event-note",
+      "taxon": "bombus_lapidarius",
+      "individualId": "compact-bee",
+      "worldVersion": "ranger-compact-v2",
+      "initialSeed": 20260825,
+      "modelRevision": 4,
+      "window": "summer",
+      "runId": "qa-event-prior",
+      "source": "own-observation",
+      "observationSeconds": 3,
+      "simulationTime": 9.99999999999998,
+      "x": -25.80104837947748,
+      "z": 9.696114844719459,
+      "siteId": "compact-forest-edge",
+      "method": "magnified-active-model",
+      "note": "QA import fixture only: generated model event, synthetic observation duration; not newly earned evidence.",
+      "events": [
+        {
+          "id": "ranger-compact-v2:summer:7",
+          "interaction": "bee-clover",
+          "actors": [
+            "compact-bee",
+            "ranger-compact-v2:trifolium_pratense:454",
+            "ranger-compact-v2:trifolium_pratense:455"
+          ],
+          "resourceId": "ranger-compact-v2:trifolium_pratense:454",
+          "resource": "clover-pollen",
+          "startedAt": 4.000000000000002,
+          "endedAt": 8.099999999999987,
+          "before": 6,
+          "after": 5,
+          "outcome": "pollen-transferred",
+          "source": "model-event",
+          "window": "summer",
+          "interpretation": {
+            "kind": "pollination",
+            "limit": "Pollentransport; weder Befruchtung noch Samenbildung garantiert",
+            "reference": "S17,S51,S52"
+          },
+          "sequence": [
+            "anther-contact",
+            "pollen-carried",
+            "stigma-contact"
+          ],
+          "seedSet": false,
+          "nectarRobbery": false
+        }
+      ]
+    },
+    {
+      "id": "qa-repeat-note-same-event",
+      "taxon": "bombus_lapidarius",
+      "individualId": "compact-bee",
+      "worldVersion": "ranger-compact-v2",
+      "initialSeed": 20260825,
+      "modelRevision": 4,
+      "window": "summer",
+      "runId": "qa-event-prior",
+      "source": "own-observation",
+      "observationSeconds": 3,
+      "simulationTime": 9.99999999999998,
+      "x": -25.80104837947748,
+      "z": 9.696114844719459,
+      "siteId": "compact-forest-edge",
+      "method": "magnified-active-model",
+      "note": "QA import fixture only: generated model event, synthetic observation duration; not newly earned evidence.",
+      "events": [
+        {
+          "id": "ranger-compact-v2:summer:7",
+          "interaction": "bee-clover",
+          "actors": [
+            "compact-bee",
+            "ranger-compact-v2:trifolium_pratense:454",
+            "ranger-compact-v2:trifolium_pratense:455"
+          ],
+          "resourceId": "ranger-compact-v2:trifolium_pratense:454",
+          "resource": "clover-pollen",
+          "startedAt": 4.000000000000002,
+          "endedAt": 8.099999999999987,
+          "before": 6,
+          "after": 5,
+          "outcome": "pollen-transferred",
+          "source": "model-event",
+          "window": "summer",
+          "interpretation": {
+            "kind": "pollination",
+            "limit": "Pollentransport; weder Befruchtung noch Samenbildung garantiert",
+            "reference": "S17,S51,S52"
+          },
+          "sequence": [
+            "anther-contact",
+            "pollen-carried",
+            "stigma-contact"
+          ],
+          "seedSet": false,
+          "nectarRobbery": false
+        }
+      ]
+    }
+  ],
+  "archives": [],
+  "previousEditions": [],
+  "learning": {
+    "activeMission": "K2",
+    "level": "gA",
+    "answers": {
+      "K2": {
+        "caseId": "bee-clover",
+        "eventIds": [
+          "ranger-compact-v2:summer:7"
+        ],
+        "claim": "event-with-resource",
+        "alternative": "no-seed-guarantee",
+        "reasoning": "Labelled import fixture: the event documents pollen transfer without proving seed set."
+      }
+    },
+    "protocols": [],
+    "measurements": [],
+    "samples": [],
+    "experiments": [],
+    "drafts": {
+      "K2": {
+        "caseId": "bee-clover",
+        "eventIds": [
+          "ranger-compact-v2:summer:7"
+        ],
+        "claim": "event-with-resource",
+        "alternative": "no-seed-guarantee",
+        "reasoning": "Labelled import fixture: the event documents pollen transfer without proving seed set."
+      }
+    }
+  },
+  "exportedAt": "2026-10-23T09:07:22.597Z"
+}

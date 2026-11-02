@@ -1,0 +1,2885 @@
+{
+  "passed": false,
+  "sourceCommit": "78e723bcb5ca448fa7161146db82fc4451b59f38",
+  "sourceDirty": false,
+  "htmlSHA256": "a96e7c830df5c8dd0c92dd9df8f509b722b0485ca843a7f4cdb69866bf152bc7",
+  "runtimeSourceHashes": {
+    "assets/boardwalk-wood.webp": "4d06022133e3772534374671fb73a4509ed109e1db6ca06a2d62a8c99c47ac6d",
+    "assets/compact-roe-deer.glb": "a89400df66033eb5eaa7f9bf13ccefaacfb866ab24e4576574d11965354ee619",
+    "assets/sky-panorama.webp": "46c360b491b11269d280e73ec0e71869afdfd62fb543b4250713234374a2f71d",
+    "assets/terrain-atlas.webp": "d637324d3ace6ef8e2c549e7f0a513efd1a4c06aab927f0ed1565bf77b2ced02",
+    "assets/wildlife-fox.glb": "61a4d1b845aa406928a327648417ae1c3982510b9c4e8ce33b7c494fbc98a22f",
+    "compact/catalog.js": "6b693d4c6a0f6b880b9ff99295826f3968e61ba96f52606997a1635ddf1fe39f",
+    "compact/coastal-behaviour.js": "39b1dcb8691cd48850321c4c734eabf0b2875b91a8cd09dcd7b571758b0f0927",
+    "compact/coastal-rig.js": "92a0270abdbf3aee7467e466cf344b08b8ef8bf5af4d903d3c672f9bcd4e2513",
+    "compact/comparison-views.js": "050f629dfc0b3b9bac1badc0c0564cfb08cf88e92006edcba377eabc623ecf82",
+    "compact/determination.js": "25f8ce960dba09ebeeb4470530d38608809bf98aa91d3575716b6ff835145c6f",
+    "compact/ecology.js": "e50f25a3146e79671472e7a5e6ed1d78f007564515bf9a78bb67fac9695ef8e0",
+    "compact/evidence.js": "b8aa6fe22b97ce5f3909902c4c18c79045d53badbbef4ff88c5a5b31e74a430c",
+    "compact/expanded-view.js": "74590c5e35ac021217b32ff5f2c5091da29ab78eaa38a43c460318dd8e6d6382",
+    "compact/fauna-view.js": "6d968276c131fb16ad2ecf073debb6f00b853f3742113e80ae35fe0b04c5b4f0",
+    "compact/geometry.js": "ac8a5e08a56f7ed75abb7a65baa6e20aba032984d7089e3b290d4769dd4307b0",
+    "compact/habitats.js": "e5448a68391c3b8f5c99219a39e3b79762ae651343cd870f0c99c4ac3a8b0e16",
+    "compact/inspection.js": "961c8c13e8e8e58595460fa40ed7bed0668367b120081dd95961a78ca87300ea",
+    "compact/journal.js": "e0c991989742c5ad3326ca63a7ba7ba033e89a5f23b74b648858ab10b67f1812",
+    "compact/layout.js": "e02558557a9c99fa0549c94f8cbfc8873e18f3c90df845155d51ee4d404209a6",
+    "compact/learning-documents.js": "53a2c78930b1a164c618bdfb91a49701076bf94fe22a8f990afca70402bc0173",
+    "compact/learning-models.js": "ac5200d27a29dc17ab2000a90554990a2a632532e920f887026407d0cfd2c20e",
+    "compact/learning-ui.js": "f896aa477c5db607978c486b56f8abd1bca68446e463717b4b0e6b0616b59f38",
+    "compact/lesson-layouts.js": "38df6da54b9615722acef34264832c757c753b2ea250f0c14fe571d7f267ba10",
+    "compact/lesson-resources.js": "44b2f2ac295e374f6ba8e1351ca19dc01b10099bf0e3faba791c957bfae18f7b",
+    "compact/main.js": "17d0a0f69b37911606def302eff5c188098e49f4133893e15557b4dfd0c37714",
+    "compact/management.js": "e6d38fbfc2c7e131d60ca3e38a1c740ca9ba5c49628fd3ba51ca94242d2d75a3",
+    "compact/manifest.js": "c89f2dd2635407d111a195a806b7ea3f40101054883d65197175c748e3f652e6",
+    "compact/materials.js": "81b0144dd99d1392599406840614c613a9e81427382b8f628d6a5aa950f71b74",
+    "compact/missions.js": "8f8151a6b499658b1316ee57ac6fd4d4e94a980b5baf0e943ca2678edd03bfca",
+    "compact/observation-context.js": "eb320373daffbdefa9e99e2a59fdb1421d2b21c8ced15ab5f88fc567f9428080",
+    "compact/observation-schema.js": "1ab043f3d6f7b61ea00eea1510da71b897f0e6dcc52a934d4acae9c17d3e773e",
+    "compact/organism-models.js": "7cf080fb497a17d58ce4d1672ffc5cef12b7f2c033a336384e4aead7dfc27cb6",
+    "compact/path-mesh.js": "7a41ebc390aeca96cffd1e4fcee19f3b76310413fcee3489d1533ebd599a4c82",
+    "compact/style.css": "fa3e0391ced503e62691704482dfcd500f73e81aa43c0abb9559c0e7491b378b",
+    "compact/task-schema.js": "905701f6f765f12559cae00848644ac90b1d46188b84031eaaf1c091749ba95b",
+    "compact/taxa.js": "97cd6f5bad16208408512be876ebf63d5f9ee400dd31f94a61c8ca08e4e24fd3",
+    "compact/vegetation-view.js": "7e6f703c9a930a86dd2c9b202a79bf7842f4d1f41bf9a2a27d3ef24b3b22e47a",
+    "compact/village-view.js": "15d1902cbb96678503051ba0b11494d0ceea412dbc193f18bf16b0bfe9d91b03",
+    "compact/village.js": "05acf2a5ff040e4de2aaf2c3ebc3ee88daaf2edc75d12e80d49a5f54a60a3aec",
+    "compact/visibility.js": "50d59d44257e9d18547bfaec9277366d3339177c6ebce37d948b48c9940a86f1",
+    "compact/world-state.js": "360197f8bd8ab54c595386b66f2e676499630bc6ca896856034fba4910d9fd7f",
+    "compact/world-view.js": "024ef8803fcf0b8995caa6a72ca52468a4562d01194e8f2f678e4ed537b24a06",
+    "field-guide.js": "d1e2994438e3d73a88704ed40b1e24982a836dd4c22cbe9ba634e6c36137799a",
+    "icon.svg": "cb8cda889f99e56d13d18e09929837b7c3630d3f9ff3219316d12d3077fc0869",
+    "kompakt.html": "781393f0611a24e8ce757e87124a6347c28f21c1132689c6e198cf421ccd6aa4",
+    "observation-clock.js": "2304e6c425192967f87841caa5072873cb5dd5c7f69c38fb45b237fd22f98b03",
+    "ranger-controls.js": "081497a5f6754ecd441e61ee55805da99b5121e96215cfa900209e00e41e5eda",
+    "station-protocol.js": "2590df7d9de4c8f4afda8fcafd619d565440c2dc7e1bb6ef4574aeadf803ae57",
+    "vendor/three.core.js": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20",
+    "vendor/three.module.js": "2884e2e6f26feaec0b454fcdc1e98c27d6433ba15253e5a3e22e111df81686fa",
+    "wildlife-glb.js": "32f8f947dd002ba7b571ee627e6291fa40a951fccdd9dee644661f19de487c35"
+  },
+  "scope": "Fresh standalone HTML; full authored path walked using ordinary W/mouse input; no reference-camera visits, position/clock/resource/evidence writes. Explicit UI new contexts at the reached coast, finite resource acquisition, model steps separate from real-time sighting. Cloud software graphics, no iPad/Safari certification.",
+  "errors": [],
+  "walk": [
+    {
+      "segment": "full-main-route",
+      "index": 0,
+      "wall": 6072.904504575,
+      "modelTime": 0,
+      "observer": {
+        "x": -52,
+        "z": 8,
+        "yaw": 1.5707963267948966,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 8,
+      "wall": 6080.234762001,
+      "modelTime": 0.602,
+      "observer": {
+        "x": -52.95157663065626,
+        "z": 7.862738152982137,
+        "yaw": 1.4305255443241935,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 14,
+      "wall": 6085.626408828,
+      "modelTime": 1.187,
+      "observer": {
+        "x": -53.88223527624744,
+        "z": 7.76411148200043,
+        "yaw": 1.4902780772831778,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 18,
+      "wall": 6091.770445513,
+      "modelTime": 1.642,
+      "observer": {
+        "x": -54.607876670318944,
+        "z": 7.705557513646257,
+        "yaw": 1.4902780772831778,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 21,
+      "wall": 6097.069379468,
+      "modelTime": 1.983,
+      "observer": {
+        "x": -55.15282538318538,
+        "z": 7.661584126862475,
+        "yaw": 1.4902780772831778,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 25,
+      "wall": 6102.788875325,
+      "modelTime": 2.537,
+      "observer": {
+        "x": -56.036732528200595,
+        "z": 7.61000312426613,
+        "yaw": 1.515464875378881,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 29,
+      "wall": 6108.104995631,
+      "modelTime": 3.073,
+      "observer": {
+        "x": -56.89397859291551,
+        "z": 7.562521989793934,
+        "yaw": 1.515464875378881,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 32,
+      "wall": 6113.275182269,
+      "modelTime": 3.562,
+      "observer": {
+        "x": -57.67331021092578,
+        "z": 7.508240740492583,
+        "yaw": 1.490393067517553,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 35,
+      "wall": 6118.284204965,
+      "modelTime": 3.953,
+      "observer": {
+        "x": -58.29800552861242,
+        "z": 7.457904685219908,
+        "yaw": 1.490393067517553,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 39,
+      "wall": 6124.302925935,
+      "modelTime": 4.523,
+      "observer": {
+        "x": -59.20658117345295,
+        "z": 7.3795967816579635,
+        "yaw": 1.4627745372441154,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 42,
+      "wall": 6130.520649763,
+      "modelTime": 4.997,
+      "observer": {
+        "x": -59.959447228818654,
+        "z": 7.297953036777344,
+        "yaw": 1.4627745372441154,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 46,
+      "wall": 6135.77442885,
+      "modelTime": 5.502,
+      "observer": {
+        "x": -60.761404701002135,
+        "z": 7.201302609367951,
+        "yaw": 1.4343502513554436,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 50,
+      "wall": 6141.217809967,
+      "modelTime": 6.152,
+      "observer": {
+        "x": -61.79052295125855,
+        "z": 7.051769191489144,
+        "yaw": 1.4081941844609123,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 53,
+      "wall": 6147.08202889,
+      "modelTime": 6.673,
+      "observer": {
+        "x": -62.61271864109854,
+        "z": 6.909098315450032,
+        "yaw": 1.3787712413456779,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 57,
+      "wall": 6152.19045619,
+      "modelTime": 7.227,
+      "observer": {
+        "x": -63.47949339052517,
+        "z": 6.7285912752414045,
+        "yaw": 1.3537008983280998,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 61,
+      "wall": 6157.667666177,
+      "modelTime": 7.763,
+      "observer": {
+        "x": -64.31354520179659,
+        "z": 6.525200497884581,
+        "yaw": 1.324542267957006,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 66,
+      "wall": 6163.009114977,
+      "modelTime": 8.528,
+      "observer": {
+        "x": -65.48203073352441,
+        "z": 6.162721967388861,
+        "yaw": 1.2356044627812248,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 71,
+      "wall": 6168.562322454,
+      "modelTime": 9.13,
+      "observer": {
+        "x": -66.37870766625072,
+        "z": 5.813106020434234,
+        "yaw": 1.1678739329960686,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 77,
+      "wall": 6174.428665223,
+      "modelTime": 9.878,
+      "observer": {
+        "x": -67.44000094249861,
+        "z": 5.261323845583707,
+        "yaw": 1.0138030406620842,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 83,
+      "wall": 6180.998509408,
+      "modelTime": 10.562,
+      "observer": {
+        "x": -68.32149828196673,
+        "z": 4.6167158228729654,
+        "yaw": 0.8399573070195061,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 88,
+      "wall": 6186.894712905,
+      "modelTime": 11.132,
+      "observer": {
+        "x": -68.95836797560897,
+        "z": 3.9652156089841455,
+        "yaw": 0.6866411754277092,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 94,
+      "wall": 6194.570772316,
+      "modelTime": 11.701,
+      "observer": {
+        "x": -69.48994196479333,
+        "z": 3.2252399877831155,
+        "yaw": 0.5694583446171623,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 99,
+      "wall": 6199.866620982,
+      "modelTime": 12.303,
+      "observer": {
+        "x": -69.95586240446063,
+        "z": 2.3835999409725988,
+        "yaw": 0.45849826160934976,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 102,
+      "wall": 6205.092637056,
+      "modelTime": 12.563,
+      "observer": {
+        "x": -70.13401327612645,
+        "z": 2.0077348101636536,
+        "yaw": 0.4267259837773185,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 107,
+      "wall": 6212.908984856,
+      "modelTime": 13.116,
+      "observer": {
+        "x": -70.47138536758368,
+        "z": 1.1894174048564528,
+        "yaw": 0.37197158924606855,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 111,
+      "wall": 6217.919214271,
+      "modelTime": 13.636,
+      "observer": {
+        "x": -70.7460062074673,
+        "z": 0.4041826569725161,
+        "yaw": 0.3016758433964592,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 115,
+      "wall": 6223.184969186,
+      "modelTime": 14.156,
+      "observer": {
+        "x": -70.98373439076877,
+        "z": -0.3930291818941249,
+        "yaw": 0.27001718250778733,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 118,
+      "wall": 6228.410634945,
+      "modelTime": 14.498,
+      "observer": {
+        "x": -71.12137107801058,
+        "z": -0.9219247402877172,
+        "yaw": 0.24298751942184985,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 119,
+      "wall": 6233.99675301,
+      "modelTime": 14.661,
+      "observer": {
+        "x": -71.18427444460495,
+        "z": -1.1756845481200182,
+        "yaw": 0.24298751942184985,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 123,
+      "wall": 6239.036570348,
+      "modelTime": 15.231,
+      "observer": {
+        "x": -71.38107442738922,
+        "z": -2.0662788502990748,
+        "yaw": 0.1904140941288811,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 126,
+      "wall": 6244.31069104,
+      "modelTime": 15.573,
+      "observer": {
+        "x": -71.48451939052565,
+        "z": -2.6029602951075486,
+        "yaw": 0.1904140941288811,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 130,
+      "wall": 6251.501680274,
+      "modelTime": 16.143,
+      "observer": {
+        "x": -71.63309334267454,
+        "z": -3.503058352019986,
+        "yaw": 0.16013815418747485,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 133,
+      "wall": 6257.414584088,
+      "modelTime": 16.68,
+      "observer": {
+        "x": -71.74799646381426,
+        "z": -4.353854695335231,
+        "yaw": 0.13067245594528734,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 137,
+      "wall": 6263.013961324,
+      "modelTime": 17.151,
+      "observer": {
+        "x": -71.83113948448451,
+        "z": -5.103910590591012,
+        "yaw": 0.10124749866989671,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 139,
+      "wall": 6268.590100336,
+      "modelTime": 17.51,
+      "observer": {
+        "x": -71.88242252372703,
+        "z": -5.675005905081637,
+        "yaw": 0.07560659901169359,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 142,
+      "wall": 6275.798411988,
+      "modelTime": 17.9,
+      "observer": {
+        "x": -71.92955610614075,
+        "z": -6.2972232508771775,
+        "yaw": 0.07560659901169359,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 146,
+      "wall": 6282.335586723,
+      "modelTime": 18.436,
+      "observer": {
+        "x": -71.97428072017377,
+        "z": -7.1545848638042076,
+        "yaw": 0.04888107410934984,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 150,
+      "wall": 6288.17998731,
+      "modelTime": 18.99,
+      "observer": {
+        "x": -71.99800742298967,
+        "z": -8.039678174951211,
+        "yaw": 0.02386218372849046,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 152,
+      "wall": 6294.016389036,
+      "modelTime": 19.348,
+      "observer": {
+        "x": -72.00184705776424,
+        "z": -8.61305723356454,
+        "yaw": -0.003073637804712665,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 155,
+      "wall": 6299.176086797,
+      "modelTime": 19.706,
+      "observer": {
+        "x": -71.99681964858041,
+        "z": -9.186123581803058,
+        "yaw": -0.028122191271509542,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 158,
+      "wall": 6307.002716626,
+      "modelTime": 20.113,
+      "observer": {
+        "x": -71.97852688721095,
+        "z": -9.836426348582892,
+        "yaw": -0.028122191271509542,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 161,
+      "wall": 6312.507779171,
+      "modelTime": 20.65,
+      "observer": {
+        "x": -71.93448350941098,
+        "z": -10.693984259128305,
+        "yaw": -0.05450952037307204,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 165,
+      "wall": 6317.566551702,
+      "modelTime": 21.138,
+      "observer": {
+        "x": -71.87551697720762,
+        "z": -11.473121928550615,
+        "yaw": -0.08456518443557204,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 169,
+      "wall": 6322.873451112,
+      "modelTime": 21.593,
+      "observer": {
+        "x": -71.79852226086463,
+        "z": -12.196971842016264,
+        "yaw": -0.11453121837111892,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 171,
+      "wall": 6328.383283061,
+      "modelTime": 21.918,
+      "observer": {
+        "x": -71.73256122369061,
+        "z": -12.712708191782614,
+        "yaw": -0.14621935924025953,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 173,
+      "wall": 6334.275861508,
+      "modelTime": 22.146,
+      "observer": {
+        "x": -71.67936364673993,
+        "z": -13.073931989734236,
+        "yaw": -0.14621935924025953,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 178,
+      "wall": 6339.321699441,
+      "modelTime": 22.765,
+      "observer": {
+        "x": -71.50404441074187,
+        "z": -14.047253765066882,
+        "yaw": -0.1996316822383064,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 182,
+      "wall": 6346.671582192,
+      "modelTime": 23.22,
+      "observer": {
+        "x": -71.34686923094165,
+        "z": -14.757993567038705,
+        "yaw": -0.23114651378127515,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 186,
+      "wall": 6352.825640079,
+      "modelTime": 23.675,
+      "observer": {
+        "x": -71.15464158254207,
+        "z": -15.460025176483535,
+        "yaw": -0.29070770152541575,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 190,
+      "wall": 6358.416536839,
+      "modelTime": 24.098,
+      "observer": {
+        "x": -70.9398700080054,
+        "z": -16.10222725764156,
+        "yaw": -0.34665740855666577,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 194,
+      "wall": 6365.522002581,
+      "modelTime": 24.618,
+      "observer": {
+        "x": -70.62888091729276,
+        "z": -16.87375076514146,
+        "yaw": -0.40526287730666577,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 198,
+      "wall": 6371.92849061,
+      "modelTime": 25.106,
+      "observer": {
+        "x": -70.29418472864072,
+        "z": -17.579716663456697,
+        "yaw": -0.4638936146113533,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 202,
+      "wall": 6379.668861145,
+      "modelTime": 25.595,
+      "observer": {
+        "x": -69.92130608172563,
+        "z": -18.26612577148195,
+        "yaw": -0.5197927845332283,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 206,
+      "wall": 6386.831587835,
+      "modelTime": 26.148,
+      "observer": {
+        "x": -69.4572941714481,
+        "z": -19.020100340670247,
+        "yaw": -0.5716157520625251,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 211,
+      "wall": 6392.475865191,
+      "modelTime": 26.733,
+      "observer": {
+        "x": -68.92471957573184,
+        "z": -19.78959207710148,
+        "yaw": -0.6312240894648689,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 213,
+      "wall": 6397.51995111,
+      "modelTime": 27.026,
+      "observer": {
+        "x": -68.64411439840308,
+        "z": -20.165866805448474,
+        "yaw": -0.6654749744746344,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 216,
+      "wall": 6402.762673445,
+      "modelTime": 27.481,
+      "observer": {
+        "x": -68.18938725487752,
+        "z": -20.73427999479882,
+        "yaw": -0.6978948047969,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 220,
+      "wall": 6407.837504894,
+      "modelTime": 27.936,
+      "observer": {
+        "x": -67.7145042772415,
+        "z": -21.285962730255484,
+        "yaw": -0.7278321827265876,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 223,
+      "wall": 6414.307486727,
+      "modelTime": 28.391,
+      "observer": {
+        "x": -67.2216019941774,
+        "z": -21.821620565573603,
+        "yaw": -0.7558696583125251,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 227,
+      "wall": 6421.296356121,
+      "modelTime": 28.846,
+      "observer": {
+        "x": -66.7123044369456,
+        "z": -22.341739145853715,
+        "yaw": -0.7824931934687751,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 231,
+      "wall": 6426.614488841,
+      "modelTime": 29.448,
+      "observer": {
+        "x": -66.01462227603257,
+        "z": -23.004976739004867,
+        "yaw": -0.8331781605097908,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 233,
+      "wall": 6432.566462339,
+      "modelTime": 29.725,
+      "observer": {
+        "x": -65.68709578858316,
+        "z": -23.302610328539235,
+        "yaw": -0.8331781605097908,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 236,
+      "wall": 6438.637580274,
+      "modelTime": 30.148,
+      "observer": {
+        "x": -65.17557889241968,
+        "z": -23.74671927362629,
+        "yaw": -0.8599254749629157,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 240,
+      "wall": 6443.644167913,
+      "modelTime": 30.62,
+      "observer": {
+        "x": -64.59277137757525,
+        "z": -24.226189622242895,
+        "yaw": -0.8859590442988532,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 244,
+      "wall": 6450.469757736,
+      "modelTime": 31.173,
+      "observer": {
+        "x": -63.89148882956172,
+        "z": -24.766410909415846,
+        "yaw": -0.9181949451777595,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 247,
+      "wall": 6458.985794196,
+      "modelTime": 31.645,
+      "observer": {
+        "x": -63.27926914312768,
+        "z": -25.207403659685067,
+        "yaw": -0.9510985401484626,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 253,
+      "wall": 6463.996500055,
+      "modelTime": 32.361,
+      "observer": {
+        "x": -62.325690388089114,
+        "z": -25.843735072362673,
+        "yaw": -1.007226042589869,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 254,
+      "wall": 6469.140624788,
+      "modelTime": 32.573,
+      "observer": {
+        "x": -62.039352342224916,
+        "z": -26.024681920610135,
+        "yaw": -1.007226042589869,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 258,
+      "wall": 6476.144884621,
+      "modelTime": 32.996,
+      "observer": {
+        "x": -61.45942390669782,
+        "z": -26.37445832329221,
+        "yaw": -1.0330589283320564,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 263,
+      "wall": 6481.504315271,
+      "modelTime": 33.665,
+      "observer": {
+        "x": -60.522197386378835,
+        "z": -26.888866406558666,
+        "yaw": -1.0987691639277595,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 266,
+      "wall": 6486.768605296,
+      "modelTime": 34.071,
+      "observer": {
+        "x": -59.939907508450204,
+        "z": -27.17922453204756,
+        "yaw": -1.124999022326197,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 271,
+      "wall": 6493.971587929,
+      "modelTime": 34.576,
+      "observer": {
+        "x": -59.20546665425169,
+        "z": -27.51551548840926,
+        "yaw": -1.1517245472285407,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 274,
+      "wall": 6500.329985033,
+      "modelTime": 34.934,
+      "observer": {
+        "x": -58.6763874080608,
+        "z": -27.7357368547074,
+        "yaw": -1.1818367908808844,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 278,
+      "wall": 6505.874421124,
+      "modelTime": 35.391,
+      "observer": {
+        "x": -57.99057855875138,
+        "z": -27.98653637499416,
+        "yaw": -1.2453139637324468,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 282,
+      "wall": 6511.79155673,
+      "modelTime": 35.863,
+      "observer": {
+        "x": -57.26763601413071,
+        "z": -28.20335196859988,
+        "yaw": -1.298418211779322,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 287,
+      "wall": 6517.303533869,
+      "modelTime": 36.498,
+      "observer": {
+        "x": -56.278313688062084,
+        "z": -28.43270426408733,
+        "yaw": -1.3765959156367438,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 290,
+      "wall": 6523.63517001,
+      "modelTime": 36.839,
+      "observer": {
+        "x": -55.74089060971328,
+        "z": -28.53195657719211,
+        "yaw": -1.4035705555293219,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 294,
+      "wall": 6528.674624775,
+      "modelTime": 37.393,
+      "observer": {
+        "x": -54.86397435726,
+        "z": -28.65373180181462,
+        "yaw": -1.4553763111445563,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 297,
+      "wall": 6534.891077765,
+      "modelTime": 37.799,
+      "observer": {
+        "x": -54.216142019508354,
+        "z": -28.713950947851636,
+        "yaw": -1.4909329212519782,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 301,
+      "wall": 6540.221534511,
+      "modelTime": 38.288,
+      "observer": {
+        "x": -53.435927422447826,
+        "z": -28.752285141394832,
+        "yaw": -1.545806883654322,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 305,
+      "wall": 6545.26992747,
+      "modelTime": 38.776,
+      "observer": {
+        "x": -52.65462287059974,
+        "z": -28.760662967084837,
+        "yaw": -1.5763149097773688,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 309,
+      "wall": 6552.605608374,
+      "modelTime": 39.313,
+      "observer": {
+        "x": -51.79626674529943,
+        "z": -28.73912826990519,
+        "yaw": -1.6070438526484625,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 314,
+      "wall": 6557.893998913,
+      "modelTime": 39.996,
+      "observer": {
+        "x": -50.70596148857258,
+        "z": -28.661096863135004,
+        "yaw": -1.6660016163203375,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 318,
+      "wall": 6565.030315435,
+      "modelTime": 40.484,
+      "observer": {
+        "x": -49.929957508945094,
+        "z": -28.572280132450842,
+        "yaw": -1.6915599354121345,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 322,
+      "wall": 6570.580198195,
+      "modelTime": 41.087,
+      "observer": {
+        "x": -48.97572477246138,
+        "z": -28.427394828690044,
+        "yaw": -1.744142332873072,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 324,
+      "wall": 6576.615418074,
+      "modelTime": 41.316,
+      "observer": {
+        "x": -48.61591916332407,
+        "z": -28.364391638030295,
+        "yaw": -1.744142332873072,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 328,
+      "wall": 6581.852925895,
+      "modelTime": 41.838,
+      "observer": {
+        "x": -47.79775478835602,
+        "z": -28.19784842882372,
+        "yaw": -1.7986782825801033,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 330,
+      "wall": 6587.129834263,
+      "modelTime": 42.131,
+      "observer": {
+        "x": -47.34060704799941,
+        "z": -28.09183115717937,
+        "yaw": -1.7986782825801033,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 335,
+      "wall": 6592.310981419,
+      "modelTime": 42.749,
+      "observer": {
+        "x": -46.38514345993531,
+        "z": -27.835915644392333,
+        "yaw": -1.8525333546015876,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 339,
+      "wall": 6598.546598426,
+      "modelTime": 43.269,
+      "observer": {
+        "x": -45.590100883602915,
+        "z": -27.590948031180464,
+        "yaw": -1.8799754627558845,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 344,
+      "wall": 6604.001796342,
+      "modelTime": 43.984,
+      "observer": {
+        "x": -44.514047183041725,
+        "z": -27.203115148247758,
+        "yaw": -1.9382737720820564,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 348,
+      "wall": 6609.224358541,
+      "modelTime": 44.391,
+      "observer": {
+        "x": -43.91197305251282,
+        "z": -26.95643251045253,
+        "yaw": -1.9696997974726815,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 353,
+      "wall": 6614.537164751,
+      "modelTime": 45.041,
+      "observer": {
+        "x": -42.970120468096994,
+        "z": -26.51589118776147,
+        "yaw": -2.035618132433619,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 358,
+      "wall": 6620.073837566,
+      "modelTime": 45.561,
+      "observer": {
+        "x": -42.23949526395505,
+        "z": -26.118320168604427,
+        "yaw": -2.098818541369166,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 363,
+      "wall": 6626.324739015,
+      "modelTime": 46.228,
+      "observer": {
+        "x": -41.34457303003252,
+        "z": -25.538813466735053,
+        "yaw": -2.185166502794947,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 368,
+      "wall": 6632.86610862,
+      "modelTime": 46.764,
+      "observer": {
+        "x": -40.65938774439388,
+        "z": -25.02158746253984,
+        "yaw": -2.2438743275019783,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 372,
+      "wall": 6639.280330802,
+      "modelTime": 47.284,
+      "observer": {
+        "x": -40.02701877004081,
+        "z": -24.481113958249693,
+        "yaw": -2.298204558214869,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 376,
+      "wall": 6644.388089051,
+      "modelTime": 47.789,
+      "observer": {
+        "x": -39.44039491592698,
+        "z": -23.92563182515816,
+        "yaw": -2.3493859241816657,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 380,
+      "wall": 6651.315539886,
+      "modelTime": 48.244,
+      "observer": {
+        "x": -38.93438611186355,
+        "z": -23.40235257453916,
+        "yaw": -2.3824056080195564,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 383,
+      "wall": 6656.405640624,
+      "modelTime": 48.634,
+      "observer": {
+        "x": -38.51713597961409,
+        "z": -22.938431460248953,
+        "yaw": -2.41444998057815,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 386,
+      "wall": 6662.672746856,
+      "modelTime": 49.058,
+      "observer": {
+        "x": -38.07974439856846,
+        "z": -22.421168813520755,
+        "yaw": -2.4442375782344,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 389,
+      "wall": 6668.17845744,
+      "modelTime": 49.464,
+      "observer": {
+        "x": -37.67406458651176,
+        "z": -21.912431852391325,
+        "yaw": -2.4730238636347908,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 393,
+      "wall": 6674.31614785,
+      "modelTime": 49.936,
+      "observer": {
+        "x": -37.22022790380798,
+        "z": -21.309651603836382,
+        "yaw": -2.4999446705195565,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 396,
+      "wall": 6680.707420954,
+      "modelTime": 50.456,
+      "observer": {
+        "x": -36.74149430738602,
+        "z": -20.629241610930624,
+        "yaw": -2.532530211291041,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 400,
+      "wall": 6686.103580116,
+      "modelTime": 50.911,
+      "observer": {
+        "x": -36.33834072993798,
+        "z": -20.023099782081783,
+        "yaw": -2.5583544910761975,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 404,
+      "wall": 6692.8076217,
+      "modelTime": 51.431,
+      "observer": {
+        "x": -35.89788588155622,
+        "z": -19.31729519840724,
+        "yaw": -2.587296782335963,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 408,
+      "wall": 6698.780370049,
+      "modelTime": 51.984,
+      "observer": {
+        "x": -35.450516702632946,
+        "z": -18.55359617741756,
+        "yaw": -2.6149321583125253,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 412,
+      "wall": 6704.88057043,
+      "modelTime": 52.504,
+      "observer": {
+        "x": -35.0498044716498,
+        "z": -17.82448978102026,
+        "yaw": -2.6425082081172127,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 416,
+      "wall": 6710.564587295,
+      "modelTime": 53.024,
+      "observer": {
+        "x": -34.66860798721553,
+        "z": -17.084989723067302,
+        "yaw": -2.668943053087916,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 420,
+      "wall": 6716.739365616,
+      "modelTime": 53.496,
+      "observer": {
+        "x": -34.34028074032513,
+        "z": -16.4054625467119,
+        "yaw": -2.6951040638301036,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 424,
+      "wall": 6723.379323954,
+      "modelTime": 54.016,
+      "observer": {
+        "x": -33.99758155636761,
+        "z": -15.647350626149052,
+        "yaw": -2.7201746815058847,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 428,
+      "wall": 6730.424573432,
+      "modelTime": 54.504,
+      "observer": {
+        "x": -33.694720974884845,
+        "z": -14.927022524267018,
+        "yaw": -2.7471772449824474,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 432,
+      "wall": 6736.823514853,
+      "modelTime": 54.993,
+      "observer": {
+        "x": -33.41218423262316,
+        "z": -14.1984860532999,
+        "yaw": -2.7753896778437754,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 435,
+      "wall": 6742.035166227,
+      "modelTime": 55.351,
+      "observer": {
+        "x": -33.22029477845015,
+        "z": -13.658146841442251,
+        "yaw": -2.8058877247187755,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 440,
+      "wall": 6748.291749551,
+      "modelTime": 55.888,
+      "observer": {
+        "x": -32.98471726308879,
+        "z": -12.832926186057808,
+        "yaw": -2.923860564074244,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 442,
+      "wall": 6754.48057945,
+      "modelTime": 56.116,
+      "observer": {
+        "x": -32.90927681888538,
+        "z": -12.475552855980997,
+        "yaw": -2.9509702442500254,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 444,
+      "wall": 6760.725531113,
+      "modelTime": 56.491,
+      "observer": {
+        "x": -32.8241033589518,
+        "z": -11.881816279902761,
+        "yaw": -3.02254113658401,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 448,
+      "wall": 6765.990085956,
+      "modelTime": 56.979,
+      "observer": {
+        "x": -32.76759063404952,
+        "z": -11.102938878100872,
+        "yaw": -3.118872557482447,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 450,
+      "wall": 6771.835287626,
+      "modelTime": 57.273,
+      "observer": {
+        "x": -32.767889295615376,
+        "z": -10.633760867793734,
+        "yaw": -3.1608223865840093,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 453,
+      "wall": 6779.877581539,
+      "modelTime": 57.598,
+      "observer": {
+        "x": -32.79019566710117,
+        "z": -10.114336870653238,
+        "yaw": -3.2003021229121345,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 455,
+      "wall": 6785.080520204,
+      "modelTime": 57.874,
+      "observer": {
+        "x": -32.8279095050632,
+        "z": -9.67343507911648,
+        "yaw": -3.2350994861933846,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 458,
+      "wall": 6790.469409523,
+      "modelTime": 58.346,
+      "observer": {
+        "x": -32.92444131193207,
+        "z": -8.925040096128125,
+        "yaw": -3.292290739855494,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 460,
+      "wall": 6797.003651759,
+      "modelTime": 58.541,
+      "observer": {
+        "x": -32.97128135510859,
+        "z": -8.616576143039246,
+        "yaw": -3.292290739855494,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 462,
+      "wall": 6802.570097108,
+      "modelTime": 58.948,
+      "observer": {
+        "x": -33.08747374133451,
+        "z": -7.976366124853028,
+        "yaw": -3.3266145923945567,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 465,
+      "wall": 6808.293530963,
+      "modelTime": 59.354,
+      "observer": {
+        "x": -33.21891360615783,
+        "z": -7.339122606904087,
+        "yaw": -3.355378172716822,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 467,
+      "wall": 6814.554455781,
+      "modelTime": 59.614,
+      "observer": {
+        "x": -33.30717247903496,
+        "z": -6.932592938419172,
+        "yaw": -3.355378172716822,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 470,
+      "wall": 6819.992327207,
+      "modelTime": 60.021,
+      "observer": {
+        "x": -33.45866449785727,
+        "z": -6.299781330950149,
+        "yaw": -3.380595732531275,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 472,
+      "wall": 6825.435214531,
+      "modelTime": 60.298,
+      "observer": {
+        "x": -33.563471445697104,
+        "z": -5.869645884742096,
+        "yaw": -3.380595732531275,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 474,
+      "wall": 6831.20346257,
+      "modelTime": 60.623,
+      "observer": {
+        "x": -33.686573209513284,
+        "z": -5.364427164042486,
+        "yaw": -3.380595732531275,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 477,
+      "wall": 6837.012532456,
+      "modelTime": 61.029,
+      "observer": {
+        "x": -33.84062086287955,
+        "z": -4.73220422955477,
+        "yaw": -3.380595732531275,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 480,
+      "wall": 6844.181886227,
+      "modelTime": 61.354,
+      "observer": {
+        "x": -33.96372262669573,
+        "z": -4.226985508855161,
+        "yaw": -3.380595732531275,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 482,
+      "wall": 6849.362049641,
+      "modelTime": 61.696,
+      "observer": {
+        "x": -34.07970828874813,
+        "z": -3.6929155139423004,
+        "yaw": -3.3495352772090095,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 485,
+      "wall": 6855.775684015,
+      "modelTime": 61.973,
+      "observer": {
+        "x": -34.16123002324982,
+        "z": -3.2578146130958574,
+        "yaw": -3.317286650500025,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 489,
+      "wall": 6862.562359325,
+      "modelTime": 62.428,
+      "observer": {
+        "x": -34.2650350274968,
+        "z": -2.537395561628876,
+        "yaw": -3.2571461170527596,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 492,
+      "wall": 6869.96215168,
+      "modelTime": 62.769,
+      "observer": {
+        "x": -34.30779030066503,
+        "z": -1.9926297636705592,
+        "yaw": -3.1931741016719006,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 496,
+      "wall": 6876.296350354,
+      "modelTime": 63.176,
+      "observer": {
+        "x": -34.3016109680209,
+        "z": -1.3425675205509693,
+        "yaw": -3.076434935412135,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 500,
+      "wall": 6882.236816587,
+      "modelTime": 63.566,
+      "observer": {
+        "x": -34.207124959828796,
+        "z": -0.7265395442722551,
+        "yaw": -2.917220610460963,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 504,
+      "wall": 6888.899359705,
+      "modelTime": 63.956,
+      "observer": {
+        "x": -33.98926770796094,
+        "z": -0.1439886140485897,
+        "yaw": -2.651357420763697,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 509,
+      "wall": 6895.373412832,
+      "modelTime": 64.493,
+      "observer": {
+        "x": -33.49868845356055,
+        "z": 0.5577592283444796,
+        "yaw": -2.4241109913203376,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 513,
+      "wall": 6900.420394185,
+      "modelTime": 64.899,
+      "observer": {
+        "x": -33.039101369910796,
+        "z": 1.017384261280037,
+        "yaw": -2.277485716662135,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 517,
+      "wall": 6906.107997869,
+      "modelTime": 65.419,
+      "observer": {
+        "x": -32.373440658600074,
+        "z": 1.5155177775626503,
+        "yaw": -2.153525786242213,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 522,
+      "wall": 6912.278267811,
+      "modelTime": 66.038,
+      "observer": {
+        "x": -31.516944406841475,
+        "z": 2.009708818177402,
+        "yaw": -2.046006071886744,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 527,
+      "wall": 6917.47990384,
+      "modelTime": 66.786,
+      "observer": {
+        "x": -30.415736773298836,
+        "z": 2.477348337809648,
+        "yaw": -1.915502684435572,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 532,
+      "wall": 6922.840320784,
+      "modelTime": 67.404,
+      "observer": {
+        "x": -29.47215286738603,
+        "z": 2.7728715486785815,
+        "yaw": -1.842095702013697,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 538,
+      "wall": 6928.335757352,
+      "modelTime": 68.314,
+      "observer": {
+        "x": -28.04836282156142,
+        "z": 3.073727784885358,
+        "yaw": -1.7374772022578377,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 545,
+      "wall": 6933.451730074,
+      "modelTime": 69.339,
+      "observer": {
+        "x": -26.416485077174958,
+        "z": 3.220591680906553,
+        "yaw": -1.5972970569941658,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 553,
+      "wall": 6938.528682936,
+      "modelTime": 70.249,
+      "observer": {
+        "x": -24.96399330949726,
+        "z": 3.149991463840278,
+        "yaw": -1.4436939991328377,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 561,
+      "wall": 6943.579948198,
+      "modelTime": 71.192,
+      "observer": {
+        "x": -23.531514651119927,
+        "z": 2.705543700645747,
+        "yaw": -1.0722603443476815,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 571,
+      "wall": 6948.74749576,
+      "modelTime": 72.234,
+      "observer": {
+        "x": -22.264212691084474,
+        "z": 1.6369643866357833,
+        "yaw": -0.7420438221308845,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 580,
+      "wall": 6954.374026125,
+      "modelTime": 73.486,
+      "observer": {
+        "x": -21.065323269923574,
+        "z": 0.03509579579711494,
+        "yaw": -0.5972295521113532,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 589,
+      "wall": 6959.622559643,
+      "modelTime": 74.739,
+      "observer": {
+        "x": -19.984294879223235,
+        "z": -1.654175350947855,
+        "yaw": -0.5677400501582281,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 597,
+      "wall": 6964.64759554,
+      "modelTime": 75.943,
+      "observer": {
+        "x": -18.918199198791626,
+        "z": -3.256699997234113,
+        "yaw": -0.638400908312525,
+        "pitch": -0.06
+      }
+    },
+    {
+      "segment": "full-main-route",
+      "index": 606,
+      "wall": 6969.908890699,
+      "modelTime": 76.951,
+      "observer": {
+        "x": -17.818147593217027,
+        "z": -4.4304643481612365,
+        "yaw": -0.9125630787226813,
+        "pitch": -0.06
+      }
+    }
+  ],
+  "sequences": [],
+  "browser": "154.0.8037.57",
+  "videoTimingScope": "Canvas recording uses browser wall-time timestamps during the first actual real-time sequence; model time is separately recorded.",
+  "initial": {
+    "time": 0,
+    "observer": {
+      "x": -52,
+      "z": 8,
+      "yaw": 1.5707963267948966,
+      "pitch": -0.06
+    },
+    "actors": [
+      {
+        "id": "compact-bee",
+        "taxon": "bombus_lapidarius",
+        "x": -24.8446111497758,
+        "y": 0.6164360749566014,
+        "z": 9.526615184029357,
+        "activity": "anther-contact",
+        "phase": "waiting"
+      },
+      {
+        "id": "compact-avocet",
+        "taxon": "recurvirostra_avosetta",
+        "x": 62,
+        "y": -0.6644065008327552,
+        "z": -7,
+        "activity": "resting",
+        "phase": "waiting"
+      },
+      {
+        "id": "compact-spoonbill",
+        "taxon": "platalea_leucorodia",
+        "x": 70,
+        "y": -1.1083063942848739,
+        "z": 1,
+        "activity": "resting",
+        "phase": "waiting"
+      },
+      {
+        "id": "compact-redshank",
+        "taxon": "tringa_totanus",
+        "x": 59,
+        "y": -0.5331735119702179,
+        "z": 5,
+        "activity": "resting",
+        "phase": "waiting"
+      },
+      {
+        "id": "compact-oystercatcher",
+        "taxon": "haematopus_ostralegus",
+        "x": 61,
+        "y": -0.5737224676850295,
+        "z": -15.3,
+        "activity": "resting",
+        "phase": "waiting"
+      },
+      {
+        "id": "compact-crab",
+        "taxon": "carcinus_maenas",
+        "x": 61.7,
+        "y": -0.5749641133285366,
+        "z": -15.4,
+        "activity": "resting",
+        "phase": "waiting"
+      }
+    ],
+    "events": [],
+    "ecology": {
+      "window": "summer",
+      "actors": 82,
+      "alive": [
+        "compact-bracket",
+        "compact-fox",
+        "compact-mouse-0",
+        "compact-mouse-1",
+        "compact-mouse-2",
+        "compact-jay",
+        "compact-tit-0",
+        "compact-tit-1",
+        "compact-bee",
+        "compact-butterfly",
+        "compact-caterpillar",
+        "compact-ladybird-0",
+        "compact-ladybird-1",
+        "compact-aphid-0",
+        "compact-aphid-1",
+        "compact-aphid-2",
+        "compact-aphid-3",
+        "compact-aphid-4",
+        "compact-aphid-5",
+        "compact-aphid-6",
+        "compact-aphid-7",
+        "compact-aphid-8",
+        "compact-earthworm",
+        "compact-tick",
+        "compact-avocet",
+        "compact-spoonbill",
+        "compact-redshank",
+        "compact-oystercatcher",
+        "compact-mussel-0",
+        "compact-mussel-1",
+        "compact-mussel-2",
+        "compact-mussel-3",
+        "compact-mussel-4",
+        "compact-mussel-5",
+        "compact-mussel-6",
+        "compact-mussel-7",
+        "compact-mussel-8",
+        "compact-mussel-9",
+        "compact-mussel-10",
+        "compact-mussel-11",
+        "compact-mussel-12",
+        "compact-mussel-13",
+        "compact-mussel-14",
+        "compact-mussel-15",
+        "compact-mussel-16",
+        "compact-mussel-17",
+        "compact-cockle-0",
+        "compact-cockle-1",
+        "compact-cockle-2",
+        "compact-cockle-3",
+        "compact-cockle-4",
+        "compact-cockle-5",
+        "compact-cockle-6",
+        "compact-cockle-7",
+        "compact-cockle-8",
+        "compact-cockle-9",
+        "compact-lugworm",
+        "compact-ragworm",
+        "compact-juvenile-worm-0",
+        "compact-juvenile-worm-1",
+        "compact-juvenile-worm-2",
+        "compact-juvenile-worm-3",
+        "compact-juvenile-worm-4",
+        "compact-juvenile-worm-5",
+        "compact-shrimp-0",
+        "compact-shrimp-1",
+        "compact-shrimp-2",
+        "compact-shrimp-3",
+        "compact-shrimp-4",
+        "compact-crab",
+        "compact-snail-0",
+        "compact-snail-1",
+        "compact-snail-2",
+        "compact-snail-3",
+        "compact-snail-4",
+        "compact-snail-5",
+        "compact-snail-6",
+        "compact-snail-7",
+        "compact-snail-8",
+        "compact-snail-9",
+        "compact-snail-10",
+        "compact-snail-11"
+      ],
+      "events": 0,
+      "tide": {
+        "phase": 0,
+        "waterLevel": -1.05,
+        "label": "Niedrigwasser"
+      },
+      "resources": {
+        "aphid-colony": 9,
+        "shared-mussels": 18,
+        "clover-pollen": 6,
+        "browse-shoot": 5,
+        "nettle-leaf": 8,
+        "leaf-litter": 6,
+        "dead-wood": 100,
+        "acorns": 4,
+        "wood-mice": 3,
+        "wood-larvae": 8,
+        "small-juveniles": 3,
+        "small-worms": 3,
+        "shrimp": 5,
+        "deer-host": 1,
+        "phytoplankton": 100,
+        "benthic-diatoms": 30
+      }
+    },
+    "runId": "b6efefea-6d21-4dbc-87e4-599d0205876c",
+    "origin": null,
+    "mode": "",
+    "realtime": false,
+    "ownSeconds": 0,
+    "focus": "",
+    "visibility": null
+  },
+  "failure": "Traceback (most recent call last):\n  File \"/workspace/Ein-Tag-als-Ranger/tools/browser-compact-arrival.py\", line 113, in <module>\n    walk(page,layout['route'],'full-main-route');result['routeMetrics']=layout['metrics']\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/Ein-Tag-als-Ranger/tools/browser-compact-arrival.py\", line 44, in walk\n    assert time.monotonic()-started<900,('Full path did not finish',name,i,o)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: ('Full path did not finish', 'full-main-route', 609, {'x': -17.3202790398692, 'z': -4.764430769319341, 'yaw': -1.1092231129023689, 'pitch': -0.06})\n",
+  "failureSample": {
+    "time": 77.326,
+    "observer": {
+      "x": -17.3202790398692,
+      "z": -4.764430769319341,
+      "yaw": -1.1092231129023689,
+      "pitch": -0.06
+    },
+    "actors": [
+      {
+        "id": "compact-bee",
+        "taxon": "bombus_lapidarius",
+        "x": -25.16169400235211,
+        "y": 0.7578612778058642,
+        "z": 9.582808559039547,
+        "activity": "carrying-pollen",
+        "phase": "waiting"
+      },
+      {
+        "id": "compact-avocet",
+        "taxon": "recurvirostra_avosetta",
+        "x": 45.041549008169326,
+        "y": 1.7040968578360922,
+        "z": 12.219577790741432,
+        "activity": "flying",
+        "phase": "flight",
+        "pose": {
+          "pitch": 0,
+          "yaw": 0,
+          "crouch": 0.15,
+          "billPitch": 0,
+          "clawPitch": 0
+        },
+        "targetId": null,
+        "carriedPreyId": null,
+        "lastFeeding": {
+          "preyId": "compact-juvenile-worm-0",
+          "consumedAt": 31.669700000000176,
+          "contactAt": 31.0098000000002,
+          "departedAt": 33.92460000000008,
+          "departurePosition": {
+            "x": 61.223075403069444,
+            "y": -0.7010649690066293,
+            "z": -7
+          }
+        }
+      },
+      {
+        "id": "compact-spoonbill",
+        "taxon": "platalea_leucorodia",
+        "x": 32,
+        "y": 0.020673402107252572,
+        "z": 27,
+        "activity": "resting",
+        "phase": "waiting",
+        "pose": {
+          "pitch": 0,
+          "yaw": 0,
+          "crouch": 0,
+          "billPitch": 0,
+          "clawPitch": 0
+        },
+        "targetId": null,
+        "carriedPreyId": null,
+        "lastFeeding": {
+          "preyId": "compact-shrimp-1",
+          "consumedAt": 19.11989999999995,
+          "contactAt": 18.266499999999912,
+          "departedAt": 21.38320000000004,
+          "departurePosition": {
+            "x": 70.21161751435088,
+            "y": -1.083239528062707,
+            "z": 0.7642199591447689
+          }
+        }
+      },
+      {
+        "id": "compact-redshank",
+        "taxon": "tringa_totanus",
+        "x": 32,
+        "y": 0.020673402107252683,
+        "z": 27,
+        "activity": "resting",
+        "phase": "waiting",
+        "pose": {
+          "pitch": 0,
+          "yaw": 0,
+          "crouch": 0,
+          "billPitch": 0,
+          "clawPitch": 0
+        },
+        "targetId": null,
+        "carriedPreyId": null,
+        "lastFeeding": {
+          "preyId": "compact-juvenile-worm-5",
+          "consumedAt": 32.99630000000019,
+          "contactAt": 32.29630000000015,
+          "departedAt": 35.26089999999997,
+          "departurePosition": {
+            "x": 58.55358260401312,
+            "y": -0.5267257546416074,
+            "z": 5.010203070301607
+          }
+        }
+      },
+      {
+        "id": "compact-oystercatcher",
+        "taxon": "haematopus_ostralegus",
+        "x": 48.633398576738166,
+        "y": 1.6559028409426324,
+        "z": 2.738180696688815,
+        "activity": "flying",
+        "phase": "flight",
+        "pose": {
+          "pitch": 0,
+          "yaw": 0,
+          "crouch": 0.15,
+          "billPitch": 0,
+          "clawPitch": 0
+        },
+        "targetId": null,
+        "carriedPreyId": null,
+        "lastFeeding": {
+          "preyId": "compact-mussel-2",
+          "consumedAt": 31.75970000000018,
+          "contactAt": 28.831400000000194,
+          "departedAt": 34.031300000000094,
+          "departurePosition": {
+            "x": 61.15035631260592,
+            "y": -0.5861318902034949,
+            "z": -16.11612404287928
+          }
+        }
+      },
+      {
+        "id": "compact-crab",
+        "taxon": "carcinus_maenas",
+        "x": 61.287361412916106,
+        "y": -0.5755654676100969,
+        "z": -15.411605814617094,
+        "activity": "resting",
+        "phase": "waiting",
+        "pose": {
+          "pitch": 0,
+          "yaw": 0,
+          "crouch": 0,
+          "billPitch": 0,
+          "clawPitch": 0
+        },
+        "targetId": "compact-mussel-17",
+        "carriedPreyId": null,
+        "lastFeeding": {
+          "preyId": "compact-mussel-11",
+          "consumedAt": 18.61649999999992,
+          "contactAt": 16.404799999999955,
+          "departedAt": 32.411300000000146,
+          "departurePosition": {
+            "x": 61.516048909970124,
+            "y": -0.5795172081589209,
+            "z": -15.634942130838152
+          }
+        }
+      }
+    ],
+    "events": [
+      {
+        "id": "ranger-compact-v2:summer:13",
+        "interaction": "shell-competition",
+        "actors": [
+          "compact-crab",
+          "compact-mussel-11"
+        ],
+        "resourceId": "compact-mussel-pool",
+        "resource": "shared-mussels",
+        "startedAt": 0.025,
+        "endedAt": 18.61649999999992,
+        "before": 15,
+        "after": 14,
+        "outcome": "prey-removed",
+        "source": "model-event",
+        "window": "summer",
+        "interpretation": {
+          "kind": "interspecific-competition",
+          "limit": "Zugang und Ertrag am begrenzten Pool; Kontrollvergleich erforderlich",
+          "reference": "S37,S39"
+        },
+        "contactAt": 16.404799999999955,
+        "handlingStartedAt": 16.404799999999955,
+        "preyLength": 0.04,
+        "accessible": true,
+        "technique": "opening-shell",
+        "waterDepth": -0.29928919945166577,
+        "preyWaterDepth": -0.2992527820840407,
+        "contactPoint": {
+          "x": 61.1,
+          "y": -0.5615821552396295,
+          "z": -15.383755641109227
+        },
+        "preyPoint": {
+          "x": 61.1,
+          "y": -0.5615821536027218,
+          "z": -15.383755641109227
+        },
+        "preyPosition": {
+          "x": 61.1,
+          "y": -0.5712946666576548,
+          "z": -15.39
+        },
+        "bodyPosition": {
+          "x": 61.14188418847377,
+          "y": -0.5752582492900298,
+          "z": -15.389431725543938
+        },
+        "bodyHeading": 2.560902047158021,
+        "bodyPose": {
+          "pitch": 0,
+          "yaw": 0,
+          "crouch": 0,
+          "billPitch": 0,
+          "clawPitch": 0.1725683399972206
+        },
+        "shellOpening": 0.5,
+        "contactDistance": 1.6369077204814175e-09,
+        "sequence": [
+          "approach",
+          "claw-contact",
+          "handling",
+          "prey-acquired"
+        ],
+        "modelRevision": 4
+      },
+      {
+        "id": "ranger-compact-v2:summer:14",
+        "interaction": "shore-feeding",
+        "actors": [
+          "compact-spoonbill",
+          "compact-shrimp-1"
+        ],
+        "resourceId": "compact-creek-shrimps",
+        "resource": "shrimp",
+        "startedAt": 15.72799999999999,
+        "endedAt": 19.11989999999995,
+        "before": 2,
+        "after": 1,
+        "outcome": "consumed",
+        "source": "model-event",
+        "window": "summer",
+        "interpretation": {
+          "kind": "niche",
+          "limit": "Mehrere Nischendimensionen; keine Erklärung allein durch Schnabelform",
+          "reference": "S33-S40"
+        },
+        "contactAt": 18.266499999999912,
+        "handlingStartedAt": 18.266499999999912,
+        "preyLength": 0.029,
+        "accessible": true,
+        "technique": "sweeping",
+        "waterDepth": 0.23605687842940115,
+        "preyWaterDepth": 0.2523718370443627,
+        "contactPoint": {
+          "x": 69.13999999950549,
+          "y": -1.0762763942848739,
+          "z": 1.080000000145722
+        },
+        "preyPoint": {
+          "x": 69.14,
+          "y": -1.0762763942848739,
+          "z": 1.08
+        },
+        "preyPosition": {
+          "x": 69.14,
+          "y": -1.0783063942848738,
+          "z": 1.08
+        },
+        "bodyPosition": {
+          "x": 69.78166041117154,
+          "y": -1.1018021606218915,
+          "z": 0.890918029855388
+        },
+        "bodyHeading": 2.855027324350327,
+        "bodyPose": {
+          "pitch": -2.128814583819011,
+          "yaw": 0,
+          "crouch": 0.7,
+          "billPitch": -0.1,
+          "clawPitch": 0
+        },
+        "shellOpening": 0,
+        "contactDistance": 5.15533059989311e-10,
+        "sequence": [
+          "approach",
+          "bill-contact",
+          "handling",
+          "prey-acquired"
+        ],
+        "modelRevision": 4
+      },
+      {
+        "id": "ranger-compact-v2:summer:17",
+        "interaction": "shore-feeding",
+        "actors": [
+          "compact-redshank",
+          "compact-juvenile-worm-3"
+        ],
+        "resourceId": "compact-small-ragworms",
+        "resource": "small-worms",
+        "startedAt": 20.926500000000022,
+        "endedAt": 22.74960000000009,
+        "before": 3,
+        "after": 2,
+        "outcome": "consumed",
+        "source": "model-event",
+        "window": "summer",
+        "interpretation": {
+          "kind": "niche",
+          "limit": "Mehrere Nischendimensionen; keine Erklärung allein durch Schnabelform",
+          "reference": "S33-S40"
+        },
+        "contactAt": 22.041400000000063,
+        "handlingStartedAt": 22.041400000000063,
+        "preyLength": 0.012,
+        "accessible": true,
+        "technique": "probing",
+        "waterDepth": -0.2674785898139366,
+        "preyWaterDepth": -0.26505724417791954,
+        "contactPoint": {
+          "x": 58.99999999995518,
+          "y": -0.5323335119702179,
+          "z": 5
+        },
+        "preyPoint": {
+          "x": 59,
+          "y": -0.5323335119702179,
+          "z": 5
+        },
+        "preyPosition": {
+          "x": 59,
+          "y": -0.5331735119702179,
+          "z": 5
+        },
+        "bodyPosition": {
+          "x": 58.84150098891113,
+          "y": -0.5307521663342009,
+          "z": 5
+        },
+        "bodyHeading": 0,
+        "bodyPose": {
+          "pitch": -1.5308781084142464,
+          "yaw": 0,
+          "crouch": 0.7,
+          "billPitch": -1.35,
+          "clawPitch": 0
+        },
+        "shellOpening": 0,
+        "contactDistance": 4.482103577174712e-11,
+        "sequence": [
+          "approach",
+          "bill-contact",
+          "handling",
+          "prey-acquired"
+        ],
+        "modelRevision": 4
+      },
+      {
+        "id": "ranger-compact-v2:summer:18",
+        "interaction": "shell-competition",
+        "actors": [
+          "compact-oystercatcher",
+          "compact-mussel-3"
+        ],
+        "resourceId": "compact-mussel-pool",
+        "resource": "shared-mussels",
+        "startedAt": 19.559999999999967,
+        "endedAt": 24.53790000000017,
+        "before": 14,
+        "after": 13,
+        "outcome": "prey-removed",
+        "source": "model-event",
+        "window": "summer",
+        "interpretation": {
+          "kind": "interspecific-competition",
+          "limit": "Zugang und Ertrag am begrenzten Pool; Kontrollvergleich erforderlich",
+          "reference": "S37,S39"
+        },
+        "contactAt": 21.528200000000044,
+        "handlingStartedAt": 21.528200000000044,
+        "preyLength": 0.02,
+        "accessible": true,
+        "technique": "shell-opening",
+        "waterDepth": -0.18142276996159623,
+        "preyWaterDepth": -0.184803881094056,
+        "contactPoint": {
+          "x": 60.861302876589015,
+          "y": -0.5691846892209605,
+          "z": -15.546184143689254
+        },
+        "preyPoint": {
+          "x": 60.86,
+          "y": -0.5691846892209605,
+          "z": -15.546877820554613
+        },
+        "preyPosition": {
+          "x": 60.86,
+          "y": -0.574040945748427,
+          "z": -15.55
+        },
+        "bodyPosition": {
+          "x": 60.97944095693903,
+          "y": -0.5814220568808868,
+          "z": -15.769144510558412
+        },
+        "bodyHeading": 2.063896374032262,
+        "bodyPose": {
+          "pitch": -1.707224058872231,
+          "yaw": 0.007708677115720472,
+          "crouch": 0.7,
+          "billPitch": -0.65,
+          "clawPitch": 0
+        },
+        "shellOpening": 0.5,
+        "contactDistance": 0.0014760335361157163,
+        "sequence": [
+          "approach",
+          "bill-contact",
+          "handling",
+          "prey-acquired"
+        ],
+        "modelRevision": 4
+      },
+      {
+        "id": "ranger-compact-v2:summer:20",
+        "interaction": "shore-feeding",
+        "actors": [
+          "compact-redshank",
+          "compact-juvenile-worm-4"
+        ],
+        "resourceId": "compact-small-ragworms",
+        "resource": "small-worms",
+        "startedAt": 25.041300000000145,
+        "endedAt": 27.896400000000174,
+        "before": 2,
+        "after": 1,
+        "outcome": "consumed",
+        "source": "model-event",
+        "window": "summer",
+        "interpretation": {
+          "kind": "niche",
+          "limit": "Mehrere Nischendimensionen; keine Erklärung allein durch Schnabelform",
+          "reference": "S33-S40"
+        },
+        "contactAt": 27.18140000000016,
+        "handlingStartedAt": 27.18140000000016,
+        "preyLength": 0.012,
+        "accessible": true,
+        "technique": "probing",
+        "waterDepth": -0.16166900685661212,
+        "preyWaterDepth": -0.15908309201537796,
+        "contactPoint": {
+          "x": 59.07999999640133,
+          "y": -0.534045574531263,
+          "z": 5.029999999843195
+        },
+        "preyPoint": {
+          "x": 59.08,
+          "y": -0.534045574531263,
+          "z": 5.03
+        },
+        "preyPosition": {
+          "x": 59.08,
+          "y": -0.534885574531263,
+          "z": 5.03
+        },
+        "bodyPosition": {
+          "x": 58.92167206948645,
+          "y": -0.5322996596900288,
+          "z": 5.023101169589346
+        },
+        "bodyHeading": 0.04354550262473099,
+        "bodyPose": {
+          "pitch": -1.532509520473757,
+          "yaw": 0,
+          "crouch": 0.7,
+          "billPitch": -1.35,
+          "clawPitch": 0
+        },
+        "shellOpening": 0,
+        "contactDistance": 3.602086207157811e-09,
+        "sequence": [
+          "approach",
+          "bill-contact",
+          "handling",
+          "prey-acquired"
+        ],
+        "modelRevision": 4
+      },
+      {
+        "id": "ranger-compact-v2:summer:23",
+        "interaction": "shore-feeding",
+        "actors": [
+          "compact-avocet",
+          "compact-juvenile-worm-0"
+        ],
+        "resourceId": "compact-juvenile-ragworms",
+        "resource": "small-juveniles",
+        "startedAt": 29.318100000000157,
+        "endedAt": 31.669700000000176,
+        "before": 3,
+        "after": 2,
+        "outcome": "consumed",
+        "source": "model-event",
+        "window": "summer",
+        "interpretation": {
+          "kind": "niche",
+          "limit": "Mehrere Nischendimensionen; keine Erklärung allein durch Schnabelform",
+          "reference": "S33-S40"
+        },
+        "contactAt": 31.0098000000002,
+        "handlingStartedAt": 31.0098000000002,
+        "preyLength": 0.006,
+        "accessible": true,
+        "technique": "sweeping",
+        "waterDepth": 0.06393577457024024,
+        "preyWaterDepth": 0.04933208572584913,
+        "contactPoint": {
+          "x": 62.00000000116799,
+          "y": -0.6639865008327552,
+          "z": -7
+        },
+        "preyPoint": {
+          "x": 62,
+          "y": -0.6639865008327552,
+          "z": -7
+        },
+        "preyPosition": {
+          "x": 62,
+          "y": -0.6644065008327552,
+          "z": -7
+        },
+        "bodyPosition": {
+          "x": 61.67123940306947,
+          "y": -0.6790101896771463,
+          "z": -7
+        },
+        "bodyHeading": 0,
+        "bodyPose": {
+          "pitch": -2.0071908016845255,
+          "yaw": 0,
+          "crouch": 0.7,
+          "billPitch": -0.5,
+          "clawPitch": 0
+        },
+        "shellOpening": 0,
+        "contactDistance": 1.1679901490424527e-09,
+        "sequence": [
+          "approach",
+          "bill-contact",
+          "handling",
+          "prey-acquired"
+        ],
+        "modelRevision": 4
+      },
+      {
+        "id": "ranger-compact-v2:summer:24",
+        "interaction": "shell-competition",
+        "actors": [
+          "compact-oystercatcher",
+          "compact-mussel-2"
+        ],
+        "resourceId": "compact-mussel-pool",
+        "resource": "shared-mussels",
+        "startedAt": 26.82300000000013,
+        "endedAt": 31.75970000000018,
+        "before": 13,
+        "after": 12,
+        "outcome": "prey-removed",
+        "source": "model-event",
+        "window": "summer",
+        "interpretation": {
+          "kind": "interspecific-competition",
+          "limit": "Zugang und Ertrag am begrenzten Pool; Kontrollvergleich erforderlich",
+          "reference": "S37,S39"
+        },
+        "contactAt": 28.831400000000194,
+        "handlingStartedAt": 28.831400000000194,
+        "preyLength": 0.04,
+        "accessible": true,
+        "technique": "shell-opening",
+        "waterDepth": -0.03216506891960402,
+        "preyWaterDepth": -0.03522492272961664,
+        "contactPoint": {
+          "x": 60.74188522033719,
+          "y": -0.5642596174099725,
+          "z": -15.542421013800386
+        },
+        "preyPoint": {
+          "x": 60.74,
+          "y": -0.5642596174099725,
+          "z": -15.543755641109227
+        },
+        "preyPosition": {
+          "x": 60.74,
+          "y": -0.5739721304649056,
+          "z": -15.55
+        },
+        "bodyPosition": {
+          "x": 60.88815569056679,
+          "y": -0.5810319842749182,
+          "z": -15.750404431971836
+        },
+        "bodyHeading": 2.1928040720680344,
+        "bodyPose": {
+          "pitch": -1.6475948817998447,
+          "yaw": 0.011941950995326116,
+          "crouch": 0.7,
+          "billPitch": -0.65,
+          "clawPitch": 0
+        },
+        "shellOpening": 0.5,
+        "contactDistance": 0.002309823753719343,
+        "sequence": [
+          "approach",
+          "bill-contact",
+          "handling",
+          "prey-acquired"
+        ],
+        "modelRevision": 4
+      },
+      {
+        "id": "ranger-compact-v2:summer:26",
+        "interaction": "shore-feeding",
+        "actors": [
+          "compact-redshank",
+          "compact-juvenile-worm-5"
+        ],
+        "resourceId": "compact-small-ragworms",
+        "resource": "small-worms",
+        "startedAt": 30.173100000000172,
+        "endedAt": 32.99630000000019,
+        "before": 1,
+        "after": 0,
+        "outcome": "consumed",
+        "source": "model-event",
+        "window": "summer",
+        "interpretation": {
+          "kind": "niche",
+          "limit": "Mehrere Nischendimensionen; keine Erklärung allein durch Schnabelform",
+          "reference": "S33-S40"
+        },
+        "contactAt": 32.29630000000015,
+        "handlingStartedAt": 32.29630000000015,
+        "preyLength": 0.012,
+        "accessible": true,
+        "technique": "probing",
+        "waterDepth": -0.0535937293961678,
+        "preyWaterDepth": -0.05085491870058012,
+        "contactPoint": {
+          "x": 59.160000000077716,
+          "y": -0.5358078350131614,
+          "z": 5.060000000006381
+        },
+        "preyPoint": {
+          "x": 59.16,
+          "y": -0.5358078350131614,
+          "z": 5.06
+        },
+        "preyPosition": {
+          "x": 59.16,
+          "y": -0.5366478350131614,
+          "z": 5.06
+        },
+        "bodyPosition": {
+          "x": 59.002073028896866,
+          "y": -0.5339090243175737,
+          "z": 5.0470315753974955
+        },
+        "bodyHeading": 0.08193276046436415,
+        "bodyPose": {
+          "pitch": -1.5340255161129328,
+          "yaw": 0,
+          "crouch": 0.7,
+          "billPitch": -1.35,
+          "clawPitch": 0
+        },
+        "shellOpening": 0,
+        "contactDistance": 7.798072103871979e-11,
+        "sequence": [
+          "approach",
+          "bill-contact",
+          "handling",
+          "prey-acquired"
+        ],
+        "modelRevision": 4
+      }
+    ],
+    "ecology": {
+      "window": "summer",
+      "actors": 82,
+      "alive": [
+        "compact-bracket",
+        "compact-fox",
+        "compact-mouse-0",
+        "compact-mouse-1",
+        "compact-mouse-2",
+        "compact-jay",
+        "compact-tit-0",
+        "compact-tit-1",
+        "compact-bee",
+        "compact-butterfly",
+        "compact-caterpillar",
+        "compact-ladybird-0",
+        "compact-ladybird-1",
+        "compact-aphid-3",
+        "compact-aphid-4",
+        "compact-aphid-5",
+        "compact-aphid-6",
+        "compact-aphid-7",
+        "compact-aphid-8",
+        "compact-earthworm",
+        "compact-tick",
+        "compact-avocet",
+        "compact-spoonbill",
+        "compact-redshank",
+        "compact-oystercatcher",
+        "compact-mussel-0",
+        "compact-mussel-1",
+        "compact-mussel-6",
+        "compact-mussel-7",
+        "compact-mussel-8",
+        "compact-mussel-9",
+        "compact-mussel-10",
+        "compact-mussel-12",
+        "compact-mussel-13",
+        "compact-mussel-14",
+        "compact-mussel-15",
+        "compact-mussel-17",
+        "compact-cockle-0",
+        "compact-cockle-1",
+        "compact-cockle-2",
+        "compact-cockle-3",
+        "compact-cockle-4",
+        "compact-cockle-5",
+        "compact-cockle-6",
+        "compact-cockle-7",
+        "compact-cockle-8",
+        "compact-cockle-9",
+        "compact-lugworm",
+        "compact-ragworm",
+        "compact-juvenile-worm-1",
+        "compact-juvenile-worm-2",
+        "compact-shrimp-0",
+        "compact-crab",
+        "compact-snail-0",
+        "compact-snail-1",
+        "compact-snail-2",
+        "compact-snail-3",
+        "compact-snail-4",
+        "compact-snail-5",
+        "compact-snail-6",
+        "compact-snail-7",
+        "compact-snail-8",
+        "compact-snail-9",
+        "compact-snail-10",
+        "compact-snail-11"
+      ],
+      "events": 40,
+      "tide": {
+        "phase": 0.6443841666666477,
+        "waterLevel": -0.40361604817738606,
+        "label": "Hochwasser"
+      },
+      "resources": {
+        "aphid-colony": 6,
+        "shared-mussels": 12,
+        "clover-pollen": 0,
+        "browse-shoot": 3,
+        "nettle-leaf": 5,
+        "leaf-litter": 3,
+        "dead-wood": 100,
+        "acorns": 4,
+        "wood-mice": 3,
+        "wood-larvae": 8,
+        "small-juveniles": 2,
+        "small-worms": 0,
+        "shrimp": 1,
+        "deer-host": 1,
+        "phytoplankton": 98,
+        "benthic-diatoms": 27
+      }
+    },
+    "runId": "b6efefea-6d21-4dbc-87e4-599d0205876c",
+    "origin": null,
+    "mode": "",
+    "realtime": false,
+    "ownSeconds": 0,
+    "focus": "",
+    "visibility": null
+  }
+}

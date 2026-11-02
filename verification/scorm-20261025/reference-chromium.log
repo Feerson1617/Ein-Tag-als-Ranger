@@ -1,0 +1,32 @@
+
+> scorm-universalvorlage@1.0.0 test:browser
+> playwright test
+
+[2m[WebServer] [22m(node:214619) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[2m[WebServer] [22m(Use `node --trace-warnings ...` to show where the warning was created)
+[2m[WebServer] [22m(node:214665) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[2m[WebServer] [22m(Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 11 tests using 2 workers
+
+(node:214682) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:214683) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:214682) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:214683) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [chromium] › tests/browser/universal.spec.js:18:3 › http embedded: modules, dynamic import, JSON, textured GLB/GLTF and finish (971ms)
+  ✓   2 [chromium] › tests/browser/universal.spec.js:18:3 › http popup: modules, dynamic import, JSON, textured GLB/GLTF and finish (1.1s)
+  ✓   3 [chromium] › tests/browser/universal.spec.js:18:3 › https embedded: modules, dynamic import, JSON, textured GLB/GLTF and finish (917ms)
+  ✓   4 [chromium] › tests/browser/universal.spec.js:18:3 › https popup: modules, dynamic import, JSON, textured GLB/GLTF and finish (990ms)
+  ✓   5 [chromium] › tests/browser/universal.spec.js:50:1 › Nested parent discovery and actual popup close (840ms)
+  ✓   6 [chromium] › tests/browser/universal.spec.js:58:1 › Classroom adapter is volatile and never replaces or clears browser storage (792ms)
+  ✓   8 [chromium] › tests/browser/universal.spec.js:76:1 › Initialization error stays visible; app and retry remain usable (528ms)
+  ✓   7 [chromium] › tests/browser/universal.spec.js:69:1 › Normal mode keeps the application-owned save on reload (866ms)
+  ✓   9 [chromium] › tests/browser/universal.spec.js:82:1 › A direct tab without accessible LMS API reports unavailable (588ms)
+  ✓  10 [chromium] › tests/browser/universal.spec.js:87:86 › Tablet touch 768x1024 (1.2s)
+  ✓  11 [chromium] › tests/browser/universal.spec.js:87:86 › Tablet touch 1024x768 (1.0s)
+
+  11 passed (8.7s)

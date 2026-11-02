@@ -1,0 +1,10 @@
+CAPTURE compact-avocet initial 0.653
+CAPTURE compact-avocet approaching 29.404
+Traceback (most recent call last):
+  File "/workspace/Ein-Tag-als-Ranger/tools/browser-compact-feeding.py", line 43, in <module>
+    if s['actor'].get('targetId')==episode and phase not in seen:seen.add(phase);capture(page,row,s,phase)
+                                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/Ein-Tag-als-Ranger/tools/browser-compact-feeding.py", line 23, in capture
+    assert s['visibility']and all(s['visibility'][k]for k in ['meshVisible','bodyClear','billClear','bodyInFrame']),(row['id'],phase,'Actual model hidden or occluded',s['visibility'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('compact-avocet', 'searching', 'Actual model hidden or occluded', {'individualId': 'compact-avocet', 'meshVisible': True, 'bodyClear': True, 'billClear': False, 'bodyInFrame': True})

@@ -1,0 +1,79 @@
+{
+  "commit": "20bfc5c4631f82518ddfef11c9d9d2b6ee80f30c",
+  "sourceDirty": false,
+  "startedAt": "2026-10-22T08:25:41Z",
+  "site": "outputs/GitHub-Pages",
+  "entry": "index.html",
+  "prefix": "/Ein-Tag-als-Ranger/",
+  "viewport": [
+    600,
+    375
+  ],
+  "browser": "chromium",
+  "passed": [
+    "boot, two main entries, three mission choices, real WebGL startup",
+    "LIVE M1: three concrete focal taxa, observation button, feature comparisons and justified uncertainty",
+    "LIVE M2: real simulation event, finite shared resource, explicitly read protocol, interpretation"
+  ],
+  "failed": [
+    "Page.wait_for_function: Timeout 180000ms exceeded."
+  ],
+  "errors": [],
+  "consoleErrors": [],
+  "httpErrors": [],
+  "notTested": [
+    "physical iPad/Safari",
+    "classroom timing/learning effect",
+    "20-minute minimum-device performance"
+  ],
+  "browserVersion": "154.0.8037.57",
+  "readySeconds": 22.31,
+  "resourceTransferBytes": 26674023,
+  "navigationTransferBytes": 8666,
+  "initialTransferBytes": 26682689,
+  "liveMissionSeconds": {
+    "m1": 244.31,
+    "m2": 348.9
+  },
+  "failureDOM": {
+    "viewport": [
+      600,
+      375
+    ],
+    "hidden": false,
+    "fonts": "loaded",
+    "graphics": null,
+    "panelOpen": false,
+    "controls": [],
+    "animations": [],
+    "panelRect": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0,
+      "display": "none",
+      "visibility": "visible",
+      "opacity": "1",
+      "detailsOpen": null,
+      "topElement": "world"
+    },
+    "panelScrollTop": 0
+  },
+  "failureUI": {
+    "toast": "Beobachtungsfenster läuft. Nach mindestens 6 Modellsekunden Feldbuch öffnen und Stationsprotokoll sichern.",
+    "focus": "Rotbuche",
+    "progress": "Beobachtungsfenster: 5.9 / 6 Modellsekunden",
+    "tool": "none",
+    "observation": {
+      "observationSeconds": "0",
+      "targetFps": "60",
+      "frameP95Ms": "2283.2",
+      "fps": "1",
+      "focusTaxon": "fagus_sylvatica",
+      "focusIndividual": "plant:forest:fagus_sylvatica:-8.603866083323956:9.19744166530203:0.006750873364684044",
+      "observationDeltaSeconds": "7.716300000000017",
+      "simulationTime": "1.9998999999999931"
+    }
+  },
+  "failureScreenshot": "failure.png"
+}

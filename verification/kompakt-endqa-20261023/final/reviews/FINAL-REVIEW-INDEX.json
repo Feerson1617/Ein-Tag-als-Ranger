@@ -1,0 +1,114 @@
+{
+  "scope": "Own final visual/print reviews and browser retry evidence. Technical PASS is not independent visual, biological, physical-device or classroom acceptance. Review prose retains original source paths; local reports are linked below.",
+  "files": {
+    "final-print-review.md": {
+      "file": "reviews/final-print-review.md",
+      "sha256": "a13bdd5293028717c1b3af84d85da9879e04ed7465e2b8c6432e4b1d72b05d3a"
+    },
+    "final-print-review.json": {
+      "file": "reviews/final-print-review.json",
+      "sha256": "b714bb58fd3fa935ddcee59c8254a240a14d1a373fb0c7229978bcae78d1738f"
+    },
+    "final-habitat-review.md": {
+      "file": "reviews/final-habitat-review.md",
+      "sha256": "425ef5631b87c60bf7b88df525675d248ba3c212e4a6c10380c71f0668c1d8b7"
+    },
+    "final-habitat-review.json": {
+      "file": "reviews/final-habitat-review.json",
+      "sha256": "a7964306526b88189faf5181d853b8f9ec7fe14a146ffe8da75f3d38fabfab8a"
+    },
+    "final-feeding-review.md": {
+      "file": "reviews/final-feeding-review.md",
+      "sha256": "161294949dc1e3a5b81c5539b398fdf7a04ec2e4bfc60476a18ec3f2c6f941b5"
+    },
+    "final-feeding-review.json": {
+      "file": "reviews/final-feeding-review.json",
+      "sha256": "611dc3a1ac9fd6144c43d0bf03970c276c07a907234bff9dc318441cb59f4359"
+    },
+    "final-arrival-review.md": {
+      "file": "reviews/final-arrival-review.md",
+      "sha256": "8a9125fc4c13d3fd0b6845dc6a1cfffdd81eb724a684a44853392fe2cea11f0f"
+    },
+    "final-arrival-review.json": {
+      "file": "reviews/final-arrival-review.json",
+      "sha256": "4e4d7d77a59bd78a9da8649583a839555830176ef605895f8130fdf950caff44"
+    }
+  },
+  "localReports": {
+    "print": "print-audit/",
+    "habitats": "habitat-revision/result.json",
+    "feeding": "feeding/result.json",
+    "habitatGallery": "habitat-final-gallery.html",
+    "galleryDiagnosis": "reviews/gallery-list-diagnosis/model-reproduction.json",
+    "uiRecovery": "reference/context-recovery-result.json",
+    "driverAndEventDiagnosis": "reviews/diagnosis/PROVENANCE.json",
+    "arrival": "supplemental-arrival-3600/result.json",
+    "arrivalVideo": "supplemental-arrival-3600/coastal-feeding-realtime.webm",
+    "arrivalFieldbook": "supplemental-arrival-3600/arrival-fieldbook.json",
+    "arrivalReview": "reviews/final-arrival-review.json",
+    "arrivalProbe": "reviews/arrival-final-review/video-probe.json",
+    "feedingReview": "reviews/final-feeding-review.json"
+  },
+  "recoveryImages": {
+    "nativeRestore": {
+      "file": "reference/17-native-context-restored.png",
+      "sha256": "3426b37133452c0c737434c196c478d2479e15576787a8b9e66ad3cc2cece704"
+    },
+    "uiReload": {
+      "file": "reference/19-ui-retry-reloaded.png",
+      "sha256": "a784fe2880a7ffe67ebbe74eb37de0efc322db7521233c1df5c75242f42a47f1"
+    },
+    "lostContext": {
+      "file": "reference/18-ui-retry-context-lost.png",
+      "sha256": "1922f27a0b9c35acd4d250cc195d13cdb96b2f977be393c92c952cc91ed68946"
+    }
+  },
+  "printStatus": "PASS for F13/N04 print-layout scope",
+  "completeF05VisualAcceptance": false,
+  "feedingStatus": "LIMITED_VISUAL_CONFIRMATION; no complete biological or swallow-animation acceptance",
+  "feedingCompleteVisualAcceptance": false,
+  "arrivalStatus": "FUNCTIONAL EVIDENCE PASS WITH EXPLICIT VISUAL LIMITS; HISTORICAL 900-SECOND FAILURE PRESERVED",
+  "arrivalUnconditionalVisualAcceptance": false,
+  "arrivalReviewedFrames": [
+    {
+      "file": "reviews/arrival-final-review/video-frame-01.png",
+      "sha256": "0e972f9d25bfcc5795445204f1930eaa29c9f2ec92e0b9402908df642da969db",
+      "decodedFrameIndex": 0,
+      "presentationSeconds": 0.0,
+      "actuallyViewed": true,
+      "operation": "Unscaled unretimed original decoded frame selected by index; no interpolation, crop, overlay or other image edits."
+    },
+    {
+      "file": "reviews/arrival-final-review/video-frame-02.png",
+      "sha256": "2924e0960dfd81e5c020714bdcdc070d1f033637a2abb5f29df56402f14dcd0a",
+      "decodedFrameIndex": 24,
+      "presentationSeconds": 4.373,
+      "actuallyViewed": true,
+      "operation": "Unscaled unretimed original decoded frame selected by index; no interpolation, crop, overlay or other image edits."
+    },
+    {
+      "file": "reviews/arrival-final-review/video-frame-03.png",
+      "sha256": "1220a2b70358901d292c40765a78230cb50d9cf74502d6a52a7b57afe2f7448f",
+      "decodedFrameIndex": 48,
+      "presentationSeconds": 8.63,
+      "actuallyViewed": true,
+      "operation": "Unscaled unretimed original decoded frame selected by index; no interpolation, crop, overlay or other image edits."
+    },
+    {
+      "file": "reviews/arrival-final-review/video-frame-04.png",
+      "sha256": "c2e34d379a65e05c26bccdc92418f2984a0b62331708479d4a1fceede2b2af50",
+      "decodedFrameIndex": 72,
+      "presentationSeconds": 12.957,
+      "actuallyViewed": true,
+      "operation": "Unscaled unretimed original decoded frame selected by index; no interpolation, crop, overlay or other image edits."
+    },
+    {
+      "file": "reviews/arrival-final-review/video-frame-05.png",
+      "sha256": "d8db64ee0c216131865e7f4601daf1f1754681d75a35c6043618676099c577df",
+      "decodedFrameIndex": 96,
+      "presentationSeconds": 17.454,
+      "actuallyViewed": true,
+      "operation": "Unscaled unretimed original decoded frame selected by index; no interpolation, crop, overlay or other image edits."
+    }
+  ]
+}

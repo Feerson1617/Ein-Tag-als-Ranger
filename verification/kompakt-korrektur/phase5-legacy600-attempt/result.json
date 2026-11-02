@@ -1,0 +1,70 @@
+{
+  "commit": "c95054dfdf24eb4066d0fd5ff81ce21f3082769e",
+  "sourceDirty": false,
+  "startedAt": "2026-10-22T19:12:08Z",
+  "site": "outputs/GitHub-Pages",
+  "entry": "index.html",
+  "prefix": "/Ein-Tag-als-Ranger/",
+  "viewport": [
+    600,
+    375
+  ],
+  "browser": "chromium",
+  "liveMissionSelection": "m3",
+  "passed": [
+    "boot, two main entries, three mission choices, real WebGL startup"
+  ],
+  "failed": [
+    "Page.wait_for_function: Timeout 180000ms exceeded."
+  ],
+  "errors": [],
+  "consoleErrors": [],
+  "httpErrors": [],
+  "notTested": [
+    "physical iPad/Safari",
+    "classroom timing/learning effect",
+    "20-minute minimum-device performance"
+  ],
+  "browserVersion": "154.0.8037.57",
+  "readySeconds": 17.84,
+  "resourceTransferBytes": 26674578,
+  "navigationTransferBytes": 8666,
+  "initialTransferBytes": 26683244,
+  "failureDOM": {
+    "viewport": [
+      600,
+      375
+    ],
+    "hidden": false,
+    "fonts": "loaded",
+    "graphics": null,
+    "panelOpen": false,
+    "controls": [],
+    "animations": [],
+    "panelRect": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0,
+      "display": "none",
+      "visibility": "visible",
+      "opacity": "1",
+      "detailsOpen": null,
+      "topElement": "world"
+    },
+    "panelScrollTop": 0
+  },
+  "failureUI": {
+    "toast": "Beobachtungsfenster läuft. Nach mindestens 6 Modellsekunden Feldbuch öffnen und Stationsprotokoll sichern.",
+    "focus": "Suche eine Art im Sichtfeld",
+    "progress": "Beobachtungsfenster: 5.8 / 6 Modellsekunden",
+    "tool": "none",
+    "observation": {
+      "observationSeconds": "0",
+      "targetFps": "60",
+      "frameP95Ms": "2933.2",
+      "fps": "0"
+    }
+  },
+  "failureScreenshot": "failure.png"
+}

@@ -1,0 +1,15 @@
+{
+  "sourceCommit": "cbcab663303e398a42c30343e5ce13f4e6a1e96d",
+  "sourceDirty": true,
+  "modules": 33,
+  "assets": [
+    "assets/boardwalk-wood.webp",
+    "assets/compact-roe-deer.glb",
+    "assets/sky-panorama.webp",
+    "assets/terrain-atlas.webp",
+    "assets/wildlife-fox.glb"
+  ],
+  "initialUpperBoundBytes": 9340544,
+  "zipBytes": 6834283,
+  "standaloneBytes": 11859084
+}

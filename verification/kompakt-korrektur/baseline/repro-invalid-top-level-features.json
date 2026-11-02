@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 2,
+  "worldVersion": "ranger-compact-v2",
+  "records": [
+    {
+      "id": "baseline-woodruff",
+      "taxon": "galium_odoratum",
+      "individualId": "ranger-compact-v2:galium_odoratum:0",
+      "initialSeed": 20260825,
+      "worldVersion": "ranger-compact-v2",
+      "runId": "baseline-run",
+      "window": "summer",
+      "source": "own-observation",
+      "observationSeconds": 3,
+      "simulationTime": 0,
+      "x": -58.366864902514294,
+      "z": 5.343887617279103,
+      "method": "magnified-active-model",
+      "siteId": "compact-forest-core",
+      "note": "Synthetic QA baseline."
+    }
+  ],
+  "archives": [],
+  "previousEditions": [],
+  "learning": {
+    "activeMission": null,
+    "level": "gA",
+    "answers": {},
+    "protocols": [],
+    "measurements": [],
+    "samples": [],
+    "experiments": [],
+    "drafts": {
+      "K1": {
+        "features": {
+          "invalid": true
+        }
+      }
+    }
+  }
+}

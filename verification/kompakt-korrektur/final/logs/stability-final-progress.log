@@ -1,0 +1,3 @@
+Waiting for queued M3 and standalone checks; no concurrent heavy browser.
+START new complete stability with valid hidden-state assertion 19:25:13
+{"name": "stability", "command": ["/workspace/.ranger-clean-venv/bin/python", "tools/browser-compact-stability.py"], "exitCode": 0, "passed": true, "seconds": 1538.74, "log": "stability-final-recheck.log", "reason": "Previous run reached1208.95 measured seconds but post-check used an invalid CSS hidden selector. Replaced with regular locator.wait_for(state=hidden); full warmup plus1200-second minimum and every resource/identity/context assertion executed again. Failed attempts retained."}

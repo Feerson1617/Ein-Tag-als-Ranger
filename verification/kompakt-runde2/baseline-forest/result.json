@@ -1,0 +1,148 @@
+{
+  "passed": true,
+  "htmlSHA256": "8c0b4b11bbee1b2da81a1eee9290d18940a215c2a0d67fd4f35d88edf56c7234",
+  "scope": "Fresh actual standalone renders at five public fixed comparison cameras; ordinary W walking assessed separately, not falsely paired. Visual judgement separate from model counts and open anatomical/device acceptance.",
+  "viewport": {
+    "width": 1200,
+    "height": 750
+  },
+  "captures": [
+    {
+      "file": "start.png",
+      "sha256": "40414f019e339edaa55dc6294b6f22d295bb8b98658743307602225b42313d54",
+      "observer": {
+        "x": -52,
+        "z": 8,
+        "yaw": 0.9505468408120752,
+        "pitch": -0.1076920413878842
+      },
+      "modelTime": 0.132,
+      "runId": "430afa3a-32e9-4839-9099-7c43f9b65295",
+      "triangles": "913567",
+      "drawCalls": "36",
+      "pairedFixedCamera": true
+    },
+    {
+      "file": "woodruff.png",
+      "sha256": "1444fe58d90ec920339c4656a3103e5a36c58c17a88e57bbf3884ea89701b892",
+      "observer": {
+        "x": -54.32327704373523,
+        "z": 8.043468266353608,
+        "yaw": 0.885066815888611,
+        "pitch": -0.5203797766551117
+      },
+      "modelTime": 0.443,
+      "runId": "430afa3a-32e9-4839-9099-7c43f9b65295",
+      "triangles": "977663",
+      "drawCalls": "35",
+      "pairedFixedCamera": true
+    },
+    {
+      "file": "nettle.png",
+      "sha256": "49a4605ed3e6a9402729ff48fbea3c4ae95c04a308a4564a246a00810ef1accc",
+      "observer": {
+        "x": -40.47863381511998,
+        "z": 14.197259088003703,
+        "yaw": 0.8850668158886108,
+        "pitch": -0.4174609346054198
+      },
+      "modelTime": 0.787,
+      "runId": "430afa3a-32e9-4839-9099-7c43f9b65295",
+      "triangles": "931281",
+      "drawCalls": "62",
+      "pairedFixedCamera": true
+    },
+    {
+      "file": "wood.png",
+      "sha256": "cb042b415e8ea97608228878ffde06bf2dfcbd74e972e88a646269cfe1a63862",
+      "observer": {
+        "x": -60,
+        "z": -4,
+        "yaw": 2.289626326416521,
+        "pitch": -0.46001848475880475
+      },
+      "modelTime": 1.195,
+      "runId": "430afa3a-32e9-4839-9099-7c43f9b65295",
+      "triangles": "829713",
+      "drawCalls": "26",
+      "pairedFixedCamera": true
+    },
+    {
+      "file": "village.png",
+      "sha256": "1d93e1739a9a343537bd85ddb4af74d3fd8345a49025475d039326ef17f99ce2",
+      "observer": {
+        "x": -21,
+        "z": -2,
+        "yaw": -2.3086113869153615,
+        "pitch": -0.0479423390503622
+      },
+      "modelTime": 1.683,
+      "runId": "430afa3a-32e9-4839-9099-7c43f9b65295",
+      "triangles": "578403",
+      "drawCalls": "42",
+      "pairedFixedCamera": true
+    },
+    {
+      "file": "ordinary-walk-1.png",
+      "sha256": "cc704a55e077219a9c37f2cda23bd6c2aaa9f128efd73e5be18a35bf152c068a",
+      "observer": {
+        "x": -52.996139966112516,
+        "z": 7.288471452776823,
+        "yaw": 0.9505468408120752,
+        "pitch": -0.1076920413878842
+      },
+      "modelTime": 2.807,
+      "runId": "430afa3a-32e9-4839-9099-7c43f9b65295",
+      "triangles": "910543",
+      "drawCalls": "35",
+      "pairedFixedCamera": false
+    },
+    {
+      "file": "ordinary-walk-2.png",
+      "sha256": "1a9623b33b2c9e841082e96da761f6d7263a240a1b341d035514789adff9226a",
+      "observer": {
+        "x": -54.30891990054102,
+        "z": 6.350771499613669,
+        "yaw": 0.9505468408120752,
+        "pitch": -0.1076920413878842
+      },
+      "modelTime": 3.815,
+      "runId": "430afa3a-32e9-4839-9099-7c43f9b65295",
+      "triangles": "965087",
+      "drawCalls": "34",
+      "pairedFixedCamera": false
+    },
+    {
+      "file": "ordinary-walk-3.png",
+      "sha256": "c8e18e510663aaec43d0b831d92aaf0602aa54dee97c9a6187a1708085a59e1b",
+      "observer": {
+        "x": -55.62169983496952,
+        "z": 5.413071546450521,
+        "yaw": 0.9505468408120752,
+        "pitch": -0.1076920413878842
+      },
+      "modelTime": 4.823,
+      "runId": "430afa3a-32e9-4839-9099-7c43f9b65295",
+      "triangles": "965375",
+      "drawCalls": "34",
+      "pairedFixedCamera": false
+    }
+  ],
+  "errors": [],
+  "walk": {
+    "before": {
+      "x": -52,
+      "z": 8,
+      "yaw": 0.9505468408120752,
+      "pitch": -0.1076920413878842
+    },
+    "after": {
+      "x": -55.89719743898128,
+      "z": 5.21628754358499,
+      "yaw": 0.9505468408120752,
+      "pitch": -0.1076920413878842
+    },
+    "modelSeconds": 2.9930000000000003,
+    "distanceMetres": 4.789280000000244
+  }
+}

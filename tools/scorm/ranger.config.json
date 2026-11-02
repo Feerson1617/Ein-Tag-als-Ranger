@@ -1,0 +1,11 @@
+{
+  "name": "Ranger Kompakt – Wald und Wattenmeer",
+  "description": "Interaktive Biologie-Unterrichtssimulation",
+  "sourceDir": "../../work/scorm/student",
+  "entry": "index.html",
+  "output": "Ranger-Kompakt-itslearning-SCORM12.zip",
+  "classroomMode": true,
+  "classroomAdapter": "web/storage-adapter.js",
+  "trackingMode": "ranger-session-only",
+  "allowOptionalLiterature": true
+}

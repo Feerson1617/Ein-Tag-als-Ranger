@@ -1,0 +1,5 @@
+{
+  "aborted": true,
+  "reason": "Actual visual review: avocet bill oriented too steeply during sweeping. Split neck and head joints required; model contact test alone was insufficient.",
+  "testScope": "Actual UI episode-bound captures; not final visual acceptance"
+}

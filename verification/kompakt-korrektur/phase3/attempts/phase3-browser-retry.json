@@ -1,0 +1,145 @@
+{
+  "passed": false,
+  "checks": [],
+  "captures": [
+    {
+      "file": "start.png",
+      "observer": {
+        "x": -52,
+        "z": 8,
+        "yaw": 0.9505468408120752,
+        "pitch": -0.1076920413878842
+      },
+      "simulationTime": "0.572",
+      "triangles": "972703",
+      "frameMs": "1383.3"
+    },
+    {
+      "file": "woodruff.png",
+      "observer": {
+        "x": -54.32327704373523,
+        "z": 8.043468266353608,
+        "yaw": 0.885066815888611,
+        "pitch": -0.5203797766551117
+      },
+      "simulationTime": "0.978",
+      "triangles": "976827",
+      "frameMs": "1133.3"
+    },
+    {
+      "file": "nettle.png",
+      "observer": {
+        "x": -40.47863381511998,
+        "z": 14.197259088003703,
+        "yaw": 0.8850668158886108,
+        "pitch": -0.4174609346054198
+      },
+      "simulationTime": "1.515",
+      "triangles": "1061029",
+      "frameMs": "2016.5"
+    },
+    {
+      "file": "wood.png",
+      "observer": {
+        "x": -60,
+        "z": -4,
+        "yaw": 2.289626326416521,
+        "pitch": -0.46001848475880475
+      },
+      "simulationTime": "1.873",
+      "triangles": "883861",
+      "frameMs": "900.0"
+    },
+    {
+      "file": "village.png",
+      "observer": {
+        "x": -21,
+        "z": -2,
+        "yaw": -2.3086113869153615,
+        "pitch": -0.0479423390503622
+      },
+      "simulationTime": "2.378",
+      "triangles": "842719",
+      "frameMs": "1433.2"
+    },
+    {
+      "file": "ramp.png",
+      "observer": {
+        "x": 3,
+        "z": 16,
+        "yaw": -0.4124104415973873,
+        "pitch": -0.030734981675460425
+      },
+      "simulationTime": "2.852",
+      "triangles": "399895",
+      "frameMs": "1433.3"
+    },
+    {
+      "file": "salt-shrub.png",
+      "observer": {
+        "x": 39.91028266683612,
+        "z": 12.630672007805904,
+        "yaw": 0.8850668158886108,
+        "pitch": -0.3944189384613657
+      },
+      "simulationTime": "3.455",
+      "triangles": "1038017",
+      "frameMs": "1933.2"
+    }
+  ],
+  "errors": [],
+  "scope": "Own reconstruction, baseline cameras from own eece965 captures; original review camera data unavailable. Actual standalone WebGL, no physical iPad check.",
+  "htmlSHA256": "fb116ccd56f3b77755e0b7c8b2a053ec33c4110c601f170f046f36d4770e460f",
+  "runtimeSourceHashes": {
+    "assets/boardwalk-wood.webp": "4d06022133e3772534374671fb73a4509ed109e1db6ca06a2d62a8c99c47ac6d",
+    "assets/compact-roe-deer.glb": "a89400df66033eb5eaa7f9bf13ccefaacfb866ab24e4576574d11965354ee619",
+    "assets/sky-panorama.webp": "46c360b491b11269d280e73ec0e71869afdfd62fb543b4250713234374a2f71d",
+    "assets/terrain-atlas.webp": "d637324d3ace6ef8e2c549e7f0a513efd1a4c06aab927f0ed1565bf77b2ced02",
+    "assets/wildlife-fox.glb": "61a4d1b845aa406928a327648417ae1c3982510b9c4e8ce33b7c494fbc98a22f",
+    "compact/catalog.js": "6b693d4c6a0f6b880b9ff99295826f3968e61ba96f52606997a1635ddf1fe39f",
+    "compact/coastal-behaviour.js": "39b1dcb8691cd48850321c4c734eabf0b2875b91a8cd09dcd7b571758b0f0927",
+    "compact/coastal-rig.js": "92a0270abdbf3aee7467e466cf344b08b8ef8bf5af4d903d3c672f9bcd4e2513",
+    "compact/determination.js": "25f8ce960dba09ebeeb4470530d38608809bf98aa91d3575716b6ff835145c6f",
+    "compact/ecology.js": "e50f25a3146e79671472e7a5e6ed1d78f007564515bf9a78bb67fac9695ef8e0",
+    "compact/evidence.js": "1fb480ca90cebdba0b3178cc5ccbb121528826552ec32230b1c3245e808aa84f",
+    "compact/expanded-view.js": "b6201ad45f5a675fdf0d1092811fd8621c644ed9732e46fef51eb48e22ddb963",
+    "compact/fauna-view.js": "985a83582ff0ffac0e8d6ef20e2edc80a09b66e88f3768dd404f746507820feb",
+    "compact/geometry.js": "a6f52cd0fc8f75db3d102d7d6f6f7ec3acbeaf65123f95710f9aa502399c4e26",
+    "compact/habitats.js": "48b8e356e4729c3e28505ab77014487444070f1af67f1798b827b426b5e4bbde",
+    "compact/inspection.js": "961c8c13e8e8e58595460fa40ed7bed0668367b120081dd95961a78ca87300ea",
+    "compact/journal.js": "a3acaef22c20529012509690d456d59f2739242eea1c58d38ba43aae410bb34f",
+    "compact/layout.js": "b5b5ef867a3fda5cc690a9668a0cd082c7369049141b6c2c5e2d68997ce19d74",
+    "compact/learning-documents.js": "f02e0316bc3b8173bfd0380e3e7b803d13dd22a47fb946dc08e0ce9927f6be0c",
+    "compact/learning-models.js": "e58605a045c82f544703a130b87849c271a23e6ce5c45a48a1d7a83cd301e202",
+    "compact/learning-ui.js": "7c6452a2b996081c17e801a455cc6680d2c9de6c089b8ce614a60f822a2e7d11",
+    "compact/main.js": "ae9bcb5e0ee270cb002871c80147dba6d92d8b41444b2b4350107dbe8df30788",
+    "compact/management.js": "e6d38fbfc2c7e131d60ca3e38a1c740ca9ba5c49628fd3ba51ca94242d2d75a3",
+    "compact/manifest.js": "ac0ad3defa37ae7ef99361f8fc177ba4d0b2afed566aabcdaf3eca2c1db63434",
+    "compact/materials.js": "a28bb5a761656249272a1c42968f61779046c6c03389bd19a007f5da33a41910",
+    "compact/missions.js": "55677975084e5dd4cc674ce0890305d0c3909fd82dce2241ec2b9526bd3147ee",
+    "compact/observation-schema.js": "2f0467f9693eca83c3a5a678128d86a5956de2b74df79a342b4875454569e12c",
+    "compact/organism-models.js": "7cf080fb497a17d58ce4d1672ffc5cef12b7f2c033a336384e4aead7dfc27cb6",
+    "compact/path-mesh.js": "7a41ebc390aeca96cffd1e4fcee19f3b76310413fcee3489d1533ebd599a4c82",
+    "compact/style.css": "fa3e0391ced503e62691704482dfcd500f73e81aa43c0abb9559c0e7491b378b",
+    "compact/task-schema.js": "4ce4ca8e8f6c27182b3abe36d90d956fcbc6526d240911dbc996c53b670fc418",
+    "compact/taxa.js": "97cd6f5bad16208408512be876ebf63d5f9ee400dd31f94a61c8ca08e4e24fd3",
+    "compact/vegetation-view.js": "7e6f703c9a930a86dd2c9b202a79bf7842f4d1f41bf9a2a27d3ef24b3b22e47a",
+    "compact/village-view.js": "15d1902cbb96678503051ba0b11494d0ceea412dbc193f18bf16b0bfe9d91b03",
+    "compact/village.js": "05acf2a5ff040e4de2aaf2c3ebc3ee88daaf2edc75d12e80d49a5f54a60a3aec",
+    "compact/visibility.js": "50d59d44257e9d18547bfaec9277366d3339177c6ebce37d948b48c9940a86f1",
+    "compact/world-state.js": "360197f8bd8ab54c595386b66f2e676499630bc6ca896856034fba4910d9fd7f",
+    "compact/world-view.js": "657928a522ea7fddb23c130f156eceb99f890123f1057d015f2506b465e31b47",
+    "field-guide.js": "72126f4e4560fceb95e64fbd35799de0dafefaf65683625f76a5d949d05cbe07",
+    "icon.svg": "cb8cda889f99e56d13d18e09929837b7c3630d3f9ff3219316d12d3077fc0869",
+    "kompakt.html": "210d013010327c0ee7db76c61b67d7a05560404056c0569f7361cfa064d8019d",
+    "observation-clock.js": "2304e6c425192967f87841caa5072873cb5dd5c7f69c38fb45b237fd22f98b03",
+    "ranger-controls.js": "081497a5f6754ecd441e61ee55805da99b5121e96215cfa900209e00e41e5eda",
+    "station-protocol.js": "2590df7d9de4c8f4afda8fcafd619d565440c2dc7e1bb6ef4574aeadf803ae57",
+    "vendor/three.core.js": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20",
+    "vendor/three.module.js": "2884e2e6f26feaec0b454fcdc1e98c27d6433ba15253e5a3e22e111df81686fa",
+    "wildlife-glb.js": "32f8f947dd002ba7b571ee627e6291fa40a951fccdd9dee644661f19de487c35"
+  },
+  "browser": "154.0.8037.57",
+  "failure": "salt-shrub",
+  "traceback": "Traceback (most recent call last):\n  File \"/workspace/Ein-Tag-als-Ranger/tools/browser-compact-habitats.py\", line 31, in <module>\n    shot(page,id);assert all(abs(old['observer'][k]-r['captures'][-1]['observer'][k])<1e-5 for k in ['x','z','yaw','pitch']),id\n                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: salt-shrub\n"
+}

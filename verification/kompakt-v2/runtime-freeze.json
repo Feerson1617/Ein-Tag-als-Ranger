@@ -1,0 +1,5 @@
+{
+  "sourceCommit": "5be5e9b8f7394613279f5a2834741a0abf33b570",
+  "runtimeFreezeAt": "2026-10-22T07:09:06.028384+00:00",
+  "note": "Final full validation restarted after the actual acorn-to-bill contact correction. No further app changes planned; later documentation/tool commits must preserve every runtime source hash."
+}

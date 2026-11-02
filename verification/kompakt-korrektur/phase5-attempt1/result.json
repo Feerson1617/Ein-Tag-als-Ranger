@@ -1,0 +1,99 @@
+{
+  "sourceCommit": "e2ca57e2cba4e35f92dfaf19cfb9b0ab8bd96eb1",
+  "checks": [
+    {
+      "name": "source",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-source.py"
+      ],
+      "exitCode": 0,
+      "passed": true,
+      "seconds": 93.99,
+      "log": "source.log"
+    },
+    {
+      "name": "reference",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact.py"
+      ],
+      "exitCode": 0,
+      "passed": true,
+      "seconds": 755.01,
+      "log": "reference.log"
+    },
+    {
+      "name": "standalone-smoke",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact.py",
+        "--site",
+        "outputs",
+        "--entry",
+        "Ranger-Kompakt.html",
+        "--smoke"
+      ],
+      "exitCode": 0,
+      "passed": true,
+      "seconds": 272.56,
+      "log": "standalone-smoke.log"
+    },
+    {
+      "name": "learning-web",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-learning.py",
+        "--gallery"
+      ],
+      "exitCode": 1,
+      "passed": false,
+      "seconds": 261.01,
+      "log": "learning-web.log"
+    },
+    {
+      "name": "learning-standalone",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-learning.py",
+        "--site",
+        "outputs",
+        "--entry",
+        "Ranger-Kompakt.html",
+        "--output",
+        "work/compact-learning-standalone"
+      ],
+      "exitCode": 0,
+      "passed": true,
+      "seconds": 400.74,
+      "log": "learning-standalone.log"
+    },
+    {
+      "name": "imports",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-imports.py",
+        "--output",
+        "work/qa-correction/final-imports"
+      ],
+      "exitCode": 0,
+      "passed": true,
+      "seconds": 89.7,
+      "log": "imports.log"
+    },
+    {
+      "name": "feeding",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-feeding.py",
+        "--output",
+        "work/qa-correction/final-feeding"
+      ],
+      "exitCode": 1,
+      "passed": false,
+      "seconds": 50.7,
+      "log": "feeding.log"
+    }
+  ],
+  "complete": false
+}

@@ -1,0 +1,75 @@
+{
+  "date": "2026-10-22",
+  "scope": "Own factual extractions/paraphrases; complete URL and exact teaching source locations in dist/compact/lesson-resources.js; original source files remain research-only.",
+  "readSources": [
+    {
+      "localResearchFile": "galium-ecology.html",
+      "bytes": 20653,
+      "sha256": "c134e0ef8862824eca51cf704043afa4f4047adcaf0745794baf1404b51a5261",
+      "read": true,
+      "redistributedFullText": false
+    },
+    {
+      "localResearchFile": "urtica-ecology.html",
+      "bytes": 25942,
+      "sha256": "030162f390d162aad4e5ba9d561c1355a5b503f63319c1771f4119f03b6dd6d0",
+      "read": true,
+      "redistributedFullText": false
+    },
+    {
+      "localResearchFile": "halimione-ecology.html",
+      "bytes": 20035,
+      "sha256": "f4b1cdeb3f7ec052307e669f5a33b741000566e2574180433cb6dae55599d31d",
+      "read": true,
+      "redistributedFullText": false
+    },
+    {
+      "localResearchFile": "hornbill-teaching.xml",
+      "bytes": 36875,
+      "sha256": "fbfbb240e34721a104482c5fcaaa2ef9f0bdaf0c0f6d2b573c3b6daf7217be90",
+      "read": true,
+      "redistributedFullText": false
+    },
+    {
+      "localResearchFile": "biology2e-m66531.txt",
+      "bytes": 25811,
+      "sha256": "7de787ff2c670cae50df3c9888021eb85f00c2c9b413ef00b2d1aa3072ebf3ca",
+      "read": true,
+      "redistributedFullText": false
+    },
+    {
+      "localResearchFile": "openstax-m66419.xml",
+      "bytes": 30470,
+      "sha256": "f5cb4e21d65c57de683d392e5b4e26992eb9c84840268197208ae9278dd293b6",
+      "read": true,
+      "redistributedFullText": false
+    },
+    {
+      "localResearchFile": "openstax-m66705.xml",
+      "bytes": 48996,
+      "sha256": "9b4ac51f7aec2853475b3ce1ee90a9e19698e911fadf18c0b6075fd65580dadf",
+      "read": true,
+      "redistributedFullText": false
+    },
+    {
+      "localResearchFile": "primary-Biol_Open_2013_Mar_19_2(5)_466-471.txt",
+      "bytes": 36935,
+      "sha256": "4f8b7d698482f7ca188e69595cbd0410ca7523647fced017e0787d53840db1a5",
+      "read": true,
+      "redistributedFullText": false
+    },
+    {
+      "localResearchFile": "nfa2019.csv",
+      "bytes": 7364184,
+      "sha256": "511fdc382e910f2dfe23ad8d53a20498832e2923a4fc5f88f2b707272013ad6c",
+      "read": true,
+      "redistributedFullText": false
+    }
+  ],
+  "blocked": [
+    "Kidd DOI/PubMed full text: access/identity block",
+    "GFN methods website: proxy 403",
+    "Nationalpark-Wattenmeer source website: proxy 403"
+  ],
+  "notClaimed": "No original independent QA archive, primary Rainey full text, school PDFs or current GFN factors read."
+}

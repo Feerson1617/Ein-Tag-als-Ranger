@@ -1,0 +1,29 @@
+{
+  "kind": "exponential-logistic",
+  "source": "theoretical-model",
+  "units": {
+    "t": "days",
+    "N": "model individuals",
+    "rate": "per day",
+    "capacity": "model individuals"
+  },
+  "parameters": {
+    "initial": 0,
+    "rate": 0,
+    "capacity": 100,
+    "days": 1
+  },
+  "rows": [
+    {
+      "t": 0,
+      "exponential": 0,
+      "logistic": 0
+    },
+    {
+      "t": 1,
+      "exponential": 0,
+      "logistic": 0
+    }
+  ],
+  "assumptions": "Geschlossene, homogene Population ohne Zu- oder Abwanderung; r und K konstant. Ohne Anfangsbestand bleibt N = 0. Theoretisches Modell, keine Vorhersage für die dargestellten Tiere."
+}

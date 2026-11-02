@@ -1,0 +1,357 @@
+{
+  "entry": "Ranger-Kompakt.html",
+  "scope": "Rendered DOM plus actual WebGL boot of standalone HTML; imports/storage corruption are explicitly labelled fixtures, not newly earned mission evidence",
+  "baselineFixtureProvenance": "Preserved historical own reconstructions and now available exact independently supplied original fixtures, explicitly named separately; imported work is not newly earned evidence",
+  "fileReadLatencyFixtureMs": 250,
+  "responseWait": "Fresh preview DOM mutation, not stale text or an arbitrary sleep",
+  "checks": [
+    {
+      "name": "valid older v2 imports through file input; K1-K5 actually render",
+      "passed": true
+    },
+    {
+      "name": "repro-invalid-top-level-features.json",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Ungültige Antwortauswahl: K1.features."
+    },
+    {
+      "name": "repro-impossible-coordinates.json",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Unbekannte Beobachtungsmethode."
+    },
+    {
+      "name": "independent-original-repro-invalid-top-level-features.json",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Ungültige Antwortauswahl: K1.features."
+    },
+    {
+      "name": "independent-original-repro-impossible-coordinates.json",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Unbekannte Beobachtungsmethode."
+    },
+    {
+      "name": "independent-original-conflicting-same-run-events",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Widersprüchliche Kopien desselben Modellereignisses im selben Rundgang. Originaldatei bewahren und die Ereignisbelege prüfen."
+    },
+    {
+      "name": "K1-features",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Ungültige Antwortauswahl: K1.features."
+    },
+    {
+      "name": "K1-recordId",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Ungültige Aufgabenauswahl: K1.recordId."
+    },
+    {
+      "name": "K1-choice",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Ungültige Aufgabenauswahl: K1.choice."
+    },
+    {
+      "name": "K1-limit",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Ungültige Aufgabenauswahl: K1.limit."
+    },
+    {
+      "name": "K1-determinations-not-array",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Ungültige Bestimmungsantwort."
+    },
+    {
+      "name": "K1-determinations-null-item",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Ungültige Bestimmungsantwort."
+    },
+    {
+      "name": "K1-determinations-nested-features",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Ungültige Antwortauswahl: Bestimmungsantwort.features."
+    },
+    {
+      "name": "K2-experimentTide",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Ungültige Aufgabenauswahl: K2.experimentTide."
+    },
+    {
+      "name": "isolated-window-0",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Unbekanntes Beobachtungsfenster."
+    },
+    {
+      "name": "isolated-window-false",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Unbekanntes Beobachtungsfenster."
+    },
+    {
+      "name": "isolated-window-\"\"",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Unbekanntes Beobachtungsfenster."
+    },
+    {
+      "name": "isolated-window-null",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Unbekanntes Beobachtungsfenster."
+    },
+    {
+      "name": "isolated-window-\"toString\"",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Unbekanntes Beobachtungsfenster."
+    },
+    {
+      "name": "isolated-window-\"constructor\"",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Unbekanntes Beobachtungsfenster."
+    },
+    {
+      "name": "outside-world",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Beobachtungsort liegt außerhalb der Modellwelt."
+    },
+    {
+      "name": "unknown-method",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Unbekannte Beobachtungsmethode."
+    },
+    {
+      "name": "unknown-individual",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Individuen-ID und Taxon passen nicht zur gespeicherten Modellwelt."
+    },
+    {
+      "name": "wrong-site",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Zone, Standort und Koordinaten widersprechen sich."
+    },
+    {
+      "name": "empty-run",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Ungültiger Kompakt-Beleg."
+    },
+    {
+      "name": "negative-model-time",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Ungültiger Kompakt-Beleg."
+    },
+    {
+      "name": "fixed-plant-shifted-one-metre",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Ortsfeste Individuen-ID und gespeicherter Standort passen nicht zusammen."
+    },
+    {
+      "name": "invalid-json",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Expected property name or '}' in JSON at position 1 (line 1 column 2)"
+    },
+    {
+      "name": "null-top-level",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Cannot read properties of null (reading 'worldVersion')"
+    },
+    {
+      "name": "array-top-level",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Unbekanntes Altfeldbuch."
+    },
+    {
+      "name": "overlapping-protocol",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Überlappende Protokollfenster."
+    },
+    {
+      "name": "wrong-sample-area",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Widersprüchliche Flächenprobe."
+    },
+    {
+      "name": "invented-experiment-yield",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Manipuliertes oder widersprüchliches Konkurrenzmodell."
+    },
+    {
+      "name": "sceneOrigin-own-run",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Widersprüchliche Herkunft des neuen Beobachtungsfensters."
+    },
+    {
+      "name": "sceneOrigin-wrong-location",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Widersprüchliche Herkunft des neuen Beobachtungsfensters."
+    },
+    {
+      "name": "sceneOrigin-unknown-site",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Widersprüchliche Herkunft des neuen Beobachtungsfensters."
+    },
+    {
+      "name": "sceneOrigin-backward-parent-time",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Das neue Beobachtungsfenster widerspricht dem vorherigen Rundgang."
+    },
+    {
+      "name": "sceneOrigin-missing-origin-in-run",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Widersprüchlicher Szenenkontext im selben Rundgang."
+    },
+    {
+      "name": "sceneOrigin-changed-origin-in-run",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Widersprüchlicher Szenenkontext im selben Rundgang."
+    },
+    {
+      "name": "sceneOrigin-cyclic-origin",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Zyklische Rundgangherkunft."
+    },
+    {
+      "name": "sceneOrigin-nonzero-start",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Widersprüchliche Herkunft des neuen Beobachtungsfensters."
+    },
+    {
+      "name": "sceneOrigin-reused-run-id",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Widersprüchliche Herkunft des neuen Beobachtungsfensters."
+    },
+    {
+      "name": "sceneOrigin-null-origin",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Unvollständige Herkunft des neuen Beobachtungsfensters."
+    },
+    {
+      "name": "sceneOrigin-extra-origin-field",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Unvollständige Herkunft des neuen Beobachtungsfensters."
+    },
+    {
+      "name": "exact independently supplied revision-3 earned fieldbook imports unchanged and K1-K5 render",
+      "passed": true,
+      "originalSHA256": "17ebf89a77079b23913b3388987cfacdda155424938e2950ac31673c1b808fd8",
+      "scope": "Imported original external evidence, not newly earned observations"
+    },
+    {
+      "name": "labelled old and explicit local-context records survive native UI import/export/roundtrip with provenance and notes intact",
+      "passed": true,
+      "fixtureNotEarnedEvidence": true,
+      "export": "valid-local-context-fixture-export.json",
+      "sha256": "1f41c991fbc262fe30b76457c96ff4e3ce0930208f0e69d54ddf5cf5dc7f69a5"
+    },
+    {
+      "name": "legacy event reference single imports and renders without silent reassignment",
+      "passed": true,
+      "fixtureNotEarnedEvidence": true,
+      "fixture": "labelled-legacy-event-single.json",
+      "fixtureSHA256": "1ad692535ffe5ce4230779fb714bda301e7db69011419f2fdebbb1e4b442a7b8",
+      "oldStorageByteIdenticalOnOpen": true,
+      "onlyIntendedOpenChange": null,
+      "importedRecordsAnswersDraftsUnchanged": true,
+      "automaticK2Complete": true,
+      "export": "legacy-event-single-export.json",
+      "exportSHA256": "2bea0873d408e047109b360cc37f358c159e40d1316ec9d18f05e85fb42e4957"
+    },
+    {
+      "name": "legacy event reference repeated imports and renders without silent reassignment",
+      "passed": true,
+      "fixtureNotEarnedEvidence": true,
+      "fixture": "labelled-legacy-event-repeated.json",
+      "fixtureSHA256": "c71e69157eb9f9430c920c0ef48ad3b1349ae5aeaf6ddd69d3a45119dea564d3",
+      "oldStorageByteIdenticalOnOpen": true,
+      "onlyIntendedOpenChange": null,
+      "importedRecordsAnswersDraftsUnchanged": true,
+      "automaticK2Complete": true,
+      "export": "legacy-event-repeated-export.json",
+      "exportSHA256": "ab0f634fc6d2c9274b9d2ae38549f4b273573c72129108a972250ff60fda2676"
+    },
+    {
+      "name": "legacy event reference ambiguous imports and renders without silent reassignment",
+      "passed": true,
+      "fixtureNotEarnedEvidence": true,
+      "fixture": "labelled-legacy-event-ambiguous.json",
+      "fixtureSHA256": "6bcd408fc4162e7a9ee81f2f967efcbedbd168fa8eaf07f5b1faaddd788abbb2",
+      "oldStorageByteIdenticalOnOpen": true,
+      "onlyIntendedOpenChange": null,
+      "importedRecordsAnswersDraftsUnchanged": true,
+      "automaticK2Complete": false,
+      "explicitReselectionCompleted": true,
+      "qualifiedReference": "[\"record-event-v1\",\"qa-new-event-note\",\"ranger-compact-v2:summer:7\"]",
+      "screenshots": [
+        "legacy-ambiguous-selection.png",
+        "legacy-ambiguous-qualified-selection.png"
+      ],
+      "export": "legacy-event-ambiguous-export.json",
+      "exportSHA256": "4831ffc20b0265390ce4811d2effc00b558c3c187447ccf86c5196055fd741fa"
+    },
+    {
+      "name": "legacy event reference independent-original-ambiguous imports and renders without silent reassignment",
+      "passed": true,
+      "fixtureNotEarnedEvidence": true,
+      "fixture": "labelled-legacy-event-independent-original-ambiguous.json",
+      "fixtureSHA256": "fa15f8b2d03a0bd907f9a86695345c72e45f334cb186988c078a72d45ab27e17",
+      "oldStorageByteIdenticalOnOpen": false,
+      "onlyIntendedOpenChange": "activeMission selected explicitly",
+      "importedRecordsAnswersDraftsUnchanged": true,
+      "automaticK2Complete": false,
+      "explicitReselectionCompleted": true,
+      "qualifiedReference": "[\"record-event-v1\",\"audit-new\",\"ranger-compact-v2:summer:9\"]",
+      "screenshots": [
+        "legacy-independent-original-ambiguous-selection.png",
+        "legacy-independent-original-ambiguous-qualified-selection.png"
+      ],
+      "export": "legacy-event-independent-original-ambiguous-export.json",
+      "exportSHA256": "cffdc100121a299dbfe91c1bd63b41177716152483a6bd5d2b1e736789856dc7"
+    },
+    {
+      "name": "explicit UI recovery and original download preserve all valid observations through reload",
+      "passed": true,
+      "originalBytes": 14910
+    }
+  ],
+  "errors": [],
+  "passed": true,
+  "htmlSHA256": "3748c6590afefb18a5e07bb3cedc2c40b0b2be1619a57cc52553a30de5869412",
+  "completedAt": "2026-10-25T04:49:09Z"
+}

@@ -1,0 +1,3 @@
+Waiting for separate M3 profile to complete; no concurrent heavy browser.
+START fresh original800x500 standalone smoke 19:20:44
+{"name": "legacy-standalone", "command": ["/workspace/.ranger-clean-venv/bin/python", "tools/browser-check.py", "--smoke", "--width", "800", "--height", "500", "--site", "outputs", "--entry", "Feldbuch.html"], "exitCode": 0, "passed": true, "seconds": 267.77, "log": "legacy-single-recheck.log", "reason": "Original profile800x500; only pointer path after deferred photograph corrected with explicit scrolling, physical hit test and closed-dialog assertion. All original assertions/time limits retained."}

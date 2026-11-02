@@ -1,0 +1,19 @@
+CAPTURE compact-avocet initial 0.571
+CAPTURE compact-avocet approaching 29.322
+CAPTURE compact-avocet searching 30.072
+CAPTURE compact-avocet handling 30.822
+CAPTURE compact-avocet swallowing 31.572
+CAPTURE compact-avocet departing 32.572
+CAPTURE compact-avocet after-departure 33.822
+PASS avocet
+CAPTURE compact-redshank initial 0.555
+CAPTURE compact-redshank approaching 21.055
+CAPTURE compact-redshank searching 21.305
+CAPTURE compact-redshank handling 22.055
+CAPTURE compact-redshank swallowing 22.805
+CAPTURE compact-redshank departing 23.805
+Traceback (most recent call last):
+  File "/workspace/Ein-Tag-als-Ranger/tools/browser-compact-feeding.py", line 38, in <module>
+    assert ((s['actor']['x']-event['bodyPosition']['x'])**2+(s['actor']['z']-event['bodyPosition']['z'])**2)**.5>=.40,'No actual departure from acquired prey'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: No actual departure from acquired prey

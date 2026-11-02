@@ -1,0 +1,1 @@
+{"focus":"individuals/habitat/occlusion/pause","discovery":"preserved","investigation":"separate, contemporaneous, no automatic interpretation","resources":"pollen differs from nectar","localCompletion":"1 of 196 suffices; collection remains optional"}

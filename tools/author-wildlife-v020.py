@@ -2,7 +2,7 @@
 Coordinates in the authoring contract: +X muzzle, +Y up, +Z left.
 Blender receives (x,-z,y); glTF export restores the contract.
 """
-import bpy, math, json, hashlib, sys
+import bpy, math, json, hashlib, sys, struct
 from pathlib import Path
 from mathutils import Vector
 
@@ -32,7 +32,8 @@ class Model:
             self.uvs.append((-1,-1) if eye else (p[0]*1.7+.5,p[1]*1.9+abs(p[2])*.23))
         self.faces.extend(tuple(offset+i for i in f.vertices) for f in mesh.polygons)
     def ellipsoid(self,p,scale,color,part=0,pivot=(0,0,0),joint=(0,0,0),knee=0,coat=None,eye=False):
-        bpy.ops.mesh.primitive_uv_sphere_add(segments=16,ring_count=10,location=xyz(p));o=bpy.context.object;o.scale=(scale[0],scale[2],scale[1]);bpy.ops.object.transform_apply(location=True,rotation=True,scale=True)
+        segments,rings=getattr(self,'small_surface_detail',(16,10))
+        bpy.ops.mesh.primitive_uv_sphere_add(segments=segments,ring_count=rings,location=xyz(p));o=bpy.context.object;o.scale=(scale[0],scale[2],scale[1]);bpy.ops.object.transform_apply(location=True,rotation=True,scale=True)
         self.add(o.data,color,part,pivot,joint,knee,coat=coat,eye=eye);bpy.data.objects.remove(o,do_unlink=True)
     def tube(self,points,radii,color,part=0,pivot=(0,0,0),joint=(0,0,0),knee=0,segments=12,coat=None,horizontal=False):
         vertices=[];faces=[]
@@ -84,7 +85,12 @@ class Model:
         # Each segment has a rigid leg role; continuous neck vertices have a blended head weight.
         for name,values in [('_RIGDATA',[(p,*scaled(q[1:])) for q in self.rigs for p in [q[0]]]),('_RIGJOINT',[(*scaled(q[:3]),q[3]) for q in self.joints])]:
             attr=mesh.attributes.new(name=name,type='FLOAT_COLOR',domain='POINT')
-            for data,val in zip(attr.data,values):data.color=val
+            # Blender's colour attribute route clamps negative channels. Carry
+            # signed rig coordinates as positive transport values, then decode
+            # the exported float accessors. Runtime format stays unchanged.
+            offset=getattr(self,'rig_coordinate_offset',0)
+            channels=range(1,4) if name=='_RIGDATA' else range(3)
+            for data,val in zip(attr.data,values):data.color=tuple(v+(offset if k in channels else 0) for k,v in enumerate(val))
         color=mesh.color_attributes.new(name='Coat',type='FLOAT_COLOR',domain='POINT')
         for data,c in zip(color.data,self.colors):data.color=(*c,1)
         mesh.color_attributes.active_color=color;mesh.color_attributes.render_color_index=mesh.color_attributes.find('Coat')
@@ -99,6 +105,16 @@ class Model:
         obj['legFeet']=json.dumps({p:scaled(v) for p,v in self.feet.items()})
         bpy.ops.wm.save_as_mainfile(filepath=str(OUT/(self.name+'.blend')))
         path=OUT/(self.name+'.glb');bpy.ops.export_scene.gltf(filepath=str(path),export_format='GLB',use_selection=True,export_attributes=True,export_extras=True,export_animations=False,export_apply=False,export_yup=True)
+        if getattr(self,'rig_coordinate_offset',0):
+            raw=bytearray(path.read_bytes());json_length=struct.unpack_from('<I',raw,12)[0];doc=json.loads(raw[20:20+json_length]);binary=28+json_length
+            for semantic,channels in [('_RIGDATA',range(1,4)),('_RIGJOINT',range(3))]:
+                acc=doc['accessors'][doc['meshes'][0]['primitives'][0]['attributes'][semantic]];view=doc['bufferViews'][acc['bufferView']]
+                assert acc['componentType']==5126 and acc['type']=='VEC4'
+                start=binary+view.get('byteOffset',0)+acc.get('byteOffset',0);stride=view.get('byteStride',16)
+                for i in range(acc['count']):
+                    for k in channels:
+                        at=start+i*stride+k*4;value=struct.unpack_from('<f',raw,at)[0]-self.rig_coordinate_offset;struct.pack_into('<f',raw,at,value)
+            path.write_bytes(raw)
         stats={'species':self.name,'lengthMeters':SIZES[self.name],'triangles':len(obj.data.polygons),'bytes':path.stat().st_size,'sha256':hashlib.sha256(path.read_bytes()).hexdigest(),'legFeet':{p:scaled(v) for p,v in self.feet.items()},'source':'author-wildlife-v020.py','license':'CC0-1.0'}
         (OUT/(self.name+'.json')).write_text(json.dumps(stats,indent=2));print(json.dumps(stats),flush=True)
 
@@ -166,7 +182,8 @@ def mammal(name):
                 for j in range(5):m.tube([(nose[0]-.03,nose[1]-.018,side*.035),(nose[0]-.045-j*.006,nose[1]-.02+(j-2)*.009,side*(.10+j*.012))],[.0006,.00018],'#cfcbb8',6,headPivot,headPivot,1,segments=4)
     m.finish()
 
-names=sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else list(SIZES)
-for name in names:
-    if name not in SIZES:raise ValueError('Unknown species: '+name)
-    mammal(name)
+if __name__=='__main__':
+    names=sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else list(SIZES)
+    for name in names:
+        if name not in SIZES:raise ValueError('Unknown species: '+name)
+        mammal(name)

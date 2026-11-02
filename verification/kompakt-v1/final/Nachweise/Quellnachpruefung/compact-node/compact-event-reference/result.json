@@ -1,0 +1,281 @@
+{
+  "suite": "compact-event-reference",
+  "scope": "Real model events, journal import/export, K2 grading and HTML generation; no browser or physical-device claim.",
+  "passed": 12,
+  "checks": [
+    "two real same-named events in different contexts remain independently selectable and roundtrip intact",
+    "a same-ID event from a different run cannot silently satisfy the selected K2 case",
+    "duplicate references, legacy aliases and missing containing records are rejected in answers and drafts",
+    "ambiguous legacy answers remain readable and unchanged but cannot select another run implicitly",
+    "ambiguous K2 answers show a provenance warning without preselection or changing stored data",
+    "unambiguous legacy references and repeated copies of one run/event retain their grading",
+    "adding a different same-ID event cannot complete an unchanged wrong legacy answer",
+    "saving a qualified K2 choice removes its warning only after successful persistence without rerendering",
+    "N05 exact independent same-run conflict is rejected and cannot grade via legacy or qualified aliases",
+    "N05 event copies require all payload values and scene context to agree; JSON object key order is irrelevant",
+    "N05 different actual events from one unchanged run remain selectable and importable",
+    "N05 rejected import/add/storage load preserve genuine records, learning and exact original storage bytes"
+  ],
+  "collisions": [
+    {
+      "id": "ranger-compact-v2:summer:7",
+      "oldCase": "bee-clover",
+      "newCase": "bee-clover",
+      "records": [
+        {
+          "id": "old-record",
+          "runId": "prior-run",
+          "simulationTime": 9.99999999999998
+        },
+        {
+          "id": "new-record",
+          "runId": "local-run",
+          "simulationTime": 9.99999999999998,
+          "sceneOrigin": {
+            "kind": "local-observation-window",
+            "previousRunId": "prior-run",
+            "previousSimulationTime": 9.99999999999998,
+            "siteId": "coast",
+            "x": 63,
+            "z": -12,
+            "startSimulationTime": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "ranger-compact-v2:summer:9",
+      "oldCase": "tick-deer",
+      "newCase": "worm-litter",
+      "records": [
+        {
+          "id": "old-record",
+          "runId": "prior-run",
+          "simulationTime": 30
+        },
+        {
+          "id": "new-record",
+          "runId": "local-run",
+          "simulationTime": 30,
+          "sceneOrigin": {
+            "kind": "local-observation-window",
+            "previousRunId": "prior-run",
+            "previousSimulationTime": 30,
+            "siteId": "coast",
+            "x": 63,
+            "z": -12,
+            "startSimulationTime": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "ranger-compact-v2:summer:7",
+      "oldCase": "bee-clover",
+      "newCase": "bee-clover",
+      "records": [
+        {
+          "id": "old-record",
+          "runId": "prior-run",
+          "simulationTime": 9.99999999999998
+        },
+        {
+          "id": "new-record",
+          "runId": "local-run",
+          "simulationTime": 9.99999999999998,
+          "sceneOrigin": {
+            "kind": "local-observation-window",
+            "previousRunId": "prior-run",
+            "previousSimulationTime": 9.99999999999998,
+            "siteId": "coast",
+            "x": 63,
+            "z": -12,
+            "startSimulationTime": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "ranger-compact-v2:summer:7",
+      "oldCase": "bee-clover",
+      "newCase": "bee-clover",
+      "records": [
+        {
+          "id": "old-record",
+          "runId": "prior-run",
+          "simulationTime": 9.99999999999998
+        },
+        {
+          "id": "new-record",
+          "runId": "local-run",
+          "simulationTime": 9.99999999999998,
+          "sceneOrigin": {
+            "kind": "local-observation-window",
+            "previousRunId": "prior-run",
+            "previousSimulationTime": 9.99999999999998,
+            "siteId": "coast",
+            "x": 63,
+            "z": -12,
+            "startSimulationTime": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "ranger-compact-v2:summer:7",
+      "oldCase": "bee-clover",
+      "newCase": "bee-clover",
+      "records": [
+        {
+          "id": "old-record",
+          "runId": "prior-run",
+          "simulationTime": 9.99999999999998
+        },
+        {
+          "id": "new-record",
+          "runId": "local-run",
+          "simulationTime": 9.99999999999998,
+          "sceneOrigin": {
+            "kind": "local-observation-window",
+            "previousRunId": "prior-run",
+            "previousSimulationTime": 9.99999999999998,
+            "siteId": "coast",
+            "x": 63,
+            "z": -12,
+            "startSimulationTime": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "ranger-compact-v2:summer:7",
+      "oldCase": "bee-clover",
+      "newCase": "bee-clover",
+      "records": [
+        {
+          "id": "old-record",
+          "runId": "prior-run",
+          "simulationTime": 9.99999999999998
+        },
+        {
+          "id": "new-record",
+          "runId": "local-run",
+          "simulationTime": 9.99999999999998,
+          "sceneOrigin": {
+            "kind": "local-observation-window",
+            "previousRunId": "prior-run",
+            "previousSimulationTime": 9.99999999999998,
+            "siteId": "coast",
+            "x": 63,
+            "z": -12,
+            "startSimulationTime": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "ranger-compact-v2:summer:9",
+      "oldCase": "tick-deer",
+      "newCase": "worm-litter",
+      "records": [
+        {
+          "id": "old-record",
+          "runId": "prior-run",
+          "simulationTime": 30
+        },
+        {
+          "id": "new-record",
+          "runId": "local-run",
+          "simulationTime": 30,
+          "sceneOrigin": {
+            "kind": "local-observation-window",
+            "previousRunId": "prior-run",
+            "previousSimulationTime": 30,
+            "siteId": "coast",
+            "x": 63,
+            "z": -12,
+            "startSimulationTime": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "ranger-compact-v2:summer:7",
+      "oldCase": "bee-clover",
+      "newCase": "bee-clover",
+      "records": [
+        {
+          "id": "old-record",
+          "runId": "prior-run",
+          "simulationTime": 9.99999999999998
+        },
+        {
+          "id": "new-record",
+          "runId": "local-run",
+          "simulationTime": 9.99999999999998,
+          "sceneOrigin": {
+            "kind": "local-observation-window",
+            "previousRunId": "prior-run",
+            "previousSimulationTime": 9.99999999999998,
+            "siteId": "coast",
+            "x": 63,
+            "z": -12,
+            "startSimulationTime": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "ranger-compact-v2:summer:7",
+      "oldCase": "bee-clover",
+      "newCase": "bee-clover",
+      "records": [
+        {
+          "id": "old-record",
+          "runId": "prior-run",
+          "simulationTime": 9.99999999999998
+        },
+        {
+          "id": "new-record",
+          "runId": "local-run",
+          "simulationTime": 9.99999999999998,
+          "sceneOrigin": {
+            "kind": "local-observation-window",
+            "previousRunId": "prior-run",
+            "previousSimulationTime": 9.99999999999998,
+            "siteId": "coast",
+            "x": 63,
+            "z": -12,
+            "startSimulationTime": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "ranger-compact-v2:summer:9",
+      "oldCase": "tick-deer",
+      "newCase": "worm-litter",
+      "records": [
+        {
+          "id": "old-record",
+          "runId": "prior-run",
+          "simulationTime": 30
+        },
+        {
+          "id": "new-record",
+          "runId": "local-run",
+          "simulationTime": 30,
+          "sceneOrigin": {
+            "kind": "local-observation-window",
+            "previousRunId": "prior-run",
+            "previousSimulationTime": 30,
+            "siteId": "coast",
+            "x": 63,
+            "z": -12,
+            "startSimulationTime": 0
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "species": "capreolus_capreolus",
+  "lengthMeters": 1.12,
+  "triangles": 9668,
+  "bytes": 510816,
+  "sha256": "c751f6e3bb75c99a52e2e3d2fd65f5fd41740f4134db20b3e4add1586243f82c",
+  "legFeet": {
+    "1": [
+      0.38,
+      0.02146000066399574,
+      -0.216
+    ],
+    "2": [
+      0.38,
+      0.02146000066399574,
+      0.216
+    ],
+    "3": [
+      -0.64,
+      0.02146000066399574,
+      -0.216
+    ],
+    "4": [
+      -0.64,
+      0.02146000066399574,
+      0.216
+    ]
+  },
+  "source": "tools/author-compact-mammals.py + tools/author-wildlife-v020.py",
+  "license": "CC0-1.0",
+  "stage": "visual review pending",
+  "dimensionsStatus": "authored, not empirically calibrated"
+}

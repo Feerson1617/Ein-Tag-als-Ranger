@@ -1,0 +1,17 @@
+::debug::Content-Type: application/zip, mimeType: application/zip, urlEndsWithZip: true, isZip: true, skipDecompress: false
+::debug::Content-Disposition: attachment; filename="Ranger-Kompakt-itslearning-SCORM12.zip", fileName: Ranger-Kompakt-itslearning-SCORM12.zip
+SHA256 digest of downloaded artifact is 418b54d01adab7747680a361d1e6683f4a3510299625707b0b382c545eeb5237
+::debug::Content-Type: application/zip, mimeType: application/zip, urlEndsWithZip: true, isZip: true, skipDecompress: true
+::debug::Content-Disposition: attachment; filename="Ranger-Kompakt-itslearning-SCORM12.zip", fileName: Ranger-Kompakt-itslearning-SCORM12.zip
+Downloading raw file (non-zip) to: work/scorm/action-download-repro/raw/Ranger-Kompakt-itslearning-SCORM12.zip
+SHA256 digest of downloaded artifact is 418b54d01adab7747680a361d1e6683f4a3510299625707b0b382c545eeb5237
+{
+  "status": "BESTANDEN",
+  "sdk": "@actions/artifact@6.3.1",
+  "downloadActionCommit": "9000827ccba6bdab643e8b6fd33ac0654aef8333",
+  "transport": "local HTTP using unchanged SDK streamExtractExternal",
+  "defaultBehavior": "Manifest extracted; original ZIP absent (ENOENT asserted)",
+  "skipDecompressBehavior": "Original filename and bytes preserved",
+  "bytes": 6688236,
+  "sha256": "418b54d01adab7747680a361d1e6683f4a3510299625707b0b382c545eeb5237"
+}

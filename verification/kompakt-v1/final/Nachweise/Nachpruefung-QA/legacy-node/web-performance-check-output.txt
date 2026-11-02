@@ -1,0 +1,8 @@
+{
+  "version": "0.18",
+  "graphics": "auto and sharp retain previous floor; smooth optional 60 FPS; idle excluded; constrained by screen pixels",
+  "adaptiveChanges": 22,
+  "gpu": "bounded asynchronous queries, no-extension fallback, disjoint invalidation",
+  "photos": "lazy entry media, undiscovered entries empty",
+  "quality": "simulation and world independent"
+}

@@ -12,6 +12,8 @@ from pathlib import Path
 from playwright.sync_api import sync_playwright
 for package in ['Pillow','playwright']:
     print(package,importlib.metadata.version(package))
+for command in ['pdfinfo','pdftotext','pdftoppm']:
+    assert shutil.which(command), command+' fehlt: Poppler (Debian/Ubuntu: poppler-utils) für den A4-Druckaudit einrichten.'
 with sync_playwright() as p:
     assert shutil.which('chromium') or Path(p.chromium.executable_path).is_file(), 'Chromium fehlt: python -m playwright install chromium ausführen.'
 print('Browserwerkzeug verfügbar. Kein npm-Installationsschritt erforderlich.')

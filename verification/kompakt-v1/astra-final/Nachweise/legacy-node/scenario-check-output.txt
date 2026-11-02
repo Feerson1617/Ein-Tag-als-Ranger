@@ -1,0 +1,58 @@
+{"scenario":"predation","pairs":8,"evidenced":8,"missing":[],"individuals":64}
+{"scenario":"competition","pairs":8,"evidenced":8,"missing":[],"individuals":64}
+{"scenario":"parasitism","pairs":8,"evidenced":8,"missing":[],"individuals":64}
+{"scenario":"mutualism","pairs":9,"evidenced":9,"missing":[],"individuals":36}
+{"scenario":"herbivory","pairs":8,"evidenced":8,"missing":[],"individuals":32}
+{"scenario":"dispersal","pairs":4,"evidenced":4,"missing":[],"individuals":16}
+{
+  "scenarios": [
+    {
+      "scenario": "predation",
+      "pairs": 8,
+      "evidenced": 8,
+      "missing": [],
+      "individuals": 64
+    },
+    {
+      "scenario": "competition",
+      "pairs": 8,
+      "evidenced": 8,
+      "missing": [],
+      "individuals": 64
+    },
+    {
+      "scenario": "parasitism",
+      "pairs": 8,
+      "evidenced": 8,
+      "missing": [],
+      "individuals": 64
+    },
+    {
+      "scenario": "mutualism",
+      "pairs": 9,
+      "evidenced": 9,
+      "missing": [],
+      "individuals": 36
+    },
+    {
+      "scenario": "herbivory",
+      "pairs": 8,
+      "evidenced": 8,
+      "missing": [],
+      "individuals": 32
+    },
+    {
+      "scenario": "dispersal",
+      "pairs": 4,
+      "evidenced": 4,
+      "missing": [],
+      "individuals": 16
+    }
+  ],
+  "persistentReservedIndividuals": 276,
+  "totalPairAssignments": 45,
+  "bothPartnersFocusedAndSameFrame": true,
+  "unselectedAssignmentCounts": true,
+  "storageReload": true,
+  "naturalIndividualsRetained": true
+}

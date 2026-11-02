@@ -1,0 +1,52 @@
+{
+  "complete": true,
+  "productCommit": "e9899efaa314d052191d7d3a95b5de904f2932b6",
+  "qaCommit": "c5baa84f5bc5df099d9773bc7037b5a5f570a759",
+  "htmlSHA256": "87ff215191f543c1d91cadeef0ecf14c98012ff1f2b0c9866df0bbe2fd6494b8",
+  "checks": [
+    {
+      "name": "learning-standalone",
+      "exitCode": 0,
+      "passed": true,
+      "seconds": 91.899,
+      "log": "learning-standalone.log"
+    },
+    {
+      "name": "imports",
+      "exitCode": 0,
+      "passed": true,
+      "seconds": 44.568,
+      "log": "imports.log"
+    },
+    {
+      "name": "feeding-detail",
+      "exitCode": 1,
+      "passed": false,
+      "seconds": 54.654,
+      "log": "feeding-detail.log"
+    },
+    {
+      "name": "paused-capture",
+      "exitCode": 0,
+      "passed": true,
+      "seconds": 13.897,
+      "log": "paused-capture.log"
+    },
+    {
+      "name": "forest",
+      "exitCode": 0,
+      "passed": true,
+      "seconds": 126.262,
+      "log": "forest.log"
+    },
+    {
+      "name": "fresh-print",
+      "exitCode": 0,
+      "passed": true,
+      "seconds": 16.153,
+      "log": "fresh-print.log"
+    }
+  ],
+  "scope": "Additional independent regression of the exact delivered HTML. Existing product/artifacts remain unchanged; isolated fresh print uses systemChromium154, NOT inaccessible CIChromium151. No physical hardware/classroom approval.",
+  "allProcessesPassed": false
+}

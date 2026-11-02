@@ -1,0 +1,80 @@
+[2m[WebServer] [22m(node:215378) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[2m[WebServer] [22m(Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 7 tests using 1 worker
+
+(node:215395) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:215395) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [chromium] › tools/scorm/tests/ranger.spec.js:15:79 › http embedded: real ZIP, API discovery, resources, finish (8.2s)
+  ✓  2 [chromium] › tools/scorm/tests/ranger.spec.js:15:79 › http popup: real ZIP, API discovery, resources, finish (5.8s)
+  ✓  3 [chromium] › tools/scorm/tests/ranger.spec.js:15:79 › https embedded: real ZIP, API discovery, resources, finish (8.2s)
+  ✓  4 [chromium] › tools/scorm/tests/ranger.spec.js:15:79 › https popup: real ZIP, API discovery, resources, finish (6.5s)
+  ✓  5 [chromium] › tools/scorm/tests/ranger.spec.js:22:1 › Missing API leaves actual Ranger usable (7.2s)
+  ✘  6 [chromium] › tools/scorm/tests/ranger.spec.js:24:1 › Volatile K1–K5, model memory, no persistent access; reload/restart empty (2.5m)
+(node:216305) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:216305) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  7 [chromium] › tools/scorm/tests/ranger.spec.js:60:1 › Tablet touch, rotation, scroll and actual landscape (15.0s)
+
+
+  1) [chromium] › tools/scorm/tests/ranger.spec.js:24:1 › Volatile K1–K5, model memory, no persistent access; reload/restart empty 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoHaveText[2m([22m[32mexpected[39m[2m)[22m failed
+
+    Locator: locator('#model-output')
+    Timeout: 45000ms
+    [32m- Expected  - 14[39m
+    [31m+ Received  +  1[39m
+
+    [32m- theoretical-model · synthetisches Modell[39m
+    [32m-[39m
+    [32m- exponential[39m
+    [32m- logistic[39m
+    [32m- 2523.0[39m
+    [32m- 20 t[39m
+    [32m-[39m
+    [32m- Einheiten: {"t":"days","N":"model individuals","rate":"per day","capacity":"model individuals"}[39m
+    [32m-[39m
+    [32m- Parameter: {"initial":17,"rate":0.25,"capacity":100,"days":20}[39m
+    [32m-[39m
+    [32m- Geschlossene, homogene Population ohne Zu- oder Abwanderung; r und K konstant. Ohne Anfangsbestand bleibt N = 0. Theoretisches Modell, keine Vorhersage für die dargestellten Tiere.[39m
+    [32m-[39m
+    [32m- Vollständige Datentabelle[39m
+    [31m+ theoretical-model · synthetisches Modellexponentiallogistic2523.020 tEinheiten: {"t":"days","N":"model individuals","rate":"per day","capacity":"model individuals"}Parameter: {"initial":17,"rate":0.25,"capacity":100,"days":20}Geschlossene, homogene Population ohne Zu- oder Abwanderung; r und K konstant. Ohne Anfangsbestand bleibt N = 0. Theoretisches Modell, keine Vorhersage für die dargestellten Tiere.Vollständige Datentabelle[7mtexponentiallogistic0.000017.000017.00001.000021.828420.82302.000028.028325.24433.000035.989030.24574.000046.210835.76395.000059.335841.68726.000076.188747.86067.000097.828254.10018.0000125.614060.21369.0000161.291566.024210.0000207.102471.389411.0000265.924776.212612.0000341.454180.445513.0000438.435884.082414.0000562.962787.151015.0000722.858489.700416.0000928.168691.791717.00001191.792093.489118.00001530.291294.855219.00001964.932895.947120.00002523.023796.8151[27m[39m
+
+    Call log:
+    [2m  - Expect "toHaveText" with timeout 45000ms[22m
+    [2m  - waiting for locator('#model-output')[22m
+    [2m    49 × locator resolved to <div id="model-output">…</div>[22m
+    [2m       - unexpected value "theoretical-model · synthetisches Modellexponentiallogistic2523.020 tEinheiten: {"t":"days","N":"model individuals","rate":"per day","capacity":"model individuals"}Parameter: {"initial":17,"rate":0.25,"capacity":100,"days":20}Geschlossene, homogene Population ohne Zu- oder Abwanderung; r und K konstant. Ohne Anfangsbestand bleibt N = 0. Theoretisches Modell, keine Vorhersage für die dargestellten Tiere.Vollständige Datentabelletexponentiallogistic0.000017.000017.00001.000021.828420.82302.000028.028325.24433.000035.989030.24574.000046.210835.76395.000059.335841.68726.000076.188747.86067.000097.828254.10018.0000125.614060.21369.0000161.291566.024210.0000207.102471.389411.0000265.924776.212612.0000341.454180.445513.0000438.435884.082414.0000562.962787.151015.0000722.858489.700416.0000928.168691.791717.00001191.792093.489118.00001530.291294.855219.00001964.932895.947120.00002523.023796.8151"[22m
+
+
+      50 |  const dl=page.waitForEvent('download');await f.locator('#student-material').click();const download=await dl;await download.saveAs(info.outputPath('actual-student-worksheets.html'));
+      51 |  await f.locator('#open-analysis').click();for(const model of ['growth','predator','tolerance','carbon','nitrogen']){await f.locator('#model-type').selectOption(model);await f.locator('#run-model').click();await expect(f.locator('#model-output svg')).toHaveCount(1);await expect(f.locator('#export-model')).toHaveCount(0);}
+    > 52 |  await f.locator('#model-type').selectOption('growth');await f.locator('#parameter-initial').fill('17');await f.locator('#run-model').click();const result=await f.locator('#model-output').innerText();await task(f,'K2');await hub(f);await f.locator('#analysis').click();await expect(f.locator('#parameter-initial')).toHaveValue('17');await expect(f.locator('#model-output')).toHaveText(result);await capture(page,info,'model-preserved');
+         |                                                                                                                                                                                                                                                                                                                                                                                       ^
+      53 |  await close(f);await f.locator('#binocular').click();await expect(f.locator('#binocular')).toHaveAttribute('aria-pressed','true');await f.locator('#magnifier').click();await expect(f.locator('#magnifier')).toHaveAttribute('aria-pressed','true');await f.locator('#menu-button').click();const time=await f.locator('#world').getAttribute('data-simulation-time');await page.waitForTimeout(200);expect(await f.locator('#world').getAttribute('data-simulation-time')).toBe(time);await f.locator('#resume').click();await expect.poll(()=>f.locator('#world').getAttribute('data-simulation-time')).not.toBe(time);
+      54 |  expect(await f.evaluate(()=>window.__persistentCalls)).toEqual([]);apiOnly(await page.evaluate(()=>calls));await info.attach('volatile-before-reload',{body:JSON.stringify({count,allFiveEarned:true,persistentCalls:await f.evaluate(()=>window.__persistentCalls),api:await page.evaluate(()=>calls)}),contentType:'application/json'});
+      55 |  await f.evaluate(()=>location.reload());await ready(f);await expect(f.locator('#count')).toHaveText('0');expect(await f.locator('#world').evaluate(c=>JSON.parse(c.dataset.missions).every(m=>!m.complete))).toBe(true);await task(f,'K2');await expect(f.locator('#reasoning')).toHaveValue('');await expect(f.locator('#control-id option')).toHaveCount(1);await task(f,'K3');await expect(f.locator('#low-id option')).toHaveCount(1);await task(f,'K1');await expect(f.locator('#determination-record option')).toHaveCount(1);await hub(f);await f.locator('#analysis').click();await expect(f.locator('#parameter-initial')).toHaveValue('10');await expect(f.locator('#model-output')).toBeEmpty();expect(await f.evaluate(()=>window.__persistentCalls)).toEqual([]);
+        at /workspace/Ein-Tag-als-Ranger/tools/scorm/tests/ranger.spec.js:52:375
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    work/scorm/browser-artifacts/ranger-Volatile-K1–K5-mode-99b93-access-reload-restart-empty-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: work/scorm/browser-artifacts/ranger-Volatile-K1–K5-mode-99b93-access-reload-restart-empty-chromium/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    work/scorm/browser-artifacts/ranger-Volatile-K1–K5-mode-99b93-access-reload-restart-empty-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace work/scorm/browser-artifacts/ranger-Volatile-K1–K5-mode-99b93-access-reload-restart-empty-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [chromium] › tools/scorm/tests/ranger.spec.js:24:1 › Volatile K1–K5, model memory, no persistent access; reload/restart empty 
+  6 passed (3.4m)

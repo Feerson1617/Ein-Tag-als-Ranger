@@ -1,0 +1,3 @@
+# Großer Einzeldatei-Smoke: fehlgeschlagener erster Versuch
+
+Start/WebGL und das nachgeladene echte Kohlmeisenfoto funktionierten (Startfreigabe19,16s;18→33 decodierte Medien). Anschließend wartete Locator.click45s auf den Freie-Erkundung-Knopf. Das frische Bild zeigt den gescrollten Fotobereich; welcher interne Actionability-Teil stockte, ist nicht vollständig rekonstruiert. Der Treiber scrollt den echten Knopf nun ausdrücklich in den sichtbaren Bereich, prüft Aktivität/Viewport/elementFromPoint und verwendet native Mausereignisse; anschließend muss der Dialog tatsächlich schließen. Medien-, Werkzeug-, Karten- und Speicherassertions und Zeitlimits bleiben unverändert. Dieser Fehllauf wird durch die spätere Wiederholung nicht überschrieben.

@@ -1,0 +1,8 @@
+{
+  "terminatedAt": "2026-10-22T17:13:11.344996+00:00",
+  "status": "INTENTIONALLY INTERRUPTED; not a completed final pass",
+  "reason": "Own post-check discovered falsy/prototype observation window values accepted by fallback lookup. Correct import validation and repeat complete plan on the changed runtime.",
+  "originalRuntimeCommit": "f05ab562706975072f01998e4c252c03f25b9412",
+  "originalFilesPreservedLocally": "work/qa-correction/phase5-freeze1",
+  "phaseAtTermination": "stability, after warm-up and partial measurement; legacy commands not started"
+}

@@ -1,0 +1,41 @@
+{
+  "commit": "2326283ab01fbb25644f82e3cada26d9a2b509ea",
+  "sourceDirty": true,
+  "startedAt": "2026-10-21T20:55:58Z",
+  "site": "outputs/GitHub-Pages",
+  "entry": "index.html",
+  "prefix": "/Ein-Tag-als-Ranger/",
+  "viewport": [
+    600,
+    375
+  ],
+  "browser": "chromium",
+  "passed": [
+    "boot, two main entries, three mission choices, real WebGL startup",
+    "free exploration: real tools, keyboard, map with eight regions, tablet viewport (emulation only)"
+  ],
+  "failed": [],
+  "errors": [],
+  "consoleErrors": [],
+  "httpErrors": [],
+  "notTested": [
+    "physical iPad/Safari",
+    "classroom timing/learning effect",
+    "20-minute minimum-device performance"
+  ],
+  "browserVersion": "154.0.8037.57",
+  "readySeconds": 13.26,
+  "resourceTransferBytes": 26673501,
+  "navigationTransferBytes": 8666,
+  "initialTransferBytes": 26682167,
+  "renderDiagnostics": {
+    "cpuSimulationMs": "0.9",
+    "cpuRenderMs": "18.6",
+    "targetFps": "60",
+    "pixelRatio": "1.00",
+    "gpuMs": "4555.3",
+    "fps": "0",
+    "drawCalls": "259",
+    "triangles": "604052"
+  }
+}

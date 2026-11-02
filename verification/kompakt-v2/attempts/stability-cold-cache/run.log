@@ -1,0 +1,8 @@
+{"runId": "d490c503-667e-4389-baec-c15029bb314c", "simulationTime": "0.897", "plantCount": "618", "frameMs": "16.6", "geometries": "47", "textures": "6", "heapBytes": "58843154", "triangles": "1206115", "drawCalls": "22", "elapsedSeconds": 22.32, "place": "woodruff"}
+{"runId": "d490c503-667e-4389-baec-c15029bb314c", "simulationTime": "1.630", "plantCount": "618", "frameMs": "1633.3", "geometries": "61", "textures": "7", "heapBytes": "59238825", "triangles": "1315809", "drawCalls": "40", "elapsedSeconds": 44.58, "place": "nettle"}
+{"runId": "d490c503-667e-4389-baec-c15029bb314c", "simulationTime": "2.720", "plantCount": "618", "frameMs": "1100.0", "geometries": "60", "textures": "7", "heapBytes": "63133782", "triangles": "1188001", "drawCalls": "18", "elapsedSeconds": 66.72, "place": "wood"}
+Traceback (most recent call last):
+  File "/workspace/Ein-Tag-als-Ranger/tools/browser-compact-stability.py", line 29, in <module>
+    assert d['plantCount']==initial['plantCount'];assert d['runId']==initial['runId'];assert int(d['geometries'])<=int(initial['geometries'])*1.2+10;assert int(d['textures'])<=int(initial['textures'])+2
+                                                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

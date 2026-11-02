@@ -1,0 +1,6 @@
+{"name": "kompakt", "exitCode": 0, "passed": true, "seconds": 1.77, "log": "kompakt.log"}
+{"name": "compact-learning", "exitCode": 0, "passed": true, "seconds": 5.69, "log": "compact-learning.log"}
+{"name": "compact-qa", "exitCode": 0, "passed": true, "seconds": 0.32, "log": "compact-qa.log"}
+{"name": "compact-coastal", "exitCode": 0, "passed": true, "seconds": 18.17, "log": "compact-coastal.log"}
+{"name": "compact-habitat", "exitCode": 0, "passed": true, "seconds": 1.44, "log": "compact-habitat.log"}
+{"name": "compact-pedagogy", "exitCode": 0, "passed": true, "seconds": 0.42, "log": "compact-pedagogy.log"}

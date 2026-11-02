@@ -1,0 +1,99 @@
+{
+  "entry": "Ranger-Kompakt.html",
+  "scope": "Rendered DOM plus actual WebGL boot of standalone HTML; imports/storage corruption are explicitly labelled fixtures, not newly earned mission evidence",
+  "fileReadLatencyFixtureMs": 250,
+  "responseWait": "Fresh preview DOM mutation, not stale text or an arbitrary sleep",
+  "checks": [
+    {
+      "name": "valid older v2 imports through file input; K1-K5 actually render",
+      "passed": true
+    },
+    {
+      "name": "repro-invalid-top-level-features.json",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Ungültige Antwortauswahl: K1.features."
+    },
+    {
+      "name": "repro-impossible-coordinates.json",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Unbekannte Beobachtungsmethode."
+    },
+    {
+      "name": "K1-features",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Ungültige Antwortauswahl: K1.features."
+    },
+    {
+      "name": "K1-recordId",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Ungültige Aufgabenauswahl: K1.recordId."
+    },
+    {
+      "name": "K1-choice",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Ungültige Aufgabenauswahl: K1.choice."
+    },
+    {
+      "name": "K1-limit",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Ungültige Aufgabenauswahl: K1.limit."
+    },
+    {
+      "name": "K2-experimentTide",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Ungültige Aufgabenauswahl: K2.experimentTide."
+    },
+    {
+      "name": "isolated-window-0",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Unbekanntes Beobachtungsfenster."
+    },
+    {
+      "name": "isolated-window-false",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Unbekanntes Beobachtungsfenster."
+    },
+    {
+      "name": "isolated-window-\"\"",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Unbekanntes Beobachtungsfenster."
+    },
+    {
+      "name": "isolated-window-null",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Unbekanntes Beobachtungsfenster."
+    },
+    {
+      "name": "isolated-window-\"toString\"",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Unbekanntes Beobachtungsfenster."
+    },
+    {
+      "name": "isolated-window-\"constructor\"",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Unbekanntes Beobachtungsfenster."
+    },
+    {
+      "name": "explicit UI recovery and original download preserve all valid observations through reload",
+      "passed": true,
+      "originalBytes": 14910
+    }
+  ],
+  "errors": [],
+  "passed": true,
+  "htmlSHA256": "8e7fd1f784af9aa25c4764a4dc038e4c9b40fee21ce815f4487292a9d4e761fb",
+  "completedAt": "2026-10-22T17:58:39Z"
+}

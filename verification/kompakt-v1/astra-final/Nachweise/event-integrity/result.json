@@ -1,0 +1,21 @@
+{
+  "sourceCommit": "4eb186a5325ae30dfa233e10dd44eb73ea710afa",
+  "sourceDirty": false,
+  "passed": true,
+  "scope": "Native import of exact independently supplied conflicting-event fixture; old baseline reproduction is expected product failure, not a repaired product PASS. Fixtures are not earned observation evidence.",
+  "expectedOldBug": false,
+  "htmlSHA256": "3748c6590afefb18a5e07bb3cedc2c40b0b2be1619a57cc52553a30de5869412",
+  "fixtureSHA256": "f9065d06cba40456bb9e4b9e21eefccc5a58ddb0d03335dfddd1b2171585000f",
+  "checks": [
+    {
+      "name": "exact original fixture import outcome matches explicitly selected baseline/current expectation",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "message": "Widersprüchliche Kopien desselben Modellereignisses im selben Rundgang. Originaldatei bewahren und die Ereignisbelege prüfen.",
+  "replacementOffered": false,
+  "oldStorageByteIdentical": true,
+  "productPass": true,
+  "completedAt": "2026-10-25T04:54:31Z"
+}

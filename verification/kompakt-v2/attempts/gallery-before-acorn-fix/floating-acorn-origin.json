@@ -1,0 +1,15 @@
+{
+  "sourceAttempt": "gallery-redshank",
+  "sourceCommit": "4fc91a91f7c9c9e8a312d135ae12751dc7ac282c",
+  "capture": {
+    "file": "model-garrulus_glandarius.png",
+    "sha256": "e7bf9e75c00502f0977990458356a0a85a59c9d6c6a8dd4704cd52feede553ff",
+    "bytes": 12628,
+    "canvasOnly": true,
+    "taxon": "garrulus_glandarius",
+    "stage": "adult",
+    "individualId": "compact-jay",
+    "source": "actual active mesh in the magnified WebGL view"
+  },
+  "note": "Exact original PNG retained from the earlier gallery run on the same pre-fix runtime; later interrupted gallery had not revisited the jay."
+}

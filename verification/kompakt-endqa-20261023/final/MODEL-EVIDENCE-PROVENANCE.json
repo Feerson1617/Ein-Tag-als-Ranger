@@ -1,0 +1,39 @@
+{
+  "runtimeCommit": "3920a1d1d2692889b75403c1b0e50f5b856398aa",
+  "runtimeFreezeFile": "plan/runtime-freeze.json",
+  "runtimeFreezeMTimeNS": 1792743624085191910,
+  "nodeManifest": "compact-node/result.json",
+  "nodeManifestSHA256": "f455a5e4f6b6a6d4e18d39014d8e0d6ce5745e3202574f04cc05d7f3d95dc6b4",
+  "scope": "Fresh artifacts written during the clean final Node run. These JSONs do not themselves contain runtime hashes; binding uses the runner commit, suite logs and the recorded output write interval. Coastal currently ignores argv[2] and writes its fixed qa-correction path. Earlier habitat model evidence is separately historical.",
+  "aliases": {
+    "coastal-model": {
+      "suite": "compact-coastal",
+      "source": "work/qa-correction/coastal-tests/result.json",
+      "collected": "coastal-model/result.json",
+      "artifactSHA256": "13c89b6f1275142bce6a0683beb1b2a76263d271a7f6c407f1f0159035dba1f7",
+      "suiteLog": "compact-node/compact-coastal.log",
+      "suiteLogSHA256": "4a5053a99450e122bf258d1bd197c26531d5a3e1408ee6fc338d4ad3cbcc6397",
+      "suiteSummary": {
+        "passed": 5,
+        "scenarios": 16
+      },
+      "artifactMTimeNS": 1792743670959284833,
+      "nodeManifestMTimeNS": 1792743671876639052
+    },
+    "habitat-model": {
+      "suite": "compact-habitat-revision",
+      "source": "work/compact-regressions/compact-habitat-revision/habitat-revision-result.json",
+      "collected": "habitat-model/habitat-revision-result.json",
+      "artifactSHA256": "dfa2f3879a8eeb1b965bf88a3f11b997f7a3ebda3da7a80e597b13a08d7a4bf7",
+      "suiteLog": "compact-node/compact-habitat-revision.log",
+      "suiteLogSHA256": "b6ee0f1d0b3fb6a04c2d00bbc279138d4418808f6c7421a086d483eb80e1f455",
+      "suiteSummary": {
+        "passed": 4,
+        "seeds": 4,
+        "historicalRevisionSeedChecks": 12
+      },
+      "artifactMTimeNS": 1792743671691277063,
+      "nodeManifestMTimeNS": 1792743671876639052
+    }
+  }
+}

@@ -1,0 +1,219 @@
+{
+  "commit": "7f4dcc601ff2a41f83f8ffed1a7839c388e56a39",
+  "sourceDirty": false,
+  "startedAt": "2026-10-22T18:43:48Z",
+  "site": "outputs",
+  "entry": "Feldbuch.html",
+  "prefix": "/",
+  "viewport": [
+    800,
+    500
+  ],
+  "browser": "chromium",
+  "liveMissionSelection": null,
+  "passed": [
+    "boot, two main entries, three mission choices, real WebGL startup"
+  ],
+  "failed": [
+    "Locator.click: Timeout 45000ms exceeded.\nCall log:\n  - waiting for locator(\"#mission-free\")\n    - locator resolved to <button id=\"mission-free\" class=\"action quiet\">Freie Erkundung fortsetzen</button>\n  - attempting click action\n    - waiting for element to be visible, enabled and stable\n"
+  ],
+  "errors": [],
+  "consoleErrors": [],
+  "httpErrors": [],
+  "notTested": [
+    "physical iPad/Safari",
+    "classroom timing/learning effect",
+    "20-minute minimum-device performance"
+  ],
+  "browserVersion": "154.0.8037.57",
+  "readySeconds": 19.16,
+  "resourceTransferBytes": 0,
+  "navigationTransferBytes": 48161202,
+  "initialTransferBytes": 48161202,
+  "standaloneDecodedAssets": {
+    "initial": 18,
+    "afterReferences": 33
+  },
+  "failureDOM": {
+    "viewport": [
+      800,
+      500
+    ],
+    "hidden": false,
+    "fonts": "loaded",
+    "graphics": null,
+    "panelOpen": true,
+    "controls": [
+      {
+        "taxon": "fagus_sylvatica",
+        "x": 82,
+        "y": 1763.296875,
+        "width": 133.453125,
+        "height": 44,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1",
+        "detailsOpen": false,
+        "topElement": "panel"
+      },
+      {
+        "taxon": "quercus_robur",
+        "x": 225.453125,
+        "y": 1763.296875,
+        "width": 133.34375,
+        "height": 44,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1",
+        "detailsOpen": false,
+        "topElement": "panel"
+      },
+      {
+        "taxon": "corylus_avellana",
+        "x": 368.796875,
+        "y": 1763.296875,
+        "width": 164.78125,
+        "height": 44,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1",
+        "detailsOpen": false,
+        "topElement": "panel"
+      },
+      {
+        "taxon": "parus_major",
+        "x": 543.578125,
+        "y": 1763.296875,
+        "width": 138.453125,
+        "height": 44,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1",
+        "detailsOpen": false,
+        "topElement": "panel"
+      },
+      {
+        "taxon": "cyanistes_caeruleus",
+        "x": 82,
+        "y": 1817.296875,
+        "width": 138.296875,
+        "height": 44,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1",
+        "detailsOpen": false,
+        "topElement": "panel"
+      },
+      {
+        "taxon": "erithacus_rubecula",
+        "x": 230.296875,
+        "y": 1817.296875,
+        "width": 149.75,
+        "height": 44,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1",
+        "detailsOpen": false,
+        "topElement": "panel"
+      },
+      {
+        "taxon": "anas_platyrhynchos",
+        "x": 390.046875,
+        "y": 1817.296875,
+        "width": 135.28125,
+        "height": 44,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1",
+        "detailsOpen": false,
+        "topElement": "panel"
+      },
+      {
+        "taxon": "hare",
+        "x": 535.328125,
+        "y": 1817.296875,
+        "width": 129.78125,
+        "height": 44,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1",
+        "detailsOpen": false,
+        "topElement": "panel"
+      },
+      {
+        "taxon": "bombus_lapidarius",
+        "x": 82,
+        "y": 1871.296875,
+        "width": 154.984375,
+        "height": 44,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1",
+        "detailsOpen": false,
+        "topElement": "panel"
+      },
+      {
+        "taxon": "trifolium_pratense",
+        "x": 246.984375,
+        "y": 1871.296875,
+        "width": 121.75,
+        "height": 44,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1",
+        "detailsOpen": false,
+        "topElement": "panel"
+      },
+      {
+        "taxon": "urtica_dioica",
+        "x": 378.734375,
+        "y": 1871.296875,
+        "width": 187.484375,
+        "height": 44,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1",
+        "detailsOpen": false,
+        "topElement": "panel"
+      },
+      {
+        "taxon": "galium_odoratum",
+        "x": 82,
+        "y": 1925.296875,
+        "width": 150.671875,
+        "height": 44,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1",
+        "detailsOpen": false,
+        "topElement": "panel"
+      }
+    ],
+    "animations": [],
+    "panelRect": {
+      "x": 55,
+      "y": 30,
+      "width": 690,
+      "height": 440,
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "detailsOpen": null,
+      "topElement": ""
+    },
+    "panelScrollTop": 0
+  },
+  "failureUI": {
+    "toast": "Willkommen im Rangerteam. Die Starttafel erklärt deinen ersten Dienst. Lerne danach dein Revier am Bohlenweg kennen.",
+    "focus": "Suche eine Art im Sichtfeld",
+    "progress": "Untersuchung läuft · Belege im Feldbuch",
+    "tool": null,
+    "observation": {
+      "observationSeconds": "0",
+      "targetFps": "60",
+      "frameP95Ms": "0",
+      "fps": "0"
+    }
+  },
+  "failureScreenshot": "failure.png"
+}

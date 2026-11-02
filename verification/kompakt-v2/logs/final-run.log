@@ -1,0 +1,28 @@
+START legacy-node
+{'name': 'legacy-node', 'command': ['/workspace/.ranger-clean-venv/bin/python', 'tools/run-checks.py'], 'status': 'passed', 'startedAt': '2026-10-22T07:09:06Z', 'exitCode': 0, 'seconds': 109.8}
+START compact-node
+{'name': 'compact-node', 'command': ['node', 'tests/kompakt-check.mjs'], 'status': 'passed', 'startedAt': '2026-10-22T07:10:55Z', 'exitCode': 0, 'seconds': 0.93}
+START learning-node
+{'name': 'learning-node', 'command': ['node', 'tests/compact-learning-check.mjs'], 'status': 'passed', 'startedAt': '2026-10-22T07:10:56Z', 'exitCode': 0, 'seconds': 3.25}
+START web-build
+{'name': 'web-build', 'command': ['/workspace/.ranger-clean-venv/bin/python', 'tools/build-web.py'], 'status': 'passed', 'startedAt': '2026-10-22T07:11:00Z', 'exitCode': 0, 'seconds': 2.73}
+START web-verify
+{'name': 'web-verify', 'command': ['/workspace/.ranger-clean-venv/bin/python', 'tools/verify-web.py'], 'status': 'passed', 'startedAt': '2026-10-22T07:11:02Z', 'exitCode': 0, 'seconds': 2.52}
+START standalone-build
+{'name': 'standalone-build', 'command': ['/workspace/.ranger-clean-venv/bin/python', 'tools/build-standalone.py'], 'status': 'passed', 'startedAt': '2026-10-22T07:11:05Z', 'exitCode': 0, 'seconds': 1.64}
+START compact-build
+{'name': 'compact-build', 'command': ['/workspace/.ranger-clean-venv/bin/python', 'tools/build-compact.py'], 'status': 'passed', 'startedAt': '2026-10-22T07:11:06Z', 'exitCode': 0, 'seconds': 1.32}
+START compact-verify
+{'name': 'compact-verify', 'command': ['/workspace/.ranger-clean-venv/bin/python', 'tools/verify-compact.py'], 'status': 'passed', 'startedAt': '2026-10-22T07:11:08Z', 'exitCode': 0, 'seconds': 0.36}
+START python-packages
+{'name': 'python-packages', 'command': ['/workspace/.ranger-clean-venv/bin/python', '-m', 'unittest', 'discover', '-s', 'tests', '-p', 'test_*.py', '-v'], 'status': 'passed', 'startedAt': '2026-10-22T07:11:08Z', 'exitCode': 0, 'seconds': 9.26}
+START source-package
+{'name': 'source-package', 'command': ['/workspace/.ranger-clean-venv/bin/python', 'tools/package-project.py'], 'status': 'passed', 'startedAt': '2026-10-22T07:11:17Z', 'exitCode': 0, 'seconds': 5.52}
+START compact-browser
+{'name': 'compact-browser', 'command': ['/workspace/.ranger-clean-venv/bin/python', 'tools/browser-compact.py'], 'status': 'passed', 'startedAt': '2026-10-22T07:11:23Z', 'exitCode': 0, 'seconds': 835.91}
+START compact-standalone-browser
+{'name': 'compact-standalone-browser', 'command': ['/workspace/.ranger-clean-venv/bin/python', 'tools/browser-compact.py', '--site', 'outputs', '--entry', 'Ranger-Kompakt.html', '--smoke'], 'status': 'passed', 'startedAt': '2026-10-22T07:25:19Z', 'exitCode': 0, 'seconds': 246.48}
+START learning-browser
+{'name': 'learning-browser', 'command': ['/workspace/.ranger-clean-venv/bin/python', 'tools/browser-compact-learning.py', '--gallery'], 'status': 'passed', 'startedAt': '2026-10-22T07:29:25Z', 'exitCode': 0, 'seconds': 977.94}
+START legacy-browser
+{'name': 'legacy-browser', 'command': ['/workspace/.ranger-clean-venv/bin/python', 'tools/browser-check.py', '--live', '--resilience', '--width', '800', '--height', '500', '--site', 'outputs/GitHub-Pages', '--prefix', '/Ein-Tag-als-Ranger/'], 'status': 'failed', 'startedAt': '2026-10-22T07:45:43Z', 'exitCode': 1, 'seconds': 390.79}

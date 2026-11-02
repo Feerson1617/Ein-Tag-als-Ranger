@@ -1,0 +1,40 @@
+{
+  "scope": "Own same isolated observation after exact-key/type validation; all original bad cases rejected.",
+  "cases": [
+    {
+      "window": 0,
+      "accepted": false,
+      "error": "Unbekanntes Beobachtungsfenster."
+    },
+    {
+      "window": false,
+      "accepted": false,
+      "error": "Unbekanntes Beobachtungsfenster."
+    },
+    {
+      "window": "",
+      "accepted": false,
+      "error": "Unbekanntes Beobachtungsfenster."
+    },
+    {
+      "window": null,
+      "accepted": false,
+      "error": "Unbekanntes Beobachtungsfenster."
+    },
+    {
+      "window": "toString",
+      "accepted": false,
+      "error": "Unbekanntes Beobachtungsfenster."
+    },
+    {
+      "window": "constructor",
+      "accepted": false,
+      "error": "Unbekanntes Beobachtungsfenster."
+    },
+    {
+      "window": "unknown",
+      "accepted": false,
+      "error": "Unbekanntes Beobachtungsfenster."
+    }
+  ]
+}

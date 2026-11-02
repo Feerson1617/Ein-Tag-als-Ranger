@@ -1,0 +1,17 @@
+{
+  "galium": {
+    "url": "https://www.floraweb.de/php/artenhome.php?name-use-id=2560",
+    "status": 200,
+    "excerpt": []
+  },
+  "urtica": {
+    "url": "https://www.floraweb.de/php/artenhome.php?name-use-id=6145",
+    "status": 200,
+    "excerpt": []
+  },
+  "kidd": {
+    "url": "https://pubmed.ncbi.nlm.nih.gov/17517636/",
+    "status": 203,
+    "excerpt": []
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "scope": "Declared supplemental full native-zoom captures and actual archive content audit, serialized after the complete34process plan. No runtime rebuild or edits.",
+  "checks": [
+    {
+      "name": "native-ui",
+      "exitCode": 0,
+      "passed": true,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "work/v1-abschluss/supplement-native-middle.py",
+        "--output",
+        "/workspace/Ein-Tag-als-Ranger/work/astra-abschluss-20261025/final-4eb186a/native-ui"
+      ]
+    },
+    {
+      "name": "public-content",
+      "exitCode": 0,
+      "passed": true,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "work/v1-abschluss/audit-public-content.py",
+        "--qa",
+        "/workspace/Ein-Tag-als-Ranger/work/astra-abschluss-20261025/final-4eb186a"
+      ]
+    }
+  ],
+  "resumedAssembly": "Initial sheet assembly had no feeding result because the first video process failed before game-page startup (missing FFmpeg). Native UI and public audit had already passed. Sheet assembly resumed only after the unchanged separate retry completed; no UI results were rewritten.",
+  "complete": true,
+  "passed": true,
+  "generatedContactSheets": 8
+}

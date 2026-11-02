@@ -1,0 +1,7 @@
+PASS authored microhabitats and age structure preserve old identities and support trees
+PASS LOD keeps concrete matrices, nearby diagnostic plants and damaged-instance exclusions
+PASS normal high water leaves Andel and Keilmelde dry while pioneers flood; absolute higher-water scenarios are separate
+PASS historical revision 2 reconstructs its old plant coordinates; new terrain is explicitly revision 3
+PASS terrain and deck form continuous banks/crown, every route remains walkable
+PASS all three world speakers are reachable from paths, dialogue import rejects remote/contradictory encounters
+{"passed":6,"seeds":4}

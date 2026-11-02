@@ -1,0 +1,3 @@
+Waiting for final full stability retry; no concurrent heavy browser.
+START regular UI/storage/resilience fixtures, no live M3 claim 19:50:53
+{"name": "legacy-ui-resilience", "command": ["/workspace/.ranger-clean-venv/bin/python", "tools/browser-check.py", "--resilience", "--width", "800", "--height", "500", "--site", "outputs/GitHub-Pages", "--prefix", "/Ein-Tag-als-Ranger/"], "exitCode": 0, "passed": true, "seconds": 894.14, "log": "legacy-ui-recheck.log", "scope": "Regular existing browser UI/import/export/storage/resilience checks with labelled mission fixtures. No actual live M3 completion inferred. Original live800x500 failure preserved."}

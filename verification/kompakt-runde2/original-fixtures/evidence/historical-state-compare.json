@@ -1,0 +1,89 @@
+{
+  "scope": "Same local Node process; separately imported immutable old f921468 checkout versus current head, revisions 1/2/3. This isolates source regression from platform-specific expected digest mismatches.",
+  "rows": [
+    {
+      "seed": 20260825,
+      "revision": 1,
+      "oldDigest": "c5be7d7198dd6e2d5f3c855c0ec7f9dd422342df5c8697db166f27f8de924440",
+      "newDigest": "c5be7d7198dd6e2d5f3c855c0ec7f9dd422342df5c8697db166f27f8de924440",
+      "byteEqual": true
+    },
+    {
+      "seed": 20260825,
+      "revision": 2,
+      "oldDigest": "c5be7d7198dd6e2d5f3c855c0ec7f9dd422342df5c8697db166f27f8de924440",
+      "newDigest": "c5be7d7198dd6e2d5f3c855c0ec7f9dd422342df5c8697db166f27f8de924440",
+      "byteEqual": true
+    },
+    {
+      "seed": 20260825,
+      "revision": 3,
+      "oldDigest": "c68f4bf1d689c1783ba4a2c42132e648402f93842203ef5992dbf5b06bda714b",
+      "newDigest": "c68f4bf1d689c1783ba4a2c42132e648402f93842203ef5992dbf5b06bda714b",
+      "byteEqual": true
+    },
+    {
+      "seed": 1,
+      "revision": 1,
+      "oldDigest": "599835c3528e4510841a96553d5cabbf66a0af3d2a722b510a25d9ab2b81b669",
+      "newDigest": "599835c3528e4510841a96553d5cabbf66a0af3d2a722b510a25d9ab2b81b669",
+      "byteEqual": true
+    },
+    {
+      "seed": 1,
+      "revision": 2,
+      "oldDigest": "599835c3528e4510841a96553d5cabbf66a0af3d2a722b510a25d9ab2b81b669",
+      "newDigest": "599835c3528e4510841a96553d5cabbf66a0af3d2a722b510a25d9ab2b81b669",
+      "byteEqual": true
+    },
+    {
+      "seed": 1,
+      "revision": 3,
+      "oldDigest": "616cefb952a0c4e876be373edd66a3c55fef8a7a641b81880df775612104c8a5",
+      "newDigest": "616cefb952a0c4e876be373edd66a3c55fef8a7a641b81880df775612104c8a5",
+      "byteEqual": true
+    },
+    {
+      "seed": 42,
+      "revision": 1,
+      "oldDigest": "32779c23de7fb4bc5925f02472fdefd07a18af58f86b41b1b1500e4a56f5ccf5",
+      "newDigest": "32779c23de7fb4bc5925f02472fdefd07a18af58f86b41b1b1500e4a56f5ccf5",
+      "byteEqual": true
+    },
+    {
+      "seed": 42,
+      "revision": 2,
+      "oldDigest": "32779c23de7fb4bc5925f02472fdefd07a18af58f86b41b1b1500e4a56f5ccf5",
+      "newDigest": "32779c23de7fb4bc5925f02472fdefd07a18af58f86b41b1b1500e4a56f5ccf5",
+      "byteEqual": true
+    },
+    {
+      "seed": 42,
+      "revision": 3,
+      "oldDigest": "21a4abdc7e05ca98437e2f87215a8d83fddf20d983a3695103c1e6c955dd1aab",
+      "newDigest": "21a4abdc7e05ca98437e2f87215a8d83fddf20d983a3695103c1e6c955dd1aab",
+      "byteEqual": true
+    },
+    {
+      "seed": 20261022,
+      "revision": 1,
+      "oldDigest": "d7015e1c5e5945523ded93e842d09c35a681559c85534c827ff44b56fdaa3661",
+      "newDigest": "d7015e1c5e5945523ded93e842d09c35a681559c85534c827ff44b56fdaa3661",
+      "byteEqual": true
+    },
+    {
+      "seed": 20261022,
+      "revision": 2,
+      "oldDigest": "d7015e1c5e5945523ded93e842d09c35a681559c85534c827ff44b56fdaa3661",
+      "newDigest": "d7015e1c5e5945523ded93e842d09c35a681559c85534c827ff44b56fdaa3661",
+      "byteEqual": true
+    },
+    {
+      "seed": 20261022,
+      "revision": 3,
+      "oldDigest": "88da7249d4c2f1bb025a61be1228794b7f54a76272b285fa0488a383c0aa7172",
+      "newDigest": "88da7249d4c2f1bb025a61be1228794b7f54a76272b285fa0488a383c0aa7172",
+      "byteEqual": true
+    }
+  ]
+}

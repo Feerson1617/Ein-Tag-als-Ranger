@@ -1,0 +1,16 @@
+{
+  "version": "0.17",
+  "scenarioPairs": 45,
+  "markerChecks": 938,
+  "foundationSamples": 4293,
+  "deckSamples": 2898,
+  "maxDeckMismatch": 0.04997764842140118,
+  "birdPalettes": 64,
+  "flowerSpecies": 16,
+  "holeSamples": 6,
+  "terrainMasks": 9,
+  "photographs": 168,
+  "sprint": 7.5,
+  "tablet": "linear proportional speed, capped diagonals",
+  "digging": "animated physical floor; independent samples; persistent specimens; depths 0–35 cm"
+}

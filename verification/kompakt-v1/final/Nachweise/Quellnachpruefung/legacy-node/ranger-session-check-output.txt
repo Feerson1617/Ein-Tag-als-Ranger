@@ -1,0 +1,6 @@
+{
+  "input": "Held keys, zero-valued pointer ID, movement speed, both captures, thumb and pinch cleared",
+  "repeat": "Blur followed by panel/visibility cleanup is idempotent",
+  "fullscreen": "Enter, exit, missing API, rejected promise and never-settling embedded request",
+  "scope": "Actual reset function exercised; browser context restoration also tested interactively"
+}

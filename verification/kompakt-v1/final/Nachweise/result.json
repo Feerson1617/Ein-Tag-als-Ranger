@@ -1,0 +1,513 @@
+{
+  "sourceCommit": "e9899efaa314d052191d7d3a95b5de904f2932b6",
+  "complete": true,
+  "checks": [
+    {
+      "name": "build-web",
+      "role": "mandatory",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 0.976,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/build-web.py"
+      ],
+      "log": "logs/build-web.log",
+      "context": "contexts/build-web.json"
+    },
+    {
+      "name": "verify-web",
+      "role": "mandatory",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 0.824,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/verify-web.py"
+      ],
+      "log": "logs/verify-web.log",
+      "context": "contexts/verify-web.json"
+    },
+    {
+      "name": "build-legacy-html",
+      "role": "mandatory",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 0.822,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/build-standalone.py"
+      ],
+      "log": "logs/build-legacy-html.log",
+      "context": "contexts/build-legacy-html.json"
+    },
+    {
+      "name": "build-compact",
+      "role": "mandatory",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 0.421,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/build-compact.py"
+      ],
+      "log": "logs/build-compact.log",
+      "context": "contexts/build-compact.json"
+    },
+    {
+      "name": "verify-compact",
+      "role": "mandatory",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 0.17,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/verify-compact.py"
+      ],
+      "log": "logs/verify-compact.log",
+      "context": "contexts/verify-compact.json"
+    },
+    {
+      "name": "build-materials",
+      "role": "mandatory",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 15.159,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/print-compact-materials.py",
+        "--contact-sheets",
+        "--audit-dir",
+        "/workspace/Ein-Tag-als-Ranger/work/v1-abschluss/final-e9899ef/print"
+      ],
+      "log": "logs/build-materials.log",
+      "context": "contexts/build-materials.json"
+    },
+    {
+      "name": "legacy-node",
+      "role": "mandatory",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 32.564,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/run-checks.py",
+        "--output",
+        "/workspace/Ein-Tag-als-Ranger/work/v1-abschluss/final-e9899ef/legacy-node"
+      ],
+      "log": "logs/legacy-node.log",
+      "context": "contexts/legacy-node.json"
+    },
+    {
+      "name": "compact-node",
+      "role": "mandatory",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 20.649,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/check-compact.py",
+        "--output",
+        "/workspace/Ein-Tag-als-Ranger/work/v1-abschluss/final-e9899ef/compact-node"
+      ],
+      "log": "logs/compact-node.log",
+      "context": "contexts/compact-node.json"
+    },
+    {
+      "name": "python",
+      "role": "mandatory",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 3.683,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "log": "logs/python.log",
+      "context": "contexts/python.json"
+    },
+    {
+      "name": "source-package",
+      "role": "mandatory",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 8.595,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/package-project.py"
+      ],
+      "log": "logs/source-package.log",
+      "context": "contexts/source-package.json"
+    },
+    {
+      "name": "source",
+      "role": "mandatory",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 10.701,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-source.py",
+        "--output",
+        "/workspace/Ein-Tag-als-Ranger/work/v1-abschluss/final-e9899ef/source"
+      ],
+      "log": "logs/source.log",
+      "context": "contexts/source.json"
+    },
+    {
+      "name": "reference",
+      "role": "mandatory",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 162.256,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact.py",
+        "--output",
+        "/workspace/Ein-Tag-als-Ranger/work/v1-abschluss/final-e9899ef/reference"
+      ],
+      "log": "logs/reference.log",
+      "context": "contexts/reference.json"
+    },
+    {
+      "name": "learning-source",
+      "role": "mandatory",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 199.467,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-learning.py",
+        "--gallery",
+        "--output",
+        "/workspace/Ein-Tag-als-Ranger/work/v1-abschluss/final-e9899ef/learning-source"
+      ],
+      "log": "logs/learning-source.log",
+      "context": "contexts/learning-source.json"
+    },
+    {
+      "name": "learning-web",
+      "role": "mandatory",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 84.472,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-learning.py",
+        "--site",
+        "outputs/Ranger-Kompakt",
+        "--entry",
+        "index.html",
+        "--output",
+        "/workspace/Ein-Tag-als-Ranger/work/v1-abschluss/final-e9899ef/learning-web"
+      ],
+      "log": "logs/learning-web.log",
+      "context": "contexts/learning-web.json"
+    },
+    {
+      "name": "learning-standalone",
+      "role": "mandatory",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 87.028,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-learning.py",
+        "--site",
+        "outputs",
+        "--entry",
+        "Ranger-Kompakt.html",
+        "--output",
+        "/workspace/Ein-Tag-als-Ranger/work/v1-abschluss/final-e9899ef/learning-standalone"
+      ],
+      "log": "logs/learning-standalone.log",
+      "context": "contexts/learning-standalone.json"
+    },
+    {
+      "name": "standalone-smoke",
+      "role": "mandatory",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 47.978,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact.py",
+        "--site",
+        "outputs",
+        "--entry",
+        "Ranger-Kompakt.html",
+        "--smoke",
+        "--output",
+        "/workspace/Ein-Tag-als-Ranger/work/v1-abschluss/final-e9899ef/standalone-smoke"
+      ],
+      "log": "logs/standalone-smoke.log",
+      "context": "contexts/standalone-smoke.json"
+    },
+    {
+      "name": "feeding",
+      "role": "mandatory",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 60.967,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-feeding.py",
+        "--output",
+        "/workspace/Ein-Tag-als-Ranger/work/v1-abschluss/final-e9899ef/feeding"
+      ],
+      "log": "logs/feeding.log",
+      "context": "contexts/feeding.json"
+    },
+    {
+      "name": "imports",
+      "role": "mandatory",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 44.846,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-imports.py",
+        "--output",
+        "/workspace/Ein-Tag-als-Ranger/work/v1-abschluss/final-e9899ef/imports"
+      ],
+      "log": "logs/imports.log",
+      "context": "contexts/imports.json"
+    },
+    {
+      "name": "growth",
+      "role": "mandatory",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 6.868,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-growth.py",
+        "--output",
+        "/workspace/Ein-Tag-als-Ranger/work/v1-abschluss/final-e9899ef/growth"
+      ],
+      "log": "logs/growth.log",
+      "context": "contexts/growth.json"
+    },
+    {
+      "name": "habitats",
+      "role": "mandatory",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 111.975,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-habitats.py",
+        "--output",
+        "/workspace/Ein-Tag-als-Ranger/work/v1-abschluss/final-e9899ef/habitats"
+      ],
+      "log": "logs/habitats.log",
+      "context": "contexts/habitats.json"
+    },
+    {
+      "name": "habitat-revision",
+      "role": "mandatory",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 117.008,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-habitat-revision.py",
+        "--baseline",
+        "verification/kompakt-endqa-20261023/baseline/habitats",
+        "--baseline-fixed-gap",
+        "verification/kompakt-endqa-20261023/baseline/habitats/fixed-gap",
+        "--output",
+        "/workspace/Ein-Tag-als-Ranger/work/v1-abschluss/final-e9899ef/habitat-revision"
+      ],
+      "log": "logs/habitat-revision.log",
+      "context": "contexts/habitat-revision.json"
+    },
+    {
+      "name": "ui",
+      "role": "mandatory",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 47.46,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-v1-ui.py",
+        "--output",
+        "/workspace/Ein-Tag-als-Ranger/work/v1-abschluss/final-e9899ef/ui"
+      ],
+      "log": "logs/ui.log",
+      "context": "contexts/ui.json"
+    },
+    {
+      "name": "distribution",
+      "role": "mandatory",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 8.677,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-v1-distribution.py",
+        "--output",
+        "/workspace/Ein-Tag-als-Ranger/work/v1-abschluss/final-e9899ef/distribution"
+      ],
+      "log": "logs/distribution.log",
+      "context": "contexts/distribution.json"
+    },
+    {
+      "name": "detail-lod",
+      "role": "mandatory",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 19.778,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-detail-lod.py",
+        "--output",
+        "/workspace/Ein-Tag-als-Ranger/work/v1-abschluss/final-e9899ef/detail-lod"
+      ],
+      "log": "logs/detail-lod.log",
+      "context": "contexts/detail-lod.json"
+    },
+    {
+      "name": "event-integrity",
+      "role": "mandatory",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 6.11,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-event-integrity.py",
+        "--output",
+        "/workspace/Ein-Tag-als-Ranger/work/v1-abschluss/final-e9899ef/event-integrity"
+      ],
+      "log": "logs/event-integrity.log",
+      "context": "contexts/event-integrity.json"
+    },
+    {
+      "name": "forest-profile",
+      "role": "mandatory",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 129.222,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-v1-baseline.py",
+        "--compare",
+        "work/v1-abschluss/baseline/webgl/result.json",
+        "--output",
+        "/workspace/Ein-Tag-als-Ranger/work/v1-abschluss/final-e9899ef/forest-profile"
+      ],
+      "log": "logs/forest-profile.log",
+      "context": "contexts/forest-profile.json"
+    },
+    {
+      "name": "legacy-full",
+      "role": "mandatory",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 765.129,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-check.py",
+        "--live",
+        "--resilience",
+        "--width",
+        "800",
+        "--height",
+        "500",
+        "--site",
+        "outputs/GitHub-Pages",
+        "--prefix",
+        "/Ein-Tag-als-Ranger/",
+        "--output",
+        "/workspace/Ein-Tag-als-Ranger/work/v1-abschluss/final-e9899ef/legacy-full"
+      ],
+      "log": "logs/legacy-full.log",
+      "context": "contexts/legacy-full.json"
+    },
+    {
+      "name": "legacy-standalone",
+      "role": "mandatory",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 80.636,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-check.py",
+        "--smoke",
+        "--width",
+        "800",
+        "--height",
+        "500",
+        "--site",
+        "outputs",
+        "--entry",
+        "Feldbuch.html",
+        "--output",
+        "/workspace/Ein-Tag-als-Ranger/work/v1-abschluss/final-e9899ef/legacy-standalone"
+      ],
+      "log": "logs/legacy-standalone.log",
+      "context": "contexts/legacy-standalone.json"
+    },
+    {
+      "name": "stability",
+      "role": "mandatory",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 1512.691,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-stability.py",
+        "--output",
+        "/workspace/Ein-Tag-als-Ranger/work/v1-abschluss/final-e9899ef/stability"
+      ],
+      "log": "logs/stability.log",
+      "context": "contexts/stability.json"
+    },
+    {
+      "name": "arrival-original900",
+      "role": "software-diagnostic",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 942.252,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-arrival.py",
+        "--output",
+        "/workspace/Ein-Tag-als-Ranger/work/v1-abschluss/final-e9899ef/arrival-original900"
+      ],
+      "log": "logs/arrival-original900.log",
+      "context": "contexts/arrival-original900.json"
+    },
+    {
+      "name": "v1-full-walk-feeding",
+      "role": "mandatory",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 1912.666,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-arrival.py",
+        "--detail-realtime",
+        "--v1-route",
+        "--walk-wall-budget",
+        "3600",
+        "--output",
+        "/workspace/Ein-Tag-als-Ranger/work/v1-abschluss/final-e9899ef/v1-full-walk-feeding"
+      ],
+      "log": "logs/v1-full-walk-feeding.log",
+      "context": "contexts/v1-full-walk-feeding.json"
+    }
+  ],
+  "softwareGatesPassed": true,
+  "allProcessesPassed": true,
+  "scope": "D3 contract fixed before implementation in docs/ABSCHLUSSVERTRAG-V1.md. A diagnosticFAIL never becomesPASS. Software eligibility is distinct from process exit and hardware/device/pilot acceptance.",
+  "hardwarePerformanceAcceptance": "NICHT GEPR\u00dcFT",
+  "physicalDeviceAndPilot": "NICHT GEPR\u00dcFT"
+}

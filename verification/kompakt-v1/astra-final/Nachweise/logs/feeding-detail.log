@@ -1,0 +1,33 @@
+CAPTURE compact-avocet initial 0.025
+CAPTURE compact-avocet approaching 29.525
+CAPTURE compact-avocet searching 30.225
+CAPTURE compact-avocet handling 31.225
+CAPTURE compact-avocet swallowing 31.725
+CAPTURE compact-avocet departing 32.725
+CAPTURE compact-avocet after-departure 33.925
+PASS avocet
+CAPTURE compact-redshank initial 0.025
+CAPTURE compact-redshank approaching 21.025
+CAPTURE compact-redshank searching 21.35
+CAPTURE compact-redshank handling 22.1
+CAPTURE compact-redshank swallowing 22.85
+CAPTURE compact-redshank departing 23.85
+CAPTURE compact-redshank after-departure 24.95
+PASS redshank
+CAPTURE compact-spoonbill initial 0.025
+CAPTURE compact-spoonbill approaching 0.025
+CAPTURE compact-spoonbill searching 0.35
+CAPTURE compact-spoonbill handling 1.35
+CAPTURE compact-spoonbill swallowing 2.35
+CAPTURE compact-spoonbill departing 3.35
+CAPTURE compact-spoonbill after-departure 4.45
+PASS spoonbill
+CAPTURE compact-oystercatcher initial 0.025
+CAPTURE compact-oystercatcher approaching 0.025
+CAPTURE compact-oystercatcher searching 0.5
+CAPTURE compact-oystercatcher handling 1.25
+CAPTURE compact-oystercatcher swallowing 4.25
+CAPTURE compact-oystercatcher departing 5.25
+CAPTURE compact-oystercatcher after-departure 6.35
+PASS oystercatcher
+{"passed": true, "sequences": 4}

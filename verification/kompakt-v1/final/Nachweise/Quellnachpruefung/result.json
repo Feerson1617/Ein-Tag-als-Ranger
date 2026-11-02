@@ -1,0 +1,136 @@
+{
+  "complete": true,
+  "passed": true,
+  "productRuntimeCommit": "e9899efaa314d052191d7d3a95b5de904f2932b6",
+  "htmlSHA256": "87ff215191f543c1d91cadeef0ecf14c98012ff1f2b0c9866df0bbe2fd6494b8",
+  "checks": [
+    {
+      "name": "legacy-node",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 31.805,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/run-checks.py",
+        "--output",
+        "/workspace/Ein-Tag-als-Ranger/work/v1-abschluss/source-coverage-final/legacy-node"
+      ],
+      "log": "logs/legacy-node.log"
+    },
+    {
+      "name": "compact-node",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 21.932,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/check-compact.py",
+        "--output",
+        "/workspace/Ein-Tag-als-Ranger/work/v1-abschluss/source-coverage-final/compact-node"
+      ],
+      "log": "logs/compact-node.log"
+    },
+    {
+      "name": "python",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 4.224,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "log": "logs/python.log"
+    },
+    {
+      "name": "verify-web",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 0.815,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/verify-web.py"
+      ],
+      "log": "logs/verify-web.log"
+    },
+    {
+      "name": "verify-compact",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 0.164,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/verify-compact.py"
+      ],
+      "log": "logs/verify-compact.log"
+    },
+    {
+      "name": "learning-maintained-source",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 195.413,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-learning.py",
+        "--site",
+        "dist",
+        "--entry",
+        "kompakt.html",
+        "--gallery",
+        "--output",
+        "/workspace/Ein-Tag-als-Ranger/work/v1-abschluss/source-coverage-final/learning-maintained-source"
+      ],
+      "log": "logs/learning-maintained-source.log"
+    },
+    {
+      "name": "learning-web",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 85.926,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-learning.py",
+        "--site",
+        "outputs/Ranger-Kompakt",
+        "--entry",
+        "index.html",
+        "--output",
+        "/workspace/Ein-Tag-als-Ranger/work/v1-abschluss/source-coverage-final/learning-web"
+      ],
+      "log": "logs/learning-web.log"
+    },
+    {
+      "name": "learning-standalone",
+      "passed": true,
+      "exitCode": 0,
+      "seconds": 91.081,
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-learning.py",
+        "--site",
+        "outputs",
+        "--entry",
+        "Ranger-Kompakt.html",
+        "--output",
+        "/workspace/Ein-Tag-als-Ranger/work/v1-abschluss/source-coverage-final/learning-standalone"
+      ],
+      "log": "logs/learning-standalone.log"
+    }
+  ],
+  "scope": "Corrected actual maintained-source K1–K5 coverage after the unchanged product core run. QA-only files may change; every runtime/media/material artifact remains byte-identical to the frozen e989 candidate. Original misnamed Web gallery result is retained without relabeling it as source.",
+  "qaDriverCommit": "bd859abe098a50408f8b950794b012b59b8432dd",
+  "qaOnlyChangedFiles": [
+    "tools/browser-compact-learning.py",
+    "tools/check-compact-v1.py"
+  ],
+  "runtimeByteIdentical": true,
+  "startedActualChecksUTC": "2026-10-24T13:36:49.838164+00:00",
+  "actualMaintainedSourceEntryVerified": true,
+  "finishedUTC": "2026-10-24T13:44:01.404490+00:00"
+}

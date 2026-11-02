@@ -1,0 +1,665 @@
+{
+  "runtimeFreeze": {
+    "runtimeCommit": "55c2ecd184ea79b8b829a2a6486114cc964d497a",
+    "sourceHashes": {
+      "assets/boardwalk-wood.webp": "4d06022133e3772534374671fb73a4509ed109e1db6ca06a2d62a8c99c47ac6d",
+      "assets/compact-roe-deer.glb": "a89400df66033eb5eaa7f9bf13ccefaacfb866ab24e4576574d11965354ee619",
+      "assets/sky-panorama.webp": "46c360b491b11269d280e73ec0e71869afdfd62fb543b4250713234374a2f71d",
+      "assets/terrain-atlas.webp": "d637324d3ace6ef8e2c549e7f0a513efd1a4c06aab927f0ed1565bf77b2ced02",
+      "assets/wildlife-fox.glb": "61a4d1b845aa406928a327648417ae1c3982510b9c4e8ce33b7c494fbc98a22f",
+      "compact/catalog.js": "6b693d4c6a0f6b880b9ff99295826f3968e61ba96f52606997a1635ddf1fe39f",
+      "compact/coastal-behaviour.js": "39b1dcb8691cd48850321c4c734eabf0b2875b91a8cd09dcd7b571758b0f0927",
+      "compact/coastal-rig.js": "92a0270abdbf3aee7467e466cf344b08b8ef8bf5af4d903d3c672f9bcd4e2513",
+      "compact/comparison-views.js": "050f629dfc0b3b9bac1badc0c0564cfb08cf88e92006edcba377eabc623ecf82",
+      "compact/determination.js": "25f8ce960dba09ebeeb4470530d38608809bf98aa91d3575716b6ff835145c6f",
+      "compact/ecology.js": "e50f25a3146e79671472e7a5e6ed1d78f007564515bf9a78bb67fac9695ef8e0",
+      "compact/evidence.js": "1fb480ca90cebdba0b3178cc5ccbb121528826552ec32230b1c3245e808aa84f",
+      "compact/expanded-view.js": "b6201ad45f5a675fdf0d1092811fd8621c644ed9732e46fef51eb48e22ddb963",
+      "compact/fauna-view.js": "985a83582ff0ffac0e8d6ef20e2edc80a09b66e88f3768dd404f746507820feb",
+      "compact/geometry.js": "ac8a5e08a56f7ed75abb7a65baa6e20aba032984d7089e3b290d4769dd4307b0",
+      "compact/habitats.js": "10aad218dd69d51e842b59ef0164d9de8c0deaf30bc52d5165fc9ce317cde6c7",
+      "compact/inspection.js": "961c8c13e8e8e58595460fa40ed7bed0668367b120081dd95961a78ca87300ea",
+      "compact/journal.js": "a3acaef22c20529012509690d456d59f2739242eea1c58d38ba43aae410bb34f",
+      "compact/layout.js": "e02558557a9c99fa0549c94f8cbfc8873e18f3c90df845155d51ee4d404209a6",
+      "compact/learning-documents.js": "6e6bdf64274109550d7cf9fff8a182d207f258a59fde0285c9363989015a9de5",
+      "compact/learning-models.js": "078199d66bff5bd360c3010646c690dff92a58a160127204ba9fe9243a9a6d2e",
+      "compact/learning-ui.js": "e245840052fb77878de3abc55b4890ebcae96a76fe589155ab1d3dce5823e825",
+      "compact/lesson-layouts.js": "eec60d3c481ccfa0bf587f4213bdbe6847d75039934e4ecad149b1bd67adf3f2",
+      "compact/lesson-resources.js": "c650d8090445596c50be8cbd7a57d636d1f71c267fabd20fb5644f083923bbf8",
+      "compact/main.js": "9ba3c88ee948ae5829a64871f348ffd3fd499f2ef603ee68ee409d75ef0b742a",
+      "compact/management.js": "e6d38fbfc2c7e131d60ca3e38a1c740ca9ba5c49628fd3ba51ca94242d2d75a3",
+      "compact/manifest.js": "bdf071c610b896ffa14c41b33f9f17c5472199b55a6eb407f853e38178344cae",
+      "compact/materials.js": "b96c109d4a29a43223aa1f3c708af65f5d8258b03d3e43d5fa6d89100a799610",
+      "compact/missions.js": "55677975084e5dd4cc674ce0890305d0c3909fd82dce2241ec2b9526bd3147ee",
+      "compact/observation-schema.js": "962aecc5413eb0706a4000623af5b7f07742106bce51aacedcd3cb126195a5cd",
+      "compact/organism-models.js": "7cf080fb497a17d58ce4d1672ffc5cef12b7f2c033a336384e4aead7dfc27cb6",
+      "compact/path-mesh.js": "7a41ebc390aeca96cffd1e4fcee19f3b76310413fcee3489d1533ebd599a4c82",
+      "compact/style.css": "fa3e0391ced503e62691704482dfcd500f73e81aa43c0abb9559c0e7491b378b",
+      "compact/task-schema.js": "4ce4ca8e8f6c27182b3abe36d90d956fcbc6526d240911dbc996c53b670fc418",
+      "compact/taxa.js": "97cd6f5bad16208408512be876ebf63d5f9ee400dd31f94a61c8ca08e4e24fd3",
+      "compact/vegetation-view.js": "7e6f703c9a930a86dd2c9b202a79bf7842f4d1f41bf9a2a27d3ef24b3b22e47a",
+      "compact/village-view.js": "15d1902cbb96678503051ba0b11494d0ceea412dbc193f18bf16b0bfe9d91b03",
+      "compact/village.js": "05acf2a5ff040e4de2aaf2c3ebc3ee88daaf2edc75d12e80d49a5f54a60a3aec",
+      "compact/visibility.js": "50d59d44257e9d18547bfaec9277366d3339177c6ebce37d948b48c9940a86f1",
+      "compact/world-state.js": "360197f8bd8ab54c595386b66f2e676499630bc6ca896856034fba4910d9fd7f",
+      "compact/world-view.js": "4302cfa6e1600a6f9f2d62835c38b0d3e90ea232d9904c0559ae6936860f112a",
+      "field-guide.js": "72126f4e4560fceb95e64fbd35799de0dafefaf65683625f76a5d949d05cbe07",
+      "icon.svg": "cb8cda889f99e56d13d18e09929837b7c3630d3f9ff3219316d12d3077fc0869",
+      "kompakt.html": "781393f0611a24e8ce757e87124a6347c28f21c1132689c6e198cf421ccd6aa4",
+      "observation-clock.js": "2304e6c425192967f87841caa5072873cb5dd5c7f69c38fb45b237fd22f98b03",
+      "ranger-controls.js": "081497a5f6754ecd441e61ee55805da99b5121e96215cfa900209e00e41e5eda",
+      "station-protocol.js": "2590df7d9de4c8f4afda8fcafd619d565440c2dc7e1bb6ef4574aeadf803ae57",
+      "vendor/three.core.js": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20",
+      "vendor/three.module.js": "2884e2e6f26feaec0b454fcdc1e98c27d6433ba15253e5a3e22e111df81686fa",
+      "wildlife-glb.js": "32f8f947dd002ba7b571ee627e6291fa40a951fccdd9dee644661f19de487c35"
+    },
+    "scope": "Following documentation/evidence/tool commits must leave these exact application files unchanged."
+  },
+  "collectedAtCommit": "636f669bfb040e6011dc723ec35bf3d90fac3711",
+  "browserPlan": {
+    "sourceCommit": "55c2ecd184ea79b8b829a2a6486114cc964d497a",
+    "checks": [
+      {
+        "name": "feeding",
+        "command": [
+          "/workspace/.ranger-clean-venv/bin/python",
+          "tools/browser-compact-feeding.py",
+          "--output",
+          "work/qa-correction/final-feeding"
+        ],
+        "exitCode": 0,
+        "passed": true,
+        "seconds": 269.49,
+        "log": "feeding.log"
+      },
+      {
+        "name": "learning-web",
+        "command": [
+          "/workspace/.ranger-clean-venv/bin/python",
+          "tools/browser-compact-learning.py",
+          "--gallery"
+        ],
+        "exitCode": 0,
+        "passed": true,
+        "seconds": 779.29,
+        "log": "learning-web.log"
+      },
+      {
+        "name": "source",
+        "command": [
+          "/workspace/.ranger-clean-venv/bin/python",
+          "tools/browser-compact-source.py"
+        ],
+        "exitCode": 0,
+        "passed": true,
+        "seconds": 36.98,
+        "log": "source.log"
+      },
+      {
+        "name": "reference",
+        "command": [
+          "/workspace/.ranger-clean-venv/bin/python",
+          "tools/browser-compact.py"
+        ],
+        "exitCode": 0,
+        "passed": true,
+        "seconds": 702.78,
+        "log": "reference.log"
+      },
+      {
+        "name": "standalone-smoke",
+        "command": [
+          "/workspace/.ranger-clean-venv/bin/python",
+          "tools/browser-compact.py",
+          "--site",
+          "outputs",
+          "--entry",
+          "Ranger-Kompakt.html",
+          "--smoke"
+        ],
+        "exitCode": 0,
+        "passed": true,
+        "seconds": 189.17,
+        "log": "standalone-smoke.log"
+      },
+      {
+        "name": "learning-standalone",
+        "command": [
+          "/workspace/.ranger-clean-venv/bin/python",
+          "tools/browser-compact-learning.py",
+          "--site",
+          "outputs",
+          "--entry",
+          "Ranger-Kompakt.html",
+          "--output",
+          "work/compact-learning-standalone"
+        ],
+        "exitCode": 0,
+        "passed": true,
+        "seconds": 335.97,
+        "log": "learning-standalone.log"
+      },
+      {
+        "name": "imports",
+        "command": [
+          "/workspace/.ranger-clean-venv/bin/python",
+          "tools/browser-compact-imports.py",
+          "--output",
+          "work/qa-correction/final-imports"
+        ],
+        "exitCode": 0,
+        "passed": true,
+        "seconds": 96.39,
+        "log": "imports.log"
+      },
+      {
+        "name": "habitats",
+        "command": [
+          "/workspace/.ranger-clean-venv/bin/python",
+          "tools/browser-compact-habitats.py",
+          "--output",
+          "work/qa-correction/final-habitats"
+        ],
+        "exitCode": 0,
+        "passed": true,
+        "seconds": 461.84,
+        "log": "habitats.log"
+      },
+      {
+        "name": "materials",
+        "command": [
+          "/workspace/.ranger-clean-venv/bin/python",
+          "tools/print-compact-materials.py"
+        ],
+        "exitCode": 0,
+        "passed": true,
+        "seconds": 3.79,
+        "log": "materials.log"
+      },
+      {
+        "name": "stability",
+        "command": [
+          "/workspace/.ranger-clean-venv/bin/python",
+          "tools/browser-compact-stability.py"
+        ],
+        "exitCode": 1,
+        "passed": false,
+        "seconds": 951.54,
+        "log": "stability.log"
+      },
+      {
+        "name": "legacy-full",
+        "command": [
+          "/workspace/.ranger-clean-venv/bin/python",
+          "tools/browser-check.py",
+          "--live",
+          "--resilience",
+          "--width",
+          "800",
+          "--height",
+          "500",
+          "--site",
+          "outputs/GitHub-Pages",
+          "--prefix",
+          "/Ein-Tag-als-Ranger/"
+        ],
+        "exitCode": 1,
+        "passed": false,
+        "seconds": 1291.97,
+        "log": "legacy-full.log"
+      },
+      {
+        "name": "legacy-standalone",
+        "command": [
+          "/workspace/.ranger-clean-venv/bin/python",
+          "tools/browser-check.py",
+          "--smoke",
+          "--width",
+          "800",
+          "--height",
+          "500",
+          "--site",
+          "outputs",
+          "--entry",
+          "Feldbuch.html"
+        ],
+        "exitCode": 1,
+        "passed": false,
+        "seconds": 186.47,
+        "log": "legacy-standalone.log"
+      }
+    ],
+    "complete": true
+  },
+  "browserReruns": {
+    "checks": [
+      {
+        "name": "stability",
+        "command": [
+          "/workspace/.ranger-clean-venv/bin/python",
+          "tools/browser-compact-stability.py"
+        ],
+        "exitCode": 1,
+        "passed": false,
+        "seconds": 1509.48,
+        "log": "stability-recheck.log",
+        "reason": "Old 517.51-s measurement failed at locator actionability; new complete native-pointer/hit-checked run, unchanged1200s minimum and all resource/identity assertions. Original failed run preserved."
+      },
+      {
+        "name": "legacy-m3-profile",
+        "command": [
+          "/workspace/.ranger-clean-venv/bin/python",
+          "tools/browser-check.py",
+          "--live",
+          "--live-mission",
+          "m3",
+          "--resilience",
+          "--width",
+          "600",
+          "--height",
+          "375",
+          "--site",
+          "outputs/GitHub-Pages",
+          "--prefix",
+          "/Ein-Tag-als-Ranger/"
+        ],
+        "exitCode": 1,
+        "passed": false,
+        "seconds": 513.78,
+        "log": "legacy-m3-recheck.log",
+        "scope": "Separate600x375 actual M3+UI/resilience, same6modelseconds/180s. Full800x500 failure retained, never overwritten by this smaller profile."
+      },
+      {
+        "name": "legacy-standalone",
+        "command": [
+          "/workspace/.ranger-clean-venv/bin/python",
+          "tools/browser-check.py",
+          "--smoke",
+          "--width",
+          "800",
+          "--height",
+          "500",
+          "--site",
+          "outputs",
+          "--entry",
+          "Feldbuch.html"
+        ],
+        "exitCode": 0,
+        "passed": true,
+        "seconds": 267.77,
+        "log": "legacy-single-recheck.log",
+        "reason": "Original profile800x500; only pointer path after deferred photograph corrected with explicit scrolling, physical hit test and closed-dialog assertion. All original assertions/time limits retained."
+      },
+      {
+        "name": "stability",
+        "command": [
+          "/workspace/.ranger-clean-venv/bin/python",
+          "tools/browser-compact-stability.py"
+        ],
+        "exitCode": 0,
+        "passed": true,
+        "seconds": 1538.74,
+        "log": "stability-final-recheck.log",
+        "reason": "Previous run reached1208.95 measured seconds but post-check used an invalid CSS hidden selector. Replaced with regular locator.wait_for(state=hidden); full warmup plus1200-second minimum and every resource/identity/context assertion executed again. Failed attempts retained."
+      },
+      {
+        "name": "legacy-ui-resilience",
+        "command": [
+          "/workspace/.ranger-clean-venv/bin/python",
+          "tools/browser-check.py",
+          "--resilience",
+          "--width",
+          "800",
+          "--height",
+          "500",
+          "--site",
+          "outputs/GitHub-Pages",
+          "--prefix",
+          "/Ein-Tag-als-Ranger/"
+        ],
+        "exitCode": 0,
+        "passed": true,
+        "seconds": 894.14,
+        "log": "legacy-ui-recheck.log",
+        "scope": "Regular existing browser UI/import/export/storage/resilience checks with labelled mission fixtures. No actual live M3 completion inferred. Original live800x500 failure preserved."
+      }
+    ]
+  },
+  "latestBrowserChecks": {
+    "feeding": {
+      "name": "feeding",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-feeding.py",
+        "--output",
+        "work/qa-correction/final-feeding"
+      ],
+      "exitCode": 0,
+      "passed": true,
+      "seconds": 269.49,
+      "log": "feeding.log"
+    },
+    "learning-web": {
+      "name": "learning-web",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-learning.py",
+        "--gallery"
+      ],
+      "exitCode": 0,
+      "passed": true,
+      "seconds": 779.29,
+      "log": "learning-web.log"
+    },
+    "source": {
+      "name": "source",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-source.py"
+      ],
+      "exitCode": 0,
+      "passed": true,
+      "seconds": 36.98,
+      "log": "source.log"
+    },
+    "reference": {
+      "name": "reference",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact.py"
+      ],
+      "exitCode": 0,
+      "passed": true,
+      "seconds": 702.78,
+      "log": "reference.log"
+    },
+    "standalone-smoke": {
+      "name": "standalone-smoke",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact.py",
+        "--site",
+        "outputs",
+        "--entry",
+        "Ranger-Kompakt.html",
+        "--smoke"
+      ],
+      "exitCode": 0,
+      "passed": true,
+      "seconds": 189.17,
+      "log": "standalone-smoke.log"
+    },
+    "learning-standalone": {
+      "name": "learning-standalone",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-learning.py",
+        "--site",
+        "outputs",
+        "--entry",
+        "Ranger-Kompakt.html",
+        "--output",
+        "work/compact-learning-standalone"
+      ],
+      "exitCode": 0,
+      "passed": true,
+      "seconds": 335.97,
+      "log": "learning-standalone.log"
+    },
+    "imports": {
+      "name": "imports",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-imports.py",
+        "--output",
+        "work/qa-correction/final-imports"
+      ],
+      "exitCode": 0,
+      "passed": true,
+      "seconds": 96.39,
+      "log": "imports.log"
+    },
+    "habitats": {
+      "name": "habitats",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-habitats.py",
+        "--output",
+        "work/qa-correction/final-habitats"
+      ],
+      "exitCode": 0,
+      "passed": true,
+      "seconds": 461.84,
+      "log": "habitats.log"
+    },
+    "materials": {
+      "name": "materials",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/print-compact-materials.py"
+      ],
+      "exitCode": 0,
+      "passed": true,
+      "seconds": 3.79,
+      "log": "materials.log"
+    },
+    "stability": {
+      "name": "stability",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-compact-stability.py"
+      ],
+      "exitCode": 0,
+      "passed": true,
+      "seconds": 1538.74,
+      "log": "stability-final-recheck.log",
+      "reason": "Previous run reached1208.95 measured seconds but post-check used an invalid CSS hidden selector. Replaced with regular locator.wait_for(state=hidden); full warmup plus1200-second minimum and every resource/identity/context assertion executed again. Failed attempts retained."
+    },
+    "legacy-full": {
+      "name": "legacy-full",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-check.py",
+        "--live",
+        "--resilience",
+        "--width",
+        "800",
+        "--height",
+        "500",
+        "--site",
+        "outputs/GitHub-Pages",
+        "--prefix",
+        "/Ein-Tag-als-Ranger/"
+      ],
+      "exitCode": 1,
+      "passed": false,
+      "seconds": 1291.97,
+      "log": "legacy-full.log"
+    },
+    "legacy-standalone": {
+      "name": "legacy-standalone",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-check.py",
+        "--smoke",
+        "--width",
+        "800",
+        "--height",
+        "500",
+        "--site",
+        "outputs",
+        "--entry",
+        "Feldbuch.html"
+      ],
+      "exitCode": 0,
+      "passed": true,
+      "seconds": 267.77,
+      "log": "legacy-single-recheck.log",
+      "reason": "Original profile800x500; only pointer path after deferred photograph corrected with explicit scrolling, physical hit test and closed-dialog assertion. All original assertions/time limits retained."
+    },
+    "legacy-m3-profile": {
+      "name": "legacy-m3-profile",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-check.py",
+        "--live",
+        "--live-mission",
+        "m3",
+        "--resilience",
+        "--width",
+        "600",
+        "--height",
+        "375",
+        "--site",
+        "outputs/GitHub-Pages",
+        "--prefix",
+        "/Ein-Tag-als-Ranger/"
+      ],
+      "exitCode": 1,
+      "passed": false,
+      "seconds": 513.78,
+      "log": "legacy-m3-recheck.log",
+      "scope": "Separate600x375 actual M3+UI/resilience, same6modelseconds/180s. Full800x500 failure retained, never overwritten by this smaller profile."
+    },
+    "legacy-ui-resilience": {
+      "name": "legacy-ui-resilience",
+      "command": [
+        "/workspace/.ranger-clean-venv/bin/python",
+        "tools/browser-check.py",
+        "--resilience",
+        "--width",
+        "800",
+        "--height",
+        "500",
+        "--site",
+        "outputs/GitHub-Pages",
+        "--prefix",
+        "/Ein-Tag-als-Ranger/"
+      ],
+      "exitCode": 0,
+      "passed": true,
+      "seconds": 894.14,
+      "log": "legacy-ui-recheck.log",
+      "scope": "Regular existing browser UI/import/export/storage/resilience checks with labelled mission fixtures. No actual live M3 completion inferred. Original live800x500 failure preserved."
+    }
+  },
+  "allLatestBrowserChecksPassed": false,
+  "stabilityMeasurementSeconds": 1207.89,
+  "stabilityIncludingPostchecksSeconds": 1223.5,
+  "node": {
+    "legacySuites": 26,
+    "legacyPassed": 26,
+    "compactSuites": [
+      {
+        "name": "kompakt",
+        "exitCode": 0,
+        "passed": true,
+        "seconds": 1.77,
+        "log": "kompakt.log"
+      },
+      {
+        "name": "compact-learning",
+        "exitCode": 0,
+        "passed": true,
+        "seconds": 5.69,
+        "log": "compact-learning.log"
+      },
+      {
+        "name": "compact-qa",
+        "exitCode": 0,
+        "passed": true,
+        "seconds": 0.32,
+        "log": "compact-qa.log"
+      },
+      {
+        "name": "compact-coastal",
+        "exitCode": 0,
+        "passed": true,
+        "seconds": 18.17,
+        "log": "compact-coastal.log"
+      },
+      {
+        "name": "compact-habitat",
+        "exitCode": 0,
+        "passed": true,
+        "seconds": 1.44,
+        "log": "compact-habitat.log"
+      },
+      {
+        "name": "compact-pedagogy",
+        "exitCode": 0,
+        "passed": true,
+        "seconds": 0.42,
+        "log": "compact-pedagogy.log"
+      }
+    ],
+    "compactGroups": {
+      "kompakt": 14,
+      "compact-learning": 34,
+      "compact-qa": 9,
+      "compact-coastal": 5,
+      "compact-habitat": 6,
+      "compact-pedagogy": 8
+    },
+    "compactGroupCount": 76
+  },
+  "pythonMethods": 9,
+  "pythonPassed": true,
+  "reportCountsByUnit": {
+    "source": {
+      "checkBlocks": 2,
+      "feedingSequences": 0,
+      "durationSamples": 0,
+      "captures": 0
+    },
+    "reference": {
+      "checkBlocks": 18,
+      "feedingSequences": 0,
+      "durationSamples": 0,
+      "captures": 18
+    },
+    "standalone": {
+      "checkBlocks": 5,
+      "feedingSequences": 0,
+      "durationSamples": 0,
+      "captures": 13
+    },
+    "learning-web": {
+      "checkBlocks": 18,
+      "feedingSequences": 0,
+      "durationSamples": 0,
+      "captures": 46
+    },
+    "learning-standalone": {
+      "checkBlocks": 17,
+      "feedingSequences": 0,
+      "durationSamples": 0,
+      "captures": 9
+    },
+    "stability": {
+      "checkBlocks": 0,
+      "feedingSequences": 0,
+      "durationSamples": 68,
+      "captures": 0
+    },
+    "feeding": {
+      "checkBlocks": 0,
+      "feedingSequences": 4,
+      "durationSamples": 0,
+      "captures": 0
+    },
+    "habitats": {
+      "checkBlocks": 6,
+      "feedingSequences": 0,
+      "durationSamples": 0,
+      "captures": 26
+    }
+  },
+  "scope": "Only the executed property is proved. No original independent QA archive or physical Apple/iPad/Safari test. No automatic grade of open arguments or classroom learning effect.",
+  "notChecked": [
+    "F12: no description provided",
+    "Physical iPad 9 / Safari / iPadOS 27",
+    "Independent biological/visual final review",
+    "Classroom pilot and teaching effect"
+  ]
+}

@@ -1,0 +1,184 @@
+[
+  {
+    "check": "living-world",
+    "passed": true,
+    "exitCode": 0,
+    "seconds": 16.7,
+    "error": ""
+  },
+  {
+    "check": "ranger",
+    "passed": true,
+    "exitCode": 0,
+    "seconds": 7.7,
+    "error": ""
+  },
+  {
+    "check": "scenario",
+    "passed": true,
+    "exitCode": 0,
+    "seconds": 16.4,
+    "error": ""
+  },
+  {
+    "check": "behavior",
+    "passed": true,
+    "exitCode": 0,
+    "seconds": 43.4,
+    "error": ""
+  },
+  {
+    "check": "quest",
+    "passed": true,
+    "exitCode": 0,
+    "seconds": 3.4,
+    "error": ""
+  },
+  {
+    "check": "regional-evolution",
+    "passed": true,
+    "exitCode": 0,
+    "seconds": 47.5,
+    "error": ""
+  },
+  {
+    "check": "world",
+    "passed": true,
+    "exitCode": 0,
+    "seconds": 11.2,
+    "error": ""
+  },
+  {
+    "check": "observation",
+    "passed": true,
+    "exitCode": 0,
+    "seconds": 0.2,
+    "error": ""
+  },
+  {
+    "check": "coast-performance",
+    "passed": true,
+    "exitCode": 0,
+    "seconds": 7.2,
+    "error": ""
+  },
+  {
+    "check": "live-experiment",
+    "passed": true,
+    "exitCode": 0,
+    "seconds": 19.8,
+    "error": ""
+  },
+  {
+    "check": "locomotion",
+    "passed": true,
+    "exitCode": 0,
+    "seconds": 14.8,
+    "error": ""
+  },
+  {
+    "check": "village-barrier",
+    "passed": true,
+    "exitCode": 0,
+    "seconds": 4.5,
+    "error": ""
+  },
+  {
+    "check": "route-birds",
+    "passed": true,
+    "exitCode": 0,
+    "seconds": 22.0,
+    "error": ""
+  },
+  {
+    "check": "ranger-usability",
+    "passed": true,
+    "exitCode": 0,
+    "seconds": 6.1,
+    "error": ""
+  },
+  {
+    "check": "fidelity",
+    "passed": true,
+    "exitCode": 0,
+    "seconds": 7.6,
+    "error": ""
+  },
+  {
+    "check": "web-performance",
+    "passed": true,
+    "exitCode": 0,
+    "seconds": 0.1,
+    "error": ""
+  },
+  {
+    "check": "render-retention",
+    "passed": true,
+    "exitCode": 0,
+    "seconds": 0.3,
+    "error": ""
+  },
+  {
+    "check": "avian-anatomy",
+    "passed": true,
+    "exitCode": 0,
+    "seconds": 0.5,
+    "error": ""
+  },
+  {
+    "check": "ranger-session",
+    "passed": true,
+    "exitCode": 0,
+    "seconds": 0.1,
+    "error": ""
+  },
+  {
+    "check": "authored-wildlife",
+    "passed": true,
+    "exitCode": 0,
+    "seconds": 0.4,
+    "error": ""
+  },
+  {
+    "check": "evidence-regression",
+    "passed": true,
+    "exitCode": 0,
+    "seconds": 0.2,
+    "error": ""
+  },
+  {
+    "check": "catalogue-audit",
+    "passed": true,
+    "exitCode": 0,
+    "seconds": 0.1,
+    "error": ""
+  },
+  {
+    "check": "compact-world",
+    "passed": true,
+    "exitCode": 0,
+    "seconds": 12.4,
+    "error": ""
+  },
+  {
+    "check": "learning-missions",
+    "passed": true,
+    "exitCode": 0,
+    "seconds": 0.1,
+    "error": ""
+  },
+  {
+    "check": "mission-runtime",
+    "passed": true,
+    "exitCode": 0,
+    "seconds": 3.9,
+    "error": ""
+  },
+  {
+    "check": "field",
+    "passed": true,
+    "exitCode": 0,
+    "seconds": 79.3,
+    "error": ""
+  }
+]

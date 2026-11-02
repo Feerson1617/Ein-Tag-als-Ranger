@@ -1,0 +1,696 @@
+{
+  "sourceCommit": "e9899efaa314d052191d7d3a95b5de904f2932b6",
+  "reviewedUTC": "2026-10-24T11:18:16.885598+00:00",
+  "scope": "Own actual visual review: all five full-pool contact sheets (39+59 pages), all six short-document pages at readable resolution, all nine C17 pages and four adjacent C16/C18 pages at readable resolution. Overview check is not full scientific reassessment of every card or a classroom handwriting test.",
+  "passedWithinScope": true,
+  "findings": [
+    "No clipped table/body text or isolated feedback line observed. Short guides remain exactly two pages each.",
+    "C17 source, six-week conditioning versus separate spawning,12-of100 denominator and event mean correctly legible. No natural annual fecundity inferred.",
+    "Student writing fields retained; actual pupil usability and90-minute timings remain untested."
+  ],
+  "pageCount": 104,
+  "contactSheetsActuallyViewed": [
+    {
+      "file": "print/Lehrkraefte-contact-03.png",
+      "sha256": "49bd0db6d733add7837ddd67ec9e10752ceadf4078830afcaed2e3d2814ca973"
+    },
+    {
+      "file": "print/Lehrkraefte-contact-02.png",
+      "sha256": "876cf87df27dd33fa2107300a45e638796879a333c26c97c6effad5b14119889"
+    },
+    {
+      "file": "print/Arbeitsblaetter-contact-02.png",
+      "sha256": "a6efb654ce6e8137be32e1b1cc370d64f43c9a512924e2d9ff5394cdf02f65e4"
+    },
+    {
+      "file": "print/Lehrkraefte-contact-01.png",
+      "sha256": "9f3a183acc206d39c0020d79f8ae4248d806d9f69d4359129c10310973b49f98"
+    },
+    {
+      "file": "print/Arbeitsblaetter-contact-01.png",
+      "sha256": "9eff8e6d87a908f4f2c543a5fec664e2438e44cc1d8c94fc32d3d2cca2416236"
+    },
+    {
+      "file": "print/PFAD-B-Kuestenvoegel-contact.png",
+      "sha256": "b4c59e75799c0431b0b0f87a2409a0d091b3f0885ec3e4db2c63cdc2b68f8943"
+    },
+    {
+      "file": "print/START-IM-UNTERRICHT-contact.png",
+      "sha256": "3b7bf0d372526080e9d23e2d3aefd8cdcad588bc1390949572290c949fb61714"
+    },
+    {
+      "file": "print/PFAD-A-Artenliste-contact.png",
+      "sha256": "120cff57236aa97ad8ee87e3974c8986a85b27596bad41760878e5d7167ca84b"
+    }
+  ],
+  "readablePagesActuallyViewed": [
+    {
+      "file": "print/START-IM-UNTERRICHT-pages/page-1.png",
+      "sha256": "84fe2e530e9e0d34d76cdbcc3667879bc7ead589d7b2073680a508c72639ee68"
+    },
+    {
+      "file": "print/START-IM-UNTERRICHT-pages/page-2.png",
+      "sha256": "9f13aeeddb4938950519b7d51d659d662b7beb3e9cae54a857da612be3a1b2d9"
+    },
+    {
+      "file": "print/PFAD-A-Artenliste-pages/page-1.png",
+      "sha256": "2d29543cbc596c0f9afefa7f267620e9f03b001c9360f724ef335430e5a79f30"
+    },
+    {
+      "file": "print/PFAD-A-Artenliste-pages/page-2.png",
+      "sha256": "c4fdc547edfc60be725ec980a2455f69527772c012661bb86018de4aaa70554a"
+    },
+    {
+      "file": "print/PFAD-B-Kuestenvoegel-pages/page-1.png",
+      "sha256": "c22fed45d243caca5658db8735499df4443b8b61d3d4d711de7dca57d8a4414a"
+    },
+    {
+      "file": "print/PFAD-B-Kuestenvoegel-pages/page-2.png",
+      "sha256": "6ac99a03b1d35bb30cc52262d9d60a140ab6aa92c37ad58b7420f073fc3b52fb"
+    },
+    {
+      "file": "print/Arbeitsblaetter-pages/page-23.png",
+      "sha256": "98f1d74402b0b4b61aa0724afe967becb1427ced5a5db9b0247c6f5bd523b966"
+    },
+    {
+      "file": "print/Arbeitsblaetter-pages/page-24.png",
+      "sha256": "b455a8cfee1ff2bcc911bb42cba9aa9a3c6c36c0d6e0b074ea06787aedd8aec3"
+    },
+    {
+      "file": "print/Arbeitsblaetter-pages/page-25.png",
+      "sha256": "d22acbc21ce194c8a0d978701834f63c52a1b497532573e62041cb098bcbbb97"
+    },
+    {
+      "file": "print/Arbeitsblaetter-pages/page-26.png",
+      "sha256": "239f4a1598c4911094d39dac76230b20e39b608da91fa4f50006647707ee3bd6"
+    },
+    {
+      "file": "print/Arbeitsblaetter-pages/page-27.png",
+      "sha256": "3f6884e3c40522f235ba5aa9cdd4bbb0c51418a63cf9d0533fce397b356feba6"
+    },
+    {
+      "file": "print/Arbeitsblaetter-pages/page-28.png",
+      "sha256": "f709b32eb9cb292d5b210123340049e934fc17b0ca65ed07eefcacc4fdcafb59"
+    },
+    {
+      "file": "print/Lehrkraefte-pages/page-35.png",
+      "sha256": "2a6c1d1d26b41cd22ff5a178c5b0dbe687b120818d4b20d2b3e9b0bb4bb87ce9"
+    },
+    {
+      "file": "print/Lehrkraefte-pages/page-36.png",
+      "sha256": "f046c92de1a76c05d84e5b8d5f56b6e4876534ac04ad4e9b46bde00e2106364d"
+    },
+    {
+      "file": "print/Lehrkraefte-pages/page-37.png",
+      "sha256": "e9f51810798c2c0679975ee080d06e3fdac244e0cfd168471215c8382a57f1f0"
+    },
+    {
+      "file": "print/Lehrkraefte-pages/page-38.png",
+      "sha256": "623c14021fe0501a058e8f9235d6775d0eeebb2dfa9c141215c909d62a50ddd4"
+    },
+    {
+      "file": "print/Lehrkraefte-pages/page-39.png",
+      "sha256": "c83015c3f18afc6940a1aa97d882e22525cf25fd7651f11038b685fc800f6984"
+    },
+    {
+      "file": "print/Lehrkraefte-pages/page-40.png",
+      "sha256": "3aeac2c5a492b98ca5dc9016a3f508ba30f71cb8165b0b58ed668c490a239efa"
+    },
+    {
+      "file": "print/Lehrkraefte-pages/page-41.png",
+      "sha256": "ed14b43b64d306afcd248e30c50a8b6bcfea016850f8c0ea025bc37064be754b"
+    }
+  ],
+  "PDFs": {
+    "Arbeitsblaetter.pdf": "593fcadb5c63ba77a64e4f9743a72bec1ccacb8cf832c585a66c761fad718a0b",
+    "Lehrkraefte.pdf": "950ecab7588e9a9e2a18d51abb686c9a3782732ace686346be313d4963731e24",
+    "PFAD-A-Artenliste.pdf": "51ba13aaea741e8e019cb7ad3456e91ab71db96adbd6aaeed53c7856ef8cf8eb",
+    "START-IM-UNTERRICHT.pdf": "08be678fdf046d5942265c9598c68c93a0061a76ac6d637ef878dbb1013e0b38",
+    "PFAD-B-Kuestenvoegel.pdf": "8d99100d86b9769f34d0ee908869e93ef7267abff5fe0372ac30c633effdb473"
+  },
+  "actualVisualReviewSourceCommit": "9804e4481ea97aa8039da608d6a7b524d3a27562",
+  "boundUTC": "2026-10-24T11:52:10.107725+00:00",
+  "newReviewMethod": "All112 fresh print rasters are byte-identical to the already actually reviewed original freeze. Original viewing date and scope retained; this is an exact image binding, not a second manual viewing.",
+  "allFreshRasterBindings": {
+    "Lehrkraefte-contact-03.png": {
+      "oldSHA256": "49bd0db6d733add7837ddd67ec9e10752ceadf4078830afcaed2e3d2814ca973",
+      "newSHA256": "49bd0db6d733add7837ddd67ec9e10752ceadf4078830afcaed2e3d2814ca973",
+      "byteIdentical": true
+    },
+    "Lehrkraefte-contact-02.png": {
+      "oldSHA256": "876cf87df27dd33fa2107300a45e638796879a333c26c97c6effad5b14119889",
+      "newSHA256": "876cf87df27dd33fa2107300a45e638796879a333c26c97c6effad5b14119889",
+      "byteIdentical": true
+    },
+    "Arbeitsblaetter-contact-02.png": {
+      "oldSHA256": "a6efb654ce6e8137be32e1b1cc370d64f43c9a512924e2d9ff5394cdf02f65e4",
+      "newSHA256": "a6efb654ce6e8137be32e1b1cc370d64f43c9a512924e2d9ff5394cdf02f65e4",
+      "byteIdentical": true
+    },
+    "Lehrkraefte-contact-01.png": {
+      "oldSHA256": "9f3a183acc206d39c0020d79f8ae4248d806d9f69d4359129c10310973b49f98",
+      "newSHA256": "9f3a183acc206d39c0020d79f8ae4248d806d9f69d4359129c10310973b49f98",
+      "byteIdentical": true
+    },
+    "Arbeitsblaetter-contact-01.png": {
+      "oldSHA256": "9eff8e6d87a908f4f2c543a5fec664e2438e44cc1d8c94fc32d3d2cca2416236",
+      "newSHA256": "9eff8e6d87a908f4f2c543a5fec664e2438e44cc1d8c94fc32d3d2cca2416236",
+      "byteIdentical": true
+    },
+    "PFAD-B-Kuestenvoegel-contact.png": {
+      "oldSHA256": "b4c59e75799c0431b0b0f87a2409a0d091b3f0885ec3e4db2c63cdc2b68f8943",
+      "newSHA256": "b4c59e75799c0431b0b0f87a2409a0d091b3f0885ec3e4db2c63cdc2b68f8943",
+      "byteIdentical": true
+    },
+    "START-IM-UNTERRICHT-contact.png": {
+      "oldSHA256": "3b7bf0d372526080e9d23e2d3aefd8cdcad588bc1390949572290c949fb61714",
+      "newSHA256": "3b7bf0d372526080e9d23e2d3aefd8cdcad588bc1390949572290c949fb61714",
+      "byteIdentical": true
+    },
+    "PFAD-A-Artenliste-contact.png": {
+      "oldSHA256": "120cff57236aa97ad8ee87e3974c8986a85b27596bad41760878e5d7167ca84b",
+      "newSHA256": "120cff57236aa97ad8ee87e3974c8986a85b27596bad41760878e5d7167ca84b",
+      "byteIdentical": true
+    },
+    "START-IM-UNTERRICHT-pages/page-2.png": {
+      "oldSHA256": "9f13aeeddb4938950519b7d51d659d662b7beb3e9cae54a857da612be3a1b2d9",
+      "newSHA256": "9f13aeeddb4938950519b7d51d659d662b7beb3e9cae54a857da612be3a1b2d9",
+      "byteIdentical": true
+    },
+    "START-IM-UNTERRICHT-pages/page-1.png": {
+      "oldSHA256": "84fe2e530e9e0d34d76cdbcc3667879bc7ead589d7b2073680a508c72639ee68",
+      "newSHA256": "84fe2e530e9e0d34d76cdbcc3667879bc7ead589d7b2073680a508c72639ee68",
+      "byteIdentical": true
+    },
+    "PFAD-A-Artenliste-pages/page-2.png": {
+      "oldSHA256": "c4fdc547edfc60be725ec980a2455f69527772c012661bb86018de4aaa70554a",
+      "newSHA256": "c4fdc547edfc60be725ec980a2455f69527772c012661bb86018de4aaa70554a",
+      "byteIdentical": true
+    },
+    "PFAD-A-Artenliste-pages/page-1.png": {
+      "oldSHA256": "2d29543cbc596c0f9afefa7f267620e9f03b001c9360f724ef335430e5a79f30",
+      "newSHA256": "2d29543cbc596c0f9afefa7f267620e9f03b001c9360f724ef335430e5a79f30",
+      "byteIdentical": true
+    },
+    "Arbeitsblaetter-pages/page-34.png": {
+      "oldSHA256": "1f31c2f4867cd2e395471ba2282a48404c8f29dca197cb38d8bdac83f60eb159",
+      "newSHA256": "1f31c2f4867cd2e395471ba2282a48404c8f29dca197cb38d8bdac83f60eb159",
+      "byteIdentical": true
+    },
+    "Arbeitsblaetter-pages/page-09.png": {
+      "oldSHA256": "f35995d394f7d0c0fffc08f1614429ba960b0c4d4085dd3d560b6d03c1ceddd9",
+      "newSHA256": "f35995d394f7d0c0fffc08f1614429ba960b0c4d4085dd3d560b6d03c1ceddd9",
+      "byteIdentical": true
+    },
+    "Arbeitsblaetter-pages/page-21.png": {
+      "oldSHA256": "8a3498b8e12fa540db47b64ed25ecf84c0fd2b213e131e5d53b62dba64f3ad46",
+      "newSHA256": "8a3498b8e12fa540db47b64ed25ecf84c0fd2b213e131e5d53b62dba64f3ad46",
+      "byteIdentical": true
+    },
+    "Arbeitsblaetter-pages/page-13.png": {
+      "oldSHA256": "48d114d5690b237dc10fde36bf75a6c808e077127ec76d09a98026f9584c9395",
+      "newSHA256": "48d114d5690b237dc10fde36bf75a6c808e077127ec76d09a98026f9584c9395",
+      "byteIdentical": true
+    },
+    "Arbeitsblaetter-pages/page-17.png": {
+      "oldSHA256": "e3efe282c59afa9c8f052d2f29593d81ee0318580e7b69882b580c56488e1a85",
+      "newSHA256": "e3efe282c59afa9c8f052d2f29593d81ee0318580e7b69882b580c56488e1a85",
+      "byteIdentical": true
+    },
+    "Arbeitsblaetter-pages/page-29.png": {
+      "oldSHA256": "2191a7e7f4e59e1f9147bda7b288cf49a7031b1f33f940691713fb65f4de9d68",
+      "newSHA256": "2191a7e7f4e59e1f9147bda7b288cf49a7031b1f33f940691713fb65f4de9d68",
+      "byteIdentical": true
+    },
+    "Arbeitsblaetter-pages/page-28.png": {
+      "oldSHA256": "f709b32eb9cb292d5b210123340049e934fc17b0ca65ed07eefcacc4fdcafb59",
+      "newSHA256": "f709b32eb9cb292d5b210123340049e934fc17b0ca65ed07eefcacc4fdcafb59",
+      "byteIdentical": true
+    },
+    "Arbeitsblaetter-pages/page-05.png": {
+      "oldSHA256": "d71645e8f49accc7ebf1afc55416c84891b89e34c05be49cd7ab43c520f097aa",
+      "newSHA256": "d71645e8f49accc7ebf1afc55416c84891b89e34c05be49cd7ab43c520f097aa",
+      "byteIdentical": true
+    },
+    "Arbeitsblaetter-pages/page-36.png": {
+      "oldSHA256": "5dd17c6c12e2870a6dfd18e2fb842e64d736fe65fa6813a9ff71c01e0d154d64",
+      "newSHA256": "5dd17c6c12e2870a6dfd18e2fb842e64d736fe65fa6813a9ff71c01e0d154d64",
+      "byteIdentical": true
+    },
+    "Arbeitsblaetter-pages/page-15.png": {
+      "oldSHA256": "6b6d81c37a8efe9f3576e8ec8de4537d35252c3c2beecbc3097106dd330e3f66",
+      "newSHA256": "6b6d81c37a8efe9f3576e8ec8de4537d35252c3c2beecbc3097106dd330e3f66",
+      "byteIdentical": true
+    },
+    "Arbeitsblaetter-pages/page-37.png": {
+      "oldSHA256": "ed7d5bf8f0fc13ab5d3a4003c2319de8dca76c9245a78133fcfca7f5db15248b",
+      "newSHA256": "ed7d5bf8f0fc13ab5d3a4003c2319de8dca76c9245a78133fcfca7f5db15248b",
+      "byteIdentical": true
+    },
+    "Arbeitsblaetter-pages/page-24.png": {
+      "oldSHA256": "b455a8cfee1ff2bcc911bb42cba9aa9a3c6c36c0d6e0b074ea06787aedd8aec3",
+      "newSHA256": "b455a8cfee1ff2bcc911bb42cba9aa9a3c6c36c0d6e0b074ea06787aedd8aec3",
+      "byteIdentical": true
+    },
+    "Arbeitsblaetter-pages/page-03.png": {
+      "oldSHA256": "13287bc940e7c580a51503bd8e509e638d727423b2d1058478067fa104d2b307",
+      "newSHA256": "13287bc940e7c580a51503bd8e509e638d727423b2d1058478067fa104d2b307",
+      "byteIdentical": true
+    },
+    "Arbeitsblaetter-pages/page-38.png": {
+      "oldSHA256": "f2e1f80fa748458f585fe9faedce57c15ca311041a45cac1234060aadfeb2a83",
+      "newSHA256": "f2e1f80fa748458f585fe9faedce57c15ca311041a45cac1234060aadfeb2a83",
+      "byteIdentical": true
+    },
+    "Arbeitsblaetter-pages/page-30.png": {
+      "oldSHA256": "3ad830f353f09ae14689e34ed376302decc43667f7bd8a8b0126de63a43780e1",
+      "newSHA256": "3ad830f353f09ae14689e34ed376302decc43667f7bd8a8b0126de63a43780e1",
+      "byteIdentical": true
+    },
+    "Arbeitsblaetter-pages/page-33.png": {
+      "oldSHA256": "5f5d62966a8b336215c80ac68c813e11718f22e3046db2bf98df107a357661c7",
+      "newSHA256": "5f5d62966a8b336215c80ac68c813e11718f22e3046db2bf98df107a357661c7",
+      "byteIdentical": true
+    },
+    "Arbeitsblaetter-pages/page-20.png": {
+      "oldSHA256": "c9a784b161033183c33cecdf764e7b03a5f5810b243fdda669d9efe3b54dd8b4",
+      "newSHA256": "c9a784b161033183c33cecdf764e7b03a5f5810b243fdda669d9efe3b54dd8b4",
+      "byteIdentical": true
+    },
+    "Arbeitsblaetter-pages/page-18.png": {
+      "oldSHA256": "ab6488797b5d5d4b92fea15bf93ab889ed6e9b37bf86ba2eef6d02ede4206c8d",
+      "newSHA256": "ab6488797b5d5d4b92fea15bf93ab889ed6e9b37bf86ba2eef6d02ede4206c8d",
+      "byteIdentical": true
+    },
+    "Arbeitsblaetter-pages/page-14.png": {
+      "oldSHA256": "fee37f6fcd9a2dbc3f9e6bb45c09681b08ae101e1f8fbdf64ebccc6bdc0ff44b",
+      "newSHA256": "fee37f6fcd9a2dbc3f9e6bb45c09681b08ae101e1f8fbdf64ebccc6bdc0ff44b",
+      "byteIdentical": true
+    },
+    "Arbeitsblaetter-pages/page-12.png": {
+      "oldSHA256": "5b00d77fd657c8d648352fe8da0ebda8af0e375f510f090454c2dd33b051aca6",
+      "newSHA256": "5b00d77fd657c8d648352fe8da0ebda8af0e375f510f090454c2dd33b051aca6",
+      "byteIdentical": true
+    },
+    "Arbeitsblaetter-pages/page-27.png": {
+      "oldSHA256": "3f6884e3c40522f235ba5aa9cdd4bbb0c51418a63cf9d0533fce397b356feba6",
+      "newSHA256": "3f6884e3c40522f235ba5aa9cdd4bbb0c51418a63cf9d0533fce397b356feba6",
+      "byteIdentical": true
+    },
+    "Arbeitsblaetter-pages/page-11.png": {
+      "oldSHA256": "fd7b1ab154f9cef88c5d665f77a84156fab264a5cf1a43a42b0e89933b5e25fc",
+      "newSHA256": "fd7b1ab154f9cef88c5d665f77a84156fab264a5cf1a43a42b0e89933b5e25fc",
+      "byteIdentical": true
+    },
+    "Arbeitsblaetter-pages/page-32.png": {
+      "oldSHA256": "0d502452bf743f7fa4fb0acea3d8257fa5851b757b81e1428a935e5978c73479",
+      "newSHA256": "0d502452bf743f7fa4fb0acea3d8257fa5851b757b81e1428a935e5978c73479",
+      "byteIdentical": true
+    },
+    "Arbeitsblaetter-pages/page-02.png": {
+      "oldSHA256": "eeacc426ecd68ead1ca1e020348a38f572e9f97361d4dd5d8d3dbb2173ded08e",
+      "newSHA256": "eeacc426ecd68ead1ca1e020348a38f572e9f97361d4dd5d8d3dbb2173ded08e",
+      "byteIdentical": true
+    },
+    "Arbeitsblaetter-pages/page-39.png": {
+      "oldSHA256": "5e52adbd9215beebae0cd46a93a3ad810c5f21e48beb1f54694652254924fedd",
+      "newSHA256": "5e52adbd9215beebae0cd46a93a3ad810c5f21e48beb1f54694652254924fedd",
+      "byteIdentical": true
+    },
+    "Arbeitsblaetter-pages/page-07.png": {
+      "oldSHA256": "1e1dd26223653f02b9ff29165cc5c2acd29f5c3e8b179943e70b259e05248a90",
+      "newSHA256": "1e1dd26223653f02b9ff29165cc5c2acd29f5c3e8b179943e70b259e05248a90",
+      "byteIdentical": true
+    },
+    "Arbeitsblaetter-pages/page-23.png": {
+      "oldSHA256": "98f1d74402b0b4b61aa0724afe967becb1427ced5a5db9b0247c6f5bd523b966",
+      "newSHA256": "98f1d74402b0b4b61aa0724afe967becb1427ced5a5db9b0247c6f5bd523b966",
+      "byteIdentical": true
+    },
+    "Arbeitsblaetter-pages/page-26.png": {
+      "oldSHA256": "239f4a1598c4911094d39dac76230b20e39b608da91fa4f50006647707ee3bd6",
+      "newSHA256": "239f4a1598c4911094d39dac76230b20e39b608da91fa4f50006647707ee3bd6",
+      "byteIdentical": true
+    },
+    "Arbeitsblaetter-pages/page-35.png": {
+      "oldSHA256": "2cc4276bd82df1321e5b3cb192600a12e9d2a6bf2767e32424ee4dd37fca2520",
+      "newSHA256": "2cc4276bd82df1321e5b3cb192600a12e9d2a6bf2767e32424ee4dd37fca2520",
+      "byteIdentical": true
+    },
+    "Arbeitsblaetter-pages/page-22.png": {
+      "oldSHA256": "2e1e2e037a210aab661b4858ed42a048ce5ba5f5c0879885089bee66a2ca1a7f",
+      "newSHA256": "2e1e2e037a210aab661b4858ed42a048ce5ba5f5c0879885089bee66a2ca1a7f",
+      "byteIdentical": true
+    },
+    "Arbeitsblaetter-pages/page-25.png": {
+      "oldSHA256": "d22acbc21ce194c8a0d978701834f63c52a1b497532573e62041cb098bcbbb97",
+      "newSHA256": "d22acbc21ce194c8a0d978701834f63c52a1b497532573e62041cb098bcbbb97",
+      "byteIdentical": true
+    },
+    "Arbeitsblaetter-pages/page-16.png": {
+      "oldSHA256": "491dad882a1b5f548e86837c4d368c3da906d3348117961ce53eca19806ff385",
+      "newSHA256": "491dad882a1b5f548e86837c4d368c3da906d3348117961ce53eca19806ff385",
+      "byteIdentical": true
+    },
+    "Arbeitsblaetter-pages/page-10.png": {
+      "oldSHA256": "5d0a185bc5dfff8057ce7d5c4f9b7460625c094b6880e20bdd76e39b9c7b8b9c",
+      "newSHA256": "5d0a185bc5dfff8057ce7d5c4f9b7460625c094b6880e20bdd76e39b9c7b8b9c",
+      "byteIdentical": true
+    },
+    "Arbeitsblaetter-pages/page-19.png": {
+      "oldSHA256": "e2b7dea618109e5b57969476c0a14bce54630ba1870cd0bfab0638df374f3b76",
+      "newSHA256": "e2b7dea618109e5b57969476c0a14bce54630ba1870cd0bfab0638df374f3b76",
+      "byteIdentical": true
+    },
+    "Arbeitsblaetter-pages/page-08.png": {
+      "oldSHA256": "5bc69fea72eb7d81abda0c4bedd5f60b78d156356a2707f70dd0b9bcd6b84cc8",
+      "newSHA256": "5bc69fea72eb7d81abda0c4bedd5f60b78d156356a2707f70dd0b9bcd6b84cc8",
+      "byteIdentical": true
+    },
+    "Arbeitsblaetter-pages/page-04.png": {
+      "oldSHA256": "b45e8a31398038e8eb0e94cad5c8454edb53a5ffeba7d707af9dcf99b872b5b0",
+      "newSHA256": "b45e8a31398038e8eb0e94cad5c8454edb53a5ffeba7d707af9dcf99b872b5b0",
+      "byteIdentical": true
+    },
+    "Arbeitsblaetter-pages/page-31.png": {
+      "oldSHA256": "08c208df956146c374ce20445fb2b8866ac34d47568c8389a4a8c30fce9f7bfe",
+      "newSHA256": "08c208df956146c374ce20445fb2b8866ac34d47568c8389a4a8c30fce9f7bfe",
+      "byteIdentical": true
+    },
+    "Arbeitsblaetter-pages/page-01.png": {
+      "oldSHA256": "af7a72d9514569b7d48d90cf551954b4a681057914a09ada5c8939611c4d9b06",
+      "newSHA256": "af7a72d9514569b7d48d90cf551954b4a681057914a09ada5c8939611c4d9b06",
+      "byteIdentical": true
+    },
+    "Arbeitsblaetter-pages/page-06.png": {
+      "oldSHA256": "96a98d81902f1e12ef0e37ddf459536d78d67cb1b773adfea7f34d741d6d2fd8",
+      "newSHA256": "96a98d81902f1e12ef0e37ddf459536d78d67cb1b773adfea7f34d741d6d2fd8",
+      "byteIdentical": true
+    },
+    "PFAD-B-Kuestenvoegel-pages/page-2.png": {
+      "oldSHA256": "6ac99a03b1d35bb30cc52262d9d60a140ab6aa92c37ad58b7420f073fc3b52fb",
+      "newSHA256": "6ac99a03b1d35bb30cc52262d9d60a140ab6aa92c37ad58b7420f073fc3b52fb",
+      "byteIdentical": true
+    },
+    "PFAD-B-Kuestenvoegel-pages/page-1.png": {
+      "oldSHA256": "c22fed45d243caca5658db8735499df4443b8b61d3d4d711de7dca57d8a4414a",
+      "newSHA256": "c22fed45d243caca5658db8735499df4443b8b61d3d4d711de7dca57d8a4414a",
+      "byteIdentical": true
+    },
+    "Lehrkraefte-pages/page-34.png": {
+      "oldSHA256": "3596aa589aab615d086ebaa596a2760426f07f7bafe850c9d8273d911db5499e",
+      "newSHA256": "3596aa589aab615d086ebaa596a2760426f07f7bafe850c9d8273d911db5499e",
+      "byteIdentical": true
+    },
+    "Lehrkraefte-pages/page-09.png": {
+      "oldSHA256": "71fc3dd8018170329bf0b1df13808f9bcb8f102fb00dd981aa9098787db0a2ab",
+      "newSHA256": "71fc3dd8018170329bf0b1df13808f9bcb8f102fb00dd981aa9098787db0a2ab",
+      "byteIdentical": true
+    },
+    "Lehrkraefte-pages/page-21.png": {
+      "oldSHA256": "35dc5b19166c514aa7b7ef3edc532416bfaca85c1b54ce1afa99f880a3fa2dea",
+      "newSHA256": "35dc5b19166c514aa7b7ef3edc532416bfaca85c1b54ce1afa99f880a3fa2dea",
+      "byteIdentical": true
+    },
+    "Lehrkraefte-pages/page-13.png": {
+      "oldSHA256": "63d439dadb094ab6680ff094ab99c3cbcf20517341bc4e6fe4dc381c83e44f06",
+      "newSHA256": "63d439dadb094ab6680ff094ab99c3cbcf20517341bc4e6fe4dc381c83e44f06",
+      "byteIdentical": true
+    },
+    "Lehrkraefte-pages/page-53.png": {
+      "oldSHA256": "3699558b797c9b3ca27730992945a53775878e801513368d72960b0c089e5a09",
+      "newSHA256": "3699558b797c9b3ca27730992945a53775878e801513368d72960b0c089e5a09",
+      "byteIdentical": true
+    },
+    "Lehrkraefte-pages/page-17.png": {
+      "oldSHA256": "49ead55310de4de52ff8a5b2c063ee2c13899744521c60e5e7ea10576fdda319",
+      "newSHA256": "49ead55310de4de52ff8a5b2c063ee2c13899744521c60e5e7ea10576fdda319",
+      "byteIdentical": true
+    },
+    "Lehrkraefte-pages/page-29.png": {
+      "oldSHA256": "b941a569b56aae1f3e87350717ad789e50d577b07558c69029c4aed8dd82a338",
+      "newSHA256": "b941a569b56aae1f3e87350717ad789e50d577b07558c69029c4aed8dd82a338",
+      "byteIdentical": true
+    },
+    "Lehrkraefte-pages/page-55.png": {
+      "oldSHA256": "aa2c4e25e61c3b7813a65872ce2a14f49c75dfa4e548bcf5194d0a5b9ac0d005",
+      "newSHA256": "aa2c4e25e61c3b7813a65872ce2a14f49c75dfa4e548bcf5194d0a5b9ac0d005",
+      "byteIdentical": true
+    },
+    "Lehrkraefte-pages/page-46.png": {
+      "oldSHA256": "3e849b261b6922833bb2e6389def605f8df76848dd3ed95fcef1039e4f8bde2b",
+      "newSHA256": "3e849b261b6922833bb2e6389def605f8df76848dd3ed95fcef1039e4f8bde2b",
+      "byteIdentical": true
+    },
+    "Lehrkraefte-pages/page-48.png": {
+      "oldSHA256": "935fb83eb7d8a26e70d1fd25e478b6e24aaefec9bdd2b76594e8723a09be6731",
+      "newSHA256": "935fb83eb7d8a26e70d1fd25e478b6e24aaefec9bdd2b76594e8723a09be6731",
+      "byteIdentical": true
+    },
+    "Lehrkraefte-pages/page-28.png": {
+      "oldSHA256": "7fc9eb05dd4e2af906dfcbf889d9c413bb11244136ca76fd5e8f0df04ac50649",
+      "newSHA256": "7fc9eb05dd4e2af906dfcbf889d9c413bb11244136ca76fd5e8f0df04ac50649",
+      "byteIdentical": true
+    },
+    "Lehrkraefte-pages/page-51.png": {
+      "oldSHA256": "5a86dd04c76a81dc2722935cf4ed5df62b89ec4ebba2b3d0687a1f5af8f9005c",
+      "newSHA256": "5a86dd04c76a81dc2722935cf4ed5df62b89ec4ebba2b3d0687a1f5af8f9005c",
+      "byteIdentical": true
+    },
+    "Lehrkraefte-pages/page-56.png": {
+      "oldSHA256": "0a02aa87913437dba64ca38922d32a59b5940c1cecd370636c5f4b7a423ba8b1",
+      "newSHA256": "0a02aa87913437dba64ca38922d32a59b5940c1cecd370636c5f4b7a423ba8b1",
+      "byteIdentical": true
+    },
+    "Lehrkraefte-pages/page-05.png": {
+      "oldSHA256": "0289b7e999a3ed5839a54f9c2aa89e7393c4513e1c7d71fc78ee83bfbfcb7cf5",
+      "newSHA256": "0289b7e999a3ed5839a54f9c2aa89e7393c4513e1c7d71fc78ee83bfbfcb7cf5",
+      "byteIdentical": true
+    },
+    "Lehrkraefte-pages/page-49.png": {
+      "oldSHA256": "fc8cd1fee826aa9efbc096d962f292e417bc97ee155374455165827230e607c6",
+      "newSHA256": "fc8cd1fee826aa9efbc096d962f292e417bc97ee155374455165827230e607c6",
+      "byteIdentical": true
+    },
+    "Lehrkraefte-pages/page-52.png": {
+      "oldSHA256": "4a2828d99a89ec1f447d036f91ae2dbe1007ce1a54a8871b20d552be7577b86e",
+      "newSHA256": "4a2828d99a89ec1f447d036f91ae2dbe1007ce1a54a8871b20d552be7577b86e",
+      "byteIdentical": true
+    },
+    "Lehrkraefte-pages/page-43.png": {
+      "oldSHA256": "a7cb18475a245e38ff5ce1f7c1c8490a5fa69f79646abad398c458836c8ba127",
+      "newSHA256": "a7cb18475a245e38ff5ce1f7c1c8490a5fa69f79646abad398c458836c8ba127",
+      "byteIdentical": true
+    },
+    "Lehrkraefte-pages/page-36.png": {
+      "oldSHA256": "f046c92de1a76c05d84e5b8d5f56b6e4876534ac04ad4e9b46bde00e2106364d",
+      "newSHA256": "f046c92de1a76c05d84e5b8d5f56b6e4876534ac04ad4e9b46bde00e2106364d",
+      "byteIdentical": true
+    },
+    "Lehrkraefte-pages/page-15.png": {
+      "oldSHA256": "be11d9be7c4190113c9d6a2268f95bd901263b29cd3de8856dc779f3febda160",
+      "newSHA256": "be11d9be7c4190113c9d6a2268f95bd901263b29cd3de8856dc779f3febda160",
+      "byteIdentical": true
+    },
+    "Lehrkraefte-pages/page-37.png": {
+      "oldSHA256": "e9f51810798c2c0679975ee080d06e3fdac244e0cfd168471215c8382a57f1f0",
+      "newSHA256": "e9f51810798c2c0679975ee080d06e3fdac244e0cfd168471215c8382a57f1f0",
+      "byteIdentical": true
+    },
+    "Lehrkraefte-pages/page-44.png": {
+      "oldSHA256": "8549a07a3b2b975f292b82f1a4d2f2552431aa7f50bfa6776fe0adff43bb51cc",
+      "newSHA256": "8549a07a3b2b975f292b82f1a4d2f2552431aa7f50bfa6776fe0adff43bb51cc",
+      "byteIdentical": true
+    },
+    "Lehrkraefte-pages/page-24.png": {
+      "oldSHA256": "e911d879279c20391811453c95bbadbafd0284325ef508d71d45cbfcb9415229",
+      "newSHA256": "e911d879279c20391811453c95bbadbafd0284325ef508d71d45cbfcb9415229",
+      "byteIdentical": true
+    },
+    "Lehrkraefte-pages/page-03.png": {
+      "oldSHA256": "521038e333ca4427d50b35c22b9cdf43b83810e0cf3cc707ef8eda301e9a9d10",
+      "newSHA256": "521038e333ca4427d50b35c22b9cdf43b83810e0cf3cc707ef8eda301e9a9d10",
+      "byteIdentical": true
+    },
+    "Lehrkraefte-pages/page-41.png": {
+      "oldSHA256": "ed14b43b64d306afcd248e30c50a8b6bcfea016850f8c0ea025bc37064be754b",
+      "newSHA256": "ed14b43b64d306afcd248e30c50a8b6bcfea016850f8c0ea025bc37064be754b",
+      "byteIdentical": true
+    },
+    "Lehrkraefte-pages/page-47.png": {
+      "oldSHA256": "be3beb8a456213c4a2eaf4525a4be61e1072c06a481eb0fc47271f8ed22819a0",
+      "newSHA256": "be3beb8a456213c4a2eaf4525a4be61e1072c06a481eb0fc47271f8ed22819a0",
+      "byteIdentical": true
+    },
+    "Lehrkraefte-pages/page-50.png": {
+      "oldSHA256": "1ee972871841001d3d6b6d7d22b0e1cb3b3ec9fc27b2348bc030284c0977e995",
+      "newSHA256": "1ee972871841001d3d6b6d7d22b0e1cb3b3ec9fc27b2348bc030284c0977e995",
+      "byteIdentical": true
+    },
+    "Lehrkraefte-pages/page-38.png": {
+      "oldSHA256": "623c14021fe0501a058e8f9235d6775d0eeebb2dfa9c141215c909d62a50ddd4",
+      "newSHA256": "623c14021fe0501a058e8f9235d6775d0eeebb2dfa9c141215c909d62a50ddd4",
+      "byteIdentical": true
+    },
+    "Lehrkraefte-pages/page-30.png": {
+      "oldSHA256": "61187337d4db65ec0a5a1fc1e9a99da5fe5eb8d0c2322d80143b700f809bef49",
+      "newSHA256": "61187337d4db65ec0a5a1fc1e9a99da5fe5eb8d0c2322d80143b700f809bef49",
+      "byteIdentical": true
+    },
+    "Lehrkraefte-pages/page-33.png": {
+      "oldSHA256": "d7c0efbbb096912850e584a92c7e812c0916eee18e0e768deb7bcded285c71e4",
+      "newSHA256": "d7c0efbbb096912850e584a92c7e812c0916eee18e0e768deb7bcded285c71e4",
+      "byteIdentical": true
+    },
+    "Lehrkraefte-pages/page-20.png": {
+      "oldSHA256": "bf4912879feb39fa33270822b743a07bc3dac085c1d4d33b2c7607ca67d1dff6",
+      "newSHA256": "bf4912879feb39fa33270822b743a07bc3dac085c1d4d33b2c7607ca67d1dff6",
+      "byteIdentical": true
+    },
+    "Lehrkraefte-pages/page-18.png": {
+      "oldSHA256": "578afd20a427b21cae8848cb1cb2978a288b4f550219bed257e333153a7c4e9c",
+      "newSHA256": "578afd20a427b21cae8848cb1cb2978a288b4f550219bed257e333153a7c4e9c",
+      "byteIdentical": true
+    },
+    "Lehrkraefte-pages/page-14.png": {
+      "oldSHA256": "8d0461124c654f872574b7057bd0466eb1ccee517f264434195273579369b895",
+      "newSHA256": "8d0461124c654f872574b7057bd0466eb1ccee517f264434195273579369b895",
+      "byteIdentical": true
+    },
+    "Lehrkraefte-pages/page-12.png": {
+      "oldSHA256": "3fa0b66f36d7f9864fd2fc7be368f15ee3883d29ce95b41436bf9be72a266f70",
+      "newSHA256": "3fa0b66f36d7f9864fd2fc7be368f15ee3883d29ce95b41436bf9be72a266f70",
+      "byteIdentical": true
+    },
+    "Lehrkraefte-pages/page-27.png": {
+      "oldSHA256": "3702dad662d329dd28c9e3b7c80e26dab26273dae48e22ddcf2a9deb2c658808",
+      "newSHA256": "3702dad662d329dd28c9e3b7c80e26dab26273dae48e22ddcf2a9deb2c658808",
+      "byteIdentical": true
+    },
+    "Lehrkraefte-pages/page-58.png": {
+      "oldSHA256": "33d44a1457eceb5fb896786490f34b593dc3ac0daa3784f8544b88f208e65536",
+      "newSHA256": "33d44a1457eceb5fb896786490f34b593dc3ac0daa3784f8544b88f208e65536",
+      "byteIdentical": true
+    },
+    "Lehrkraefte-pages/page-45.png": {
+      "oldSHA256": "a9768133d3b98583132dc0f36d174759e3fed9c491fb1b40eba077b8670c09ca",
+      "newSHA256": "a9768133d3b98583132dc0f36d174759e3fed9c491fb1b40eba077b8670c09ca",
+      "byteIdentical": true
+    },
+    "Lehrkraefte-pages/page-11.png": {
+      "oldSHA256": "496415e328095e1d12690f15780f1dcdddd889abedc33e3872b374b4e379ddcf",
+      "newSHA256": "496415e328095e1d12690f15780f1dcdddd889abedc33e3872b374b4e379ddcf",
+      "byteIdentical": true
+    },
+    "Lehrkraefte-pages/page-32.png": {
+      "oldSHA256": "34e4448fbfbcb5acf3ca126de31a73dcc13362fea1b88ed444d44499dc7b5862",
+      "newSHA256": "34e4448fbfbcb5acf3ca126de31a73dcc13362fea1b88ed444d44499dc7b5862",
+      "byteIdentical": true
+    },
+    "Lehrkraefte-pages/page-02.png": {
+      "oldSHA256": "65f4537811884c6c125408ab8165a10d386efec463fab9cdf8e3d9d420d2abfe",
+      "newSHA256": "65f4537811884c6c125408ab8165a10d386efec463fab9cdf8e3d9d420d2abfe",
+      "byteIdentical": true
+    },
+    "Lehrkraefte-pages/page-39.png": {
+      "oldSHA256": "c83015c3f18afc6940a1aa97d882e22525cf25fd7651f11038b685fc800f6984",
+      "newSHA256": "c83015c3f18afc6940a1aa97d882e22525cf25fd7651f11038b685fc800f6984",
+      "byteIdentical": true
+    },
+    "Lehrkraefte-pages/page-07.png": {
+      "oldSHA256": "f9dc06d5f8d8f8193f9b6499b9c65fd92d177ba8ae04ad349ac7cefc336c32d1",
+      "newSHA256": "f9dc06d5f8d8f8193f9b6499b9c65fd92d177ba8ae04ad349ac7cefc336c32d1",
+      "byteIdentical": true
+    },
+    "Lehrkraefte-pages/page-23.png": {
+      "oldSHA256": "6f372ba3fee76f5c7a49a9069dd4c060f3f484dcac4c49dff0e4bdcb00b19a63",
+      "newSHA256": "6f372ba3fee76f5c7a49a9069dd4c060f3f484dcac4c49dff0e4bdcb00b19a63",
+      "byteIdentical": true
+    },
+    "Lehrkraefte-pages/page-54.png": {
+      "oldSHA256": "70ece3fda8380cf4a087a2b4da45c634fed75e6536014bbae3e5e448e8d1ff49",
+      "newSHA256": "70ece3fda8380cf4a087a2b4da45c634fed75e6536014bbae3e5e448e8d1ff49",
+      "byteIdentical": true
+    },
+    "Lehrkraefte-pages/page-57.png": {
+      "oldSHA256": "6fcab82899db4469d601cd062feea4e3a429ba3a0a8ce1511296fc4aa1cc707c",
+      "newSHA256": "6fcab82899db4469d601cd062feea4e3a429ba3a0a8ce1511296fc4aa1cc707c",
+      "byteIdentical": true
+    },
+    "Lehrkraefte-pages/page-26.png": {
+      "oldSHA256": "1da593c607914bd4ed53addafdb011a3822962e6ad69dbc51557410572dc940d",
+      "newSHA256": "1da593c607914bd4ed53addafdb011a3822962e6ad69dbc51557410572dc940d",
+      "byteIdentical": true
+    },
+    "Lehrkraefte-pages/page-42.png": {
+      "oldSHA256": "c794e42661b54fe7748963a4f09f417deb7dc66e12ae486fc3b91f8bb0d0ba15",
+      "newSHA256": "c794e42661b54fe7748963a4f09f417deb7dc66e12ae486fc3b91f8bb0d0ba15",
+      "byteIdentical": true
+    },
+    "Lehrkraefte-pages/page-35.png": {
+      "oldSHA256": "2a6c1d1d26b41cd22ff5a178c5b0dbe687b120818d4b20d2b3e9b0bb4bb87ce9",
+      "newSHA256": "2a6c1d1d26b41cd22ff5a178c5b0dbe687b120818d4b20d2b3e9b0bb4bb87ce9",
+      "byteIdentical": true
+    },
+    "Lehrkraefte-pages/page-22.png": {
+      "oldSHA256": "cdec43569acc01f7559b4675e67b3bb1b9b9cb85cb4910baedaa46460e9e66ca",
+      "newSHA256": "cdec43569acc01f7559b4675e67b3bb1b9b9cb85cb4910baedaa46460e9e66ca",
+      "byteIdentical": true
+    },
+    "Lehrkraefte-pages/page-25.png": {
+      "oldSHA256": "f15b23aa7ee91ea332996929c77ebcbbb27326f876a6d1ea1329ed208c00f321",
+      "newSHA256": "f15b23aa7ee91ea332996929c77ebcbbb27326f876a6d1ea1329ed208c00f321",
+      "byteIdentical": true
+    },
+    "Lehrkraefte-pages/page-16.png": {
+      "oldSHA256": "11d95efeb6bff4fadb36a8ab3f4510483715ffa829a2bbc0047b007c8cfc3c03",
+      "newSHA256": "11d95efeb6bff4fadb36a8ab3f4510483715ffa829a2bbc0047b007c8cfc3c03",
+      "byteIdentical": true
+    },
+    "Lehrkraefte-pages/page-10.png": {
+      "oldSHA256": "5fb8bf9d69e96b54c3cdeee10d8d06c25c26e8802c0536ae62421a253c60a57a",
+      "newSHA256": "5fb8bf9d69e96b54c3cdeee10d8d06c25c26e8802c0536ae62421a253c60a57a",
+      "byteIdentical": true
+    },
+    "Lehrkraefte-pages/page-40.png": {
+      "oldSHA256": "3aeac2c5a492b98ca5dc9016a3f508ba30f71cb8165b0b58ed668c490a239efa",
+      "newSHA256": "3aeac2c5a492b98ca5dc9016a3f508ba30f71cb8165b0b58ed668c490a239efa",
+      "byteIdentical": true
+    },
+    "Lehrkraefte-pages/page-19.png": {
+      "oldSHA256": "52e4d909b0b0274f6ffa27591d666b0ab4fc72ccfd20bb8c8c177265edb6cd4b",
+      "newSHA256": "52e4d909b0b0274f6ffa27591d666b0ab4fc72ccfd20bb8c8c177265edb6cd4b",
+      "byteIdentical": true
+    },
+    "Lehrkraefte-pages/page-59.png": {
+      "oldSHA256": "389cc6e94c73c6f54495c685e9150e9f2c3fd3c2f7b120eb2523ce1ea81032b5",
+      "newSHA256": "389cc6e94c73c6f54495c685e9150e9f2c3fd3c2f7b120eb2523ce1ea81032b5",
+      "byteIdentical": true
+    },
+    "Lehrkraefte-pages/page-08.png": {
+      "oldSHA256": "87c70e9887b414c41ed7fb8f50eacc86bd8ea72281fe0fab1a6b8dcf83e4f754",
+      "newSHA256": "87c70e9887b414c41ed7fb8f50eacc86bd8ea72281fe0fab1a6b8dcf83e4f754",
+      "byteIdentical": true
+    },
+    "Lehrkraefte-pages/page-04.png": {
+      "oldSHA256": "2611912528e9c8ffff205c0af0af01705d8033a243f279986b04d57a27f6e13f",
+      "newSHA256": "2611912528e9c8ffff205c0af0af01705d8033a243f279986b04d57a27f6e13f",
+      "byteIdentical": true
+    },
+    "Lehrkraefte-pages/page-31.png": {
+      "oldSHA256": "4cfda2c64946084b2a531a63aec188ea87407916dd92d01dc262f328b5668ba7",
+      "newSHA256": "4cfda2c64946084b2a531a63aec188ea87407916dd92d01dc262f328b5668ba7",
+      "byteIdentical": true
+    },
+    "Lehrkraefte-pages/page-01.png": {
+      "oldSHA256": "5754bd9d1a565fa3e298457967e2f6d2714ae5e50198919dfc5a67cb3cd7609e",
+      "newSHA256": "5754bd9d1a565fa3e298457967e2f6d2714ae5e50198919dfc5a67cb3cd7609e",
+      "byteIdentical": true
+    },
+    "Lehrkraefte-pages/page-06.png": {
+      "oldSHA256": "412706eedad71847887fd30aaeb714b66833101351bd2de630972b686f89552c",
+      "newSHA256": "412706eedad71847887fd30aaeb714b66833101351bd2de630972b686f89552c",
+      "byteIdentical": true
+    }
+  }
+}

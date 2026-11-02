@@ -1,0 +1,3 @@
+# Fehlgeschlagener Dauerversuch
+
+Unveränderte Appquellen des Runtimepunkts 55c2ecd. Nach 365,72 s Aufwärmen und 23 Messansichten bis 517,51 s wartete Playwright bei data-view=wood auf visible/enabled/stable (45 s). Kein 20-Minuten-Erfolg; kein JS-Fehler gemeldet. Der alte Treiber sicherte in diesem Fehlerpfad kein frisches DOM/Bild. Welcher interne Actionability-Teil blockierte, ist deshalb nicht vollständig rekonstruiert. Ein weiterer kompletter Lauf mit echten nativen Mausereignissen, expliziter Sicht-/Aktiv-/Trefferprüfung und Schließen-/Rendernachweis wird separat erfasst. Kein Timeout oder Spiel-/Speicher-/Ressourcenassertion wird abgeschwächt.

@@ -1,16 +1,6 @@
 import { PLANTS } from './biodiversity.js?revision=120';
 export function toolAllows(tool,type){return tool==='binocular'?type==='animal':tool==='magnifier'?type==='plant':false;}
-// Observation is elapsed active time, not the physics step (capped at 65 ms).
-// A first sample or a different/hidden target cannot credit the preceding gap.
-export class ObservationClock {
- constructor(){this.reset();}
- reset(){this.key=null;this.now=null;}
- step(key,now){
-  const seconds=key&&key===this.key&&this.now!==null?Math.max(0,(now-this.now)/1000):0;
-  this.key=key;this.now=key?now:null;return seconds;
- }
-}
-export const focusFollowFactor=(seconds,rate=7)=>1-Math.exp(-rate*Math.max(0,seconds));
+export { ObservationClock, focusFollowFactor } from './observation-clock.js';
 // Angular capture grows with the visible field, while keeping the target inside it.
 export function binocularAperture(zoom,size,distance){return Math.min(.3,Math.sin(62/Math.max(1,zoom)*.43*Math.PI/180),.19/Math.sqrt(Math.max(1,zoom))+Math.max(size*.35,.055)/Math.max(.01,distance));}
 export function focusCandidateScore(off,aperture,known,current=false){return off/aperture+(known?2:0)-(current?.2:0);}

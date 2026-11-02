@@ -1,0 +1,15 @@
+{
+  "recordedAt": "2026-10-22T15:06:18Z",
+  "machine": "managed cloud container; no physical Apple device",
+  "cpuReportedByHost": "INTEL(R) XEON(R) PLATINUM 8573C",
+  "architecture": "x86_64",
+  "python": "3.12.14",
+  "node": "v24.19.0",
+  "os": "Linux-6.18.55-x86_64-with-glibc2.41",
+  "logicalCoresVisible": 5,
+  "graphicsFlags": [
+    "--use-angle=swiftshader",
+    "--enable-unsafe-swiftshader"
+  ],
+  "graphicsScope": "Chromium forced software rendering; no measured Apple GPU or physical device support. Host resources are not a guaranteed device budget."
+}

@@ -1,0 +1,27 @@
+{
+  "scope": "Isolated preflight; original failing font fixture followed by actual fixes. Production candidate not yet rebuilt.",
+  "checks": [
+    {
+      "name": "print-original-dejavu",
+      "exitCode": 1
+    },
+    {
+      "name": "print-fixed-default",
+      "exitCode": 0
+    },
+    {
+      "name": "print-fixed-fonts",
+      "exitCode": 0
+    },
+    {
+      "name": "build-fixed-html",
+      "exitCode": 0
+    },
+    {
+      "name": "feeding-detail-fixed",
+      "exitCode": 0
+    }
+  ],
+  "complete": true,
+  "fixedChecksPassed": true
+}

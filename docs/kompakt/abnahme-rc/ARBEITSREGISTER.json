@@ -1,0 +1,83 @@
+{
+  "baseline": "cae9e55b2043a89cefb7b3875843f19d03df9fd5",
+  "policy": "Bis zu zwei gezielte Nachbesserungen je reproduzierbarem Fehler; ursprüngliche Tests und Grenzen bleiben erhalten.",
+  "items": [
+    {
+      "priority": "P0",
+      "id": "integrity",
+      "task": "Biologie, Belege, Historien und flüchtiger SCORM-Modus unverändert prüfen",
+      "status": "IN ARBEIT",
+      "attempts": []
+    },
+    {
+      "priority": "P1",
+      "id": "sky",
+      "task": "Panoramanaht durch richtungsstetigen prozeduralen Himmel ersetzen; 360° prüfen",
+      "status": "IN ARBEIT",
+      "attempts": []
+    },
+    {
+      "priority": "P1",
+      "id": "forms",
+      "task": "Stämme/Kronen und sechs Salzpflanzen tatsächlich geometrisch differenzieren",
+      "status": "IN ARBEIT",
+      "attempts": []
+    },
+    {
+      "priority": "P1",
+      "id": "dike",
+      "task": "Gemeinsames Geländeprofil verbessern; Wegneigung und Salzhöhen erhalten, historischen Stand versionieren",
+      "status": "IN ARBEIT",
+      "attempts": []
+    },
+    {
+      "priority": "P1",
+      "id": "organisms",
+      "task": "Würmer, Muscheln und Schnecke aus verbundenen Formen; wichtige Tieransichten prüfen",
+      "status": "IN ARBEIT",
+      "attempts": []
+    },
+    {
+      "priority": "P1",
+      "id": "learner",
+      "task": "Zusätzliche K1–K5-Prüfung ohne Referenzversetzen; beide Unterrichtspfade",
+      "status": "IN ARBEIT",
+      "attempts": []
+    },
+    {
+      "priority": "P1",
+      "id": "tablet",
+      "task": "Touch, Drag, Formulare/virtuelle Tastatur und eingeschränkter LMS-Frame",
+      "status": "IN ARBEIT",
+      "attempts": []
+    },
+    {
+      "priority": "P1",
+      "id": "performance",
+      "task": "Überflüssige Blatt-/Streupolygone und Schattenkosten reduzieren; identische Softwaremessung",
+      "status": "IN ARBEIT",
+      "attempts": []
+    },
+    {
+      "priority": "P2",
+      "id": "village",
+      "task": "Figurenhaltung und Fassade/Grundstücksübergänge kohärenter gestalten",
+      "status": "IN ARBEIT",
+      "attempts": []
+    },
+    {
+      "priority": "P2",
+      "id": "wadden",
+      "task": "Räumliche Sedimentwirkung ohne Änderung geschützter Beute-/Tidenhöhen",
+      "status": "IN ARBEIT",
+      "attempts": []
+    },
+    {
+      "priority": "P1",
+      "id": "delivery",
+      "task": "Aktueller Neubau, Originaltests, echte Bilder/Videos, Langlauf, unabhängiger ZIP-Download",
+      "status": "IN ARBEIT",
+      "attempts": []
+    }
+  ]
+}

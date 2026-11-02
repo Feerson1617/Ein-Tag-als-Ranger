@@ -1,0 +1,341 @@
+{
+  "checks": [
+    {
+      "name": "boot: explicit small content/request graph",
+      "passed": true,
+      "manifest": {
+        "id": "compact",
+        "stage": 6,
+        "initialSeed": 20260825,
+        "biologicalZones": [
+          "forest",
+          "saltmarsh",
+          "wadden"
+        ],
+        "transitionZones": [
+          "village",
+          "dike"
+        ],
+        "activeTaxa": [
+          "fagus_sylvatica",
+          "quercus_robur",
+          "galium_odoratum",
+          "urtica_dioica",
+          "rubus_fruticosus",
+          "trifolium_pratense",
+          "fomes_fomentarius",
+          "capreolus_capreolus",
+          "vulpes_vulpes",
+          "apodemus_sylvaticus",
+          "dendrocopos_major",
+          "garrulus_glandarius",
+          "parus_major",
+          "bombus_lapidarius",
+          "aglais_io",
+          "coccinella_septempunctata",
+          "aphidoidea",
+          "lumbricidae",
+          "ixodes_ricinus",
+          "halimione_portulacoides",
+          "salicornia_europaea",
+          "festuca_rubra",
+          "sporobolus_anglicus",
+          "puccinellia_maritima",
+          "limonium_vulgare",
+          "recurvirostra_avosetta",
+          "platalea_leucorodia",
+          "tringa_totanus",
+          "haematopus_ostralegus",
+          "cerastoderma_edule",
+          "mytilus_edulis",
+          "arenicola_marina",
+          "hediste_diversicolor",
+          "crangon_crangon",
+          "carcinus_maenas",
+          "peringia_ulvae"
+        ],
+        "simulationInstances": [
+          "compact-fauna-and-resource-network"
+        ],
+        "metrics": {
+          "width": 160,
+          "depth": 100,
+          "areaHa": 1.6,
+          "mainMeters": 362.2102529662271,
+          "shortcutMeters": 29.145962247263665,
+          "outlookMeters": 10.045360768162785,
+          "walkSeconds": 226.3814081038919,
+          "shortcutSeconds": 18.21622640453979,
+          "maxSlope": 0.2553429469466351
+        }
+      }
+    },
+    {
+      "name": "spawn board and shared guide reachable",
+      "passed": true
+    },
+    {
+      "name": "both live tool paths render without runtime errors",
+      "passed": true
+    },
+    {
+      "name": "same real bird blocked behind solid bark and observable from its clear side",
+      "passed": true
+    },
+    {
+      "name": "actual keyboard movement",
+      "passed": true,
+      "distanceMeters": 0.8854400000000616,
+      "simulationSeconds": 0.5539999999999998,
+      "wallClockMethod": "wait for >0.5 model seconds; physics capped, no speed inference from slow GPU wall time"
+    },
+    {
+      "name": "own live plant evidence, explicit note, real JSON download",
+      "passed": true,
+      "individualId": "ranger-compact-v2:galium_odoratum:16"
+    },
+    {
+      "name": "actual reload retains evidence and creates a fresh run ID",
+      "passed": true
+    },
+    {
+      "name": "invalid import rejected without replacing saved evidence",
+      "passed": true
+    },
+    {
+      "name": "out-of-core legacy records imported through actual file UI as archive only",
+      "passed": true
+    },
+    {
+      "name": "reference images: deer three views, supported bird, five plants, ramp and curve",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "captures": [
+    {
+      "file": "01-waldstart.png",
+      "sha256": "4d7386e5069babc0a5b9506d5955b6356329a9f9eb33e1e2e98003acff5ff38d",
+      "bytes": 485609,
+      "renderFov": "62",
+      "renderTool": "none",
+      "renderRevision": "1",
+      "observer": "{\"x\":-52,\"z\":8,\"yaw\":1.5707963267948966,\"pitch\":-0.06}",
+      "simulationTime": "0.263",
+      "runId": "d980b10c-eb1e-47d2-bd0f-554aef3419ce"
+    },
+    {
+      "file": "01a-binocular-runtime.png",
+      "sha256": "e07d5f70b377230dcfcc41d0f1aaf732025327b3d0d927a569a252dfa6779f3e",
+      "bytes": 282134,
+      "renderFov": "18",
+      "renderTool": "binocular",
+      "renderRevision": "2",
+      "observer": "{\"x\":-52,\"z\":8,\"yaw\":1.5707963267948966,\"pitch\":-0.06}",
+      "simulationTime": "0.817",
+      "runId": "d980b10c-eb1e-47d2-bd0f-554aef3419ce"
+    },
+    {
+      "file": "01b-magnifier-runtime.png",
+      "sha256": "2ae4397d94a6b5a1d8a2c81ec3131c883477b391851ad4d9ae8d90df22aa4f14",
+      "bytes": 370131,
+      "renderFov": "28",
+      "renderTool": "magnifier",
+      "renderRevision": "3",
+      "observer": "{\"x\":-52,\"z\":8,\"yaw\":1.5707963267948966,\"pitch\":-0.06}",
+      "simulationTime": "1.223",
+      "runId": "d980b10c-eb1e-47d2-bd0f-554aef3419ce"
+    },
+    {
+      "file": "02-deer-side.png",
+      "sha256": "d59a6aa1d3e263906e4fd67da2c75e761ea94bb078d4769374a45cb8a34a5ed0",
+      "bytes": 427363,
+      "renderFov": "18",
+      "renderTool": "binocular",
+      "renderRevision": "3",
+      "observer": "{\"x\":-59,\"z\":-2.5,\"yaw\":-3.141592653589793,\"pitch\":-0.19303367272745017}",
+      "simulationTime": "0.834",
+      "runId": "7ceb8eff-56af-4fd2-bebc-50a207469f54"
+    },
+    {
+      "file": "03-deer-front.png",
+      "sha256": "e715370e0edd2cda3e0733562c1117fdc1c1a241b02c6af18550d4d4c256546e",
+      "bytes": 385452,
+      "renderFov": "18",
+      "renderTool": "binocular",
+      "renderRevision": "6",
+      "observer": "{\"x\":-53.5,\"z\":3,\"yaw\":1.5707963267948966,\"pitch\":-0.18985814560202113}",
+      "simulationTime": "1.485",
+      "runId": "7ceb8eff-56af-4fd2-bebc-50a207469f54"
+    },
+    {
+      "file": "04-deer-back.png",
+      "sha256": "8aff7afb5b400dfecadc0b53ada90b817268fd0721b68e644dd7c0dd7a8bac3a",
+      "bytes": 415633,
+      "renderFov": "18",
+      "renderTool": "binocular",
+      "renderRevision": "9",
+      "observer": "{\"x\":-64.5,\"z\":3,\"yaw\":-1.5707963267948966,\"pitch\":-0.1950840473460088}",
+      "simulationTime": "2.202",
+      "runId": "7ceb8eff-56af-4fd2-bebc-50a207469f54"
+    },
+    {
+      "file": "05-bird.png",
+      "sha256": "3ffcd5815736389f9ff4c0f133e3600702af201d56fa0c7d29875e2f5228a6e5",
+      "bytes": 252536,
+      "renderFov": "18",
+      "renderTool": "binocular",
+      "renderRevision": "12",
+      "observer": "{\"x\":-56.65546666666667,\"z\":14.2,\"yaw\":0.45157576083555057,\"pitch\":0.007823297634087688}",
+      "simulationTime": "2.675",
+      "runId": "7ceb8eff-56af-4fd2-bebc-50a207469f54"
+    },
+    {
+      "file": "06-woodruff.png",
+      "sha256": "185db2756ccff308d93a8558b070df54cc3c0c4e512dac344f580ae38ad3de57",
+      "bytes": 521401,
+      "renderFov": "28",
+      "renderTool": "magnifier",
+      "renderRevision": "15",
+      "observer": "{\"x\":-54.32327704373523,\"z\":8.043468266353608,\"yaw\":0.885066815888611,\"pitch\":-0.5203797766551117}",
+      "simulationTime": "3.294",
+      "runId": "7ceb8eff-56af-4fd2-bebc-50a207469f54"
+    },
+    {
+      "file": "07-nettle.png",
+      "sha256": "4345c4f0475a56652fc5a85d7f43ec1c6bcfe54dc6ba4284d2c577957fe02d23",
+      "bytes": 354883,
+      "renderFov": "28",
+      "renderTool": "magnifier",
+      "renderRevision": "18",
+      "observer": "{\"x\":-40.47863381511998,\"z\":14.197259088003703,\"yaw\":0.8850668158886108,\"pitch\":-0.4174609346054198}",
+      "simulationTime": "3.847",
+      "runId": "7ceb8eff-56af-4fd2-bebc-50a207469f54"
+    },
+    {
+      "file": "08-salt-shrub.png",
+      "sha256": "9ced7745fe8289eeb3ed5c04105221cb70317852d6bf6f7e9384a5f5e2c3ca11",
+      "bytes": 513986,
+      "renderFov": "28",
+      "renderTool": "magnifier",
+      "renderRevision": "21",
+      "observer": "{\"x\":44.291782814811064,\"z\":11.857750914279078,\"yaw\":0.8850668158886108,\"pitch\":-0.3944189439455479}",
+      "simulationTime": "4.482",
+      "runId": "7ceb8eff-56af-4fd2-bebc-50a207469f54"
+    },
+    {
+      "file": "09-salt-segments.png",
+      "sha256": "2b3a51f8b2dfe6a5f6a9d2368eff19184e9cfdcc39dba8d550bc86f1ba1613b1",
+      "bytes": 569760,
+      "renderFov": "28",
+      "renderTool": "magnifier",
+      "renderRevision": "24",
+      "observer": "{\"x\":47.06361154650879,\"z\":-1.1226803810237544,\"yaw\":-0.8850668158886109,\"pitch\":-0.7030085891335317}",
+      "simulationTime": "5.055",
+      "runId": "7ceb8eff-56af-4fd2-bebc-50a207469f54"
+    },
+    {
+      "file": "10-salt-grass.png",
+      "sha256": "cc631d75fbe0c8441d4f2439f1d3207431cba7aada01ba70d5df0437203c917a",
+      "bytes": 485242,
+      "renderFov": "28",
+      "renderTool": "magnifier",
+      "renderRevision": "27",
+      "observer": "{\"x\":47.84118774223577,\"z\":-10.62627088719092,\"yaw\":0.8850668158886108,\"pitch\":-0.39489897841878646}",
+      "simulationTime": "5.610",
+      "runId": "7ceb8eff-56af-4fd2-bebc-50a207469f54"
+    },
+    {
+      "file": "11-ramp.png",
+      "sha256": "32a58cd1c54411ea65f8a19ce99266e55e50c0d52ca22b0b635f4444454df2f1",
+      "bytes": 377613,
+      "renderFov": "62",
+      "renderTool": "none",
+      "renderRevision": "29",
+      "observer": "{\"x\":3,\"z\":16,\"yaw\":-0.4124104415973873,\"pitch\":-0.030735012307624418}",
+      "simulationTime": "5.985",
+      "runId": "7ceb8eff-56af-4fd2-bebc-50a207469f54"
+    },
+    {
+      "file": "12-coast.png",
+      "sha256": "4d5f5291cc950a1b79a7da845880302fe1159812a85de2cb254f3543e170bb06",
+      "bytes": 396036,
+      "renderFov": "62",
+      "renderTool": "none",
+      "renderRevision": "30",
+      "observer": "{\"x\":63,\"z\":-13,\"yaw\":-2.3036114285814033,\"pitch\":-0.12788807707486585}",
+      "simulationTime": "6.442",
+      "runId": "7ceb8eff-56af-4fd2-bebc-50a207469f54"
+    },
+    {
+      "file": "13-bird-flight.png",
+      "sha256": "cc6967d20c22c1a4c3a507450d92ab761d355d5ccb82f16fe305ba5ed12d054c",
+      "bytes": 398121,
+      "renderFov": "62",
+      "renderTool": "none",
+      "renderRevision": "34",
+      "observer": "{\"x\":-54,\"z\":14,\"yaw\":1.5707963267948966,\"pitch\":0.07796742453278983}",
+      "simulationTime": "8.475",
+      "runId": "7ceb8eff-56af-4fd2-bebc-50a207469f54"
+    }
+  ],
+  "startedAt": "2026-10-22T05:53:16Z",
+  "site": "outputs/Ranger-Kompakt",
+  "entry": "index.html",
+  "viewport": {
+    "width": 800,
+    "height": 500
+  },
+  "hardwareScope": "Cloud Chromium; no actual iPad/Safari or minimum-device certification",
+  "sourceCommit": "6a8745b703b7e143eb21dfc57907b98d5cffcceb",
+  "runtimeSourceHashes": {
+    "assets/boardwalk-wood.webp": "4d06022133e3772534374671fb73a4509ed109e1db6ca06a2d62a8c99c47ac6d",
+    "assets/compact-roe-deer.glb": "a89400df66033eb5eaa7f9bf13ccefaacfb866ab24e4576574d11965354ee619",
+    "assets/sky-panorama.webp": "46c360b491b11269d280e73ec0e71869afdfd62fb543b4250713234374a2f71d",
+    "assets/terrain-atlas.webp": "d637324d3ace6ef8e2c549e7f0a513efd1a4c06aab927f0ed1565bf77b2ced02",
+    "assets/wildlife-fox.glb": "61a4d1b845aa406928a327648417ae1c3982510b9c4e8ce33b7c494fbc98a22f",
+    "compact/catalog.js": "8e373f46194c392f1ec9bf43c9c95e4312a64ea29a9ac90ddc5e87e8a7fda16c",
+    "compact/ecology.js": "5287cfd0430e926f81bb2ad2b2903e62d302728c341e592d3cee91f37a52c0c7",
+    "compact/evidence.js": "971d70710721d81f48b428dfa849bcc2fbfa811ce6148c30ddc90104f35f3534",
+    "compact/expanded-view.js": "0abb20e848064f818091e3a5f8870ec32d181a58882e30fa060f5020b0c94ac7",
+    "compact/fauna-view.js": "985a83582ff0ffac0e8d6ef20e2edc80a09b66e88f3768dd404f746507820feb",
+    "compact/geometry.js": "a6f52cd0fc8f75db3d102d7d6f6f7ec3acbeaf65123f95710f9aa502399c4e26",
+    "compact/inspection.js": "961c8c13e8e8e58595460fa40ed7bed0668367b120081dd95961a78ca87300ea",
+    "compact/journal.js": "73295b3347b8d1d8b9d0ea60e73cd4450c95fed063d46da4066f0d975d21a87b",
+    "compact/layout.js": "889a7ca15fd622d8d145f4fff86225c747bf9bee0433dce6ee8f810e714dd578",
+    "compact/learning-documents.js": "f02e0316bc3b8173bfd0380e3e7b803d13dd22a47fb946dc08e0ce9927f6be0c",
+    "compact/learning-models.js": "e58605a045c82f544703a130b87849c271a23e6ce5c45a48a1d7a83cd301e202",
+    "compact/learning-ui.js": "266de88fd07e6630d15c0ab3476ebd0db2149cd51f97cccd20659609d905e43b",
+    "compact/main.js": "1309f9d9bca17bcdf288702f619b368c85f4ee2ac70aa25a178313f43afc4d05",
+    "compact/manifest.js": "0a968302d33f9f65b04246391692510e9daff3f64d250c74794aa6cec6d9aaa0",
+    "compact/materials.js": "a28bb5a761656249272a1c42968f61779046c6c03389bd19a007f5da33a41910",
+    "compact/missions.js": "2463f2c1402cfd2f795c6b29c1fca8668194a7375517084646113aa4f7d39059",
+    "compact/organism-models.js": "281a65b7e6e539f9d3ddbaaf2991e2a0d10aa00c794e8df6363d023eadf955bf",
+    "compact/path-mesh.js": "7a41ebc390aeca96cffd1e4fcee19f3b76310413fcee3489d1533ebd599a4c82",
+    "compact/style.css": "11625d255794d34ee4930da768d3ccfd8efad740be2a4a7b85ca940f408b40d7",
+    "compact/taxa.js": "97cd6f5bad16208408512be876ebf63d5f9ee400dd31f94a61c8ca08e4e24fd3",
+    "compact/visibility.js": "50d59d44257e9d18547bfaec9277366d3339177c6ebce37d948b48c9940a86f1",
+    "compact/world-state.js": "0ff225752d99f62a14207aa60baf5550b10517697e0e0af62bab55b0153a4cde",
+    "compact/world-view.js": "53a2d5e9f3ff3926e88c3acedc73f8a4b599fe9cc2059897f6afd62e4e71c7db",
+    "field-guide.js": "22fedb8d555efd8ed7efda64f0dee729d6a12f1d532f0d14c07117af930be69a",
+    "icon.svg": "cb8cda889f99e56d13d18e09929837b7c3630d3f9ff3219316d12d3077fc0869",
+    "kompakt.html": "a5fe7ded5db65e02f2e9714757704dfac6e544b9d8f05d0003804084035377c2",
+    "observation-clock.js": "2304e6c425192967f87841caa5072873cb5dd5c7f69c38fb45b237fd22f98b03",
+    "ranger-controls.js": "081497a5f6754ecd441e61ee55805da99b5121e96215cfa900209e00e41e5eda",
+    "station-protocol.js": "2590df7d9de4c8f4afda8fcafd619d565440c2dc7e1bb6ef4574aeadf803ae57",
+    "vendor/three.core.js": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20",
+    "vendor/three.module.js": "2884e2e6f26feaec0b454fcdc1e98c27d6433ba15253e5a3e22e111df81686fa",
+    "wildlife-glb.js": "32f8f947dd002ba7b571ee627e6291fa40a951fccdd9dee644661f19de487c35"
+  },
+  "videos": [
+    {
+      "file": "bird-flight.webm",
+      "bytes": 94495,
+      "sha256": "ba3ae56caaaf0090744843459b46c4b01ae16c1d365a4b030c5935a9da411016"
+    }
+  ],
+  "videoAvailable": false,
+  "browserVersion": "154.0.8037.57",
+  "buildStamp": "6a8745b703b7e143eb21dfc57907b98d5cffcceb; dirty=false",
+  "interrupted": "Stopped after finding actual slow-render warning overlapping study/objective controls at 800x500. Source CSS corrected and all final checks restarted. This partial run is not a completed final browser pass."
+}

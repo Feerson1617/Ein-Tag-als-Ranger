@@ -1,0 +1,308 @@
+{
+  "entry": "Ranger-Kompakt.html",
+  "scope": "Rendered DOM plus actual WebGL boot of standalone HTML; imports/storage corruption are explicitly labelled fixtures, not newly earned mission evidence",
+  "baselineFixtureProvenance": "Two preserved historical own reconstructions, not claimed byte-identical to the unavailable independent archive originals",
+  "fileReadLatencyFixtureMs": 250,
+  "responseWait": "Fresh preview DOM mutation, not stale text or an arbitrary sleep",
+  "checks": [
+    {
+      "name": "valid older v2 imports through file input; K1-K5 actually render",
+      "passed": true
+    },
+    {
+      "name": "repro-invalid-top-level-features.json",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Ungültige Antwortauswahl: K1.features."
+    },
+    {
+      "name": "repro-impossible-coordinates.json",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Unbekannte Beobachtungsmethode."
+    },
+    {
+      "name": "K1-features",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Ungültige Antwortauswahl: K1.features."
+    },
+    {
+      "name": "K1-recordId",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Ungültige Aufgabenauswahl: K1.recordId."
+    },
+    {
+      "name": "K1-choice",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Ungültige Aufgabenauswahl: K1.choice."
+    },
+    {
+      "name": "K1-limit",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Ungültige Aufgabenauswahl: K1.limit."
+    },
+    {
+      "name": "K1-determinations-not-array",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Ungültige Bestimmungsantwort."
+    },
+    {
+      "name": "K1-determinations-null-item",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Ungültige Bestimmungsantwort."
+    },
+    {
+      "name": "K1-determinations-nested-features",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Ungültige Antwortauswahl: Bestimmungsantwort.features."
+    },
+    {
+      "name": "K2-experimentTide",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Ungültige Aufgabenauswahl: K2.experimentTide."
+    },
+    {
+      "name": "isolated-window-0",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Unbekanntes Beobachtungsfenster."
+    },
+    {
+      "name": "isolated-window-false",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Unbekanntes Beobachtungsfenster."
+    },
+    {
+      "name": "isolated-window-\"\"",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Unbekanntes Beobachtungsfenster."
+    },
+    {
+      "name": "isolated-window-null",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Unbekanntes Beobachtungsfenster."
+    },
+    {
+      "name": "isolated-window-\"toString\"",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Unbekanntes Beobachtungsfenster."
+    },
+    {
+      "name": "isolated-window-\"constructor\"",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Unbekanntes Beobachtungsfenster."
+    },
+    {
+      "name": "outside-world",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Beobachtungsort liegt außerhalb der Modellwelt."
+    },
+    {
+      "name": "unknown-method",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Unbekannte Beobachtungsmethode."
+    },
+    {
+      "name": "unknown-individual",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Individuen-ID und Taxon passen nicht zur gespeicherten Modellwelt."
+    },
+    {
+      "name": "wrong-site",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Zone, Standort und Koordinaten widersprechen sich."
+    },
+    {
+      "name": "empty-run",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Ungültiger Kompakt-Beleg."
+    },
+    {
+      "name": "negative-model-time",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Ungültiger Kompakt-Beleg."
+    },
+    {
+      "name": "fixed-plant-shifted-one-metre",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Ortsfeste Individuen-ID und gespeicherter Standort passen nicht zusammen."
+    },
+    {
+      "name": "invalid-json",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Expected property name or '}' in JSON at position 1 (line 1 column 2)"
+    },
+    {
+      "name": "null-top-level",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Cannot read properties of null (reading 'worldVersion')"
+    },
+    {
+      "name": "array-top-level",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Unbekanntes Altfeldbuch."
+    },
+    {
+      "name": "overlapping-protocol",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Überlappende Protokollfenster."
+    },
+    {
+      "name": "wrong-sample-area",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Widersprüchliche Flächenprobe."
+    },
+    {
+      "name": "invented-experiment-yield",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Manipuliertes oder widersprüchliches Konkurrenzmodell."
+    },
+    {
+      "name": "sceneOrigin-own-run",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Widersprüchliche Herkunft des neuen Beobachtungsfensters."
+    },
+    {
+      "name": "sceneOrigin-wrong-location",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Widersprüchliche Herkunft des neuen Beobachtungsfensters."
+    },
+    {
+      "name": "sceneOrigin-unknown-site",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Widersprüchliche Herkunft des neuen Beobachtungsfensters."
+    },
+    {
+      "name": "sceneOrigin-backward-parent-time",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Das neue Beobachtungsfenster widerspricht dem vorherigen Rundgang."
+    },
+    {
+      "name": "sceneOrigin-missing-origin-in-run",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Widersprüchlicher Szenenkontext im selben Rundgang."
+    },
+    {
+      "name": "sceneOrigin-changed-origin-in-run",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Widersprüchlicher Szenenkontext im selben Rundgang."
+    },
+    {
+      "name": "sceneOrigin-cyclic-origin",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Zyklische Rundgangherkunft."
+    },
+    {
+      "name": "sceneOrigin-nonzero-start",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Widersprüchliche Herkunft des neuen Beobachtungsfensters."
+    },
+    {
+      "name": "sceneOrigin-reused-run-id",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Widersprüchliche Herkunft des neuen Beobachtungsfensters."
+    },
+    {
+      "name": "sceneOrigin-null-origin",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Unvollständige Herkunft des neuen Beobachtungsfensters."
+    },
+    {
+      "name": "sceneOrigin-extra-origin-field",
+      "passed": true,
+      "oldStorageByteIdentical": true,
+      "message": "Unvollständige Herkunft des neuen Beobachtungsfensters."
+    },
+    {
+      "name": "labelled old and explicit local-context records survive native UI import/export/roundtrip with provenance and notes intact",
+      "passed": true,
+      "fixtureNotEarnedEvidence": true,
+      "export": "valid-local-context-fixture-export.json",
+      "sha256": "707984c9a04d86b0c0975174b749e9fc327ad6f574dd8bc350d7b53c7174ee74"
+    },
+    {
+      "name": "legacy event reference single imports and renders without silent reassignment",
+      "passed": true,
+      "fixtureNotEarnedEvidence": true,
+      "fixture": "labelled-legacy-event-single.json",
+      "fixtureSHA256": "4e5535bff88b518e4db83aa4b6bc7d6fb9499652ea079cd049fd8e07833f5212",
+      "oldStorageByteIdenticalOnOpen": true,
+      "automaticK2Complete": true,
+      "export": "legacy-event-single-export.json",
+      "exportSHA256": "e0345228ab5d308a040361fed37eaceb10a5f59b5eee9056e3981e2a4cbbb1b2"
+    },
+    {
+      "name": "legacy event reference repeated imports and renders without silent reassignment",
+      "passed": true,
+      "fixtureNotEarnedEvidence": true,
+      "fixture": "labelled-legacy-event-repeated.json",
+      "fixtureSHA256": "53371333ab11cd7c7997fdcf9b9920e6019f839db169fdb3eb7a495c8bd36613",
+      "oldStorageByteIdenticalOnOpen": true,
+      "automaticK2Complete": true,
+      "export": "legacy-event-repeated-export.json",
+      "exportSHA256": "9ba32e96b5adfa1ddeacb82008229cefecbe7bc7d8d8c97cb5bd9f7012741a0d"
+    },
+    {
+      "name": "legacy event reference ambiguous imports and renders without silent reassignment",
+      "passed": true,
+      "fixtureNotEarnedEvidence": true,
+      "fixture": "labelled-legacy-event-ambiguous.json",
+      "fixtureSHA256": "9c9b086538669b27bf085dbab14b6ebcc2b303d3828d86a6a480fcfdc679effc",
+      "oldStorageByteIdenticalOnOpen": true,
+      "automaticK2Complete": false,
+      "explicitReselectionCompleted": true,
+      "qualifiedReference": "[\"record-event-v1\",\"qa-new-event-note\",\"ranger-compact-v2:summer:7\"]",
+      "screenshots": [
+        "legacy-ambiguous-selection.png",
+        "legacy-explicit-qualified-selection.png"
+      ],
+      "export": "legacy-event-ambiguous-export.json",
+      "exportSHA256": "77b62c834ab7e013e1ce73f2814dd88bda0504eec7c2f18b3e07b323e5ed4bc4"
+    },
+    {
+      "name": "explicit UI recovery and original download preserve all valid observations through reload",
+      "passed": true,
+      "originalBytes": 14910
+    }
+  ],
+  "errors": [],
+  "passed": true,
+  "htmlSHA256": "b61a35456fcd6253ed6693d7fa8031f3ae5b7ca48502837d744c82b3dfc227b4",
+  "completedAt": "2026-10-23T09:07:35Z"
+}

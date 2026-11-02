@@ -1,0 +1,17 @@
+{
+  "scope": "Small preserved before/after diagnoses and unapplied-at-diagnosis driver proposals; these historical/candidate checks do not replace the fresh final runtime tests. Full candidate/dist tree intentionally omitted.",
+  "files": {
+    "reviews/diagnosis/event-reference/reproduce.mjs": "6a76c8eadbc4d4b2afdbca1e3c19d325cf0a3002144e46156ce3a4ee16646f61",
+    "reviews/diagnosis/event-reference/baseline-repro.json": "a3565670d5906e819b4e067ced6402ad8752b9bac6cbd36d9e56f753256bbcf8",
+    "reviews/diagnosis/event-reference/candidate-repro.json": "085c053fdd44710db2ff2b4a816d96d2109f7c95bec8608ef67eed5df82b7cdd",
+    "reviews/diagnosis/event-reference/candidate-node/result.json": "b9b7014ba42ae26f0c1ead532eee2b6cf2a90689631cad48a1ce3135533af8f5",
+    "reviews/diagnosis/event-reference/candidate-learning.log": "201efe802e92d9eb8bbd2bea4dde7a5957c4e1a62131b059f31472005c1b395f",
+    "reviews/diagnosis/event-reference/review.json": "a0e33ea74b10ef883db40fce849d04fc883de1b3bf3fad8118515f7e1f52492c",
+    "reviews/diagnosis/event-reference/REVIEW.md": "c6e319eb70f1d9230584324d66d1c2c5578cf500ec5449a842f3d9e1d20b4ca8",
+    "reviews/diagnosis/event-reference/browser-proposal.patch": "d1f03cd93922838553ef0aff844d9ceebb4c8caaa35ea1c25cb5f3d0db632309",
+    "reviews/diagnosis/event-reference/proposal.patch": "4edd797a603719c4cc810da4771fdfff072c70c760b8f5c96400fd45fa9d2ac2",
+    "reviews/diagnosis/arrival/arrival-realtime-model-duration.json": "8eecf14d8d36707efc976b4a52f97ef389c1fc3b2b7586e7515f4cb6d3e63313",
+    "reviews/diagnosis/arrival/arrival-realtime-fresh-frame.patch": "b9a5d9c984a14a586df4aaf355b5b691800fe49d16264de7480b6849604b9d4e",
+    "reviews/diagnosis/arrival/arrival-explicit-budget.patch": "840e6908ac2c135f5b52fa64df6dd18b10a2064f0e847c9b8592a4ba8b592376"
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "kind": "tolerance",
+  "source": "didactic-model",
+  "units": {
+    "flooding": "hours flooded per model day",
+    "physiological": "relative long-term growth",
+    "realized": "relative growth with designed competitor"
+  },
+  "parameters": {
+    "competitor": false
+  },
+  "rows": [
+    {
+      "flooding": 0,
+      "physiological": 0.12992260830505947,
+      "realized": 0.12992260830505947
+    },
+    {
+      "flooding": 1,
+      "physiological": 0.19146289967870536,
+      "realized": 0.19146289967870536
+    },
+    {
+      "flooding": 2,
+      "physiological": 0.2708683284704635,
+      "realized": 0.2708683284704635
+    },
+    {
+      "flooding": 3,
+      "physiological": 0.36787944117144233,
+      "realized": 0.36787944117144233
+    },
+    {
+      "flooding": 4,
+      "physiological": 0.4796522688300443,
+      "realized": 0.4796522688300443
+    },
+    {
+      "flooding": 5,
+      "physiological": 0.6003730411984044,
+      "realized": 0.6003730411984044
+    },
+    {
+      "flooding": 6,
+      "physiological": 0.7214222903547561,
+      "realized": 0.7214222903547561
+    },
+    {
+      "flooding": 7,
+      "physiological": 0.8322075006903012,
+      "realized": 0.8322075006903012
+    },
+    {
+      "flooding": 8,
+      "physiological": 0.9216104472977248,
+      "realized": 0.9216104472977248
+    },
+    {
+      "flooding": 9,
+      "physiological": 0.9797986738537043,
+      "realized": 0.9797986738537043
+    },
+    {
+      "flooding": 10,
+      "physiological": 1,
+      "realized": 1
+    },
+    {
+      "flooding": 11,
+      "physiological": 0.9797986738537043,
+      "realized": 0.9797986738537043
+    },
+    {
+      "flooding": 12,
+      "physiological": 0.9216104472977248,
+      "realized": 0.9216104472977248
+    },
+    {
+      "flooding": 13,
+      "physiological": 0.8322075006903012,
+      "realized": 0.8322075006903012
+    },
+    {
+      "flooding": 14,
+      "physiological": 0.7214222903547561,
+      "realized": 0.7214222903547561
+    },
+    {
+      "flooding": 15,
+      "physiological": 0.6003730411984044,
+      "realized": 0.6003730411984044
+    },
+    {
+      "flooding": 16,
+      "physiological": 0.4796522688300443,
+      "realized": 0.4796522688300443
+    },
+    {
+      "flooding": 17,
+      "physiological": 0.36787944117144233,
+      "realized": 0.36787944117144233
+    },
+    {
+      "flooding": 18,
+      "physiological": 0.2708683284704635,
+      "realized": 0.2708683284704635
+    },
+    {
+      "flooding": 19,
+      "physiological": 0.19146289967870536,
+      "realized": 0.19146289967870536
+    },
+    {
+      "flooding": 20,
+      "physiological": 0.12992260830505947,
+      "realized": 0.12992260830505947
+    },
+    {
+      "flooding": 21,
+      "physiological": 0.08463666150622445,
+      "realized": 0.08463666150622445
+    },
+    {
+      "flooding": 22,
+      "physiological": 0.05293050193270877,
+      "realized": 0.05293050193270877
+    },
+    {
+      "flooding": 23,
+      "physiological": 0.03177804641749838,
+      "realized": 0.03177804641749838
+    },
+    {
+      "flooding": 24,
+      "physiological": 0.01831563888873418,
+      "realized": 0.01831563888873418
+    }
+  ],
+  "assumptions": "One-factor long-term model; salinity, substrate and drainage fixed; not calibrated to any marsh species. Transect zoning is not this experiment."
+}

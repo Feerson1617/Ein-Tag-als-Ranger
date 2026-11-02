@@ -1,0 +1,231 @@
+{
+  "sourceCommit": "4eb186a5325ae30dfa233e10dd44eb73ea710afa",
+  "sourceDirty": false,
+  "htmlSHA256": "3748c6590afefb18a5e07bb3cedc2c40b0b2be1619a57cc52553a30de5869412",
+  "scope": "Visible concrete prey at the actual study-spur endpoint beyond normal distance LOD.\nUses a declared public reference-camera visit and labelled model steps only.\nThis focused regression is not a native-footwalk, real-time or earned-evidence proof.\n",
+  "expectedOldBug": false,
+  "passed": true,
+  "productPass": true,
+  "captures": [
+    {
+      "file": "contact-early.png",
+      "sha256": "5815cc03a890947917fadeb024190ca043f5c61d07ac55ef4a5b757783282f33",
+      "sample": {
+        "detail": {
+          "runId": "227ef71e-fd16-415e-91d6-a5f5de371e1c",
+          "eventId": "ranger-compact-v2:summer:feeding:compact-oystercatcher:compact-mussel-16:0.025000000",
+          "eventRecorded": false,
+          "individualId": "compact-oystercatcher",
+          "preyId": "compact-mussel-16",
+          "phase": "handling",
+          "episodeCompleted": false,
+          "simulationTime": 1.2,
+          "observer": {
+            "x": 63,
+            "z": 4
+          },
+          "didacticMagnification": true,
+          "sharedLiveSceneNodes": true,
+          "preyGeometryUnscaled": true,
+          "freestandingView": true,
+          "preyVisible": true,
+          "worldPreyVisible": false,
+          "distanceLODOverride": true,
+          "tissueVisible": true,
+          "tip": {
+            "x": 60.98083105733994,
+            "y": -0.5596998477787894,
+            "z": -15.229651184014035
+          },
+          "mouth": {
+            "x": 61.01230022750964,
+            "y": -0.4648280481846337,
+            "z": -15.341736224544666
+          },
+          "carried": {
+            "x": 60.98083105733994,
+            "y": -0.5596998477787894,
+            "z": -15.229651184014035
+          },
+          "span": 0.19997720573006406,
+          "views": [
+            {
+              "id": "feeding-overview",
+              "rect": {
+                "x": 21,
+                "y": 248.71875,
+                "width": 153,
+                "height": 270
+              },
+              "clip": {
+                "x": 21,
+                "y": 231.28125,
+                "width": 153,
+                "height": 270
+              },
+              "fov": 35,
+              "position": [
+                60.153348377770975,
+                -0.1688637411780815,
+                -15.730537867929925
+              ],
+              "focus": [
+                61.04986020543497,
+                -0.3739815496389116,
+                -15.474510686145313
+              ]
+            },
+            {
+              "id": "feeding-contact",
+              "rect": {
+                "x": 179,
+                "y": 248.71875,
+                "width": 459,
+                "height": 270
+              },
+              "clip": {
+                "x": 179,
+                "y": 231.28125,
+                "width": 459,
+                "height": 270
+              },
+              "fov": 32,
+              "position": [
+                60.613322444050596,
+                -0.40942727776353155,
+                -15.412248342670507
+              ],
+              "focus": {
+                "x": 60.99412199216932,
+                "y": -0.4965524738432219,
+                "z": -15.303499041075982
+              }
+            }
+          ]
+        },
+        "time": 1.2,
+        "ownSeconds": 0,
+        "observer": {
+          "x": 63,
+          "z": 4,
+          "yaw": 0.09980534750435958,
+          "pitch": -0.13030399759139988
+        },
+        "runId": "227ef71e-fd16-415e-91d6-a5f5de371e1c"
+      }
+    },
+    {
+      "file": "opening-late.png",
+      "sha256": "f8dd602f8df9e031e10e1ce611898734b48f04b68a361a6e6eb9bedb4eec476c",
+      "sample": {
+        "detail": {
+          "runId": "227ef71e-fd16-415e-91d6-a5f5de371e1c",
+          "eventId": "ranger-compact-v2:summer:feeding:compact-oystercatcher:compact-mussel-16:0.025000000",
+          "eventRecorded": false,
+          "individualId": "compact-oystercatcher",
+          "preyId": "compact-mussel-16",
+          "phase": "handling",
+          "episodeCompleted": false,
+          "simulationTime": 3.2000000000000015,
+          "observer": {
+            "x": 63,
+            "z": 4
+          },
+          "didacticMagnification": true,
+          "sharedLiveSceneNodes": true,
+          "preyGeometryUnscaled": true,
+          "freestandingView": true,
+          "preyVisible": true,
+          "worldPreyVisible": false,
+          "distanceLODOverride": true,
+          "tissueVisible": true,
+          "tip": {
+            "x": 60.979783747623955,
+            "y": -0.5603185686524577,
+            "z": -15.226997570375588
+          },
+          "mouth": {
+            "x": 61.01152828438353,
+            "y": -0.46544676905830196,
+            "z": -15.33900493338286
+          },
+          "carried": {
+            "x": 60.979783747623955,
+            "y": -0.5603185686524577,
+            "z": -15.226997570375588
+          },
+          "span": 0.1993887833341765,
+          "views": [
+            {
+              "id": "feeding-overview",
+              "rect": {
+                "x": 21,
+                "y": 248.71875,
+                "width": 153,
+                "height": 270
+              },
+              "clip": {
+                "x": 21,
+                "y": 231.28125,
+                "width": 153,
+                "height": 270
+              },
+              "fov": 35,
+              "position": [
+                60.151695004051525,
+                -0.16881230235715833,
+                -15.724712729884077
+              ],
+              "focus": [
+                61.04901331469267,
+                -0.37393011081798844,
+                -15.471526584247856
+              ]
+            },
+            {
+              "id": "feeding-contact",
+              "rect": {
+                "x": 179,
+                "y": 248.71875,
+                "width": 459,
+                "height": 270
+              },
+              "clip": {
+                "x": 179,
+                "y": 231.28125,
+                "width": 459,
+                "height": 270
+              },
+              "fov": 32,
+              "position": [
+                60.61373350655366,
+                -0.41000990130521037,
+                -15.409332133906686
+              ],
+              "focus": {
+                "x": 60.993911196315565,
+                "y": -0.49691464137893604,
+                "z": -15.302061700676672
+              }
+            }
+          ]
+        },
+        "time": 3.2,
+        "ownSeconds": 0,
+        "observer": {
+          "x": 63,
+          "z": 4,
+          "yaw": 0.09986360341866947,
+          "pitch": -0.13032040586071156
+        },
+        "runId": "227ef71e-fd16-415e-91d6-a5f5de371e1c"
+      }
+    }
+  ],
+  "errors": [],
+  "distanceMetres": 19.406029428633705,
+  "viewport": {
+    "width": 1200,
+    "height": 750
+  }
+}

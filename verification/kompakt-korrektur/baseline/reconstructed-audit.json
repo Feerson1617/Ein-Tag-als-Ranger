@@ -1,0 +1,546 @@
+{
+  "sourceCommit": "eece965c2afdd367ab9a610e0e05d09e9c706388",
+  "scope": "Own reconstruction, not the unavailable independent archive",
+  "F01": {
+    "malformedTopLevelFeaturesAccepted": true
+  },
+  "F04": {
+    "impossibleCoordinatesAndMethodAccepted": true
+  },
+  "F10": {
+    "unrelatedWoodruffCompletesManagement": true
+  },
+  "coastal": [
+    {
+      "seed": 123,
+      "dt": 0.016666666666666666,
+      "seconds": 600,
+      "counts": {
+        "compact-avocet": 0,
+        "compact-redshank": 0,
+        "compact-spoonbill": 1,
+        "compact-oystercatcher": 10
+      },
+      "jumps": {
+        "compact-oystercatcher": {
+          "distance": 30.95888058984102,
+          "at": 90.34999999999616,
+          "dt": 0.016666666666666666
+        },
+        "compact-crab": {
+          "distance": 1.2033702672078976,
+          "at": 6.033333333333317,
+          "dt": 0.016666666666666666
+        },
+        "compact-bee": {
+          "distance": 1.9584932463796123,
+          "at": 12.000000000000176,
+          "dt": 0.016666666666666666
+        }
+      }
+    },
+    {
+      "seed": 123,
+      "dt": 0.1,
+      "seconds": 600,
+      "counts": {
+        "compact-avocet": 0,
+        "compact-redshank": 0,
+        "compact-spoonbill": 1,
+        "compact-oystercatcher": 10
+      },
+      "jumps": {
+        "compact-oystercatcher": {
+          "distance": 30.5322540987541,
+          "at": 90.9999999999991,
+          "dt": 0.1
+        },
+        "compact-crab": {
+          "distance": 1.2033702672078976,
+          "at": 6.099999999999994,
+          "dt": 0.1
+        },
+        "compact-bee": {
+          "distance": 1.9584932463796123,
+          "at": 12.099999999999973,
+          "dt": 0.1
+        }
+      }
+    },
+    {
+      "seed": 123,
+      "dt": 0.5,
+      "seconds": 600,
+      "counts": {
+        "compact-avocet": 0,
+        "compact-redshank": 0,
+        "compact-spoonbill": 1,
+        "compact-oystercatcher": 9
+      },
+      "jumps": {
+        "compact-oystercatcher": {
+          "distance": 25.471906387494418,
+          "at": 98,
+          "dt": 0.5
+        },
+        "compact-crab": {
+          "distance": 1.2033702672078976,
+          "at": 6,
+          "dt": 0.5
+        },
+        "compact-bee": {
+          "distance": 1.9584932463796123,
+          "at": 12,
+          "dt": 0.5
+        }
+      }
+    },
+    {
+      "seed": 123,
+      "dt": 1,
+      "seconds": 600,
+      "counts": {
+        "compact-avocet": 0,
+        "compact-redshank": 0,
+        "compact-spoonbill": 1,
+        "compact-oystercatcher": 9
+      },
+      "jumps": {
+        "compact-oystercatcher": {
+          "distance": 26.271878692368148,
+          "at": 98,
+          "dt": 1
+        },
+        "compact-crab": {
+          "distance": 1.2033702672078976,
+          "at": 6,
+          "dt": 1
+        },
+        "compact-bee": {
+          "distance": 1.9584932463796123,
+          "at": 12,
+          "dt": 1
+        }
+      }
+    },
+    {
+      "seed": 20260825,
+      "dt": 0.016666666666666666,
+      "seconds": 600,
+      "counts": {
+        "compact-avocet": 0,
+        "compact-redshank": 0,
+        "compact-spoonbill": 1,
+        "compact-oystercatcher": 10
+      },
+      "jumps": {
+        "compact-oystercatcher": {
+          "distance": 30.95888058984102,
+          "at": 90.34999999999616,
+          "dt": 0.016666666666666666
+        },
+        "compact-crab": {
+          "distance": 1.2033702672078976,
+          "at": 6.033333333333317,
+          "dt": 0.016666666666666666
+        },
+        "compact-bee": {
+          "distance": 0.9720090000392012,
+          "at": 12.000000000000176,
+          "dt": 0.016666666666666666
+        }
+      }
+    },
+    {
+      "seed": 20260825,
+      "dt": 0.1,
+      "seconds": 600,
+      "counts": {
+        "compact-avocet": 0,
+        "compact-redshank": 0,
+        "compact-spoonbill": 1,
+        "compact-oystercatcher": 10
+      },
+      "jumps": {
+        "compact-oystercatcher": {
+          "distance": 30.5322540987541,
+          "at": 90.9999999999991,
+          "dt": 0.1
+        },
+        "compact-crab": {
+          "distance": 1.2033702672078976,
+          "at": 6.099999999999994,
+          "dt": 0.1
+        },
+        "compact-bee": {
+          "distance": 0.9720090000392012,
+          "at": 12.099999999999973,
+          "dt": 0.1
+        }
+      }
+    },
+    {
+      "seed": 20260825,
+      "dt": 0.5,
+      "seconds": 600,
+      "counts": {
+        "compact-avocet": 0,
+        "compact-redshank": 0,
+        "compact-spoonbill": 1,
+        "compact-oystercatcher": 9
+      },
+      "jumps": {
+        "compact-oystercatcher": {
+          "distance": 25.471906387494418,
+          "at": 98,
+          "dt": 0.5
+        },
+        "compact-crab": {
+          "distance": 1.2033702672078976,
+          "at": 6,
+          "dt": 0.5
+        },
+        "compact-bee": {
+          "distance": 0.9720090000392012,
+          "at": 12,
+          "dt": 0.5
+        }
+      }
+    },
+    {
+      "seed": 20260825,
+      "dt": 1,
+      "seconds": 600,
+      "counts": {
+        "compact-avocet": 0,
+        "compact-redshank": 0,
+        "compact-spoonbill": 1,
+        "compact-oystercatcher": 9
+      },
+      "jumps": {
+        "compact-oystercatcher": {
+          "distance": 26.271878692368148,
+          "at": 98,
+          "dt": 1
+        },
+        "compact-crab": {
+          "distance": 1.2033702672078976,
+          "at": 6,
+          "dt": 1
+        },
+        "compact-bee": {
+          "distance": 0.9720090000392012,
+          "at": 12,
+          "dt": 1
+        }
+      }
+    },
+    {
+      "seed": 20260826,
+      "dt": 0.016666666666666666,
+      "seconds": 600,
+      "counts": {
+        "compact-avocet": 0,
+        "compact-redshank": 0,
+        "compact-spoonbill": 1,
+        "compact-oystercatcher": 10
+      },
+      "jumps": {
+        "compact-oystercatcher": {
+          "distance": 30.95888058984102,
+          "at": 90.34999999999616,
+          "dt": 0.016666666666666666
+        },
+        "compact-crab": {
+          "distance": 1.2033702672078976,
+          "at": 6.033333333333317,
+          "dt": 0.016666666666666666
+        },
+        "compact-bee": {
+          "distance": 0.579515582622705,
+          "at": 12.000000000000176,
+          "dt": 0.016666666666666666
+        }
+      }
+    },
+    {
+      "seed": 20260826,
+      "dt": 0.1,
+      "seconds": 600,
+      "counts": {
+        "compact-avocet": 0,
+        "compact-redshank": 0,
+        "compact-spoonbill": 1,
+        "compact-oystercatcher": 10
+      },
+      "jumps": {
+        "compact-oystercatcher": {
+          "distance": 30.5322540987541,
+          "at": 90.9999999999991,
+          "dt": 0.1
+        },
+        "compact-crab": {
+          "distance": 1.2033702672078976,
+          "at": 6.099999999999994,
+          "dt": 0.1
+        },
+        "compact-bee": {
+          "distance": 0.579515582622705,
+          "at": 12.099999999999973,
+          "dt": 0.1
+        }
+      }
+    },
+    {
+      "seed": 20260826,
+      "dt": 0.5,
+      "seconds": 600,
+      "counts": {
+        "compact-avocet": 0,
+        "compact-redshank": 0,
+        "compact-spoonbill": 1,
+        "compact-oystercatcher": 9
+      },
+      "jumps": {
+        "compact-oystercatcher": {
+          "distance": 25.471906387494418,
+          "at": 98,
+          "dt": 0.5
+        },
+        "compact-crab": {
+          "distance": 1.2033702672078976,
+          "at": 6,
+          "dt": 0.5
+        },
+        "compact-bee": {
+          "distance": 0.579515582622705,
+          "at": 12,
+          "dt": 0.5
+        }
+      }
+    },
+    {
+      "seed": 20260826,
+      "dt": 1,
+      "seconds": 600,
+      "counts": {
+        "compact-avocet": 0,
+        "compact-redshank": 0,
+        "compact-spoonbill": 1,
+        "compact-oystercatcher": 9
+      },
+      "jumps": {
+        "compact-oystercatcher": {
+          "distance": 26.271878692368148,
+          "at": 98,
+          "dt": 1
+        },
+        "compact-crab": {
+          "distance": 1.2033702672078976,
+          "at": 6,
+          "dt": 1
+        },
+        "compact-bee": {
+          "distance": 0.579515582622705,
+          "at": 12,
+          "dt": 1
+        }
+      }
+    },
+    {
+      "seed": 987654,
+      "dt": 0.016666666666666666,
+      "seconds": 600,
+      "counts": {
+        "compact-avocet": 0,
+        "compact-redshank": 0,
+        "compact-spoonbill": 1,
+        "compact-oystercatcher": 10
+      },
+      "jumps": {
+        "compact-oystercatcher": {
+          "distance": 30.95888058984102,
+          "at": 90.34999999999616,
+          "dt": 0.016666666666666666
+        },
+        "compact-crab": {
+          "distance": 1.2033702672078976,
+          "at": 6.033333333333317,
+          "dt": 0.016666666666666666
+        },
+        "compact-bee": {
+          "distance": 1.830439344352551,
+          "at": 12.000000000000176,
+          "dt": 0.016666666666666666
+        }
+      }
+    },
+    {
+      "seed": 987654,
+      "dt": 0.1,
+      "seconds": 600,
+      "counts": {
+        "compact-avocet": 0,
+        "compact-redshank": 0,
+        "compact-spoonbill": 1,
+        "compact-oystercatcher": 10
+      },
+      "jumps": {
+        "compact-oystercatcher": {
+          "distance": 30.5322540987541,
+          "at": 90.9999999999991,
+          "dt": 0.1
+        },
+        "compact-crab": {
+          "distance": 1.2033702672078976,
+          "at": 6.099999999999994,
+          "dt": 0.1
+        },
+        "compact-bee": {
+          "distance": 1.830439344352551,
+          "at": 12.099999999999973,
+          "dt": 0.1
+        }
+      }
+    },
+    {
+      "seed": 987654,
+      "dt": 0.5,
+      "seconds": 600,
+      "counts": {
+        "compact-avocet": 0,
+        "compact-redshank": 0,
+        "compact-spoonbill": 1,
+        "compact-oystercatcher": 9
+      },
+      "jumps": {
+        "compact-oystercatcher": {
+          "distance": 25.471906387494418,
+          "at": 98,
+          "dt": 0.5
+        },
+        "compact-crab": {
+          "distance": 1.2033702672078976,
+          "at": 6,
+          "dt": 0.5
+        },
+        "compact-bee": {
+          "distance": 1.830439344352551,
+          "at": 12,
+          "dt": 0.5
+        }
+      }
+    },
+    {
+      "seed": 987654,
+      "dt": 1,
+      "seconds": 600,
+      "counts": {
+        "compact-avocet": 0,
+        "compact-redshank": 0,
+        "compact-spoonbill": 1,
+        "compact-oystercatcher": 9
+      },
+      "jumps": {
+        "compact-oystercatcher": {
+          "distance": 26.271878692368148,
+          "at": 98,
+          "dt": 1
+        },
+        "compact-crab": {
+          "distance": 1.2033702672078976,
+          "at": 6,
+          "dt": 1
+        },
+        "compact-bee": {
+          "distance": 1.830439344352551,
+          "at": 12,
+          "dt": 1
+        }
+      }
+    }
+  ],
+  "flooding": {
+    "galium_odoratum": {
+      "count": 252,
+      "lowSubmerged": 0,
+      "normalHighSubmerged": 0,
+      "minimumSurface": 0.26753510914542805,
+      "maximumSurface": 0.3501286398351072
+    },
+    "urtica_dioica": {
+      "count": 68,
+      "lowSubmerged": 0,
+      "normalHighSubmerged": 0,
+      "minimumSurface": 0.2937634269580713,
+      "maximumSurface": 0.3378090868045891
+    },
+    "halimione_portulacoides": {
+      "count": 35,
+      "lowSubmerged": 0,
+      "normalHighSubmerged": 31,
+      "minimumSurface": -0.47297304795515555,
+      "maximumSurface": -0.18809811571654242
+    },
+    "salicornia_europaea": {
+      "count": 47,
+      "lowSubmerged": 0,
+      "normalHighSubmerged": 47,
+      "minimumSurface": -0.7655492730876612,
+      "maximumSurface": -0.3735425541324748
+    },
+    "sporobolus_anglicus": {
+      "count": 40,
+      "lowSubmerged": 0,
+      "normalHighSubmerged": 40,
+      "minimumSurface": -0.49388129873576136,
+      "maximumSurface": -0.33954100559161493
+    },
+    "rubus_fruticosus": {
+      "count": 12,
+      "lowSubmerged": 0,
+      "normalHighSubmerged": 0,
+      "minimumSurface": 0.24036081136077492,
+      "maximumSurface": 0.35237276679886514
+    },
+    "trifolium_pratense": {
+      "count": 43,
+      "lowSubmerged": 0,
+      "normalHighSubmerged": 0,
+      "minimumSurface": 0.28627895519530844,
+      "maximumSurface": 0.3306653308079422
+    },
+    "festuca_rubra": {
+      "count": 45,
+      "lowSubmerged": 0,
+      "normalHighSubmerged": 0,
+      "minimumSurface": 0.18489927812880613,
+      "maximumSurface": 0.21085819365610142
+    },
+    "puccinellia_maritima": {
+      "count": 55,
+      "lowSubmerged": 0,
+      "normalHighSubmerged": 0,
+      "minimumSurface": -0.23255880993326825,
+      "maximumSurface": -0.06629247824401048
+    },
+    "limonium_vulgare": {
+      "count": 21,
+      "lowSubmerged": 0,
+      "normalHighSubmerged": 0,
+      "minimumSurface": -0.17139354127306147,
+      "maximumSurface": 0.08330422983501792
+    }
+  },
+  "route": {
+    "width": 160,
+    "depth": 100,
+    "areaHa": 1.6,
+    "mainMeters": 362.2102529662271,
+    "shortcutMeters": 29.145962247263665,
+    "outlookMeters": 10.045360768162785,
+    "walkSeconds": 226.3814081038919,
+    "shortcutSeconds": 18.21622640453979,
+    "maxSlope": 0.2553429469466351
+  }
+}

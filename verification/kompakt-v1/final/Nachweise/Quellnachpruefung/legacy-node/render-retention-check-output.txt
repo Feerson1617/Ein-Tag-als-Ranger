@@ -1,0 +1,9 @@
+{
+  "checks": 252,
+  "exactTransformsColoursAndCounts": true,
+  "stationaryUploads": 0,
+  "uploadedBytes": 457344,
+  "fullRebuildBytes": 2744064,
+  "uploadReductionPercent": 83.3,
+  "scope": "Deterministic culling regression, not a device FPS benchmark"
+}

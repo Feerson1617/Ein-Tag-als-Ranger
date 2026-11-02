@@ -1,0 +1,45 @@
+{
+  "scope": "Direct actual model reproduction, no browser proof. Old 600x80ms arithmetic excludes tool/capture overhead and is illustrative, not a measured elapsed duration.",
+  "seed": 20260825,
+  "revision": 4,
+  "phases": [
+    {
+      "time": 0.065,
+      "phase": "approaching",
+      "targetId": "compact-mussel-16"
+    },
+    {
+      "time": 0.52,
+      "phase": "searching",
+      "targetId": "compact-mussel-16"
+    },
+    {
+      "time": 1.1699999999999995,
+      "phase": "handling",
+      "targetId": "compact-mussel-16"
+    },
+    {
+      "time": 4.094999999999998,
+      "phase": "swallowing",
+      "targetId": "compact-mussel-16"
+    },
+    {
+      "time": 5.070000000000004,
+      "phase": "departing",
+      "targetId": "compact-mussel-16"
+    },
+    {
+      "time": 6.305000000000011,
+      "phase": "waiting",
+      "targetId": null
+    }
+  ],
+  "event": {
+    "startedAt": 0.025,
+    "handlingStartedAt": 1.1299999999999994,
+    "endedAt": 4.054999999999998
+  },
+  "departedAt": 6.305000000000011,
+  "nominalOld600PollModelSeconds": 3.84,
+  "requiredProgressFrames": 97.00000000000017
+}

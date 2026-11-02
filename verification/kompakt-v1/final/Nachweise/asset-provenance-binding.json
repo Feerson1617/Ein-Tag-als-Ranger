@@ -1,0 +1,43 @@
+{
+  "sourceCommit": "e9899efaa314d052191d7d3a95b5de904f2932b6",
+  "checkedUTC": "2026-10-24T11:52:10.138010+00:00",
+  "scope": "Exact bytes of five shipped media assets plus existing Three.js and MIT license against unchanged936. Existing attribution retained; no new global code license or foreign paper fulltext. No independent legal/anatomy certification.",
+  "passed": true,
+  "files": [
+    {
+      "file": "dist/assets/boardwalk-wood.webp",
+      "sha256": "4d06022133e3772534374671fb73a4509ed109e1db6ca06a2d62a8c99c47ac6d",
+      "unchangedFrom936": true
+    },
+    {
+      "file": "dist/assets/compact-roe-deer.glb",
+      "sha256": "a89400df66033eb5eaa7f9bf13ccefaacfb866ab24e4576574d11965354ee619",
+      "unchangedFrom936": true
+    },
+    {
+      "file": "dist/assets/sky-panorama.webp",
+      "sha256": "46c360b491b11269d280e73ec0e71869afdfd62fb543b4250713234374a2f71d",
+      "unchangedFrom936": true
+    },
+    {
+      "file": "dist/assets/terrain-atlas.webp",
+      "sha256": "d637324d3ace6ef8e2c549e7f0a513efd1a4c06aab927f0ed1565bf77b2ced02",
+      "unchangedFrom936": true
+    },
+    {
+      "file": "dist/assets/wildlife-fox.glb",
+      "sha256": "61a4d1b845aa406928a327648417ae1c3982510b9c4e8ce33b7c494fbc98a22f",
+      "unchangedFrom936": true
+    },
+    {
+      "file": "dist/vendor/three.module.js",
+      "sha256": "2884e2e6f26feaec0b454fcdc1e98c27d6433ba15253e5a3e22e111df81686fa",
+      "unchangedFrom936": true
+    },
+    {
+      "file": "dist/vendor/THREE-LICENSE.txt",
+      "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601",
+      "unchangedFrom936": true
+    }
+  ]
+}

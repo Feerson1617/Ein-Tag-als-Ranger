@@ -1,0 +1,1 @@
+{"missionArea":"three stationary focal plants available","plants":30549,"uniqueStableIds":true,"station":"real world/probe/herzmuschel, two conditions, minimum duration, changed-condition rejection","scope":"simulation/DOM double; visible 3D scene requires browser tests"}

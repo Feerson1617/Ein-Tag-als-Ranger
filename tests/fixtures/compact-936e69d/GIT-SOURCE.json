@@ -1,0 +1,42 @@
+{
+  "commit": "936e69dc2bd91ab4ab59bc1c63f7c66696085e1d",
+  "scope": "Unchanged pure-model dependency closure from actual git show; historical revisions1\u20136. No WebGL claim.",
+  "files": {
+    "dist/compact/catalog.js": {
+      "sha256": "6b693d4c6a0f6b880b9ff99295826f3968e61ba96f52606997a1635ddf1fe39f",
+      "gitBlob": "8ce1dca0e9ede5fd69a1f8dc57d6fd219977fd9b"
+    },
+    "dist/compact/coastal-behaviour.js": {
+      "sha256": "8d66b0c1f9774874eba45a54676ce296a023f948a9c9a1bce875e60b3d9b5df1",
+      "gitBlob": "163a0a359d39ed6750bae24d08de1472611e1d6f"
+    },
+    "dist/compact/coastal-rig.js": {
+      "sha256": "1b97144cbaf363f2ad6ca46a9de2c9236ce39c8691621ec37adf3a2f75c11da1",
+      "gitBlob": "275af38137d0c590baf87476848982fe1968336c"
+    },
+    "dist/compact/ecology.js": {
+      "sha256": "e50f25a3146e79671472e7a5e6ed1d78f007564515bf9a78bb67fac9695ef8e0",
+      "gitBlob": "644a22c43dee65d728c4edc6a803ba7163308e2c"
+    },
+    "dist/compact/habitats.js": {
+      "sha256": "e5448a68391c3b8f5c99219a39e3b79762ae651343cd870f0c99c4ac3a8b0e16",
+      "gitBlob": "b90a2cc8ffc1d7b20750702c8a0def705b1df03d"
+    },
+    "dist/compact/layout.js": {
+      "sha256": "e02558557a9c99fa0549c94f8cbfc8873e18f3c90df845155d51ee4d404209a6",
+      "gitBlob": "fa21c95a99078c884ee62af2f2e192150e7a833c"
+    },
+    "dist/compact/manifest.js": {
+      "sha256": "0f4d6dc067dd860ec0f4492c3e1627d8973af17136220f5e79a104925f8fe12a",
+      "gitBlob": "9c6eb82a3c3c9008b3821030be676751a9a79817"
+    },
+    "dist/compact/taxa.js": {
+      "sha256": "97cd6f5bad16208408512be876ebf63d5f9ee400dd31f94a61c8ca08e4e24fd3",
+      "gitBlob": "9fd7e96df8a947997f4daf54313f3075fc840ea4"
+    },
+    "dist/compact/world-state.js": {
+      "sha256": "360197f8bd8ab54c595386b66f2e676499630bc6ca896856034fba4910d9fd7f",
+      "gitBlob": "5e42e016b001221223765df4e43da0db63b76c38"
+    }
+  }
+}

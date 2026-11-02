@@ -1,0 +1,15 @@
+{
+  "version": "0.16",
+  "closedGableFaces": 10,
+  "coveredRoofSamples": 90,
+  "continuousFenceSegments": 20,
+  "fenceDirections": 80,
+  "openGardenGates": 5,
+  "roadDirections": 16,
+  "roadFootprintSamples": 11670,
+  "farmApproachSamples": 105,
+  "road": "one textured asphalt lane; no deck overlap; permanent terrestrial barrier; flying species pass",
+  "deer": "actual walking controller never crossed the garden fence",
+  "residents": "five lit 3D bodies with individual clothing and turning heads; no photographic planes",
+  "humanTriangles": 48252
+}

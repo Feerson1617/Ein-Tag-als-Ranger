@@ -1,0 +1,9 @@
+{
+  "baseCommit": "0c5cc3e7c9a601b0ef3cb1e0dcfd5a03a8d65f48",
+  "status": "BESTANDEN",
+  "scope": "Student-only staging text and actual downloads; normal game and documents unchanged. Exact final SHA and artifact are checked again in Actions.",
+  "sourceHashes": {
+    "tools/scorm/stage.mjs": "221b35aa47c1cf9e5cfb5c935155d00aa692abb3ae4d01e6bee5fb8f81e5def2",
+    "tools/scorm/tests/ranger.spec.js": "56b35751526cf68ee0a6f9b14a14a7d5e74eaa10fea6c58df07300f480511915"
+  }
+}

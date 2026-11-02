@@ -1,0 +1,47 @@
+{
+  "sourceCommit": "e9899efaa314d052191d7d3a95b5de904f2932b6",
+  "reviewedUTC": "2026-10-24T11:58:54.248638+00:00",
+  "scope": "Own actual fresh viewing of all eight listed current WebGL images at this frozen source. Selected learning-relevant organisms, not all36 taxa or natural-anatomy certification.",
+  "images": [
+    {
+      "file": "reference/02-deer-side.png",
+      "sha256": "355d307bdbbf41707070c8a2f6c5fdf76d1d41c2ddb3a40bf30f514598647c46",
+      "finding": "Seitliche Rehsilhouette mit Ohren, kurzem Fang und vier schlanken Beinen erkennbar; teilweise überlagernde echte Vegetation. Keine vollständige Anatomieabnahme."
+    },
+    {
+      "file": "reference/05-bird.png",
+      "sha256": "55bd337af0d77dace184bae3bad4856c9d68fc04fd89c3df3be24b280c4297d6",
+      "finding": "Specht am tatsächlichen Stamm mit schwarz-weißer Zeichnung, Schwanzstütze und seitlichem Kopf sichtbar; Baum bleibt ein realer Verdeckungskörper."
+    },
+    {
+      "file": "reference/06-woodruff.png",
+      "sha256": "0f35e87c0c2d8e1fb0b4ffd187adfee50ecfa6e680ff26b091568ab2d8572b5a",
+      "finding": "Wirtelige Blattstellung und schmale Blätter im tatsächlichen Pflanzenplatz erkennbar."
+    },
+    {
+      "file": "reference/07-nettle.png",
+      "sha256": "a44e576fad1875f911f64acff6699ef83fbd988dcd4baeb7945d4c2f84e75ac1",
+      "finding": "Gegenständige breite gezähnte Blätter im tatsächlichen Pflanzenplatz erkennbar; Weg bleibt offen."
+    },
+    {
+      "file": "learning-source/model-capreolus_capreolus.png",
+      "sha256": "555691a2e2325285eeff0099dadb978955d6ac2faa9dd3eeb5fb91a4423d2ee0",
+      "finding": "Rehsilhouette mit großem Ohrpaar, kurzem Fang, kurzem Schwanz und schlanken Beinen sichtbar; stilisierte Proportionen, keine Gesamtanatomieabnahme."
+    },
+    {
+      "file": "learning-source/model-dendrocopos_major.png",
+      "sha256": "dbb37ace7d00c59faec8e55d21e2ff2c99ea96494c77279dacc958ccb7c4e73b",
+      "finding": "Schwarz-weiße Spechtzeichnung, weiße Wange/Schulterflächen, roter Unterschwanz und Stützschwanz in der tatsächlichen Nahgeometrie erkennbar."
+    },
+    {
+      "file": "learning-source/model-fagus_sylvatica.png",
+      "sha256": "2001e9fd732bf0a398d9a0d6d12f1616f811bdd40b925b63f01adba9ab817755",
+      "finding": "Breite elliptische Blattflächen am tatsächlichen Zweig erkennbar; vereinfachte Geometrie bleibt erhalten."
+    },
+    {
+      "file": "learning-source/model-quercus_robur.png",
+      "sha256": "09b212fe52dc14ebdb826d20598bc5168e880cb7ec2b8fbbb621d2a8a5b86791",
+      "finding": "Gelappter Blattrand am tatsächlichen Zweig erkennbar; die einzelne Ausgangsperspektive ersetzt keine vollständige Bestimmung oder unabhängige Lernleistung."
+    }
+  ]
+}
